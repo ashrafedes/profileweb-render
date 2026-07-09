@@ -1,0 +1,15 @@
+# Temporary extraction files
+cv_extracted.txt
+cv_extra.txt
+cv_2024_full.txt
+cv_2024_chunks.txt
+
+# Playwright test artifacts
+.playwright-mcp/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor
+.vscode/

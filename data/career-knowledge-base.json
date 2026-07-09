@@ -1,0 +1,808 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "created": "2026-07-10",
+    "description": "Executive Career Management System - Master Knowledge Base",
+    "author": "Ashraf Ibrahim El Desoky",
+    "sources": [
+      "Ashraf_El_Desoky_Master_CV_V1_Chapter1.docx",
+      "Ashraf_El_Desoky_Executive_CV_2Pages.docx",
+      "Ashraf_El_Desoky_Premium_Executive_CV.docx",
+      "Ashraf Ibrahim El Desoky CV _20_4_2024.docx",
+      "CurriculumvitaePM6_30_2020.docx",
+      "CurriculumvitaePMAshraf EL Dessoky.docx",
+      "السيرة الذاتية اشرف ابراهيم الدسوقى.docx"
+    ]
+  },
+  "person": {
+    "fullName": "Ashraf Ibrahim El Desoky",
+    "fullNameArabic": "أشرف إبراهيم الدسوقي",
+    "credentials": "PMP®",
+    "displayName": "Ashraf El Desoky, PMP®",
+    "title": "Projects Director | PMO & Project Controls Executive | Telecommunications & Digital Infrastructure Leader",
+    "currentLocation": "Riyadh, Saudi Arabia",
+    "originLocation": "El Haram, Giza, Egypt",
+    "address": "8 Tawhid St., El Magzar El Ally St., El Maroitia St., El Haram, Giza",
+    "nationality": "Egyptian",
+    "dateOfBirth": "30/04/1974",
+    "maritalStatus": "Married",
+    "militaryService": "Completed",
+    "drivingLicense": true,
+    "contacts": {
+      "phone": "+966 53 273 8987",
+      "phoneMobile": "+201124047142",
+      "emailPrimary": "ashrafede@gmail.com",
+      "emailSecondary": "ashrafede@hotmail.com",
+      "linkedin": "https://www.linkedin.com/in/ashraf-eldesoky/"
+    },
+    "tagline": "25+ years of international programme and project leadership delivering telecommunications, digital infrastructure and capital investment programmes across Saudi Arabia, Egypt and Sudan.",
+    "photo": "assets/images/ashraf-el-desoky.jpg"
+  },
+  "executiveProfile": {
+    "summary": "PMP®-certified Projects Director and PMO Executive with more than 25 years of international leadership experience delivering telecommunications, digital infrastructure and capital investment programmes across Saudi Arabia, Egypt and Sudan. Experienced in PMO governance, project controls, commercial management, stakeholder leadership and executive reporting. Recognised for combining strategic leadership with deep expertise in FTTH, FTTx, OSP, ISP, fibre optic infrastructure, low-current systems and digital transformation. Extensive experience leading multidisciplinary teams, managing complex project portfolios and supporting executive decision-making through governance frameworks, KPI dashboards and business process optimisation.",
+    "keyHighlights": [
+      "25+ years of international programme and project leadership",
+      "PMP® certified executive with PMO, governance and project controls expertise",
+      "10+ years supporting Saudi Telecom Company (STC) fixed network programmes",
+      "Leadership across Saudi Arabia, Egypt and Sudan",
+      "Expert in FTTH, FTTx, OSP, ISP, 5G and Low Current Systems",
+      "ERP development, KPI dashboards and digital transformation",
+      "Commercial, cost, schedule, quality and risk management"
+    ],
+    "yearsOfExperience": 25,
+    "countriesWorked": ["Saudi Arabia", "Egypt", "Sudan"],
+    "industriesServed": ["Telecommunications", "Digital Infrastructure", "Construction", "IT", "Hospitality", "Defence"]
+  },
+  "statistics": {
+    "yearsExperience": 25,
+    "companies": 9,
+    "countriesWorked": 3,
+    "majorProjects": 20,
+    "certifications": 3,
+    "awards": 6,
+    "languages": 3
+  },
+  "experience": [
+    {
+      "id": "alsharq-2024",
+      "company": "AlSharq Office Company",
+      "companyArabic": "شركة الشرق",
+      "country": "Saudi Arabia",
+      "industry": "Telecommunications / Electrical Engineering",
+      "role": "Project Control Manager",
+      "startDate": "2024-01",
+      "endDate": "Present",
+      "isCurrent": true,
+      "duration": "2024 – Present",
+      "responsibilities": [
+        "Lead planning, budgeting, forecasting and execution of telecommunications and electrical projects",
+        "Manage subcontractors, engineering teams, risks, schedules and client communications",
+        "Drive governance, reporting and operational improvements",
+        "Manage KPI dashboards and executive-level reporting"
+      ],
+      "achievements": [],
+      "technologies": ["MS Project", "Primavera", "Power BI", "Excel"],
+      "methodology": ["PMO", "Project Controls", "Governance"],
+      "slug": "alsharq"
+    },
+    {
+      "id": "ecgc-2023",
+      "company": "Egyptian Company for General Contracting",
+      "companyArabic": "الشركة المصرية للمقاولات العامة",
+      "country": "Egypt",
+      "industry": "Telecommunications / General Contracting",
+      "role": "Projects Director – Telecommunications",
+      "startDate": "2023-01",
+      "endDate": "2024-01",
+      "isCurrent": false,
+      "duration": "2023 – 2024",
+      "responsibilities": [
+        "Directed end-to-end telecom infrastructure delivery",
+        "Managed lifecycle, cost, quality, risk and stakeholder engagement",
+        "Led multidisciplinary engineering teams",
+        "Managed project controls, commercial and contract administration"
+      ],
+      "achievements": [],
+      "technologies": ["FTTH", "FTTx", "OSP", "Fiber Optic"],
+      "methodology": ["PMO", "Project Controls"],
+      "slug": "ecgc"
+    },
+    {
+      "id": "sabbour-2020",
+      "company": "Sabbour Consulting",
+      "companyArabic": "صبور للاستشارات",
+      "country": "Egypt",
+      "industry": "Consulting / Infrastructure / ELV",
+      "role": "Lead Consultant Project Manager",
+      "startDate": "2020-01",
+      "endDate": "2023-01",
+      "isCurrent": false,
+      "duration": "2020 – 2023",
+      "responsibilities": [
+        "Led Egyptian International Olympic Games City ELV, BMS, CCTV, Fire Alarm and FTTH delivery",
+        "Managed New Administrative Capital Fiber Network project",
+        "Led fibre network planning, design and implementation across major national projects",
+        "Stakeholder management with ACUD (Administrative Capital for Urban Development)",
+        "Managed project budgets, schedules, procurement and quality assurance",
+        "Coordinated multidisciplinary engineering and contracting teams"
+      ],
+      "achievements": [
+        "Successfully delivered ELV and smart systems for Egyptian International Olympic Games City",
+        "Delivered New Administrative Capital Fiber Network on schedule"
+      ],
+      "technologies": ["FTTH", "ELV", "BMS", "CCTV", "Fire Alarm", "Fiber Optic"],
+      "methodology": ["Project Management", "Consulting"],
+      "projects": [
+        "Egyptian International Olympic Games City (ACUD)",
+        "New Administrative Capital Fiber Network"
+      ],
+      "slug": "sabbour"
+    },
+    {
+      "id": "benya-2018",
+      "company": "Benya Systems",
+      "companyArabic": "بيانيا سيستمز",
+      "country": "Egypt",
+      "industry": "ICT / Infrastructure",
+      "role": "Senior Site Manager",
+      "startDate": "2018-01",
+      "endDate": "2020-01",
+      "isCurrent": false,
+      "duration": "2018 – 2020",
+      "responsibilities": [
+        "Led Egypt National Railways Modernization Project site operations",
+        "Managed fiber optic cable installation and infrastructure deployment",
+        "Supervised site teams, quality control, and material management",
+        "Coordinated with client and engineering teams",
+        "Reported progress to project management office"
+      ],
+      "achievements": [
+        "Successfully managed fiber deployment for Egypt National Railways Modernization"
+      ],
+      "technologies": ["Fiber Optic", "FTTH", "OSP", "Railway Systems"],
+      "projects": ["Egypt National Railways Modernization Project"],
+      "slug": "benya"
+    },
+    {
+      "id": "fibermisr-alstom",
+      "company": "Fiber Misr – Alstom",
+      "companyArabic": "فايبر مصر - ألستوم",
+      "country": "Egypt",
+      "industry": "Telecommunications / Rail",
+      "role": "Site Manager",
+      "startDate": "2017-01",
+      "endDate": "2018-01",
+      "isCurrent": false,
+      "duration": "2017 – 2018",
+      "responsibilities": [
+        "Managed fiber optic network deployment for railway modernization",
+        "Coordinated between Fiber Misr and Alstom project teams",
+        "Supervised installation, testing and commissioning activities"
+      ],
+      "technologies": ["Fiber Optic", "OSP", "Railway"],
+      "slug": "fibermisr"
+    },
+    {
+      "id": "norconsult-stc-2007",
+      "company": "Norconsult (Supporting STC – Saudi Telecom Company)",
+      "companyArabic": "نوركونسلت – شركة الاتصالات السعودية",
+      "country": "Saudi Arabia",
+      "industry": "Telecommunications / PMO Consulting",
+      "role": "Senior Project Control Engineer / Planning Engineer",
+      "startDate": "2007-12",
+      "endDate": "2017-12",
+      "isCurrent": false,
+      "duration": "December 2007 – December 2017 (10 Years)",
+      "responsibilities": [
+        "Managed planning, scheduling, progress monitoring and project controls for STC fixed network programmes",
+        "Prepared and maintained master programme schedules using MS Project and Primavera",
+        "Developed and maintained KPI dashboards and executive performance reports",
+        "Developed ERP system for project tracking and data management (MS Access VBA)",
+        "Created and maintained Work Breakdown Structures (WBS) for complex telecom projects",
+        "Monitored FTTH, FTTx, OSP and ISP rollout programmes",
+        "Coordinated with STC regional directors, project teams and contractors",
+        "Produced weekly, monthly and executive progress reports for STC senior management",
+        "Managed change control, risk registers and issue logs",
+        "Supported commercial management and contract administration",
+        "Managed programme governance and PMO reporting"
+      ],
+      "achievements": [
+        "10 continuous years supporting STC fixed network expansion programmes",
+        "Developed ERP tracking system using MS Access VBA that streamlined project controls",
+        "Managed planning for over 20 major FTTH and OSP rollout projects",
+        "Contributed to STC's national FTTH network rollout across Saudi Arabia"
+      ],
+      "technologies": ["MS Project", "Primavera", "MS Access VBA", "SQL", "Excel", "FTTH", "FTTx", "OSP", "ISP", "Power BI"],
+      "methodology": ["PMO", "Project Controls", "Earned Value Management", "Risk Management"],
+      "client": "Saudi Telecom Company (STC)",
+      "slug": "norconsult-stc"
+    },
+    {
+      "id": "millentech-2006",
+      "company": "Millentech Systems",
+      "companyArabic": "ميلينتك سيستمز",
+      "country": "Egypt",
+      "industry": "Telecommunications / IT",
+      "role": "Project Manager",
+      "startDate": "2006-09",
+      "endDate": "2007-12",
+      "isCurrent": false,
+      "duration": "September 2006 – December 2007",
+      "responsibilities": [
+        "Managed ICT and telecommunications projects end-to-end",
+        "Planned, scheduled and monitored project delivery",
+        "Managed project teams, subcontractors and stakeholders",
+        "Reported progress to senior management"
+      ],
+      "technologies": ["Telecom", "ICT", "MS Project"],
+      "slug": "millentech"
+    },
+    {
+      "id": "mitt-sudan-2005",
+      "company": "MITT Company (Sudan Branch – Siemens Subcontract)",
+      "companyArabic": "شركة MITT – السودان",
+      "country": "Sudan",
+      "industry": "Telecommunications",
+      "role": "Project Engineer",
+      "startDate": "2005-09",
+      "endDate": "2006-09",
+      "isCurrent": false,
+      "duration": "September 2005 – September 2006",
+      "responsibilities": [
+        "Worked as Project Site Engineer on external network projects in Sudan",
+        "Monitored construction progress and materials used on site",
+        "Used MS Project for schedule control",
+        "Created Work Breakdown Structure (WBS) for project",
+        "Prepared site progress reports",
+        "Controlled warehouse and material management",
+        "Provided implementation division with project monitoring reports"
+      ],
+      "notes": "MITT undertook a project in Sudan as a contractor with Siemens Germany-Sudan branch. Turnkey project delivery.",
+      "technologies": ["MS Project", "External Network", "Telecom"],
+      "slug": "mitt-sudan"
+    },
+    {
+      "id": "compumagic-2004",
+      "company": "Compumagic International",
+      "companyArabic": "كومباجيك انترناشيونال",
+      "country": "Egypt",
+      "industry": "IT / Computer Sales",
+      "role": "Assistant General Manager",
+      "startDate": "2004-09",
+      "endDate": "2005-09",
+      "isCurrent": false,
+      "duration": "September 2004 – September 2005",
+      "responsibilities": [
+        "Followed up RMA (Return Merchandise Authorization)",
+        "Followed up Intel payment repayment program",
+        "Supervised PBX and LAN installation in new company building",
+        "Website design",
+        "Designed MS Access application for accounting and time attendance"
+      ],
+      "notes": "Compumagic International is one of the largest PC sales companies in Egypt. Partner with Ministry of ICT in 'Computer for Every Home' project.",
+      "technologies": ["MS Access VBA", "PBX", "LAN", "Web Design"],
+      "slug": "compumagic"
+    },
+    {
+      "id": "siemens-2000",
+      "company": "Siemens AG (Egypt)",
+      "companyArabic": "سيمنس الألمانية – مصر",
+      "country": "Egypt",
+      "industry": "Telecommunications",
+      "role": "Project Control and Monitoring Engineer – External Network Projects",
+      "startDate": "2000-06",
+      "endDate": "2004-09",
+      "isCurrent": false,
+      "duration": "June 2000 – September 2004 (4+ Years)",
+      "responsibilities": [
+        "Monitored construction progress and materials on site",
+        "Controlled Siemens warehouse",
+        "Used MS Project for schedule control",
+        "Created MS Access program for project progress monitoring, materials tracking and warehouse control",
+        "Created Work Breakdown Structure (WBS) for easy project tracking",
+        "Prepared BOQ (Bill of Quantities) from planning division for client signature",
+        "Provided implementation division with project progress monitoring reports vs plan"
+      ],
+      "achievements": [
+        "Developed automated project tracking system using MS Access at Siemens",
+        "Managed external telecom network projects across Egypt"
+      ],
+      "technologies": ["MS Project", "MS Access VBA", "External Network", "Telecom"],
+      "slug": "siemens"
+    },
+    {
+      "id": "sheraton-1999",
+      "company": "El Gezirah Sheraton Hotel",
+      "companyArabic": "فندق شيراتون الجزيرة",
+      "country": "Egypt",
+      "industry": "Hospitality / Engineering",
+      "role": "Shift Engineer",
+      "startDate": "1999-09",
+      "endDate": "2000-06",
+      "isCurrent": false,
+      "duration": "September 1999 – June 2000",
+      "responsibilities": [
+        "Supervised hotel mechanical, electrical, HVAC and plumbing systems",
+        "Conducted regular inspections and preventive maintenance",
+        "Responded to maintenance requests and service calls",
+        "Trained junior maintenance staff",
+        "Maintained records of maintenance activities and equipment",
+        "Coordinated with vendors and service providers",
+        "Developed preventive maintenance schedules and SOPs"
+      ],
+      "technologies": ["HVAC", "Electrical Systems", "Mechanical Systems", "BMS"],
+      "slug": "sheraton"
+    },
+    {
+      "id": "armed-forces-1997",
+      "company": "Egyptian Armed Forces – Air Defence",
+      "companyArabic": "القوات المسلحة المصرية – الدفاع الجوي",
+      "country": "Egypt",
+      "industry": "Defence / Military",
+      "role": "Officer – Air Defence Forces",
+      "startDate": "1997-01",
+      "endDate": "1999-06",
+      "isCurrent": false,
+      "duration": "January 1997 – June 1999",
+      "responsibilities": [
+        "Served as officer in Egyptian Air Defence Forces",
+        "Military engineering and operations duties"
+      ],
+      "slug": "armed-forces"
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-heriot-watt",
+      "institution": "Heriot-Watt University – Edinburgh Business School",
+      "country": "UK (Distance Learning)",
+      "degree": "Postgraduate Diploma in Business Administration",
+      "field": "Business Administration",
+      "startYear": "2014",
+      "endYear": "2017",
+      "grade": null,
+      "notes": "Equivalent to MBA coursework"
+    },
+    {
+      "id": "edu-helwan-msc",
+      "institution": "Helwan University",
+      "country": "Egypt",
+      "degree": "Preparatory M.Sc. – Communication Engineering",
+      "field": "Resource Allocation for Multi-Service in IP Networks",
+      "startYear": "1999",
+      "endYear": "2003",
+      "grade": null,
+      "notes": "Postgraduate research – not completed to final thesis"
+    },
+    {
+      "id": "edu-helwan-bsc",
+      "institution": "Helwan University",
+      "country": "Egypt",
+      "degree": "Bachelor of Science – Communication and Electronics Engineering",
+      "field": "Communication and Electronics Engineering",
+      "startYear": "1991",
+      "endYear": "1996",
+      "graduationDate": "May 1996",
+      "grade": "Good",
+      "projectGrade": "Very Good",
+      "project": "Controlling of Traffic Signals Using PC"
+    },
+    {
+      "id": "edu-highschool",
+      "institution": "El Ibrahimya School",
+      "country": "Egypt",
+      "degree": "Egyptian General Secondary Certificate (Thanawiya Amma)",
+      "startYear": "1987",
+      "endYear": "1990"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert-pmp",
+      "name": "Project Management Professional (PMP®)",
+      "issuingBody": "Project Management Institute (PMI)",
+      "year": "2007",
+      "certificateNumber": "TODO_VERIFIED",
+      "status": "Active",
+      "image": "assets/images/pmp-certificate.png",
+      "slug": "pmp"
+    },
+    {
+      "id": "cert-ccna",
+      "name": "Cisco Certified Network Associate (CCNA)",
+      "issuingBody": "Cisco Systems",
+      "year": "2001",
+      "certificateNumber": "640-507",
+      "status": "Historical",
+      "notes": "Cisco Certified Network Associate – Cisco Networks Society",
+      "slug": "ccna"
+    },
+    {
+      "id": "cert-ba-diploma",
+      "name": "Postgraduate Diploma in Business Administration",
+      "issuingBody": "Edinburgh Business School, Heriot-Watt University",
+      "year": "2017",
+      "status": "Active",
+      "image": "assets/images/diploma-ba.jpg",
+      "slug": "ba-diploma"
+    }
+  ],
+  "awards": [
+    {
+      "id": "award-1",
+      "name": "Distinguished Expert Award",
+      "issuingOrganization": "TODO_VERIFIED",
+      "year": "TODO_VERIFIED",
+      "description": "Award for distinguished expertise and performance",
+      "image": "assets/images/award-1.jpg"
+    },
+    {
+      "id": "award-2",
+      "name": "Appreciation Certificate – Millentech Systems",
+      "issuingOrganization": "Millentech Systems",
+      "year": "TODO_VERIFIED",
+      "image": "assets/images/award-millentech.jpg"
+    },
+    {
+      "id": "award-3",
+      "name": "Appreciation Certificate 1",
+      "issuingOrganization": "TODO_VERIFIED",
+      "image": "assets/images/award-taqdir-1.jpg"
+    },
+    {
+      "id": "award-4",
+      "name": "Appreciation Certificate 2",
+      "issuingOrganization": "TODO_VERIFIED",
+      "image": "assets/images/award-taqdir-2.jpg"
+    },
+    {
+      "id": "award-5",
+      "name": "Appreciation Certificate 3",
+      "issuingOrganization": "TODO_VERIFIED",
+      "image": "assets/images/award-taqdir-3.jpg"
+    },
+    {
+      "id": "award-6",
+      "name": "Appreciation Certificate 4",
+      "issuingOrganization": "TODO_VERIFIED",
+      "image": "assets/images/award-taqdir-4.jpg"
+    },
+    {
+      "id": "award-siemens",
+      "name": "Experience Certificate – Siemens",
+      "issuingOrganization": "Siemens AG",
+      "image": "assets/images/siemens-experience.jpg"
+    }
+  ],
+  "skills": {
+    "leadership": [
+      "Programme Management",
+      "Portfolio Management",
+      "PMO Leadership",
+      "Executive Reporting",
+      "Stakeholder Management",
+      "Team Leadership",
+      "Resource Planning",
+      "Change Management",
+      "Strategic Planning"
+    ],
+    "projectControls": [
+      "Planning & Scheduling",
+      "Cost Control",
+      "Risk Management",
+      "Change Control",
+      "Governance",
+      "Earned Value Management",
+      "KPI Dashboards",
+      "Baseline Management",
+      "Progress Monitoring",
+      "Forecasting & Budgeting"
+    ],
+    "commercial": [
+      "Contract Administration",
+      "CAPEX/OPEX Management",
+      "Procurement",
+      "Vendor Management",
+      "BOQ Preparation",
+      "Commercial Management"
+    ],
+    "telecommunications": [
+      "FTTH",
+      "FTTx",
+      "OSP (Outside Plant)",
+      "ISP (Inside Plant)",
+      "5G Rollout",
+      "Fiber Optic Infrastructure",
+      "ELV Systems",
+      "BMS (Building Management Systems)",
+      "CCTV",
+      "Fire Alarm Systems",
+      "External Network",
+      "PBX",
+      "LAN",
+      "CCNA Networking"
+    ],
+    "digital": [
+      "ERP Development",
+      "SQL",
+      "MS Access VBA",
+      "Power BI",
+      "Digital Transformation",
+      "Business Process Optimisation"
+    ],
+    "software": [
+      "MS Project",
+      "Primavera P6",
+      "Power BI",
+      "MS Access with VBA",
+      "SQL",
+      "Advanced Excel",
+      "MS Word",
+      "MS PowerPoint",
+      "VB.NET",
+      "ASP.NET",
+      "HTML/CSS",
+      "AutoCAD",
+      "MS Visio",
+      "Outlook"
+    ],
+    "management": [
+      "Project Management",
+      "Programme Management",
+      "PMO",
+      "Quality Assurance",
+      "Safety Management",
+      "Document Management",
+      "Meeting Facilitation",
+      "Executive Presentations"
+    ]
+  },
+  "languages": [
+    {
+      "language": "Arabic",
+      "level": "Native / Mother Tongue",
+      "proficiency": "C2"
+    },
+    {
+      "language": "English",
+      "level": "Very Good / Fluent",
+      "proficiency": "B2-C1"
+    },
+    {
+      "language": "German",
+      "level": "Basic",
+      "proficiency": "A1"
+    }
+  ],
+  "training": [
+    {
+      "id": "train-pmp-prep",
+      "name": "PMP Exam Preparation Course",
+      "provider": "Jupiter Training Center",
+      "year": "2007",
+      "type": "Project Management"
+    },
+    {
+      "id": "train-ccna",
+      "name": "CCNA Certification Training",
+      "provider": "Cisco Certified Training",
+      "year": "2001",
+      "type": "Networking"
+    },
+    {
+      "id": "train-electronics",
+      "name": "Digital Electronics, Analogue Electronics and Microprocessors",
+      "provider": "South Cairo Institute for Training",
+      "year": "1994",
+      "type": "Engineering"
+    },
+    {
+      "id": "train-cisco-products",
+      "name": "Cisco Products Training (Switches, Routers)",
+      "provider": "Cisco",
+      "year": "TODO_VERIFIED",
+      "type": "Networking"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-olympic-city",
+      "name": "Egyptian International Olympic Games City",
+      "client": "ACUD (Administrative Capital for Urban Development)",
+      "employer": "Sabbour Consulting",
+      "country": "Egypt",
+      "location": "New Administrative Capital, Egypt",
+      "role": "Lead Consultant Project Manager",
+      "startDate": "2020",
+      "endDate": "2023",
+      "projectType": "Smart City / ELV / ICT Infrastructure",
+      "scope": [
+        "ELV Systems",
+        "BMS (Building Management Systems)",
+        "CCTV",
+        "Fire Alarm Systems",
+        "FTTH Fiber Network"
+      ],
+      "description": "Led the design, procurement and delivery of all ELV, BMS, CCTV, fire alarm and FTTH systems for the Egyptian International Olympic Games City – a national prestige project in Egypt's New Administrative Capital.",
+      "technologies": ["FTTH", "ELV", "BMS", "CCTV", "Fire Alarm", "Fiber Optic"],
+      "slug": "olympic-city"
+    },
+    {
+      "id": "proj-nac-fiber",
+      "name": "New Administrative Capital Fiber Network",
+      "client": "ACUD",
+      "employer": "Sabbour Consulting",
+      "country": "Egypt",
+      "location": "New Administrative Capital, Egypt",
+      "role": "Lead Consultant Project Manager",
+      "startDate": "2020",
+      "endDate": "2023",
+      "projectType": "Telecommunications / FTTH",
+      "scope": ["Fiber Optic Network Planning", "FTTH Design and Implementation"],
+      "technologies": ["FTTH", "Fiber Optic", "OSP"],
+      "slug": "nac-fiber"
+    },
+    {
+      "id": "proj-railways",
+      "name": "Egypt National Railways Modernization Project",
+      "client": "Egyptian National Railways (ENR)",
+      "employer": "Benya Systems / Fiber Misr – Alstom",
+      "country": "Egypt",
+      "location": "Egypt",
+      "role": "Senior Site Manager / Site Manager",
+      "startDate": "2017",
+      "endDate": "2020",
+      "projectType": "Railway / Telecommunications / Fiber",
+      "scope": ["Fiber Optic Network Deployment", "Railway Modernization"],
+      "technologies": ["Fiber Optic", "OSP", "Railway Systems"],
+      "slug": "railways"
+    },
+    {
+      "id": "proj-stc-ftth",
+      "name": "STC Fixed Network – FTTH/FTTx Rollout Programme",
+      "client": "Saudi Telecom Company (STC)",
+      "employer": "Norconsult",
+      "country": "Saudi Arabia",
+      "location": "Kingdom of Saudi Arabia (Multiple Regions)",
+      "role": "Senior Project Control Engineer",
+      "startDate": "2007",
+      "endDate": "2017",
+      "projectType": "National Telecommunications / FTTH",
+      "scope": [
+        "National FTTH rollout planning and control",
+        "FTTx network expansion",
+        "OSP and ISP programme management",
+        "PMO governance and reporting"
+      ],
+      "description": "10-year engagement supporting STC's national fixed network expansion including FTTH/FTTx rollout, OSP and ISP programmes across the Kingdom of Saudi Arabia.",
+      "technologies": ["FTTH", "FTTx", "OSP", "ISP", "MS Project", "Primavera", "MS Access VBA", "SQL", "Power BI"],
+      "slug": "stc-ftth"
+    },
+    {
+      "id": "proj-siemens-ext-network",
+      "name": "Siemens External Telecom Network Projects",
+      "client": "Various (Siemens Clients)",
+      "employer": "Siemens AG – Egypt",
+      "country": "Egypt",
+      "location": "Egypt",
+      "role": "Project Control and Monitoring Engineer",
+      "startDate": "2000",
+      "endDate": "2004",
+      "projectType": "Telecommunications / External Network",
+      "scope": ["External Network Implementation", "Project Controls", "Warehouse Management"],
+      "technologies": ["External Network", "MS Project", "MS Access VBA", "Telecom"],
+      "slug": "siemens-network"
+    },
+    {
+      "id": "proj-mitt-sudan",
+      "name": "MITT Telecom Infrastructure Project – Sudan",
+      "client": "Siemens Germany-Sudan Branch",
+      "employer": "MITT Company",
+      "country": "Sudan",
+      "location": "Sudan",
+      "role": "Project Engineer",
+      "startDate": "2005",
+      "endDate": "2006",
+      "projectType": "Telecommunications / Turnkey",
+      "scope": ["External Network", "Turnkey Delivery", "Site Engineering"],
+      "technologies": ["Telecom", "External Network", "MS Project"],
+      "slug": "mitt-sudan-project"
+    }
+  ],
+  "specialisations": {
+    "pmo": {
+      "description": "Over 10 years of PMO leadership experience supporting large-scale telecom programmes. Expert in establishing PMO frameworks, governance structures, reporting dashboards, and project controls.",
+      "competencies": [
+        "PMO Setup and Governance",
+        "Portfolio Management",
+        "Programme Reporting",
+        "KPI Development and Monitoring",
+        "Executive Dashboard Design",
+        "Earned Value Management",
+        "Change Control",
+        "Risk Management",
+        "Stakeholder Reporting"
+      ]
+    },
+    "projectControls": {
+      "description": "Senior Project Controls professional with expertise in planning, scheduling, cost control, risk management and change control for major telecom and infrastructure programmes.",
+      "competencies": [
+        "MS Project / Primavera P6",
+        "Baseline Management",
+        "Schedule Risk Analysis",
+        "Cost Forecasting",
+        "CAPEX/OPEX Management",
+        "Earned Value Management",
+        "Change Control Management",
+        "Progress Measurement"
+      ]
+    },
+    "telecommunications": {
+      "description": "Deep technical expertise in telecommunications with specific focus on FTTH, FTTx, OSP, ISP, 5G and fiber optic infrastructure across major national programmes.",
+      "competencies": [
+        "FTTH Design and Implementation",
+        "FTTx Programme Management",
+        "OSP (Outside Plant) Management",
+        "ISP (Inside Plant) Management",
+        "5G Rollout",
+        "Fiber Optic Infrastructure",
+        "ELV Systems",
+        "BMS",
+        "CCTV",
+        "Fire Alarm"
+      ]
+    },
+    "digitalTransformation": {
+      "description": "Experienced in digital transformation, ERP development, KPI dashboard creation and business process optimisation.",
+      "competencies": [
+        "ERP Development (MS Access VBA)",
+        "SQL Database Management",
+        "Power BI Dashboards",
+        "Process Optimisation",
+        "Digital Reporting Systems",
+        "Business Intelligence"
+      ]
+    },
+    "softwareDevelopment": {
+      "description": "Practical software development skills used to build project management tools, ERP systems and automation.",
+      "competencies": [
+        "MS Access VBA",
+        "VB.NET",
+        "ASP.NET",
+        "SQL",
+        "HTML/CSS",
+        "Advanced Excel"
+      ]
+    }
+  },
+  "downloads": [
+    {
+      "id": "dl-executive-cv",
+      "title": "Executive CV (2-Page)",
+      "type": "CV",
+      "file": "assets/downloads/Ashraf_El_Desoky_Executive_CV.pdf",
+      "description": "Concise 2-page executive CV for senior leadership positions"
+    },
+    {
+      "id": "dl-master-cv",
+      "title": "Master CV – Full Version",
+      "type": "CV",
+      "file": "assets/downloads/Ashraf_El_Desoky_Master_CV.pdf",
+      "description": "Complete career documentation for executive and board-level applications"
+    },
+    {
+      "id": "dl-pmp-cert",
+      "title": "PMP® Certificate",
+      "type": "Certificate",
+      "file": "assets/downloads/PMP_Certificate.pdf",
+      "description": "Project Management Professional certification"
+    }
+  ],
+  "contact": {
+    "email": "ashrafede@gmail.com",
+    "phone": "+966 53 273 8987",
+    "location": "Riyadh, Saudi Arabia",
+    "linkedin": "https://www.linkedin.com/in/ashraf-eldesoky/",
+    "availability": "Open to executive opportunities"
+  }
+}
