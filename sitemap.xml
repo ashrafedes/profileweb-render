@@ -9,15 +9,23 @@
        ECMS Sitemap – Ashraf Ibrahim El Desoky, PMP®
        Site: https://www.ashraf-eldesoky.space
        Generated: 2026-07-10
-       Pages: 20
+       Pages: 21
   ═══════════════════════════════════════════════ -->
 
-  <!-- PRIORITY 1.0 – Home / Executive Dashboard -->
+  <!-- PRIORITY 1.0 – Home / Executive Dashboard (Arabic RTL) -->
   <url>
     <loc>https://www.ashraf-eldesoky.space/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- PRIORITY 0.9 – English LTR Landing Page -->
+  <url>
+    <loc>https://www.ashraf-eldesoky.space/en.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <!-- PRIORITY 0.95 – Core Identity Pages -->
