@@ -697,10 +697,9 @@
        Visitor Counter Bar
   ═══════════════════════════════════════ -->
   <div style="background:#0d1b3e;padding:0.75rem 0;text-align:center;border-top:1px solid rgba(255,255,255,0.08);">
-    <div style="font-size:0.82rem;color:rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;gap:0.5rem;flex-wrap:wrap;">
-      <span style="color:rgba(255,255,255,0.35);">👁</span>
-      <span>Total Visitors:</span>
-      <span id="visitor-count" style="font-weight:700;color:#c9a227;font-size:0.95rem;letter-spacing:0.5px;">—</span>
+    <div style="font-size:0.82rem;color:rgba(255,255,255,0.55);display:flex;align-items:center;justify-content:center;gap:0.6rem;flex-wrap:wrap;">
+      <span>👁 Total Visitors:</span>
+      <img src="https://hits.sh/ashraf-eldesoky.onrender.com.svg?style=flat-square&color=c9a227&label_color=0d1b3e&label=" alt="Visitor count" style="height:20px;vertical-align:middle;">
       <span style="color:rgba(255,255,255,0.25);">·</span>
       <span>Thank you for visiting Ashraf El Desoky's Executive Profile</span>
     </div>
@@ -713,26 +712,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/components.js"></script>
   <script src="assets/js/core.js"></script>
-
-  <!-- Visitor Counter -->
-  <script>
-    (function() {
-      // Using CountAPI — free, no signup, persists permanently
-      var ns = 'ashraf-eldesoky-profile';
-      var key = 'visitor-count-v1';
-      fetch('https://api.countapi.xyz/hit/' + ns + '/' + key)
-        .then(function(r){ return r.json(); })
-        .then(function(data){
-          var el = document.getElementById('visitor-count');
-          if (el && data && data.value) {
-            el.textContent = data.value.toLocaleString();
-          }
-        })
-        .catch(function(){
-          var el = document.getElementById('visitor-count');
-          if (el) el.textContent = '—';
-        });
-    })();
-  </script>
 </body>
 </html>
