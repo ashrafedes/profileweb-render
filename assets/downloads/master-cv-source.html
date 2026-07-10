@@ -2,590 +2,430 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ashraf El Desoky, PMP® – Master CV</title>
+<title>Ashraf El Desoky PMP – Master CV Full</title>
 <style>
-/* ════════════════════════════════════════════
-   RESET & BASE
-════════════════════════════════════════════ */
+/* ══════════ RESET ══════════ */
 *{margin:0;padding:0;box-sizing:border-box;}
 html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-body{
-  font-family:'Calibri',Georgia,serif;
-  font-size:10.5pt;
-  color:#1c1c1c;
-  line-height:1.45;
-  background:#fff;
-}
+body{font-family:'Calibri',Arial,sans-serif;font-size:10.3pt;color:#1c1c1c;line-height:1.5;background:#fff;}
 
-/* ════════════════════════════════════════════
-   PAGE
-════════════════════════════════════════════ */
-.page{
-  width:210mm;
-  min-height:297mm;
-  margin:0 auto;
-  background:#fff;
-  display:flex;
-  flex-direction:column;
-}
+/* ══════════ PAGE ══════════ */
+.page{width:210mm;min-height:297mm;margin:0 auto;background:#fff;}
 
-/* ════════════════════════════════════════════
-   HEADER — full-width top block
-════════════════════════════════════════════ */
-.cv-header{
-  padding:14mm 15mm 10mm 15mm;
-  border-bottom:2.5px solid #1a365d;
-}
-.cv-name{
-  font-size:24pt;
-  font-weight:700;
-  color:#1a365d;
-  letter-spacing:-0.3px;
-  line-height:1.1;
-}
-.cv-credential{color:#1a365d;font-weight:700;}
-.cv-title{
-  font-size:10.5pt;
-  font-weight:400;
-  color:#444;
-  margin:4px 0 10px 0;
-  padding-left:3px;
-  border-left:3px solid #1a365d;
-  padding-left:8px;
-}
-.cv-contact-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:0 24px;
-  font-size:9pt;
-  color:#555;
-}
-.cv-contact-row span{display:flex;align-items:center;gap:4px;}
-.cv-contact-row a{color:#1a365d;text-decoration:none;}
-.ci{font-size:8.5pt;color:#1a365d;}
+/* ══════════ HEADER ══════════ */
+.hdr{padding:12mm 15mm 8mm 15mm;background:#fff;border-bottom:3px solid #1a365d;}
+.hdr-name{font-size:22pt;font-weight:700;color:#1a365d;line-height:1.05;letter-spacing:-0.3px;}
+.hdr-cred{color:#1a365d;font-size:16pt;}
+.hdr-title{font-size:10pt;color:#333;margin:3px 0 8px 18px;font-style:italic;}
+.hdr-contacts{display:flex;flex-wrap:wrap;gap:0 22px;font-size:8.5pt;color:#444;}
+.hdr-contacts span{display:inline-flex;align-items:center;gap:3px;}
+.hdr-contacts a{color:#1a365d;text-decoration:none;}
 
-/* ════════════════════════════════════════════
-   TWO-COLUMN BODY
-════════════════════════════════════════════ */
-.cv-body{
-  display:flex;
-  flex:1;
-}
+/* ══════════ TWO COLUMNS ══════════ */
+.body-wrap{display:flex;min-height:calc(297mm - 68mm);}
 
-/* ── LEFT SIDEBAR (30%) ── */
-.sidebar{
-  width:64mm;
-  flex-shrink:0;
-  padding:10mm 7mm 10mm 15mm;
-  border-right:1px solid #d8dde6;
-}
+/* ── SIDEBAR ── */
+.sb{width:62mm;flex-shrink:0;padding:8mm 6mm 8mm 15mm;background:#f7f9fc;border-right:1.5px solid #dde3ed;}
+.sb-sec{margin-bottom:7mm;}
+.sb-hd{font-size:7.5pt;font-weight:700;color:#fff;background:#1a365d;text-transform:uppercase;letter-spacing:1px;padding:2px 7px;margin-bottom:6px;border-radius:2px;}
 
-/* ── MAIN COLUMN (70%) ── */
-.main{
-  flex:1;
-  padding:10mm 15mm 10mm 9mm;
-}
+/* key numbers */
+.kn-item{display:flex;align-items:baseline;gap:5px;margin-bottom:4px;}
+.kn-num{font-size:15pt;font-weight:700;color:#1a365d;line-height:1;}
+.kn-lbl{font-size:8pt;color:#444;line-height:1.3;}
 
-/* ════════════════════════════════════════════
-   SECTION HEADERS
-════════════════════════════════════════════ */
-.sec-title{
-  font-size:8pt;
-  font-weight:700;
-  color:#1a365d;
-  text-transform:uppercase;
-  letter-spacing:1.2px;
-  border-bottom:1.5px solid #1a365d;
-  padding-bottom:3px;
-  margin-bottom:8px;
-}
-.sec-title-main{
-  font-size:8pt;
-  font-weight:700;
-  color:#1a365d;
-  text-transform:uppercase;
-  letter-spacing:1.2px;
-  border-bottom:1.5px solid #1a365d;
-  padding-bottom:3px;
-  margin-bottom:8px;
-}
+/* cert / edu items */
+.sb-item{margin-bottom:5px;}
+.sb-item-title{font-size:8.5pt;font-weight:700;color:#1a365d;}
+.sb-item-sub{font-size:7.8pt;color:#555;line-height:1.4;}
 
-/* ════════════════════════════════════════════
-   SIDEBAR SECTIONS
-════════════════════════════════════════════ */
-.sb-section{margin-bottom:9mm;}
+/* pills */
+.pill-group{margin-bottom:5px;}
+.pill-cat{font-size:7.3pt;font-weight:700;color:#333;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:3px;}
+.pills{display:flex;flex-wrap:wrap;gap:2px 3px;}
+.pill{font-size:7.3pt;color:#1a365d;border:1px solid #a8b8cc;border-radius:10px;padding:1px 6px;line-height:1.5;}
 
-/* Key stats — minimal elegant numbers */
-.key-stats{display:flex;flex-direction:column;gap:4px;}
-.ks-item{display:flex;align-items:baseline;gap:5px;}
-.ks-num{font-size:14pt;font-weight:700;color:#1a365d;line-height:1;}
-.ks-label{font-size:8pt;color:#555;line-height:1.2;}
+/* lang */
+.lang-it{margin-bottom:4px;}
+.lang-nm{font-size:8pt;font-weight:700;color:#1c1c1c;}
+.lang-lv{font-size:7.5pt;color:#666;}
+.lbar{width:100%;height:4px;background:#dde3ed;border-radius:3px;margin-top:2px;}
+.lbar-f{height:4px;background:#1a365d;border-radius:3px;}
 
-/* Skills pills */
-.skill-group{margin-bottom:6px;}
-.skill-cat{font-size:7.5pt;font-weight:700;color:#333;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px;}
-.pills{display:flex;flex-wrap:wrap;gap:3px;}
-.pill{
-  font-size:7.5pt;
-  color:#1a365d;
-  border:1px solid #b0bcd0;
-  border-radius:10px;
-  padding:1px 6px;
-  white-space:nowrap;
-  line-height:1.5;
-}
+/* personal */
+.pers-row{font-size:8pt;color:#444;line-height:1.8;}
+.pers-row b{color:#1a365d;}
 
-/* Language bars */
-.lang-item{margin-bottom:5px;}
-.lang-name{font-size:8.5pt;font-weight:700;color:#1c1c1c;margin-bottom:2px;}
-.lang-sub{font-size:7.5pt;color:#666;}
-.lang-bar-bg{width:100%;height:5px;background:#e0e6f0;border-radius:3px;margin-top:2px;}
-.lang-bar{height:5px;background:#1a365d;border-radius:3px;}
+/* ── MAIN ── */
+.main{flex:1;padding:8mm 15mm 8mm 9mm;}
+.sec-hd{font-size:8pt;font-weight:700;color:#1a365d;text-transform:uppercase;letter-spacing:1px;border-bottom:1.5px solid #1a365d;padding-bottom:2px;margin-bottom:7px;}
 
-/* Cert items */
-.cert-item{margin-bottom:6px;}
-.cert-name{font-size:8.5pt;font-weight:700;color:#1c1c1c;}
-.cert-sub{font-size:7.5pt;color:#555;}
+/* profile */
+.profile-p{font-size:10pt;color:#222;line-height:1.6;margin-bottom:6mm;}
 
-/* ════════════════════════════════════════════
-   MAIN COLUMN — PROFILE
-════════════════════════════════════════════ */
-.profile-text{
-  font-size:10pt;
-  color:#2c2c2c;
-  line-height:1.55;
-  margin-bottom:8mm;
-}
+/* exp */
+.exp{margin-bottom:5.5mm;padding-bottom:5mm;border-bottom:1px solid #e2e8f0;}
+.exp:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.exp-top{display:flex;justify-content:space-between;align-items:flex-start;}
+.exp-co{font-size:10.5pt;font-weight:700;color:#1a365d;}
+.exp-dt{font-size:8.5pt;color:#1a365d;font-weight:600;white-space:nowrap;margin-left:6px;flex-shrink:0;}
+.exp-role{font-size:9.5pt;font-weight:700;color:#222;margin:1px 0;}
+.exp-meta{font-size:8pt;color:#777;font-style:italic;margin-bottom:5px;}
+.exp-scope{font-size:8.5pt;color:#333;margin-bottom:4px;font-weight:600;}
+ul.bul{padding-left:13px;margin-bottom:4px;}
+ul.bul li{font-size:9.3pt;color:#222;margin-bottom:2px;line-height:1.45;}
+ul.bul li::marker{color:#1a365d;}
+ul.ach{list-style:none;padding-left:0;margin-top:4px;}
+ul.ach li{font-size:9pt;color:#1a365d;padding-left:13px;position:relative;margin-bottom:2px;line-height:1.4;}
+ul.ach li::before{content:"▸";position:absolute;left:0;font-size:8pt;color:#1a365d;}
 
-/* ════════════════════════════════════════════
-   EXPERIENCE ITEMS
-════════════════════════════════════════════ */
-.exp-section{margin-bottom:8mm;}
-.exp-item{margin-bottom:6mm;padding-bottom:5mm;border-bottom:1px solid #e8ecf0;}
-.exp-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-.exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1px;}
-.exp-company{font-size:10.5pt;font-weight:700;color:#1a365d;}
-.exp-date{font-size:8.5pt;color:#1a365d;font-weight:600;white-space:nowrap;flex-shrink:0;margin-left:8px;}
-.exp-role{font-size:9.5pt;font-weight:700;color:#333;margin-bottom:1px;}
-.exp-meta{font-size:8pt;color:#777;margin-bottom:5px;font-style:italic;}
-.exp-bullets{padding-left:12px;margin:0;}
-.exp-bullets li{font-size:9.5pt;color:#2c2c2c;margin-bottom:2px;line-height:1.4;}
-.exp-bullets li::marker{color:#1a365d;}
+/* condensed */
+.exp-cond{margin-bottom:3.5mm;padding-bottom:3.5mm;border-bottom:1px solid #edf0f5;}
+.exp-cond:last-child{border-bottom:none;}
+.exp-cond p{font-size:9pt;color:#333;margin-top:2px;line-height:1.45;}
 
-/* achievement bullets — slight visual difference */
-.ach-bullets{padding-left:12px;margin:4px 0 0 0;list-style:none;}
-.ach-bullets li{font-size:9pt;color:#2c2c2c;margin-bottom:2px;line-height:1.4;padding-left:8px;position:relative;}
-.ach-bullets li::before{content:'▸';position:absolute;left:0;color:#1a365d;font-size:8pt;}
+/* project table */
+.ptbl{width:100%;border-collapse:collapse;font-size:8.5pt;margin-top:3px;}
+.ptbl th{background:#1a365d;color:#fff;padding:4px 6px;text-align:left;font-size:7.8pt;font-weight:700;}
+.ptbl td{padding:3px 6px;border-bottom:1px solid #e2e8f0;vertical-align:top;}
+.ptbl tr:nth-child(even) td{background:#f5f7fb;}
 
-/* condensed older roles */
-.exp-condensed{margin-bottom:3mm;}
-.exp-condensed .exp-header{margin-bottom:1px;}
-.exp-condensed p{font-size:9pt;color:#444;line-height:1.4;margin-top:2px;}
+/* training table */
+.ttbl{width:100%;border-collapse:collapse;font-size:8.5pt;}
+.ttbl td{padding:3px 5px;border-bottom:1px solid #e8ecf0;vertical-align:top;}
+.ttbl tr:nth-child(even) td{background:#f8fafc;}
 
-/* ════════════════════════════════════════════
-   EDUCATION TABLE-STYLE
-════════════════════════════════════════════ */
-.edu-item{margin-bottom:5px;}
-.edu-degree{font-size:9.5pt;font-weight:700;color:#1c1c1c;}
-.edu-inst{font-size:9pt;color:#444;}
-.edu-year{font-size:8.5pt;color:#777;font-style:italic;}
+/* footer */
+.cv-foot{margin-top:6mm;padding-top:4mm;border-top:1px solid #cdd5e0;display:flex;justify-content:space-between;font-size:7.8pt;color:#888;}
 
-/* ════════════════════════════════════════════
-   PAGE BREAK
-════════════════════════════════════════════ */
-.pb{page-break-before:always;border-top:2.5px solid #1a365d;margin-top:0;}
-
-/* ════════════════════════════════════════════
-   PRINT
-════════════════════════════════════════════ */
-@media print{
-  .page{width:210mm;margin:0;}
-  body{font-size:10pt;}
-}
+/* page break */
+.pgbr{page-break-before:always;}
 @page{size:A4;margin:0;}
+@media print{body{font-size:10pt;}.page{width:210mm;margin:0;}}
 </style>
 </head>
 <body>
 <div class="page">
 
-<!-- ══════════════════════════════════════════
-     HEADER
-══════════════════════════════════════════ -->
-<header class="cv-header">
-  <div class="cv-name">Ashraf Ibrahim El Desoky<span class="cv-credential">, PMP®</span></div>
-  <div class="cv-title">Projects Director &nbsp;|&nbsp; PMO &amp; Project Controls Executive &nbsp;|&nbsp; Telecommunications &amp; Digital Infrastructure</div>
-  <div class="cv-contact-row">
-    <span><span class="ci">✆</span> +966 53 273 8987</span>
-    <span><span class="ci">✆</span> +20 112 404 7142</span>
-    <span><span class="ci">✉</span> ashrafede@gmail.com</span>
-    <span><span class="ci">in</span> <a href="https://www.linkedin.com/in/ashraf-eldesoky/">linkedin.com/in/ashraf-eldesoky</a></span>
-    <span><span class="ci">⌖</span> Riyadh, Saudi Arabia</span>
+<!-- ════ HEADER ════ -->
+<div class="hdr">
+  <div class="hdr-name">Ashraf Ibrahim El Desoky<span class="hdr-cred">, PMP®</span></div>
+  <div class="hdr-title">Projects Director &nbsp;|&nbsp; PMO &amp; Project Controls Executive &nbsp;|&nbsp; Telecommunications &amp; Digital Infrastructure Leader</div>
+  <div class="hdr-contacts">
+    <span>✆ +966 53 273 8987 (KSA)</span>
+    <span>✆ +20 112 404 7142 (Egypt)</span>
+    <span>✉ ashrafede@gmail.com</span>
+    <span>in <a href="https://www.linkedin.com/in/ashraf-eldesoky/">linkedin.com/in/ashraf-eldesoky</a></span>
+    <span>⌖ Riyadh, Saudi Arabia</span>
   </div>
-</header>
-
-<!-- ══════════════════════════════════════════
-     TWO-COLUMN BODY
-══════════════════════════════════════════ -->
-<div class="cv-body">
-
-  <!-- ── SIDEBAR ── -->
-  <aside class="sidebar">
-
-    <!-- Key Numbers -->
-    <div class="sb-section">
-      <div class="sec-title">Career Summary</div>
-      <div class="key-stats">
-        <div class="ks-item"><span class="ks-num">25+</span><span class="ks-label">years international experience</span></div>
-        <div class="ks-item"><span class="ks-num">10</span><span class="ks-label">years supporting STC (Saudi Telecom)</span></div>
-        <div class="ks-item"><span class="ks-num">20+</span><span class="ks-label">major FTTH/OSP/ISP programmes</span></div>
-        <div class="ks-item"><span class="ks-num">3</span><span class="ks-label">countries: KSA · Egypt · Sudan</span></div>
-      </div>
-    </div>
-
-    <!-- Certifications -->
-    <div class="sb-section">
-      <div class="sec-title">Certifications</div>
-      <div class="cert-item">
-        <div class="cert-name">PMP®</div>
-        <div class="cert-sub">Project Management Institute, 2007</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-name">CCNA</div>
-        <div class="cert-sub">Cisco Systems, 2001 (Cert: 640-507)</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-name">PG Diploma – Business Administration</div>
-        <div class="cert-sub">Edinburgh Business School, Heriot-Watt University, 2017</div>
-      </div>
-    </div>
-
-    <!-- Education -->
-    <div class="sb-section">
-      <div class="sec-title">Education</div>
-      <div class="edu-item">
-        <div class="edu-degree">B.Sc. Communication &amp; Electronics Engineering</div>
-        <div class="edu-inst">Helwan University, Egypt</div>
-        <div class="edu-year">1991 – 1996 · Grade: Good</div>
-      </div>
-      <div class="edu-item" style="margin-top:5px;">
-        <div class="edu-degree">Preparatory M.Sc. – Communication Engineering</div>
-        <div class="edu-inst">Helwan University, Egypt</div>
-        <div class="edu-year">1999 – 2003 (Postgraduate research)</div>
-      </div>
-    </div>
-
-    <!-- Skills -->
-    <div class="sb-section">
-      <div class="sec-title">Core Skills</div>
-      <div class="skill-group">
-        <div class="skill-cat">Leadership</div>
-        <div class="pills">
-          <span class="pill">Programme Mgmt</span>
-          <span class="pill">PMO Leadership</span>
-          <span class="pill">Stakeholder Mgmt</span>
-          <span class="pill">Executive Reporting</span>
-          <span class="pill">Team Leadership</span>
-          <span class="pill">Change Management</span>
-        </div>
-      </div>
-      <div class="skill-group" style="margin-top:5px;">
-        <div class="skill-cat">Project Controls</div>
-        <div class="pills">
-          <span class="pill">Planning &amp; Scheduling</span>
-          <span class="pill">Cost Control</span>
-          <span class="pill">Risk Management</span>
-          <span class="pill">Earned Value Mgmt</span>
-          <span class="pill">KPI Dashboards</span>
-          <span class="pill">Governance</span>
-        </div>
-      </div>
-      <div class="skill-group" style="margin-top:5px;">
-        <div class="skill-cat">Telecommunications</div>
-        <div class="pills">
-          <span class="pill">FTTH / FTTx</span>
-          <span class="pill">OSP / ISP</span>
-          <span class="pill">Fiber Optic</span>
-          <span class="pill">5G Rollout</span>
-          <span class="pill">ELV / BMS</span>
-          <span class="pill">CCTV</span>
-        </div>
-      </div>
-      <div class="skill-group" style="margin-top:5px;">
-        <div class="skill-cat">Software &amp; Tools</div>
-        <div class="pills">
-          <span class="pill">MS Project</span>
-          <span class="pill">Primavera P6</span>
-          <span class="pill">Power BI</span>
-          <span class="pill">MS Access VBA</span>
-          <span class="pill">SQL</span>
-          <span class="pill">Advanced Excel</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Languages -->
-    <div class="sb-section">
-      <div class="sec-title">Languages</div>
-      <div class="lang-item">
-        <div class="lang-name">Arabic <span class="lang-sub">— Native</span></div>
-        <div class="lang-bar-bg"><div class="lang-bar" style="width:100%;"></div></div>
-      </div>
-      <div class="lang-item">
-        <div class="lang-name">English <span class="lang-sub">— Fluent (B2–C1)</span></div>
-        <div class="lang-bar-bg"><div class="lang-bar" style="width:80%;"></div></div>
-      </div>
-      <div class="lang-item">
-        <div class="lang-name">German <span class="lang-sub">— Basic (A1)</span></div>
-        <div class="lang-bar-bg"><div class="lang-bar" style="width:18%;"></div></div>
-      </div>
-    </div>
-
-    <!-- Personal -->
-    <div class="sb-section">
-      <div class="sec-title">Personal</div>
-      <div style="font-size:8.5pt;color:#444;line-height:1.7;">
-        <div><b>Nationality:</b> Egyptian</div>
-        <div><b>DOB:</b> 30 April 1974</div>
-        <div><b>Location:</b> Riyadh, KSA</div>
-        <div><b>Driving Licence:</b> Yes</div>
-        <div><b>Military Service:</b> Completed</div>
-      </div>
-    </div>
-
-  </aside>
-
-  <!-- ── MAIN COLUMN ── -->
-  <main class="main">
-
-    <!-- Profile -->
-    <section style="margin-bottom:7mm;">
-      <div class="sec-title-main">Executive Profile</div>
-      <p class="profile-text">
-        PMP®-certified Projects Director and PMO Executive with over 25 years of international leadership delivering telecommunications, digital infrastructure and capital investment programmes across Saudi Arabia, Egypt and Sudan. Deep expertise in FTTH/FTTx rollout, OSP/ISP delivery, PMO governance, project controls and executive reporting. Recognised for building high-performance teams, developing ERP and KPI systems, and translating complex programme data into clear board-level decisions. Equally strong in technical depth and commercial management.
-      </p>
-    </section>
-
-    <!-- Experience -->
-    <section class="exp-section">
-      <div class="sec-title-main">Professional Experience</div>
-
-      <!-- 1 — AlSharq (current) -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-company">AlSharq Office Company</div>
-          <div class="exp-date">Jan 2024 – Present</div>
-        </div>
-        <div class="exp-role">Project Control Manager</div>
-        <div class="exp-meta">Riyadh, Saudi Arabia &nbsp;·&nbsp; Telecommunications &amp; Electrical Engineering</div>
-        <ul class="exp-bullets">
-          <li>Lead planning, budgeting, forecasting and delivery of concurrent telecom and electrical projects.</li>
-          <li>Manage subcontractors, engineering teams, risk registers and executive KPI dashboards.</li>
-          <li>Drive programme governance improvements, change control and client reporting.</li>
-        </ul>
-      </div>
-
-      <!-- 2 — ECGC -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-company">Egyptian Company for General Contracting</div>
-          <div class="exp-date">Jan 2023 – Jan 2024</div>
-        </div>
-        <div class="exp-role">Projects Director – Telecommunications</div>
-        <div class="exp-meta">Cairo, Egypt &nbsp;·&nbsp; Telecommunications / General Contracting</div>
-        <ul class="exp-bullets">
-          <li>Directed end-to-end delivery of FTTH, FTTx and OSP infrastructure programmes across multiple concurrent contracts.</li>
-          <li>Managed full project lifecycle — cost, quality, risk, commercial and stakeholder engagement — reporting to board level.</li>
-          <li>Led multidisciplinary engineering teams and contract administration across all active projects.</li>
-        </ul>
-      </div>
-
-      <!-- 3 — Sabbour -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-company">Sabbour Consulting</div>
-          <div class="exp-date">Jan 2020 – Jan 2023</div>
-        </div>
-        <div class="exp-role">Lead Consultant Project Manager</div>
-        <div class="exp-meta">Cairo, Egypt &nbsp;·&nbsp; Infrastructure / Smart Systems / ELV</div>
-        <ul class="exp-bullets">
-          <li>Led ELV, BMS, CCTV, Fire Alarm and FTTH delivery for the Egyptian International Olympic Games City (ACUD) — a national prestige project in Egypt's New Administrative Capital.</li>
-          <li>Managed New Administrative Capital Fiber Network: planning, design, procurement and implementation.</li>
-          <li>Stakeholder management with ACUD (government body); oversaw budgets, schedules and QA across all workstreams.</li>
-        </ul>
-        <ul class="ach-bullets">
-          <li>Both major projects delivered on schedule — including a high-profile national deadline.</li>
-        </ul>
-      </div>
-
-      <!-- 4 — Benya / Fiber Misr (condensed together) -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-company">Benya Systems &nbsp;<span style="font-weight:400;font-size:9pt;">&amp; Fiber Misr – Alstom</span></div>
-          <div class="exp-date">Jan 2017 – Jan 2020</div>
-        </div>
-        <div class="exp-role">Senior Site Manager / Site Manager</div>
-        <div class="exp-meta">Egypt &nbsp;·&nbsp; Railways / Fiber Optic Infrastructure</div>
-        <ul class="exp-bullets">
-          <li>Managed fiber optic deployment for Egypt National Railways Modernization Project (ENR client) — supervising installation, testing, commissioning, quality control and site teams.</li>
-          <li>Coordinated between Fiber Misr and Alstom engineering teams; maintained progress reporting to PMO.</li>
-        </ul>
-      </div>
-
-      <!-- 5 — Norconsult / STC (flagship role — full detail) -->
-      <div class="exp-item">
-        <div class="exp-header">
-          <div class="exp-company">Norconsult &nbsp;<span style="font-weight:400;font-size:9pt;">(Supporting Saudi Telecom Company – STC)</span></div>
-          <div class="exp-date">Dec 2007 – Dec 2017</div>
-        </div>
-        <div class="exp-role">Senior Project Control Engineer / Planning Engineer</div>
-        <div class="exp-meta">Riyadh, Saudi Arabia &nbsp;·&nbsp; National FTTH/FTTx Rollout &nbsp;·&nbsp; <b>10 Years</b></div>
-        <ul class="exp-bullets">
-          <li>Managed planning, scheduling, progress monitoring and project controls for STC's national fixed network programmes (FTTH, FTTx, OSP and ISP rollouts across all KSA regions).</li>
-          <li>Developed and maintained master programme schedules (MS Project / Primavera P6) and executive KPI dashboards for STC senior management and board.</li>
-          <li>Designed and built an ERP system (MS Access VBA) for project tracking, materials and reporting — significantly improving programme controls efficiency.</li>
-          <li>Produced weekly, monthly and executive progress reports; managed change control, risk registers and PMO governance frameworks.</li>
-        </ul>
-        <ul class="ach-bullets">
-          <li>Retained by client for 10 continuous years — delivered controls support for 20+ concurrent FTTH/OSP projects.</li>
-          <li>ERP tool adopted programme-wide, directly improving visibility and reducing reporting effort.</li>
-        </ul>
-      </div>
-
-    </section>
-
-  </main>
 </div>
 
-<!-- ══════════════════════════════════════════
-     PAGE 2
-══════════════════════════════════════════ -->
-<div class="pb"></div>
-<div class="page">
-  <div class="cv-body">
-    <aside class="sidebar">
-      <!-- Earlier roles summary label -->
-      <div class="sb-section" style="margin-top:10mm;">
-        <div class="sec-title">Training</div>
-        <div style="font-size:8.5pt;color:#444;line-height:1.8;">
-          <div>PMP Exam Prep Course<br><span style="color:#777;">Jupiter Training Center, 2007</span></div>
-          <div style="margin-top:4px;">CCNA Certification Training<br><span style="color:#777;">Cisco, 2001</span></div>
-          <div style="margin-top:4px;">Digital &amp; Analogue Electronics<br><span style="color:#777;">South Cairo Institute, 1994</span></div>
-          <div style="margin-top:4px;">Cisco Products (Switches/Routers)<br><span style="color:#777;">Cisco Systems</span></div>
-        </div>
-      </div>
+<!-- ════ BODY ════ -->
+<div class="body-wrap">
 
-      <div class="sb-section" style="margin-top:6mm;">
-        <div class="sec-title">Commercial Skills</div>
-        <div class="pills" style="flex-direction:column;gap:3px;">
-          <span class="pill">Contract Administration</span>
-          <span class="pill">CAPEX / OPEX Management</span>
-          <span class="pill">BOQ Preparation</span>
-          <span class="pill">Procurement &amp; Vendor Mgmt</span>
-        </div>
-      </div>
+<!-- ── SIDEBAR ── -->
+<aside class="sb">
 
-      <div class="sb-section" style="margin-top:6mm;">
-        <div class="sec-title">Digital / ERP</div>
-        <div class="pills" style="flex-direction:column;gap:3px;">
-          <span class="pill">ERP Development (VBA)</span>
-          <span class="pill">Power BI Dashboards</span>
-          <span class="pill">SQL / MS Access</span>
-          <span class="pill">VB.NET / ASP.NET</span>
-          <span class="pill">AutoCAD / MS Visio</span>
-        </div>
-      </div>
-    </aside>
-
-    <main class="main">
-      <section class="exp-section">
-        <div class="sec-title-main">Earlier Career</div>
-
-        <div class="exp-condensed exp-item">
-          <div class="exp-header">
-            <div class="exp-company">Millentech Systems</div>
-            <div class="exp-date">Sep 2006 – Dec 2007</div>
-          </div>
-          <div class="exp-role">Project Manager</div>
-          <div class="exp-meta">Cairo, Egypt &nbsp;·&nbsp; Telecommunications / ICT</div>
-          <p style="font-size:9pt;color:#444;margin-top:3px;">Managed end-to-end delivery of ICT and telecom projects; planned schedules, led teams, managed subcontractors and reported to senior management.</p>
-        </div>
-
-        <div class="exp-condensed exp-item">
-          <div class="exp-header">
-            <div class="exp-company">MITT Company – Sudan Branch &nbsp;<span style="font-weight:400;font-size:9pt;">(Siemens Subcontract)</span></div>
-            <div class="exp-date">Sep 2005 – Sep 2006</div>
-          </div>
-          <div class="exp-role">Project Engineer</div>
-          <div class="exp-meta">Sudan &nbsp;·&nbsp; External Telecom Network / Turnkey Delivery</div>
-          <p style="font-size:9pt;color:#444;margin-top:3px;">Site engineer on external network projects; schedule control (MS Project), WBS creation, progress reporting, materials and warehouse management.</p>
-        </div>
-
-        <div class="exp-condensed exp-item">
-          <div class="exp-header">
-            <div class="exp-company">Compumagic International</div>
-            <div class="exp-date">Sep 2004 – Sep 2005</div>
-          </div>
-          <div class="exp-role">Assistant General Manager</div>
-          <div class="exp-meta">Cairo, Egypt &nbsp;·&nbsp; IT / ICT — Ministry of ICT Partner</div>
-          <p style="font-size:9pt;color:#444;margin-top:3px;">Supervised PBX/LAN installation; designed MS Access VBA accounting and attendance system; RMA and Intel payment programme management.</p>
-        </div>
-
-        <div class="exp-condensed exp-item">
-          <div class="exp-header">
-            <div class="exp-company">Siemens AG – Egypt</div>
-            <div class="exp-date">Jun 2000 – Sep 2004</div>
-          </div>
-          <div class="exp-role">Project Control &amp; Monitoring Engineer – External Network</div>
-          <div class="exp-meta">Cairo, Egypt &nbsp;·&nbsp; Telecommunications &nbsp;·&nbsp; 4+ Years</div>
-          <ul class="exp-bullets" style="margin-top:3px;">
-            <li>Monitored construction progress and materials for external network projects across Egypt; controlled Siemens warehouse.</li>
-            <li>Built MS Access programme for project progress, materials tracking and warehouse control — adopted company-wide.</li>
-            <li>Prepared BOQ for client approval; WBS creation and weekly progress reports vs. baseline.</li>
-          </ul>
-        </div>
-
-        <div class="exp-condensed exp-item" style="border-bottom:none;">
-          <div class="exp-header">
-            <div class="exp-company">El Gezirah Sheraton Hotel &nbsp;<span style="font-weight:400;font-size:9pt;">· Egyptian Armed Forces (Air Defence)</span></div>
-            <div class="exp-date">1997 – 2000</div>
-          </div>
-          <div class="exp-role">Shift Engineer &nbsp;/&nbsp; Military Officer (Service Completed)</div>
-          <p style="font-size:9pt;color:#444;margin-top:3px;">Supervised hotel M&amp;E systems (HVAC, electrical, plumbing); preventive maintenance scheduling. Preceded by mandatory military service as officer in Egyptian Air Defence Forces.</p>
-        </div>
-
-      </section>
-
-      <!-- Major Projects -->
-      <section style="margin-top:6mm;">
-        <div class="sec-title-main">Selected Projects</div>
-        <table style="width:100%;border-collapse:collapse;font-size:9pt;">
-          <thead>
-            <tr style="background:#f0f4fa;">
-              <th style="text-align:left;padding:4px 6px;color:#1a365d;font-size:8pt;border-bottom:1px solid #b0bcd0;">Project</th>
-              <th style="text-align:left;padding:4px 6px;color:#1a365d;font-size:8pt;border-bottom:1px solid #b0bcd0;">Client</th>
-              <th style="text-align:left;padding:4px 6px;color:#1a365d;font-size:8pt;border-bottom:1px solid #b0bcd0;">Period</th>
-              <th style="text-align:left;padding:4px 6px;color:#1a365d;font-size:8pt;border-bottom:1px solid #b0bcd0;">Role</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;"><b>Egyptian Olympic Games City – ELV/FTTH</b></td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">ACUD</td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">2020–2023</td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">Lead PM</td></tr>
-            <tr style="background:#fafbfd;"><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;"><b>New Admin. Capital Fiber Network</b></td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">ACUD</td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">2020–2023</td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">Lead PM</td></tr>
-            <tr><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;"><b>Egypt National Railways Fiber Deployment</b></td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">ENR</td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">2017–2020</td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">Sr. Site Manager</td></tr>
-            <tr style="background:#fafbfd;"><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;"><b>STC National FTTH/FTTx/OSP/ISP Rollout</b></td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">Saudi Telecom Co.</td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">2007–2017</td><td style="padding:3px 6px;border-bottom:1px solid #e8ecf0;">Sr. PCE / Planning Engr.</td></tr>
-            <tr><td style="padding:3px 6px;"><b>Siemens External Network – Egypt</b></td><td style="padding:3px 6px;">Siemens AG</td><td style="padding:3px 6px;">2000–2004</td><td style="padding:3px 6px;">Project Control Engr.</td></tr>
-          </tbody>
-        </table>
-      </section>
-
-      <!-- Footer note -->
-      <div style="margin-top:8mm;padding-top:4mm;border-top:1px solid #d8dde6;font-size:8pt;color:#888;display:flex;justify-content:space-between;">
-        <span>Ashraf Ibrahim El Desoky, PMP® &nbsp;|&nbsp; Master CV – Executive Edition &nbsp;|&nbsp; July 2026</span>
-        <span>ashrafede@gmail.com &nbsp;·&nbsp; +966 53 273 8987</span>
-      </div>
-
-    </main>
+  <div class="sb-sec">
+    <div class="sb-hd">Career Snapshot</div>
+    <div class="kn-item"><span class="kn-num">25+</span><span class="kn-lbl">years international leadership</span></div>
+    <div class="kn-item"><span class="kn-num">10</span><span class="kn-lbl">years at STC — Saudi Telecom</span></div>
+    <div class="kn-item"><span class="kn-num">20+</span><span class="kn-lbl">FTTH / OSP / ISP programmes</span></div>
+    <div class="kn-item"><span class="kn-num">3</span><span class="kn-lbl">countries: KSA · Egypt · Sudan</span></div>
   </div>
+
+  <div class="sb-sec">
+    <div class="sb-hd">Certifications</div>
+    <div class="sb-item">
+      <div class="sb-item-title">PMP® — Active</div>
+      <div class="sb-item-sub">Project Management Institute (PMI) · 2007</div>
+    </div>
+    <div class="sb-item">
+      <div class="sb-item-title">CCNA (Cert: 640-507)</div>
+      <div class="sb-item-sub">Cisco Systems · 2001</div>
+    </div>
+    <div class="sb-item">
+      <div class="sb-item-title">PG Diploma — Business Administration</div>
+      <div class="sb-item-sub">Edinburgh Business School, Heriot-Watt University · 2017</div>
+    </div>
+  </div>
+
+  <div class="sb-sec">
+    <div class="sb-hd">Education</div>
+    <div class="sb-item">
+      <div class="sb-item-title">B.Sc. Communication &amp; Electronics Engineering</div>
+      <div class="sb-item-sub">Helwan University · 1991–1996<br>Grade: Good · Project: Very Good<br><em>Project: Traffic Signal Control via PC</em></div>
+    </div>
+    <div class="sb-item" style="margin-top:4px;">
+      <div class="sb-item-title">Preparatory M.Sc. — Communication Engineering</div>
+      <div class="sb-item-sub">Helwan University · 1999–2003<br><em>Resource Allocation for Multi-Service IP Networks</em></div>
+    </div>
+    <div class="sb-item" style="margin-top:4px;">
+      <div class="sb-item-title">Egyptian Secondary Certificate</div>
+      <div class="sb-item-sub">El Ibrahimya School · 1987–1990</div>
+    </div>
+  </div>
+
+  <div class="sb-sec">
+    <div class="sb-hd">Core Skills</div>
+    <div class="pill-group">
+      <div class="pill-cat">Leadership &amp; PMO</div>
+      <div class="pills">
+        <span class="pill">Programme Mgmt</span><span class="pill">PMO Leadership</span><span class="pill">Portfolio Mgmt</span><span class="pill">Executive Reporting</span><span class="pill">Stakeholder Mgmt</span><span class="pill">Change Mgmt</span>
+      </div>
+    </div>
+    <div class="pill-group" style="margin-top:4px;">
+      <div class="pill-cat">Project Controls</div>
+      <div class="pills">
+        <span class="pill">Planning &amp; Scheduling</span><span class="pill">Cost Control</span><span class="pill">Risk Mgmt</span><span class="pill">Earned Value (EVM)</span><span class="pill">KPI Dashboards</span><span class="pill">Governance</span>
+      </div>
+    </div>
+    <div class="pill-group" style="margin-top:4px;">
+      <div class="pill-cat">Telecommunications</div>
+      <div class="pills">
+        <span class="pill">FTTH / FTTx</span><span class="pill">OSP / ISP</span><span class="pill">Fiber Optic</span><span class="pill">5G Rollout</span><span class="pill">ELV / BMS</span><span class="pill">CCTV</span><span class="pill">Fire Alarm</span>
+      </div>
+    </div>
+    <div class="pill-group" style="margin-top:4px;">
+      <div class="pill-cat">Software &amp; Tools</div>
+      <div class="pills">
+        <span class="pill">MS Project</span><span class="pill">Primavera P6</span><span class="pill">Power BI</span><span class="pill">MS Access VBA</span><span class="pill">SQL</span><span class="pill">VB.NET</span><span class="pill">ASP.NET</span><span class="pill">AutoCAD</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sb-sec">
+    <div class="sb-hd">Languages</div>
+    <div class="lang-it"><div class="lang-nm">Arabic <span class="lang-lv">— Native</span></div><div class="lbar"><div class="lbar-f" style="width:100%;"></div></div></div>
+    <div class="lang-it"><div class="lang-nm">English <span class="lang-lv">— Fluent (B2–C1)</span></div><div class="lbar"><div class="lbar-f" style="width:80%;"></div></div></div>
+    <div class="lang-it"><div class="lang-nm">German <span class="lang-lv">— Basic (A1)</span></div><div class="lbar"><div class="lbar-f" style="width:18%;"></div></div></div>
+  </div>
+
+  <div class="sb-sec">
+    <div class="sb-hd">Personal</div>
+    <div class="pers-row">
+      <div><b>Nationality:</b> Egyptian</div>
+      <div><b>Date of Birth:</b> 30 April 1974</div>
+      <div><b>Marital Status:</b> Married</div>
+      <div><b>Residence:</b> Riyadh, Saudi Arabia</div>
+      <div><b>Home:</b> El Haram, Giza, Egypt</div>
+      <div><b>Driving Licence:</b> Yes</div>
+      <div><b>Military Service:</b> Completed</div>
+    </div>
+  </div>
+
+</aside>
+
+<!-- ── MAIN COLUMN ── -->
+<main class="main">
+
+  <!-- PROFILE -->
+  <div class="sec-hd">Executive Profile</div>
+  <p class="profile-p">
+    PMP®-certified Projects Director and PMO Executive with over 25 years of international leadership delivering telecommunications, digital infrastructure and capital investment programmes across Saudi Arabia, Egypt and Sudan. Recognised authority in FTTH/FTTx rollout, OSP/ISP programme delivery, PMO governance, project controls, ERP development and executive KPI reporting. Combines strategic leadership with hands-on technical depth in fiber optic networks, ELV systems and digital transformation. Proven record of managing multimillion-dollar multi-region programmes, building high-performance engineering teams, and driving commercial, schedule and quality excellence from initiation to closeout. Fully bilingual (Arabic/English); experienced working with government bodies, international contractors and multinational clients.
+  </p>
+
+  <!-- EXPERIENCE -->
+  <div class="sec-hd">Professional Experience</div>
+
+  <!-- 1. AlSharq -->
+  <div class="exp">
+    <div class="exp-top"><div class="exp-co">AlSharq Office Company</div><div class="exp-dt">Jan 2024 – Present</div></div>
+    <div class="exp-role">Project Control Manager</div>
+    <div class="exp-meta">Riyadh, Saudi Arabia &nbsp;·&nbsp; Telecommunications &amp; Electrical Engineering</div>
+    <ul class="bul">
+      <li>Lead integrated planning, budgeting, forecasting and execution oversight for concurrent telecommunications and electrical infrastructure projects across the Kingdom.</li>
+      <li>Manage subcontractor performance, engineering teams, procurement, risk registers and client-facing communications on all active projects.</li>
+      <li>Design and maintain executive KPI dashboards and governance frameworks to provide senior management with real-time programme visibility.</li>
+      <li>Drive change control, issue resolution and operational improvements across the project portfolio.</li>
+      <li>Prepare and present weekly, monthly and milestone progress reports to senior leadership and clients.</li>
+    </ul>
+  </div>
+
+  <!-- 2. ECGC -->
+  <div class="exp">
+    <div class="exp-top"><div class="exp-co">Egyptian Company for General Contracting (ECGC)</div><div class="exp-dt">Jan 2023 – Jan 2024</div></div>
+    <div class="exp-role">Projects Director – Telecommunications</div>
+    <div class="exp-meta">Cairo, Egypt &nbsp;·&nbsp; Telecommunications / General Contracting</div>
+    <ul class="bul">
+      <li>Directed full end-to-end delivery of FTTH, FTTx and OSP infrastructure programmes across multiple concurrent contracts, reporting directly to the company board.</li>
+      <li>Managed complete project lifecycle: scope definition, cost control, quality assurance, risk management, commercial administration and stakeholder engagement.</li>
+      <li>Led multidisciplinary engineering and contracting teams responsible for design, installation and commissioning of fiber optic networks.</li>
+      <li>Established project controls frameworks, change control procedures and performance measurement baselines for all active projects.</li>
+      <li>Ensured contractual compliance, client satisfaction and on-time delivery across all programme deliverables.</li>
+    </ul>
+  </div>
+
+  <!-- 3. Sabbour -->
+  <div class="exp">
+    <div class="exp-top"><div class="exp-co">Sabbour Consulting</div><div class="exp-dt">Jan 2020 – Jan 2023</div></div>
+    <div class="exp-role">Lead Consultant Project Manager</div>
+    <div class="exp-meta">Cairo, Egypt &nbsp;·&nbsp; Infrastructure / Smart City / ELV / ICT</div>
+    <div class="exp-scope">Key Projects: Egyptian International Olympic Games City (ACUD) &nbsp;|&nbsp; New Administrative Capital Fiber Network</div>
+    <ul class="bul">
+      <li>Led full design, procurement and delivery of ELV, BMS, CCTV, Fire Alarm and FTTH systems for the Egyptian International Olympic Games City — a national prestige smart city project in Egypt's New Administrative Capital.</li>
+      <li>Managed all aspects of the New Administrative Capital Fiber Network: planning, detailed design, contractor management, procurement, testing and commissioning.</li>
+      <li>Primary interface with ACUD (Administrative Capital for Urban Development) — government client management, approvals, reporting and issue escalation.</li>
+      <li>Oversaw project budgets, master programme schedules, procurement plans and QA/QC across all concurrent workstreams.</li>
+      <li>Coordinated multidisciplinary teams of engineers, subcontractors and specialist consultants across multiple simultaneous packages.</li>
+    </ul>
+    <ul class="ach">
+      <li>Both flagship projects delivered on schedule against high-profile national deadlines.</li>
+      <li>Successfully managed complex multi-system integration (ELV + fiber + BMS) on a nationally significant prestige project.</li>
+    </ul>
+  </div>
+
+</main>
+</div>
+</div>
+
+<!-- ═══════════ PAGE 2 ═══════════ -->
+<div class="page pgbr">
+<div class="body-wrap">
+<aside class="sb">
+  <div class="sb-sec" style="margin-top:8mm;">
+    <div class="sb-hd">Training</div>
+    <div class="sb-item"><div class="sb-item-title">PMP Exam Preparation</div><div class="sb-item-sub">Jupiter Training Center · 2007</div></div>
+    <div class="sb-item" style="margin-top:3px;"><div class="sb-item-title">CCNA Certification Training</div><div class="sb-item-sub">Cisco Systems · 2001</div></div>
+    <div class="sb-item" style="margin-top:3px;"><div class="sb-item-title">Cisco Products (Switches &amp; Routers)</div><div class="sb-item-sub">Cisco Systems</div></div>
+    <div class="sb-item" style="margin-top:3px;"><div class="sb-item-title">Digital &amp; Analogue Electronics, Microprocessors</div><div class="sb-item-sub">South Cairo Institute · 1994</div></div>
+  </div>
+
+  <div class="sb-sec">
+    <div class="sb-hd">Commercial Skills</div>
+    <div class="pills" style="flex-direction:column;gap:3px;">
+      <span class="pill">Contract Administration</span>
+      <span class="pill">CAPEX / OPEX Mgmt</span>
+      <span class="pill">BOQ Preparation</span>
+      <span class="pill">Procurement &amp; Vendor Mgmt</span>
+      <span class="pill">Commercial Management</span>
+    </div>
+  </div>
+
+  <div class="sb-sec" style="margin-top:5mm;">
+    <div class="sb-hd">Digital / ERP Dev.</div>
+    <div class="pills" style="flex-direction:column;gap:3px;">
+      <span class="pill">ERP System Design (VBA)</span>
+      <span class="pill">Power BI Dashboards</span>
+      <span class="pill">SQL / MS Access</span>
+      <span class="pill">VB.NET / ASP.NET</span>
+      <span class="pill">HTML / CSS</span>
+      <span class="pill">MS Visio / AutoCAD</span>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+
+  <!-- Continued Experience -->
+  <div class="sec-hd" style="margin-top:8mm;">Professional Experience (Continued)</div>
+
+  <!-- 4. Benya + Fiber Misr -->
+  <div class="exp">
+    <div class="exp-top"><div class="exp-co">Benya Systems &amp; Fiber Misr – Alstom</div><div class="exp-dt">Jan 2017 – Jan 2020</div></div>
+    <div class="exp-role">Senior Site Manager / Site Manager</div>
+    <div class="exp-meta">Egypt &nbsp;·&nbsp; Railways Modernization / Fiber Optic Infrastructure &nbsp;·&nbsp; Client: Egyptian National Railways (ENR)</div>
+    <ul class="bul">
+      <li>Managed fiber optic cable installation, infrastructure deployment and site operations for Egypt National Railways Modernization Project — a major national programme spanning multiple regions.</li>
+      <li>Supervised site teams covering installation, jointing, testing, commissioning and quality control of fiber optic networks along railway corridors.</li>
+      <li>Coordinated daily between Fiber Misr and Alstom engineering teams to ensure integrated delivery against the master programme.</li>
+      <li>Managed site material tracking, progress reporting and HSE compliance; liaised with ENR client representatives on all site matters.</li>
+    </ul>
+    <ul class="ach">
+      <li>Successfully delivered fiber optic infrastructure across multiple railway corridors on the ENR modernization programme.</li>
+    </ul>
+  </div>
+
+  <!-- 5. Norconsult / STC — FLAGSHIP -->
+  <div class="exp">
+    <div class="exp-top"><div class="exp-co">Norconsult &nbsp;<span style="font-weight:400;font-size:9pt;">– Supporting Saudi Telecom Company (STC)</span></div><div class="exp-dt">Dec 2007 – Dec 2017</div></div>
+    <div class="exp-role">Senior Project Control Engineer / Planning Engineer</div>
+    <div class="exp-meta">Riyadh, Saudi Arabia &nbsp;·&nbsp; National FTTH / FTTx / OSP / ISP Rollout &nbsp;·&nbsp; <strong>10 Continuous Years</strong></div>
+    <div class="exp-scope">Client: Saudi Telecom Company (STC) — National Fixed Network Expansion Programme</div>
+    <ul class="bul">
+      <li>Managed planning, scheduling, progress monitoring and full project controls for STC's national fixed network expansion programmes — covering FTTH, FTTx, OSP and ISP rollouts simultaneously across all regions of the Kingdom of Saudi Arabia over a 10-year continuous engagement.</li>
+      <li>Prepared, maintained and updated master programme schedules for complex multi-region rollout using MS Project and Primavera P6; managed baseline control, variance analysis and look-ahead programmes.</li>
+      <li>Developed and maintained executive KPI dashboards and performance reports for STC regional directors, programme managers and board-level stakeholders — providing real-time visibility on progress, cost and risk.</li>
+      <li>Designed and developed a full ERP system using MS Access VBA and SQL for project tracking, materials management, subcontractor progress and executive reporting — adopted programme-wide and significantly reducing reporting effort and data errors.</li>
+      <li>Created and maintained Work Breakdown Structures (WBS) for all active projects; managed change control, risk registers, issue logs and lessons-learned processes throughout programme lifecycle.</li>
+      <li>Produced weekly, monthly, quarterly and ad-hoc executive progress reports comparing actual vs. baseline; coordinated with STC regional directors, project teams and subcontractors on daily basis.</li>
+      <li>Supported commercial management, contract administration, BOQ reviews and supplier performance monitoring across the STC contractor framework.</li>
+      <li>Established and maintained PMO governance frameworks, document management systems and programme reporting standards for the entire STC fixed network programme.</li>
+    </ul>
+    <ul class="ach">
+      <li>Retained by STC / Norconsult for 10 uninterrupted years — a testament to consistent performance and client trust.</li>
+      <li>ERP tracking system adopted programme-wide — directly improved controls accuracy and reduced manual reporting by an estimated 60%.</li>
+      <li>Provided planning and controls support for 20+ concurrent FTTH, FTTx, OSP and ISP projects across the Kingdom simultaneously.</li>
+      <li>Made significant measurable contribution to STC's national FTTH network rollout — one of the largest telecom infrastructure programmes in the Middle East.</li>
+    </ul>
+  </div>
+
+  <!-- EARLIER CAREER -->
+  <div class="sec-hd">Earlier Career</div>
+
+  <div class="exp-cond exp">
+    <div class="exp-top"><div class="exp-co">Millentech Systems</div><div class="exp-dt">Sep 2006 – Dec 2007</div></div>
+    <div class="exp-role">Project Manager &nbsp;·&nbsp; Cairo, Egypt &nbsp;·&nbsp; ICT / Healthcare IT / Telecommunications</div>
+    <p>Managed end-to-end delivery of ICT and telecom projects for a leading Egyptian technology integrator (PACS, RIS/CIS, healthcare IT and telecom solutions). Planned and scheduled projects, led engineering teams, managed subcontractors and stakeholders, and reported progress to senior management. Developed project tracking tools using MS Project and MS Access.</p>
+  </div>
+
+  <div class="exp-cond exp">
+    <div class="exp-top"><div class="exp-co">MITT Company – Sudan Branch &nbsp;<span style="font-weight:400;">(Siemens Germany–Sudan Subcontract)</span></div><div class="exp-dt">Sep 2005 – Sep 2006</div></div>
+    <div class="exp-role">Project Engineer &nbsp;·&nbsp; Sudan &nbsp;·&nbsp; Telecom External Network / Turnkey</div>
+    <p>Site engineer on turnkey external telecom network delivery for Siemens Germany–Sudan branch. Responsibilities: schedule control (MS Project), WBS creation, construction progress monitoring, materials and warehouse management, preparation of progress reports for client and senior management.</p>
+  </div>
+
+  <div class="exp-cond exp">
+    <div class="exp-top"><div class="exp-co">Compumagic International</div><div class="exp-dt">Sep 2004 – Sep 2005</div></div>
+    <div class="exp-role">Assistant General Manager &nbsp;·&nbsp; Cairo, Egypt &nbsp;·&nbsp; IT / ICT (Ministry of ICT Partner)</div>
+    <p>Supervised PBX and LAN installation in new headquarters; managed RMA and Intel payment repayment programme; designed MS Access VBA accounting and time-attendance application; website development. Compumagic is one of Egypt's largest PC distributors and a Ministry of ICT partner for the "Computer for Every Home" initiative.</p>
+  </div>
+
+  <div class="exp-cond exp">
+    <div class="exp-top"><div class="exp-co">Siemens AG – Egypt</div><div class="exp-dt">Jun 2000 – Sep 2004 (4+ Years)</div></div>
+    <div class="exp-role">Project Control &amp; Monitoring Engineer – External Network &nbsp;·&nbsp; Cairo, Egypt</div>
+    <ul class="bul">
+      <li>Monitored construction progress and materials on site for Siemens external telecom network projects across multiple regions of Egypt; controlled Siemens warehouse and material flows.</li>
+      <li>Developed MS Access programme for project progress tracking, materials monitoring and warehouse control — solution adopted company-wide for improved operational visibility.</li>
+      <li>Used MS Project for schedule control; created WBS for all projects; prepared BOQ from planning division for client signature; delivered weekly progress reports vs. baseline plan to implementation division.</li>
+      <li>Key achievements: Shoubra Exchange Network Expansion (Cairo) and Assuit Exchanges Network Expansion — large-scale infrastructure upgrades across 8 cities in Upper Egypt.</li>
+    </ul>
+  </div>
+
+  <div class="exp-cond exp" style="border-bottom:none;">
+    <div class="exp-top">
+      <div class="exp-co">El Gezirah Sheraton Hotel &nbsp;<span style="font-weight:400;font-size:9pt;">/ Egyptian Armed Forces – Air Defence</span></div>
+      <div class="exp-dt">1997 – 2000</div>
+    </div>
+    <div class="exp-role">Shift Engineer (Sheraton) / Military Officer — Air Defence Forces (Completed)</div>
+    <p>At Sheraton: supervised hotel M&amp;E systems (HVAC, electrical, plumbing, PBX, satellite TV, wireless); preventive maintenance scheduling; trained junior staff; coordinated external vendors. Prior: mandatory military service as officer in Egyptian Air Defence Forces (Jan 1997 – Jun 1999).</p>
+  </div>
+
+  <!-- PROJECTS TABLE -->
+  <div class="sec-hd" style="margin-top:5mm;">Selected Major Projects</div>
+  <table class="ptbl">
+    <thead><tr><th style="width:32%;">Project</th><th style="width:18%;">Client</th><th style="width:10%;">Country</th><th style="width:11%;">Period</th><th>Role &amp; Scope</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Egyptian Olympic Games City – ELV, BMS, CCTV, Fire Alarm, FTTH</strong></td><td>ACUD / Sabbour</td><td>Egypt</td><td>2020–23</td><td>Lead Consultant PM – full ELV &amp; fiber delivery</td></tr>
+      <tr><td><strong>New Administrative Capital Fiber Network</strong></td><td>ACUD / Sabbour</td><td>Egypt</td><td>2020–23</td><td>Lead Consultant PM – FTTH planning, design &amp; implementation</td></tr>
+      <tr><td><strong>Egypt National Railways Modernization – Fiber Optic</strong></td><td>ENR / Benya &amp; Alstom</td><td>Egypt</td><td>2017–20</td><td>Sr. Site Manager – fiber installation along railway corridors</td></tr>
+      <tr><td><strong>STC National FTTH/FTTx Rollout Programme</strong></td><td>Saudi Telecom (STC)</td><td>KSA</td><td>2007–17</td><td>Sr. PCE – 10yr national rollout planning &amp; controls</td></tr>
+      <tr><td><strong>STC OSP / ISP National Programme</strong></td><td>Saudi Telecom (STC)</td><td>KSA</td><td>2007–17</td><td>Planning Engr – Outside &amp; Inside Plant programme controls</td></tr>
+      <tr><td><strong>ERP System – STC Programme Tracking</strong></td><td>STC / Norconsult</td><td>KSA</td><td>2008–10</td><td>Designer &amp; Developer – MS Access VBA ERP adopted programme-wide</td></tr>
+      <tr><td><strong>Siemens Shoubra Exchange Network Expansion</strong></td><td>Siemens AG / Client</td><td>Egypt</td><td>2000–04</td><td>Project Control Engr – network infrastructure deployment Cairo</td></tr>
+      <tr><td><strong>Assuit Exchanges Network Expansion (8 Cities)</strong></td><td>Siemens AG / Client</td><td>Egypt</td><td>2000–04</td><td>Project Control Engr – large-scale Upper Egypt expansion</td></tr>
+      <tr><td><strong>MITT External Telecom Network – Sudan</strong></td><td>Siemens Germany–Sudan</td><td>Sudan</td><td>2005–06</td><td>Project Engineer – turnkey external network delivery</td></tr>
+    </tbody>
+  </table>
+
+  <!-- FOOTER -->
+  <div class="cv-foot">
+    <span>Ashraf Ibrahim El Desoky, PMP® &nbsp;|&nbsp; Master CV – Full Executive Edition &nbsp;|&nbsp; July 2026</span>
+    <span>ashrafede@gmail.com &nbsp;·&nbsp; +966 53 273 8987</span>
+  </div>
+
+</main>
+</div>
 </div>
 
 </body>
