@@ -1908,9 +1908,12 @@ html.i18n-rtl #backToTop {
   background: rgba(148, 163, 184, 0.12);
 }
 
-/* ── Messages (Response Area — fully independent, scrolls only here) ── */
+/* ── Messages (Response Area — FIXED SIZE, scrolls only here) ── */
 .ai-chat-messages {
-  flex: 1 1 0;
+  flex: none;
+  height: 420px;
+  min-height: 420px;
+  max-height: 420px;
   overflow-y: auto;
   overflow-x: hidden;
   padding: 18px;
@@ -1919,7 +1922,6 @@ html.i18n-rtl #backToTop {
   gap: 14px;
   scrollbar-width: thin;
   scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
-  min-height: 0;
   background: rgba(10, 17, 40, 0.5);
   border-bottom: 2px solid rgba(148, 163, 184, 0.15);
 }
@@ -2035,15 +2037,19 @@ html.i18n-rtl #backToTop {
   color: #bae6fd;
 }
 
-/* ── Input Area (User Writing Area — completely separate panel) ── */
+/* ── Input Area (User Writing Area — FIXED SIZE, never changes) ── */
 .ai-chat-input-area {
   display: flex;
   gap: 10px;
   padding: 14px 18px 18px;
   flex: none;
+  height: 150px;
+  min-height: 150px;
+  max-height: 150px;
   background: rgba(15, 23, 42, 0.95);
   border-top: 2px solid rgba(14, 165, 233, 0.25);
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 #ai-chatbot-root textarea.ai-chat-input,
 #ai-chatbot-root textarea.ai-chat-input:focus,
@@ -2134,6 +2140,16 @@ html.i18n-rtl #backToTop {
     height: 90px;
     min-height: 90px;
     max-height: 90px;
+  }
+  .ai-chat-messages {
+    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
+  }
+  .ai-chat-input-area {
+    height: 130px;
+    min-height: 130px;
+    max-height: 130px;
   }
 }
 
