@@ -19,6 +19,10 @@
     'google/gemini-2.0-flash-exp:free'
   ];
 
+  // ── Google Sheets Webhook URL ──
+  // Deploy your Apps Script and paste the URL here
+  const SHEET_WEBHOOK_URL = '';
+
   // ── Detect language from page ──
   const IS_ARABIC = document.documentElement.getAttribute('lang') === 'ar';
   const DIR = IS_ARABIC ? 'rtl' : 'ltr';
@@ -38,7 +42,10 @@
       'كيف يمكنني التواصل معه؟'
     ],
     error: 'عذراً، حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.',
-    newChat: 'محادثة جديدة'
+    newChat: 'محادثة جديدة',
+    save: 'حفظ المحادثة',
+    saved: 'تم الحفظ!',
+    noConvo: 'لا توجد محادثة للحفظ'
   } : {
     title: "Eng. Ashraf's AI Advisor",
     subtitle: 'Executive PMO Assistant · AI-Powered',
@@ -53,7 +60,10 @@
       'How can I contact him?'
     ],
     error: 'Sorry, a connection error occurred. Please try again.',
-    newChat: 'New Chat'
+    newChat: 'New Chat',
+    save: 'Save Conversation',
+    saved: 'Saved!',
+    noConvo: 'No conversation to save'
   };
 
   // ── System Prompt ──
@@ -133,6 +143,9 @@ Response Rules:
             </div>
           </div>
           <div class="ai-chat-header-actions">
+            <button id="ai-chat-save" class="ai-chat-icon-btn" title="${UI.save}" aria-label="${UI.save}">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            </button>
             <button id="ai-chat-reset" class="ai-chat-icon-btn" title="${UI.newChat}" aria-label="${UI.newChat}">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
             </button>
@@ -179,6 +192,7 @@ Response Rules:
     const input = document.getElementById('ai-chat-input');
     const sendBtn = document.getElementById('ai-chat-send');
     const chips = document.querySelectorAll('.ai-chat-chip');
+    const saveBtn = document.getElementById('ai-chat-save');
 
     bubble.addEventListener('click', function () {
       win.classList.toggle('ai-chat-hidden');
@@ -192,9 +206,17 @@ Response Rules:
     });
 
     resetBtn.addEventListener('click', function () {
+      // Auto-log current conversation before resetting
+      var convo = messages.filter(function (m) {
+        return m.role === 'user' || m.role === 'assistant';
+      });
+      if (convo.length > 0 && SHEET_WEBHOOK_URL) {
+        logToGoogleSheet(convo);
+      }
+
       messages = [{ role: 'system', content: SYSTEM_PROMPT }];
       const msgs = document.getElementById('ai-chat-messages');
-      msgs.innerHTML = '<div class="ai-chat-msg ai-chat-msg-bot"><div class="ai-chat-msg-content">' + UI.welcome + '</div></div>';
+      msgs.innerHTML = '<div class="ai-chat-msg ai-chat-msg-bot"><div class="ai-chat-msg-avatar">AI</div><div class="ai-chat-msg-content">' + UI.welcome + '</div></div>';
       document.getElementById('ai-chat-chips').style.display = 'flex';
     });
 
@@ -220,6 +242,71 @@ Response Rules:
         input.value = chip.textContent;
         send();
       });
+    });
+
+    saveBtn.addEventListener('click', saveConversation);
+  }
+
+  // ── Save conversation: download as .txt + log to Google Sheets ──
+  function saveConversation() {
+    var convo = messages.filter(function (m) {
+      return m.role === 'user' || m.role === 'assistant';
+    });
+
+    if (convo.length === 0) {
+      alert(UI.noConvo);
+      return;
+    }
+
+    // Build text version for download
+    var lines = [];
+    lines.push('====================================');
+    lines.push(IS_ARABIC ? 'محادثة مع مساعد المهندس أشرف الذكي' : 'Conversation with Eng. Ashraf AI Advisor');
+    lines.push(new Date().toLocaleString());
+    lines.push('====================================');
+    lines.push('');
+    convo.forEach(function (m) {
+      var label = m.role === 'user'
+        ? (IS_ARABIC ? 'الزائر' : 'Visitor')
+        : 'AI';
+      lines.push(label + ': ' + m.content);
+      lines.push('');
+    });
+    var text = lines.join('\n');
+
+    // Download as .txt file
+    var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'chat-' + new Date().toISOString().slice(0, 19).replace(/:/g, '-') + '.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    // Also log to Google Sheets if webhook is configured
+    if (SHEET_WEBHOOK_URL) {
+      logToGoogleSheet(convo);
+    }
+  }
+
+  // ── Send conversation to Google Sheets via Apps Script webhook ──
+  function logToGoogleSheet(convo) {
+    var payload = {
+      timestamp: new Date().toISOString(),
+      page: window.location.pathname,
+      language: IS_ARABIC ? 'ar' : 'en',
+      conversation: convo.map(function (m) {
+        return { role: m.role, text: m.content };
+      })
+    };
+
+    fetch(SHEET_WEBHOOK_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload)
+    }).catch(function (e) {
+      console.warn('Sheet log failed:', e);
     });
   }
 
