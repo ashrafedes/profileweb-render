@@ -16,7 +16,6 @@
   const FALLBACK_MODELS = [
     'meta-llama/llama-3.2-3b-instruct:free',
     'openrouter/free',
-    'deepseek/deepseek-r1:free',
     'google/gemini-2.0-flash-exp:free'
   ];
 
@@ -257,6 +256,19 @@ Response Rules:
     step();
   }
 
+  // ── Clean reasoning models' internal thinking from output ──
+  function cleanReply(text) {
+    if (!text) return '';
+    // Remove DeepSeek R1 style <thinking>...</thinking> blocks
+    text = text.replace(/<thinking>[\s\S]*?<\/thinking>/gi, '');
+    // Remove markdown code fences with "thinking" label
+    text = text.replace(/```thinking\s*[\s\S]*?```/gi, '');
+    // Remove visible "Reasoning:" or "Thinking:" preamble lines
+    text = text.replace(/^\s*(Reasoning|Thinking|Reflection|Thought process)[:\s]+/im, '');
+    // Trim stray whitespace
+    return text.trim();
+  }
+
   // ── Render markdown links (basic) ──
   function renderMarkdown(text) {
     return text
@@ -326,7 +338,9 @@ Response Rules:
       return;
     }
 
-    messages.push({ role: 'assistant', content: reply });
+    // Strip internal reasoning/thinking before showing to user
+    const clean = cleanReply(reply);
+    messages.push({ role: 'assistant', content: clean });
 
     // Add bot message with typing effect
     const botDiv = document.createElement('div');
@@ -337,7 +351,7 @@ Response Rules:
 
     // Typing animation then render markdown
     let i = 0;
-    const plain = reply;
+    const plain = clean;
     function step() {
       if (i < plain.length) {
         content.textContent = plain.slice(0, i + 1);

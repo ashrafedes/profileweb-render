@@ -745,7 +745,7 @@
       <span>·</span>
       <span>© 2026 ashraf-eldesoky.space</span>
       <span>·</span>
-      <span class="text-slate-600">👁 <span id="visitor-count">0</span> visits</span>
+      <img src="https://page-visitor.vercel.app/ashraf-eldesoky-space-en/count.svg" alt="Visitor count" class="visitor-counter" loading="lazy" width="80" height="20" />
     </div>
   </div>
 </footer>
@@ -756,15 +756,6 @@
 <script>
 // ── Set English language preference ──
 localStorage.setItem('ecms-lang', 'en');
-
-// ── Visitor counter ──
-(function() {
-  var key = 'ecms-visits';
-  var n = parseInt(localStorage.getItem(key) || '0', 10) + 1;
-  localStorage.setItem(key, n);
-  var el = document.getElementById('visitor-count');
-  if (el) el.textContent = n.toLocaleString('en-US');
-})();
 
 // ── Mobile nav toggle ──
 document.getElementById('nav-toggle').addEventListener('click', function() {
