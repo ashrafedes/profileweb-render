@@ -2112,3 +2112,17 @@ html.i18n-rtl #backToTop {
     display: none;
   }
 }
+
+/* ── External Visitor Counter Badge ── */
+.visitor-counter {
+  display: inline-block;
+  height: 30px;
+  width: auto;
+  vertical-align: middle;
+  opacity: 0.85;
+  border-radius: 6px;
+  transition: opacity 0.3s ease;
+}
+.visitor-counter:hover {
+  opacity: 1;
+}
