@@ -19,9 +19,15 @@
     'google/gemini-2.0-flash-exp:free'
   ];
 
-  // ── Google Sheets Webhook URL ──
-  // Deploy your Apps Script and paste the URL here
-  const SHEET_WEBHOOK_URL = '';
+  // ── Google Forms Logger (writes to your Google Sheet) ──
+  const FORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdVFMrDmzSDF5ebhMeeydB4bvTWZ6Zdj0_UADjE58WCb1m_4A/formResponse';
+  const FORM_FIELDS = {
+    timestamp: 'entry.140123149',
+    page: 'entry.1034937424',
+    language: 'entry.8073323',
+    role: 'entry.275150362',
+    message: 'entry.1023348545'
+  };
 
   // ── Detect language from page ──
   const IS_ARABIC = document.documentElement.getAttribute('lang') === 'ar';
@@ -210,7 +216,7 @@ Response Rules:
       var convo = messages.filter(function (m) {
         return m.role === 'user' || m.role === 'assistant';
       });
-      if (convo.length > 0 && SHEET_WEBHOOK_URL) {
+      if (convo.length > 0) {
         logToGoogleSheet(convo);
       }
 
@@ -283,30 +289,33 @@ Response Rules:
     a.click();
     document.body.removeChild(a);
 
-    // Also log to Google Sheets if webhook is configured
-    if (SHEET_WEBHOOK_URL) {
-      logToGoogleSheet(convo);
-    }
+    // Log to Google Sheets via Google Forms
+    logToGoogleSheet(convo);
   }
 
-  // ── Send conversation to Google Sheets via Apps Script webhook ──
+  // ── Send conversation to Google Sheet via Google Forms ──
   function logToGoogleSheet(convo) {
-    var payload = {
-      timestamp: new Date().toISOString(),
-      page: window.location.pathname,
-      language: IS_ARABIC ? 'ar' : 'en',
-      conversation: convo.map(function (m) {
-        return { role: m.role, text: m.content };
-      })
-    };
+    var timestamp = new Date().toISOString();
+    var page = window.location.pathname;
+    var language = IS_ARABIC ? 'ar' : 'en';
 
-    fetch(SHEET_WEBHOOK_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify(payload)
-    }).catch(function (e) {
-      console.warn('Sheet log failed:', e);
+    convo.forEach(function (m) {
+      var formData = new FormData();
+      formData.append(FORM_FIELDS.timestamp, timestamp);
+      formData.append(FORM_FIELDS.page, page);
+      formData.append(FORM_FIELDS.language, language);
+      formData.append(FORM_FIELDS.role, m.role);
+      formData.append(FORM_FIELDS.message, m.content);
+      formData.append('fvv', '1');
+      formData.append('fbzx', '');
+
+      fetch(FORM_ACTION_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).catch(function (e) {
+        console.warn('Form log failed:', e);
+      });
     });
   }
 
