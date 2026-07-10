@@ -216,9 +216,7 @@ Response Rules:
       var convo = messages.filter(function (m) {
         return m.role === 'user' || m.role === 'assistant';
       });
-      if (convo.length > 0) {
-        logToGoogleSheet(convo);
-      }
+      // Auto-logging already happens per response, no need here
 
       messages = [{ role: 'system', content: SYSTEM_PROMPT }];
       const msgs = document.getElementById('ai-chat-messages');
@@ -289,8 +287,7 @@ Response Rules:
     a.click();
     document.body.removeChild(a);
 
-    // Log to Google Sheets via Google Forms
-    logToGoogleSheet(convo);
+    // Download as .txt file only (auto-logging happens per response)
   }
 
   // ── Send conversation to Google Sheet via Google Forms ──
@@ -476,6 +473,11 @@ Response Rules:
       } else {
         content.innerHTML = renderMarkdown(plain);
         msgs.scrollTop = msgs.scrollHeight;
+        // Auto-log this Q&A pair to Google Sheets
+        logToGoogleSheet([
+          { role: 'user', content: userText },
+          { role: 'assistant', content: clean }
+        ]);
       }
     }
     step();
