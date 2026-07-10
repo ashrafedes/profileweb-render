@@ -142,6 +142,7 @@ Response Rules:
         <!-- Messages -->
         <div id="ai-chat-messages" class="ai-chat-messages">
           <div class="ai-chat-msg ai-chat-msg-bot">
+            <div class="ai-chat-msg-avatar">AI</div>
             <div class="ai-chat-msg-content">${UI.welcome}</div>
           </div>
         </div>
@@ -151,12 +152,14 @@ Response Rules:
           ${UI.chips.map(c => `<button class="ai-chat-chip">${c}</button>`).join('')}
         </div>
 
-        <!-- Input -->
+        <!-- Input (ChatGPT-style: rounded box with send button inside) -->
         <div class="ai-chat-input-area">
-          <textarea id="ai-chat-input" class="ai-chat-input" placeholder="${UI.placeholder}" rows="4" autocomplete="off" style="background:#1e293b !important;border:2px solid rgba(148,163,184,0.35) !important;color:#ffffff !important;border-radius:16px !important;padding:16px 18px !important;height:110px !important;min-height:110px !important;max-height:110px !important;font-size:1.05rem !important;resize:none !important;outline:none !important;box-shadow:inset 0 2px 8px rgba(0,0,0,0.3) !important;direction:${DIR} !important;text-align:${DIR === 'rtl' ? 'right' : 'left'} !important;font-family:inherit !important;line-height:1.6 !important;"></textarea>
-          <button id="ai-chat-send" class="ai-chat-send" aria-label="${UI.send}">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
+          <div class="ai-chat-input-wrapper">
+            <textarea id="ai-chat-input" class="ai-chat-input" placeholder="${UI.placeholder}" rows="1" autocomplete="off"></textarea>
+            <button id="ai-chat-send" class="ai-chat-send" aria-label="${UI.send}">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
         </div>
       </div>
     `;
@@ -222,7 +225,8 @@ Response Rules:
     const msgs = document.getElementById('ai-chat-messages');
     const div = document.createElement('div');
     div.className = 'ai-chat-msg ' + (role === 'user' ? 'ai-chat-msg-user' : 'ai-chat-msg-bot');
-    div.innerHTML = '<div class="ai-chat-msg-content"></div>';
+    const avatarLabel = role === 'user' ? (IS_ARABIC ? 'أنت' : 'You') : 'AI';
+    div.innerHTML = '<div class="ai-chat-msg-avatar">' + avatarLabel + '</div><div class="ai-chat-msg-content"></div>';
     msgs.appendChild(div);
     const content = div.querySelector('.ai-chat-msg-content');
 
@@ -279,7 +283,7 @@ Response Rules:
     // Typing indicator
     const typingDiv = document.createElement('div');
     typingDiv.className = 'ai-chat-msg ai-chat-msg-bot ai-chat-typing-indicator';
-    typingDiv.innerHTML = '<div class="ai-chat-msg-content"><span class="ai-chat-dot"></span><span class="ai-chat-dot"></span><span class="ai-chat-dot"></span></div>';
+    typingDiv.innerHTML = '<div class="ai-chat-msg-avatar">AI</div><div class="ai-chat-msg-content"><span class="ai-chat-dot"></span><span class="ai-chat-dot"></span><span class="ai-chat-dot"></span></div>';
     msgs.appendChild(typingDiv);
     msgs.scrollTop = msgs.scrollHeight;
 
@@ -340,7 +344,7 @@ Response Rules:
     // Add bot message with typing effect
     const botDiv = document.createElement('div');
     botDiv.className = 'ai-chat-msg ai-chat-msg-bot';
-    botDiv.innerHTML = '<div class="ai-chat-msg-content"></div>';
+    botDiv.innerHTML = '<div class="ai-chat-msg-avatar">AI</div><div class="ai-chat-msg-content"></div>';
     msgs.appendChild(botDiv);
     const content = botDiv.querySelector('.ai-chat-msg-content');
 
