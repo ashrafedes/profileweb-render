@@ -351,7 +351,8 @@ Response Rules:
       if (i < plain.length) {
         content.textContent = plain.slice(0, i + 1);
         i++;
-        msgs.scrollTop = msgs.scrollHeight;
+        // Only scroll every 5 characters to reduce jitter
+        if (i % 5 === 0) msgs.scrollTop = msgs.scrollHeight;
         setTimeout(step, 12);
       } else {
         content.innerHTML = renderMarkdown(plain);

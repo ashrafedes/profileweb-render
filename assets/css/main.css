@@ -1908,7 +1908,7 @@ html.i18n-rtl #backToTop {
   background: rgba(148, 163, 184, 0.12);
 }
 
-/* ── Messages ── */
+/* ── Messages (Response Area — fully independent, scrolls only here) ── */
 .ai-chat-messages {
   flex: 1 1 0;
   overflow-y: auto;
@@ -1920,6 +1920,8 @@ html.i18n-rtl #backToTop {
   scrollbar-width: thin;
   scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
   min-height: 0;
+  background: rgba(10, 17, 40, 0.5);
+  border-bottom: 2px solid rgba(148, 163, 184, 0.15);
 }
 .ai-chat-messages::-webkit-scrollbar {
   width: 5px;
@@ -2033,14 +2035,15 @@ html.i18n-rtl #backToTop {
   color: #bae6fd;
 }
 
-/* ── Input Area ── */
+/* ── Input Area (User Writing Area — completely separate panel) ── */
 .ai-chat-input-area {
   display: flex;
   gap: 10px;
   padding: 14px 18px 18px;
-  border-top: 1px solid rgba(148, 163, 184, 0.18);
   flex: none;
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(15, 23, 42, 0.95);
+  border-top: 2px solid rgba(14, 165, 233, 0.25);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
 }
 #ai-chatbot-root textarea.ai-chat-input,
 #ai-chatbot-root textarea.ai-chat-input:focus,
