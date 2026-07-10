@@ -72,6 +72,7 @@ ${CV_CONTEXT}
 - InfraFlow: منصة تتبع مشاريع الاتصالات/FTTH للمؤسسات.
 
 قواعد الرد:
+0. مهم جداً: لا تكتب أي تفكير داخلي أو تحليل أو ملاحظات لنفسك. ابدأ الرد مباشرة بالإجابة المطلوبة فقط.
 1. رد بلغة عربية احترافية وواضحة.
 2. كن موجزاً ومباشراً (3-5 جمل عادةً).
 3. اعرض خبرة المهندس أشرف بشكل طبيعي عند الاقتراب.
@@ -87,6 +88,8 @@ ${CV_CONTEXT}
 Active Software (inject markdown links when relevant):
 - Petty Cash SaaS System: [Live System](https://pattycashsystem.web.app/) | [Marketing Page](https://pettycash-marketing.web.app/)
 - InfraFlow: Enterprise telecom/FTTH tracking platform.
+
+CRITICAL: Do NOT output any internal thinking, reasoning, analysis, or notes to yourself. Start your response directly with the answer only.
 
 Response Rules:
 1. Respond in clear, professional English.
@@ -262,8 +265,24 @@ Response Rules:
     text = text.replace(/<thinking>[\s\S]*?<\/thinking>/gi, '');
     // Remove markdown code fences with "thinking" label
     text = text.replace(/```thinking\s*[\s\S]*?```/gi, '');
+    // Remove <think>...</think> blocks (some models use this)
+    text = text.replace(/<think>[\s\S]*?<\/think>/gi, '');
     // Remove visible "Reasoning:" or "Thinking:" preamble lines
     text = text.replace(/^\s*(Reasoning|Thinking|Reflection|Thought process)[:\s]+/im, '');
+    // Remove untagged reasoning: starts with patterns like "Okay, the user..." or "Let me check..."
+    // These typically appear at the start as internal monologue before the actual answer
+    text = text.replace(/^["']?(Okay|Let me|Let's|Alright|Well|Now|So|Looking at|Based on|I should|I need|The user|This user|First,? let|Let me check|Let me look|Hmm)[^\n]*(?:\n(?:[^a-zA-Z\n]|[A-Z][^\n]*)){0,20}/i, '');
+    // Remove quoted reasoning blocks at the start
+    text = text.replace(/^["'][\s\S]*?["']\s*\n/i, '');
+    // If text still starts with reasoning-like sentence (no Arabic when expected, or internal monologue)
+    // Strip everything before the first Arabic or proper English answer line
+    if (IS_ARABIC) {
+      // Find first line that starts with Arabic text
+      const arabicMatch = text.match(/[\u0600-\u06FF][^\n]*/);
+      if (arabicMatch && text.indexOf(arabicMatch[0]) > 50) {
+        text = text.substring(text.indexOf(arabicMatch[0]));
+      }
+    }
     // Trim stray whitespace
     return text.trim();
   }
