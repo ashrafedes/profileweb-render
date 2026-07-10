@@ -744,6 +744,8 @@
       <a href="index.html" onclick="localStorage.setItem('ecms-lang','ar')" class="hover:text-cyan-400 transition-colors">العربية</a>
       <span>·</span>
       <span>© 2026 ashraf-eldesoky.space</span>
+      <span>·</span>
+      <span class="text-slate-600">👁 <span id="visitor-count">0</span> visits</span>
     </div>
   </div>
 </footer>
@@ -754,6 +756,15 @@
 <script>
 // ── Set English language preference ──
 localStorage.setItem('ecms-lang', 'en');
+
+// ── Visitor counter ──
+(function() {
+  var key = 'ecms-visits';
+  var n = parseInt(localStorage.getItem(key) || '0', 10) + 1;
+  localStorage.setItem(key, n);
+  var el = document.getElementById('visitor-count');
+  if (el) el.textContent = n.toLocaleString('en-US');
+})();
 
 // ── Mobile nav toggle ──
 document.getElementById('nav-toggle').addEventListener('click', function() {
