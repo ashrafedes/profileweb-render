@@ -7,14 +7,14 @@
 
   <!-- ═══════════════════════════════════════════════
        ECMS Sitemap – Ashraf Ibrahim El Desoky, PMP®
-       Site: https://ashraf-eldesoky.onrender.com
+       Site: https://www.ashraf-eldesoky.space
        Generated: 2026-07-10
-       Pages: 20
+       Pages: 19
   ═══════════════════════════════════════════════ -->
 
   <!-- PRIORITY 1.0 – Home / Executive Dashboard -->
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/</loc>
+    <loc>https://www.ashraf-eldesoky.space/</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -22,31 +22,31 @@
 
   <!-- PRIORITY 0.95 – Core Identity Pages -->
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/about.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/about.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/career.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/career.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/projects.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/projects.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/skills.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/skills.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/achievements.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/achievements.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
@@ -54,25 +54,25 @@
 
   <!-- PRIORITY 0.90 – Credentials -->
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/certifications.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/certifications.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/education.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/education.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/awards.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/awards.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/companies.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/companies.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
@@ -80,37 +80,37 @@
 
   <!-- PRIORITY 0.85 – Specialty / Expertise Pages -->
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/pmo.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/pmo.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/telecommunications.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/telecommunications.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/project-controls.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/project-controls.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/digital-transformation.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/digital-transformation.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/leadership.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/leadership.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/software.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/software.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
@@ -118,19 +118,19 @@
 
   <!-- PRIORITY 0.80 – Utility Pages -->
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/contact.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/contact.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/downloads.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/downloads.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://ashraf-eldesoky.onrender.com/search.html</loc>
+    <loc>https://www.ashraf-eldesoky.space/search.html</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
