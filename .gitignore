@@ -13,3 +13,6 @@ Thumbs.db
 
 # Editor
 .vscode/
+
+# API keys (do not commit)
+assets/js/chatbot-config.js

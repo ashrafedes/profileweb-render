@@ -8,8 +8,8 @@
   <!-- ═══════════════════════════════════════════════
        ECMS Sitemap – Ashraf Ibrahim El Desoky, PMP®
        Site: https://www.ashraf-eldesoky.space
-       Generated: 2026-07-10
-       Pages: 21
+       Auto-updated: 2026-07-10
+       Pages: 22
   ═══════════════════════════════════════════════ -->
 
   <!-- PRIORITY 1.0 – Home / Executive Dashboard (Arabic RTL) -->
@@ -142,6 +142,12 @@
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.ashraf-eldesoky.space/404.html</loc>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.30</priority>
   </url>
 
 </urlset>
