@@ -460,6 +460,7 @@ const ActiveNav = (() => {
 
 /* ── App Init ── */
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.I18N) I18N.init();
   Theme.init();
   Nav.init();
   NavDropdown.init();
@@ -475,4 +476,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ── Global Exports ── */
-window.ECMS = { Theme, Nav, DataLoader, SearchModal };
+window.ECMS = { Theme, Nav, DataLoader, SearchModal, I18N };

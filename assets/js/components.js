@@ -49,6 +49,7 @@ const NAV_HTML = `
       <button class="btn-nav btn-nav-search" data-search-open aria-label="Search (Ctrl+K)">
         🔍 Search
       </button>
+      <button class="btn-i18n-toggle" id="i18n-toggle" aria-label="Switch language" style="background:none;border:1px solid var(--border);border-radius:var(--radius-sm);padding:0.35rem 0.6rem;font-size:0.78rem;font-weight:600;cursor:pointer;color:var(--text);transition:var(--transition);">العربية 🌐</button>
       <button class="btn-theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">🌙</button>
       <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
@@ -128,6 +129,11 @@ function injectComponents() {
 
   const footerTarget = document.getElementById('ecms-footer-inject');
   if (footerTarget) footerTarget.outerHTML = FOOTER_HTML;
+
+  // Re-apply i18n after nav/footer injection
+  if (window.I18N) {
+    setTimeout(function() { I18N.refresh(); }, 0);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', injectComponents);

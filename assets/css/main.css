@@ -1548,3 +1548,171 @@ h1, h2, h3, h4, h5, h6 {
   .timeline { padding-left: 1.5rem; }
   .timeline-dot { left: -1.25rem; }
 }
+
+/* ============================================================
+   RTL / Arabic Language Support
+   ============================================================ */
+
+html.i18n-rtl {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+}
+
+html.i18n-rtl body {
+  font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+  text-align: right;
+}
+
+/* Nav RTL */
+html.i18n-rtl .nav-inner {
+  flex-direction: row-reverse;
+}
+
+html.i18n-rtl .nav-links {
+  padding-right: 0;
+}
+
+html.i18n-rtl .nav-dropdown {
+  right: 0;
+  left: auto;
+}
+
+html.i18n-rtl .nav-actions {
+  flex-direction: row-reverse;
+}
+
+/* Breadcrumb RTL */
+html.i18n-rtl .breadcrumb {
+  flex-direction: row-reverse;
+}
+
+html.i18n-rtl .breadcrumb-sep {
+  transform: scaleX(-1);
+}
+
+/* Cards & grids RTL */
+html.i18n-rtl .exp-card-header {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+html.i18n-rtl .exp-card-period {
+  text-align: left;
+}
+
+html.i18n-rtl .grid-2,
+html.i18n-rtl .grid-3 {
+  direction: rtl;
+}
+
+/* Tables RTL */
+html.i18n-rtl table {
+  direction: rtl;
+}
+
+html.i18n-rtl table td:first-child {
+  text-align: right;
+}
+
+/* Footer RTL */
+html.i18n-rtl .footer-grid {
+  direction: rtl;
+}
+
+html.i18n-rtl .footer-bottom {
+  flex-direction: row-reverse;
+}
+
+/* Timeline RTL */
+html.i18n-rtl .timeline {
+  padding-left: 0;
+  padding-right: 1.5rem;
+  border-left: none;
+  border-right: 2px solid var(--border-light);
+}
+
+html.i18n-rtl .timeline-dot {
+  left: auto;
+  right: -1.25rem;
+}
+
+/* Filter tabs RTL */
+html.i18n-rtl .filter-tabs {
+  flex-direction: row-reverse;
+}
+
+/* Skill bars RTL */
+html.i18n-rtl .skill-bar-track {
+  direction: rtl;
+}
+
+html.i18n-rtl .skill-bar-fill {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Section headers RTL */
+html.i18n-rtl .section-header {
+  text-align: right;
+}
+
+html.i18n-rtl .section-title {
+  text-align: right;
+}
+
+/* Page header RTL */
+html.i18n-rtl .page-header-inner {
+  flex-direction: row-reverse;
+}
+
+/* Buttons RTL */
+html.i18n-rtl .btn {
+  direction: rtl;
+}
+
+/* Lists RTL */
+html.i18n-rtl ul,
+html.i18n-rtl ol {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+html.i18n-rtl .exp-card-achievements {
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+
+html.i18n-rtl .exp-card-achievements li {
+  direction: rtl;
+}
+
+/* Competency items RTL */
+html.i18n-rtl .competency-item {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Tags RTL */
+html.i18n-rtl .timeline-tags {
+  direction: rtl;
+}
+
+/* Search modal RTL */
+html.i18n-rtl .search-modal {
+  direction: rtl;
+}
+
+html.i18n-rtl .search-input-wrap {
+  flex-direction: row-reverse;
+}
+
+/* Back to top RTL */
+html.i18n-rtl #backToTop {
+  right: auto;
+  left: 1.5rem;
+}
+
+/* Language toggle button */
+.btn-i18n-toggle:hover {
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}

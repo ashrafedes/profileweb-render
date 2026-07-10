@@ -201,7 +201,7 @@
         <a href="#evm" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">حاسبة EVM</a>
         <a href="#cases" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">دراسات حالة</a>
         <a href="#resume" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">السيرة الذاتية</a>
-        <a href="en.html" class="mr-3 flex items-center gap-1.5 bg-navy-700 hover:bg-navy-600 border border-cyan-500/30 hover:border-cyan-500/60 text-cyan-400 px-4 py-1.5 rounded-full text-sm font-semibold transition-all">English 🌐</a>
+        <a href="en.html" onclick="localStorage.setItem('ecms-lang','en')" class="mr-3 flex items-center gap-1.5 bg-navy-700 hover:bg-navy-600 border border-cyan-500/30 hover:border-cyan-500/60 text-cyan-400 px-4 py-1.5 rounded-full text-sm font-semibold transition-all">English 🌐</a>
       </div>
 
       <!-- Mobile toggle -->
@@ -220,7 +220,7 @@
       <a href="#evm" class="block text-slate-300 hover:text-cyan-400 py-2 text-sm">حاسبة EVM</a>
       <a href="#cases" class="block text-slate-300 hover:text-cyan-400 py-2 text-sm">دراسات حالة</a>
       <a href="#resume" class="block text-slate-300 hover:text-cyan-400 py-2 text-sm">السيرة الذاتية</a>
-      <a href="en.html" class="block text-cyan-400 py-2 text-sm font-semibold">English 🌐</a>
+      <a href="en.html" onclick="localStorage.setItem('ecms-lang','en')" class="block text-cyan-400 py-2 text-sm font-semibold">English 🌐</a>
     </div>
   </div>
 </nav>
@@ -284,7 +284,7 @@
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           تحميل السيرة الذاتية PDF
         </a>
-        <a href="en.html" class="inline-flex items-center gap-2 border border-cyan-500/30 hover:border-cyan-500 text-cyan-400 font-semibold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5">
+        <a href="en.html" onclick="localStorage.setItem('ecms-lang','en')" class="inline-flex items-center gap-2 border border-cyan-500/30 hover:border-cyan-500 text-cyan-400 font-semibold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5">
           English 🌐
         </a>
       </div>
@@ -758,11 +758,11 @@
     <div class="mt-16 text-center reveal">
       <p class="text-slate-400 mb-4">استكشف الملف التنفيذي الكامل</p>
       <div class="flex flex-wrap justify-center gap-3">
-        <a href="en.html" class="badge badge-cyan px-4 py-2 text-sm">English 🌐 النسخة الإنجليزية</a>
-        <a href="career.html" class="badge badge-gray px-4 py-2 text-sm">المسيرة المهنية كاملة</a>
-        <a href="projects.html" class="badge badge-gray px-4 py-2 text-sm">المشاريع الكبرى</a>
-        <a href="pmo.html" class="badge badge-gray px-4 py-2 text-sm">خبرة PMO</a>
-        <a href="contact.html" class="badge badge-green px-4 py-2 text-sm">تواصل معي</a>
+        <a href="en.html" onclick="localStorage.setItem('ecms-lang','en')" class="badge badge-cyan px-4 py-2 text-sm">English 🌐 النسخة الإنجليزية</a>
+        <a href="career.html" onclick="localStorage.setItem('ecms-lang','ar')" class="badge badge-gray px-4 py-2 text-sm">المسيرة المهنية كاملة</a>
+        <a href="projects.html" onclick="localStorage.setItem('ecms-lang','ar')" class="badge badge-gray px-4 py-2 text-sm">المشاريع الكبرى</a>
+        <a href="pmo.html" onclick="localStorage.setItem('ecms-lang','ar')" class="badge badge-gray px-4 py-2 text-sm">خبرة PMO</a>
+        <a href="contact.html" onclick="localStorage.setItem('ecms-lang','ar')" class="badge badge-green px-4 py-2 text-sm">تواصل معي</a>
       </div>
     </div>
 
@@ -781,7 +781,7 @@
       <span>·</span>
       <a href="https://www.linkedin.com/in/ashraf-eldesoky/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
       <span>·</span>
-      <a href="en.html" class="hover:text-cyan-400 transition-colors">English</a>
+      <a href="en.html" onclick="localStorage.setItem('ecms-lang','en')" class="hover:text-cyan-400 transition-colors">English</a>
       <span>·</span>
       <span>© 2026 ashraf-eldesoky.space</span>
     </div>
@@ -792,6 +792,9 @@
      SCRIPTS
 ═══════════════════════════════════════ -->
 <script>
+// ── Set Arabic language preference ──
+localStorage.setItem('ecms-lang', 'ar');
+
 // ── Mobile nav toggle ──
 document.getElementById('nav-toggle').addEventListener('click', function() {
   document.getElementById('mobile-menu').classList.toggle('open');
