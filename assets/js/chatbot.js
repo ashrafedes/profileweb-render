@@ -158,7 +158,7 @@ Response Rules:
 
         <!-- Input -->
         <div class="ai-chat-input-area">
-          <textarea id="ai-chat-input" class="ai-chat-input" placeholder="${UI.placeholder}" rows="3" autocomplete="off" style="background:#1e293b !important;border:2px solid rgba(148,163,184,0.35) !important;color:#ffffff !important;border-radius:16px !important;padding:14px 16px !important;min-height:88px !important;font-size:1rem !important;resize:vertical !important;outline:none !important;box-shadow:inset 0 2px 8px rgba(0,0,0,0.3) !important;direction:${DIR} !important;text-align:${DIR === 'rtl' ? 'right' : 'left'} !important;font-family:inherit !important;line-height:1.6 !important;"></textarea>
+          <textarea id="ai-chat-input" class="ai-chat-input" placeholder="${UI.placeholder}" rows="4" autocomplete="off" style="background:#1e293b !important;border:2px solid rgba(148,163,184,0.35) !important;color:#ffffff !important;border-radius:16px !important;padding:16px 18px !important;min-height:100px !important;font-size:1.05rem !important;resize:none !important;outline:none !important;box-shadow:inset 0 2px 8px rgba(0,0,0,0.3) !important;direction:${DIR} !important;text-align:${DIR === 'rtl' ? 'right' : 'left'} !important;font-family:inherit !important;line-height:1.6 !important;"></textarea>
           <button id="ai-chat-send" class="ai-chat-send" aria-label="${UI.send}">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
           </button>
