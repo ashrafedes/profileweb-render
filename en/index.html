@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eng. Ashraf El Desoky, PMP® | Project Controls Director & PMO Executive</title>
+<meta name="description" content="PMP®-certified Project Controls Director & PMO Executive with 25+ years delivering mega projects across Construction, Hospitality, Telecom, Infrastructure, Healthcare & Railway in Saudi Arabia, Egypt & Sudan.">
+<meta name="keywords" content="Project Controls Director, PMO Executive, Construction Project Controls, Hospitality Project Manager, FTTH, Infrastructure Projects, PMO Leadership, Mega Projects, PMP Certified, Saudi Arabia Project Manager, Egypt Project Director, EVM, Earned Value Management">
+<meta name="author" content="Ashraf Ibrahim El Desoky">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Eng. Ashraf El Desoky, PMP® | Project Controls Director & PMO Executive">
+<meta property="og:description" content="25+ years delivering mega projects across Construction, Hospitality, Telecom, Infrastructure, Healthcare & Railway. PMP® certified PMO leader.">
+<meta property="og:image" content="https://raw.githubusercontent.com/ashrafedes/profileweb-render/main/assets/images/og-image.jpg">
+<meta property="og:url" content="https://www.ashraf-eldesoky.space/en/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eng. Ashraf El Desoky, PMP® | Project Controls Director">
+<meta name="twitter:description" content="25+ years delivering mega projects across 6 sectors in Saudi Arabia, Egypt & Sudan.">
+<link rel="canonical" href="https://www.ashraf-eldesoky.space/en/">
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: { 900: '#0A1128', 800: '#0d1a3a', 700: '#1C2541', 600: '#243060' },
+          emerald: { 400: '#34d399', 500: '#10B981', 600: '#059669' },
+          cyan: { 400: '#22d3ee', 500: '#06B6D4' },
+          slate: { 300: '#CBD5E1', 200: '#E2E8F0' }
+        },
+        fontFamily: { sans: ['Inter', 'Roboto', 'sans-serif'] }
+      }
+    }
+  }
+</script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+  * { font-family: 'Inter', sans-serif; }
+  html { scroll-behavior: smooth; }
+  body { background-color: #0A1128; color: #CBD5E1; }
+
+  /* Glassmorphism navbar */
+  .glass-nav {
+    background: rgba(10, 17, 40, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(6, 182, 212, 0.15);
+  }
+
+  /* Hero gradient */
+  .hero-bg {
+    background: radial-gradient(ellipse at 20% 50%, rgba(6,182,212,0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(16,185,129,0.06) 0%, transparent 50%),
+                linear-gradient(135deg, #0A1128 0%, #1C2541 50%, #0A1128 100%);
+  }
+
+  /* Grid dot pattern */
+  .grid-bg {
+    background-image: radial-gradient(rgba(6,182,212,0.08) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  /* Card hover */
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: rgba(6,182,212,0.4);
+  }
+
+  /* EVM input */
+  .evm-input {
+    background: rgba(28,37,65,0.8);
+    border: 1px solid rgba(6,182,212,0.25);
+    color: #E2E8F0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s;
+    font-size: 1rem;
+  }
+  .evm-input:focus { border-color: #06B6D4; box-shadow: 0 0 0 3px rgba(6,182,212,0.15); }
+  .evm-input::placeholder { color: #4a5a7a; }
+
+  /* Timeline line */
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: #06B6D4;
+    border-radius: 50%;
+    border: 2px solid #0A1128;
+    box-shadow: 0 0 0 3px rgba(6,182,212,0.3);
+  }
+
+  /* Animated gradient text */
+  .gradient-text {
+    background: linear-gradient(90deg, #06B6D4, #10B981, #06B6D4);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+  @keyframes shimmer { 0%{background-position:0%} 100%{background-position:200%} }
+
+  /* Badge pill */
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+  .badge-green { background: rgba(16,185,129,0.15); color: #10B981; border: 1px solid rgba(16,185,129,0.3); }
+  .badge-red   { background: rgba(239,68,68,0.15);  color: #EF4444;  border: 1px solid rgba(239,68,68,0.3); }
+  .badge-cyan  { background: rgba(6,182,212,0.12);  color: #06B6D4;  border: 1px solid rgba(6,182,212,0.25); }
+  .badge-gray  { background: rgba(100,116,139,0.2); color: #94a3b8;  border: 1px solid rgba(100,116,139,0.3); }
+
+  /* Skill pill */
+  .skill-pill {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    background: rgba(28,37,65,0.9);
+    border: 1px solid rgba(6,182,212,0.2);
+    color: #94a3b8;
+    transition: all 0.2s;
+  }
+  .skill-pill:hover { border-color: #06B6D4; color: #06B6D4; }
+
+  /* Mobile menu */
+  #mobile-menu { display: none; }
+  #mobile-menu.open { display: block; }
+
+  /* Section divider */
+  .section-divider { border: none; height: 1px; background: linear-gradient(90deg, transparent, rgba(6,182,212,0.3), transparent); margin: 0; }
+
+  /* Scroll reveal */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ashraf Ibrahim El Desoky",
+  "honorificSuffix": "PMP®",
+  "jobTitle": "Project Controls Director | PMO Executive",
+  "description": "PMP®-certified Project Controls Director with 25+ years delivering mega projects across Construction, Hospitality, Telecom, Infrastructure, Healthcare & Railway sectors in Saudi Arabia, Egypt & Sudan.",
+  "url": "https://www.ashraf-eldesoky.space/",
+  "email": "ashrafede@gmail.com",
+  "telephone": "+966532738987",
+  "address": { "@type": "PostalAddress", "addressLocality": "Riyadh", "addressCountry": "SA" },
+  "sameAs": ["https://www.linkedin.com/in/ashraf-eldesoky/"],
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Helwan University"},
+    {"@type": "CollegeOrUniversity", "name": "Heriot-Watt University – Edinburgh Business School"}
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "Project Management Professional (PMP®)",
+    "credentialCategory": "Professional Certification",
+    "recognizedBy": {"@type": "Organization", "name": "Project Management Institute (PMI)"}
+  },
+  "knowsAbout": ["Project Controls", "PMO Leadership", "Construction", "Hospitality", "Telecommunications", "FTTH", "Infrastructure", "Healthcare", "Railway", "EVM", "Digital Transformation", "SaaS Development"],
+  "worksFor": {"@type": "Organization", "name": "AlSharq Office Company", "addressCountry": "SA"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Ashraf El Desoky – Executive Portfolio",
+  "url": "https://www.ashraf-eldesoky.space/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.ashraf-eldesoky.space/search.html?q={query}",
+    "query-input": "required name=query"
+  }
+}
+</script>
+</head>
+<body class="antialiased">
+
+<!-- ═══════════════════════════════════════
+     SECTION 1: NAVBAR
+═══════════════════════════════════════ -->
+<nav class="glass-nav fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Brand -->
+      <a href="index.html" class="flex items-center gap-2">
+        <span class="text-cyan-500 font-bold text-sm tracking-wide">Eng.</span>
+        <span class="text-white font-semibold text-sm">Ashraf El Desoky</span>
+        <span class="badge badge-cyan text-xs">PMP®</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-1">
+        <a href="#exec-highlights" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">Highlights</a>
+        <a href="#exec-portfolio" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">Portfolio</a>
+        <a href="#saas" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">SaaS</a>
+        <a href="#evm" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">EVM</a>
+        <a href="#resume" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">Resume</a>
+        <a href="featured-projects.html" class="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors">Featured Projects</a>
+        <!-- CTA Buttons -->
+        <a href="../assets/downloads/Ashraf_El_Desoky_Master_CV_Full.pdf" download class="ml-2 inline-flex items-center gap-1.5 bg-cyan-500 hover:bg-cyan-400 text-navy-900 px-3 py-1.5 rounded-full text-sm font-bold transition-all">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          CV
+        </a>
+        <a href="../contact.html" class="inline-flex items-center gap-1.5 border border-emerald-500/30 hover:border-emerald-500 text-emerald-400 px-3 py-1.5 rounded-full text-sm font-semibold transition-all">Contact</a>
+        <a href="https://www.linkedin.com/in/ashraf-eldesoky/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 border border-cyan-500/30 hover:border-cyan-500 text-cyan-400 px-3 py-1.5 rounded-full text-sm font-semibold transition-all">in</a>
+        <a href="../ar/index.html" onclick="localStorage.setItem('ecms-lang','ar')" class="ml-1 flex items-center gap-1.5 bg-navy-700 hover:bg-navy-600 border border-cyan-500/30 hover:border-cyan-500/60 text-cyan-400 px-3 py-1.5 rounded-full text-sm font-semibold transition-all">العربية 🌐</a>
+      </div>
+
+      <!-- Mobile toggle -->
+      <button id="nav-toggle" class="md:hidden text-slate-300 hover:text-white p-2" aria-label="Toggle menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden border-t border-cyan-500/10">
+    <div class="px-4 py-3 space-y-1 bg-navy-900/95">
+      <a href="#exec-highlights" class="block text-slate-300 hover:text-cyan-400 py-2 text-sm">Highlights</a>
+      <a href="#exec-portfolio" class="block text-slate-300 hover:text-cyan-400 py-2 text-sm">Portfolio</a>
+      <a href="#saas" class="block text-slate-300 hover:text-cyan-400 py-2 text-sm">SaaS Products</a>
+      <a href="#evm" class="block text-slate-300 hover:text-cyan-400 py-2 text-sm">EVM Calculator</a>
+      <a href="#resume" class="block text-slate-300 hover:text-cyan-400 py-2 text-sm">Resume</a>
+      <a href="featured-projects.html" class="block text-slate-300 hover:text-cyan-400 py-2 text-sm">Featured Projects</a>
+      <a href="../assets/downloads/Ashraf_El_Desoky_Master_CV_Full.pdf" download class="block text-cyan-400 py-2 text-sm font-semibold">⬇ Download CV</a>
+      <a href="../contact.html" class="block text-emerald-400 py-2 text-sm font-semibold">Contact Me</a>
+      <a href="https://www.linkedin.com/in/ashraf-eldesoky/" target="_blank" rel="noopener noreferrer" class="block text-cyan-400 py-2 text-sm font-semibold">LinkedIn</a>
+      <a href="../ar/index.html" onclick="localStorage.setItem('ecms-lang','ar')" class="block text-cyan-400 py-2 text-sm font-semibold">العربية 🌐</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════
+     SECTION 2: HERO
+═══════════════════════════════════════ -->
+<section class="hero-bg grid-bg min-h-screen flex items-center pt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="max-w-4xl">
+      <!-- Status badge -->
+      <div class="flex items-center gap-3 mb-6 reveal">
+        <span class="flex items-center gap-1.5 badge badge-green"><span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> Open to Executive Roles</span>
+        <span class="badge badge-cyan">KSA · MENA · PMO · Project Controls</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4 reveal">
+        Eng. Ashraf El Desoky<br>
+        <span class="gradient-text">Project Controls Director &amp; PMO Executive</span>
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8 max-w-3xl reveal">
+        Over <strong class="text-white">25 years</strong> of executive leadership delivering mega projects across
+        <strong class="text-white">Construction, Hospitality, Telecom, Infrastructure, Healthcare &amp; Railway</strong> sectors
+        in Saudi Arabia, Egypt &amp; Sudan. Bridging traditional PMO governance with digital automation, EVM discipline,
+        and custom SaaS platforms that protect project profits and eliminate waste.
+      </p>
+
+      <!-- Stats row -->
+      <div class="flex flex-wrap gap-6 mb-10 reveal">
+        <div class="text-center">
+          <div class="text-3xl font-black text-cyan-400">25+</div>
+          <div class="text-xs text-slate-400 mt-1">Years Experience</div>
+        </div>
+        <div class="w-px bg-slate-700 self-stretch"></div>
+        <div class="text-center">
+          <div class="text-3xl font-black text-emerald-400">6</div>
+          <div class="text-xs text-slate-400 mt-1">Sectors</div>
+        </div>
+        <div class="w-px bg-slate-700 self-stretch"></div>
+        <div class="text-center">
+          <div class="text-3xl font-black text-cyan-400">3</div>
+          <div class="text-xs text-slate-400 mt-1">Countries</div>
+        </div>
+        <div class="w-px bg-slate-700 self-stretch"></div>
+        <div class="text-center">
+          <div class="text-3xl font-black text-emerald-400">6</div>
+          <div class="text-xs text-slate-400 mt-1">Mega Projects</div>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap gap-4 reveal">
+        <a href="featured-projects.html" class="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-navy-900 font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          View Featured Projects
+        </a>
+        <a href="../assets/downloads/Ashraf_El_Desoky_Master_CV_Full.pdf" download class="inline-flex items-center gap-2 border border-slate-500 hover:border-cyan-500 text-slate-300 hover:text-cyan-400 font-semibold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          Download CV PDF
+        </a>
+        <a href="../contact.html" class="inline-flex items-center gap-2 border border-emerald-500/30 hover:border-emerald-500 text-emerald-400 font-semibold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Contact Me
+        </a>
+        <a href="https://www.linkedin.com/in/ashraf-eldesoky/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-cyan-500/30 hover:border-cyan-500 text-cyan-400 font-semibold px-6 py-3 rounded-xl transition-all hover:-translate-y-0.5">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 2.5: EXECUTIVE HIGHLIGHTS
+═══════════════════════════════════════ -->
+<section id="exec-highlights" class="py-20 bg-navy-800/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="badge badge-cyan mb-3">Executive Highlights</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Why Hire Me as Your Next Project Controls Director</h2>
+      <p class="text-slate-400 mt-3 max-w-2xl mx-auto">Six pillars of executive value built over 25+ years across diverse industries and mega projects.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Highlight 1 -->
+      <div class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 p-6 reveal">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">Multi-Sector Expertise</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Delivered mega projects across Construction, Hospitality, Telecom, Infrastructure, Healthcare &amp; Railway — not limited to a single industry.</p>
+      </div>
+
+      <!-- Highlight 2 -->
+      <div class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 p-6 reveal">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">On-Time Delivery Record</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Zero-delay delivery on nationally prestigious projects with non-extendable government deadlines — Olympic City &amp; New Capital Fiber.</p>
+      </div>
+
+      <!-- Highlight 3 -->
+      <div class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 p-6 reveal">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">Digital PMO Builder</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Not just a manager — an engineer who designs and builds custom ERP systems, SaaS platforms, and automation pipelines.</p>
+      </div>
+
+      <!-- Highlight 4 -->
+      <div class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 p-6 reveal">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">EVM &amp; Cost Control Mastery</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Deep expertise in Earned Value Management, KPI dashboards, CPI/SPI analysis and executive reporting that protects project margins.</p>
+      </div>
+
+      <!-- Highlight 5 -->
+      <div class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 p-6 reveal">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">International Experience</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">25+ years across Saudi Arabia, Egypt &amp; Sudan. Multicultural project leadership with fluency in English &amp; Arabic.</p>
+      </div>
+
+      <!-- Highlight 6 -->
+      <div class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 p-6 reveal">
+        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-4">
+          <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">PMP® Certified Leader</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">PMI-certified with 10-year retention on STC national programme — proof of consistent performance and client trust.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 2.6: EXECUTIVE PORTFOLIO CARDS
+═══════════════════════════════════════ -->
+<section id="exec-portfolio" class="py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="badge badge-cyan mb-3">Executive Portfolio</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Six Flagship Mega Projects</h2>
+      <p class="text-slate-400 mt-3 max-w-2xl mx-auto">Click any project card to explore detailed information, achievements, KPIs and lessons learned.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Portfolio Card 1 -->
+      <a href="featured-projects.html#proj-1" class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 overflow-hidden reveal block group">
+        <div class="h-32 bg-gradient-to-br from-yellow-600 to-yellow-800 flex items-center justify-center">
+          <span class="text-5xl">🏟</span>
+        </div>
+        <div class="p-6">
+          <div class="badge badge-cyan mb-2">Construction · Hospitality</div>
+          <h3 class="text-white font-bold text-lg mb-2 group-hover:text-cyan-400 transition-colors">Egyptian Olympic City</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-3">ELV, BMS, CCTV, Fire Alarm &amp; FTTH for Egypt's prestigious new Olympic city.</p>
+          <div class="flex items-center gap-2 text-cyan-400 text-sm font-semibold">
+            <span>View Details</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portfolio Card 2 -->
+      <a href="featured-projects.html#proj-2" class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 overflow-hidden reveal block group">
+        <div class="h-32 bg-gradient-to-br from-blue-800 to-blue-950 flex items-center justify-center">
+          <span class="text-5xl">📡</span>
+        </div>
+        <div class="p-6">
+          <div class="badge badge-cyan mb-2">Telecom · 10 Years</div>
+          <h3 class="text-white font-bold text-lg mb-2 group-hover:text-cyan-400 transition-colors">STC National FTTH</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-3">10-year national FTTH/FTTx rollout with 20+ concurrent projects across KSA.</p>
+          <div class="flex items-center gap-2 text-cyan-400 text-sm font-semibold">
+            <span>View Details</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portfolio Card 3 -->
+      <a href="featured-projects.html#proj-3" class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 overflow-hidden reveal block group">
+        <div class="h-32 bg-gradient-to-br from-purple-700 to-purple-900 flex items-center justify-center">
+          <span class="text-5xl">🚂</span>
+        </div>
+        <div class="p-6">
+          <div class="badge badge-cyan mb-2">Railway · Infrastructure</div>
+          <h3 class="text-white font-bold text-lg mb-2 group-hover:text-cyan-400 transition-colors">Egypt Railways Modernization</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-3">Fiber optic network deployment for national railway with Alstom partnership.</p>
+          <div class="flex items-center gap-2 text-cyan-400 text-sm font-semibold">
+            <span>View Details</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portfolio Card 4 -->
+      <a href="featured-projects.html#proj-4" class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 overflow-hidden reveal block group">
+        <div class="h-32 bg-gradient-to-br from-emerald-600 to-emerald-800 flex items-center justify-center">
+          <span class="text-5xl">🌐</span>
+        </div>
+        <div class="p-6">
+          <div class="badge badge-cyan mb-2">Smart City · Infrastructure</div>
+          <h3 class="text-white font-bold text-lg mb-2 group-hover:text-cyan-400 transition-colors">New Capital Fiber Network</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-3">Fiber backbone &amp; FTTH infrastructure for Egypt's new Administrative Capital.</p>
+          <div class="flex items-center gap-2 text-cyan-400 text-sm font-semibold">
+            <span>View Details</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portfolio Card 5 -->
+      <a href="featured-projects.html#proj-5" class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 overflow-hidden reveal block group">
+        <div class="h-32 bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center">
+          <span class="text-5xl">🏨</span>
+        </div>
+        <div class="p-6">
+          <div class="badge badge-cyan mb-2">5-Star Hospitality</div>
+          <h3 class="text-white font-bold text-lg mb-2 group-hover:text-cyan-400 transition-colors">Sheraton El Gezirah Hotel</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-3">5-star hotel engineering &amp; MEP maintenance — foundation for hospitality construction.</p>
+          <div class="flex items-center gap-2 text-cyan-400 text-sm font-semibold">
+            <span>View Details</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </div>
+        </div>
+      </a>
+
+      <!-- Portfolio Card 6 -->
+      <a href="featured-projects.html#proj-6" class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 overflow-hidden reveal block group">
+        <div class="h-32 bg-gradient-to-br from-cyan-700 to-cyan-900 flex items-center justify-center">
+          <span class="text-5xl">🏥</span>
+        </div>
+        <div class="p-6">
+          <div class="badge badge-cyan mb-2">Healthcare · Infrastructure</div>
+          <h3 class="text-white font-bold text-lg mb-2 group-hover:text-cyan-400 transition-colors">Tanta University Hospital</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-3">Healthcare infrastructure engineering — early cross-sector foundation experience.</p>
+          <div class="flex items-center gap-2 text-cyan-400 text-sm font-semibold">
+            <span>View Details</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="text-center mt-10 reveal">
+      <a href="featured-projects.html" class="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-navy-900 font-bold px-6 py-3 rounded-xl transition-all shadow-lg shadow-cyan-500/25 hover:-translate-y-0.5">
+        Explore All Featured Projects
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 2.7: ANIMATED ACHIEVEMENTS COUNTERS
+═══════════════════════════════════════ -->
+<section id="achievements" class="py-20 bg-navy-800/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="badge badge-cyan mb-3">Executive Achievements</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">By the Numbers</h2>
+      <p class="text-slate-400 mt-3 max-w-2xl mx-auto">Quantified impact across 25+ years of project controls leadership.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+      <div class="text-center reveal">
+        <div class="counter text-4xl lg:text-5xl font-black text-cyan-400" data-target="25" data-suffix="+">0</div>
+        <div class="text-xs text-slate-400 mt-2">Years Experience</div>
+      </div>
+      <div class="text-center reveal">
+        <div class="counter text-4xl lg:text-5xl font-black text-emerald-400" data-target="6" data-suffix="">0</div>
+        <div class="text-xs text-slate-400 mt-2">Mega Projects</div>
+      </div>
+      <div class="text-center reveal">
+        <div class="counter text-4xl lg:text-5xl font-black text-cyan-400" data-target="6" data-suffix="">0</div>
+        <div class="text-xs text-slate-400 mt-2">Sectors Covered</div>
+      </div>
+      <div class="text-center reveal">
+        <div class="counter text-4xl lg:text-5xl font-black text-emerald-400" data-target="3" data-suffix="">0</div>
+        <div class="text-xs text-slate-400 mt-2">Countries</div>
+      </div>
+      <div class="text-center reveal">
+        <div class="counter text-4xl lg:text-5xl font-black text-cyan-400" data-target="20" data-suffix="+">0</div>
+        <div class="text-xs text-slate-400 mt-2">Concurrent Projects</div>
+      </div>
+      <div class="text-center reveal">
+        <div class="counter text-4xl lg:text-5xl font-black text-emerald-400" data-target="60" data-suffix="%">0</div>
+        <div class="text-xs text-slate-400 mt-2">Reporting Reduction</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 3: SAAS PRODUCTS
+═══════════════════════════════════════ -->
+<section id="saas" class="py-24 bg-navy-800/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16 reveal">
+      <span class="badge badge-cyan mb-3">Live Products</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Built &amp; Deployed SaaS Systems</h2>
+      <p class="text-slate-400 mt-3 max-w-2xl mx-auto">Not just a manager — an engineer who builds the tools that solve the problems.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Card 1: Petty Cash -->
+      <div class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 p-8 reveal">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div>
+            <div class="badge badge-green mb-1">Live &amp; Active</div>
+            <h3 class="text-lg font-bold text-white">Petty Cash Management SaaS</h3>
+          </div>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          A complete dual-layer SaaS ecosystem solving site expense leaks, eliminating manual paperwork delays, 
+          and giving corporate leadership a <strong class="text-slate-300">live data pipeline</strong> of decentralised spending across all project sites.
+          Built with real-time financial workflows, role-based access, and analytics dashboards.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="skill-pill">Financial Workflow</span>
+          <span class="skill-pill">Real-time Analytics</span>
+          <span class="skill-pill">Multi-site</span>
+          <span class="skill-pill">Role-based Access</span>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://pettycash-marketing.web.app/" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 hover:border-emerald-500/60 text-emerald-400 font-semibold px-4 py-2 rounded-lg text-sm transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            View Marketing Page
+          </a>
+          <a href="https://pattycashsystem.web.app/" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-navy-900 font-bold px-4 py-2 rounded-lg text-sm transition-all shadow-md shadow-cyan-500/20">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            Launch SaaS App
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: InfraFlow -->
+      <div class="card-hover rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 p-8 reveal">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
+            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          </div>
+          <div>
+            <div class="badge badge-cyan mb-1">In Development</div>
+            <h3 class="text-lg font-bold text-white">InfraFlow Enterprise Tracking</h3>
+          </div>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+          A highly specialized project control engine built for <strong class="text-slate-300">telecom and FTTH infrastructure rollouts</strong>, 
+          optimizing subcontractor logging, automating progress reports, and managing sitemap metadata validation 
+          across multi-region programmes simultaneously.
+        </p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="skill-pill">FTTH Rollout</span>
+          <span class="skill-pill">Subcontractor Mgmt</span>
+          <span class="skill-pill">Automated Reports</span>
+          <span class="skill-pill">Multi-region</span>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a href="../career.html" class="inline-flex items-center gap-2 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 hover:border-cyan-500/60 text-cyan-400 font-semibold px-4 py-2 rounded-lg text-sm transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            View Career Context
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 4: EVM CALCULATOR
+═══════════════════════════════════════ -->
+<section id="evm" class="py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16 reveal">
+      <span class="badge badge-cyan mb-3">Live Tool</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Earned Value Management Calculator</h2>
+      <p class="text-slate-400 mt-3 max-w-2xl mx-auto">Real-time project health diagnostics — enter your values and get instant PMO intelligence.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+      <!-- Input Panel -->
+      <div class="rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 p-8 reveal">
+        <h3 class="text-white font-bold text-lg mb-6 flex items-center gap-2">
+          <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+          Project Inputs
+        </h3>
+        <div class="space-y-5">
+          <div>
+            <label class="block text-slate-400 text-sm font-medium mb-2">Budget at Completion (BAC)</label>
+            <input type="number" id="bac" class="evm-input" placeholder="e.g. 1,000,000" min="0">
+          </div>
+          <div>
+            <label class="block text-slate-400 text-sm font-medium mb-2">Planned Value (PV)</label>
+            <input type="number" id="pv" class="evm-input" placeholder="e.g. 500,000" min="0">
+          </div>
+          <div>
+            <label class="block text-slate-400 text-sm font-medium mb-2">Earned Value (EV)</label>
+            <input type="number" id="ev" class="evm-input" placeholder="e.g. 480,000" min="0">
+          </div>
+          <div>
+            <label class="block text-slate-400 text-sm font-medium mb-2">Actual Cost (AC)</label>
+            <input type="number" id="ac" class="evm-input" placeholder="e.g. 510,000" min="0">
+          </div>
+        </div>
+        <div class="mt-6 p-4 rounded-xl bg-navy-900/60 border border-slate-700/30">
+          <p class="text-slate-500 text-xs">Values are calculated instantly as you type. All computation runs locally in your browser — no data is sent anywhere.</p>
+        </div>
+      </div>
+
+      <!-- Results Panel -->
+      <div class="space-y-5 reveal">
+
+        <!-- CPI & SPI badges -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-xl border border-slate-700/50 bg-navy-800/60 p-5 text-center">
+            <div class="text-slate-400 text-xs font-medium mb-2">Cost Performance Index</div>
+            <div id="cpi-val" class="text-3xl font-black text-white mb-2">—</div>
+            <div id="cpi-badge" class="badge badge-gray mx-auto">Awaiting Input</div>
+          </div>
+          <div class="rounded-xl border border-slate-700/50 bg-navy-800/60 p-5 text-center">
+            <div class="text-slate-400 text-xs font-medium mb-2">Schedule Performance Index</div>
+            <div id="spi-val" class="text-3xl font-black text-white mb-2">—</div>
+            <div id="spi-badge" class="badge badge-gray mx-auto">Awaiting Input</div>
+          </div>
+        </div>
+
+        <!-- Computed Metrics -->
+        <div class="rounded-2xl border border-slate-700/50 bg-gradient-to-br from-navy-800 to-navy-900 p-6">
+          <h3 class="text-white font-bold text-sm mb-4 uppercase tracking-wider">Computed Metrics</h3>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center py-2 border-b border-slate-700/30">
+              <span class="text-slate-400 text-sm">Cost Variance (CV = EV − AC)</span>
+              <span id="cv-val" class="text-white font-bold">—</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-700/30">
+              <span class="text-slate-400 text-sm">Schedule Variance (SV = EV − PV)</span>
+              <span id="sv-val" class="text-white font-bold">—</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-700/30">
+              <span class="text-slate-400 text-sm">CPI (EV ÷ AC)</span>
+              <span id="cpi-num" class="text-white font-bold">—</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-700/30">
+              <span class="text-slate-400 text-sm">SPI (EV ÷ PV)</span>
+              <span id="spi-num" class="text-white font-bold">—</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span class="text-slate-400 text-sm">Estimate at Completion (EAC = BAC ÷ CPI)</span>
+              <span id="eac-val" class="text-cyan-400 font-bold">—</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PMO Insight -->
+        <div id="pmo-insight" class="rounded-xl border border-slate-700/30 bg-navy-800/40 p-5 hidden">
+          <div class="flex items-start gap-3">
+            <svg id="insight-icon" class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <p id="insight-text" class="text-sm leading-relaxed"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 5: CASE STUDIES
+═══════════════════════════════════════ -->
+<section id="cases" class="py-24 bg-navy-800/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="badge badge-cyan mb-3">Real-World Delivery</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Engineering Case Studies</h2>
+      <p class="text-slate-400 mt-3 max-w-2xl mx-auto">Problems identified, solutions engineered, impact measured.</p>
+    </div>
+
+    <!-- Case Study 1 -->
+    <div class="rounded-2xl border border-cyan-500/20 bg-gradient-to-br from-navy-800 to-navy-900 overflow-hidden mb-8 reveal">
+      <div class="bg-cyan-500/5 border-b border-cyan-500/10 px-8 py-5 flex items-center gap-4">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center">
+          <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+        </div>
+        <div>
+          <div class="badge badge-cyan mb-1">KSA · STC · 10 Years</div>
+          <h3 class="text-white font-bold">FTTH National Rollout — PMO Controls Transformation</h3>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-700/30">
+        <div class="p-8">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <span class="text-red-400 font-bold text-sm uppercase tracking-wider">Challenge</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Disconnected subcontractor reporting across dozens of simultaneous FTTH rollout sites in KSA. 
+            Unstructured data flows, manual verification bottlenecks, and reporting latency causing 
+            executive blindspots on a national-scale programme.
+          </p>
+        </div>
+        <div class="p-8">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
+            <span class="text-cyan-400 font-bold text-sm uppercase tracking-wider">Engineered Solution</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Designed and built a custom ERP system (MS Access VBA + SQL) as a centralized Single Source of Truth. 
+            Automated contractor progress tracking, integrated KPI dashboards, and deployed containerized 
+            automation pipelines (n8n + Docker) to synchronize data across all workstreams.
+          </p>
+        </div>
+        <div class="p-8">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
+            <span class="text-emerald-400 font-bold text-sm uppercase tracking-wider">Measured Impact</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Eliminated manual verification hours across the programme. Accelerated executive reporting cycles 
+            from days to hours. ERP tool adopted programme-wide — estimated <strong class="text-white">60% reduction</strong> in 
+            reporting effort. Retained by STC/Norconsult for <strong class="text-white">10 continuous years</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study 2 -->
+    <div class="rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-navy-800 to-navy-900 overflow-hidden reveal">
+      <div class="bg-emerald-500/5 border-b border-emerald-500/10 px-8 py-5 flex items-center gap-4">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+          <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <div>
+          <div class="badge badge-green mb-1">Egypt · ACUD · 3 Years</div>
+          <h3 class="text-white font-bold">Olympic Games City — Smart Infrastructure Delivery</h3>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-700/30">
+        <div class="p-8">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-2 h-2 bg-red-400 rounded-full"></div>
+            <span class="text-red-400 font-bold text-sm uppercase tracking-wider">Challenge</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Complex multi-system ELV, BMS, CCTV, Fire Alarm and FTTH integration on a national prestige 
+            project with a non-negotiable government deadline — Egypt's International Olympic Games City 
+            in the New Administrative Capital.
+          </p>
+        </div>
+        <div class="p-8">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
+            <span class="text-cyan-400 font-bold text-sm uppercase tracking-wider">Engineered Solution</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Led full-lifecycle delivery as Lead Consultant PM. Managed multi-disciplinary engineering teams, 
+            client interface with ACUD, procurement, QA/QC, and integrated master schedule across all 
+            concurrent workstreams simultaneously.
+          </p>
+        </div>
+        <div class="p-8">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
+            <span class="text-emerald-400 font-bold text-sm uppercase tracking-wider">Measured Impact</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Both flagship projects — Olympic Games City ELV/FTTH and New Administrative Capital Fiber Network — 
+            delivered <strong class="text-white">on schedule</strong> against high-profile national deadlines. 
+            Zero deadline breach on a nationally televised prestige project.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════
+     SECTION 6: RESUME & CERTIFICATIONS
+═══════════════════════════════════════ -->
+<section id="resume" class="py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 reveal">
+      <span class="badge badge-cyan mb-3">25+ Years</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Career Timeline &amp; Expertise</h2>
+      <p class="text-slate-400 mt-3 max-w-2xl mx-auto">From engineering foundations to executive programme leadership.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12">
+
+      <!-- Timeline -->
+      <div class="reveal">
+        <h3 class="text-white font-bold text-lg mb-8 flex items-center gap-2">
+          <span class="w-1 h-6 bg-cyan-500 rounded-full"></span>
+          Career Milestones
+        </h3>
+        <div class="relative border-l-2 border-slate-700/50 pl-8 space-y-8">
+
+          <div class="timeline-item relative">
+            <div class="badge badge-green mb-1">2024 – Present</div>
+            <h4 class="text-white font-bold">Project Control Manager</h4>
+            <p class="text-slate-400 text-sm">AlSharq Office Company · Riyadh, KSA</p>
+            <p class="text-slate-500 text-xs mt-1">Telecom & electrical infrastructure programme controls</p>
+          </div>
+
+          <div class="timeline-item relative">
+            <div class="badge badge-cyan mb-1">2023 – 2024</div>
+            <h4 class="text-white font-bold">Projects Director – Telecommunications</h4>
+            <p class="text-slate-400 text-sm">ECGC · Cairo, Egypt</p>
+            <p class="text-slate-500 text-xs mt-1">FTTH, FTTx & OSP programme leadership</p>
+          </div>
+
+          <div class="timeline-item relative">
+            <div class="badge badge-cyan mb-1">2020 – 2023</div>
+            <h4 class="text-white font-bold">Lead Consultant Project Manager</h4>
+            <p class="text-slate-400 text-sm">Sabbour Consulting · Cairo, Egypt</p>
+            <p class="text-slate-500 text-xs mt-1">Egyptian Olympic Games City ELV/FTTH · ACUD</p>
+          </div>
+
+          <div class="timeline-item relative">
+            <div class="badge badge-gray mb-1">2017 – 2020</div>
+            <h4 class="text-white font-bold">Senior Site Manager</h4>
+            <p class="text-slate-400 text-sm">Benya Systems / Fiber Misr–Alstom · Egypt</p>
+            <p class="text-slate-500 text-xs mt-1">Egypt National Railways fiber deployment</p>
+          </div>
+
+          <div class="timeline-item relative">
+            <div class="badge badge-gray mb-1">2007 – 2017 · 10 Years</div>
+            <h4 class="text-white font-bold text-cyan-400">Sr. Project Control Engineer</h4>
+            <p class="text-slate-400 text-sm">Norconsult / Saudi Telecom (STC) · Riyadh, KSA</p>
+            <p class="text-slate-500 text-xs mt-1">National FTTH/FTTx/OSP/ISP rollout · 20+ concurrent projects</p>
+          </div>
+
+          <div class="timeline-item relative">
+            <div class="badge badge-gray mb-1">2000 – 2004</div>
+            <h4 class="text-white font-bold">Project Control Engineer</h4>
+            <p class="text-slate-400 text-sm">Siemens AG · Egypt</p>
+            <p class="text-slate-500 text-xs mt-1">External telecom network · ERP system developer</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Skills + Downloads -->
+      <div class="space-y-8 reveal">
+
+        <!-- Core skills -->
+        <div>
+          <h3 class="text-white font-bold text-lg mb-5 flex items-center gap-2">
+            <span class="w-1 h-6 bg-emerald-500 rounded-full"></span>
+            Core Project Controls
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">Earned Value Management</span>
+            <span class="skill-pill">KPI Architecture</span>
+            <span class="skill-pill">PMO Governance</span>
+            <span class="skill-pill">Programme Planning</span>
+            <span class="skill-pill">Risk Management</span>
+            <span class="skill-pill">Executive Reporting</span>
+            <span class="skill-pill">MS Project / P6</span>
+            <span class="skill-pill">Power BI</span>
+            <span class="skill-pill">FTTH / OSP / ISP</span>
+            <span class="skill-pill">ELV / BMS</span>
+          </div>
+        </div>
+
+        <!-- Tech skills -->
+        <div>
+          <h3 class="text-white font-bold text-lg mb-5 flex items-center gap-2">
+            <span class="w-1 h-6 bg-cyan-500 rounded-full"></span>
+            Tech Automation
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-pill">n8n Workflows</span>
+            <span class="skill-pill">Podman / Docker</span>
+            <span class="skill-pill">Local AI / RAG</span>
+            <span class="skill-pill">MS Access VBA</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">VB.NET / ASP.NET</span>
+            <span class="skill-pill">Client-side SaaS</span>
+            <span class="skill-pill">Firebase</span>
+          </div>
+        </div>
+
+        <!-- Download CTA Grid -->
+        <div>
+          <h3 class="text-white font-bold text-lg mb-5 flex items-center gap-2">
+            <span class="w-1 h-6 bg-cyan-500 rounded-full"></span>
+            Download Credentials
+          </h3>
+          <div class="grid grid-cols-2 gap-3">
+            <a href="../assets/downloads/Ashraf_El_Desoky_Master_CV_Full.pdf" download
+               class="flex items-center gap-3 p-4 rounded-xl border border-slate-700/50 bg-navy-800/60 hover:border-cyan-500/40 hover:bg-navy-700/60 transition-all group">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors flex-shrink-0">
+                <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <div>
+                <div class="text-white text-sm font-semibold">Master CV</div>
+                <div class="text-slate-500 text-xs">Full 2-page PDF</div>
+              </div>
+            </a>
+            <a href="../assets/downloads/PMP_Certificate_Ashraf_ElDesoky.pdf" download
+               class="flex items-center gap-3 p-4 rounded-xl border border-slate-700/50 bg-navy-800/60 hover:border-emerald-500/40 hover:bg-navy-700/60 transition-all group">
+              <div class="w-9 h-9 rounded-lg bg-emerald-500/10 flex items-center justify-center group-hover:bg-emerald-500/20 transition-colors flex-shrink-0">
+                <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+              </div>
+              <div>
+                <div class="text-white text-sm font-semibold">PMP® Certificate</div>
+                <div class="text-slate-500 text-xs">PMI Certified</div>
+              </div>
+            </a>
+            <a href="awards.html"
+               class="flex items-center gap-3 p-4 rounded-xl border border-slate-700/50 bg-navy-800/60 hover:border-cyan-500/40 hover:bg-navy-700/60 transition-all group">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors flex-shrink-0">
+                <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+              </div>
+              <div>
+                <div class="text-white text-sm font-semibold">Awards</div>
+                <div class="text-slate-500 text-xs">Appreciation certificates</div>
+              </div>
+            </a>
+            <a href="../downloads.html"
+               class="flex items-center gap-3 p-4 rounded-xl border border-slate-700/50 bg-navy-800/60 hover:border-cyan-500/40 hover:bg-navy-700/60 transition-all group">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 flex items-center justify-center group-hover:bg-cyan-500/20 transition-colors flex-shrink-0">
+                <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              </div>
+              <div>
+                <div class="text-white text-sm font-semibold">All Downloads</div>
+                <div class="text-slate-500 text-xs">Full document center</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Full Profile CTA -->
+    <div class="mt-16 text-center reveal">
+      <p class="text-slate-400 mb-4">Explore the full executive profile</p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="../ar/index.html" onclick="localStorage.setItem('ecms-lang','ar')" class="badge badge-cyan px-4 py-2 text-sm">العربية 🌐 Arabic Version</a>
+        <a href="../career.html" onclick="localStorage.setItem('ecms-lang','en')" class="badge badge-gray px-4 py-2 text-sm">Full Career History</a>
+        <a href="../projects.html" onclick="localStorage.setItem('ecms-lang','en')" class="badge badge-gray px-4 py-2 text-sm">Major Projects</a>
+        <a href="../pmo.html" onclick="localStorage.setItem('ecms-lang','en')" class="badge badge-gray px-4 py-2 text-sm">PMO Expertise</a>
+        <a href="../contact.html" onclick="localStorage.setItem('ecms-lang','en')" class="badge badge-green px-4 py-2 text-sm">Get in Touch</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="bg-navy-900 border-t border-slate-700/30 py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <!-- Brand -->
+      <div class="md:col-span-1">
+        <div class="text-white font-semibold mb-1">Eng. Ashraf Ibrahim El Desoky, PMP®</div>
+        <div class="text-slate-500 text-sm mb-3">Projects Director · PMO Executive · Riyadh, Saudi Arabia</div>
+        <div class="flex gap-3 flex-wrap">
+          <a href="../assets/downloads/Ashraf_El_Desoky_Master_CV_Full.pdf" download class="inline-flex items-center gap-1.5 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Download CV
+          </a>
+          <a href="https://www.linkedin.com/in/ashraf-eldesoky/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-navy-700 hover:bg-navy-600 border border-cyan-500/30 text-cyan-400 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all">LinkedIn</a>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <div>
+        <div class="text-slate-400 font-semibold text-xs uppercase tracking-wider mb-3">Navigation</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="index.html" class="text-slate-500 hover:text-cyan-400 transition-colors">Home</a></li>
+          <li><a href="featured-projects.html" class="text-slate-500 hover:text-cyan-400 transition-colors">Featured Projects</a></li>
+          <li><a href="../projects.html" class="text-slate-500 hover:text-cyan-400 transition-colors">All Projects</a></li>
+          <li><a href="../career.html" class="text-slate-500 hover:text-cyan-400 transition-colors">Career</a></li>
+          <li><a href="../about.html" class="text-slate-500 hover:text-cyan-400 transition-colors">About</a></li>
+        </ul>
+      </div>
+      <!-- Expertise -->
+      <div>
+        <div class="text-slate-400 font-semibold text-xs uppercase tracking-wider mb-3">Expertise</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="../pmo.html" class="text-slate-500 hover:text-cyan-400 transition-colors">PMO Leadership</a></li>
+          <li><a href="../project-controls.html" class="text-slate-500 hover:text-cyan-400 transition-colors">Project Controls</a></li>
+          <li><a href="../telecommunications.html" class="text-slate-500 hover:text-cyan-400 transition-colors">Telecommunications</a></li>
+          <li><a href="../digital-transformation.html" class="text-slate-500 hover:text-cyan-400 transition-colors">Digital Transformation</a></li>
+          <li><a href="../leadership.html" class="text-slate-500 hover:text-cyan-400 transition-colors">Leadership</a></li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div>
+        <div class="text-slate-400 font-semibold text-xs uppercase tracking-wider mb-3">Contact</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="mailto:ashrafede@gmail.com" class="text-slate-500 hover:text-cyan-400 transition-colors">ashrafede@gmail.com</a></li>
+          <li><a href="tel:+966532738987" class="text-slate-500 hover:text-cyan-400 transition-colors">+966 53 273 8987</a></li>
+          <li><a href="../contact.html" class="text-slate-500 hover:text-cyan-400 transition-colors">Contact Form</a></li>
+          <li><a href="../downloads.html" class="text-slate-500 hover:text-cyan-400 transition-colors">Download Centre</a></li>
+          <li><a href="../ar/index.html" onclick="localStorage.setItem('ecms-lang','ar')" class="text-slate-500 hover:text-cyan-400 transition-colors">العربية</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex justify-center gap-4 flex-wrap text-xs text-slate-600 border-t border-slate-700/20 pt-6">
+      <span>© 2026 ashraf-eldesoky.space</span>
+      <span>·</span>
+      <img src="https://page-visitor.vercel.app/ashraf-eldesoky-space/count.svg" alt="Visitor count" class="visitor-counter" loading="lazy" />
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     SCRIPTS
+═══════════════════════════════════════ -->
+<script>
+// ── Set English language preference ──
+localStorage.setItem('ecms-lang', 'en');
+
+// ── Mobile nav toggle ──
+document.getElementById('nav-toggle').addEventListener('click', function() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+});
+
+// ── Close mobile nav on link click ──
+document.querySelectorAll('#mobile-menu a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.remove('open');
+  });
+});
+
+// ── Scroll reveal ──
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+revealEls.forEach(function(el) { observer.observe(el); });
+
+// ── Animated counters ──
+const counterEls = document.querySelectorAll('.counter');
+const counterObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      var el = e.target;
+      var target = parseInt(el.dataset.target, 10);
+      var suffix = el.dataset.suffix || '';
+      var current = 0;
+      var step = Math.max(1, Math.ceil(target / 40));
+      var interval = setInterval(function() {
+        current += step;
+        if (current >= target) { current = target; clearInterval(interval); }
+        el.textContent = current + suffix;
+      }, 30);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.3 });
+counterEls.forEach(function(el) { counterObserver.observe(el); });
+
+// ── EVM Calculator ──
+function fmt(n) {
+  if (isNaN(n) || !isFinite(n)) return '—';
+  return n.toLocaleString('en-US', { maximumFractionDigits: 2 });
+}
+function fmtIdx(n) {
+  if (isNaN(n) || !isFinite(n)) return '—';
+  return n.toFixed(3);
+}
+function setStatus(valId, badgeId, value, highLabel, highClass, lowLabel, lowClass) {
+  const valEl = document.getElementById(valId);
+  const badgeEl = document.getElementById(badgeId);
+  if (isNaN(value) || !isFinite(value)) {
+    valEl.textContent = '—'; valEl.className = 'text-3xl font-black text-white mb-2';
+    badgeEl.textContent = 'Awaiting Input'; badgeEl.className = 'badge badge-gray mx-auto';
+    return;
+  }
+  valEl.textContent = fmtIdx(value);
+  if (value >= 1) {
+    valEl.className = 'text-3xl font-black text-emerald-400 mb-2';
+    badgeEl.textContent = highLabel; badgeEl.className = 'badge badge-green mx-auto';
+  } else {
+    valEl.className = 'text-3xl font-black text-red-400 mb-2';
+    badgeEl.textContent = lowLabel; badgeEl.className = 'badge badge-red mx-auto';
+  }
+}
+
+function calcEVM() {
+  var bac = parseFloat(document.getElementById('bac').value);
+  var pv  = parseFloat(document.getElementById('pv').value);
+  var ev  = parseFloat(document.getElementById('ev').value);
+  var ac  = parseFloat(document.getElementById('ac').value);
+
+  var cv  = ev - ac;
+  var sv  = ev - pv;
+  var cpi = ev / ac;
+  var spi = ev / pv;
+  var eac = bac / cpi;
+
+  // CV
+  var cvEl = document.getElementById('cv-val');
+  cvEl.textContent = isFinite(cv) ? fmt(cv) : '—';
+  cvEl.style.color = isFinite(cv) ? (cv >= 0 ? '#10B981' : '#EF4444') : '#CBD5E1';
+
+  // SV
+  var svEl = document.getElementById('sv-val');
+  svEl.textContent = isFinite(sv) ? fmt(sv) : '—';
+  svEl.style.color = isFinite(sv) ? (sv >= 0 ? '#10B981' : '#EF4444') : '#CBD5E1';
+
+  document.getElementById('cpi-num').textContent = isFinite(cpi) ? fmtIdx(cpi) : '—';
+  document.getElementById('spi-num').textContent = isFinite(spi) ? fmtIdx(spi) : '—';
+  document.getElementById('eac-val').textContent = isFinite(eac) ? fmt(eac) : '—';
+
+  setStatus('cpi-val', 'cpi-badge', cpi,
+    'Within Budget', 'green',
+    'Over Budget', 'red');
+  setStatus('spi-val', 'spi-badge', spi,
+    'Ahead of Schedule', 'green',
+    'Behind Schedule', 'red');
+
+  // PMO insight
+  var insight = document.getElementById('pmo-insight');
+  var insightText = document.getElementById('insight-text');
+  var insightIcon = document.getElementById('insight-icon');
+  if (isFinite(cpi) && isFinite(spi)) {
+    insight.classList.remove('hidden');
+    if (cpi >= 1 && spi >= 1) {
+      insight.style.borderColor = 'rgba(16,185,129,0.3)';
+      insightIcon.style.color = '#10B981';
+      insightText.style.color = '#6ee7b7';
+      insightText.innerHTML = '<strong>Project is healthy.</strong> Both cost and schedule performance are on track. Maintain current controls and continue baseline monitoring.';
+    } else if (cpi < 1 && spi < 1) {
+      insight.style.borderColor = 'rgba(239,68,68,0.3)';
+      insightIcon.style.color = '#EF4444';
+      insightText.style.color = '#fca5a5';
+      insightText.innerHTML = '<strong>PMO Action Required.</strong> Project is both over budget and behind schedule. Recommend immediate variance root-cause analysis, scope review, and corrective action plan to client.';
+    } else if (cpi < 1) {
+      insight.style.borderColor = 'rgba(251,191,36,0.3)';
+      insightIcon.style.color = '#f59e0b';
+      insightText.style.color = '#fcd34d';
+      insightText.innerHTML = '<strong>Cost overrun detected.</strong> Schedule is on track but costs are exceeding plan. Review actual cost components and identify inefficiencies in resource utilization.';
+    } else {
+      insight.style.borderColor = 'rgba(251,191,36,0.3)';
+      insightIcon.style.color = '#f59e0b';
+      insightText.style.color = '#fcd34d';
+      insightText.innerHTML = '<strong>Schedule slippage detected.</strong> Costs are within budget but programme is behind plan. Consider resource acceleration or schedule rebaseline with client agreement.';
+    }
+  } else {
+    insight.classList.add('hidden');
+  }
+}
+
+['bac','pv','ev','ac'].forEach(function(id) {
+  document.getElementById(id).addEventListener('input', calcEVM);
+});
+</script>
+
+<!-- AI Chatbot -->
+<script src="../assets/js/cv-data.js"></script>
+<script src="../assets/js/chatbot.js"></script>
+
+</body>
+</html>

@@ -476,4 +476,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ── Global Exports ── */
-window.ECMS = { Theme, Nav, DataLoader, SearchModal, I18N };
+window.ECMS = { Theme, Nav, DataLoader, SearchModal, I18N: window.I18N || null };
