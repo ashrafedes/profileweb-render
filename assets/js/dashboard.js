@@ -109,31 +109,7 @@
     }
   }
 
-  /* ── Directory handle for direct write (File System Access API) ── */
-  let dirHandle = null;
-  let useDirectWrite = ('showDirectoryPicker' in window);
-
-  /* ── Pre-link project folder (call from user gesture) ── */
-  async function linkProjectFolder() {
-    if (!('showDirectoryPicker' in window)) {
-      alert('Your browser does not support direct file writing.\nUse Chrome or Edge to enable server-side updates without downloads.');
-      return false;
-    }
-    try {
-      dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
-      useDirectWrite = true;
-      showSaveBanner(true, '✓ Project folder linked! Future saves will write directly.');
-      return true;
-    } catch (e) {
-      if (e.name !== 'AbortError') {
-        console.error('Folder pick failed:', e);
-        alert('Could not link folder: ' + e.message);
-      }
-      return false;
-    }
-  }
-
-  /* ── Save Articles — writes directly to disk if supported ── */
+  /* ── Save Articles — POSTs to local server /api/save ── */
   async function saveArticles() {
     renderStats();
     renderTable();
@@ -142,48 +118,42 @@
     const sitemapContent = buildSitemapXML();
     const rssContent = buildRSSXML();
 
-    if (useDirectWrite) {
-      try {
-        if (!dirHandle) {
-          // Must pick folder now — this is called from a user gesture chain
-          dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
-        }
-        if (!dirHandle) throw new Error('No folder selected');
+    showSaveBanner(true, '⏳ Saving to server…');
 
-        showSaveBanner(true, '⏳ Writing files to disk…');
-        await writeToFile(dirHandle, 'articles/articles.json', jsonContent);
-        await writeToFile(dirHandle, 'sitemap.xml', sitemapContent);
-        await writeToFile(dirHandle, 'rss.xml', rssContent);
-        showSaveBanner(true, '✓ Saved directly to disk!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml updated. Push to git when ready.</span>');
-        return;
-      } catch (e) {
-        console.warn('Direct write failed:', e.name, e.message);
-        if (e.name === 'AbortError') return; // User cancelled — don't download
-        if (e.name === 'SecurityError') {
-          alert('Browser blocked direct file access. Make sure you are using Chrome or Edge on http://localhost');
-        }
-        useDirectWrite = false;
+    try {
+      const results = await Promise.all([
+        postFile('articles/articles.json', jsonContent),
+        postFile('sitemap.xml', sitemapContent),
+        postFile('rss.xml', rssContent)
+      ]);
+
+      const allOk = results.every(r => r.ok);
+      if (allOk) {
+        showSaveBanner(true, '✓ Saved to server!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml updated at http://localhost:8080</span>');
+      } else {
+        const errors = results.filter(r => !r.ok).map(r => r.error).join('; ');
+        showSaveBanner(true, '⚠ Some files failed: ' + errors);
       }
+    } catch (e) {
+      console.error('Save failed:', e);
+      showSaveBanner(true, '⚠ Save failed: ' + e.message + '<br><span style="font-weight:400;font-size:0.8rem;">Make sure server.py is running (python server.py)</span>');
     }
-
-    // Fallback: download files
-    showSaveBanner(false);
-    downloadFile(jsonContent, 'articles.json', 'application/json');
-    setTimeout(() => downloadFile(sitemapContent, 'sitemap.xml', 'application/xml'), 500);
-    setTimeout(() => downloadFile(rssContent, 'rss.xml', 'application/xml'), 1000);
   }
 
-  /* ── Write to a file path within a directory handle ── */
-  async function writeToFile(dirH, path, content) {
-    const parts = path.split('/');
-    let dir = dirH;
-    for (let i = 0; i < parts.length - 1; i++) {
-      dir = await dir.getDirectoryHandle(parts[i], { create: true });
+  /* ── POST file content to /api/save ── */
+  async function postFile(path, content) {
+    try {
+      const res = await fetch('/api/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ path, content })
+      });
+      if (res.ok) return { ok: true };
+      const data = await res.json().catch(() => ({}));
+      return { ok: false, error: data.error || res.statusText };
+    } catch (e) {
+      return { ok: false, error: e.message };
     }
-    const fileH = await dir.getFileHandle(parts[parts.length - 1], { create: true });
-    const writable = await fileH.createWritable();
-    await writable.write(content);
-    await writable.close();
   }
 
   /* ── Save banner (non-blocking) ── */
@@ -216,8 +186,6 @@
     document.getElementById('btn-new-article').addEventListener('click', () => openEditor(null));
     document.getElementById('btn-export').addEventListener('click', exportJSON);
     document.getElementById('btn-import').addEventListener('click', importJSON);
-    const btnLink = document.getElementById('btn-link-folder');
-    if (btnLink) btnLink.addEventListener('click', () => linkProjectFolder());
   }
 
   /* ── Render Stats ── */
