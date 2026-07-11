@@ -155,6 +155,30 @@
       return;
     }
 
+    // Fetch fresh articles.json from GitHub to avoid overwriting new articles added elsewhere
+    showSaveBanner(true, '⏳ Fetching latest articles from GitHub…');
+    try {
+      const freshRes = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/${GH_BRANCH}/articles/articles.json?v=${Date.now()}`, { cache: 'no-store' });
+      if (freshRes.ok) {
+        const freshArticles = await freshRes.json();
+        const currentSlug = getVal('ed-slug');
+        if (currentSlug) {
+          const currentLocal = articles.find(a => a.slug === currentSlug);
+          const freshIdx = freshArticles.findIndex(a => a.slug === currentSlug);
+          if (currentLocal && freshIdx >= 0) {
+            freshArticles[freshIdx] = currentLocal;
+          } else if (currentLocal) {
+            freshArticles.push(currentLocal);
+          }
+        }
+        articles = freshArticles;
+        renderStats();
+        renderTable();
+      }
+    } catch (e) {
+      console.warn('Could not fetch fresh articles from GitHub, using locally cached list:', e);
+    }
+
     const jsonContent = JSON.stringify(articles, null, 2);
     const sitemapContent = buildSitemapXML();
     const rssContent = buildRSSXML();
