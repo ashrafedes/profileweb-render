@@ -1200,11 +1200,11 @@ function calcEVM() {
   document.getElementById('eac-val').textContent = isFinite(eac) ? fmt(eac) : '—';
 
   setStatus('cpi-val', 'cpi-badge', cpi,
-    'Within Budget / ضمن الميزانية', 'green',
-    'Over Budget / متجاوز للميزانية', 'red');
+    'Within Budget', 'green',
+    'Over Budget', 'red');
   setStatus('spi-val', 'spi-badge', spi,
-    'Ahead of Schedule / متقدم', 'green',
-    'Behind Schedule / متأخر', 'red');
+    'Ahead of Schedule', 'green',
+    'Behind Schedule', 'red');
 
   // PMO insight
   var insight = document.getElementById('pmo-insight');
