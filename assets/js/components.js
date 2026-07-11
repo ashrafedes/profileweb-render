@@ -24,6 +24,7 @@ const NAV_HTML = `
       <li role="none"><a href="about.html" role="menuitem">About</a></li>
       <li role="none"><a href="career.html" role="menuitem">Experience</a></li>
       <li role="none"><a href="projects.html" role="menuitem">Projects</a></li>
+      <li role="none"><a href="featured-projects.html" role="menuitem">Featured Projects</a></li>
       <li role="none"><a href="skills.html" role="menuitem">Skills</a></li>
       <li role="none" class="nav-dropdown-wrap">
         <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">More ▾</button>
@@ -89,6 +90,7 @@ const FOOTER_HTML = `
           <li><a href="career.html">Experience</a></li>
           <li><a href="companies.html">Companies</a></li>
           <li><a href="projects.html">Projects</a></li>
+          <li><a href="featured-projects.html">Featured Projects</a></li>
           <li><a href="achievements.html">Achievements</a></li>
         </ul>
       </div>
