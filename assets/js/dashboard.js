@@ -109,50 +109,97 @@
     }
   }
 
-  /* ── Save Articles — POSTs to local server /api/save ── */
+  /* ── GitHub config ── */
+  const GH_REPO = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.GITHUB_REPO) || '';
+  const GH_BRANCH = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.GITHUB_BRANCH) || 'main';
+  const GH_TOKEN = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.GITHUB_TOKEN) || '';
+
+  /* ── Save Articles — commits to GitHub via API ── */
   async function saveArticles() {
     renderStats();
     renderTable();
+
+    if (!GH_TOKEN) {
+      showSaveBanner(true, '⚠ No GitHub token set.<br><span style="font-weight:400;font-size:0.8rem;">Add GITHUB_TOKEN in config.js with a Personal Access Token (repo scope).</span>');
+      return;
+    }
 
     const jsonContent = JSON.stringify(articles, null, 2);
     const sitemapContent = buildSitemapXML();
     const rssContent = buildRSSXML();
 
-    showSaveBanner(true, '⏳ Saving to server…');
+    showSaveBanner(true, '⏳ Committing to GitHub…');
 
     try {
-      const results = await Promise.all([
-        postFile('articles/articles.json', jsonContent),
-        postFile('sitemap.xml', sitemapContent),
-        postFile('rss.xml', rssContent)
-      ]);
-
-      const allOk = results.every(r => r.ok);
-      if (allOk) {
-        showSaveBanner(true, '✓ Saved to server!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml updated at http://localhost:8080</span>');
-      } else {
-        const errors = results.filter(r => !r.ok).map(r => r.error).join('; ');
-        showSaveBanner(true, '⚠ Some files failed: ' + errors);
-      }
-    } catch (e) {
-      console.error('Save failed:', e);
-      showSaveBanner(true, '⚠ Save failed: ' + e.message + '<br><span style="font-weight:400;font-size:0.8rem;">Make sure server.py is running (python server.py)</span>');
-    }
-  }
-
-  /* ── POST file content to /api/save ── */
-  async function postFile(path, content) {
-    try {
-      const res = await fetch('/api/save', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ path, content })
+      // Get current commit SHA
+      const branchRes = await fetch(`https://api.github.com/repos/${GH_REPO}/branches/${GH_BRANCH}`, {
+        headers: { 'Authorization': `token ${GH_TOKEN}`, 'Accept': 'application/vnd.github.v3+json' }
       });
-      if (res.ok) return { ok: true };
-      const data = await res.json().catch(() => ({}));
-      return { ok: false, error: data.error || res.statusText };
+      if (!branchRes.ok) throw new Error('Cannot access repo: ' + branchRes.statusText);
+      const branchData = await branchRes.json();
+      const latestCommitSha = branchData.commit.sha;
+
+      // Get current tree
+      const commitRes = await fetch(`https://api.github.com/repos/${GH_REPO}/commits/${latestCommitSha}`, {
+        headers: { 'Authorization': `token ${GH_TOKEN}`, 'Accept': 'application/vnd.github.v3+json' }
+      });
+      const commitData = await commitRes.json();
+      const baseTreeSha = commitData.commit.tree.sha;
+
+      // Create blobs for each file
+      const files = [
+        { path: 'articles/articles.json', content: jsonContent },
+        { path: 'sitemap.xml', content: sitemapContent },
+        { path: 'rss.xml', content: rssContent }
+      ];
+
+      const treeItems = [];
+      for (const f of files) {
+        const blobRes = await fetch(`https://api.github.com/repos/${GH_REPO}/git/blobs`, {
+          method: 'POST',
+          headers: { 'Authorization': `token ${GH_TOKEN}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content: btoa(unescape(encodeURIComponent(f.content))), encoding: 'base64' })
+        });
+        if (!blobRes.ok) throw new Error('Failed to create blob for ' + f.path);
+        const blobData = await blobRes.json();
+        treeItems.push({ path: f.path, mode: '100644', type: 'blob', sha: blobData.sha });
+      }
+
+      // Create tree
+      const treeRes = await fetch(`https://api.github.com/repos/${GH_REPO}/git/trees`, {
+        method: 'POST',
+        headers: { 'Authorization': `token ${GH_TOKEN}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ base_tree: baseTreeSha, tree: treeItems })
+      });
+      if (!treeRes.ok) throw new Error('Failed to create tree');
+      const treeData = await treeRes.json();
+
+      // Create commit
+      const now = new Date().toISOString().split('T')[0];
+      const newCommitRes = await fetch(`https://api.github.com/repos/${GH_REPO}/git/commits`, {
+        method: 'POST',
+        headers: { 'Authorization': `token ${GH_TOKEN}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: `Dashboard: update articles, sitemap, rss (${now})`,
+          tree: treeData.sha,
+          parents: [latestCommitSha]
+        })
+      });
+      if (!newCommitRes.ok) throw new Error('Failed to create commit');
+      const newCommitData = await newCommitRes.json();
+
+      // Update branch ref
+      const refRes = await fetch(`https://api.github.com/repos/${GH_REPO}/git/refs/heads/${GH_BRANCH}`, {
+        method: 'PATCH',
+        headers: { 'Authorization': `token ${GH_TOKEN}`, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sha: newCommitData.sha })
+      });
+      if (!refRes.ok) throw new Error('Failed to update branch');
+
+      showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml committed. Site will auto-deploy shortly.</span>');
     } catch (e) {
-      return { ok: false, error: e.message };
+      console.error('GitHub commit failed:', e);
+      showSaveBanner(true, '⚠ GitHub commit failed: ' + e.message);
     }
   }
 

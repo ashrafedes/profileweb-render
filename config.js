@@ -9,6 +9,11 @@ const ARTICLES_CONFIG = {
   /* Site base URL (no trailing slash) */
   SITE_URL: 'https://www.ashraf-eldesoky.space',
 
+  /* GitHub repo for direct commits from dashboard */
+  GITHUB_REPO: 'ashrafedes/profileweb-render',
+  GITHUB_BRANCH: 'main',
+  GITHUB_TOKEN: '',  /* Paste your GitHub Personal Access Token here (repo scope) */
+
   /* Articles per page on the listing page */
   ARTICLES_PER_PAGE: 6,
 
