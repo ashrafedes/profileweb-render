@@ -254,7 +254,7 @@
   /* ── Render Article ── */
   async function renderArticle() {
     const slug = getParam('slug');
-    if (!slug) { showNotFound(); return; }
+    if (!slug) { window.location.href = 'index.html'; return; }
 
     try {
       const res = await fetch(ASSET_BASE + 'articles/articles.json');
