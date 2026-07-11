@@ -806,7 +806,12 @@
     const btnUploadHero = document.getElementById('btn-upload-hero');
     const heroFileInput = document.getElementById('hero-file-input');
     if (btnUploadHero && heroFileInput) {
-      btnUploadHero.addEventListener('click', () => { heroFileInput.value = ''; heroFileInput.click(); });
+      btnUploadHero.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        heroFileInput.value = '';
+        heroFileInput.click();
+      });
       heroFileInput.addEventListener('change', (e) => {
         if (e.target.files && e.target.files[0]) handleHeroImage(e.target.files[0]);
       });

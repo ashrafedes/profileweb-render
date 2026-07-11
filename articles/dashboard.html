@@ -147,7 +147,7 @@
               <button type="button" class="dash-btn" id="btn-upload-hero" style="white-space:nowrap;">📁 Upload</button>
             </div>
             <div id="hero-preview" style="margin-top:0.5rem;"></div>
-            <input type="file" id="hero-file-input" accept="image/*" style="display:none;">
+            <input type="file" id="hero-file-input" accept="image/*" style="position:absolute;width:0;height:0;opacity:0;overflow:hidden;">
           </div>
           <div class="editor-field">
             <label>Publish Date</label>
@@ -196,7 +196,7 @@
               <button data-cmd="image">🖼 Image</button>
             </div>
             <textarea id="ed-en-content" placeholder="Write your article content in Markdown…"></textarea>
-            <input type="file" id="content-file-input-en" accept="image/*" style="display:none;">
+            <input type="file" id="content-file-input-en" accept="image/*" style="position:absolute;width:0;height:0;opacity:0;overflow:hidden;">
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
             <div class="editor-field">
@@ -238,7 +238,7 @@
               <button data-cmd="image">🖼 صورة</button>
             </div>
             <textarea id="ed-ar-content" placeholder="اكتب محتوى المقال…" style="font-family:'Cairo',sans-serif;text-align:right;" dir="rtl"></textarea>
-            <input type="file" id="content-file-input-ar" accept="image/*" style="display:none;">
+            <input type="file" id="content-file-input-ar" accept="image/*" style="position:absolute;width:0;height:0;opacity:0;overflow:hidden;">
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
             <div class="editor-field">
@@ -268,6 +268,6 @@
   </div>
 
   <script src="../config.js"></script>
-  <script src="../assets/js/dashboard.js?v=5"></script>
+  <script src="../assets/js/dashboard.js?v=6"></script>
 </body>
 </html>
