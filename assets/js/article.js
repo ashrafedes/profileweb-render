@@ -12,7 +12,10 @@
     return new URLSearchParams(window.location.search).get(name);
   }
 
-  let lang = getParam('lang') || 'en';
+  // Detect subdirectory: /en/articles/ or /ar/articles/ vs root /articles/
+  const _path = window.location.pathname;
+  const _subLang = _path.match(/\/(en|ar)\/articles\//);
+  let lang = (_subLang && _subLang[1]) || getParam('lang') || 'en';
   if (lang !== 'ar') lang = 'en';
   const IS_ARABIC = lang === 'ar';
   const DIR = IS_ARABIC ? 'rtl' : 'ltr';

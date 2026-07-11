@@ -12,11 +12,26 @@
   const DIR = IS_ARABIC ? 'rtl' : 'ltr';
   const path = window.location.pathname;
   const IN_SUBDIR = /\/(en|ar)\//.test(path);
-  const SUBDIR = IN_SUBDIR ? (IS_ARABIC ? '../en/' : '../ar/') : '';
+  const IN_ARTICLES_DIR = /\/articles\//.test(path);
+  const IN_LANG_ARTICLES = /\/(en|ar)\/articles\//.test(path);
   const CURRENT_PAGE = path.split('/').pop() || 'index.html';
 
+  // ── Nav base: '../' when inside /articles/ subdir, '' otherwise ──
+  const NAV_BASE = IN_ARTICLES_DIR ? '../' : '';
+
+  // ── Articles link: 'index.html' if already in articles, else 'articles/' ──
+  const ARTICLES_LINK = IN_ARTICLES_DIR ? 'index.html' : 'articles/';
+
   // ── Language toggle: link to same page in other language dir ──
-  const langToggleUrl = SUBDIR + CURRENT_PAGE;
+  let langToggleUrl;
+  if (IN_LANG_ARTICLES) {
+    const otherLang = IS_ARABIC ? 'en' : 'ar';
+    langToggleUrl = `../../${otherLang}/articles/${CURRENT_PAGE}`;
+  } else if (IN_SUBDIR) {
+    langToggleUrl = (IS_ARABIC ? '../en/' : '../ar/') + CURRENT_PAGE;
+  } else {
+    langToggleUrl = '';
+  }
 
   // ── Bilingual UI strings ──
   const T = IS_ARABIC ? {
@@ -105,7 +120,7 @@
 
 <nav class="ecms-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-brand" aria-label="${T.dashboard}">
+    <a href="${NAV_BASE}index.html" class="nav-brand" aria-label="${T.dashboard}">
       <div class="brand-icon" aria-hidden="true">AE</div>
       <div class="brand-text">
         <span class="brand-name">${T.brandName}</span>
@@ -114,31 +129,31 @@
     </a>
 
     <ul class="nav-links" id="navLinks" role="menubar">
-      <li role="none"><a href="index.html" role="menuitem">${T.dashboard}</a></li>
-      <li role="none"><a href="about.html" role="menuitem">${T.about}</a></li>
-      <li role="none"><a href="career.html" role="menuitem">${T.experience}</a></li>
-      <li role="none"><a href="projects.html" role="menuitem">${T.projects}</a></li>
-      <li role="none"><a href="featured-projects.html" role="menuitem">${T.featuredProjects}</a></li>
-      <li role="none"><a href="skills.html" role="menuitem">${T.skills}</a></li>
+      <li role="none"><a href="${NAV_BASE}index.html" role="menuitem">${T.dashboard}</a></li>
+      <li role="none"><a href="${NAV_BASE}about.html" role="menuitem">${T.about}</a></li>
+      <li role="none"><a href="${NAV_BASE}career.html" role="menuitem">${T.experience}</a></li>
+      <li role="none"><a href="${NAV_BASE}projects.html" role="menuitem">${T.projects}</a></li>
+      <li role="none"><a href="${NAV_BASE}featured-projects.html" role="menuitem">${T.featuredProjects}</a></li>
+      <li role="none"><a href="${NAV_BASE}skills.html" role="menuitem">${T.skills}</a></li>
       <li role="none" class="nav-dropdown-wrap">
         <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">${T.more}</button>
         <ul class="nav-dropdown" role="menu">
-          <li><a href="companies.html" role="menuitem">${T.companies}</a></li>
-          <li><a href="achievements.html" role="menuitem">${T.achievements}</a></li>
-          <li><a href="pmo.html" role="menuitem">${T.pmoLeadership}</a></li>
-          <li><a href="telecommunications.html" role="menuitem">${T.telecommunications}</a></li>
-          <li><a href="project-controls.html" role="menuitem">${T.projectControls}</a></li>
-          <li><a href="digital-transformation.html" role="menuitem">${T.digitalTransformation}</a></li>
-          <li><a href="leadership.html" role="menuitem">${T.leadership}</a></li>
-          <li><a href="software.html" role="menuitem">${T.software}</a></li>
-          <li><a href="certifications.html" role="menuitem">${T.certifications}</a></li>
-          <li><a href="education.html" role="menuitem">${T.education}</a></li>
-          <li><a href="awards.html" role="menuitem">${T.awards}</a></li>
+          <li><a href="${NAV_BASE}companies.html" role="menuitem">${T.companies}</a></li>
+          <li><a href="${NAV_BASE}achievements.html" role="menuitem">${T.achievements}</a></li>
+          <li><a href="${NAV_BASE}pmo.html" role="menuitem">${T.pmoLeadership}</a></li>
+          <li><a href="${NAV_BASE}telecommunications.html" role="menuitem">${T.telecommunications}</a></li>
+          <li><a href="${NAV_BASE}project-controls.html" role="menuitem">${T.projectControls}</a></li>
+          <li><a href="${NAV_BASE}digital-transformation.html" role="menuitem">${T.digitalTransformation}</a></li>
+          <li><a href="${NAV_BASE}leadership.html" role="menuitem">${T.leadership}</a></li>
+          <li><a href="${NAV_BASE}software.html" role="menuitem">${T.software}</a></li>
+          <li><a href="${NAV_BASE}certifications.html" role="menuitem">${T.certifications}</a></li>
+          <li><a href="${NAV_BASE}education.html" role="menuitem">${T.education}</a></li>
+          <li><a href="${NAV_BASE}awards.html" role="menuitem">${T.awards}</a></li>
         </ul>
       </li>
-      <li role="none"><a href="../articles/" role="menuitem">${T.articles}</a></li>
-      <li role="none"><a href="downloads.html" role="menuitem">${T.downloads}</a></li>
-      <li role="none"><a href="contact.html" role="menuitem">${T.contact}</a></li>
+      <li role="none"><a href="${ARTICLES_LINK}" role="menuitem">${T.articles}</a></li>
+      <li role="none"><a href="${NAV_BASE}downloads.html" role="menuitem">${T.downloads}</a></li>
+      <li role="none"><a href="${NAV_BASE}contact.html" role="menuitem">${T.contact}</a></li>
     </ul>
 
     <div class="nav-actions">
@@ -180,35 +195,35 @@
       <div>
         <div class="footer-col-title">${T.footerNav}</div>
         <ul class="footer-links">
-          <li><a href="index.html">${T.dashboard}</a></li>
-          <li><a href="about.html">${T.about}</a></li>
-          <li><a href="career.html">${T.experience}</a></li>
-          <li><a href="companies.html">${T.companies}</a></li>
-          <li><a href="projects.html">${T.projects}</a></li>
-          <li><a href="featured-projects.html">${T.featuredProjects}</a></li>
-          <li><a href="achievements.html">${T.achievements}</a></li>
+          <li><a href="${NAV_BASE}index.html">${T.dashboard}</a></li>
+          <li><a href="${NAV_BASE}about.html">${T.about}</a></li>
+          <li><a href="${NAV_BASE}career.html">${T.experience}</a></li>
+          <li><a href="${NAV_BASE}companies.html">${T.companies}</a></li>
+          <li><a href="${NAV_BASE}projects.html">${T.projects}</a></li>
+          <li><a href="${NAV_BASE}featured-projects.html">${T.featuredProjects}</a></li>
+          <li><a href="${NAV_BASE}achievements.html">${T.achievements}</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">${T.footerExpertise}</div>
         <ul class="footer-links">
-          <li><a href="pmo.html">${T.pmoLeadership}</a></li>
-          <li><a href="project-controls.html">${T.projectControls}</a></li>
-          <li><a href="telecommunications.html">${T.telecommunications}</a></li>
-          <li><a href="digital-transformation.html">${T.digitalTransformation}</a></li>
-          <li><a href="leadership.html">${T.leadership}</a></li>
-          <li><a href="skills.html">${T.footerAllSkills}</a></li>
+          <li><a href="${NAV_BASE}pmo.html">${T.pmoLeadership}</a></li>
+          <li><a href="${NAV_BASE}project-controls.html">${T.projectControls}</a></li>
+          <li><a href="${NAV_BASE}telecommunications.html">${T.telecommunications}</a></li>
+          <li><a href="${NAV_BASE}digital-transformation.html">${T.digitalTransformation}</a></li>
+          <li><a href="${NAV_BASE}leadership.html">${T.leadership}</a></li>
+          <li><a href="${NAV_BASE}skills.html">${T.footerAllSkills}</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">${T.footerResources}</div>
         <ul class="footer-links">
-          <li><a href="education.html">${T.education}</a></li>
-          <li><a href="certifications.html">${T.certifications}</a></li>
-          <li><a href="awards.html">${T.awards}</a></li>
-          <li><a href="downloads.html">${T.downloads}</a></li>
-          <li><a href="search.html">${T.footerSearch}</a></li>
-          <li><a href="contact.html">${T.contact}</a></li>
+          <li><a href="${NAV_BASE}education.html">${T.education}</a></li>
+          <li><a href="${NAV_BASE}certifications.html">${T.certifications}</a></li>
+          <li><a href="${NAV_BASE}awards.html">${T.awards}</a></li>
+          <li><a href="${NAV_BASE}downloads.html">${T.downloads}</a></li>
+          <li><a href="${NAV_BASE}search.html">${T.footerSearch}</a></li>
+          <li><a href="${NAV_BASE}contact.html">${T.contact}</a></li>
         </ul>
       </div>
     </div>

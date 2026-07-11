@@ -9,10 +9,20 @@
 (function () {
   const SITE_URL = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.SITE_URL) || '';
   const PER_PAGE = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.ARTICLES_PER_PAGE) || 6;
-  const IS_ARABIC = new URLSearchParams(window.location.search).get('lang') === 'ar' ||
+
+  // Detect subdirectory: /en/articles/ or /ar/articles/ vs root /articles/
+  const _path = window.location.pathname;
+  const _inSub = /\/(en|ar)\/articles\//.test(_path);
+  const _subLang = _path.match(/\/(en|ar)\/articles\//);
+  const IS_ARABIC = (_subLang && _subLang[1] === 'ar') ||
+    new URLSearchParams(window.location.search).get('lang') === 'ar' ||
     document.documentElement.getAttribute('lang') === 'ar';
   const LANG = IS_ARABIC ? 'ar' : 'en';
   const DIR = IS_ARABIC ? 'rtl' : 'ltr';
+
+  // Path prefixes: ../../ from subdirs, ../ from root
+  const ASSET_BASE = _inSub ? '../../' : '../';
+  const JSON_URL = SITE_URL + '/articles/articles.json';
 
   const T = IS_ARABIC ? {
     title: 'مركز المقالات',
@@ -63,7 +73,7 @@
   /* ── Fetch articles ── */
   async function loadArticles() {
     try {
-      const res = await fetch(SITE_URL + '/articles/articles.json');
+      const res = await fetch(JSON_URL);
       allArticles = await res.json();
       // Filter out drafts
       filtered = allArticles.filter(a => !a.draft);
