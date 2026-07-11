@@ -294,6 +294,9 @@
     document.getElementById('ed-draft').checked = a.draft;
     setVal('ed-tags', (a.tags || []).join(', '));
 
+    // Show hero preview if image exists
+    showHeroPreview(a.heroImage);
+
     // Fill EN fields
     fillLangFields('en', a.en || {});
     // Fill AR fields
@@ -449,12 +452,16 @@
     html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
     html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
     html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+    // Images — must be before links
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">');
+    // Links
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
     html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
     html = html.replace(/(<li>.*<\/li>\n?)+/g, (m) => '<ul>' + m + '</ul>');
     html = html.split('\n').map(line => {
       const t = line.trim();
       if (!t) return '';
-      if (/^<(h2|h3|ul|pre|blockquote)/.test(t)) return t;
+      if (/^<(h2|h3|ul|pre|blockquote|img)/.test(t)) return t;
       return '<p>' + t + '</p>';
     }).join('\n');
     return html;
@@ -848,6 +855,18 @@
       });
       heroFileInput.addEventListener('change', (e) => {
         if (e.target.files && e.target.files[0]) handleHeroImage(e.target.files[0]);
+      });
+    }
+
+    // Remove hero image
+    const btnRemoveHero = document.getElementById('btn-remove-hero');
+    if (btnRemoveHero) {
+      btnRemoveHero.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const input = document.getElementById('ed-hero-image');
+        if (input) input.value = '';
+        showHeroPreview('');
       });
     }
 
