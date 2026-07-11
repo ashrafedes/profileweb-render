@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles Dashboard – Ashraf El Desoky</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/articles.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- Password Screen -->
+  <div id="password-screen" class="password-screen">
+    <div class="password-box">
+      <div style="font-size:2.5rem;margin-bottom:0.5rem;">🔐</div>
+      <h2>Administrator Password</h2>
+      <p>Enter your password to access the dashboard</p>
+      <input type="password" id="pw-input" placeholder="Password" autofocus>
+      <button id="pw-btn">Enter</button>
+      <div class="password-error" id="pw-error">Incorrect password</div>
+    </div>
+  </div>
+
+  <!-- Dashboard App -->
+  <div id="dashboard-app" style="display:none;">
+
+    <!-- Dashboard Nav -->
+    <nav class="dashboard-nav">
+      <h1>📝 Articles Dashboard</h1>
+      <div class="dash-actions">
+        <button class="dash-btn" id="btn-export">Export JSON</button>
+        <button class="dash-btn" id="btn-import">Import JSON</button>
+        <button class="dash-btn dash-btn-primary" id="btn-new-article">+ New Article</button>
+        <a href="index.html" class="dash-btn" style="text-decoration:none;display:inline-flex;align-items:center;">View Site</a>
+      </div>
+    </nav>
+
+    <div style="padding:1.5rem;">
+
+      <!-- Stats Cards -->
+      <div class="dash-stat-grid">
+        <div class="dash-stat-card">
+          <div class="stat-icon">📄</div>
+          <div class="stat-value" id="stat-total">0</div>
+          <div class="stat-label">Total Articles</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon">✅</div>
+          <div class="stat-value" id="stat-published">0</div>
+          <div class="stat-label">Published</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon">📝</div>
+          <div class="stat-value" id="stat-drafts">0</div>
+          <div class="stat-label">Drafts</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon">🏷</div>
+          <div class="stat-value" id="stat-categories">0</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="dash-stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-value" id="stat-last-pub" style="font-size:1rem;">—</div>
+          <div class="stat-label">Last Published</div>
+        </div>
+      </div>
+
+      <!-- Articles Table -->
+      <table class="dash-table">
+        <thead>
+          <tr>
+            <th>Article</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Read Time</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="articles-tbody"></tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <!-- Editor Overlay (hidden by default) -->
+  <div id="editor-overlay" class="editor-overlay" style="display:none;">
+
+    <!-- Editor Header -->
+    <div class="editor-header">
+      <div style="display:flex;align-items:center;gap:1rem;">
+        <button class="dash-btn" id="btn-cancel">✕ Cancel</button>
+        <span style="color:#fff;font-weight:700;font-size:1rem;" id="editor-title">Article Editor</span>
+      </div>
+      <div style="display:flex;gap:0.5rem;align-items:center;">
+        <button class="translate-btn" id="btn-translate">✨ Translate EN → AR</button>
+        <button class="dash-btn" id="btn-save">Save Draft</button>
+        <button class="dash-btn dash-btn-primary" id="btn-publish">Publish</button>
+      </div>
+    </div>
+
+    <!-- Editor Body -->
+    <div class="editor-body">
+
+      <!-- Form Side -->
+      <div class="editor-form">
+
+        <!-- Tabs -->
+        <div class="editor-tabs" style="margin-bottom:1rem;">
+          <button class="editor-tab active" data-lang="en">🇺🇸 English</button>
+          <button class="editor-tab" data-lang="ar">🇸🇦 العربية</button>
+        </div>
+
+        <!-- Common Fields -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1rem;">
+          <div class="editor-field">
+            <label>Slug (URL)</label>
+            <input type="text" id="ed-slug" placeholder="my-article">
+          </div>
+          <div class="editor-field">
+            <label>Category</label>
+            <input type="text" id="ed-category" placeholder="Project Controls">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1rem;">
+          <div class="editor-field">
+            <label>Author</label>
+            <input type="text" id="ed-author" placeholder="Ashraf Ibrahim El Desoky">
+          </div>
+          <div class="editor-field">
+            <label>Reading Time (min)</label>
+            <input type="number" id="ed-reading-time" value="5" min="1" max="60">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1rem;">
+          <div class="editor-field">
+            <label>Hero Image URL</label>
+            <input type="text" id="ed-hero-image" placeholder="/assets/images/articles/my-article.webp">
+          </div>
+          <div class="editor-field">
+            <label>Publish Date</label>
+            <input type="date" id="ed-publish-date">
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1rem;">
+          <div class="editor-field">
+            <label>Tags (comma-separated)</label>
+            <input type="text" id="ed-tags" placeholder="PMP, EVM, Cost Control">
+          </div>
+          <div class="editor-field" style="display:flex;align-items:flex-end;gap:1rem;">
+            <label style="display:flex;align-items:center;gap:0.4rem;">
+              <input type="checkbox" id="ed-featured" style="width:auto;"> Featured
+            </label>
+            <label style="display:flex;align-items:center;gap:0.4rem;">
+              <input type="checkbox" id="ed-draft" style="width:auto;" checked> Draft
+            </label>
+          </div>
+        </div>
+
+        <hr style="border-color:#30363d;margin:1rem 0;">
+
+        <!-- English Panel -->
+        <div class="editor-lang-panel" id="editor-panel-en">
+          <div class="editor-field">
+            <label>Title (EN)</label>
+            <input type="text" id="ed-en-title" placeholder="Article title">
+          </div>
+          <div class="editor-field">
+            <label>Excerpt (EN)</label>
+            <textarea id="ed-en-excerpt" rows="2" placeholder="Brief excerpt…" style="min-height:60px;font-family:inherit;"></textarea>
+          </div>
+          <div class="editor-field">
+            <label>Content (EN) — Markdown supported</label>
+            <div class="editor-toolbar">
+              <button data-cmd="bold"><b>B</b></button>
+              <button data-cmd="italic"><i>I</i></button>
+              <button data-cmd="h2">H2</button>
+              <button data-cmd="h3">H3</button>
+              <button data-cmd="code">&lt;/&gt;</button>
+              <button data-cmd="quote">❝</button>
+              <button data-cmd="list">• List</button>
+              <button data-cmd="link">🔗 Link</button>
+            </div>
+            <textarea id="ed-en-content" placeholder="Write your article content in Markdown…"></textarea>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <div class="editor-field">
+              <label>Meta Title (EN)</label>
+              <input type="text" id="ed-en-meta-title" placeholder="SEO meta title">
+            </div>
+            <div class="editor-field">
+              <label>Meta Description (EN)</label>
+              <input type="text" id="ed-en-meta-desc" placeholder="SEO meta description">
+            </div>
+          </div>
+          <div class="editor-field">
+            <label>SEO Keywords (EN, comma-separated)</label>
+            <input type="text" id="ed-en-keywords" placeholder="keyword1, keyword2">
+          </div>
+        </div>
+
+        <!-- Arabic Panel -->
+        <div class="editor-lang-panel" id="editor-panel-ar" style="display:none;" dir="rtl">
+          <div class="editor-field">
+            <label>العنوان (AR)</label>
+            <input type="text" id="ed-ar-title" placeholder="عنوان المقال" style="font-family:'Cairo',sans-serif;text-align:right;">
+          </div>
+          <div class="editor-field">
+            <label>المقتطف (AR)</label>
+            <textarea id="ed-ar-excerpt" rows="2" placeholder="مقتطف مختصر…" style="min-height:60px;font-family:'Cairo',sans-serif;text-align:right;"></textarea>
+          </div>
+          <div class="editor-field">
+            <label>المحتوى (AR) — يدعم Markdown</label>
+            <div class="editor-toolbar">
+              <button data-cmd="bold"><b>B</b></button>
+              <button data-cmd="italic"><i>I</i></button>
+              <button data-cmd="h2">H2</button>
+              <button data-cmd="h3">H3</button>
+              <button data-cmd="code">&lt;/&gt;</button>
+              <button data-cmd="quote">❝</button>
+              <button data-cmd="list">• قائمة</button>
+              <button data-cmd="link">🔗 رابط</button>
+            </div>
+            <textarea id="ed-ar-content" placeholder="اكتب محتوى المقال…" style="font-family:'Cairo',sans-serif;text-align:right;" dir="rtl"></textarea>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <div class="editor-field">
+              <label>عنوان الميتا (AR)</label>
+              <input type="text" id="ed-ar-meta-title" placeholder="عنوان SEO" style="font-family:'Cairo',sans-serif;text-align:right;">
+            </div>
+            <div class="editor-field">
+              <label>وصف الميتا (AR)</label>
+              <input type="text" id="ed-ar-meta-desc" placeholder="وصف SEO" style="font-family:'Cairo',sans-serif;text-align:right;">
+            </div>
+          </div>
+          <div class="editor-field">
+            <label>الكلمات المفتاحية (AR، مفصولة بفواصل)</label>
+            <input type="text" id="ed-ar-keywords" placeholder="كلمة1, كلمة2" style="font-family:'Cairo',sans-serif;text-align:right;">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Preview Side -->
+      <div class="editor-preview">
+        <h3 style="color:#8b949e;font-size:0.82rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1rem;">Live Preview</h3>
+        <div class="editor-preview-content" id="editor-preview-content" style="font-family:'Inter',sans-serif;"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../config.js"></script>
+  <script src="../assets/js/dashboard.js?v=1"></script>
+</body>
+</html>

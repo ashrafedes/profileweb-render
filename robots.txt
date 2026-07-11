@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.ashraf-eldesoky.space/sitemap.xml
+RSS: https://www.ashraf-eldesoky.space/rss.xml

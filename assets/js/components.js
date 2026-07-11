@@ -45,6 +45,7 @@
     contact: 'تواصل',
     search: '🔍 بحث',
     searchPlaceholder: 'ابحث في الخبرة، المشاريع، المهارات، الشهادات…',
+    articles: 'المقالات',
     langToggle: 'English 🌐',
     langToggleAria: 'التبديل إلى الإنجليزية',
     backToTop: '↑',
@@ -83,6 +84,7 @@
     contact: 'Contact',
     search: '🔍 Search',
     searchPlaceholder: 'Search experience, projects, skills, certifications…',
+    articles: 'Articles',
     langToggle: 'العربية 🌐',
     langToggleAria: 'Switch to Arabic',
     backToTop: '↑',
@@ -134,6 +136,7 @@
           <li><a href="awards.html" role="menuitem">${T.awards}</a></li>
         </ul>
       </li>
+      <li role="none"><a href="../articles/" role="menuitem">${T.articles}</a></li>
       <li role="none"><a href="downloads.html" role="menuitem">${T.downloads}</a></li>
       <li role="none"><a href="contact.html" role="menuitem">${T.contact}</a></li>
     </ul>

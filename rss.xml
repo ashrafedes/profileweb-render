@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ashraf El Desoky – Articles</title>
+    <link>https://www.ashraf-eldesoky.space/articles/</link>
+    <description>Articles and insights on project management, telecommunications, and digital transformation by Ashraf El Desoky, PMP®.</description>
+    <language>en-us</language>
+    <lastBuildDate>2026-07-11T00:00:00Z</lastBuildDate>
+    <atom:link href="https://www.ashraf-eldesoky.space/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Earned Value Management: A Complete Guide</title>
+      <link>https://www.ashraf-eldesoky.space/articles/article.html?slug=earned-value-management</link>
+      <description>Master EVM fundamentals — PV, EV, AC, CPI, SPI — with real-world examples. Learn how to forecast project health and cost at completion.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Fri, 11 Jul 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/articles/article.html?slug=earned-value-management</guid>
+      <category>Project Controls</category>
+    </item>
+
+    <item>
+      <title>FTTH Network Rollout: Lessons from 10 Years with STC</title>
+      <link>https://www.ashraf-eldesoky.space/articles/article.html?slug=ftth-network-rollout</link>
+      <description>Key lessons from managing one of the largest FTTH rollout programmes in the Middle East — planning, execution, supply chain, and quality control.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Fri, 11 Jul 2026 00:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/articles/article.html?slug=ftth-network-rollout</guid>
+      <category>Telecommunications</category>
+    </item>
+
+  </channel>
+</rss>

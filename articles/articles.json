@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "slug": "earned-value-management",
+    "category": "Project Controls",
+    "author": "Ashraf Ibrahim El Desoky",
+    "heroImage": "/assets/images/articles/earned-value-management.webp",
+    "publishDate": "2026-07-11",
+    "updatedDate": "2026-07-11",
+    "readingTime": 8,
+    "featured": true,
+    "draft": false,
+    "tags": ["PMP", "EVM", "Cost Control", "Project Management"],
+    "en": {
+      "title": "Earned Value Management: A Complete Guide",
+      "excerpt": "Master EVM fundamentals — PV, EV, AC, CPI, SPI — and learn how to use them to forecast project health with real-world examples.",
+      "content": "## Introduction\n\nEarned Value Management (EVM) is one of the most powerful techniques for measuring project performance and progress. It integrates scope, schedule, and cost to give you a single, objective measure of project health.\n\n## Core Formulas\n\n### Planned Value (PV)\nThe budgeted cost of work scheduled to be done by a given date.\n\n### Earned Value (EV)\nThe budgeted cost of work actually completed by a given date.\n\n### Actual Cost (AC)\nThe actual cost incurred for the work completed by a given date.\n\n### Cost Performance Index (CPI)\n\n> CPI = EV / AC\n\nA CPI less than 1 means you are over budget. A CPI greater than 1 means you are under budget.\n\n### Schedule Performance Index (SPI)\n\n> SPI = EV / PV\n\nAn SPI less than 1 means you are behind schedule.\n\n## Real-World Example\n\nConsider a $100,000 project with a planned completion of 50% by month 3. The actual cost incurred is $60,000, but only 40% of the work is complete.\n\n| Metric | Value |\n|--------|-------|\n| PV | $50,000 |\n| EV | $40,000 |\n| AC | $60,000 |\n| CPI | 0.67 |\n| SPI | 0.80 |\n\nThis tells us the project is both over budget and behind schedule — critical early warning signs.\n\n## Forecasting\n\n### Estimate at Completion (EAC)\n\n> EAC = BAC / CPI\n\nIf your BAC is $100,000 and CPI is 0.67, your EAC would be approximately $149,254.\n\n## Conclusion\n\nEVM gives project managers an objective, quantifiable way to track performance. By monitoring CPI and SPI regularly, you can catch problems early and take corrective action before it's too late.",
+      "metaTitle": "Earned Value Management (EVM) Complete Guide | Ashraf El Desoky",
+      "metaDescription": "Master EVM fundamentals — PV, EV, AC, CPI, SPI — with real-world examples. Learn how to forecast project health and cost at completion.",
+      "keywords": ["earned value management", "EVM", "CPI", "SPI", "project controls", "PMP"]
+    },
+    "ar": {
+      "title": "إدارة القيمة المكتسبة: دليل شامل",
+      "excerpt": "أتقن أساسيات إدارة القيمة المكتسبة — PV و EV و AC و CPI و SPI — وتعلم كيفية استخدامها للتنبؤ بصحة المشروع بأمثلة عملية.",
+      "content": "## مقدمة\n\nإدارة القيمة المكتسبة (EVM) هي واحدة من أقوى تقنيات قياس أداء وتقدم المشروع. تدمج النطاق والجدول والتكلفة لتمنحك مقياساً موضوعياً واحداً لصحة المشروع.\n\n## الصيغ الأساسية\n\n### القيمة المخططة (PV)\nالتكلفة المخططة للعمل المجدول حتى تاريخ معين.\n\n### القيمة المكتسبة (EV)\nالتكلفة المخططة للعمل المكتمل فعلياً حتى تاريخ معين.\n\n### التكلفة الفعلية (AC)\nالتكلفة الفعلية المتكبدة للعمل المكتمل حتى تاريخ معين.\n\n### مؤشر أداء التكلفة (CPI)\n\n> CPI = EV / AC\n\nمؤشر أقل من 1 يعني تجاوز الميزانية. مؤشر أكبر من 1 يعني توفير في الميزانية.\n\n### مؤشر أداء الجدول (SPI)\n\n> SPI = EV / PV\n\nمؤشر أقل من 1 يعني التأخر عن الجدول.\n\n## مثال عملي\n\nاعتبر مشروعاً بقيمة 100,000 دولار مع خطة إكمال 50% بحلول الشهر الثالث. التكلفة الفعلية المتكبدة 60,000 دولار، لكن 40% فقط من العمل مكتمل.\n\n| المؤشر | القيمة |\n|--------|-------|\n| PV | 50,000 دولار |\n| EV | 40,000 دولار |\n| AC | 60,000 دولار |\n| CPI | 0.67 |\n| SPI | 0.80 |\n\nهذا يخبرنا أن المشروع يتجاوز الميزانية ومتأخر عن الجدول — علامات تحذير مبكرة حرجة.\n\n## التنبؤ\n\n### التقدير عند الإكمال (EAC)\n\n> EAC = BAC / CPI\n\nإذا كان BAC هو 100,000 دولار و CPI هو 0.67، فإن EAC سيكون تقريباً 149,254 دولار.\n\n## الخلاصة\n\nتمنح إدارة القيمة المكتسبة مديري المشاريع طريقة موضوعية وقابلة للقياس لتتبع الأداء. من خلال مراقبة CPI و SPI بانتظام، يمكنك اكتشاف المشكلات مبكراً واتخاذ إجراءات تصحيحية قبل فوات الأوان.",
+      "metaTitle": "إدارة القيمة المكتسبة (EVM) دليل شامل | أشرف الدسوقي",
+      "metaDescription": "أتقن أساسيات إدارة القيمة المكتسبة — PV و EV و AC و CPI و SPI — بأمثلة عملية. تعلم كيفية التنبؤ بصحة المشروع والتكلفة عند الإكمال.",
+      "keywords": ["إدارة القيمة المكتسبة", "EVM", "CPI", "SPI", "ضوابط المشاريع", "PMP"]
+    }
+  },
+  {
+    "id": 2,
+    "slug": "ftth-network-rollout",
+    "category": "Telecommunications",
+    "author": "Ashraf Ibrahim El Desoky",
+    "heroImage": "/assets/images/articles/ftth-network-rollout.webp",
+    "publishDate": "2026-07-11",
+    "updatedDate": "2026-07-11",
+    "readingTime": 6,
+    "featured": false,
+    "draft": false,
+    "tags": ["FTTH", "Fiber Optic", "Telecom", "OSP"],
+    "en": {
+      "title": "FTTH Network Rollout: Lessons from 10 Years with STC",
+      "excerpt": "Key lessons from managing one of the largest FTTH rollout programmes in the Middle East — planning, execution, and challenges.",
+      "content": "## Introduction\n\nOver 10 years supporting Saudi Telecom Company's (STC) national FTTH rollout, I learned invaluable lessons about large-scale telecommunications infrastructure projects.\n\n## Planning Phase\n\n### Work Breakdown Structure\nA proper WBS is the foundation of any successful rollout. We divided the network into regions, then into segments, then into individual sites.\n\n### Schedule Management\nUsing Primavera P6 and MS Project, we maintained master schedules with thousands of activities across multiple regions.\n\n## Execution Challenges\n\n### Supply Chain\nFiber optic cable availability was a constant challenge. We needed to coordinate with vendors months in advance.\n\n### permits and Right-of-Way\nMunicipal permits for trenching and laying fiber were unpredictable. Building relationships with local authorities was essential.\n\n### Quality Control\nEach segment needed testing and commissioning before activation. We developed standardized QA checklists.\n\n## Key Takeaways\n\n1. **Invest in planning** — 80% of problems can be avoided with proper upfront planning\n2. **Build relationships** — vendor and authority relationships are as important as technical skills\n3. **Monitor relentlessly** — KPI dashboards and weekly progress reports kept everyone aligned\n4. **Embrace technology** — our MS Access VBA ERP system saved countless hours of manual tracking\n\n## Conclusion\n\nFTTH rollout at national scale is a marathon, not a sprint. Success requires disciplined project controls, strong relationships, and the right technology stack.",
+      "metaTitle": "FTTH Network Rollout Lessons | 10 Years with STC | Ashraf El Desoky",
+      "metaDescription": "Key lessons from managing one of the largest FTTH rollout programmes in the Middle East — planning, execution, supply chain, and quality control.",
+      "keywords": ["FTTH", "fiber optic", "STC", "telecom rollout", "OSP", "project management"]
+    },
+    "ar": {
+      "title": "نشر شبكة FTTH: دروس من 10 سنوات مع STC",
+      "excerpt": "دروس رئيسية من إدارة أحد أكبر برامج نشر FTTH في الشرق الأوسط — التخطيط والتنفيذ والتحديات.",
+      "content": "## مقدمة\n\nخلال 10 سنوات من دعم برنامج نشر FTTH الوطني لشركة الاتصالات السعودية (STC)، تعلمت دروساً لا تقدر بثمن حول مشاريع البنية التحتية للاتصالات على نطاق واسع.\n\n## مرحلة التخطيط\n\n### هيكل تجزئة العمل\nهيكل تجزئة العمل المناسب هو أساس أي نشر ناجح. قسمنا الشبكة إلى مناطق، ثم إلى قطاعات، ثم إلى مواقع فردية.\n\n### إدارة الجدول\nباستخدام Primavera P6 و MS Project، حافظنا على جداول رئيسية بآلاف الأنشطة عبر مناطق متعددة.\n\n## تحديات التنفيذ\n\n### سلسلة التوريد\nتوفر كابلات الألياف الضوئية كان تحدياً مستمراً. كنا نحتاج للتنسيق مع الموردين أشهراً مقدماً.\n\n### التصاريح وحق المرور\nتصاريح البلديات للحفر ومد الألياف كانت غير متوقعة. بناء العلاقات مع السلطات المحلية كان ضرورياً.\n\n### مراقبة الجودة\nكل قطاع كان يحتاج لاختبار وتشغيل قبل التفعيل. طورنا قوائم مراجعة جودة موحدة.\n\n## الدروس الرئيسية\n\n1. **استثمر في التخطيط** — 80% من المشكلات يمكن تجنبها بتخطيط مناسب مسبقاً\n2. **ابنِ العلاقات** — علاقات الموردين والسلطات مهمة كالمهارات التقنية\n3. **راقب بلا هوادة** — لوحات KPI والتقارير الأسبوعية أبقت الجميع متوافقاً\n4. **تبنى التكنولوجيا** — نظام ERP المبني بـ MS Access VBA وفر ساعات لا تحصى من التتبع اليدوي\n\n## الخلاصة\n\nنشر FTTH على المستوى الوطني هو ماراثون وليس سباق سرعة. النجاح يتطلب ضوابط مشاريع منضبطة وعلاقات قوية والتكنولوجيا المناسبة.",
+      "metaTitle": "دروس نشر شبكة FTTH | 10 سنوات مع STC | أشرف الدسوقي",
+      "metaDescription": "دروس رئيسية من إدارة أحد أكبر برامج نشر FTTH في الشرق الأوسط — التخطيط والتنفيذ وسلسلة التوريد ومراقبة الجودة.",
+      "keywords": ["FTTH", "ألياف ضوئية", "STC", "نشر اتصالات", "OSP", "إدارة المشاريع"]
+    }
+  }
+]
