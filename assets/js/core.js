@@ -244,10 +244,17 @@ const FilterTabs = (() => {
 const SearchModal = (() => {
   let data = null;
 
+  function getBasePath() {
+    const path = window.location.pathname;
+    if (path.includes('/en/') || path.includes('/ar/')) return '../';
+    return '';
+  }
+
   async function loadData() {
     if (data) return data;
     try {
-      const res = await fetch('data/career-knowledge-base.json');
+      const base = getBasePath();
+      const res = await fetch(base + 'data/career-knowledge-base.json');
       data = await res.json();
       return data;
     } catch (e) {
@@ -258,6 +265,7 @@ const SearchModal = (() => {
 
   function buildIndex(kb) {
     const items = [];
+    const base = getBasePath();
 
     if (kb.experience) {
       kb.experience.forEach(e => {
@@ -265,7 +273,7 @@ const SearchModal = (() => {
           icon: '🏢',
           title: e.role,
           subtitle: `${e.company} • ${e.duration}`,
-          url: `career.html#${e.id}`,
+          url: `${base}career.html#${e.id}`,
           tags: [e.company, e.country, ...(e.technologies || [])].join(' ').toLowerCase()
         });
       });
@@ -277,7 +285,7 @@ const SearchModal = (() => {
           icon: '📋',
           title: p.name,
           subtitle: `${p.projectType} • ${p.country}`,
-          url: `projects.html#${p.id}`,
+          url: `${base}projects.html#${p.id}`,
           tags: [p.name, p.client, p.country, ...(p.technologies || [])].join(' ').toLowerCase()
         });
       });
@@ -289,7 +297,7 @@ const SearchModal = (() => {
           icon: '🏆',
           title: c.name,
           subtitle: c.issuingBody,
-          url: `certifications.html#${c.id}`,
+          url: `${base}certifications.html#${c.id}`,
           tags: [c.name, c.issuingBody].join(' ').toLowerCase()
         });
       });
@@ -302,7 +310,7 @@ const SearchModal = (() => {
             icon: '⚡',
             title: skill,
             subtitle: `Skill – ${cat}`,
-            url: `skills.html`,
+            url: `${base}skills.html`,
             tags: (cat + ' ' + skill).toLowerCase()
           });
         });
