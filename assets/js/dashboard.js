@@ -58,7 +58,7 @@
     article: 'Article',
     date: 'Date',
     saveSuccess: '✓ Article saved successfully!',
-    saveError: 'Error saving article. In production, changes save to articles.json on the server.',
+    saveError: '3 files downloaded. Replace them in your project root and push to git.',
     english: '🇺🇸 English',
     arabic: '🇸🇦 العربية',
     gallery: 'Gallery Images (comma-separated URLs)',
@@ -109,23 +109,35 @@
     }
   }
 
-  /* ── Save Articles (client-side; in production, POST to server) ── */
+  /* ── Save Articles (client-side; downloads 3 files) ── */
   function saveArticles() {
-    // In a static site, we can't write to the server directly.
-    // This triggers a download of the updated JSON for manual replacement.
-    // In production, wire this up to a serverless function or API endpoint.
-    const blob = new Blob([JSON.stringify(articles, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'articles.json';
-    a.click();
-    URL.revokeObjectURL(url);
-    alert(T.saveSuccess + '\n\n' + T.saveError);
     renderStats();
     renderTable();
-    generateSitemap();
-    generateRSS();
+
+    // Generate all 3 files
+    const jsonContent = JSON.stringify(articles, null, 2);
+    const sitemapContent = buildSitemapXML();
+    const rssContent = buildRSSXML();
+
+    // Download sequentially with delays (browsers block simultaneous downloads)
+    showSaveBanner();
+    downloadFile(jsonContent, 'articles.json', 'application/json');
+    setTimeout(() => downloadFile(sitemapContent, 'sitemap.xml', 'application/xml'), 500);
+    setTimeout(() => downloadFile(rssContent, 'rss.xml', 'application/xml'), 1000);
+  }
+
+  /* ── Save banner (non-blocking) ── */
+  function showSaveBanner() {
+    let banner = document.getElementById('save-banner');
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'save-banner';
+      banner.style.cssText = 'position:fixed;top:1rem;right:1rem;z-index:9999;background:#1a7f37;color:#fff;padding:1rem 1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.3);font-size:0.9rem;font-weight:600;max-width:350px;';
+      document.body.appendChild(banner);
+    }
+    banner.innerHTML = '✓ Saved! 3 files downloaded:<br>1. articles.json<br>2. sitemap.xml<br>3. rss.xml<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">Replace them in your project & push to git.</span>';
+    banner.style.display = 'block';
+    setTimeout(() => { banner.style.display = 'none'; }, 8000);
   }
 
   /* ── Dashboard Init ── */
@@ -507,8 +519,8 @@
     input.click();
   }
 
-  /* ── Generate Complete Sitemap (all site pages + articles) ── */
-  function generateSitemap() {
+  /* ── Build Sitemap XML (returns string) ── */
+  function buildSitemapXML() {
     const today = new Date().toISOString().split('T')[0];
     const PAGES = [
       { loc: SITE_URL + '/', lastmod: today, changefreq: 'weekly', priority: '1.0' },
@@ -598,12 +610,11 @@
     });
 
     xml += '</urlset>';
-
-    downloadFile(xml, 'sitemap.xml', 'application/xml');
+    return xml;
   }
 
-  /* ── Generate RSS ── */
-  function generateRSS() {
+  /* ── Build RSS XML (returns string) ── */
+  function buildRSSXML() {
     const today = new Date().toISOString();
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n';
@@ -627,7 +638,7 @@
     });
 
     xml += '  </channel>\n</rss>';
-    downloadFile(xml, 'rss.xml', 'application/xml');
+    return xml;
   }
 
   function downloadFile(content, filename, type) {
