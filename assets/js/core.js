@@ -366,7 +366,57 @@ const SearchModal = (() => {
     'telecommunications': 'الاتصالات',
     'digital': 'رقمي',
     'software': 'برمجيات',
-    'management': 'الإدارة'
+    'management': 'الإدارة',
+    'FTTH': 'FTTH',
+    'FTTx': 'FTTx',
+    'PBX': 'PBX',
+    'LAN': 'LAN',
+    'SQL': 'SQL',
+    'MS Project': 'MS Project',
+    'Power BI': 'Power BI',
+    'MS Word': 'MS Word',
+    'MS PowerPoint': 'MS PowerPoint',
+    'VB.NET': 'VB.NET',
+    'ASP.NET': 'ASP.NET',
+    'HTML/CSS': 'HTML/CSS',
+    'AutoCAD': 'AutoCAD',
+    'MS Visio': 'MS Visio',
+    'Outlook': 'Outlook',
+    'PMO': 'مكتب إدارة المشاريع',
+    'Primavera': 'Primavera',
+    'Excel': 'Excel',
+    'Telecom': 'اتصالات',
+    'ICT': 'تكنولوجيا المعلومات',
+    'Railway Systems': 'أنظمة السكك الحديدية',
+    'Railway': 'سكك حديدية',
+    'Fiber Optic': 'ألياف ضوئية',
+    'External Network': 'الشبكة الخارجية',
+    'Electrical Systems': 'الأنظمة الكهربائية',
+    'Mechanical Systems': 'الأنظمة الميكانيكية',
+    'HVAC': 'تكييف',
+    'Fire Alarm': 'إنذار حريق',
+    'ACUD': 'ACUD (شركة العاصمة الإدارية للتنمية الحضرية)',
+    'Norconsult': 'نوركونسلت',
+    'Siemens AG – Egypt': 'سيمنس – مصر',
+    'MITT Company': 'شركة MITT',
+    'Various (Siemens Clients)': 'عملاء سيمنس المتنوعون',
+    'Smart City / ELV / ICT Infrastructure': 'مدينة ذكية / ELV / بنية تحتية لتكنولوجيا المعلومات',
+    'Telecommunications / FTTH': 'اتصالات / FTTH',
+    'Railway / Telecommunications / Fiber': 'سكك حديدية / اتصالات / ألياف ضوئية',
+    'National Telecommunications / FTTH': 'اتصالات وطنية / FTTH',
+    'Telecommunications / External Network': 'اتصالات / شبكة خارجية',
+    'Telecommunications / Turnkey': 'اتصالات / مشروع متكامل',
+    'Telecommunications / Electrical Engineering': 'اتصالات / هندسة كهربائية',
+    'Telecommunications / General Contracting': 'اتصالات / مقاولات عامة',
+    'Consulting / Infrastructure / ELV': 'استشارات / بنية تحتية / ELV',
+    'ICT / Infrastructure': 'تكنولوجيا المعلومات / بنية تحتية',
+    'Telecommunications / Rail': 'اتصالات / سكك حديدية',
+    'Telecommunications / PMO Consulting': 'اتصالات / استشارات مكتب إدارة المشاريع',
+    'Telecommunications / IT': 'اتصالات / تكنولوجيا المعلومات',
+    'IT / Computer Sales': 'تكنولوجيا المعلومات / مبيعات حاسب',
+    'Hospitality / Engineering': 'ضيافة / هندسة',
+    'Defence / Military': 'دفاع / عسكري',
+    'TODO_VERIFIED': 'غير محدد'
   };
 
   function tr(text) {
@@ -408,12 +458,15 @@ const SearchModal = (() => {
     if (kb.projects) {
       kb.projects.forEach(p => {
         const title = ar ? tr(p.name) : p.name;
+        const arType = tr(p.projectType);
+        const arCountry = tr(p.country);
+        const arClient = tr(p.client || p.employer);
         items.push({
           icon: '📋',
           title: title,
-          subtitle: `${p.projectType} • ${p.country}`,
+          subtitle: ar ? `${arType} • ${arCountry} • ${arClient}` : `${p.projectType} • ${p.country}`,
           url: `${base}projects.html#${p.id}`,
-          tags: [p.name, title, p.client, p.country, tr(p.country), ...(p.technologies || [])].join(' ').toLowerCase()
+          tags: [p.name, title, p.client, p.country, arCountry, arType, arClient, ...(p.technologies || [])].join(' ').toLowerCase()
         });
       });
     }

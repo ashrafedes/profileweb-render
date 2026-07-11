@@ -127,7 +127,7 @@
   <div id="ecms-footer-inject"></div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/i18n.js?v=2"></script><script src="../assets/js/components.js?v=2"></script>
-  <script src="../assets/js/core.js?v=4"></script>
+  <script src="../assets/js/core.js?v=5"></script>
   <script>
     const searchInput = document.getElementById('search-input-page');
     const resultsContainer = document.getElementById('search-results-page');
@@ -249,7 +249,57 @@
       'telecommunications': 'الاتصالات',
       'digital': 'رقمي',
       'software': 'برمجيات',
-      'management': 'الإدارة'
+      'management': 'الإدارة',
+      'FTTH': 'FTTH',
+      'FTTx': 'FTTx',
+      'PBX': 'PBX',
+      'LAN': 'LAN',
+      'SQL': 'SQL',
+      'MS Project': 'MS Project',
+      'Power BI': 'Power BI',
+      'MS Word': 'MS Word',
+      'MS PowerPoint': 'MS PowerPoint',
+      'VB.NET': 'VB.NET',
+      'ASP.NET': 'ASP.NET',
+      'HTML/CSS': 'HTML/CSS',
+      'AutoCAD': 'AutoCAD',
+      'MS Visio': 'MS Visio',
+      'Outlook': 'Outlook',
+      'PMO': 'مكتب إدارة المشاريع',
+      'Primavera': 'Primavera',
+      'Excel': 'Excel',
+      'Telecom': 'اتصالات',
+      'ICT': 'تكنولوجيا المعلومات',
+      'Railway Systems': 'أنظمة السكك الحديدية',
+      'Railway': 'سكك حديدية',
+      'Fiber Optic': 'ألياف ضوئية',
+      'External Network': 'الشبكة الخارجية',
+      'Electrical Systems': 'الأنظمة الكهربائية',
+      'Mechanical Systems': 'الأنظمة الميكانيكية',
+      'HVAC': 'تكييف',
+      'Fire Alarm': 'إنذار حريق',
+      'ACUD': 'ACUD (شركة العاصمة الإدارية للتنمية الحضرية)',
+      'Norconsult': 'نوركونسلت',
+      'Siemens AG – Egypt': 'سيمنس – مصر',
+      'MITT Company': 'شركة MITT',
+      'Various (Siemens Clients)': 'عملاء سيمنس المتنوعون',
+      'Smart City / ELV / ICT Infrastructure': 'مدينة ذكية / ELV / بنية تحتية لتكنولوجيا المعلومات',
+      'Telecommunications / FTTH': 'اتصالات / FTTH',
+      'Railway / Telecommunications / Fiber': 'سكك حديدية / اتصالات / ألياف ضوئية',
+      'National Telecommunications / FTTH': 'اتصالات وطنية / FTTH',
+      'Telecommunications / External Network': 'اتصالات / شبكة خارجية',
+      'Telecommunications / Turnkey': 'اتصالات / مشروع متكامل',
+      'Telecommunications / Electrical Engineering': 'اتصالات / هندسة كهربائية',
+      'Telecommunications / General Contracting': 'اتصالات / مقاولات عامة',
+      'Consulting / Infrastructure / ELV': 'استشارات / بنية تحتية / ELV',
+      'ICT / Infrastructure': 'تكنولوجيا المعلومات / بنية تحتية',
+      'Telecommunications / Rail': 'اتصالات / سكك حديدية',
+      'Telecommunications / PMO Consulting': 'اتصالات / استشارات مكتب إدارة المشاريع',
+      'Telecommunications / IT': 'اتصالات / تكنولوجيا المعلومات',
+      'IT / Computer Sales': 'تكنولوجيا المعلومات / مبيعات حاسب',
+      'Hospitality / Engineering': 'ضيافة / هندسة',
+      'Defence / Military': 'دفاع / عسكري',
+      'TODO_VERIFIED': 'غير محدد'
     };
 
     const TYPE_AR = {
@@ -341,10 +391,12 @@
       projects.forEach(pr => {
         const arName = tr(pr.name);
         const arClient = tr(pr.client || pr.employer);
+        const arType = tr(pr.projectType);
+        const arCountry = tr(pr.country);
         results.push({
           title: arName,
-          subtitle: arClient,
-          body: pr.name + ' ' + arName + ' ' + (pr.client || '') + ' ' + (pr.employer || '') + ' ' + (pr.description || '') + ' ' + (pr.technologies || []).join(' '),
+          subtitle: arType + ' · ' + arCountry + ' · ' + arClient,
+          body: pr.name + ' ' + arName + ' ' + (pr.client || '') + ' ' + (pr.employer || '') + ' ' + (pr.description || '') + ' ' + (pr.technologies || []).join(' ') + ' ' + arType + ' ' + arCountry,
           url: 'projects.html', icon: '📋', type: 'Project'
         });
       });
