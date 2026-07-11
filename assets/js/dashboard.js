@@ -658,12 +658,69 @@
       case 'quote': replacement = `> ${selected || 'quote'}`; break;
       case 'list': replacement = `- ${selected || 'item'}`; break;
       case 'link': replacement = `[${selected || 'text'}](url)`; break;
+      case 'image':
+        triggerContentImageUpload(editorLang);
+        return;
     }
 
     textarea.value = textarea.value.substring(0, start) + replacement + textarea.value.substring(end);
     textarea.focus();
     textarea.setSelectionRange(start, start + replacement.length);
     updatePreview();
+  }
+
+  /* ── Image Upload (converts to base64 data URI) ── */
+  function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function showHeroPreview(dataUrl) {
+    const el = document.getElementById('hero-preview');
+    if (!el) return;
+    if (!dataUrl) { el.innerHTML = ''; return; }
+    el.innerHTML = `<img src="${dataUrl}" style="max-width:200px;max-height:120px;border-radius:6px;object-fit:cover;border:1px solid #30363d;">`;
+  }
+
+  function triggerContentImageUpload(lang) {
+    const input = document.getElementById(`content-file-input-${lang}`);
+    if (!input) return;
+    input.value = '';
+    input.click();
+  }
+
+  async function handleContentImage(file, lang) {
+    if (!file || !file.type.startsWith('image/')) return;
+    if (file.size > 2 * 1024 * 1024) {
+      alert('Image too large. Max 2MB for inline images. Use a URL for larger images.');
+      return;
+    }
+    const dataUrl = await fileToBase64(file);
+    const textarea = document.getElementById(`ed-${lang}-content`);
+    if (!textarea) return;
+    const start = textarea.selectionStart;
+    const alt = file.name.replace(/\.[^.]+$/, '').replace(/[-_]/g, ' ');
+    const md = `\n![${alt}](${dataUrl})\n`;
+    textarea.value = textarea.value.substring(0, start) + md + textarea.value.substring(textarea.selectionEnd);
+    textarea.focus();
+    textarea.setSelectionRange(start, start + md.length);
+    updatePreview();
+  }
+
+  async function handleHeroImage(file) {
+    if (!file || !file.type.startsWith('image/')) return;
+    if (file.size > 2 * 1024 * 1024) {
+      alert('Image too large. Max 2MB for hero images. Use a URL for larger images.');
+      return;
+    }
+    const dataUrl = await fileToBase64(file);
+    const input = document.getElementById('ed-hero-image');
+    if (input) input.value = dataUrl;
+    showHeroPreview(dataUrl);
   }
 
   /* ── Public API ── */
@@ -698,6 +755,38 @@
     document.querySelectorAll('.editor-toolbar button').forEach(btn => {
       btn.addEventListener('click', () => execFormat(btn.dataset.cmd));
     });
+
+    // Hero image upload
+    const btnUploadHero = document.getElementById('btn-upload-hero');
+    const heroFileInput = document.getElementById('hero-file-input');
+    if (btnUploadHero && heroFileInput) {
+      btnUploadHero.addEventListener('click', () => { heroFileInput.value = ''; heroFileInput.click(); });
+      heroFileInput.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files[0]) handleHeroImage(e.target.files[0]);
+      });
+    }
+
+    // Content image upload (EN)
+    const contentInputEn = document.getElementById('content-file-input-en');
+    if (contentInputEn) {
+      contentInputEn.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files[0]) handleContentImage(e.target.files[0], 'en');
+      });
+    }
+
+    // Content image upload (AR)
+    const contentInputAr = document.getElementById('content-file-input-ar');
+    if (contentInputAr) {
+      contentInputAr.addEventListener('change', (e) => {
+        if (e.target.files && e.target.files[0]) handleContentImage(e.target.files[0], 'ar');
+      });
+    }
+
+    // Hero preview on manual URL input
+    const heroInput = document.getElementById('ed-hero-image');
+    if (heroInput) {
+      heroInput.addEventListener('input', () => showHeroPreview(heroInput.value));
+    }
 
     // Live preview on input
     document.addEventListener('input', (e) => {

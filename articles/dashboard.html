@@ -141,8 +141,13 @@
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1rem;">
           <div class="editor-field">
-            <label>Hero Image URL</label>
-            <input type="text" id="ed-hero-image" placeholder="/assets/images/articles/my-article.webp">
+            <label>Hero Image</label>
+            <div style="display:flex;gap:0.5rem;">
+              <input type="text" id="ed-hero-image" placeholder="/assets/images/articles/my-article.webp" style="flex:1;">
+              <button type="button" class="dash-btn" id="btn-upload-hero" style="white-space:nowrap;">📁 Upload</button>
+            </div>
+            <div id="hero-preview" style="margin-top:0.5rem;"></div>
+            <input type="file" id="hero-file-input" accept="image/*" style="display:none;">
           </div>
           <div class="editor-field">
             <label>Publish Date</label>
@@ -188,8 +193,10 @@
               <button data-cmd="quote">❝</button>
               <button data-cmd="list">• List</button>
               <button data-cmd="link">🔗 Link</button>
+              <button data-cmd="image">🖼 Image</button>
             </div>
             <textarea id="ed-en-content" placeholder="Write your article content in Markdown…"></textarea>
+            <input type="file" id="content-file-input-en" accept="image/*" style="display:none;">
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
             <div class="editor-field">
@@ -228,8 +235,10 @@
               <button data-cmd="quote">❝</button>
               <button data-cmd="list">• قائمة</button>
               <button data-cmd="link">🔗 رابط</button>
+              <button data-cmd="image">🖼 صورة</button>
             </div>
             <textarea id="ed-ar-content" placeholder="اكتب محتوى المقال…" style="font-family:'Cairo',sans-serif;text-align:right;" dir="rtl"></textarea>
+            <input type="file" id="content-file-input-ar" accept="image/*" style="display:none;">
           </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
             <div class="editor-field">
@@ -259,6 +268,6 @@
   </div>
 
   <script src="../config.js"></script>
-  <script src="../assets/js/dashboard.js?v=1"></script>
+  <script src="../assets/js/dashboard.js?v=2"></script>
 </body>
 </html>
