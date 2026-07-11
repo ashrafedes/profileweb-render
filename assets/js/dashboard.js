@@ -109,33 +109,68 @@
     }
   }
 
-  /* ── Save Articles (client-side; downloads 3 files) ── */
-  function saveArticles() {
+  /* ── File handles for direct write (File System Access API) ── */
+  let fileHandles = { json: null, sitemap: null, rss: null };
+  let useDirectWrite = ('showSaveFilePicker' in window);
+
+  /* ── Save Articles — writes directly to disk if supported ── */
+  async function saveArticles() {
     renderStats();
     renderTable();
 
-    // Generate all 3 files
     const jsonContent = JSON.stringify(articles, null, 2);
     const sitemapContent = buildSitemapXML();
     const rssContent = buildRSSXML();
 
-    // Download sequentially with delays (browsers block simultaneous downloads)
-    showSaveBanner();
+    if (useDirectWrite) {
+      try {
+        await writeDirectly('json', jsonContent, 'articles.json', 'application/json');
+        await writeDirectly('sitemap', sitemapContent, 'sitemap.xml', 'application/xml');
+        await writeDirectly('rss', rssContent, 'rss.xml', 'application/xml');
+        showSaveBanner(true);
+        return;
+      } catch (e) {
+        console.warn('Direct write failed, falling back to download:', e);
+        useDirectWrite = false;
+      }
+    }
+
+    // Fallback: download files
+    showSaveBanner(false);
     downloadFile(jsonContent, 'articles.json', 'application/json');
     setTimeout(() => downloadFile(sitemapContent, 'sitemap.xml', 'application/xml'), 500);
     setTimeout(() => downloadFile(rssContent, 'rss.xml', 'application/xml'), 1000);
   }
 
+  /* ── Write directly to file on disk (File System Access API) ── */
+  async function writeDirectly(key, content, suggestedName, mimeType) {
+    if (!fileHandles[key]) {
+      fileHandles[key] = await window.showSaveFilePicker({
+        suggestedName: suggestedName,
+        types: [{ description: suggestedName, accept: { [mimeType]: [suggestedName.endsWith('.xml') ? '.xml' : '.json'] } }]
+      });
+    }
+    const writable = await fileHandles[key].createWritable();
+    await writable.write(content);
+    await writable.close();
+  }
+
   /* ── Save banner (non-blocking) ── */
-  function showSaveBanner() {
+  function showSaveBanner(direct) {
     let banner = document.getElementById('save-banner');
     if (!banner) {
       banner = document.createElement('div');
       banner.id = 'save-banner';
-      banner.style.cssText = 'position:fixed;top:1rem;right:1rem;z-index:9999;background:#1a7f37;color:#fff;padding:1rem 1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.3);font-size:0.9rem;font-weight:600;max-width:350px;';
+      banner.style.cssText = 'position:fixed;top:1rem;right:1rem;z-index:9999;padding:1rem 1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.3);font-size:0.9rem;font-weight:600;max-width:380px;';
       document.body.appendChild(banner);
     }
-    banner.innerHTML = '✓ Saved! 3 files downloaded:<br>1. articles.json<br>2. sitemap.xml<br>3. rss.xml<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">Replace them in your project & push to git.</span>';
+    if (direct) {
+      banner.style.background = '#1a7f37';
+      banner.innerHTML = '✓ Saved directly to disk!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml updated in place. Push to git when ready.</span>';
+    } else {
+      banner.style.background = '#1a7f37';
+      banner.innerHTML = '✓ Saved! 3 files downloaded:<br>1. articles.json<br>2. sitemap.xml<br>3. rss.xml<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">Replace them in your project & push to git.</span>';
+    }
     banner.style.display = 'block';
     setTimeout(() => { banner.style.display = 'none'; }, 8000);
   }
@@ -268,7 +303,7 @@
   }
 
   /* ── Save Article ── */
-  function saveArticle(publish) {
+  async function saveArticle(publish) {
     const slug = getVal('ed-slug') || slugify(getVal('ed-en-title'));
     const article = {
       id: editingId || getNextId(),
@@ -293,7 +328,7 @@
       articles.push(article);
     }
 
-    saveArticles();
+    await saveArticles();
     closeEditor();
   }
 
