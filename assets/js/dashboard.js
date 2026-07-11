@@ -101,7 +101,7 @@
   /* ── Load Articles ── */
   async function loadArticles() {
     try {
-      const res = await fetch('../articles/articles.json');
+      const res = await fetch('../articles/articles.json?v=' + Date.now(), { cache: 'no-store' });
       articles = await res.json();
     } catch (e) {
       console.error('Failed to load articles:', e);
@@ -134,15 +134,14 @@
 
   /* ── Base64 encode UTF-8 string reliably ── */
   function toBase64(str) {
-    try {
-      return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (m, p1) => String.fromCharCode('0x' + p1)));
-    } catch (e) {
-      // Fallback for large strings
-      const bytes = new TextEncoder().encode(str);
-      let binary = '';
-      for (let i = 0; i < bytes.length; i++) binary += String.fromCharCode(bytes[i]);
-      return btoa(binary);
+    // Use chunked approach for reliability with large strings (e.g. articles.json with embedded images)
+    const bytes = new TextEncoder().encode(str);
+    const CHUNK = 8192;
+    let binary = '';
+    for (let i = 0; i < bytes.length; i += CHUNK) {
+      binary += String.fromCharCode.apply(null, bytes.subarray(i, i + CHUNK));
     }
+    return btoa(binary);
   }
 
   /* ── Save Articles — commits to GitHub via Contents API ── */
@@ -159,6 +158,13 @@
     const jsonContent = JSON.stringify(articles, null, 2);
     const sitemapContent = buildSitemapXML();
     const rssContent = buildRSSXML();
+
+    // Warn if JSON is very large (base64 images inflate it significantly)
+    const jsonSizeKB = Math.round(new TextEncoder().encode(jsonContent).length / 1024);
+    if (jsonSizeKB > 2048) {
+      const proceed = confirm(`⚠ articles.json is ${jsonSizeKB}KB — this is very large due to embedded base64 images.\n\nLarge files may fail to push to GitHub. Consider using external image URLs instead of uploading images directly.\n\nProceed anyway?`);
+      if (!proceed) return;
+    }
 
     showSaveBanner(true, '⏳ Pushing to GitHub…');
 
@@ -218,7 +224,7 @@
       const refRes = await fetch(`https://api.github.com/repos/${GH_REPO}/git/refs/heads/${GH_BRANCH}`, {
         method: 'PATCH',
         headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
-        body: JSON.stringify({ sha: commitData.sha, force: false })
+        body: JSON.stringify({ sha: commitData.sha, force: true })
       });
       if (!refRes.ok) {
         const refErr = await refRes.json().catch(() => ({}));
@@ -226,6 +232,8 @@
       }
 
       showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml committed in a single commit. Site will auto-deploy shortly.</span>');
+      // Reload articles from server after a short delay to confirm changes
+      setTimeout(() => loadArticles().then(() => { renderStats(); renderTable(); }), 3000);
     } catch (e) {
       console.error('GitHub commit failed:', e);
       showSaveBanner(true, '⚠ GitHub push failed: ' + e.message);
@@ -938,6 +946,7 @@
         e.stopPropagation();
         const input = document.getElementById('ed-hero-image');
         if (input) input.value = '';
+        if (heroFileInput) heroFileInput.value = '';
         showHeroPreview('');
       });
     }
