@@ -800,7 +800,35 @@
     updatePreview();
   }
 
-  /* ── Image Upload (converts to base64 data URI) ── */
+  /* ── Image Upload (compresses then converts to base64 data URI) ── */
+  function compressImage(file, maxWidth, quality) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const img = new Image();
+        img.onload = () => {
+          const canvas = document.createElement('canvas');
+          let w = img.width;
+          let h = img.height;
+          if (w > maxWidth) {
+            h = Math.round(h * (maxWidth / w));
+            w = maxWidth;
+          }
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          const dataUrl = canvas.toDataURL('image/webp', quality);
+          resolve(dataUrl);
+        };
+        img.onerror = reject;
+        img.src = reader.result;
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
   function fileToBase64(file) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -826,11 +854,11 @@
 
   async function handleContentImage(file, lang) {
     if (!file || !file.type.startsWith('image/')) return;
-    if (file.size > 2 * 1024 * 1024) {
-      alert('Image too large. Max 2MB for inline images. Use a URL for larger images.');
+    if (file.size > 5 * 1024 * 1024) {
+      alert('Image too large. Max 5MB for inline images.');
       return;
     }
-    const dataUrl = await fileToBase64(file);
+    const dataUrl = await compressImage(file, 1000, 0.75);
     const textarea = document.getElementById(`ed-${lang}-content`);
     if (!textarea) return;
     const start = textarea.selectionStart;
@@ -844,11 +872,11 @@
 
   async function handleHeroImage(file) {
     if (!file || !file.type.startsWith('image/')) return;
-    if (file.size > 2 * 1024 * 1024) {
-      alert('Image too large. Max 2MB for hero images. Use a URL for larger images.');
+    if (file.size > 5 * 1024 * 1024) {
+      alert('Image too large. Max 5MB for hero images.');
       return;
     }
-    const dataUrl = await fileToBase64(file);
+    const dataUrl = await compressImage(file, 1200, 0.8);
     const input = document.getElementById('ed-hero-image');
     if (input) input.value = dataUrl;
     showHeroPreview(dataUrl);
