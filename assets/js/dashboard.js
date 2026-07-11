@@ -110,9 +110,27 @@
   }
 
   /* ── GitHub config ── */
-  const GH_REPO = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.GITHUB_REPO) || '';
+  const GH_REPO = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.GITHUB_REPO) || 'ashrafedes/profileweb-render';
   const GH_BRANCH = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.GITHUB_BRANCH) || 'main';
-  const GH_TOKEN = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.GITHUB_TOKEN) || '';
+
+  /* ── Get GitHub token from config or localStorage ── */
+  function getGHToken() {
+    const cfgToken = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.GITHUB_TOKEN) || '';
+    if (cfgToken) return cfgToken;
+    return localStorage.getItem('gh_token') || '';
+  }
+
+  /* ── Prompt for GitHub token if not set ── */
+  function ensureGHToken() {
+    let token = getGHToken();
+    if (token) return token;
+    token = prompt('Enter your GitHub Personal Access Token (repo scope):\n\nGet one at: https://github.com/settings/tokens\nClick "Generate new token (classic)" and check "repo" scope');
+    if (token && token.trim()) {
+      token = token.trim();
+      localStorage.setItem('gh_token', token);
+    }
+    return token || '';
+  }
 
   /* ── Base64 encode UTF-8 string reliably ── */
   function toBase64(str) {
@@ -132,8 +150,9 @@
     renderStats();
     renderTable();
 
+    const GH_TOKEN = ensureGHToken();
     if (!GH_TOKEN) {
-      showSaveBanner(true, '⚠ No GitHub token set.<br><span style="font-weight:400;font-size:0.8rem;">Add GITHUB_TOKEN in config.js with a Personal Access Token (repo scope).</span>');
+      showSaveBanner(true, '⚠ No GitHub token. Click Publish again and enter your token when prompted.');
       return;
     }
 
