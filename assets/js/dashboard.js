@@ -177,7 +177,7 @@
       if (!branchRes.ok) throw new Error('Cannot read branch: ' + branchRes.statusText);
       const branchData = await branchRes.json();
       const latestCommitSha = branchData.commit.sha;
-      const baseTreeSha = branchData.commit.tree.sha;
+      const baseTreeSha = branchData.commit.commit.tree.sha;
 
       // Create blobs for all files
       const treeItems = [];
