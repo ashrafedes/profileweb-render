@@ -173,39 +173,50 @@
     let lastError = '';
 
     for (const f of files) {
-      try {
-        // Get current file SHA (needed to update existing file)
-        let sha = null;
-        const getRes = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${f.path}?ref=${GH_BRANCH}`, {
-          headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }
-        });
-        if (getRes.ok) {
-          const getData = await getRes.json();
-          sha = getData.sha;
-        }
+      let success = false;
+      for (let attempt = 0; attempt < 3 && !success; attempt++) {
+        try {
+          // Get current file SHA (needed to update existing file)
+          let sha = null;
+          const getRes = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${f.path}?ref=${GH_BRANCH}`, {
+            headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }
+          });
+          if (getRes.ok) {
+            const getData = await getRes.json();
+            sha = getData.sha;
+          }
 
-        // Update/create file via Contents API
-        const putRes = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${f.path}`, {
-          method: 'PUT',
-          headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            message: `Dashboard: update ${f.path} (${now})`,
-            content: toBase64(f.content),
-            branch: GH_BRANCH,
-            sha: sha
-          })
-        });
+          // Update/create file via Contents API
+          const putRes = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${f.path}`, {
+            method: 'PUT',
+            headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              message: `Dashboard: update ${f.path} (${now})`,
+              content: toBase64(f.content),
+              branch: GH_BRANCH,
+              sha: sha
+            })
+          });
 
-        if (putRes.ok) {
-          okCount++;
-        } else {
-          const errData = await putRes.json().catch(() => ({}));
-          lastError = `${f.path}: ${errData.message || putRes.statusText}`;
-          console.error('GitHub API error for', f.path, errData);
+          if (putRes.ok) {
+            success = true;
+            okCount++;
+          } else if (putRes.status === 409 || putRes.status === 422) {
+            // SHA conflict — branch moved since we fetched SHA. Wait and retry.
+            const errData = await putRes.json().catch(() => ({}));
+            lastError = `${f.path}: ${errData.message || putRes.statusText}`;
+            if (attempt < 2) await new Promise(r => setTimeout(r, 1000));
+          } else {
+            const errData = await putRes.json().catch(() => ({}));
+            lastError = `${f.path}: ${errData.message || putRes.statusText}`;
+            console.error('GitHub API error for', f.path, errData);
+            break; // Non-retryable error
+          }
+        } catch (e) {
+          lastError = `${f.path}: ${e.message}`;
+          console.error('Upload failed for', f.path, e);
+          break;
         }
-      } catch (e) {
-        lastError = `${f.path}: ${e.message}`;
-        console.error('Upload failed for', f.path, e);
       }
     }
 
