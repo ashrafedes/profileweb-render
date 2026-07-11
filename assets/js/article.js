@@ -14,7 +14,9 @@
 
   // Detect subdirectory: /en/articles/ or /ar/articles/ vs root /articles/
   const _path = window.location.pathname;
+  const _inSub = /\/(en|ar)\/articles\//.test(_path);
   const _subLang = _path.match(/\/(en|ar)\/articles\//);
+  const ASSET_BASE = _inSub ? '../../' : '../';
   let lang = (_subLang && _subLang[1]) || getParam('lang') || 'en';
   if (lang !== 'ar') lang = 'en';
   const IS_ARABIC = lang === 'ar';
@@ -249,7 +251,7 @@
     if (!slug) { showNotFound(); return; }
 
     try {
-      const res = await fetch(SITE_URL + '/articles/articles.json');
+      const res = await fetch(ASSET_BASE + 'articles/articles.json');
       const articles = await res.json();
       const article = articles.find(a => a.slug === slug);
 
