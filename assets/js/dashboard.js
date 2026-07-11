@@ -113,6 +113,26 @@
   let dirHandle = null;
   let useDirectWrite = ('showDirectoryPicker' in window);
 
+  /* ── Pre-link project folder (call from user gesture) ── */
+  async function linkProjectFolder() {
+    if (!('showDirectoryPicker' in window)) {
+      alert('Your browser does not support direct file writing.\nUse Chrome or Edge to enable server-side updates without downloads.');
+      return false;
+    }
+    try {
+      dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+      useDirectWrite = true;
+      showSaveBanner(true, '✓ Project folder linked! Future saves will write directly.');
+      return true;
+    } catch (e) {
+      if (e.name !== 'AbortError') {
+        console.error('Folder pick failed:', e);
+        alert('Could not link folder: ' + e.message);
+      }
+      return false;
+    }
+  }
+
   /* ── Save Articles — writes directly to disk if supported ── */
   async function saveArticles() {
     renderStats();
@@ -125,17 +145,24 @@
     if (useDirectWrite) {
       try {
         if (!dirHandle) {
-          showLinkBanner();
+          // Must pick folder now — this is called from a user gesture chain
           dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
         }
+        if (!dirHandle) throw new Error('No folder selected');
+
+        showSaveBanner(true, '⏳ Writing files to disk…');
         await writeToFile(dirHandle, 'articles/articles.json', jsonContent);
         await writeToFile(dirHandle, 'sitemap.xml', sitemapContent);
         await writeToFile(dirHandle, 'rss.xml', rssContent);
-        showSaveBanner(true);
+        showSaveBanner(true, '✓ Saved directly to disk!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml updated. Push to git when ready.</span>');
         return;
       } catch (e) {
-        console.warn('Direct write failed, falling back to download:', e);
-        if (e.name !== 'AbortError') useDirectWrite = false;
+        console.warn('Direct write failed:', e.name, e.message);
+        if (e.name === 'AbortError') return; // User cancelled — don't download
+        if (e.name === 'SecurityError') {
+          alert('Browser blocked direct file access. Make sure you are using Chrome or Edge on http://localhost');
+        }
+        useDirectWrite = false;
       }
     }
 
@@ -159,8 +186,8 @@
     await writable.close();
   }
 
-  /* ── Banner asking user to pick project folder ── */
-  function showLinkBanner() {
+  /* ── Save banner (non-blocking) ── */
+  function showSaveBanner(direct, msg) {
     let banner = document.getElementById('save-banner');
     if (!banner) {
       banner = document.createElement('div');
@@ -168,25 +195,12 @@
       banner.style.cssText = 'position:fixed;top:1rem;right:1rem;z-index:9999;padding:1rem 1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.3);font-size:0.9rem;font-weight:600;max-width:380px;color:#fff;';
       document.body.appendChild(banner);
     }
-    banner.style.background = '#0969da';
-    banner.innerHTML = '📂 Please select your project root folder.<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">This is needed only once. Future saves will be automatic.</span>';
-    banner.style.display = 'block';
-  }
-
-  /* ── Save banner (non-blocking) ── */
-  function showSaveBanner(direct) {
-    let banner = document.getElementById('save-banner');
-    if (!banner) {
-      banner = document.createElement('div');
-      banner.id = 'save-banner';
-      banner.style.cssText = 'position:fixed;top:1rem;right:1rem;z-index:9999;padding:1rem 1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.3);font-size:0.9rem;font-weight:600;max-width:380px;';
-      document.body.appendChild(banner);
-    }
-    if (direct) {
-      banner.style.background = '#1a7f37';
-      banner.innerHTML = '✓ Saved directly to disk!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml updated in place. Push to git when ready.</span>';
+    banner.style.background = '#1a7f37';
+    if (msg) {
+      banner.innerHTML = msg;
+    } else if (direct) {
+      banner.innerHTML = '✓ Saved directly to disk!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml updated. Push to git when ready.</span>';
     } else {
-      banner.style.background = '#1a7f37';
       banner.innerHTML = '✓ Saved! 3 files downloaded:<br>1. articles.json<br>2. sitemap.xml<br>3. rss.xml<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">Replace them in your project & push to git.</span>';
     }
     banner.style.display = 'block';
@@ -202,6 +216,8 @@
     document.getElementById('btn-new-article').addEventListener('click', () => openEditor(null));
     document.getElementById('btn-export').addEventListener('click', exportJSON);
     document.getElementById('btn-import').addEventListener('click', importJSON);
+    const btnLink = document.getElementById('btn-link-folder');
+    if (btnLink) btnLink.addEventListener('click', () => linkProjectFolder());
   }
 
   /* ── Render Stats ── */
