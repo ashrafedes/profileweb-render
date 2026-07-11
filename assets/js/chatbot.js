@@ -88,7 +88,7 @@ ${CV_CONTEXT}
 - InfraFlow: منصة تتبع مشاريع الاتصالات/FTTH للمؤسسات.
 
 قواعد الرد:
-0. مهم جداً: لا تكتب أي تفكير داخلي أو تحليل أو ملاحظات لنفسك. ابدأ الرد مباشرة بالإجابة المطلوبة فقط.
+0. مهم جداً: لا تكتب أي تفكير داخلي أو تحليل أو ملاحظات لنفسك. لا تبدأ بـ "حسناً" أو "دعني" أو أي تمهيد. ابدأ الرد مباشرة بالإجابة المطلوبة فقط. لا تستخدم علامات  أو  أو أي وسوم تفكير.
 1. رد بلغة عربية احترافية وواضحة.
 2. كن موجزاً ومباشراً (3-5 جمل عادةً).
 3. اعرض خبرة المهندس أشرف بشكل طبيعي عند الاقتراب.
@@ -105,7 +105,7 @@ Active Software (inject markdown links when relevant):
 - Petty Cash SaaS System: [Live System](https://pattycashsystem.web.app/) | [Marketing Page](https://pettycash-marketing.web.app/)
 - InfraFlow: Enterprise telecom/FTTH tracking platform.
 
-CRITICAL: Do NOT output any internal thinking, reasoning, analysis, or notes to yourself. Start your response directly with the answer only.
+CRITICAL: Do NOT output any internal thinking, reasoning, analysis, or notes to yourself. Do NOT start with "Okay", "Let me", "Well", or any preamble. Start your response directly with the answer only. Do NOT use  or  tags or any thinking markers.
 
 Response Rules:
 1. Respond in clear, professional English.
@@ -354,29 +354,68 @@ Response Rules:
   // ── Clean reasoning models' internal thinking from output ──
   function cleanReply(text) {
     if (!text) return '';
-    // Remove DeepSeek R1 style <thinking>...</thinking> blocks
+
+    // 1. Remove XML-style thinking tags: <thinking>...</thinking>, <think>...</think>, etc.
     text = text.replace(/<thinking>[\s\S]*?<\/thinking>/gi, '');
-    // Remove markdown code fences with "thinking" label
-    text = text.replace(/```thinking\s*[\s\S]*?```/gi, '');
-    // Remove <think>...</think> blocks (some models use this)
     text = text.replace(/<think>[\s\S]*?<\/think>/gi, '');
-    // Remove visible "Reasoning:" or "Thinking:" preamble lines
-    text = text.replace(/^\s*(Reasoning|Thinking|Reflection|Thought process)[:\s]+/im, '');
-    // Remove untagged reasoning: starts with patterns like "Okay, the user..." or "Let me check..."
-    // These typically appear at the start as internal monologue before the actual answer
-    text = text.replace(/^["']?(Okay|Let me|Let's|Alright|Well|Now|So|Looking at|Based on|I should|I need|The user|This user|First,? let|Let me check|Let me look|Hmm)[^\n]*(?:\n(?:[^a-zA-Z\n]|[A-Z][^\n]*)){0,20}/i, '');
-    // Remove quoted reasoning blocks at the start
+    text = text.replace(/<analysis>[\s\S]*?<\/analysis>/gi, '');
+    text = text.replace(/<reasoning>[\s\S]*?<\/reasoning>/gi, '');
+    text = text.replace(/<reflection>[\s\S]*?<\/reflection>/gi, '');
+
+    // 2. Remove unclosed thinking tags (model forgot to close) — strip to end
+    text = text.replace(/<thinking>[\s\S]*$/gi, '');
+    text = text.replace(/<think>[\s\S]*$/gi, '');
+
+    // 3. Remove markdown code fences with thinking/reasoning labels
+    text = text.replace(/```(?:thinking|reasoning|analysis|reflection)\s*[\s\S]*?```/gi, '');
+
+    // 4. Remove visible "Reasoning:" or "Thinking:" preamble blocks
+    text = text.replace(/^\s*(Reasoning|Thinking|Reflection|Thought process|Internal monologue)[:\s]*[\s\S]*?(?=\n\n|$)/im, '');
+
+    // 5. Remove untagged reasoning at the start — internal monologue patterns
+    text = text.replace(/^["']?(Okay|Let me|Let's|Alright|Well,? now|So,? let|Now let|Looking at|Based on the|I should|I need to|The user|This user|First,? let me|Let me check|Let me look|Hmm,? let|Alright,? so|So,? the user|The visitor|I'll start|Let me think|Let me analyze|Let me consider|To answer this|To respond to this)[^\n]*(?:\n(?:[^a-zA-Z\n]|[A-Z][^\n]*|[\u0600-\u06FF][^\n]*)){0,30}/i, '');
+
+    // 6. Remove quoted reasoning blocks at the start
     text = text.replace(/^["'][\s\S]*?["']\s*\n/i, '');
-    // If text still starts with reasoning-like sentence (no Arabic when expected, or internal monologue)
-    // Strip everything before the first Arabic or proper English answer line
-    if (IS_ARABIC) {
-      // Find first line that starts with Arabic text
-      const arabicMatch = text.match(/[\u0600-\u06FF][^\n]*/);
-      if (arabicMatch && text.indexOf(arabicMatch[0]) > 50) {
-        text = text.substring(text.indexOf(arabicMatch[0]));
+
+    // 7. Remove step-by-step reasoning blocks (numbered list of reasoning steps)
+    text = text.replace(/^(Step \d+|\d+\.)\s+(First|Let me|I need|I should|The user|Okay|Now|So|Looking|Based|To answer|The question)[^\n]*/im, '');
+
+    // 8. Line-by-line scan: strip leading reasoning lines, keep first real answer line
+    var lines = text.split('\n');
+    var startIdx = -1;
+    for (var li = 0; li < lines.length; li++) {
+      var line = lines[li].trim();
+      if (line.length < 3) continue;
+      // Check if line looks like reasoning/internal monologue
+      var isReasoning = /^(Okay|Let me|Let's|Alright|Well,? now|So,? let|Now let|Looking at|Based on the|I should|I need to|The user|This user|First,? let me|Let me check|Let me look|Hmm,? let|Alright,? so|So,? the user|The visitor|I'll start|Let me think|Let me analyze|Let me consider|To answer this|To respond to this|Step \d+|\d+\.\s|Reasoning:|Thinking:|Reflection:)/i.test(line);
+      // Arabic reasoning openers
+      var isArReasoning = /^(حسنا|دعني|حسناً|إذن|أولاً|الآن|لذا|بناء على|يجب أن|أحتاج إلى|المستخدم|الزائر|للإجابة|لتحليل|بما أن)/.test(line);
+      if (!isReasoning && !isArReasoning) {
+        startIdx = li;
+        break;
       }
     }
-    // Trim stray whitespace
+    if (startIdx > 0) {
+      text = lines.slice(startIdx).join('\n');
+    }
+
+    // 9. For Arabic pages, also strip everything before first substantial Arabic line
+    if (IS_ARABIC) {
+      var arLines = text.split('\n');
+      var arStart = -1;
+      for (var ai = 0; ai < arLines.length; ai++) {
+        var arLine = arLines[ai].trim();
+        if (/^[\u0600-\u06FF]/.test(arLine) && arLine.split(/\s+/).length >= 2) {
+          arStart = ai;
+          break;
+        }
+      }
+      if (arStart > 0) {
+        text = arLines.slice(arStart).join('\n');
+      }
+    }
+
     return text.trim();
   }
 
@@ -420,7 +459,8 @@ Response Rules:
             model: model,
             messages: messages,
             max_tokens: 600,
-            temperature: 0.7
+            temperature: 0.7,
+            reasoning: { effort: 'none' }
           })
         });
 
@@ -431,9 +471,15 @@ Response Rules:
         if (!res.ok) throw new Error('API error: ' + res.status);
 
         const data = await res.json();
-        reply = data.choices && data.choices[0] && data.choices[0].message
-          ? data.choices[0].message.content
-          : UI.error;
+        if (data.choices && data.choices[0] && data.choices[0].message) {
+          reply = data.choices[0].message.content || '';
+          // Some models return reasoning in a separate field — discard it
+          if (data.choices[0].message.reasoning) {
+            // reasoning is separate, content is the answer — nothing to do
+          }
+        } else {
+          reply = UI.error;
+        }
         break;
       } catch (err) {
         lastError = err;
