@@ -100,6 +100,12 @@
     // Inline code
     html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
 
+    // Images — must be before links
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">');
+
+    // Links
+    html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+
     // Lists
     html = html.replace(/^(\d+)\. (.+)$/gm, '<li>$2</li>');
     html = html.replace(/^- (.+)$/gm, '<li>$1</li>');
@@ -109,7 +115,7 @@
     html = html.split('\n').map(line => {
       const t = line.trim();
       if (!t) return '';
-      if (/^<(h2|h3|h4|ul|ol|pre|blockquote|table|div|li)/.test(t)) return t;
+      if (/^<(h2|h3|h4|ul|ol|pre|blockquote|table|div|li|img)/.test(t)) return t;
       return '<p>' + t + '</p>';
     }).join('\n');
 
