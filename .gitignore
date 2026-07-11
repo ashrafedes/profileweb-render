@@ -16,3 +16,4 @@ Thumbs.db
 
 # API keys (do not commit)
 assets/js/chatbot-config.js
+config.js
