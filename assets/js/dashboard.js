@@ -101,7 +101,7 @@
   /* ── Load Articles ── */
   async function loadArticles() {
     try {
-      const res = await fetch(SITE_URL + JSON_PATH);
+      const res = await fetch('../articles/articles.json');
       articles = await res.json();
     } catch (e) {
       console.error('Failed to load articles:', e);
