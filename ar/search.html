@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search – Ashraf El Desoky, PMP® | ECMS Global Search</title>
-  <meta name="description" content="Search across all career data of Ashraf El Desoky – find skills, projects, companies, certifications, achievements and more.">
+  <title>البحث – أشرف الدسوقي، PMP® | البحث الشامل</title>
+  <meta name="description" content="ابحث في جميع بيانات المسيرة المهنية لأشرف الدسوقي – اوجد المهارات والمشاريع والشركات والشهادات والإنجازات والمزيد.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ashraf-eldesoky.onrender.com/search.html">
   <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
@@ -21,32 +21,32 @@
     <div class="page-header">
       <div class="container">
         <nav aria-label="Breadcrumb" class="breadcrumb">
-          <a href="index.html">Dashboard</a><span class="breadcrumb-sep">›</span>
-          <span class="current">Search</span>
+          <a href="index.html">الرئيسية</a><span class="breadcrumb-sep">›</span>
+          <span class="current">البحث</span>
         </nav>
         <div class="page-header-inner">
           <div class="page-header-icon">🔍</div>
           <div>
-            <h1>Global Search</h1>
-            <p>Search across all career data, skills, projects, companies and certifications</p>
+            <h1>البحث الشامل</h1>
+            <p>ابحث في جميع بيانات المسيرة والمهارات والمشاريع والشركات والشهادات</p>
           </div>
         </div>
       </div>
     </div>
 
-    <section class="section" aria-label="Global search">
+    <section class="section" aria-label="البحث الشامل">
       <div class="container" style="max-width:860px;">
 
         <!-- Search Input -->
         <div class="reveal" style="margin-bottom:2.5rem;">
           <div style="position:relative;">
-            <label for="search-input-page" class="visually-hidden">Search career knowledge base</label>
+            <label for="search-input-page" class="visually-hidden">ابحث في قاعدة المعرفة المهنية</label>
             <input
               type="search"
               id="search-input-page"
-              placeholder="Search skills, companies, projects, certifications…"
+              placeholder="ابحث في المهارات، الشركات، المشاريع، الشهادات…"
               autocomplete="off"
-              aria-label="Search career data"
+              aria-label="ابحث في بيانات المسيرة"
               style="width:100%;padding:1rem 1rem 1rem 3.25rem;border:2px solid var(--border);border-radius:var(--radius-lg);font-size:1.05rem;background:var(--bg-card);color:var(--text);transition:var(--transition);font-family:var(--font);"
               aria-controls="search-results-page"
               aria-autocomplete="list"
@@ -58,61 +58,64 @@
 
         <!-- Suggested Searches -->
         <div class="reveal" id="search-suggestions-page" style="margin-bottom:2.5rem;">
-          <h3 style="font-size:0.88rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1rem;">Suggested Searches</h3>
+          <h3 style="font-size:0.88rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1rem;">عمليات بحث مقترحة</h3>
           <div style="display:flex;gap:0.5rem;flex-wrap:wrap;">
             <button class="tag tag-primary" onclick="doSearch('FTTH')" style="cursor:pointer;border:none;">FTTH</button>
             <button class="tag tag-primary" onclick="doSearch('PMO')" style="cursor:pointer;border:none;">PMO</button>
             <button class="tag tag-primary" onclick="doSearch('STC')" style="cursor:pointer;border:none;">STC</button>
             <button class="tag tag-primary" onclick="doSearch('Primavera')" style="cursor:pointer;border:none;">Primavera</button>
             <button class="tag tag-primary" onclick="doSearch('Power BI')" style="cursor:pointer;border:none;">Power BI</button>
-            <button class="tag tag-primary" onclick="doSearch('Siemens')" style="cursor:pointer;border:none;">Siemens</button>
-            <button class="tag tag-primary" onclick="doSearch('Olympic')" style="cursor:pointer;border:none;">Olympic City</button>
-            <button class="tag tag-primary" onclick="doSearch('Saudi Arabia')" style="cursor:pointer;border:none;">Saudi Arabia</button>
+            <button class="tag tag-primary" onclick="doSearch('سيمنس')" style="cursor:pointer;border:none;">سيمنس</button>
+            <button class="tag tag-primary" onclick="doSearch('مدينة اولمبية')" style="cursor:pointer;border:none;">المدينة الأولمبية</button>
+            <button class="tag tag-primary" onclick="doSearch('السعودية')" style="cursor:pointer;border:none;">السعودية</button>
             <button class="tag tag-primary" onclick="doSearch('PMP')" style="cursor:pointer;border:none;">PMP</button>
             <button class="tag tag-primary" onclick="doSearch('ERP')" style="cursor:pointer;border:none;">ERP</button>
-            <button class="tag tag-primary" onclick="doSearch('Fiber')" style="cursor:pointer;border:none;">Fiber Optic</button>
+            <button class="tag tag-primary" onclick="doSearch('الياف ضوئية')" style="cursor:pointer;border:none;">ألياف ضوئية</button>
             <button class="tag tag-primary" onclick="doSearch('OSP')" style="cursor:pointer;border:none;">OSP</button>
+            <button class="tag tag-primary" onclick="doSearch('إدارة مشاريع')" style="cursor:pointer;border:none;">إدارة مشاريع</button>
+            <button class="tag tag-primary" onclick="doSearch('اتصالات')" style="cursor:pointer;border:none;">اتصالات</button>
+            <button class="tag tag-primary" onclick="doSearch('مصر')" style="cursor:pointer;border:none;">مصر</button>
           </div>
         </div>
 
         <!-- Search Results -->
-        <div id="search-results-page" role="region" aria-label="Search results" aria-live="polite">
+        <div id="search-results-page" role="region" aria-label="نتائج البحث" aria-live="polite">
           <!-- Results injected by JS -->
         </div>
 
         <!-- Browse Sections -->
         <div class="reveal" id="browse-sections">
-          <h3 style="font-size:0.88rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.25rem;">Browse by Category</h3>
+          <h3 style="font-size:0.88rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:1.25rem;">تصفح حسب الفئة</h3>
           <div class="grid-3" style="gap:1rem;">
             <a href="career.html" class="card" style="text-decoration:none;padding:1.25rem;text-align:center;">
               <div style="font-size:1.5rem;margin-bottom:0.5rem;">🗓</div>
-              <div style="font-weight:700;font-size:0.9rem;">Career History</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">11 roles · 3 countries</div>
+              <div style="font-weight:700;font-size:0.9rem;">المسيرة المهنية</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">11 دوراً · 3 دول</div>
             </a>
             <a href="companies.html" class="card" style="text-decoration:none;padding:1.25rem;text-align:center;">
               <div style="font-size:1.5rem;margin-bottom:0.5rem;">🏢</div>
-              <div style="font-weight:700;font-size:0.9rem;">Companies</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">9 organisations</div>
+              <div style="font-weight:700;font-size:0.9rem;">الشركات</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">9 مؤسسات</div>
             </a>
             <a href="projects.html" class="card" style="text-decoration:none;padding:1.25rem;text-align:center;">
               <div style="font-size:1.5rem;margin-bottom:0.5rem;">📋</div>
-              <div style="font-weight:700;font-size:0.9rem;">Projects</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">6 major projects</div>
+              <div style="font-weight:700;font-size:0.9rem;">المشاريع</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">6 مشاريع كبرى</div>
             </a>
             <a href="skills.html" class="card" style="text-decoration:none;padding:1.25rem;text-align:center;">
               <div style="font-size:1.5rem;margin-bottom:0.5rem;">⚡</div>
-              <div style="font-weight:700;font-size:0.9rem;">Skills</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">Full skills inventory</div>
+              <div style="font-weight:700;font-size:0.9rem;">المهارات</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">جرد المهارات الكامل</div>
             </a>
             <a href="certifications.html" class="card" style="text-decoration:none;padding:1.25rem;text-align:center;">
               <div style="font-size:1.5rem;margin-bottom:0.5rem;">🏆</div>
-              <div style="font-weight:700;font-size:0.9rem;">Certifications</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">PMP, CCNA, MBA Diploma</div>
+              <div style="font-weight:700;font-size:0.9rem;">الشهادات</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">PMP, CCNA, دبلوم MBA</div>
             </a>
             <a href="achievements.html" class="card" style="text-decoration:none;padding:1.25rem;text-align:center;">
               <div style="font-size:1.5rem;margin-bottom:0.5rem;">🎯</div>
-              <div style="font-weight:700;font-size:0.9rem;">Achievements</div>
-              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">Key career milestones</div>
+              <div style="font-weight:700;font-size:0.9rem;">الإنجازات</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);margin-top:0.25rem;">أبرز محطات المسيرة</div>
             </a>
           </div>
         </div>
@@ -124,7 +127,7 @@
   <div id="ecms-footer-inject"></div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/i18n.js?v=2"></script><script src="../assets/js/components.js?v=2"></script>
-  <script src="../assets/js/core.js?v=3"></script>
+  <script src="../assets/js/core.js?v=4"></script>
   <script>
     const searchInput = document.getElementById('search-input-page');
     const resultsContainer = document.getElementById('search-results-page');
@@ -133,6 +136,135 @@
     const suggestionsEl = document.getElementById('search-suggestions-page');
 
     let knowledgeBase = null;
+
+    const AR_MAP = {
+      'Project Control Manager': 'مدير ضوابط المشاريع',
+      'Projects Director – Telecommunications': 'مدير مشاريع – الاتصالات',
+      'Lead Consultant Project Manager': 'مدير مشاريع استشاري رئيسي',
+      'Senior Site Manager': 'مدير موقع أول',
+      'Site Manager': 'مدير موقع',
+      'Senior Project Control Engineer / Planning Engineer': 'مهندس ضوابط مشاريع أول / مهندس تخطيط',
+      'Project Manager': 'مدير مشاريع',
+      'Project Engineer': 'مهندس مشاريع',
+      'Assistant General Manager': 'مساعد المدير العام',
+      'Project Control and Monitoring Engineer – External Network Projects': 'مهندس ضوابط ومراقبة المشاريع – الشبكة الخارجية',
+      'Shift Engineer': 'مهندس ورديات',
+      'Officer – Air Defence Forces': 'ضابط – قوات الدفاع الجوي',
+      'AlSharq Office Company': 'شركة الشرق',
+      'Egyptian Company for General Contracting': 'الشركة المصرية للمقاولات العامة',
+      'Sabbour Consulting': 'صبور للاستشارات',
+      'Benya Systems': 'بينيا سيستمز',
+      'Fiber Misr – Alstom': 'فايبر مصر – ألستوم',
+      'Norconsult (Supporting STC – Saudi Telecom Company)': 'نوركونسلت – دعم شركة الاتصالات السعودية',
+      'Millentech Systems': 'ميلينتك سيستمز',
+      'MITT Company (Sudan Branch – Siemens Subcontract)': 'شركة MITT – السودان',
+      'Compumagic International': 'كومباجيك الدولية',
+      'Siemens AG (Egypt)': 'سيمنس – مصر',
+      'El Gezirah Sheraton Hotel': 'فندق شيراتون الجزيرة',
+      'Egyptian Armed Forces – Air Defence': 'القوات المسلحة المصرية – الدفاع الجوي',
+      'Saudi Arabia': 'السعودية',
+      'Egypt': 'مصر',
+      'Sudan': 'السودان',
+      'Programme Management': 'إدارة البرامج',
+      'Portfolio Management': 'إدارة المحفظة',
+      'PMO Leadership': 'قيادة مكتب إدارة المشاريع',
+      'Executive Reporting': 'التقارير التنفيذية',
+      'Stakeholder Management': 'إدارة أصحاب المصلحة',
+      'Team Leadership': 'قيادة الفريق',
+      'Resource Planning': 'تخطيط الموارد',
+      'Change Management': 'إدارة التغيير',
+      'Strategic Planning': 'التخطيط الاستراتيجي',
+      'Planning & Scheduling': 'التخطيط والجدولة',
+      'Cost Control': 'ضبط التكلفة',
+      'Risk Management': 'إدارة المخاطر',
+      'Change Control': 'ضبط التغيير',
+      'Governance': 'الحوكمة',
+      'Earned Value Management': 'إدارة القيمة المكتسبة',
+      'KPI Dashboards': 'لوحات KPI',
+      'Baseline Management': 'إدارة الخط الأساسي',
+      'Progress Monitoring': 'مراقبة التقدم',
+      'Forecasting & Budgeting': 'التنبؤ والميزنة',
+      'Contract Administration': 'إدارة العقود',
+      'CAPEX/OPEX Management': 'إدارة CAPEX/OPEX',
+      'Procurement': 'المشتريات',
+      'Vendor Management': 'إدارة الموردين',
+      'BOQ Preparation': 'إعداد BOQ',
+      'Commercial Management': 'الإدارة التجارية',
+      'OSP (Outside Plant)': 'OSP (الشبكة الخارجية)',
+      'ISP (Inside Plant)': 'ISP (الشبكة الداخلية)',
+      '5G Rollout': 'نشر 5G',
+      'Fiber Optic Infrastructure': 'البنية التحتية للألياف الضوئية',
+      'ELV Systems': 'أنظمة ELV',
+      'BMS (Building Management Systems)': 'BMS (أنظمة إدارة المباني)',
+      'CCTV': 'كاميرات المراقبة',
+      'Fire Alarm Systems': 'أنظمة إنذار الحريق',
+      'External Network': 'الشبكة الخارجية',
+      'CCNA Networking': 'شبكات CCNA',
+      'ERP Development': 'تطوير ERP',
+      'Digital Transformation': 'التحول الرقمي',
+      'Business Process Optimisation': 'تحسين العمليات التجارية',
+      'Primavera P6': 'Primavera P6',
+      'MS Access with VBA': 'MS Access مع VBA',
+      'Advanced Excel': 'Excel المتقدم',
+      'Project Management': 'إدارة المشاريع',
+      'Quality Assurance': 'ضمان الجودة',
+      'Safety Management': 'إدارة السلامة',
+      'Document Management': 'إدارة الوثائق',
+      'Meeting Facilitation': 'إدارة الاجتماعات',
+      'Executive Presentations': 'العروض التنفيذية',
+      'Project Management Professional (PMP®)': 'محترف إدارة المشاريع (PMP®)',
+      'Cisco Certified Network Associate (CCNA)': 'سيسكو معتمد شبكات (CCNA)',
+      'Postgraduate Diploma in Business Administration': 'دبلوم دراسات عليا في إدارة الأعمال',
+      'Project Management Institute (PMI)': 'معهد إدارة المشاريع (PMI)',
+      'Cisco Systems': 'سيسكو سيستمز',
+      'Edinburgh Business School, Heriot-Watt University': 'كلية إدنبرة للأعمال، جامعة Heriot-Watt',
+      'Preparatory M.Sc. – Communication Engineering': 'ماجستير تمهيدي – هندسة الاتصالات',
+      'Bachelor of Science – Communication and Electronics Engineering': 'بكالوريوس العلوم – هندسة الاتصالات والإلكترونيات',
+      'Egyptian General Secondary Certificate (Thanawiya Amma)': 'شهادة الثانوية العامة المصرية',
+      'Heriot-Watt University – Edinburgh Business School': 'كلية إدنبرة للأعمال، جامعة Heriot-Watt',
+      'Helwan University': 'جامعة حلوان',
+      'El Ibrahimya School': 'مدرسة الإبراهيمية',
+      'Egyptian International Olympic Games City': 'المدينة الأولمبية الدولية المصرية',
+      'New Administrative Capital Fiber Network': 'شبكة الألياف في العاصمة الإدارية الجديدة',
+      'Egypt National Railways Modernization Project': 'مشروع تحديث السكك الحديدية القومية المصرية',
+      'STC Fixed Network – FTTH/FTTx Rollout Programme': 'برنامج نشر شبكة FTTH/FTTx الثابتة لـ STC',
+      'Siemens External Telecom Network Projects': 'مشاريع الشبكة الخارجية لسيمنس',
+      'MITT Telecom Infrastructure Project – Sudan': 'مشروع بنية الاتصالات – MITT السودان',
+      'ACUD (Administrative Capital for Urban Development)': 'ACUD (شركة العاصمة الإدارية للتنمية الحضرية)',
+      'Egyptian National Railways (ENR)': 'السكك الحديدية الوطنية المصرية (ENR)',
+      'Benya Systems / Fiber Misr – Alstom': 'بينيا سيستمز / فايبر مصر – ألستوم',
+      'Siemens Germany-Sudan Branch': 'فرع سيمنس ألمانيا – السودان',
+      'Saudi Telecom Company (STC)': 'شركة الاتصالات السعودية (STC)',
+      'Distinguished Expert Award': 'جائزة الخبرة المتميزة',
+      'Appreciation Certificate – Millentech Systems': 'شهادة تقدير – ميلينتك سيستمز',
+      'Appreciation Certificate 1': 'شهادة تقدير 1',
+      'Appreciation Certificate 2': 'شهادة تقدير 2',
+      'Appreciation Certificate 3': 'شهادة تقدير 3',
+      'Appreciation Certificate 4': 'شهادة تقدير 4',
+      'Experience Certificate – Siemens': 'شهادة خبرة – سيمنس',
+      'Siemens AG': 'سيمنس',
+      'leadership': 'القيادة',
+      'projectControls': 'ضوابط المشاريع',
+      'commercial': 'تجاري',
+      'telecommunications': 'الاتصالات',
+      'digital': 'رقمي',
+      'software': 'برمجيات',
+      'management': 'الإدارة'
+    };
+
+    const TYPE_AR = {
+      'Experience': 'الخبرة',
+      'Skill': 'مهارة',
+      'Software': 'برمجيات',
+      'Certification': 'شهادة',
+      'Education': 'التعليم',
+      'Project': 'مشروع',
+      'Award': 'جائزة'
+    };
+
+    function tr(text) {
+      return AR_MAP[text] || text;
+    }
 
     async function loadKB() {
       if (!knowledgeBase) {
@@ -150,7 +282,6 @@
       const results = [];
       if (!kb) return results;
 
-      const p = kb.personal || {};
       const exp = kb.experience || [];
       const skills = kb.skills || {};
       const certs = kb.certifications || [];
@@ -158,14 +289,76 @@
       const projects = kb.projects || [];
       const awards = kb.awards || [];
 
-      exp.forEach(e => results.push({ title: e.role, subtitle: e.company + ' · ' + e.country, body: (e.description || '') + ' ' + (e.achievements || []).join(' '), url: 'career.html', icon: '🗓', type: 'Experience' }));
-      (skills.technical || []).forEach(s => results.push({ title: s, subtitle: 'Technical Skill', body: s, url: 'skills.html', icon: '⚡', type: 'Skill' }));
-      (skills.management || []).forEach(s => results.push({ title: s, subtitle: 'Management Skill', body: s, url: 'skills.html', icon: '⚡', type: 'Skill' }));
-      (skills.software || []).concat(skills.tools || []).forEach(s => results.push({ title: s, subtitle: 'Software / Tool', body: s, url: 'software.html', icon: '💻', type: 'Software' }));
-      certs.forEach(c => results.push({ title: c.name, subtitle: c.issuer + ' · ' + c.year, body: c.name + ' ' + (c.issuer||''), url: 'certifications.html', icon: '🏆', type: 'Certification' }));
-      edu.forEach(e => results.push({ title: e.degree, subtitle: e.institution, body: e.degree + ' ' + (e.institution||'') + ' ' + (e.field||''), url: 'education.html', icon: '🎓', type: 'Education' }));
-      projects.forEach(pr => results.push({ title: pr.name, subtitle: pr.client || pr.employer, body: pr.name + ' ' + (pr.description||'') + ' ' + (pr.technologies||[]).join(' '), url: 'projects.html', icon: '📋', type: 'Project' }));
-      awards.forEach(a => results.push({ title: a.title || a.name, subtitle: a.issuer || a.organisation, body: (a.title||'') + ' ' + (a.name||''), url: 'awards.html', icon: '🏅', type: 'Award' }));
+      exp.forEach(e => {
+        const arRole = tr(e.role);
+        const arCompany = e.companyArabic || tr(e.company);
+        const arCountry = tr(e.country);
+        results.push({
+          title: arRole,
+          subtitle: arCompany + ' · ' + arCountry,
+          body: (e.role || '') + ' ' + arRole + ' ' + (e.company || '') + ' ' + arCompany + ' ' + (e.country || '') + ' ' + arCountry + ' ' + (e.responsibilities || []).join(' ') + ' ' + (e.achievements || []).join(' ') + ' ' + (e.technologies || []).join(' '),
+          url: 'career.html', icon: '🗓', type: 'Experience'
+        });
+      });
+
+      Object.entries(skills).forEach(([cat, arr]) => {
+        const arCat = tr(cat);
+        arr.forEach(s => {
+          const arSkill = tr(s);
+          results.push({
+            title: arSkill,
+            subtitle: 'مهارة – ' + arCat,
+            body: s + ' ' + arSkill + ' ' + cat + ' ' + arCat,
+            url: cat === 'software' ? 'software.html' : 'skills.html',
+            icon: cat === 'software' ? '💻' : '⚡',
+            type: cat === 'software' ? 'Software' : 'Skill'
+          });
+        });
+      });
+
+      certs.forEach(c => {
+        const arName = tr(c.name);
+        const arIssuer = tr(c.issuingBody);
+        results.push({
+          title: arName,
+          subtitle: arIssuer + ' · ' + c.year,
+          body: c.name + ' ' + arName + ' ' + (c.issuingBody || '') + ' ' + arIssuer,
+          url: 'certifications.html', icon: '🏆', type: 'Certification'
+        });
+      });
+
+      edu.forEach(e => {
+        const arDegree = tr(e.degree);
+        const arInst = tr(e.institution);
+        results.push({
+          title: arDegree,
+          subtitle: arInst,
+          body: e.degree + ' ' + arDegree + ' ' + (e.institution || '') + ' ' + arInst + ' ' + (e.field || ''),
+          url: 'education.html', icon: '🎓', type: 'Education'
+        });
+      });
+
+      projects.forEach(pr => {
+        const arName = tr(pr.name);
+        const arClient = tr(pr.client || pr.employer);
+        results.push({
+          title: arName,
+          subtitle: arClient,
+          body: pr.name + ' ' + arName + ' ' + (pr.client || '') + ' ' + (pr.employer || '') + ' ' + (pr.description || '') + ' ' + (pr.technologies || []).join(' '),
+          url: 'projects.html', icon: '📋', type: 'Project'
+        });
+      });
+
+      awards.forEach(a => {
+        const arTitle = tr(a.title || a.name);
+        const arOrg = tr(a.issuingOrganization || a.organisation);
+        results.push({
+          title: arTitle,
+          subtitle: arOrg,
+          body: (a.title || '') + ' ' + (a.name || '') + ' ' + arTitle + ' ' + (a.issuingOrganization || '') + ' ' + arOrg,
+          url: 'awards.html', icon: '🏅', type: 'Award'
+        });
+      });
 
       return results;
     }
@@ -191,16 +384,17 @@
       const kb = await loadKB();
       const index = buildIndex(kb);
       const hits = index.filter(item => item.body.toLowerCase().includes(q) || item.title.toLowerCase().includes(q) || (item.subtitle||'').toLowerCase().includes(q));
-      resultsCount.textContent = `${hits.length} result${hits.length !== 1 ? 's' : ''} for "${searchInput.value}"`;
+      resultsCount.textContent = `${hits.length} نتيجة لـ "${searchInput.value}"`;
       if (hits.length === 0) {
-        resultsContainer.innerHTML = '<div class="card" style="text-align:center;padding:3rem;"><div style="font-size:3rem;margin-bottom:1rem;">🔎</div><h3>No results found</h3><p style="color:var(--text-muted);">Try different keywords or browse by category below.</p></div>';
+        resultsContainer.innerHTML = '<div class="card" style="text-align:center;padding:3rem;"><div style="font-size:3rem;margin-bottom:1rem;">🔎</div><h3>لا توجد نتائج</h3><p style="color:var(--text-muted);">جرب كلمات مختلفة أو تصفح حسب الفئة أدناه.</p></div>';
         browseSections.style.display = '';
         return;
       }
       const grouped = {};
       hits.forEach(h => {
-        if (!grouped[h.type]) grouped[h.type] = [];
-        grouped[h.type].push(h);
+        const typeLabel = TYPE_AR[h.type] || h.type;
+        if (!grouped[typeLabel]) grouped[typeLabel] = [];
+        grouped[typeLabel].push(h);
       });
       let html = '';
       Object.entries(grouped).forEach(([type, items]) => {

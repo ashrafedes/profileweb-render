@@ -250,6 +250,129 @@ const SearchModal = (() => {
     return '';
   }
 
+  function isArabic() {
+    return window.location.pathname.includes('/ar/');
+  }
+
+  const AR_MAP = {
+    'Project Control Manager': 'مدير ضوابط المشاريع',
+    'Projects Director – Telecommunications': 'مدير مشاريع – الاتصالات',
+    'Lead Consultant Project Manager': 'مدير مشاريع استشاري رئيسي',
+    'Senior Site Manager': 'مدير موقع أول',
+    'Site Manager': 'مدير موقع',
+    'Senior Project Control Engineer / Planning Engineer': 'مهندس ضوابط مشاريع أول / مهندس تخطيط',
+    'Project Manager': 'مدير مشاريع',
+    'Project Engineer': 'مهندس مشاريع',
+    'Assistant General Manager': 'مساعد المدير العام',
+    'Project Control and Monitoring Engineer – External Network Projects': 'مهندس ضوابط ومراقبة المشاريع – الشبكة الخارجية',
+    'Shift Engineer': 'مهندس ورديات',
+    'Officer – Air Defence Forces': 'ضابط – قوات الدفاع الجوي',
+    'AlSharq Office Company': 'شركة الشرق',
+    'Egyptian Company for General Contracting': 'الشركة المصرية للمقاولات العامة',
+    'Sabbour Consulting': 'صبور للاستشارات',
+    'Benya Systems': 'بينيا سيستمز',
+    'Fiber Misr – Alstom': 'فايبر مصر – ألستوم',
+    'Norconsult (Supporting STC – Saudi Telecom Company)': 'نوركونسلت – دعم شركة الاتصالات السعودية',
+    'Millentech Systems': 'ميلينتك سيستمز',
+    'MITT Company (Sudan Branch – Siemens Subcontract)': 'شركة MITT – السودان',
+    'Compumagic International': 'كومباجيك الدولية',
+    'Siemens AG (Egypt)': 'سيمنس – مصر',
+    'El Gezirah Sheraton Hotel': 'فندق شيراتون الجزيرة',
+    'Egyptian Armed Forces – Air Defence': 'القوات المسلحة المصرية – الدفاع الجوي',
+    'Saudi Arabia': 'السعودية',
+    'Egypt': 'مصر',
+    'Sudan': 'السودان',
+    'Programme Management': 'إدارة البرامج',
+    'Portfolio Management': 'إدارة المحفظة',
+    'PMO Leadership': 'قيادة مكتب إدارة المشاريع',
+    'Executive Reporting': 'التقارير التنفيذية',
+    'Stakeholder Management': 'إدارة أصحاب المصلحة',
+    'Team Leadership': 'قيادة الفريق',
+    'Resource Planning': 'تخطيط الموارد',
+    'Change Management': 'إدارة التغيير',
+    'Strategic Planning': 'التخطيط الاستراتيجي',
+    'Planning & Scheduling': 'التخطيط والجدولة',
+    'Cost Control': 'ضبط التكلفة',
+    'Risk Management': 'إدارة المخاطر',
+    'Change Control': 'ضبط التغيير',
+    'Governance': 'الحوكمة',
+    'Earned Value Management': 'إدارة القيمة المكتسبة',
+    'KPI Dashboards': 'لوحات KPI',
+    'Baseline Management': 'إدارة الخط الأساسي',
+    'Progress Monitoring': 'مراقبة التقدم',
+    'Forecasting & Budgeting': 'التنبؤ والميزنة',
+    'Contract Administration': 'إدارة العقود',
+    'CAPEX/OPEX Management': 'إدارة CAPEX/OPEX',
+    'Procurement': 'المشتريات',
+    'Vendor Management': 'إدارة الموردين',
+    'BOQ Preparation': 'إعداد BOQ',
+    'Commercial Management': 'الإدارة التجارية',
+    'OSP (Outside Plant)': 'OSP (الشبكة الخارجية)',
+    'ISP (Inside Plant)': 'ISP (الشبكة الداخلية)',
+    '5G Rollout': 'نشر 5G',
+    'Fiber Optic Infrastructure': 'البنية التحتية للألياف الضوئية',
+    'ELV Systems': 'أنظمة ELV',
+    'BMS (Building Management Systems)': 'BMS (أنظمة إدارة المباني)',
+    'CCTV': 'كاميرات المراقبة',
+    'Fire Alarm Systems': 'أنظمة إنذار الحريق',
+    'External Network': 'الشبكة الخارجية',
+    'CCNA Networking': 'شبكات CCNA',
+    'ERP Development': 'تطوير ERP',
+    'Digital Transformation': 'التحول الرقمي',
+    'Business Process Optimisation': 'تحسين العمليات التجارية',
+    'Primavera P6': 'Primavera P6',
+    'MS Access with VBA': 'MS Access مع VBA',
+    'Advanced Excel': 'Excel المتقدم',
+    'Project Management': 'إدارة المشاريع',
+    'Quality Assurance': 'ضمان الجودة',
+    'Safety Management': 'إدارة السلامة',
+    'Document Management': 'إدارة الوثائق',
+    'Meeting Facilitation': 'إدارة الاجتماعات',
+    'Executive Presentations': 'العروض التنفيذية',
+    'Project Management Professional (PMP®)': 'محترف إدارة المشاريع (PMP®)',
+    'Cisco Certified Network Associate (CCNA)': 'سيسكو معتمد شبكات (CCNA)',
+    'Postgraduate Diploma in Business Administration': 'دبلوم دراسات عليا في إدارة الأعمال',
+    'Project Management Institute (PMI)': 'معهد إدارة المشاريع (PMI)',
+    'Cisco Systems': 'سيسكو سيستمز',
+    'Edinburgh Business School, Heriot-Watt University': 'كلية إدنبرة للأعمال، جامعة Heriot-Watt',
+    'Preparatory M.Sc. – Communication Engineering': 'ماجستير تمهيدي – هندسة الاتصالات',
+    'Bachelor of Science – Communication and Electronics Engineering': 'بكالوريوس العلوم – هندسة الاتصالات والإلكترونيات',
+    'Egyptian General Secondary Certificate (Thanawiya Amma)': 'شهادة الثانوية العامة المصرية',
+    'Heriot-Watt University – Edinburgh Business School': 'كلية إدنبرة للأعمال، جامعة Heriot-Watt',
+    'Helwan University': 'جامعة حلوان',
+    'El Ibrahimya School': 'مدرسة الإبراهيمية',
+    'Egyptian International Olympic Games City': 'المدينة الأولمبية الدولية المصرية',
+    'New Administrative Capital Fiber Network': 'شبكة الألياف في العاصمة الإدارية الجديدة',
+    'Egypt National Railways Modernization Project': 'مشروع تحديث السكك الحديدية القومية المصرية',
+    'STC Fixed Network – FTTH/FTTx Rollout Programme': 'برنامج نشر شبكة FTTH/FTTx الثابتة لـ STC',
+    'Siemens External Telecom Network Projects': 'مشاريع الشبكة الخارجية لسيمنس',
+    'MITT Telecom Infrastructure Project – Sudan': 'مشروع بنية الاتصالات – MITT السودان',
+    'ACUD (Administrative Capital for Urban Development)': 'ACUD (شركة العاصمة الإدارية للتنمية الحضرية)',
+    'Egyptian National Railways (ENR)': 'السكك الحديدية الوطنية المصرية (ENR)',
+    'Benya Systems / Fiber Misr – Alstom': 'بينيا سيستمز / فايبر مصر – ألستوم',
+    'Siemens Germany-Sudan Branch': 'فرع سيمنس ألمانيا – السودان',
+    'Saudi Telecom Company (STC)': 'شركة الاتصالات السعودية (STC)',
+    'Distinguished Expert Award': 'جائزة الخبرة المتميزة',
+    'Appreciation Certificate – Millentech Systems': 'شهادة تقدير – ميلينتك سيستمز',
+    'Appreciation Certificate 1': 'شهادة تقدير 1',
+    'Appreciation Certificate 2': 'شهادة تقدير 2',
+    'Appreciation Certificate 3': 'شهادة تقدير 3',
+    'Appreciation Certificate 4': 'شهادة تقدير 4',
+    'Experience Certificate – Siemens': 'شهادة خبرة – سيمنس',
+    'Siemens AG': 'سيمنس',
+    'leadership': 'القيادة',
+    'projectControls': 'ضوابط المشاريع',
+    'commercial': 'تجاري',
+    'telecommunications': 'الاتصالات',
+    'digital': 'رقمي',
+    'software': 'برمجيات',
+    'management': 'الإدارة'
+  };
+
+  function tr(text) {
+    return AR_MAP[text] || text;
+  }
+
   async function loadData() {
     if (data) return data;
     try {
@@ -266,53 +389,89 @@ const SearchModal = (() => {
   function buildIndex(kb) {
     const items = [];
     const base = getBasePath();
+    const ar = isArabic();
 
     if (kb.experience) {
       kb.experience.forEach(e => {
+        const title = ar ? tr(e.role) : e.role;
+        const company = ar ? (e.companyArabic || tr(e.company)) : e.company;
         items.push({
           icon: '🏢',
-          title: e.role,
-          subtitle: `${e.company} • ${e.duration}`,
+          title: title,
+          subtitle: `${company} • ${e.duration}`,
           url: `${base}career.html#${e.id}`,
-          tags: [e.company, e.country, ...(e.technologies || [])].join(' ').toLowerCase()
+          tags: [e.role, title, e.company, company, e.country, tr(e.country), ...(e.technologies || [])].join(' ').toLowerCase()
         });
       });
     }
 
     if (kb.projects) {
       kb.projects.forEach(p => {
+        const title = ar ? tr(p.name) : p.name;
         items.push({
           icon: '📋',
-          title: p.name,
+          title: title,
           subtitle: `${p.projectType} • ${p.country}`,
           url: `${base}projects.html#${p.id}`,
-          tags: [p.name, p.client, p.country, ...(p.technologies || [])].join(' ').toLowerCase()
+          tags: [p.name, title, p.client, p.country, tr(p.country), ...(p.technologies || [])].join(' ').toLowerCase()
         });
       });
     }
 
     if (kb.certifications) {
       kb.certifications.forEach(c => {
+        const title = ar ? tr(c.name) : c.name;
+        const issuer = ar ? tr(c.issuingBody) : c.issuingBody;
         items.push({
           icon: '🏆',
-          title: c.name,
-          subtitle: c.issuingBody,
+          title: title,
+          subtitle: issuer,
           url: `${base}certifications.html#${c.id}`,
-          tags: [c.name, c.issuingBody].join(' ').toLowerCase()
+          tags: [c.name, title, c.issuingBody, issuer].join(' ').toLowerCase()
         });
       });
     }
 
     if (kb.skills) {
       Object.entries(kb.skills).forEach(([cat, arr]) => {
+        const arCat = tr(cat);
         arr.forEach(skill => {
+          const arSkill = tr(skill);
           items.push({
             icon: '⚡',
-            title: skill,
-            subtitle: `Skill – ${cat}`,
+            title: ar ? arSkill : skill,
+            subtitle: ar ? `مهارة – ${arCat}` : `Skill – ${cat}`,
             url: `${base}skills.html`,
-            tags: (cat + ' ' + skill).toLowerCase()
+            tags: (cat + ' ' + arCat + ' ' + skill + ' ' + arSkill).toLowerCase()
           });
+        });
+      });
+    }
+
+    if (kb.education) {
+      kb.education.forEach(e => {
+        const title = ar ? tr(e.degree) : e.degree;
+        const inst = ar ? tr(e.institution) : e.institution;
+        items.push({
+          icon: '🎓',
+          title: title,
+          subtitle: inst,
+          url: `${base}education.html#${e.id}`,
+          tags: [e.degree, title, e.institution || '', inst, e.field || ''].join(' ').toLowerCase()
+        });
+      });
+    }
+
+    if (kb.awards) {
+      kb.awards.forEach(a => {
+        const title = ar ? tr(a.title || a.name) : (a.title || a.name);
+        const org = ar ? tr(a.issuingOrganization || a.organisation) : (a.issuingOrganization || a.organisation);
+        items.push({
+          icon: '🏅',
+          title: title,
+          subtitle: org || '',
+          url: `${base}awards.html#${a.id}`,
+          tags: [a.title || '', a.name || '', title, a.issuingOrganization || '', a.organisation || '', org || ''].join(' ').toLowerCase()
         });
       });
     }
@@ -323,9 +482,12 @@ const SearchModal = (() => {
   function render(items) {
     const container = document.getElementById('searchResults');
     if (!container) return;
+    const ar = isArabic();
 
     if (!items.length) {
-      container.innerHTML = '<div class="search-no-results">No results found. Try a different search term.</div>';
+      container.innerHTML = ar
+        ? '<div class="search-no-results">لا توجد نتائج. جرب كلمة بحث مختلفة.</div>'
+        : '<div class="search-no-results">No results found. Try a different search term.</div>';
       return;
     }
 
