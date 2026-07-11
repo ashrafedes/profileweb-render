@@ -880,14 +880,69 @@
 
   async function handleHeroImage(file) {
     if (!file || !file.type.startsWith('image/')) return;
-    if (file.size > 5 * 1024 * 1024) {
-      alert('Image too large. Max 5MB for hero images.');
+    if (file.size > 10 * 1024 * 1024) {
+      alert('Image too large. Max 10MB for hero images.');
       return;
     }
-    const dataUrl = await compressImage(file, 1200, 0.8);
-    const input = document.getElementById('ed-hero-image');
-    if (input) input.value = dataUrl;
-    showHeroPreview(dataUrl);
+
+    const GH_TOKEN = getGHToken();
+    if (!GH_TOKEN) {
+      alert('No GitHub token found. Please publish an article first to set your token, then try uploading again.');
+      return;
+    }
+
+    // Show uploading state
+    const btnUpload = document.getElementById('btn-upload-hero');
+    const origText = btnUpload ? btnUpload.textContent : '';
+    if (btnUpload) { btnUpload.textContent = '⏳ Uploading…'; btnUpload.disabled = true; }
+
+    try {
+      // Compress to webp
+      const dataUrl = await compressImage(file, 1200, 0.82);
+
+      // Convert dataUrl to raw base64 (strip the data:image/webp;base64, prefix)
+      const base64Data = dataUrl.split(',')[1];
+
+      // Build a unique filename
+      const ext = 'webp';
+      const slug = getVal('ed-slug') || ('hero-' + Date.now());
+      const filename = slug.replace(/[^a-z0-9\-]/gi, '-').toLowerCase() + '-' + Date.now() + '.' + ext;
+      const ghPath = `assets/images/articles/${filename}`;
+
+      // Upload to GitHub via Contents API
+      const uploadRes = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${ghPath}`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${GH_TOKEN}`,
+          'Accept': 'application/vnd.github+json',
+          'X-GitHub-Api-Version': '2022-11-28',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: `Upload hero image: ${filename}`,
+          content: base64Data
+        })
+      });
+
+      if (!uploadRes.ok) {
+        const err = await uploadRes.json().catch(() => ({}));
+        throw new Error(err.message || uploadRes.statusText);
+      }
+
+      const uploadData = await uploadRes.json();
+      const imagePath = '/' + ghPath;
+
+      // Store the path (not base64) in the input
+      const input = document.getElementById('ed-hero-image');
+      if (input) input.value = imagePath;
+      showHeroPreview(dataUrl); // show local preview while site redeploys
+
+    } catch (e) {
+      console.error('Hero image upload failed:', e);
+      alert('Image upload failed: ' + e.message + '\n\nYou can manually enter an image URL in the Hero Image field instead.');
+    } finally {
+      if (btnUpload) { btnUpload.textContent = origText; btnUpload.disabled = false; }
+    }
   }
 
   /* ── Public API ── */
