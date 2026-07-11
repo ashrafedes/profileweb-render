@@ -109,9 +109,9 @@
     }
   }
 
-  /* ── File handles for direct write (File System Access API) ── */
-  let fileHandles = { json: null, sitemap: null, rss: null };
-  let useDirectWrite = ('showSaveFilePicker' in window);
+  /* ── Directory handle for direct write (File System Access API) ── */
+  let dirHandle = null;
+  let useDirectWrite = ('showDirectoryPicker' in window);
 
   /* ── Save Articles — writes directly to disk if supported ── */
   async function saveArticles() {
@@ -124,14 +124,18 @@
 
     if (useDirectWrite) {
       try {
-        await writeDirectly('json', jsonContent, 'articles.json', 'application/json');
-        await writeDirectly('sitemap', sitemapContent, 'sitemap.xml', 'application/xml');
-        await writeDirectly('rss', rssContent, 'rss.xml', 'application/xml');
+        if (!dirHandle) {
+          showLinkBanner();
+          dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+        }
+        await writeToFile(dirHandle, 'articles/articles.json', jsonContent);
+        await writeToFile(dirHandle, 'sitemap.xml', sitemapContent);
+        await writeToFile(dirHandle, 'rss.xml', rssContent);
         showSaveBanner(true);
         return;
       } catch (e) {
         console.warn('Direct write failed, falling back to download:', e);
-        useDirectWrite = false;
+        if (e.name !== 'AbortError') useDirectWrite = false;
       }
     }
 
@@ -142,17 +146,31 @@
     setTimeout(() => downloadFile(rssContent, 'rss.xml', 'application/xml'), 1000);
   }
 
-  /* ── Write directly to file on disk (File System Access API) ── */
-  async function writeDirectly(key, content, suggestedName, mimeType) {
-    if (!fileHandles[key]) {
-      fileHandles[key] = await window.showSaveFilePicker({
-        suggestedName: suggestedName,
-        types: [{ description: suggestedName, accept: { [mimeType]: [suggestedName.endsWith('.xml') ? '.xml' : '.json'] } }]
-      });
+  /* ── Write to a file path within a directory handle ── */
+  async function writeToFile(dirH, path, content) {
+    const parts = path.split('/');
+    let dir = dirH;
+    for (let i = 0; i < parts.length - 1; i++) {
+      dir = await dir.getDirectoryHandle(parts[i], { create: true });
     }
-    const writable = await fileHandles[key].createWritable();
+    const fileH = await dir.getFileHandle(parts[parts.length - 1], { create: true });
+    const writable = await fileH.createWritable();
     await writable.write(content);
     await writable.close();
+  }
+
+  /* ── Banner asking user to pick project folder ── */
+  function showLinkBanner() {
+    let banner = document.getElementById('save-banner');
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'save-banner';
+      banner.style.cssText = 'position:fixed;top:1rem;right:1rem;z-index:9999;padding:1rem 1.5rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.3);font-size:0.9rem;font-weight:600;max-width:380px;color:#fff;';
+      document.body.appendChild(banner);
+    }
+    banner.style.background = '#0969da';
+    banner.innerHTML = '📂 Please select your project root folder.<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">This is needed only once. Future saves will be automatic.</span>';
+    banner.style.display = 'block';
   }
 
   /* ── Save banner (non-blocking) ── */
