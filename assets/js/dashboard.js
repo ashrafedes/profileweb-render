@@ -507,18 +507,99 @@
     input.click();
   }
 
-  /* ── Generate Sitemap ── */
+  /* ── Generate Complete Sitemap (all site pages + articles) ── */
   function generateSitemap() {
     const today = new Date().toISOString().split('T')[0];
+    const PAGES = [
+      { loc: SITE_URL + '/', lastmod: today, changefreq: 'weekly', priority: '1.0' },
+      { loc: SITE_URL + '/en.html', lastmod: today, changefreq: 'weekly', priority: '0.9' },
+      { loc: SITE_URL + '/about.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/career.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/featured-projects.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/projects.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/skills.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/achievements.html', lastmod: today, changefreq: 'monthly', priority: '0.90' },
+      { loc: SITE_URL + '/certifications.html', lastmod: today, changefreq: 'yearly', priority: '0.90' },
+      { loc: SITE_URL + '/education.html', lastmod: today, changefreq: 'yearly', priority: '0.90' },
+      { loc: SITE_URL + '/awards.html', lastmod: today, changefreq: 'yearly', priority: '0.85' },
+      { loc: SITE_URL + '/companies.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/pmo.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/telecommunications.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/project-controls.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/digital-transformation.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/leadership.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/software.html', lastmod: today, changefreq: 'monthly', priority: '0.80' },
+      { loc: SITE_URL + '/contact.html', lastmod: today, changefreq: 'yearly', priority: '0.80' },
+      { loc: SITE_URL + '/downloads.html', lastmod: today, changefreq: 'monthly', priority: '0.80' },
+      { loc: SITE_URL + '/search.html', lastmod: today, changefreq: 'monthly', priority: '0.70' },
+      { loc: SITE_URL + '/404.html', lastmod: today, changefreq: 'yearly', priority: '0.30' },
+      // Arabic pages
+      { loc: SITE_URL + '/ar/', lastmod: today, changefreq: 'weekly', priority: '1.0' },
+      { loc: SITE_URL + '/ar/about.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/ar/career.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/ar/featured-projects.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/ar/projects.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/ar/skills.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/ar/achievements.html', lastmod: today, changefreq: 'monthly', priority: '0.90' },
+      { loc: SITE_URL + '/ar/certifications.html', lastmod: today, changefreq: 'yearly', priority: '0.90' },
+      { loc: SITE_URL + '/ar/education.html', lastmod: today, changefreq: 'yearly', priority: '0.90' },
+      { loc: SITE_URL + '/ar/awards.html', lastmod: today, changefreq: 'yearly', priority: '0.85' },
+      { loc: SITE_URL + '/ar/companies.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/ar/pmo.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/ar/telecommunications.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/ar/project-controls.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/ar/digital-transformation.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/ar/leadership.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/ar/software.html', lastmod: today, changefreq: 'monthly', priority: '0.80' },
+      { loc: SITE_URL + '/ar/contact.html', lastmod: today, changefreq: 'yearly', priority: '0.80' },
+      { loc: SITE_URL + '/ar/downloads.html', lastmod: today, changefreq: 'monthly', priority: '0.80' },
+      { loc: SITE_URL + '/ar/search.html', lastmod: today, changefreq: 'monthly', priority: '0.70' },
+      // English pages
+      { loc: SITE_URL + '/en/', lastmod: today, changefreq: 'weekly', priority: '1.0' },
+      { loc: SITE_URL + '/en/about.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/en/career.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/en/featured-projects.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/en/projects.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/en/skills.html', lastmod: today, changefreq: 'monthly', priority: '0.95' },
+      { loc: SITE_URL + '/en/achievements.html', lastmod: today, changefreq: 'monthly', priority: '0.90' },
+      { loc: SITE_URL + '/en/certifications.html', lastmod: today, changefreq: 'yearly', priority: '0.90' },
+      { loc: SITE_URL + '/en/education.html', lastmod: today, changefreq: 'yearly', priority: '0.90' },
+      { loc: SITE_URL + '/en/awards.html', lastmod: today, changefreq: 'yearly', priority: '0.85' },
+      { loc: SITE_URL + '/en/companies.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/en/pmo.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/en/telecommunications.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/en/project-controls.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/en/digital-transformation.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/en/leadership.html', lastmod: today, changefreq: 'monthly', priority: '0.85' },
+      { loc: SITE_URL + '/en/software.html', lastmod: today, changefreq: 'monthly', priority: '0.80' },
+      { loc: SITE_URL + '/en/contact.html', lastmod: today, changefreq: 'yearly', priority: '0.80' },
+      { loc: SITE_URL + '/en/downloads.html', lastmod: today, changefreq: 'monthly', priority: '0.80' },
+      { loc: SITE_URL + '/en/search.html', lastmod: today, changefreq: 'monthly', priority: '0.70' },
+      // Articles center pages
+      { loc: SITE_URL + '/articles/', lastmod: today, changefreq: 'weekly', priority: '0.80' },
+      { loc: SITE_URL + '/en/articles/', lastmod: today, changefreq: 'weekly', priority: '0.80' },
+      { loc: SITE_URL + '/ar/articles/', lastmod: today, changefreq: 'weekly', priority: '0.80' }
+    ];
+
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
     xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-    xml += `  <url><loc>${SITE_URL}/articles/</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>\n`;
-    articles.filter(a => !a.draft).forEach(a => {
-      xml += `  <url><loc>${SITE_URL}/articles/article.html?slug=${a.slug}</loc><lastmod>${a.updatedDate || a.publishDate}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n`;
+
+    // Static pages
+    PAGES.forEach(p => {
+      xml += `  <url><loc>${p.loc}</loc><lastmod>${p.lastmod}</lastmod><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>\n`;
     });
+
+    // Dynamic article pages (EN + AR + root)
+    articles.filter(a => !a.draft).forEach(a => {
+      const aDate = a.updatedDate || a.publishDate;
+      xml += `  <url><loc>${SITE_URL}/articles/article.html?slug=${a.slug}</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>\n`;
+      xml += `  <url><loc>${SITE_URL}/en/articles/article.html?slug=${a.slug}</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>\n`;
+      xml += `  <url><loc>${SITE_URL}/ar/articles/article.html?slug=${a.slug}</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>\n`;
+    });
+
     xml += '</urlset>';
 
-    downloadFile(xml, 'sitemap-articles.xml', 'application/xml');
+    downloadFile(xml, 'sitemap.xml', 'application/xml');
   }
 
   /* ── Generate RSS ── */
@@ -546,7 +627,7 @@
     });
 
     xml += '  </channel>\n</rss>';
-    downloadFile(xml, 'rss-articles.xml', 'application/xml');
+    downloadFile(xml, 'rss.xml', 'application/xml');
   }
 
   function downloadFile(content, filename, type) {
