@@ -807,6 +807,9 @@ const I18N = (() => {
 
   /* ── Get/Set language ── */
   function get() {
+    var pageLang = document.documentElement.getAttribute('lang');
+    if (pageLang === 'ar') return AR;
+    if (pageLang === 'en') return EN;
     return localStorage.getItem(LANG_KEY) || EN;
   }
 
