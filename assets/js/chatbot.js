@@ -125,7 +125,7 @@ Response Rules:
     root.setAttribute('dir', DIR);
     root.innerHTML = `
       <!-- Floating Bubble -->
-      <button id="ai-chat-bubble" class="ai-chat-bubble" aria-label="Open AI Chat">
+      <button id="ai-chat-bubble" class="ai-chat-bubble" aria-label="${IS_ARABIC ? 'افتح دردشة الذكاء الاصطناعي' : 'Open AI Chat'}">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/>
           <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
@@ -155,7 +155,7 @@ Response Rules:
             <button id="ai-chat-reset" class="ai-chat-icon-btn" title="${UI.newChat}" aria-label="${UI.newChat}">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
             </button>
-            <button id="ai-chat-close" class="ai-chat-icon-btn" title="Close" aria-label="Close">
+            <button id="ai-chat-close" class="ai-chat-icon-btn" title="${IS_ARABIC ? 'إغلاق' : 'Close'}" aria-label="${IS_ARABIC ? 'إغلاق' : 'Close'}">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
           </div>
