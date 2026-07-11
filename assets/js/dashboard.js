@@ -169,63 +169,66 @@
       { path: 'rss.xml', content: rssContent }
     ];
 
-    let okCount = 0;
-    let lastError = '';
+    try {
+      // Get latest commit on branch
+      const branchRes = await fetch(`https://api.github.com/repos/${GH_REPO}/branches/${GH_BRANCH}`, {
+        headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }
+      });
+      if (!branchRes.ok) throw new Error('Cannot read branch: ' + branchRes.statusText);
+      const branchData = await branchRes.json();
+      const latestCommitSha = branchData.commit.sha;
+      const baseTreeSha = branchData.commit.tree.sha;
 
-    for (const f of files) {
-      let success = false;
-      for (let attempt = 0; attempt < 3 && !success; attempt++) {
-        try {
-          // Get current file SHA (needed to update existing file)
-          let sha = null;
-          const getRes = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${f.path}?ref=${GH_BRANCH}`, {
-            headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }
-          });
-          if (getRes.ok) {
-            const getData = await getRes.json();
-            sha = getData.sha;
-          }
-
-          // Update/create file via Contents API
-          const putRes = await fetch(`https://api.github.com/repos/${GH_REPO}/contents/${f.path}`, {
-            method: 'PUT',
-            headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              message: `Dashboard: update ${f.path} (${now})`,
-              content: toBase64(f.content),
-              branch: GH_BRANCH,
-              sha: sha
-            })
-          });
-
-          if (putRes.ok) {
-            success = true;
-            okCount++;
-          } else if (putRes.status === 409 || putRes.status === 422) {
-            // SHA conflict — branch moved since we fetched SHA. Wait and retry.
-            const errData = await putRes.json().catch(() => ({}));
-            lastError = `${f.path}: ${errData.message || putRes.statusText}`;
-            if (attempt < 2) await new Promise(r => setTimeout(r, 1000));
-          } else {
-            const errData = await putRes.json().catch(() => ({}));
-            lastError = `${f.path}: ${errData.message || putRes.statusText}`;
-            console.error('GitHub API error for', f.path, errData);
-            break; // Non-retryable error
-          }
-        } catch (e) {
-          lastError = `${f.path}: ${e.message}`;
-          console.error('Upload failed for', f.path, e);
-          break;
-        }
+      // Create blobs for all files
+      const treeItems = [];
+      for (const f of files) {
+        const blobRes = await fetch(`https://api.github.com/repos/${GH_REPO}/git/blobs`, {
+          method: 'POST',
+          headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content: toBase64(f.content), encoding: 'base64' })
+        });
+        if (!blobRes.ok) throw new Error(`Failed to create blob for ${f.path}: ${blobRes.statusText}`);
+        const blobData = await blobRes.json();
+        treeItems.push({ path: f.path, mode: '100644', type: 'blob', sha: blobData.sha });
       }
-    }
 
-    if (okCount === files.length) {
-      showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml committed. Site will auto-deploy shortly.</span>');
-    } else if (okCount > 0) {
-      showSaveBanner(true, `⚠ ${okCount}/${files.length} files saved. Last error: ${lastError}`);
-    } else {
-      showSaveBanner(true, '⚠ GitHub push failed: ' + lastError);
+      // Create tree with all 3 files
+      const treeRes = await fetch(`https://api.github.com/repos/${GH_REPO}/git/trees`, {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ base_tree: baseTreeSha, tree: treeItems })
+      });
+      if (!treeRes.ok) throw new Error('Failed to create tree: ' + treeRes.statusText);
+      const treeData = await treeRes.json();
+
+      // Create commit
+      const commitRes = await fetch(`https://api.github.com/repos/${GH_REPO}/git/commits`, {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: `Dashboard: update articles, sitemap, rss (${now})`,
+          tree: treeData.sha,
+          parents: [latestCommitSha]
+        })
+      });
+      if (!commitRes.ok) throw new Error('Failed to create commit: ' + commitRes.statusText);
+      const commitData = await commitRes.json();
+
+      // Update branch ref
+      const refRes = await fetch(`https://api.github.com/repos/${GH_REPO}/git/refs/heads/${GH_BRANCH}`, {
+        method: 'PATCH',
+        headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sha: commitData.sha, force: false })
+      });
+      if (!refRes.ok) {
+        const refErr = await refRes.json().catch(() => ({}));
+        throw new Error(refErr.message || 'Failed to update branch: ' + refRes.statusText);
+      }
+
+      showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml committed in a single commit. Site will auto-deploy shortly.</span>');
+    } catch (e) {
+      console.error('GitHub commit failed:', e);
+      showSaveBanner(true, '⚠ GitHub push failed: ' + e.message);
     }
   }
 
