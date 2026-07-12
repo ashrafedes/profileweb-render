@@ -311,15 +311,33 @@
     document.getElementById('stat-last-pub').textContent = lastPub;
   }
 
+  /* ── Sorting ── */
+  let sortDirection = -1; // -1 = newest first, 1 = oldest first
+  function getSortedArticles() {
+    return [...articles].sort((a, b) => {
+      const da = new Date(a.publishDate || '1970-01-01').getTime();
+      const db = new Date(b.publishDate || '1970-01-01').getTime();
+      return sortDirection === -1 ? db - da : da - db;
+    });
+  }
+
+  function toggleSort() {
+    sortDirection = sortDirection === -1 ? 1 : -1;
+    const btn = document.getElementById('btn-sort-date');
+    if (btn) btn.textContent = sortDirection === -1 ? 'Date ↓' : 'Date ↑';
+    renderTable();
+  }
+
   /* ── Render Table ── */
   function renderTable() {
     const tbody = document.getElementById('articles-tbody');
-    if (articles.length === 0) {
+    const sorted = getSortedArticles();
+    if (sorted.length === 0) {
       tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;padding:2rem;color:#8b949e;">${T.noArticles}</td></tr>`;
       return;
     }
 
-    tbody.innerHTML = articles.map(a => `
+    tbody.innerHTML = sorted.map(a => `
       <tr>
         <td style="font-weight:600;color:#e6edf3;">${(a.en && a.en.title) || 'Untitled'}</td>
         <td>${a.category}</td>
@@ -974,7 +992,8 @@
     edit: editArticle,
     remove: deleteArticle,
     duplicate: duplicateArticle,
-    preview: previewArticle
+    preview: previewArticle,
+    toggleSort: toggleSort
   };
 
   /* ── Init ── */
