@@ -157,8 +157,8 @@
 
   /* ── Update SEO meta tags ── */
   function updateSEO(article, data) {
-    const url = `${SITE_URL}/articles/article.html?slug=${article.slug}&lang=${lang}`;
-    const altLangUrl = `${SITE_URL}/articles/article.html?slug=${article.slug}&lang=${lang === 'en' ? 'ar' : 'en'}`;
+    const url = `${SITE_URL}/${lang}/articles/${article.slug}.html`;
+    const altLangUrl = `${SITE_URL}/${lang === 'en' ? 'ar' : 'en'}/articles/${article.slug}.html`;
 
     document.title = data.metaTitle || data.title;
 
@@ -253,7 +253,12 @@
 
   /* ── Render Article ── */
   async function renderArticle() {
-    const slug = getParam('slug');
+    let slug = getParam('slug');
+    // Support static slug-based URLs like /en/articles/slug.html
+    if (!slug) {
+      const m = window.location.pathname.match(/\/articles\/([^/]+)\.html$/);
+      if (m) slug = decodeURIComponent(m[1]);
+    }
     if (!slug) { window.location.href = 'index.html'; return; }
 
     try {

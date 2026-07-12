@@ -495,7 +495,7 @@
 
   function previewArticle(id) {
     const a = articles.find(x => x.id === id);
-    if (a) window.open(`article.html?slug=${a.slug}&lang=en`, '_blank');
+    if (a) window.open(`${SITE_URL}/en/articles/${a.slug}.html`, '_blank');
   }
 
   /* ── Editor Tab Switching ── */
@@ -774,9 +774,9 @@
     // Dynamic article pages (EN + AR + root)
     articles.filter(a => !a.draft).forEach(a => {
       const aDate = a.updatedDate || a.publishDate;
-      xml += `  <url><loc>${SITE_URL}/articles/article.html?slug=${a.slug}</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>\n`;
-      xml += `  <url><loc>${SITE_URL}/en/articles/article.html?slug=${a.slug}</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>\n`;
-      xml += `  <url><loc>${SITE_URL}/ar/articles/article.html?slug=${a.slug}</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>\n`;
+      xml += `  <url><loc>${SITE_URL}/articles/${a.slug}.html</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>\n`;
+      xml += `  <url><loc>${SITE_URL}/en/articles/${a.slug}.html</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>\n`;
+      xml += `  <url><loc>${SITE_URL}/ar/articles/${a.slug}.html</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>\n`;
     });
 
     xml += '</urlset>';
@@ -799,11 +799,11 @@
       const d = a.en || {};
       xml += '    <item>\n';
       xml += `      <title>${d.title || ''}</title>\n`;
-      xml += `      <link>${SITE_URL}/articles/article.html?slug=${a.slug}</link>\n`;
+      xml += `      <link>${SITE_URL}/en/articles/${a.slug}.html</link>\n`;
       xml += `      <description>${d.excerpt || ''}</description>\n`;
       xml += `      <author>${a.author || ''}</author>\n`;
       xml += `      <pubDate>${new Date(a.publishDate).toUTCString()}</pubDate>\n`;
-      xml += `      <guid>${SITE_URL}/articles/article.html?slug=${a.slug}</guid>\n`;
+      xml += `      <guid>${SITE_URL}/en/articles/${a.slug}.html</guid>\n`;
       xml += '    </item>\n';
     });
 

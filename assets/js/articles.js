@@ -122,7 +122,7 @@
     const imgStyle = img ? `background-image:url('${img}')` : 'background:var(--bg-alt)';
 
     el.innerHTML = `
-      <a href="article.html?slug=${featured.slug}&lang=${LANG}" style="text-decoration:none;color:inherit;display:block;">
+      <a href="${featured.slug}.html" style="text-decoration:none;color:inherit;display:block;">
         <div class="featured-card">
           <div class="featured-card-img" style="${imgStyle}"></div>
           <div class="featured-card-body">
@@ -220,7 +220,7 @@
         ? `<img class="article-card-img" src="${img}" alt="${d.title}" loading="lazy">`
         : `<div class="article-card-img" style="display:flex;align-items:center;justify-content:center;font-size:2rem;background:var(--bg-alt);">📝</div>`;
       return `
-        <a href="article.html?slug=${a.slug}&lang=${LANG}" class="article-card" style="text-decoration:none;color:inherit;">
+        <a href="${a.slug}.html" class="article-card" style="text-decoration:none;color:inherit;">
           ${imgHtml}
           <div class="article-card-body">
             <div class="article-card-cat">${a.category}</div>
