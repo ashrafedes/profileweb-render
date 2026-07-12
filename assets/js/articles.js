@@ -69,6 +69,30 @@
   let currentPage = 1;
   let activeCategory = 'all';
   let searchQuery = '';
+  let sortDirection = -1; // -1 = newest first, 1 = oldest first
+
+  /* ── Sorting ── */
+  function sortArticles() {
+    filtered.sort((a, b) => {
+      const da = new Date(a.publishDate || '1970-01-01').getTime();
+      const db = new Date(b.publishDate || '1970-01-01').getTime();
+      return sortDirection === -1 ? db - da : da - db;
+    });
+  }
+
+  function toggleSort() {
+    sortDirection = sortDirection === -1 ? 1 : -1;
+    const btn = document.getElementById('btn-sort-date');
+    if (btn) btn.textContent = sortDirection === -1 ? (IS_ARABIC ? 'التاريخ ↓' : 'Date ↓') : (IS_ARABIC ? 'التاريخ ↑' : 'Date ↑');
+    currentPage = 1;
+    applySortAndRender();
+  }
+
+  function applySortAndRender() {
+    sortArticles();
+    renderArticles();
+    renderPagination();
+  }
 
   /* ── Fetch articles ── */
   async function loadArticles() {
@@ -77,6 +101,7 @@
       allArticles = await res.json();
       // Filter out drafts
       filtered = allArticles.filter(a => !a.draft);
+      sortArticles();
       init();
     } catch (e) {
       console.error('Failed to load articles:', e);
@@ -170,6 +195,7 @@
       }
       return true;
     });
+    sortArticles();
     renderArticles();
     renderPagination();
   }
@@ -310,6 +336,9 @@
       initNewsletter();
     }
   }
+
+  // Expose sort toggle for HTML onclick
+  window.toggleArticleSort = toggleSort;
 
   // Start
   if (document.readyState === 'loading') {
