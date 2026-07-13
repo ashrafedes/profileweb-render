@@ -305,16 +305,16 @@
             <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
               <div class="share-buttons">
                 <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">${T.share}:</span>
-                <a class="share-btn" href="https://twitter.com/intent/tweet?url=${encodeURIComponent(SITE_URL + '/articles/article.html?slug=' + article.slug + '&lang=' + lang)}&text=${encodeURIComponent(data.title)}" target="_blank" rel="noopener">𝕏 Twitter</a>
-                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SITE_URL + '/articles/article.html?slug=' + article.slug + '&lang=' + lang)}" target="_blank" rel="noopener">LinkedIn</a>
-                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SITE_URL + '/articles/article.html?slug=' + article.slug + '&lang=' + lang)}" target="_blank" rel="noopener">Facebook</a>
+                <a class="share-btn" href="https://twitter.com/intent/tweet?url=${encodeURIComponent(SITE_URL + '/' + lang + '/articles/' + article.slug + '.html')}&text=${encodeURIComponent(data.title)}" target="_blank" rel="noopener">𝕏 Twitter</a>
+                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SITE_URL + '/' + lang + '/articles/' + article.slug + '.html')}" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SITE_URL + '/' + lang + '/articles/' + article.slug + '.html')}" target="_blank" rel="noopener">Facebook</a>
                 <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
               </div>
             </div>
 
             <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
 
-            <a href="index.html?lang=${lang}" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">${T.backToArticles}</a>
+            <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">${T.backToArticles}</a>
           </div>
 
           <aside class="article-sidebar">
@@ -332,9 +332,7 @@
       bodyEl.querySelectorAll('.article-lang-switch button').forEach(btn => {
         btn.addEventListener('click', () => {
           const newLang = btn.dataset.lang;
-          const url = new URL(window.location.href);
-          url.searchParams.set('lang', newLang);
-          window.location.href = url.toString();
+          window.location.href = `${SITE_URL}/${newLang}/articles/${article.slug}.html`;
         });
       });
 
@@ -371,7 +369,7 @@
           const imgHtml = img
             ? `<img class="article-card-img" src="${img}" alt="${d.title}" loading="lazy">`
             : `<div class="article-card-img" style="display:flex;align-items:center;justify-content:center;font-size:2rem;background:var(--bg-alt);">📝</div>`;
-          return `<a href="article.html?slug=${a.slug}&lang=${lang}" class="article-card" style="text-decoration:none;color:inherit;">
+          return `<a href="${a.slug}.html" class="article-card" style="text-decoration:none;color:inherit;">
             ${imgHtml}
             <div class="article-card-body">
               <div class="article-card-cat">${a.category}</div>
@@ -395,14 +393,14 @@
     let html = '';
     if (prev) {
       const d = prev[lang] || prev.en;
-      html += `<a href="article.html?slug=${prev.slug}&lang=${lang}" style="flex:1;min-width:200px;text-decoration:none;">
+      html += `<a href="${prev.slug}.html" style="flex:1;min-width:200px;text-decoration:none;">
         <div style="font-size:0.78rem;color:var(--text-light);">← ${T.previousArticle}</div>
         <div style="font-weight:600;color:var(--text);font-size:0.9rem;margin-top:0.2rem;">${d.title}</div>
       </a>`;
     }
     if (next) {
       const d = next[lang] || next.en;
-      html += `<a href="article.html?slug=${next.slug}&lang=${lang}" style="flex:1;min-width:200px;text-align:right;text-decoration:none;">
+      html += `<a href="${next.slug}.html" style="flex:1;min-width:200px;text-align:right;text-decoration:none;">
         <div style="font-size:0.78rem;color:var(--text-light);">${T.nextArticle} →</div>
         <div style="font-weight:600;color:var(--text);font-size:0.9rem;margin-top:0.2rem;">${d.title}</div>
       </a>`;
