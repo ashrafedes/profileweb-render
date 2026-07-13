@@ -613,7 +613,10 @@
 
   /* ── Translate text using OpenRouter AI, with free fallbacks ── */
   function getOpenRouterKey() {
-    let key = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.OPENROUTER_API_KEY) || '';
+    // Reuse the existing chatbot OpenRouter key if available
+    let key = (typeof window !== 'undefined' && window.CHATBOT_API_KEY) || '';
+    if (key) return key;
+    key = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.OPENROUTER_API_KEY) || '';
     if (key) return key;
     key = localStorage.getItem('openrouter_key') || '';
     if (key) return key;
