@@ -641,67 +641,67 @@
 
   async function translateArticleToArabic(enData) {
     const key = getOpenRouterKey();
-    if (!key) {
-      // No key: try MyMemory field by field, fallback to English copy
-      const tryMem = async (text) => { try { return await translateWithMyMemory(text); } catch (e) { return text; } };
-      return {
-        title: await tryMem(enData.title),
-        excerpt: await tryMem(enData.excerpt),
-        content: await tryMem(enData.content),
-        metaTitle: await tryMem(enData.metaTitle || enData.title),
-        metaDescription: await tryMem(enData.metaDescription || enData.excerpt),
-        keywords: await Promise.all((enData.keywords || []).map(k => tryMem(k)))
-      };
+
+    // Try OpenRouter first if we have a key
+    if (key) {
+      try {
+        const systemPrompt = `You are a professional translator. Translate the provided English article into fluent, natural Arabic. Preserve Markdown formatting. Return ONLY a valid JSON object with these exact keys: title, excerpt, content, metaTitle, metaDescription, keywords (array). Do not wrap the JSON in markdown code blocks.`;
+        const userPrompt = JSON.stringify({
+          title: enData.title,
+          excerpt: enData.excerpt,
+          content: enData.content,
+          metaTitle: enData.metaTitle || enData.title,
+          metaDescription: enData.metaDescription || enData.excerpt,
+          keywords: enData.keywords || []
+        });
+
+        const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${key}`,
+            'HTTP-Referer': (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.SITE_URL) || location.origin,
+            'X-Title': 'Articles Dashboard Translation'
+          },
+          body: JSON.stringify({
+            model: 'meta-llama/llama-3.3-70b-instruct:free',
+            messages: [
+              { role: 'system', content: systemPrompt },
+              { role: 'user', content: userPrompt }
+            ]
+          })
+        });
+
+        if (res.ok) {
+          const data = await res.json();
+          const raw = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
+          if (raw) {
+            const cleaned = raw.replace(/^```json\s*/, '').replace(/\s*```$/, '').trim();
+            const translated = JSON.parse(cleaned);
+            return {
+              title: translated.title || enData.title,
+              excerpt: translated.excerpt || enData.excerpt,
+              content: translated.content || enData.content,
+              metaTitle: translated.metaTitle || enData.metaTitle || enData.title,
+              metaDescription: translated.metaDescription || enData.metaDescription || enData.excerpt,
+              keywords: Array.isArray(translated.keywords) ? translated.keywords : enData.keywords
+            };
+          }
+        }
+      } catch (e) {
+        console.warn('OpenRouter failed, falling back to MyMemory:', e.message);
+      }
     }
 
-    const systemPrompt = `You are a professional translator. Translate the provided English article into fluent, natural Arabic. Preserve Markdown formatting. Return ONLY a valid JSON object with these exact keys: title, excerpt, content, metaTitle, metaDescription, keywords (array). Do not wrap the JSON in markdown code blocks.`;
-
-    const userPrompt = JSON.stringify({
-      title: enData.title,
-      excerpt: enData.excerpt,
-      content: enData.content,
-      metaTitle: enData.metaTitle || enData.title,
-      metaDescription: enData.metaDescription || enData.excerpt,
-      keywords: enData.keywords || []
-    });
-
-    const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${key}`,
-        'HTTP-Referer': (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.SITE_URL) || location.origin,
-        'X-Title': 'Articles Dashboard Translation'
-      },
-      body: JSON.stringify({
-        model: 'meta-llama/llama-3.3-70b-instruct:free',
-        messages: [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: userPrompt }
-        ]
-      })
-    });
-
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err.error?.message || `OpenRouter HTTP ${res.status}`);
-    }
-
-    const data = await res.json();
-    const raw = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
-    if (!raw) throw new Error('OpenRouter returned empty translation');
-
-    // Some models wrap JSON in ```json ... ```
-    const cleaned = raw.replace(/^```json\s*/, '').replace(/\s*```$/, '').trim();
-    const translated = JSON.parse(cleaned);
-
+    // Fallback: MyMemory field by field, then English copy
+    const tryMem = async (text) => { try { return await translateWithMyMemory(text); } catch (e) { return text; } };
     return {
-      title: translated.title || enData.title,
-      excerpt: translated.excerpt || enData.excerpt,
-      content: translated.content || enData.content,
-      metaTitle: translated.metaTitle || enData.metaTitle || enData.title,
-      metaDescription: translated.metaDescription || enData.metaDescription || enData.excerpt,
-      keywords: Array.isArray(translated.keywords) ? translated.keywords : enData.keywords
+      title: await tryMem(enData.title),
+      excerpt: await tryMem(enData.excerpt),
+      content: await tryMem(enData.content),
+      metaTitle: await tryMem(enData.metaTitle || enData.title),
+      metaDescription: await tryMem(enData.metaDescription || enData.excerpt),
+      keywords: await Promise.all((enData.keywords || []).map(k => tryMem(k)))
     };
   }
 
