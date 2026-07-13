@@ -255,7 +255,7 @@
         throw new Error(refErr.message || 'Failed to update branch: ' + refRes.statusText);
       }
 
-      showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml committed in a single commit. Site will auto-deploy shortly.</span>');
+      showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml committed. Arabic content is saved. If the live site still shows English after 5 minutes, log in to Render and click “Manual Deploy” because Render is not auto-deploying the latest commits.</span>');
       // Reload articles from server after a short delay to confirm changes
       setTimeout(() => loadArticles().then(() => { renderStats(); renderTable(); }), 3000);
     } catch (e) {

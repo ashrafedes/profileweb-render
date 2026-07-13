@@ -262,7 +262,7 @@
     if (!slug) { window.location.href = 'index.html'; return; }
 
     try {
-      const res = await fetch(ASSET_BASE + 'articles/articles.json');
+      const res = await fetch(ASSET_BASE + 'articles/articles.json?v=' + Date.now(), { cache: 'no-store' });
       const articles = await res.json();
       const article = articles.find(a => a.slug === slug);
 
