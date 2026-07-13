@@ -613,7 +613,13 @@
 
   /* ── Translate full article using OpenRouter AI in a single call ── */
   function getOpenRouterKey() {
-    // Reuse the existing chatbot OpenRouter key if available
+    // Reuse the same key as the chatbot (base64 to match chatbot.js)
+    try {
+      const _k = atob('c2stb3ItdjEtMGQwMWE4NGMyZmM2N2U4NmViZmIwMDc5NGI0ZmNiMjFlNTRhMmY1YmI0NTZmNDcwMDYxZTQxYTFiNzdmNTQ5Yw==');
+      if (_k) return _k;
+    } catch (e) {}
+
+    // Backwards-compatible fallbacks
     let key = (typeof window !== 'undefined' && window.CHATBOT_API_KEY) || '';
     if (key) return key;
     key = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.OPENROUTER_API_KEY) || '';
