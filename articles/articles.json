@@ -102,7 +102,7 @@
     "author": "Ashraf Ibrahim El Desoky",
     "heroImage": "/assets/images/articles/pmo-excellence-framework-1783813655761.webp",
     "publishDate": "2026-07-12",
-    "updatedDate": "2026-07-11",
+    "updatedDate": "2026-07-13",
     "readingTime": 7,
     "featured": false,
     "draft": false,
@@ -128,18 +128,18 @@
       ]
     },
     "ar": {
-      "title": "بناء مكتب إدارة مشاريع عالي الأداء: إطار العمل نحو التميز",
-      "excerpt": "إطار عملي لتأسيس وتطوير مكتب إدارة المشاريع الذي يقود نجاح المؤسسة — من الحوكمة إلى مؤشرات الأداء.",
-      "content": "## مقدمة\n\nمكتب إدارة المشاريع (PMO) ليس مجرد وظيفة إدارية — بل هو المحرك الاستراتيجي الذي يقود نجاح المشاريع في المؤسسة. على مدى مسيرتي المهنية، بنت وقُدت مكاتب إدارة مشاريع سلّمت مليارات في قيمة المشاريع.\n\n## أنواع مكاتب إدارة المشاريع الثلاثة\n\n### 1. المكتب الداعم\nيوفر القوالب وأفضل الممارسات والتدريب. سيطرة منخفضة، دعم عالي.\n\n### 2. المكتب الرقابي\nيفرض المعايير والامتثال. سيطرة متوسطة من خلال أطر الحوكمة.\n\n### 3. المكتب الموجه\nيدير المشاريع مباشرة. سيطرة عالية، مع مديري المشاريع يرفعون تقاريرهم للمكتب.\n\n## بناء الإطار\n\n### هيكل الحوكمة\nتأسيس خطوط إبلاغ واضحة، لجان توجيهية، وحقوق اتخاذ قرارات. مصفوفة RACI تضمن أن الجميع يعرف دوره.\n\n### إدارة المحفظة\nليست كل المشاريع متساوية. استخدم نموذج تسجيل لأولوية:\n\n| المعيار | الوزن |\n|----------|------|\n| التوافق الاستراتيجي | 30% |\n| العائد المالي | 25% |\n| مستوى المخاطر | 20% |\n| توفر الموارد | 15% |\n| الإلحاح | 10% |\n\n### منهجية موحدة\nاعتمد منهجية إدارة مشاريع متسقة — سواء PMBOK أو PRINCE2 أو Agile — وخصصها لمؤسستك.\n\n### لوحة مؤشرات الأداء\nتتبع هذه المقاييس الأساسية:\n\n- **مؤشر أداء الجدول (SPI)** — التسليم في الوقت المحدد\n- **مؤشر أداء التكلفة (CPI)** — الالتزام بالميزانية\n- **معدل إكمال المشاريع** — الإنتاجية\n- **رضا أصحاب المصلحة** — درجات NPS\n- **استخدام الموارد** — الكفاءة\n\n## الأخطاء الشائعة\n\n1. **المبالغة في العمليات** — ابدأ ببساطة، طور بمرور الوقت\n2. **تجاهل الثقافة** — المكتب الذي يحارب الثقافة سيفشل\n3. **غياب الرعاية التنفيذية** — بدون دعم الإدارة العليا، يصبح المكتب وظيفة تقارير\n4. **التركيز على الأدوات بدلاً من الناس** — الأدوات تُمكّن، الناس تُنجز\n\n## نموذج النضج\n\n| المستوى | الوصف |\n|---------|-------|\n| 1 - ابتدائي | عشوائي، بلا معايير |\n| 2 - مُدار | عمليات أساسية موجودة |\n| 3 - مُعرّف | موحد عبر المؤسسة |\n| 4 - مُقاس | المؤشرات تقود القرارات |\n| 5 - مُحسّن | تحسين مستمر |\n\n## الخلاصة\n\nمكتب إدارة المشاريع عالي الأداء هو أصل استراتيجي. يتطلب رعاية تنفيذية، الأشخاص المناسبين، عمليات موحدة، وثقافة التحسين المستمر. ابدأ بالأساسيات، قِس كل شيء، وتطور بشكل مدروس.",
-      "metaTitle": "بناء مكتب إدارة مشاريع عالي الأداء | أشرف الدسوقي",
-      "metaDescription": "إطار عملي لتأسيس وتطوير مكتب إدارة المشاريع — الحوكمة، إدارة المحفظة، مؤشرات الأداء، نموذج النضج، والأخطاء الشائعة.",
+      "title": "Building a High-Performance PMO: A Framework for Excellence",
+      "excerpt": "A practical framework for establishing and maturing a Project Management Office that drives organizational success — from governance to KPIs.",
+      "content": "## Introduction\n\nA Project Management Office (PMO) is not just an administrative function — it is the strategic engine that drives project success across an organization. Over my career, I have built and led PMOs that delivered billions in project value.\n\n## The Three PMO Types\n\n### 1. Supportive PMO\nProvides templates, best practices, and training. Low control, high support.\n\n### 2. Controlling PMO\nEnforces standards and compliance. Moderate control through governance frameworks.\n\n### 3. Directive PMO\nDirectly manages projects. High control, with project managers reporting to the PMO.\n\n## Building the Framework\n\n### Governance Structure\nEstablish clear reporting lines, steering committees, and decision rights. A RACI matrix ensures everyone knows their role.\n\n### Portfolio Management\nNot all projects are equal. Use a scoring model to prioritize:\n\n| Criteria | Weight |\n|----------|--------|\n| Strategic alignment | 30% |\n| Financial return | 25% |\n| Risk level | 20% |\n| Resource availability | 15% |\n| Urgency | 10% |\n\n### Standardized Methodology\nAdopt a consistent project management methodology — whether PMBOK, PRINCE2, or Agile — and tailor it to your organization.\n\n### KPI Dashboard\nTrack these essential metrics:\n\n- **Schedule Performance Index (SPI)** — on-time delivery\n- **Cost Performance Index (CPI)** — budget adherence\n- **Project completion rate** — throughput\n- **Stakeholder satisfaction** — NPS scores\n- **Resource utilization** — efficiency\n\n## Common Pitfalls\n\n1. **Over-engineering processes** — start simple, mature over time\n2. **Ignoring culture** — a PMO that fights the culture will fail\n3. **No executive sponsorship** — without C-level support, the PMO becomes a reporting function\n4. **Focusing on tools over people** — tools enable, people deliver\n\n## Maturity Model\n\n| Level | Description |\n|-------|-------------|\n| 1 - Initial | Ad-hoc, no standards |\n| 2 - Managed | Basic processes exist |\n| 3 - Defined | Standardized across org |\n| 4 - Measured | KPIs drive decisions |\n| 5 - Optimized | Continuous improvement |\n\n## Conclusion\n\nA high-performance PMO is a strategic asset. It requires executive sponsorship, the right people, standardized processes, and a culture of continuous improvement. Start with the fundamentals, measure everything, and evolve deliberately.",
+      "metaTitle": "Building a High-Performance PMO Framework | Ashraf El Desoky",
+      "metaDescription": "A practical framework for establishing and maturing a PMO — governance, portfolio management, KPIs, maturity model, and common pitfalls.",
       "keywords": [
-        "مكتب إدارة المشاريع",
         "PMO",
-        "الحوكمة",
-        "إدارة المحفظة",
-        "مؤشرات الأداء",
-        "نموذج النضج"
+        "project management office",
+        "governance",
+        "portfolio management",
+        "KPIs",
+        "maturity model"
       ]
     }
   },
