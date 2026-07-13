@@ -624,14 +624,7 @@
     if (key) return key;
     key = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.OPENROUTER_API_KEY) || '';
     if (key) return key;
-    key = localStorage.getItem('openrouter_key') || '';
-    if (key) return key;
-    key = prompt('Enter your OpenRouter API key:\n\nGet one at https://openrouter.ai/keys');
-    if (key && key.trim()) {
-      key = key.trim();
-      localStorage.setItem('openrouter_key', key);
-    }
-    return key || '';
+    return localStorage.getItem('openrouter_key') || '';
   }
 
   async function translateWithMyMemory(text) {
