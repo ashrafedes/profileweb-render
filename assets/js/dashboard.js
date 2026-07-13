@@ -611,25 +611,82 @@
     }
   }
 
-  /* ── Translate text via a CORS-enabled free translation API ── */
-  async function translateText(text) {
-    if (!text || !text.trim()) return '';
-    const encoded = encodeURIComponent(text);
+  /* ── Translate text using OpenRouter AI, with free fallbacks ── */
+  function getOpenRouterKey() {
+    let key = (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.OPENROUTER_API_KEY) || '';
+    if (key) return key;
+    key = localStorage.getItem('openrouter_key') || '';
+    if (key) return key;
+    key = prompt('Enter your OpenRouter API key:\n\nGet one at https://openrouter.ai/keys');
+    if (key && key.trim()) {
+      key = key.trim();
+      localStorage.setItem('openrouter_key', key);
+    }
+    return key || '';
+  }
 
-    // Primary: MyMemory Translate (CORS-enabled, free tier ~1000 words/day)
-    try {
-      const res = await fetch(`https://api.mymemory.translated.net/get?q=${encoded}&langpair=en|ar`, { mode: 'cors' });
-      if (!res.ok) throw new Error(`MyMemory HTTP ${res.status}`);
-      const data = await res.json();
-      if (data && data.responseData && data.responseData.translatedText) {
-        return data.responseData.translatedText;
-      }
-      throw new Error('MyMemory returned empty translation');
-    } catch (e) {
-      console.warn('MyMemory translation failed, falling back to copy:', e);
+  async function translateWithOpenRouter(text) {
+    const key = getOpenRouterKey();
+    if (!key) throw new Error('No OpenRouter API key configured');
+
+    const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${key}`,
+        'HTTP-Referer': (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.SITE_URL) || location.origin,
+        'X-Title': 'Articles Dashboard Translation'
+      },
+      body: JSON.stringify({
+        model: 'meta-llama/llama-3.3-70b-instruct:free',
+        messages: [
+          { role: 'system', content: 'You are a professional translator. Translate the following English text into fluent, natural Arabic. Preserve Markdown formatting. Return ONLY the translated Arabic text, no explanations.' },
+          { role: 'user', content: text }
+        ]
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error?.message || `OpenRouter HTTP ${res.status}`);
     }
 
-    // Fallback: return original text
+    const data = await res.json();
+    const translated = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
+    if (!translated) throw new Error('OpenRouter returned empty translation');
+    return translated.trim();
+  }
+
+  async function translateWithMyMemory(text) {
+    if (!text || !text.trim()) return '';
+    const encoded = encodeURIComponent(text);
+    const res = await fetch(`https://api.mymemory.translated.net/get?q=${encoded}&langpair=en|ar`, { mode: 'cors' });
+    if (!res.ok) throw new Error(`MyMemory HTTP ${res.status}`);
+    const data = await res.json();
+    if (data && data.responseData && data.responseData.translatedText) {
+      return data.responseData.translatedText;
+    }
+    throw new Error('MyMemory returned empty translation');
+  }
+
+  async function translateText(text) {
+    if (!text || !text.trim()) return '';
+
+    // Primary: OpenRouter AI
+    try {
+      return await translateWithOpenRouter(text);
+    } catch (e) {
+      console.warn('OpenRouter translation failed, trying MyMemory:', e.message);
+    }
+
+    // Fallback: MyMemory free translation
+    try {
+      return await translateWithMyMemory(text);
+    } catch (e) {
+      console.warn('MyMemory translation failed, falling back to copy:', e.message);
+    }
+
+    // Final fallback: return original English
     return text;
   }
 
@@ -646,23 +703,15 @@
     const paragraphs = (enData.content || '').split(/\n+/).filter(p => p.trim());
     const translatedParagraphs = [];
     for (const para of paragraphs) {
-      try {
-        translatedParagraphs.push(await translateText(para));
-      } catch (e) {
-        translatedParagraphs.push(para);
-      }
+      translatedParagraphs.push(await translateText(para));
     }
     const content = translatedParagraphs.join('\n\n');
 
     // Translate keywords individually
     const keywords = [];
     for (const kw of enData.keywords || []) {
-      try {
-        const t = await translateText(kw);
-        if (t) keywords.push(t);
-      } catch (e) {
-        keywords.push(kw);
-      }
+      const t = await translateText(kw);
+      if (t) keywords.push(t);
     }
 
     return { title, excerpt, content, metaTitle, metaDescription, keywords };
