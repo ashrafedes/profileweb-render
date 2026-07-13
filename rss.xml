@@ -286,5 +286,13 @@
       <pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/hybrid-agile-methodologies-guide.html</guid>
     </item>
+    <item>
+      <title>Managing Project Controls on FTTH Networks: A Practical Guide to Agile Delivery in Large-Scale Telecom Rollouts</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/ftth-agile-project-controls.html</link>
+      <description>A practical framework for applying Agile principles to FTTH rollouts, based on real field experience managing project controls for STC deployments.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Mon, 13 Jul 2026 20:17:03 +0000</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/ftth-agile-project-controls.html</guid>
+    </item>
   </channel>
 </rss>
