@@ -611,7 +611,7 @@
     }
   }
 
-  /* ── Translate text using OpenRouter AI, with free fallbacks ── */
+  /* ── Translate full article using OpenRouter AI in a single call ── */
   function getOpenRouterKey() {
     // Reuse the existing chatbot OpenRouter key if available
     let key = (typeof window !== 'undefined' && window.CHATBOT_API_KEY) || '';
@@ -628,38 +628,6 @@
     return key || '';
   }
 
-  async function translateWithOpenRouter(text) {
-    const key = getOpenRouterKey();
-    if (!key) throw new Error('No OpenRouter API key configured');
-
-    const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${key}`,
-        'HTTP-Referer': (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.SITE_URL) || location.origin,
-        'X-Title': 'Articles Dashboard Translation'
-      },
-      body: JSON.stringify({
-        model: 'meta-llama/llama-3.3-70b-instruct:free',
-        messages: [
-          { role: 'system', content: 'You are a professional translator. Translate the following English text into fluent, natural Arabic. Preserve Markdown formatting. Return ONLY the translated Arabic text, no explanations.' },
-          { role: 'user', content: text }
-        ]
-      })
-    });
-
-    if (!res.ok) {
-      const err = await res.json().catch(() => ({}));
-      throw new Error(err.error?.message || `OpenRouter HTTP ${res.status}`);
-    }
-
-    const data = await res.json();
-    const translated = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
-    if (!translated) throw new Error('OpenRouter returned empty translation');
-    return translated.trim();
-  }
-
   async function translateWithMyMemory(text) {
     if (!text || !text.trim()) return '';
     const encoded = encodeURIComponent(text);
@@ -672,52 +640,70 @@
     throw new Error('MyMemory returned empty translation');
   }
 
-  async function translateText(text) {
-    if (!text || !text.trim()) return '';
-
-    // Primary: OpenRouter AI
-    try {
-      return await translateWithOpenRouter(text);
-    } catch (e) {
-      console.warn('OpenRouter translation failed, trying MyMemory:', e.message);
-    }
-
-    // Fallback: MyMemory free translation
-    try {
-      return await translateWithMyMemory(text);
-    } catch (e) {
-      console.warn('MyMemory translation failed, falling back to copy:', e.message);
-    }
-
-    // Final fallback: return original English
-    return text;
-  }
-
   async function translateArticleToArabic(enData) {
-    // Translate short fields in parallel
-    const [title, excerpt, metaTitle, metaDescription] = await Promise.all([
-      translateText(enData.title),
-      translateText(enData.excerpt),
-      translateText(enData.metaTitle || enData.title),
-      translateText(enData.metaDescription || enData.excerpt)
-    ]);
-
-    // Translate content paragraph by paragraph to keep requests small
-    const paragraphs = (enData.content || '').split(/\n+/).filter(p => p.trim());
-    const translatedParagraphs = [];
-    for (const para of paragraphs) {
-      translatedParagraphs.push(await translateText(para));
-    }
-    const content = translatedParagraphs.join('\n\n');
-
-    // Translate keywords individually
-    const keywords = [];
-    for (const kw of enData.keywords || []) {
-      const t = await translateText(kw);
-      if (t) keywords.push(t);
+    const key = getOpenRouterKey();
+    if (!key) {
+      // No key: try MyMemory field by field, fallback to English copy
+      const tryMem = async (text) => { try { return await translateWithMyMemory(text); } catch (e) { return text; } };
+      return {
+        title: await tryMem(enData.title),
+        excerpt: await tryMem(enData.excerpt),
+        content: await tryMem(enData.content),
+        metaTitle: await tryMem(enData.metaTitle || enData.title),
+        metaDescription: await tryMem(enData.metaDescription || enData.excerpt),
+        keywords: await Promise.all((enData.keywords || []).map(k => tryMem(k)))
+      };
     }
 
-    return { title, excerpt, content, metaTitle, metaDescription, keywords };
+    const systemPrompt = `You are a professional translator. Translate the provided English article into fluent, natural Arabic. Preserve Markdown formatting. Return ONLY a valid JSON object with these exact keys: title, excerpt, content, metaTitle, metaDescription, keywords (array). Do not wrap the JSON in markdown code blocks.`;
+
+    const userPrompt = JSON.stringify({
+      title: enData.title,
+      excerpt: enData.excerpt,
+      content: enData.content,
+      metaTitle: enData.metaTitle || enData.title,
+      metaDescription: enData.metaDescription || enData.excerpt,
+      keywords: enData.keywords || []
+    });
+
+    const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${key}`,
+        'HTTP-Referer': (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.SITE_URL) || location.origin,
+        'X-Title': 'Articles Dashboard Translation'
+      },
+      body: JSON.stringify({
+        model: 'meta-llama/llama-3.3-70b-instruct:free',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userPrompt }
+        ]
+      })
+    });
+
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.error?.message || `OpenRouter HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    const raw = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
+    if (!raw) throw new Error('OpenRouter returned empty translation');
+
+    // Some models wrap JSON in ```json ... ```
+    const cleaned = raw.replace(/^```json\s*/, '').replace(/\s*```$/, '').trim();
+    const translated = JSON.parse(cleaned);
+
+    return {
+      title: translated.title || enData.title,
+      excerpt: translated.excerpt || enData.excerpt,
+      content: translated.content || enData.content,
+      metaTitle: translated.metaTitle || enData.metaTitle || enData.title,
+      metaDescription: translated.metaDescription || enData.metaDescription || enData.excerpt,
+      keywords: Array.isArray(translated.keywords) ? translated.keywords : enData.keywords
+    };
   }
 
   /* ── Slugify ── */
