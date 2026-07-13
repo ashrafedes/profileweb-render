@@ -611,41 +611,61 @@
     }
   }
 
-  /* ── Placeholder function for future AI integration ── */
-  async function translateArticleToArabic(enData) {
-    // ═══════════════════════════════════════════════════
-    //  AI TRANSLATION PLACEHOLDER
-    //  Replace this function body with your AI provider call.
-    //  Expected return: { title, excerpt, content, metaTitle, metaDescription, keywords[] }
-    //
-    //  Example with OpenRouter:
-    //  const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-    //    method: 'POST',
-    //    headers: {
-    //      'Authorization': 'Bearer YOUR_KEY',
-    //      'Content-Type': 'application/json'
-    //    },
-    //    body: JSON.stringify({
-    //      model: 'meta-llama/llama-3.3-70b-instruct',
-    //      messages: [
-    //        { role: 'system', content: 'Translate the following article from English to Arabic. Return JSON with keys: title, excerpt, content, metaTitle, metaDescription, keywords.' },
-    //        { role: 'user', content: JSON.stringify(enData) }
-    //      ]
-    //    })
-    //  });
-    //  const data = await res.json();
-    //  return JSON.parse(data.choices[0].message.content);
-    // ═══════════════════════════════════════════════════
+  /* ── Translate text via a CORS-enabled free translation API ── */
+  async function translateText(text) {
+    if (!text || !text.trim()) return '';
+    const encoded = encodeURIComponent(text);
 
-    // For now: return English as starting point for manual editing
-    return {
-      title: enData.title,
-      excerpt: enData.excerpt,
-      content: enData.content,
-      metaTitle: enData.metaTitle,
-      metaDescription: enData.metaDescription,
-      keywords: enData.keywords
-    };
+    // Primary: MyMemory Translate (CORS-enabled, free tier ~1000 words/day)
+    try {
+      const res = await fetch(`https://api.mymemory.translated.net/get?q=${encoded}&langpair=en|ar`, { mode: 'cors' });
+      if (!res.ok) throw new Error(`MyMemory HTTP ${res.status}`);
+      const data = await res.json();
+      if (data && data.responseData && data.responseData.translatedText) {
+        return data.responseData.translatedText;
+      }
+      throw new Error('MyMemory returned empty translation');
+    } catch (e) {
+      console.warn('MyMemory translation failed, falling back to copy:', e);
+    }
+
+    // Fallback: return original text
+    return text;
+  }
+
+  async function translateArticleToArabic(enData) {
+    // Translate short fields in parallel
+    const [title, excerpt, metaTitle, metaDescription] = await Promise.all([
+      translateText(enData.title),
+      translateText(enData.excerpt),
+      translateText(enData.metaTitle || enData.title),
+      translateText(enData.metaDescription || enData.excerpt)
+    ]);
+
+    // Translate content paragraph by paragraph to keep requests small
+    const paragraphs = (enData.content || '').split(/\n+/).filter(p => p.trim());
+    const translatedParagraphs = [];
+    for (const para of paragraphs) {
+      try {
+        translatedParagraphs.push(await translateText(para));
+      } catch (e) {
+        translatedParagraphs.push(para);
+      }
+    }
+    const content = translatedParagraphs.join('\n\n');
+
+    // Translate keywords individually
+    const keywords = [];
+    for (const kw of enData.keywords || []) {
+      try {
+        const t = await translateText(kw);
+        if (t) keywords.push(t);
+      } catch (e) {
+        keywords.push(kw);
+      }
+    }
+
+    return { title, excerpt, content, metaTitle, metaDescription, keywords };
   }
 
   /* ── Slugify ── */
