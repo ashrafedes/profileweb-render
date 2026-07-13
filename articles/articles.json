@@ -105,7 +105,7 @@
     "updatedDate": "2026-07-13",
     "readingTime": 7,
     "featured": false,
-    "draft": false,
+    "draft": true,
     "tags": [
       "PMO",
       "Governance",
