@@ -144,8 +144,112 @@
     return btoa(binary);
   }
 
+  /* ── Generate Article HTML Page ── */
+  function buildArticleHTML(article, lang) {
+    const IS_ARABIC = lang === 'ar';
+    const d = article[lang] || article.en || {};
+    const title = d.metaTitle || d.title || article.en.title || '';
+    const desc = d.metaDescription || d.excerpt || article.en.excerpt || '';
+    const keywords = (d.keywords || article.en.keywords || []).join(', ');
+    const author = article.author || 'Ashraf Ibrahim El Desoky';
+    const date = article.publishDate || new Date().toISOString().split('T')[0];
+    const modDate = article.updatedDate || date;
+    const dir = IS_ARABIC ? 'rtl' : 'ltr';
+    const htmlLang = IS_ARABIC ? 'ar' : 'en';
+    const locale = IS_ARABIC ? 'ar_SA' : 'en_US';
+    const fontFamily = IS_ARABIC ? "Cairo" : "Inter";
+    const pageUrl = `${SITE_URL}/${lang}/articles/${article.slug}.html`;
+    const heroImage = article.heroImage || '';
+    const heroImageUrl = heroImage ? (heroImage.startsWith('http') ? heroImage : `https://www.ashraf-eldesoky.space${heroImage}`) : '';
+    const relativeBase = '../../';
+
+    const ld = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": d.title || article.en.title || '',
+      "description": desc,
+      "author": { "@type": "Person", "name": author },
+      "datePublished": date,
+      "dateModified": modDate,
+      "image": heroImage,
+      "publisher": { "@type": "Person", "name": author },
+      "mainEntityOfPage": pageUrl,
+      "inLanguage": htmlLang
+    }, null, 0);
+
+    const ogImageTags = heroImageUrl ? `\n  <meta property="og:image" content="${heroImageUrl}">\n  <meta property="og:image:width" content="1200">\n  <meta property="og:image:height" content="627">\n  <meta property="og:image:type" content="image/webp">` : '';
+    const twitterImageTag = heroImageUrl ? `\n  <meta name="twitter:image" content="${heroImageUrl}">` : '';
+
+    return `<!DOCTYPE html>
+<html lang="${htmlLang}" dir="${dir}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title}</title>
+  <meta name="description" content="${desc}">
+  <meta name="keywords" content="${keywords}">
+  <meta name="author" content="${author}">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="${d.title || article.en.title || ''}">
+  <meta property="og:description" content="${desc}">
+  <meta property="og:url" content="${pageUrl}">${ogImageTags}
+  <meta property="og:locale" content="${locale}">
+  <meta property="article:published_time" content="${date}">
+  <meta property="article:modified_time" content="${modDate}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${title}">
+  <meta name="twitter:description" content="${desc}">${twitterImageTag}
+  <link rel="canonical" href="${pageUrl}">
+  <link rel="alternate" hreflang="en" href="${SITE_URL}/en/articles/${article.slug}.html">
+  <link rel="alternate" hreflang="ar" href="${SITE_URL}/ar/articles/${article.slug}.html">
+  <link rel="icon" type="image/svg+xml" href="${relativeBase}assets/icons/favicon.svg">
+  <link rel="manifest" href="${relativeBase}manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=${fontFamily}:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="${relativeBase}assets/css/main.css">
+  <link rel="stylesheet" href="${relativeBase}assets/css/articles.css">
+  ${IS_ARABIC ? "<style>* { font-family: 'Cairo', sans-serif; }</style>" : ''}
+  <script type="application/ld+json">${ld}</script>
+</head>
+<body>
+  <div id="ecms-nav-inject"></div>
+
+  <main id="main-content" class="page-wrapper" style="padding-top:0;">
+    <div class="article-hero" id="article-hero"></div>
+
+    <section class="section" style="padding:2.5rem 0;">
+      <div class="container">
+        <div id="article-body"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding:0 0 2rem;">
+      <div class="container" id="related-articles"></div>
+    </section>
+
+    <section class="section" style="padding:0 0 3rem;">
+      <div class="container" id="newsletter-section"></div>
+    </section>
+  </main>
+
+  <div id="ecms-footer-inject"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="${relativeBase}config.js"></script>
+  <script src="${relativeBase}assets/js/i18n.js?v=2"></script>
+  <script src="${relativeBase}assets/js/components.js?v=4"></script>
+  <script src="${relativeBase}assets/js/core.js?v=5"></script>
+  <script src="${relativeBase}assets/js/article.js?v=5"></script>
+</body>
+</html>
+`;
+  }
+
   /* ── Save Articles — commits to GitHub via Contents API ── */
-  async function saveArticles() {
+  async function saveArticles(currentArticle) {
     renderStats();
     renderTable();
 
@@ -199,6 +303,12 @@
       { path: 'rss.xml', content: rssContent }
     ];
 
+    // Generate static article HTML pages for the saved article
+    if (currentArticle && currentArticle.slug) {
+      files.push({ path: `en/articles/${currentArticle.slug}.html`, content: buildArticleHTML(currentArticle, 'en') });
+      files.push({ path: `ar/articles/${currentArticle.slug}.html`, content: buildArticleHTML(currentArticle, 'ar') });
+    }
+
     try {
       // Get latest commit on branch
       const branchRes = await fetch(`https://api.github.com/repos/${GH_REPO}/branches/${GH_BRANCH}`, {
@@ -236,7 +346,7 @@
         method: 'POST',
         headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          message: `Dashboard: update articles, sitemap, rss (${now})`,
+          message: `Dashboard: update articles, sitemap, rss, article pages (${now})`,
           tree: treeData.sha,
           parents: [latestCommitSha]
         })
@@ -255,7 +365,7 @@
         throw new Error(refErr.message || 'Failed to update branch: ' + refRes.statusText);
       }
 
-      showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml committed. Arabic content is saved. If the live site still shows English after 5 minutes, log in to Render and click “Manual Deploy” because Render is not auto-deploying the latest commits.</span>');
+      showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml and article HTML pages committed. Arabic content is saved. If the live site still shows English after 5 minutes, log in to Render and click “Manual Deploy” because Render is not auto-deploying the latest commits.</span>');
       // Reload articles from server after a short delay to confirm changes
       setTimeout(() => loadArticles().then(() => { renderStats(); renderTable(); }), 3000);
     } catch (e) {
@@ -459,7 +569,7 @@
       articles.push(article);
     }
 
-    await saveArticles();
+    await saveArticles(article);
     closeEditor();
   }
 
