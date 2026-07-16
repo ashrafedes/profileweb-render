@@ -71,6 +71,21 @@
   let searchQuery = '';
   let sortDirection = -1; // -1 = newest first, 1 = oldest first
 
+  function escapeHtml(s) {
+    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function filterByTag(tag) {
+    searchQuery = tag;
+    const input = document.getElementById('articles-search');
+    if (input) input.value = tag;
+    currentPage = 1;
+    applyFilters();
+    renderArticles();
+    renderPagination();
+    window.scrollTo({ top: document.querySelector('.articles-hero').offsetHeight || 0, behavior: 'smooth' });
+  }
+
   /* ── Sorting ── */
   function sortArticles() {
     filtered.sort((a, b) => {
@@ -229,7 +244,7 @@
             <div class="article-card-meta">
               <span>${formatDate(a.publishDate)}</span>
               <span>· ${a.readingTime} ${T.readingTime}</span>
-              ${(a.tags || []).slice(0, 2).map(t => `<span class="tag">${t}</span>`).join('')}
+              ${(a.tags || []).slice(0, 2).map(t => `<span class="tag" data-tag="${escapeHtml(t)}" style="cursor:pointer;" onclick="event.stopPropagation();event.preventDefault();filterByTag('${escapeHtml(t)}');">#${escapeHtml(t)}</span>`).join('')}
             </div>
           </div>
         </a>`;
