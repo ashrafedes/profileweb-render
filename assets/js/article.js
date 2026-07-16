@@ -355,10 +355,24 @@
   function renderRelated(articles, current) {
     const el = document.getElementById('related-articles');
     if (!el) return;
-    const related = articles
-      .filter(a => !a.draft && a.slug !== current.slug && a.category === current.category)
-      .slice(0, 3);
-    if (related.length === 0) { el.style.display = 'none'; return; }
+
+    const currentTags = new Set(current.tags || []);
+    const scored = articles
+      .filter(a => !a.draft && a.slug !== current.slug)
+      .map(a => {
+        let score = 0;
+        if (a.category === current.category) score += 3;
+        const tagMatches = (a.tags || []).filter(t => currentTags.has(t)).length;
+        score += tagMatches;
+        return { article: a, score };
+      })
+      .filter(a => a.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 6)
+      .map(a => a.article);
+
+    if (scored.length === 0) { el.style.display = 'none'; return; }
+    const related = scored;
 
     el.innerHTML = `
       <h2 style="font-size:1.3rem;margin-bottom:1rem;">${T.relatedArticles}</h2>
