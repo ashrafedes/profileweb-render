@@ -256,7 +256,7 @@
     const GH_TOKEN = ensureGHToken();
     if (!GH_TOKEN) {
       showSaveBanner(true, '⚠ No GitHub token. Click Publish again and enter your token when prompted.');
-      return;
+      return false;
     }
 
     // Fetch fresh articles.json from GitHub to avoid overwriting new articles added elsewhere
@@ -265,7 +265,7 @@
       const freshRes = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/${GH_BRANCH}/articles/articles.json?v=${Date.now()}`, { cache: 'no-store' });
       if (freshRes.ok) {
         const freshArticles = await freshRes.json();
-        const currentSlug = getVal('ed-slug');
+        const currentSlug = (currentArticle && currentArticle.slug) ? currentArticle.slug : getVal('ed-slug');
         if (currentSlug) {
           const currentLocal = articles.find(a => a.slug === currentSlug);
           const freshIdx = freshArticles.findIndex(a => a.slug === currentSlug);
@@ -291,7 +291,7 @@
     const jsonSizeKB = Math.round(new TextEncoder().encode(jsonContent).length / 1024);
     if (jsonSizeKB > 2048) {
       const proceed = confirm(`⚠ articles.json is ${jsonSizeKB}KB — this is very large due to embedded base64 images.\n\nLarge files may fail to push to GitHub. Consider using external image URLs instead of uploading images directly.\n\nProceed anyway?`);
-      if (!proceed) return;
+      if (!proceed) return false;
     }
 
     showSaveBanner(true, '⏳ Pushing to GitHub…');
@@ -368,9 +368,11 @@
       showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml and article HTML pages committed. Arabic content is saved. If the live site still shows English after 5 minutes, log in to Render and click “Manual Deploy” because Render is not auto-deploying the latest commits.</span>');
       // Reload articles from server after a short delay to confirm changes
       setTimeout(() => loadArticles().then(() => { renderStats(); renderTable(); }), 3000);
+      return true;
     } catch (e) {
       console.error('GitHub commit failed:', e);
       showSaveBanner(true, '⚠ GitHub push failed: ' + e.message);
+      return false;
     }
   }
 
@@ -569,8 +571,17 @@
       articles.push(article);
     }
 
-    await saveArticles(article);
-    closeEditor();
+    // Keep slug visible in the editor and backup locally before pushing
+    setVal('ed-slug', article.slug);
+    try { localStorage.setItem('dashboard_article_backup', JSON.stringify(article)); } catch (e) {}
+
+    const ok = await saveArticles(article);
+    if (ok) {
+      try { localStorage.removeItem('dashboard_article_backup'); } catch (e) {}
+      closeEditor();
+    } else {
+      showSaveBanner(true, '⚠ Article is saved locally in your browser but not pushed. Check the error above, then click Publish again after fixing it.');
+    }
   }
 
   /* ── Close Editor ── */
