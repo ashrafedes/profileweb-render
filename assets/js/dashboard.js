@@ -242,7 +242,7 @@
   <script src="${relativeBase}assets/js/i18n.js?v=2"></script>
   <script src="${relativeBase}assets/js/components.js?v=4"></script>
   <script src="${relativeBase}assets/js/core.js?v=5"></script>
-  <script src="${relativeBase}assets/js/article.js?v=6"></script>
+  <script src="${relativeBase}assets/js/article.js?v=7"></script>
 </body>
 </html>
 `;

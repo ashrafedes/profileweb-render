@@ -313,9 +313,19 @@
     const subtitleEl = document.querySelector('#articles-page-subtitle');
     if (subtitleEl) subtitleEl.textContent = T.subtitle;
 
+    // Pre-fill tag from URL query string (e.g. ?tag=Agile)
+    const urlParams = new URLSearchParams(window.location.search);
+    const tagParam = urlParams.get('tag');
+    if (tagParam) {
+      searchQuery = tagParam;
+      const input = document.getElementById('articles-search');
+      if (input) input.value = tagParam;
+    }
+
     renderFeatured();
     renderCategories();
     renderPopularTopics();
+    applyFilters();
     renderArticles();
     renderPagination();
     initSearch();

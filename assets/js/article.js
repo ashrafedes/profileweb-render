@@ -312,6 +312,13 @@
               </div>
             </div>
 
+            ${(article.tags || []).length ? `
+            <div class="article-tags" style="margin:1.5rem 0;">
+              <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">${IS_ARABIC ? 'الوسوم:' : 'Tags:'}</span>
+              ${(article.tags || []).map(tag => `<a href="../articles/index.html?tag=${encodeURIComponent(tag)}" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#${tag}</a>`).join('')}
+            </div>
+            ` : ''}
+
             <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
 
             <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">${T.backToArticles}</a>
