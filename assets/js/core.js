@@ -243,6 +243,7 @@ const FilterTabs = (() => {
 /* ── Search Modal ── */
 const SearchModal = (() => {
   let data = null;
+  let articlesData = null;
 
   function getBasePath() {
     const path = window.location.pathname;
@@ -429,6 +430,16 @@ const SearchModal = (() => {
       const base = getBasePath();
       const res = await fetch(base + 'data/career-knowledge-base.json');
       data = await res.json();
+      // Also load articles in parallel
+      if (!articlesData) {
+        try {
+          const aRes = await fetch(base + 'articles/articles.json');
+          articlesData = await aRes.json();
+        } catch (e2) {
+          console.error('Failed to load articles:', e2);
+          articlesData = [];
+        }
+      }
       return data;
     } catch (e) {
       console.error('Failed to load career data:', e);
@@ -529,6 +540,24 @@ const SearchModal = (() => {
       });
     }
 
+    // Add articles to the search index
+    if (articlesData && Array.isArray(articlesData)) {
+      const lang = ar ? 'ar' : 'en';
+      articlesData.forEach(a => {
+        if (a.draft) return;
+        const d = a[lang] || a.en || {};
+        if (!d.title) return;
+        const articleUrl = `${base}${lang}/articles/${a.slug}.html`;
+        items.push({
+          icon: '📝',
+          title: d.title,
+          subtitle: ar ? 'مقال · ' + (a.readingTime || 5) + ' دقائق' : 'Article · ' + (a.readingTime || 5) + ' min read',
+          url: articleUrl,
+          tags: [d.title, d.excerpt || '', d.metaTitle || '', d.metaDescription || '', ...(a.tags || []), a.category || '', ...(d.keywords || [])].join(' ').toLowerCase()
+        });
+      });
+    }
+
     return items;
   }
 
@@ -567,11 +596,17 @@ const SearchModal = (() => {
       return;
     }
 
-    const results = index.filter(item =>
-      item.title.toLowerCase().includes(q) ||
-      item.subtitle.toLowerCase().includes(q) ||
-      item.tags.includes(q)
-    );
+    // Split query into words for better matching
+    const queryWords = q.split(/\s+/).filter(w => w.length > 0);
+    const results = index.filter(item => {
+      // Exact phrase match on title/subtitle
+      if (item.title.toLowerCase().includes(q) || item.subtitle.toLowerCase().includes(q)) return true;
+      // All query words must be found in tags
+      if (queryWords.length > 0) {
+        return queryWords.every(w => item.tags.includes(w));
+      }
+      return item.tags.includes(q);
+    });
 
     render(results);
   }
