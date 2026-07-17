@@ -584,26 +584,40 @@ const SearchModal = (() => {
     `).join('');
   }
 
+  function normalizeAr(text) {
+    if (!text) return '';
+    return text.toString().toLowerCase()
+      .replace(/[ءآأإٱ]/g, 'ا')
+      .replace(/ى/g, 'ي')
+      .replace(/ة/g, 'ه')
+      .replace(/[ً-ْٰ]/g, '')
+      .trim();
+  }
+
   async function search(query) {
     const kb = await loadData();
     if (!kb) return;
 
     const index = buildIndex(kb);
     const q = query.toLowerCase().trim();
+    const nq = normalizeAr(query);
 
     if (!q) {
       render([]);
       return;
     }
 
-    // Split query into words for better matching
     const queryWords = q.split(/\s+/).filter(w => w.length > 0);
+    const nqWords = nq.split(/\s+/).filter(w => w.length > 0);
     const results = index.filter(item => {
-      // Exact phrase match on title/subtitle
       if (item.title.toLowerCase().includes(q) || item.subtitle.toLowerCase().includes(q)) return true;
-      // All query words must be found in tags
+      const nt = normalizeAr(item.title);
+      const ns = normalizeAr(item.subtitle);
+      const ntags = normalizeAr(item.tags);
+      if (nt.includes(nq) || ns.includes(nq) || ntags.includes(nq)) return true;
       if (queryWords.length > 0) {
-        return queryWords.every(w => item.tags.includes(w));
+        if (queryWords.every(w => item.tags.includes(w))) return true;
+        return nqWords.every(w => ntags.includes(w));
       }
       return item.tags.includes(q);
     });

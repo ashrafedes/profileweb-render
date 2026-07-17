@@ -442,6 +442,16 @@
       return results;
     }
 
+    function normalizeAr(text) {
+      if (!text) return '';
+      return text.toString().toLowerCase()
+        .replace(/[ءآأإٱ]/g, 'ا') // normalize all alif variants
+        .replace(/ى/g, 'ي') // alif maqsura -> yaa
+        .replace(/ة/g, 'ه') // taa marbuta -> haa
+        .replace(/[ً-ْٰ]/g, '') // remove harakat/tashkeel
+        .trim();
+    }
+
     function highlight(text, q) {
       if (!q) return text;
       const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + ')', 'gi');
@@ -462,13 +472,16 @@
       suggestionsEl.style.display = 'none';
       const kb = await loadKB();
       const index = buildIndex(kb).concat(buildArticleIndex());
+      const nq = normalizeAr(q);
       const hits = index.filter(item => {
-        const query = (searchInput.value || '').trim().toLowerCase();
-        if (!query) return false;
-        const queryWords = query.split(/\s+/).filter(w => w.length > 0);
-        const bodyMatch = item.body.toLowerCase().includes(query) || item.title.toLowerCase().includes(query) || (item.subtitle||'').toLowerCase().includes(query);
+        if (!nq) return false;
+        const queryWords = nq.split(/\s+/).filter(w => w.length > 0);
+        const nb = normalizeAr(item.body);
+        const nt = normalizeAr(item.title);
+        const ns = normalizeAr(item.subtitle || '');
+        const bodyMatch = nb.includes(nq) || nt.includes(nq) || ns.includes(nq);
         if (bodyMatch) return true;
-        return queryWords.every(w => item.body.toLowerCase().includes(w) || item.title.toLowerCase().includes(w));
+        return queryWords.every(w => nb.includes(w) || nt.includes(w) || ns.includes(w));
       });
       resultsCount.textContent = `${hits.length} نتيجة لـ "${searchInput.value}"`;
       if (hits.length === 0) {
