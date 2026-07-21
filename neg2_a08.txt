@@ -1,0 +1,529 @@
+## Why Contract Negotiation Is Where Value Is Created or Destroyed
+
+A contract is not a legal formality — it is the architecture of a business relationship. Every clause, every definition, every remedy shapes how value is created, shared, and protected over the life of the agreement. A well-negotiated contract creates alignment, manages risk, and provides a framework for resolving disputes. A poorly negotiated contract creates ambiguity, allocates risk unfairly, and becomes the source of costly litigation.
+
+Research by the International Association for Contract and Commercial Management (IACCM) found that organisations with mature contract negotiation capabilities experience 30-50% fewer disputes and 20-40% better financial outcomes from their contracts.
+
+This article provides a comprehensive framework for contract negotiation — from preparation through execution — drawing from contract law, behavioural economics, and commercial practice.
+
+---
+
+## Learning Objectives
+
+Readers will learn:
+
+- How to structure contract negotiations using a clause-by-clause risk allocation framework
+- The key provisions that create or destroy value in commercial contracts
+- How to negotiate risk allocation, limitation of liability, warranty, and termination provisions
+- The psychology of contract negotiation — trust, fairness, and the endowment effect
+- How to manage the legal-business interface and avoid common contract negotiation pitfalls
+
+---
+
+## 1. The Contract Negotiation Architecture
+
+### The Three Layers of Contract Negotiation
+
+**Layer 1: Commercial Terms** — Price, scope, timeline, payment terms, volume commitments. This is where most negotiators focus.
+
+**Layer 2: Risk Allocation** — Warranty, indemnity, limitation of liability, insurance, force majeure, consequential damages. This is where value is often unknowingly destroyed.
+
+**Layer 3: Governance and Exit** — Change control, dispute resolution, termination rights, audit rights, intellectual property. This is where long-term value is protected.
+
+Expert contract negotiators address all three layers. Amateurs focus on Layer 1 and let lawyers handle Layers 2 and 3 — often discovering too late that risk allocation provisions negate the commercial value they negotiated.
+
+### The Principle of Risk Allocation
+
+The fundamental principle of contract negotiation: **allocate each risk to the party best able to manage it.**
+
+- **Design risk:** Allocate to the party with design control
+- **Performance risk:** Allocate to the party responsible for execution
+- **Market risk (price escalation):** Allocate to the party with better market access
+- **Regulatory risk:** Allocate to the party with regulatory expertise
+- **Force majeure risk:** Share — neither party can control natural disasters
+
+When risks are allocated to the party that cannot manage them, the cost of the contract increases (the party charges a premium for bearing unmanageable risk) or the relationship deteriorates (the party cannot perform and disputes arise).
+
+---
+
+## 2. Key Contract Provisions and How to Negotiate Them
+
+### 2.1 Scope of Work
+
+**The provision:** Defines exactly what is included and excluded from the contract.
+
+**Negotiation focus:**
+- Specificity: "Design, supply, install, test, and commission" vs "provide"
+- Inclusions: List every item, service, and deliverable explicitly
+- Exclusions: List what is NOT included — this prevents scope creep
+- Assumptions: State all assumptions (site conditions, access, utilities)
+- Clarifications: Document any clarifications to the specification
+
+**Common mistake:** Vague scope definitions lead to scope creep and disputes. "Provide software" is insufficient. "Design, develop, test, deploy, and provide 12 months of maintenance for the inventory management module per the attached specification" is enforceable.
+
+### 2.2 Price and Payment
+
+**The provision:** Defines the contract price, payment milestones, and payment terms.
+
+**Negotiation focus:**
+- Fixed price vs remeasurable vs cost-plus
+- Payment milestones tied to deliverables (not calendar dates)
+- Retention: percentage and release schedule
+- Advance payment: amount and recovery mechanism
+- Currency and exchange rate risk
+- Price escalation: formula, index, cap
+- Invoice processing time: maximum days from receipt to payment
+
+**Common mistake:** Payment milestones tied to calendar dates rather than deliverables. If the deliverable is delayed, the supplier expects payment on the calendar date regardless.
+
+### 2.3 Warranty
+
+**The provision:** Guarantees that the product or service meets specified standards for a defined period.
+
+**Negotiation focus:**
+- Warranty period: 12 months, 24 months, or longer?
+- Warranty scope: defects in materials, workmanship, design?
+- Warranty remedy: repair, replace, refund? At whose cost?
+- Warranty exclusions: normal wear, misuse, unauthorised modification?
+- Extended warranty: available at additional cost?
+- Warranty transfer: does it transfer to subsequent owners?
+
+**Common mistake:** Accepting a warranty that covers "defects in materials and workmanship" but not "design defects" — leaving design risk with the buyer.
+
+### 2.4 Limitation of Liability (LoL)
+
+**The provision:** Caps the total financial liability of each party under the contract.
+
+**Negotiation focus:**
+- Cap amount: typically 100-200% of contract value for general liability
+- Carve-outs: what is NOT capped? (typically: IP infringement, confidentiality breach, gross negligence, wilful misconduct)
+- Consequential damages: typically excluded, but negotiate carefully
+- Liquidated damages: separate from the LoL cap or included within it?
+- Super-caps: higher caps for specific risks (e.g., data breach = 3x contract value)
+
+**Common mistake:** Accepting a supplier's standard LoL of 100% of annual fees when the potential damage from a breach far exceeds this. For critical services, negotiate higher caps or specific carve-outs.
+
+### 2.5 Indemnification
+
+**The provision:** One party agrees to compensate the other for specified losses.
+
+**Negotiation focus:**
+- IP indemnity: supplier defends buyer against IP infringement claims
+- Third-party claims: supplier covers claims by third parties arising from supplier's acts
+- Defence obligation: who controls the defence? Who pays?
+- Caps: is indemnity capped at the LoL amount or uncapped?
+- Notice: how quickly must the indemnified party notify the indemnifier?
+
+**Common mistake:** IP indemnity that is capped at the contract value when IP infringement damages can far exceed the contract value. Negotiate IP indemnity as a carve-out from the LoL cap.
+
+### 2.6 Force Majeure
+
+**The provision:** Excuses performance failures caused by events beyond a party's control.
+
+**Negotiation focus:**
+- Definition: specifically list covered events (natural disasters, war, pandemic, government action, labour disputes)
+- Notice: how quickly must the affected party notify?
+- Mitigation: must the affected party take reasonable steps to mitigate?
+- Duration: how long can force majeure last before either party can terminate?
+- Exclusion: events that were foreseeable at contract signing are typically excluded
+- Epidemic/pandemic: explicitly include or exclude (post-COVID, this is critical)
+
+**Common mistake:** Broad force majeure clauses that include "economic downturn" or "market conditions" — these are not force majeure events and should be excluded.
+
+### 2.7 Termination
+
+**The provision:** Defines when and how either party can end the contract.
+
+**Negotiation focus:**
+- Termination for cause: material breach, insolvency, loss of licence
+- Cure period: how long does the breaching party have to remedy? (typically 30 days)
+- Termination for convenience: can either party terminate without cause? What are the consequences?
+- Termination costs: what is paid upon termination? Work done + demobilisation + reasonable profit?
+- Transition assistance: must the terminating supplier help transition to a new supplier?
+- Survival: which provisions survive termination? (confidentiality, IP, warranty, indemnity)
+
+**Common mistake:** One-sided termination rights — the buyer can terminate for convenience but the supplier cannot. This creates an imbalance that may be challenged in some jurisdictions.
+
+### 2.8 Dispute Resolution
+
+**The provision:** Defines how disputes will be resolved.
+
+**Negotiation focus:**
+- Escalation: negotiation → mediation → arbitration/litigation
+- Arbitration vs litigation: arbitration is private, faster, but limited appeal rights
+- Governing law: which jurisdiction's law applies?
+- Venue: where are proceedings held?
+- Language: what language are proceedings conducted in?
+- Expert determination: for technical disputes, binding decision by an independent expert
+
+**Common mistake:** No escalation clause — disputes go straight to arbitration/litigation without attempting resolution. Always include a negotiation/mediation step before formal proceedings.
+
+### 2.9 Change Control
+
+**The provision:** Defines how changes to the contract are handled.
+
+**Negotiation focus:**
+- Change initiation: who can request changes?
+- Pricing: how are changes priced? (pre-agreed rates, time and materials, fixed quote)
+- Approval: who must approve changes? (project manager, contract manager, executive)
+- Time impact: how are schedule extensions handled?
+- Documentation: changes must be in writing and signed by both parties
+
+**Common mistake:** Verbal changes that are not documented. "Just go ahead and we'll sort out the paperwork later" leads to disputes about what was agreed.
+
+### 2.10 Intellectual Property
+
+**The provision:** Defines who owns IP created or used under the contract.
+
+**Negotiation focus:**
+- Background IP: each party retains their pre-existing IP
+- Foreground IP: who owns IP created during the contract? (typically the buyer for commissioned work, the supplier for product development)
+- Licence: what licence is granted to the other party? (exclusive, non-exclusive, perpetual, revocable)
+- Open source: are open source components used? What are the licence implications?
+- IP infringement: who bears the risk of third-party IP claims?
+
+**Common mistake:** Ambiguous IP ownership in software development contracts — "the buyer owns the software" without specifying whether this includes pre-existing components, open source, or third-party libraries.
+
+---
+
+## 3. Real Business Examples
+
+### Construction
+
+A general contractor is negotiating a $50M design-build contract for a commercial complex. The employer's standard contract template allocates all design risk to the contractor, unlimited liability, and a 12-month defects period.
+
+**Negotiation strategy:**
+1. **Risk allocation:** "We accept design risk for the design we create. However, the employer's requirements contain design assumptions that we cannot validate. We propose a shared risk approach for elements dependent on employer-provided information."
+2. **Limitation of liability:** "We propose a cap of 100% of contract value for general liability, with carve-outs for gross negligence and IP infringement. Consequential damages are excluded."
+3. **Defects period:** "We propose 24 months for structural elements (reflecting the design life) and 12 months for non-structural elements (industry standard)."
+4. **Change control:** "We propose a change order process with pre-agreed unit rates for common items and a quote-based process for unique items."
+
+**Outcome:** Risk allocated more fairly, LoL capped at 100% with appropriate carve-outs, defects period adjusted by element type, and a structured change control process.
+
+### Software
+
+A company is negotiating a SaaS contract with a cloud provider. The provider's standard terms include a liability cap of 3 months of fees, no data loss indemnity, and unilateral right to change terms with 30 days' notice.
+
+**Negotiation strategy:**
+1. **Liability cap:** "3 months of fees is inadequate for a service that processes $10M/month in transactions. We propose a cap of 12 months of fees for general liability and a super-cap of 3x annual fees for data breach and security incidents."
+2. **Data loss:** "We require a specific indemnity for data loss caused by provider negligence, with a remedy of cost of reconstruction."
+3. **Term changes:** "We require mutual agreement for material term changes. Non-material changes can be unilateral with 60 days' notice and a right to terminate without penalty if the changes are unacceptable."
+
+**Outcome:** Liability cap increased to 12 months with super-cap for security, data loss indemnity added, and term change process made mutual for material changes.
+
+### Healthcare
+
+A hospital is negotiating a medical equipment supply contract. The supplier offers a 12-month warranty and a liability cap of the equipment purchase price.
+
+**Negotiation strategy:**
+1. **Warranty:** "We propose 24 months for the equipment and 60 months for the imaging sensor (the highest-failure component)."
+2. **Liability cap:** "The equipment purchase price is $2M, but a failure during surgery could result in $10M+ in damages. We propose a cap of 3x the equipment price for patient safety incidents."
+3. **Service response:** "We require a 4-hour response time for critical failures, with a penalty of $5K per hour for late response."
+
+**Outcome:** Warranty extended, liability cap increased for safety incidents, and service response commitments added with penalties.
+
+---
+
+## 4. Case Study: The Software Licence Disaster
+
+### Situation
+
+A financial services company (FinServ) signed a 5-year software licence with a vendor (SoftVendor) for a core banking platform. The contract was SoftVendor's standard template, signed with minimal negotiation. The licence fee was $3M/year.
+
+### Problem
+
+After 2 years, FinServ discovered that:
+1. SoftVendor had unilaterally increased the licence fee by 15% (the contract allowed "price adjustment at renewal" — but "renewal" was ambiguously defined)
+2. A data breach had exposed customer data, and SoftVendor's liability was capped at 3 months of fees ($750K) — far below the $8M in damages FinServ faced
+3. FinServ wanted to switch to a different platform, but the contract had no termination for convenience, and early termination required payment of the remaining 3 years of fees ($9M)
+4. The contract's IP clause granted SoftVendor ownership of "all modifications and enhancements" — including customisations FinServ had paid $1.2M to develop
+
+### What Went Wrong
+
+- **Layer 1 (Commercial):** The $3M/year fee was reasonable, but the "price adjustment at renewal" clause was ambiguous
+- **Layer 2 (Risk):** The liability cap was inadequate for a financial services platform processing billions in transactions
+- **Layer 3 (Governance):** No termination for convenience, IP ownership of customisations went to the vendor, and no data breach-specific provisions
+
+### Negotiation Strategy (Remedial)
+
+FinServ engaged a contract negotiation expert to renegotiate:
+
+**1. Price adjustment:** "The clause is ambiguous. We interpret 'renewal' as the end of the 5-year term, not annual. We propose clarifying this and capping annual increases at CPI."
+**2. Liability cap:** "The current cap is inadequate for our risk profile. We propose increasing to 12 months of fees for general liability and a super-cap of 3x annual fees for data breach and security incidents."
+**3. Termination:** "We propose adding termination for convenience with a buy-out of 50% of remaining fees, and termination for cause if data breach remediation is inadequate."
+**4. IP ownership:** "We propose that customisations we fund are owned by us, with a licence granted to SoftVendor for their product improvement."
+
+### Outcome
+
+- Price increase reversed, future increases capped at CPI
+- Liability cap increased to 12 months + super-cap for security
+- Termination for convenience added with 50% buy-out
+- IP ownership of customisations transferred to FinServ
+- SoftVendor agreed because the alternative was FinServ terminating for cause (the data breach constituted a material breach)
+
+### Lessons Learned
+
+1. **Never sign a standard template without negotiation.** Standard templates are designed to protect the drafter, not both parties.
+2. **Negotiate all three layers.** Commercial terms, risk allocation, and governance all matter.
+3. **Liability caps must reflect risk profile.** A 3-month fee cap is inadequate for a platform processing billions in transactions.
+4. **IP ownership of customisations is critical.** If you pay for development, you should own the result.
+5. **Termination rights provide leverage.** Without termination for convenience, you're locked in regardless of performance.
+6. **Ambiguity favours the drafter.** "Price adjustment at renewal" was interpreted by SoftVendor in their favour.
+
+---
+
+## 5. The Psychology of Contract Negotiation
+
+### The Endowment Effect in Contract Negotiation
+
+The endowment effect causes parties to overvalue what they already have. In contract negotiation:
+- The party who drafts the contract becomes "endowed" with their terms and resists changes
+- The other party must overcome the endowment effect by justifying every proposed change
+
+**Strategy:** If you're the non-drafting party, request the right to mark up the contract early. If you're the drafting party, be open to reasonable changes — resisting all changes triggers reactive devaluation.
+
+### Reactive Devaluation
+
+Proposals are valued less simply because they come from the other party. A liability cap of 12 months proposed by the buyer is perceived as unreasonable by the seller, even if the seller would have accepted the same cap if they had proposed it.
+
+**Strategy:** Use objective criteria and industry standards to frame proposals. "The IACCM benchmark for liability caps in software contracts is 12 months of fees" is more persuasive than "We want 12 months."
+
+### Fairness in Contract Negotiation
+
+Research shows that fairness matters — even in purely commercial negotiations. Contracts perceived as unfair are more likely to be breached, renegotiated, or litigated. The Ultimatum Game (a classic behavioural economics experiment) demonstrates that people reject profitable offers they perceive as unfair.
+
+**Strategy:** Ensure the contract is commercially fair. One-sided contracts may produce short-term advantage but long-term relationship damage. A fair contract is more likely to be performed faithfully.
+
+### Trust and Contract Complexity
+
+Research by Sitkin and Roth (1993) found an inverse relationship between trust and contract complexity: low-trust relationships produce detailed, restrictive contracts; high-trust relationships produce simpler, more flexible contracts.
+
+**Strategy:** Match contract complexity to relationship trust. For new relationships, detailed contracts are appropriate. For established, trusted relationships, simpler contracts with governance mechanisms may be more effective — and cheaper to negotiate.
+
+---
+
+## 6. Practical Tools
+
+### Contract Negotiation Preparation Checklist
+
+- [ ] All three layers identified (commercial, risk, governance)
+- [ ] Risk register prepared (what risks exist, who should bear each)
+- [ ] Key provisions identified and position developed for each
+- [ ] Industry benchmarks researched (IACCM, industry standards)
+- [ ] BATNA developed (alternative supplier/solution)
+- [ ] Legal advisor briefed on commercial objectives
+- [ ] Walk-away criteria defined
+- [ ] Red-line strategy prepared (which clauses are critical, which are flexible)
+- [ ] Escalation plan for deadlocked clauses
+- [ ] Term sheet prepared (summary of key terms before full contract)
+
+### Contract Risk Allocation Matrix
+
+```
+RISK ALLOCATION MATRIX
+
+Risk | Who Bears | Justification | Mitigation
+-----|-----------|---------------|------------
+Design | _______ | ___________ | ________
+Schedule | _______ | ___________ | ________
+Price escalation | _______ | ___________ | ________
+Quality | _______ | ___________ | ________
+IP infringement | _______ | ___________ | ________
+Data breach | _______ | ___________ | ________
+Force majeure | _______ | ___________ | ________
+Regulatory change | _______ | ___________ | ________
+```
+
+### Red Flag Clauses
+
+Watch for these clauses in the other party's contract draft:
+- Unilateral right to change terms
+- Unlimited or disproportionate liability
+- No limitation of consequential damages
+- One-sided termination rights
+- Broad non-compete that exceeds reasonable scope
+- IP ownership of your customisations
+- Automatic renewal without notice
+- Dispute resolution in the other party's home jurisdiction
+- Broad confidentiality that prevents you from using your own data
+- "Entire agreement" clause that excludes pre-contractual representations
+
+---
+
+## 7. Common Mistakes
+
+### Mistake 1: Focusing Only on Commercial Terms
+
+**Why it occurs:** Price and scope are the most visible and emotionally charged issues.
+
+**How experts avoid it:** They negotiate all three layers — commercial, risk, and governance. They understand that a great price with terrible risk allocation is a bad deal.
+
+### Mistake 2: Signing Standard Templates Without Negotiation
+
+**Why it occurs:** The template is "standard," the lawyer says it's "market," and there's time pressure to sign.
+
+**How experts avoid it:** They review every clause against their risk profile and commercial objectives. They red-line aggressively on provisions that allocate risk unfairly.
+
+### Mistake 3: Letting Lawyers Negotiate Commercial Terms
+
+**Why it occurs:** The contract is a "legal document," so lawyers handle it.
+
+**How experts avoid it:** Lawyers handle legal risk; commercial negotiators handle commercial terms. The two must work together, but the commercial negotiator drives the overall strategy.
+
+### Mistake 4: Accepting Ambiguous Language
+
+**Why it occurs:** "We'll sort out the details later" or "everyone understands what this means."
+
+**How experts avoid it:** They insist on precise language. Ambiguity in contracts is resolved by courts — expensively. Every material term should have a clear, testable definition.
+
+### Mistake 5: Not Negotiating Termination Rights
+
+**Why it occurs:** No one wants to talk about divorce during the wedding.
+
+**How experts avoid it:** They negotiate termination rights explicitly — for cause, for convenience, and the financial consequences of each. A contract without exit provisions is a trap.
+
+### Mistake 6: Ignoring IP Ownership
+
+**Why it occurs:** IP seems like a legal detail, not a commercial issue.
+
+**How experts avoid it:** They negotiate IP ownership explicitly, especially for custom developments. If you pay for development, you should own the result — or at least have a perpetual, irrevocable licence.
+
+### Mistake 7: Not Including Change Control
+
+**Why it occurs:** The scope is defined and won't change (it always changes).
+
+**How experts avoid it:** They include a change control process with defined pricing, approval, and documentation requirements. Verbal changes are explicitly stated to be non-binding.
+
+### Mistake 8: Neglecting Dispute Resolution
+
+**Why it occurs:** "We'll work it out if there's a problem."
+
+**How experts avoid it:** They negotiate a dispute resolution clause with escalation: negotiation → mediation → arbitration. They specify governing law, venue, and language.
+
+### Mistake 9: Not Planning for Contract Management
+
+**Why it occurs:** The contract is signed and the team moves on.
+
+**How experts avoid it:** They assign a contract manager, schedule performance reviews, and monitor compliance with key provisions throughout the contract term.
+
+### Mistake 10: Rushing the Negotiation
+
+**Why it occurs:** Time pressure, eagerness to start, or fatigue from prolonged negotiation.
+
+**How experts avoid it:** They build adequate time into the process. A contract negotiated in haste is litigated at leisure. They never sign under time pressure without a thorough review.
+
+---
+
+## 8. Advanced Expert Tips
+
+### The Term Sheet First Approach
+
+Before negotiating the full contract, negotiate a term sheet — a 2-5 page summary of all key terms. This allows the parties to align on commercial and risk terms before investing in detailed legal drafting. If the term sheet cannot be agreed, the full contract negotiation will fail — better to discover this early.
+
+### The Battle of the Forms
+
+When both parties have their own standard terms, the "battle of the forms" determines whose terms apply. Whoever sends the last form (with different terms) before performance begins may win. Expert negotiators ensure their terms are the last ones sent — or negotiate a single agreed contract rather than relying on standard forms.
+
+### The Most-Favoured-Customer (MFC) Clause
+
+An MFC clause guarantees that the buyer receives terms no worse than any other customer. This is powerful for buyers but dangerous for sellers. If you're a buyer, request it. If you're a seller, resist it or limit it to "similarly situated customers."
+
+### The Price Adjustment Mechanism
+
+For long-term contracts, negotiate a price adjustment mechanism rather than fixed prices:
+- Index-based: tied to published indices (CPI, LME, ICIS)
+- Cost-plus: verified costs + agreed margin
+- Market-based: periodic benchmarking against market rates
+- Step adjustment: pre-agreed changes at defined intervals
+
+This eliminates annual price negotiations and aligns pricing to market conditions.
+
+### Negotiating with Regulated Industries
+
+In regulated industries (healthcare, finance, utilities), regulatory compliance is a contract provision. Negotiate:
+- Who is responsible for regulatory compliance?
+- What happens if regulations change?
+- Who bears the cost of compliance modifications?
+- What regulatory approvals are conditions precedent?
+
+---
+
+## Key Takeaways
+
+1. **A contract is the architecture of a business relationship.** Every clause matters.
+2. **Negotiate all three layers:** commercial terms, risk allocation, and governance.
+3. **Allocate risk to the party best able to manage it.** Misallocated risk increases cost.
+4. **Never sign a standard template without review.** Standard templates protect the drafter.
+5. **Liability caps must reflect risk profile.** Inadequate caps expose you to catastrophic loss.
+6. **Negotiate termination rights explicitly.** A contract without exit provisions is a trap.
+7. **IP ownership of customisations is critical.** If you pay for development, own the result.
+8. **Include change control.** Scope always changes — manage it through a defined process.
+9. **Use a term sheet first.** Align on key terms before investing in detailed drafting.
+10. **A fair contract is more likely to be performed.** One-sided contracts produce disputes.
+
+---
+
+## FAQ
+
+### 1. What are the most important clauses to negotiate in a commercial contract?
+
+The most important clauses are: scope of work, price and payment, limitation of liability, warranty, indemnification, termination rights, change control, intellectual property, dispute resolution, and force majeure. These provisions determine commercial value, risk allocation, and governance.
+
+### 2. Should I use the other party's standard contract template?
+
+You can use it as a starting point, but never sign it without thorough review and red-lining. Standard templates are designed to protect the drafter, not both parties. Mark up every clause that allocates risk unfairly or creates commercial disadvantage.
+
+### 3. What is a reasonable limitation of liability cap?
+
+It depends on the contract value and risk profile. For general commercial contracts, 100-200% of contract value is typical. For software/SaaS, 12 months of fees is common. For high-risk services (data processing, healthcare), higher caps or super-caps for specific risks may be appropriate. The cap should reflect the potential damage from a breach.
+
+### 4. How do I negotiate a force majeure clause?
+
+Specifically list covered events (natural disasters, war, pandemic, government action). Include a notice requirement, mitigation obligation, and a duration limit after which either party can terminate. Exclude foreseeable events and economic downturns. Post-COVID, explicitly address epidemic/pandemic.
+
+### 5. What is a term sheet and why should I use one?
+
+A term sheet is a 2-5 page summary of key commercial and risk terms. It allows parties to align on the most important issues before investing in detailed legal drafting. If the term sheet cannot be agreed, the full contract will fail — better to discover this early. Once the term sheet is agreed, the full contract negotiation is faster and smoother.
+
+### 6. Who should own IP created during a contract?
+
+For custom developments paid for by the buyer, the buyer should own the foreground IP (with a licence to the supplier for their product improvement). For product development by the supplier, the supplier typically owns the IP with a perpetual licence to the buyer. Pre-existing IP (background IP) is always retained by the original owner.
+
+### 7. What is the "battle of the forms" and how do I win it?
+
+The battle of the forms occurs when both parties have their own standard terms. Under most legal systems, the last party to send their terms (with different terms) before performance begins wins. To win: ensure your terms are the last ones sent, or negotiate a single agreed contract rather than relying on standard forms.
+
+### 8. Should I include a dispute resolution clause?
+
+Yes, always. A dispute resolution clause with escalation (negotiation → mediation → arbitration) prevents disputes from going straight to litigation. Specify governing law, venue, language, and the number of arbitrators. For technical disputes, consider expert determination as a first step.
+
+### 9. What is an MFC clause and should I agree to it?
+
+A Most-Favoured-Customer (MFC) clause guarantees the buyer terms no worse than any other customer. If you're a buyer, request it — it protects you from being charged more than others. If you're a seller, resist it or limit it to "similarly situated customers" — it creates administrative burden and limits pricing flexibility.
+
+### 10. How do I negotiate price escalation in long-term contracts?
+
+Use a formula-based mechanism rather than fixed prices. Options include: index-based (tied to CPI, LME, or other published indices), cost-plus (verified costs + agreed margin), market-based (periodic benchmarking), or step adjustment (pre-agreed changes at defined intervals). This eliminates annual price negotiations and aligns pricing to market conditions.
+
+### 11. What is the difference between termination for cause and termination for convenience?
+
+Termination for cause allows termination when the other party commits a material breach (with a cure period, typically 30 days). Termination for convenience allows termination without cause, usually with a payment of remaining fees or a buy-out amount. Both should be negotiated — cause protects against poor performance, convenience provides flexibility.
+
+### 12. How do I manage the legal-business interface in contract negotiation?
+
+Lawyers handle legal risk; commercial negotiators handle commercial terms. The two must work together. Brief lawyers on commercial objectives so they don't negotiate provisions that undermine the deal. Review every legal provision for commercial impact. The commercial negotiator should drive the overall strategy, with lawyers as advisors, not decision-makers.
+
+---
+
+## References
+
+- Fisher, R., Ury, W., & Patton, B. (2011). *Getting to Yes* (3rd ed.). Penguin Books.
+- Shell, G. R. (2018). *Bargaining for Advantage* (3rd ed.). Penguin Books.
+- Cumbo, J. (2018). *Commercial Contracting: A Practical Guide to Contract Negotiation*. IACCM.
+- Hinze, G. (2014). *Drafting and Negotiating Commercial Contracts*. Kluwer Law International.
+- Voss, C. (2016). *Never Split the Difference*. Harper Business.
+- Kahneman, D. (2011). *Thinking, Fast and Slow*. Farrar, Straus and Giroux.
+- Sitkin, S. B., & Roth, N. L. (1993). "Explaining the Limited Effectiveness of Legalistic 'Remedies' for Trust/Distrust." *Organization Science*, 4(3), 367-392.
+- Malhotra, D., & Bazerman, M. (2007). *Negotiation Genius*. Bantam Books.
+- Lewicki, R., Saunders, D., & Barry, B. (2015). *Negotiation* (7th ed.). McGraw-Hill.
+- Thompson, L. L. (2012). *The Mind and Heart of the Negotiator* (5th ed.). Pearson.

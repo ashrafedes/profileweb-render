@@ -1,0 +1,510 @@
+## Why ZOPA Is the Map Every Negotiator Needs
+
+Imagine driving to a destination without a map. You know where you want to go, but you don't know the route, the distance, or whether the road is open. That is what negotiating without understanding ZOPA feels like — you know your target, but you don't know whether it's achievable or where the boundaries lie.
+
+ZOPA — Zone of Possible Agreement — is the range within which a negotiated settlement is possible. It is the overlap between what you are willing to accept and what the other party is willing to give. Outside the ZOPA, no amount of negotiation skill will produce an agreement. Inside the ZOPA, every point is a potential deal.
+
+This article provides a comprehensive guide to identifying, expanding, and leveraging ZOPA in professional negotiations.
+
+---
+
+## Learning Objectives
+
+Readers will learn:
+
+- How to identify the ZOPA in any negotiation using BATNA-derived reservation prices
+- Techniques for expanding a narrow ZOPA through issue expansion and value creation
+- How to negotiate when no ZOPA exists — and whether to walk away or restructure
+- The psychological and strategic factors that influence where within the ZOPA the deal settles
+- Advanced ZOPA concepts: asymmetric ZOPA, dynamic ZOPA, and ZOPA in multi-party negotiations
+
+---
+
+## 1. ZOPA Defined: The Anatomy of a Possible Deal
+
+### The Formal Definition
+
+ZOPA is the range of outcomes where both parties' reservation prices overlap. Any point within this range is a deal that both parties prefer over their BATNA (Best Alternative to a Negotiated Agreement).
+
+### The Visual Model
+
+```
+SELLER'S SIDE                          BUYER'S SIDE
+                    ←——— ZOPA ———→
+Seller's          Seller's          Buyer's          Buyer's
+BATNA         Reservation     Reservation        BATNA
+($80)           Price ($85)     Price ($95)        ($100)
+
+No deal         ←  Deal possible  →              No deal
+below $80       $85 — $95            above $100
+```
+
+### The Three ZOPA Scenarios
+
+**Positive ZOPA:** The seller's reservation price is below the buyer's reservation price. Agreement is possible. The negotiation is about where within the range the deal settles.
+
+**Negative ZOPA:** The seller's reservation price is above the buyer's reservation price. No agreement is possible without changing the negotiation structure. Walking away (to BATNA) is rational.
+
+**Unknown ZOPA:** You don't know the other party's reservation price. This is the most common scenario. The negotiation itself is a process of discovering the ZOPA.
+
+---
+
+## 2. How to Identify the ZOPA
+
+### Step 1: Determine Your Own Reservation Price
+
+Your reservation price is derived from your BATNA. If your BATNA is worth $X to you, your reservation price is $X — you will not accept a deal worse than $X.
+
+**Example — Seller:** Your BATNA is selling to another buyer at $85,000. Your reservation price is $85,000. You will not accept less than $85,000 from the current buyer.
+
+**Example — Buyer:** Your BATNA is buying from another supplier at $95,000. Your reservation price is $95,000. You will not pay more than $95,000 to the current supplier.
+
+### Step 2: Estimate the Other Party's Reservation Price
+
+This is where skill and research matter. Techniques include:
+
+- **Market research:** What are prevailing prices and terms?
+- **Financial analysis:** What are their costs? What margin do they need?
+- **Behavioural signals:** How desperate are they? How much time pressure?
+- **Competitive intelligence:** Who else are they talking to? What alternatives do they have?
+- **Direct questioning (calibrated):** "What range were you thinking?" "What would make this work for you?"
+
+### Step 3: Map the ZOPA
+
+```
+Your reservation price: $85,000
+Their estimated reservation price: $95,000
+ZOPA: $85,000 — $95,000
+```
+
+If your estimate is correct, any price between $85,000 and $95,000 is a deal both parties prefer over their BATNA.
+
+### Step 4: Validate During Negotiation
+
+The negotiation itself tests your ZOPA estimate. If the other party accepts your opening offer immediately, your anchor was inside their reservation price (you left money on the table). If they walk away, your demand was outside the ZOPA.
+
+---
+
+## 3. Expanding the ZOPA: From Zero-Sum to Positive-Sum
+
+### The Problem with Narrow ZOPAs
+
+A narrow ZOPA limits the range of possible agreements and makes negotiation feel like a tug-of-war. If the ZOPA is $85K-$95K, the negotiation is purely about price — a distributive, zero-sum battle.
+
+### Technique 1: Add Issues to Expand the ZOPA
+
+By introducing additional issues (payment terms, delivery schedule, scope, warranty, volume commitments), you transform a single-issue distributive negotiation into a multi-issue integrative negotiation.
+
+**Example — Single issue (narrow ZOPA):**
+- Price: Seller wants $95K, buyer wants $85K. ZOPA: $85K-$95K.
+
+**Example — Multiple issues (expanded ZOPA):**
+- Price: Seller wants $95K, buyer wants $85K
+- Payment: Buyer wants net 60, seller wants net 15
+- Delivery: Buyer wants 4 weeks, seller wants 8 weeks
+- Warranty: Buyer wants 24 months, seller wants 12 months
+
+Now there are multiple trading opportunities. The seller might accept $88K in exchange for net 15 payment. The buyer might accept $92K in exchange for 8-week delivery. The ZOPA has expanded because value can be created across multiple dimensions.
+
+### Technique 2: Unbundle and Rebundle
+
+Break complex issues into components that can be traded separately:
+
+- Instead of "price" as one issue, break into: unit price, volume discount, escalation clause, minimum order quantity
+- Instead of "scope" as one issue, break into: core scope, optional scope, phase 1, phase 2
+
+Each component creates a new trading opportunity, expanding the effective ZOPA.
+
+### Technique 3: Create New Value Through Collaboration
+
+- Joint cost reduction: "If we share demand forecasts, you can optimise production and reduce costs. We split the savings."
+- Risk sharing: "If we commit to a 3-year contract, you can invest in efficiency. We share the productivity gains."
+- Information sharing: "If you share your cost breakdown, we can identify areas where our requirements are driving unnecessary cost."
+
+### Technique 4: Change the Negotiation Structure
+
+If no ZOPA exists on the current terms, restructure:
+
+- **Lease instead of buy:** Changes the financial model
+- **Phased delivery:** Changes the cash flow profile
+- **Joint venture:** Changes the risk-reward structure
+- **Barter/exchange:** Introduces non-monetary value
+- **Contingent payments:** Ties price to performance, reducing risk for both parties
+
+---
+
+## 4. Where Within the ZOPA: The Settlement Point
+
+### The Nash Bargaining Solution
+
+Game theory suggests that the settlement point should be the midpoint of the ZOPA — the "split the difference" outcome. In practice, settlements rarely land exactly at the midpoint. The actual settlement depends on:
+
+### Factors Influencing the Settlement Point
+
+**1. Anchoring**
+The first credible offer pulls the settlement toward it. If the seller anchors at $94K and the buyer anchors at $86K, the settlement is likely closer to the midpoint ($90K) but influenced by which anchor was stronger.
+
+**2. Information Asymmetry**
+The party with better information about the other's reservation price can push the settlement toward the other party's reservation price. If the seller knows the buyer's reservation is $95K, they hold firm at $93K.
+
+**3. Patience and Time Pressure**
+The party that can afford to wait pushes the settlement toward the other party's reservation price. Time pressure erodes the pressured party's position.
+
+**4. Negotiation Skill**
+Skilled negotiators consistently achieve settlements closer to the other party's reservation price. They use anchoring, framing, calibrated questions, and silence to shift the perceived ZOPA.
+
+**5. Relationship and Reciprocity**
+In ongoing relationships, parties may settle closer to the midpoint to maintain goodwill. One-sided settlements damage relationships and lead to renegotiation or non-performance.
+
+---
+
+## 5. Real Business Examples
+
+### Construction
+
+A hospital project is negotiating with a curtain wall subcontractor. The subcontractor's price is $4.2M. The general contractor's budget is $3.6M.
+
+**Initial ZOPA analysis:**
+- Subcontractor's BATNA: Another project at $3.9M (their reservation price)
+- GC's BATNA: Next-best subcontractor at $4.0M (their reservation price)
+- ZOPA: $3.9M — $4.0M (very narrow)
+
+**ZOPA expansion:**
+- Add payment terms: GC offers 50% advance (reduces subcontractor's financing cost by $80K)
+- Add scope: Include atrium glazing (subcontractor has idle crew, marginal cost low)
+- Add duration: Extend by 4 weeks (reduces subcontractor's overtime cost by $60K)
+
+**Expanded ZOPA:** The effective value range is now $3.7M-$4.1M after accounting for the value of added terms. Settlement at $3.8M with 50% advance, atrium scope, and 4-week extension.
+
+### Software
+
+A fintech startup is negotiating a cloud infrastructure contract. The provider's standard pricing is $500K/year. The startup's budget is $300K/year.
+
+**ZOPA expansion:**
+- The provider offers a startup programme: $300K/year for year 1, $450K/year for years 2-3 (if revenue exceeds $10M)
+- The startup offers a case study and reference participation (marketing value: $100K)
+- The provider offers credits for co-engineering (the startup helps optimise the provider's fintech features)
+
+**Result:** $280K/year for year 1 with revenue-based escalation. The ZOPA was expanded by introducing non-price issues that created value for both parties.
+
+### Healthcare
+
+A pharmaceutical company is negotiating exclusive distribution rights with a regional distributor. The pharma company wants $10M/year; the distributor's maximum is $7M.
+
+**No ZOPA initially:** $10M vs $7M — no overlap.
+
+**ZOPA creation through restructuring:**
+- Instead of fixed fee, structure as: $5M base + 15% of revenue above $50M
+- Distributor's downside is limited ($5M base); upside is shared
+- Pharma company's total could exceed $10M if distribution is successful
+- Both parties now have a deal that is better than their BATNA (no deal)
+
+---
+
+## 6. Case Study: The Telecom Equipment ZOPA Crisis
+
+### Situation
+
+A telecom operator (TelCo) needed to purchase 5G base station equipment from a major vendor (VendorX). VendorX quoted $25M. TelCo's board had approved a maximum of $18M. The gap appeared unbridgeable.
+
+### Problem
+
+- VendorX's BATNA: Sell to another operator at $22M (their reservation price)
+- TelCo's BATNA: Buy from VendorY at $20M with 12-month delay (their reservation price)
+- Initial ZOPA: $20M — $22M (narrow, and TelCo's board cap of $18M is below the ZOPA)
+
+The board cap created an internal constraint that made the negotiation seemingly impossible.
+
+### Negotiation Strategy
+
+TelCo's procurement team took a multi-dimensional approach:
+
+**1. Issue Expansion:**
+- Instead of price-only, introduced: deployment timeline, training, local content, managed services
+- VendorX valued a flagship reference case (TelCo was a market leader)
+- VendorX valued early deployment (showcase for other regional sales)
+
+**2. Value Creation:**
+- TelCo offered to be a reference site (marketing value: $2M)
+- TelCo offered local assembly facility (tax benefits for VendorX: $1.5M)
+- TelCo offered managed services contract (ongoing revenue for VendorX: $3M/year)
+
+**3. Price Restructuring:**
+- Base equipment: $17M (within board cap)
+- Managed services: $3M/year for 3 years (separate budget, opex not capex)
+- Local assembly: joint investment, shared tax benefits
+- Total 3-year value to VendorX: $17M + $9M + tax benefits = $28M+
+
+### Mistakes
+
+- **TelCo's initial mistake:** Presenting the board cap as a fixed constraint rather than exploring alternative budget structures (capex vs opex).
+- **VendorX's initial mistake:** Leading with list price ($25M) rather than understanding TelCo's budget structure and constraints.
+
+### Outcome
+
+- Equipment price: $17M (within board cap)
+- Managed services: $3M/year for 3 years
+- Reference site agreement: 2 years
+- Local assembly: joint venture, operational within 18 months
+- Total value to VendorX: $28M+ over 3 years (exceeds their $22M reservation price)
+- Total cost to TelCo: $17M capex + $3M/year opex (within budget structure)
+
+### Lessons Learned
+
+1. **Budget constraints are not always what they seem.** The $18M cap was a capex constraint, not a total spend constraint. Restructuring from capex to opex expanded the ZOPA.
+2. **Non-price issues can create enormous value.** The reference site and local assembly were worth millions to VendorX but cost TelCo little.
+3. **ZOPA expansion requires understanding both parties' interests.** VendorX wanted market presence; TelCo wanted budget compliance. The solution served both.
+4. **Price restructuring can bridge seemingly impossible gaps.** Separating equipment from services changed the financial model entirely.
+5. **Never accept "no ZOPA" without attempting issue expansion.** What looks like a negative ZOPA on one dimension may become a positive ZOPA on multiple dimensions.
+
+---
+
+## 7. Advanced ZOPA Concepts
+
+### Asymmetric ZOPA
+
+Sometimes the ZOPA is asymmetric — one party has much more room than the other. If the seller's reservation price is $50 and the buyer's is $200, the ZOPA is $50-$200 — a $150 range. The seller has $150 of upside; the buyer has $150 of downside. The negotiation is heavily influenced by who knows the ZOPA boundaries.
+
+**Strategic implication:** The party with better information about the ZOPA boundaries can push the settlement toward the other party's reservation price. This is why information gathering is so critical.
+
+### Dynamic ZOPA
+
+The ZOPA is not static — it shifts during negotiation as new information emerges, as issues are added or removed, and as external conditions change.
+
+**Example:** During a salary negotiation, the candidate mentions they have a competing offer. This revelation shifts the employer's estimate of the candidate's BATNA, which shifts their estimate of the candidate's reservation price, which shifts the ZOPA.
+
+### ZOPA in Multi-Party Negotiations
+
+In multi-party negotiations, the ZOPA becomes multidimensional:
+- Each party has their own reservation price
+- Coalitions may form, creating collective reservation prices
+- The ZOPA is the intersection of all parties' acceptable ranges
+- Adding parties typically narrows the ZOPA (more constraints)
+- But adding parties also adds issues (more trading opportunities)
+
+### Negative ZOPA: When to Walk Away
+
+If no ZOPA exists and cannot be created through issue expansion or restructuring, the rational choice is to exercise your BATNA. Expert negotiators recognise this and walk away rather than forcing a bad deal.
+
+**Signs of genuine negative ZOPA:**
+- The other party's demands exceed your reservation price on every issue
+- No additional issues can be introduced to create value
+- The other party refuses to share information needed for value creation
+- Your BATNA is genuinely better than any possible deal
+
+---
+
+## 8. Practical Tools
+
+### ZOPA Mapping Worksheet
+
+```
+ZOPA MAPPING WORKSHEET
+
+Negotiation: ____________________  Date: ___________
+
+1. MY SIDE
+   My BATNA: __________________________________
+   My BATNA value: $___________________________
+   My reservation price: $______________________
+   My target price: $__________________________
+
+2. THEIR SIDE (ESTIMATED)
+   Their BATNA: __________________________________
+   Their BATNA value (est.): $___________________
+   Their reservation price (est.): $_____________
+   Confidence in estimate (1-10): _______________
+
+3. ZOPA ANALYSIS
+   ZOPA range: $________ to $________
+   ZOPA width: $________
+   Positive ZOPA? Y/N
+   If N, can it be expanded? How? _______________
+
+4. ISSUE EXPANSION
+   Additional issues I can introduce:
+   1. ____________________  Value to me: _______  Value to them: _______
+   2. ____________________  Value to me: _______  Value to them: _______
+   3. ____________________  Value to me: _______  Value to them: _______
+
+5. SETTLEMENT STRATEGY
+   My opening anchor: $__________________________
+   Expected settlement: $________________________
+   Concession plan: _____________________________
+```
+
+### Red Flags: ZOPA Warning Signs
+
+- The other party's opening offer is outside your ZOPA estimate (they may have a different ZOPA estimate or be anchoring aggressively)
+- The other party refuses to discuss any issue beyond price (limits ZOPA expansion)
+- The other party's position doesn't move after multiple rounds (may indicate no ZOPA or a different BATNA than estimated)
+- New information emerges that shifts either party's BATNA (ZOPA has changed)
+- A third party enters the negotiation (may shift BATNAs and ZOPA)
+
+---
+
+## 9. Common Mistakes
+
+### Mistake 1: Assuming ZOPA Is Fixed
+
+**Why it occurs:** Negotiators treat the ZOPA as a given and focus only on claiming value within it.
+
+**How experts avoid it:** They actively work to expand the ZOPA by adding issues, creating value, and restructuring the negotiation.
+
+### Mistake 2: Misestimating the Other Party's Reservation Price
+
+**Why it occurs:** Projecting your own perspective onto the other party (egocentric bias).
+
+**How experts avoid it:** They invest in research, use calibrated questions, and test their estimates through trial offers during negotiation.
+
+### Mistake 3: Revealing Your Reservation Price
+
+**Why it occurs:** In the interest of efficiency, negotiators say "I can't go above $X" — telling the other party exactly where the ZOPA boundary is.
+
+**How experts avoid it:** They never reveal their reservation price. They anchor, make offers, and let the other party discover the boundary through the negotiation process.
+
+### Mistake 4: Forcing a Deal When No ZOPA Exists
+
+**Why it occurs:** Negotiators feel they must reach an agreement. Walking away feels like failure.
+
+**How experts avoid it:** They recognise that no deal is better than a bad deal. They exercise their BATNA when no ZOPA exists, and they attempt ZOPA expansion before walking.
+
+### Mistake 5: Ignoring Internal Constraints
+
+**Why it occurs:** The negotiator's reservation price is influenced by internal constraints (budget caps, board approvals, policy limits) that may not reflect the true BATNA.
+
+**How experts avoid it:** They distinguish between true BATNA-derived reservation prices and internal constraint-derived limits. They work to relax internal constraints before negotiation.
+
+### Mistake 6: Failing to Reassess ZOPA During Negotiation
+
+**Why it occurs:** The initial ZOPA estimate becomes anchored, and new information is ignored.
+
+**How experts avoid it:** They continuously update their ZOPA estimate as new information emerges. They treat the ZOPA as dynamic, not static.
+
+### Mistake 7: Overlooking Non-Monetary ZOPA
+
+**Why it occurs:** Focusing exclusively on price when the ZOPA may exist on other dimensions (timing, scope, quality, risk).
+
+**How experts avoid it:** They map the ZOPA on every negotiable dimension, not just price.
+
+### Mistake 8: Anchoring Outside the ZOPA
+
+**Why it occurs:** Negotiators anchor too aggressively, making offers the other party cannot accept.
+
+**How experts avoid it:** They anchor ambitiously but within the credible range. An anchor outside the ZOPA triggers walk-away; an anchor at the edge of the ZOPA pulls the settlement toward it.
+
+### Mistake 9: Splitting the Difference Unthinkingly
+
+**Why it occurs:** When the gap is small, "split the difference" feels fair and efficient.
+
+**How experts avoid it:** They assess whether the midpoint is fair relative to objective criteria. If the midpoint favours the other party, they resist splitting. If it favours them, they propose it.
+
+### Mistake 10: Not Preparing for No-ZOPA Scenarios
+
+**Why it occurs:** Optimism bias — negotiators assume a deal will be possible.
+
+**How experts avoid it:** They prepare a walk-away plan. They know their BATNA, have their walk-away script ready, and are emotionally prepared to leave without a deal.
+
+---
+
+## 10. Advanced Expert Tips
+
+### ZOPA Discovery Through Trial Offers
+
+Instead of asking "What is your best price?" (which invites a strategic response), make trial offers at different price points and observe reactions. A flinch or hesitation reveals you're near their reservation price. Immediate acceptance reveals you're well within the ZOPA (and left value on the table).
+
+### The Decoy Effect in ZOPA Expansion
+
+Introduce a decoy option that is unattractive on its own but makes your preferred option look better. This technique, rooted in behavioural economics, shifts the perceived ZOPA by changing the reference points.
+
+**Example:** Present three options — A ($100K, basic), B ($130K, premium), C ($140K, premium + extras). Option C makes B look like a good deal, expanding the buyer's perceived acceptable range.
+
+### ZOPA and Prospect Theory
+
+Kahneman and Tversky's Prospect Theory explains why parties sometimes reject offers within the ZOPA. When parties are "in the domain of losses" (feeling they're losing relative to their reference point), they become risk-seeking and reject favourable offers. Expert negotiators reframe offers to put the other party "in the domain of gains" (feeling they're gaining relative to their reference point).
+
+### Reactive Devaluation
+
+Parties sometimes reject offers simply because they come from the other side — a phenomenon called reactive devaluation. An offer of $90K from the other party is perceived as less valuable than the same $90K discovered independently. Expert negotiators mitigate this by using objective criteria and third-party validation.
+
+---
+
+## Key Takeaways
+
+1. **ZOPA is the range where deals are possible.** Outside the ZOPA, no amount of skill produces agreement.
+2. **Your reservation price is derived from your BATNA.** Know both before negotiating.
+3. **The other party's reservation price must be estimated.** Invest in research and use calibrated questions.
+4. **ZOPA can be expanded.** Add issues, unbundle, create value, and restructure to widen the range.
+5. **Where within the ZOPA the deal settles depends on anchoring, information, patience, and skill.**
+6. **Negative ZOPA means walk away.** No deal is better than a bad deal.
+7. **ZOPA is dynamic.** Reassess as new information emerges during negotiation.
+8. **Non-monetary dimensions have their own ZOPAs.** Map every dimension, not just price.
+9. **Never reveal your reservation price.** Let the other party discover it through negotiation.
+10. **Prepare for no-ZOPA scenarios.** Know your BATNA and be ready to walk.
+
+---
+
+## FAQ
+
+### 1. What is ZOPA in simple terms?
+
+ZOPA (Zone of Possible Agreement) is the range where both parties can reach a deal that is better than their alternative. If you're willing to pay up to $100 and the seller is willing to accept as low as $80, the ZOPA is $80-$100. Any price in that range is a deal both prefer over walking away.
+
+### 2. How is ZOPA different from BATNA?
+
+BATNA is your fallback if no deal is reached. ZOPA is the range where a deal is possible. Your BATNA determines your reservation price, which is one boundary of the ZOPA. The other party's BATNA determines their reservation price, which is the other boundary.
+
+### 3. What happens if there is no ZOPA?
+
+If no ZOPA exists (the seller's minimum exceeds the buyer's maximum), no agreement is possible on current terms. You should either attempt to expand the ZOPA by adding issues or restructuring the deal, or exercise your BATNA and walk away.
+
+### 4. How do I expand a narrow ZOPA?
+
+Add issues to the negotiation (payment terms, delivery, scope, warranty), unbundle complex issues into tradable components, create value through collaboration (joint cost reduction, risk sharing), or restructure the deal (lease vs buy, phased delivery, contingent payments).
+
+### 5. Should I reveal my reservation price?
+
+No. Revealing your reservation price tells the other party exactly where the ZOPA boundary is, eliminating your ability to claim value within the ZOPA. Let the other party discover your boundary through the negotiation process.
+
+### 6. How do I estimate the other party's reservation price?
+
+Use market research, financial analysis, competitive intelligence, behavioural signals, and calibrated questions. The more information you gather, the more accurate your estimate. Treat your estimate as a hypothesis to be tested during negotiation.
+
+### 7. What is the Nash Bargaining Solution?
+
+The Nash Bargaining Solution is a game-theoretic concept suggesting that rational parties will settle at the midpoint of the ZOPA. In practice, settlements rarely land exactly at the midpoint due to anchoring, information asymmetry, and negotiation skill differences.
+
+### 8. Can ZOPA change during negotiation?
+
+Yes. ZOPA is dynamic. New information (a competing offer, a market shift), new issues (adding payment terms), or changed BATNAs (a new alternative emerges) all shift the ZOPA. Expert negotiators continuously reassess the ZOPA during negotiation.
+
+### 9. What is a negative ZOPA?
+
+A negative ZOPA means the seller's reservation price is above the buyer's reservation price. No deal is possible without changing the negotiation structure. Forcing a deal in a negative ZOPA situation results in one party accepting terms worse than their BATNA — an irrational outcome.
+
+### 10. How does ZOPA work in multi-party negotiations?
+
+In multi-party negotiations, the ZOPA is the intersection of all parties' acceptable ranges. Adding parties typically narrows the ZOPA (more constraints) but also adds issues (more trading opportunities). Coalition formation can create collective reservation prices that shift the ZOPA.
+
+### 11. What is the relationship between ZOPA and anchoring?
+
+Anchoring influences where within the ZOPA the deal settles. A credible anchor near one boundary of the ZOPA pulls the settlement toward that boundary. For example, if the ZOPA is $80-$100 and the seller anchors at $98, the settlement is likely closer to $98 than to $80.
+
+### 12. How do I know if I've misestimated the ZOPA?
+
+Signs of misestimation include: the other party accepts your opening offer immediately (you were well within the ZOPA — left value on the table), the other party walks away (you were outside the ZOPA), or the other party's counter-offer is far from your expected range (your estimate of their reservation price was wrong).
+
+---
+
+## References
+
+- Fisher, R., Ury, W., & Patton, B. (2011). *Getting to Yes* (3rd ed.). Penguin Books.
+- Raiffa, H. (1982). *The Art and Science of Negotiation*. Harvard University Press.
+- Thompson, L. L. (2012). *The Mind and Heart of the Negotiator* (5th ed.). Pearson.
+- Shell, G. R. (2018). *Bargaining for Advantage* (3rd ed.). Penguin Books.
+- Voss, C. (2016). *Never Split the Difference*. Harper Business.
+- Kahneman, D. (2011). *Thinking, Fast and Slow*. Farrar, Straus and Giroux.
+- Malhotra, D., & Bazerman, M. (2007). *Negotiation Genius*. Bantam Books.
+- Lewicki, R., Saunders, D., & Barry, B. (2015). *Negotiation* (7th ed.). McGraw-Hill.
+- Ury, W. (1991). *Getting Past No*. Bantam Books.
+- Diamond, S. (2010). *Getting More*. Crown Business.
