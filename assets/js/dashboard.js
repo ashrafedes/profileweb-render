@@ -457,10 +457,10 @@
         <td>${a.readingTime || '—'} min</td>
         <td><span class="status-badge ${a.draft ? 'status-draft' : 'status-published'}">${a.draft ? 'Draft' : 'Published'}</span></td>
         <td>
-          <button class="dash-btn" onclick="ArticlesDashboard.edit(${a.id})">${T.edit}</button>
-          <button class="dash-btn" onclick="ArticlesDashboard.preview(${a.id})">${T.preview}</button>
-          <button class="dash-btn" onclick="ArticlesDashboard.duplicate(${a.id})">${T.duplicate}</button>
-          <button class="dash-btn dash-btn-danger" onclick="ArticlesDashboard.remove(${a.id})">${T.delete}</button>
+          <button class="dash-btn" onclick="ArticlesDashboard.edit('${a.id}')">${T.edit}</button>
+          <button class="dash-btn" onclick="ArticlesDashboard.preview('${a.id}')">${T.preview}</button>
+          <button class="dash-btn" onclick="ArticlesDashboard.duplicate('${a.id}')">${T.duplicate}</button>
+          <button class="dash-btn dash-btn-danger" onclick="ArticlesDashboard.remove('${a.id}')">${T.delete}</button>
         </td>
       </tr>`).join('');
   }
@@ -542,7 +542,8 @@
   }
 
   function getNextId() {
-    return articles.length > 0 ? Math.max(...articles.map(a => a.id)) + 1 : 1;
+    const numericIds = articles.map(a => a.id).filter(id => typeof id === 'number');
+    return numericIds.length > 0 ? Math.max(...numericIds) + 1 : 1;
   }
 
   /* ── Save Article ── */
@@ -565,7 +566,7 @@
     };
 
     if (editingId) {
-      const idx = articles.findIndex(a => a.id === editingId);
+      const idx = articles.findIndex(a => String(a.id) === String(editingId));
       if (idx >= 0) articles[idx] = article;
     } else {
       articles.push(article);
@@ -592,18 +593,18 @@
 
   /* ── Edit / Delete / Duplicate / Preview ── */
   function editArticle(id) {
-    const a = articles.find(x => x.id === id);
+    const a = articles.find(x => String(x.id) === String(id));
     if (a) openEditor(JSON.parse(JSON.stringify(a)));
   }
 
   function deleteArticle(id) {
     if (!confirm(T.confirmDelete)) return;
-    articles = articles.filter(a => a.id !== id);
+    articles = articles.filter(a => String(a.id) !== String(id));
     saveArticles();
   }
 
   function duplicateArticle(id) {
-    const a = articles.find(x => x.id === id);
+    const a = articles.find(x => String(x.id) === String(id));
     if (!a) return;
     const copy = JSON.parse(JSON.stringify(a));
     copy.id = getNextId();
@@ -615,7 +616,7 @@
   }
 
   function previewArticle(id) {
-    const a = articles.find(x => x.id === id);
+    const a = articles.find(x => String(x.id) === String(id));
     if (a) window.open(`${SITE_URL}/en/articles/${a.slug}.html`, '_blank');
   }
 
