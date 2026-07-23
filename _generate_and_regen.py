@@ -276,7 +276,6 @@ def regenerate_sitemap(articles):
         ('/ar/contact.html', 'yearly', '0.80'),
         ('/ar/downloads.html', 'monthly', '0.80'),
         ('/ar/search.html', 'monthly', '0.70'),
-        ('/articles/', 'weekly', '0.90'),
         ('/en/articles/', 'weekly', '0.90'),
         ('/ar/articles/', 'weekly', '0.90'),
     ]
@@ -290,10 +289,9 @@ def regenerate_sitemap(articles):
             continue
         slug = a['slug']
         pub = a.get('publishDate', today)
-        for prefix in ['', '/en', '/ar']:
-            pri = '0.70' if prefix == '' else '0.85'
+        for prefix in ['/en', '/ar']:
             path = f'{prefix}/articles/{slug}.html'
-            lines.append(f'  <url><loc>{SITE_URL}{path}</loc><lastmod>{pub}</lastmod><changefreq>monthly</changefreq><priority>{pri}</priority></url>')
+            lines.append(f'  <url><loc>{SITE_URL}{path}</loc><lastmod>{pub}</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>')
 
     lines.append('</urlset>')
     with open('sitemap.xml', 'w', encoding='utf-8') as f:
