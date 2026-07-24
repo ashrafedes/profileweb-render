@@ -937,9 +937,8 @@
       { loc: SITE_URL + '/en/downloads.html', lastmod: today, changefreq: 'monthly', priority: '0.80' },
       { loc: SITE_URL + '/en/search.html', lastmod: today, changefreq: 'monthly', priority: '0.70' },
       // Articles center pages
-      { loc: SITE_URL + '/articles/', lastmod: today, changefreq: 'weekly', priority: '0.80' },
-      { loc: SITE_URL + '/en/articles/', lastmod: today, changefreq: 'weekly', priority: '0.80' },
-      { loc: SITE_URL + '/ar/articles/', lastmod: today, changefreq: 'weekly', priority: '0.80' }
+      { loc: SITE_URL + '/en/articles/', lastmod: today, changefreq: 'weekly', priority: '0.90' },
+      { loc: SITE_URL + '/ar/articles/', lastmod: today, changefreq: 'weekly', priority: '0.90' }
     ];
 
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -950,10 +949,9 @@
       xml += `  <url><loc>${p.loc}</loc><lastmod>${p.lastmod}</lastmod><changefreq>${p.changefreq}</changefreq><priority>${p.priority}</priority></url>\n`;
     });
 
-    // Dynamic article pages (EN + AR + root)
+    // Dynamic article pages (EN + AR only)
     articles.filter(a => !a.draft).forEach(a => {
       const aDate = a.updatedDate || a.publishDate;
-      xml += `  <url><loc>${SITE_URL}/articles/${a.slug}.html</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.70</priority></url>\n`;
       xml += `  <url><loc>${SITE_URL}/en/articles/${a.slug}.html</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>\n`;
       xml += `  <url><loc>${SITE_URL}/ar/articles/${a.slug}.html</loc><lastmod>${aDate}</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>\n`;
     });
@@ -969,7 +967,7 @@
     xml += '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n';
     xml += '  <channel>\n';
     xml += `    <title>Ashraf El Desoky – Articles</title>\n`;
-    xml += `    <link>${SITE_URL}/articles/</link>\n`;
+    xml += `    <link>${SITE_URL}/en/articles/</link>\n`;
     xml += `    <description>Articles and insights on project management, telecommunications, and digital transformation</description>\n`;
     xml += `    <language>en-us</language>\n`;
     xml += `    <lastBuildDate>${today}</lastBuildDate>\n`;
