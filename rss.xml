@@ -5,7 +5,15 @@
     <link>https://www.ashraf-eldesoky.space/en/articles/</link>
     <description>Articles and insights on project management, telecommunications, and digital transformation</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jul 2026 10:19:16 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 10:46:01 GMT</lastBuildDate>
+    <item>
+      <title>Hospital Information Systems (HIS): A Comprehensive Engineering Study of Architecture, Interoperability, Data Governance, and Digital Transformation in Healthcare</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/hospital-information-system-engineering.html</link>
+      <description>A deep engineering study of Hospital Information Systems: architecture evolution from monolithic to microservices, HL7 FHIR interoperability, DICOM imaging standards, clinical decision support systems, security and HIPAA compliance, performance engineering, queue theory in hospital operations, revenue cycle management, and emerging AI/blockchain/IoMT technologies.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Fri, 14 Aug 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/hospital-information-system-engineering.html</guid>
+    </item>
     <item>
       <title>Low Voltage Network Distribution: Engineering Principles, Design Methodology, and System Optimization for Modern Power Networks</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/low-voltage-network-distribution-engineering.html</link>
