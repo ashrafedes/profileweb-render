@@ -238,7 +238,7 @@
   <script src="${relativeBase}assets/js/i18n.js?v=2"></script>
   <script src="${relativeBase}assets/js/components.js?v=4"></script>
   <script src="${relativeBase}assets/js/core.js?v=6"></script>
-  <script src="${relativeBase}assets/js/article.js?v=7"></script>
+  <script src="${relativeBase}assets/js/article.js?v=8"></script>
 </body>
 </html>
 `;
@@ -310,7 +310,7 @@
       const branchRes = await fetch(`https://api.github.com/repos/${GH_REPO}/branches/${GH_BRANCH}`, {
         headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }
       });
-      if (!branchRes.ok) throw new Error('Cannot read branch: ' + branchRes.statusText);
+      if (!branchRes.ok) { const e = await branchRes.json().catch(() => ({})); throw new Error('Cannot read branch: ' + branchRes.statusText + ' (' + branchRes.status + ')' + (e.message ? ' — ' + e.message : '')); }
       const branchData = await branchRes.json();
       const latestCommitSha = branchData.commit.sha;
       const baseTreeSha = branchData.commit.commit.tree.sha;
@@ -323,7 +323,7 @@
           headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
           body: JSON.stringify({ content: toBase64(f.content), encoding: 'base64' })
         });
-        if (!blobRes.ok) throw new Error(`Failed to create blob for ${f.path}: ${blobRes.statusText}`);
+        if (!blobRes.ok) { const e = await blobRes.json().catch(() => ({})); throw new Error(`Failed to create blob for ${f.path}: ${blobRes.statusText} (${blobRes.status})` + (e.message ? ' — ' + e.message : '')); }
         const blobData = await blobRes.json();
         treeItems.push({ path: f.path, mode: '100644', type: 'blob', sha: blobData.sha });
       }
@@ -334,7 +334,7 @@
         headers: { 'Authorization': `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Content-Type': 'application/json' },
         body: JSON.stringify({ base_tree: baseTreeSha, tree: treeItems })
       });
-      if (!treeRes.ok) throw new Error('Failed to create tree: ' + treeRes.statusText);
+      if (!treeRes.ok) { const e = await treeRes.json().catch(() => ({})); throw new Error('Failed to create tree: ' + treeRes.statusText + ' (' + treeRes.status + ')' + (e.message ? ' — ' + e.message : '')); }
       const treeData = await treeRes.json();
 
       // Create commit
@@ -347,7 +347,7 @@
           parents: [latestCommitSha]
         })
       });
-      if (!commitRes.ok) throw new Error('Failed to create commit: ' + commitRes.statusText);
+      if (!commitRes.ok) { const e = await commitRes.json().catch(() => ({})); throw new Error('Failed to create commit: ' + commitRes.statusText + ' (' + commitRes.status + ')' + (e.message ? ' — ' + e.message : '')); }
       const commitData = await commitRes.json();
 
       // Update branch ref
@@ -358,7 +358,7 @@
       });
       if (!refRes.ok) {
         const refErr = await refRes.json().catch(() => ({}));
-        throw new Error(refErr.message || 'Failed to update branch: ' + refRes.statusText);
+        throw new Error('Failed to update branch: ' + refRes.statusText + ' (' + refRes.status + ')' + (refErr.message ? ' — ' + refErr.message : ''));
       }
 
       showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml and article HTML pages committed. Arabic content is saved. If the live site still shows English after 5 minutes, log in to Render and click “Manual Deploy” because Render is not auto-deploying the latest commits.</span>');
