@@ -321,7 +321,7 @@ def regenerate_rss(articles):
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ashraf El Desoky – Articles</title>
-    <link>{SITE_URL}/articles/</link>
+    <link>{SITE_URL}/en/articles/</link>
     <description>Articles and insights on project management, telecommunications, and digital transformation</description>
     <language>en-us</language>
     <lastBuildDate>{formatdate(usegmt=True)}</lastBuildDate>
