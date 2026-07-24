@@ -93,9 +93,6 @@ def gen_en_page(article):
       <div class="container" id="related-articles"></div>
     </section>
 
-    <section class="section" style="padding:0 0 3rem;">
-      <div class="container" id="newsletter-section"></div>
-    </section>
   </main>
 
   <div id="ecms-footer-inject"></div>
@@ -104,7 +101,7 @@ def gen_en_page(article):
   <script src="../../assets/js/i18n.js?v=2"></script>
   <script src="../../assets/js/components.js?v=4"></script>
   <script src="../../assets/js/core.js?v=6"></script>
-  <script src="../../assets/js/article.js?v=7"></script>
+  <script src="../../assets/js/article.js?v=8"></script>
 </body>
 </html>
 """
@@ -191,9 +188,6 @@ def gen_ar_page(article):
       <div class="container" id="related-articles"></div>
     </section>
 
-    <section class="section" style="padding:0 0 3rem;">
-      <div class="container" id="newsletter-section"></div>
-    </section>
   </main>
 
   <div id="ecms-footer-inject"></div>
@@ -202,7 +196,7 @@ def gen_ar_page(article):
   <script src="../../assets/js/i18n.js?v=2"></script>
   <script src="../../assets/js/components.js?v=4"></script>
   <script src="../../assets/js/core.js?v=6"></script>
-  <script src="../../assets/js/article.js?v=7"></script>
+  <script src="../../assets/js/article.js?v=8"></script>
 </body>
 </html>
 """

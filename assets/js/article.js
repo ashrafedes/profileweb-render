@@ -347,9 +347,6 @@
       renderRelated(articles, article);
       renderPrevNext(articles, article);
 
-      // Newsletter
-      renderNewsletter();
-
       // TOC scroll spy
       initScrollSpy();
     } catch (e) {
@@ -429,25 +426,6 @@
     el.innerHTML = html;
   }
 
-  /* ── Newsletter ── */
-  function renderNewsletter() {
-    const el = document.getElementById('newsletter-section');
-    if (!el) return;
-    el.innerHTML = `
-      <div class="newsletter-box">
-        <h3>${T.newsletter}</h3>
-        <p>${T.newsletterDesc}</p>
-        <form id="newsletter-form" class="newsletter-form">
-          <input type="email" placeholder="${T.emailPlaceholder}" required>
-          <button type="submit">${T.subscribe}</button>
-        </form>
-      </div>`;
-    document.getElementById('newsletter-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      e.target.innerHTML = `<p style="color:#fff;font-weight:600;">✓ ${IS_ARABIC ? 'شكراً لاشتراكك!' : 'Thanks for subscribing!'}</p>`;
-    });
-  }
-
   /* ── Scroll Spy for TOC ── */
   function initScrollSpy() {
     const tocLinks = document.querySelectorAll('.toc a');
@@ -476,7 +454,6 @@
         <a href="index.html" style="font-weight:600;color:var(--accent);">${T.backToArticles}</a>
       </div>`;
     document.getElementById('related-articles').style.display = 'none';
-    document.getElementById('newsletter-section').style.display = 'none';
   }
 
   // Start

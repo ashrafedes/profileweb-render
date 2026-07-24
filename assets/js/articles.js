@@ -304,19 +304,6 @@
     });
   }
 
-  /* ── Newsletter (placeholder) ── */
-  function initNewsletter() {
-    const form = document.getElementById('newsletter-form');
-    if (!form) return;
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = form.querySelector('input').value;
-      // Placeholder: wire up to your email provider
-      console.log('Newsletter subscription:', email);
-      form.innerHTML = `<p style="color:#fff;font-weight:600;">✓ ${IS_ARABIC ? 'شكراً لاشتراكك!' : 'Thanks for subscribing!'}</p>`;
-    });
-  }
-
   /* ── Init ── */
   function init() {
     document.documentElement.setAttribute('lang', LANG);
@@ -344,22 +331,6 @@
     renderArticles();
     renderPagination();
     initSearch();
-    initNewsletter();
-
-    // Render newsletter section
-    const nl = document.getElementById('newsletter-section');
-    if (nl) {
-      nl.innerHTML = `
-        <div class="newsletter-box">
-          <h3>${T.newsletter}</h3>
-          <p>${T.newsletterDesc}</p>
-          <form id="newsletter-form" class="newsletter-form">
-            <input type="email" placeholder="${T.emailPlaceholder}" required>
-            <button type="submit">${T.subscribe}</button>
-          </form>
-        </div>`;
-      initNewsletter();
-    }
   }
 
   // Expose sort toggle for HTML onclick

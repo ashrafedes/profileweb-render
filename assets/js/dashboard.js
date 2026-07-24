@@ -230,10 +230,6 @@
     <section class="section" style="padding:0 0 2rem;">
       <div class="container" id="related-articles"></div>
     </section>
-
-    <section class="section" style="padding:0 0 3rem;">
-      <div class="container" id="newsletter-section"></div>
-    </section>
   </main>
 
   <div id="ecms-footer-inject"></div>
