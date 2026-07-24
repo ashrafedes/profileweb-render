@@ -5,7 +5,7 @@
     <link>https://www.ashraf-eldesoky.space/en/articles/</link>
     <description>Articles and insights on project management, telecommunications, and digital transformation</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jul 2026 17:06:05 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 17:06:26 GMT</lastBuildDate>
     <item>
       <title>Agile Methodology for Mega Projects: Scaling Beyond Teams to Enterprise-Wide Delivery on Billion-Dollar Programs</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/agile-methodology-mega-projects.html</link>
@@ -13,6 +13,14 @@
       <author>Ashraf Ibrahim El Desoky</author>
       <pubDate>Wed, 19 Aug 2026 21:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/agile-methodology-mega-projects.html</guid>
+    </item>
+    <item>
+      <title>5G Mobile Technology: Architecture, Devices, and Design Engineering</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/5g-mobile-technology-architecture-devices-design.html</link>
+      <description>A deep engineering study of 5G mobile technology covering New Radio air interface, FR1/FR2 spectrum, massive MIMO, beamforming, 5G Core SBA, network slicing, Open RAN, device RF front-end and antenna design, link budget, coverage-capacity trade-offs, URLLC, private 5G, security, and the path to 5G-Advanced and 6G.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Wed, 19 Aug 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/5g-mobile-technology-architecture-devices-design.html</guid>
     </item>
     <item>
       <title>Hospital Information Systems (HIS): A Comprehensive Engineering Study of Architecture, Interoperability, Data Governance, and Digital Transformation in Healthcare</title>
