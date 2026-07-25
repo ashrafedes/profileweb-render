@@ -5,7 +5,7 @@
     <link>https://www.ashraf-eldesoky.space/en/articles/</link>
     <description>Articles and insights on project management, telecommunications, and digital transformation</description>
     <language>en-us</language>
-    <lastBuildDate>2026-07-25T21:12:26.284Z</lastBuildDate>
+    <lastBuildDate>2026-07-25T22:09:53.903Z</lastBuildDate>
     <item>
       <title>Earned Value Management: A Complete Guide</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/earned-value-management.html</link>
@@ -963,7 +963,7 @@
       <link>https://www.ashraf-eldesoky.space/en/articles/agile-methodology-mega-projects.html</link>
       <description>A comprehensive engineering study of applying agile methodology to billion-dollar mega projects: framework selection (SAFe, LeSS, Nexus, Spotify), contract restructuring (progressive fixed-price, target cost, IPD), governance adaptation, risk management, EVM integration, and real-world case studies from FTTH rollout, hospital complex, and high-speed rail programs.</description>
       <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Thu, 20 Aug 2026 00:00:00 GMT</pubDate>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/agile-methodology-mega-projects.html</guid>
     </item>
     <item>
@@ -1030,28 +1030,28 @@
       <pubDate>Sat, 25 Jul 2026 00:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/bureaucratic-governance-smart-framework.html</guid>
     </item>
-      <item>
+    <item>
       <title>CCTV Surveillance Camera Systems: The Complete Guide from Design to Operation and Maintenance</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/cctv-surveillance-camera-systems-complete-guide.html</link>
       <description>A comprehensive engineering guide to CCTV systems — covering camera types, recording technologies, network infrastructure, AI analytics, cybersecurity, governance, engineering design, installation, maintenance, and real-world case studies.</description>
-      <category>Security Systems</category>
-      <pubDate>Fri, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/cctv-surveillance-camera-systems-complete-guide.html</guid>
     </item>
-      <item>
+    <item>
       <title>Access Control Systems: The Complete Guide from Design to Operation</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/access-control-systems-complete-guide.html</link>
       <description>A comprehensive engineering guide to access control systems — covering authentication technologies, reader types, controllers, software, CCTV/alarm integration, governance, engineering design, installation, maintenance, and real-world case studies.</description>
-      <category>Security Systems</category>
-      <pubDate>Sat, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/access-control-systems-complete-guide.html</guid>
     </item>
-      <item>
-      <title>Data &amp; Telephone Networks: The Complete Guide from Design to Operation</title>
+    <item>
+      <title>Data & Telephone Networks: The Complete Guide from Design to Operation</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/data-telephone-networks-complete-guide.html</link>
       <description>A comprehensive engineering guide to data and telephone networks — covering copper and fiber cabling, switches and routers, VoIP and IP-PBX, wireless networks, unified communications, QoS, cybersecurity, engineering design, installation, maintenance, and case studies.</description>
-      <category>Network Infrastructure</category>
-      <pubDate>Sat, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/data-telephone-networks-complete-guide.html</guid>
     </item>
   </channel>

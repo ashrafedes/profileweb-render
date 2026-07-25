@@ -5824,10 +5824,10 @@
     "category": "Project Management",
     "author": "Ashraf Ibrahim El Desoky",
     "heroImage": "https://images.pexels.com/photos/7869066/pexels-photo-7869066.jpeg?auto=compress&cs=tinysrgb&w=1200",
-    "publishDate": "2026-08-20",
-    "updatedDate": "2026-08-20",
+    "publishDate": "2026-07-20",
+    "updatedDate": "2026-07-25",
     "readingTime": 35,
-    "featured": false,
+    "featured": true,
     "draft": false,
     "tags": [
       "agile",

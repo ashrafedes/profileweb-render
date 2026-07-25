@@ -302,8 +302,8 @@
   <url><loc>https://www.ashraf-eldesoky.space/ar/articles/low-voltage-network-distribution-engineering.html</loc><lastmod>2026-08-12</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/en/articles/hospital-information-system-engineering.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/ar/articles/hospital-information-system-engineering.html</loc><lastmod>2026-08-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ashraf-eldesoky.space/en/articles/agile-methodology-mega-projects.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.ashraf-eldesoky.space/ar/articles/agile-methodology-mega-projects.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/en/articles/agile-methodology-mega-projects.html</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/ar/articles/agile-methodology-mega-projects.html</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/en/articles/5g-mobile-technology-architecture-devices-design.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/ar/articles/5g-mobile-technology-architecture-devices-design.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/en/articles/procurement-and-disposal-methods-guide.html</loc><lastmod>2026-08-20</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
@@ -320,40 +320,10 @@
   <url><loc>https://www.ashraf-eldesoky.space/ar/articles/project-governance-raci-matrix.html</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/en/articles/bureaucratic-governance-smart-framework.html</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/ar/articles/bureaucratic-governance-smart-framework.html</loc><lastmod>2026-07-25</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url>
-    <loc>https://www.ashraf-eldesoky.space/en/articles/cctv-surveillance-camera-systems-complete-guide.html</loc>
-    <lastmod>2026-07-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.ashraf-eldesoky.space/ar/articles/cctv-surveillance-camera-systems-complete-guide.html</loc>
-    <lastmod>2026-07-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.ashraf-eldesoky.space/en/articles/access-control-systems-complete-guide.html</loc>
-    <lastmod>2026-07-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.ashraf-eldesoky.space/ar/articles/access-control-systems-complete-guide.html</loc>
-    <lastmod>2026-07-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.ashraf-eldesoky.space/en/articles/data-telephone-networks-complete-guide.html</loc>
-    <lastmod>2026-07-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.ashraf-eldesoky.space/ar/articles/data-telephone-networks-complete-guide.html</loc>
-    <lastmod>2026-07-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
+  <url><loc>https://www.ashraf-eldesoky.space/en/articles/cctv-surveillance-camera-systems-complete-guide.html</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/ar/articles/cctv-surveillance-camera-systems-complete-guide.html</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/en/articles/access-control-systems-complete-guide.html</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/ar/articles/access-control-systems-complete-guide.html</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/en/articles/data-telephone-networks-complete-guide.html</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/ar/articles/data-telephone-networks-complete-guide.html</loc><lastmod>2026-07-26</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
 </urlset>
