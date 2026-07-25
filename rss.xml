@@ -1070,5 +1070,13 @@
       <pubDate>Sat, 26 Jul 2026 00:00:00 +0000</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/gis-autocad-infrastructure-network-design-guide.html</guid>
     </item>
+      <item>
+      <title>5G Network Design: The Complete Guide from Architecture to Operation</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/5g-network-design-complete-guide.html</link>
+      <description>A comprehensive engineering guide to 5G network design — covering SBA architecture, spectrum (Low/Mid/mmWave), gNB and Massive MIMO, Beamforming, service categories (eMBB/URLLC/mMTC), Network Slicing, coverage/capacity planning, transport, security, NSA/SA, Edge Computing, Open RAN, and case studies.</description>
+      <category>Network Infrastructure</category>
+      <pubDate>Sat, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/5g-network-design-complete-guide.html</guid>
+    </item>
   </channel>
 </rss>
