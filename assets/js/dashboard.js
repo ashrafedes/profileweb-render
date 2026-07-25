@@ -245,7 +245,7 @@
   }
 
   /* ── Save Articles — commits to GitHub via Contents API ── */
-  async function saveArticles(currentArticle) {
+  async function saveArticles(currentArticle, successMessage) {
     renderStats();
     renderTable();
 
@@ -362,7 +362,8 @@
         throw new Error('Failed to update branch: ' + refRes.statusText + ' (' + refRes.status + ')' + (refErr.message ? ' — ' + refErr.message : ''));
       }
 
-      showSaveBanner(true, '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml and article HTML pages committed. Arabic content is saved. If the live site still shows English after 5 minutes, log in to Render and click “Manual Deploy” because Render is not auto-deploying the latest commits.</span>');
+      const pushMsg = successMessage || '✓ Pushed to GitHub!<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">articles.json, sitemap.xml, rss.xml and article HTML pages committed. Arabic content is saved. If the live site still shows English after 5 minutes, log in to Render and click “Manual Deploy” because Render is not auto-deploying the latest commits.</span>';
+      showSaveBanner(true, pushMsg);
       // Reload articles from server after a short delay to confirm changes
       setTimeout(() => loadArticles().then(() => { renderStats(); renderTable(); }), 3000);
       return true;
@@ -597,7 +598,7 @@
   function deleteArticle(id) {
     if (!confirm(T.confirmDelete)) return;
     articles = articles.filter(a => String(a.id) !== String(id));
-    saveArticles();
+    saveArticles(null, '✓ Article deleted and pushed to GitHub.<br><span style="font-weight:400;font-size:0.8rem;opacity:0.9;">It has been removed from articles.json, sitemap.xml, and rss.xml. The live list may take a few minutes to refresh after Render deploys.</span>');
   }
 
   function duplicateArticle(id) {
@@ -748,20 +749,144 @@
 
   async function translateWithMyMemory(text) {
     if (!text || !text.trim()) return '';
-    const encoded = encodeURIComponent(text);
-    const res = await fetch(`https://api.mymemory.translated.net/get?q=${encoded}&langpair=en|ar`, { mode: 'cors' });
-    if (!res.ok) throw new Error(`MyMemory HTTP ${res.status}`);
-    const data = await res.json();
-    if (data && data.responseData && data.responseData.translatedText) {
-      return data.responseData.translatedText;
+    const MAX = 800; // keep request URLs short to avoid 404/CORS failures
+
+    async function translateChunk(chunk) {
+      const encoded = encodeURIComponent(chunk);
+      const res = await fetch(`https://api.mymemory.translated.net/get?q=${encoded}&langpair=en|ar`, { mode: 'cors' });
+      if (!res.ok) throw new Error(`MyMemory HTTP ${res.status}`);
+      const data = await res.json();
+      if (data && data.responseData && data.responseData.translatedText) {
+        return data.responseData.translatedText;
+      }
+      throw new Error('MyMemory returned empty translation');
     }
-    throw new Error('MyMemory returned empty translation');
+
+    if (text.length <= MAX) return await translateChunk(text);
+
+    // Translate paragraph by paragraph, chunking long paragraphs/line at sentence boundaries
+    const paragraphs = text.split('\n\n');
+    const translatedParagraphs = [];
+    for (const p of paragraphs) {
+      if (!p.trim()) {
+        translatedParagraphs.push(p);
+        continue;
+      }
+      if (p.length <= MAX) {
+        try {
+          translatedParagraphs.push(await translateChunk(p));
+        } catch (e) {
+          console.warn('MyMemory paragraph translation failed, keeping original:', e.message);
+          translatedParagraphs.push(p);
+        }
+        continue;
+      }
+      const lines = p.split('\n');
+      const translatedLines = [];
+      for (const line of lines) {
+        const trimmed = line.trim();
+        if (!trimmed) {
+          translatedLines.push(line);
+          continue;
+        }
+        if (trimmed.length <= MAX) {
+          try {
+            translatedLines.push(await translateChunk(trimmed));
+          } catch (e) {
+            console.warn('MyMemory line translation failed, keeping original:', e.message);
+            translatedLines.push(line);
+          }
+          continue;
+        }
+        const parts = trimmed.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [trimmed];
+        const translatedParts = [];
+        let buffer = '';
+        for (const part of parts) {
+          const candidate = (buffer + part).trim();
+          if (candidate.length <= MAX && buffer.length > 0) {
+            buffer = candidate;
+          } else {
+            if (buffer) {
+              try {
+                translatedParts.push(await translateChunk(buffer));
+              } catch (e) {
+                console.warn('MyMemory chunk translation failed, keeping original:', e.message);
+                translatedParts.push(buffer);
+              }
+            }
+            buffer = part;
+          }
+        }
+        if (buffer) {
+          try {
+            translatedParts.push(await translateChunk(buffer.trim()));
+          } catch (e) {
+            console.warn('MyMemory chunk translation failed, keeping original:', e.message);
+            translatedParts.push(buffer);
+          }
+        }
+        translatedLines.push(translatedParts.join(''));
+      }
+      translatedParagraphs.push(translatedLines.join('\n'));
+    }
+    return translatedParagraphs.join('\n\n');
+  }
+
+  async function translateWithOpenRouter(text, key) {
+    const MAX = 1200; // characters per chunk (safe for free model output)
+    const systemPrompt = 'You are a professional translator. Translate the following English Markdown text into fluent, natural Arabic. Preserve all Markdown formatting, headings, lists, links, and code blocks. Return ONLY the Arabic translation, no extra commentary.';
+
+    async function translateChunk(chunk) {
+      const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${key}`,
+          'HTTP-Referer': (typeof ARTICLES_CONFIG !== 'undefined' && ARTICLES_CONFIG.SITE_URL) || location.origin,
+          'X-Title': 'Articles Dashboard Translation'
+        },
+        body: JSON.stringify({
+          model: 'meta-llama/llama-3.3-70b-instruct:free',
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: chunk }
+          ]
+        })
+      });
+      if (!res.ok) throw new Error(`OpenRouter HTTP ${res.status}`);
+      const data = await res.json();
+      const raw = data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
+      if (!raw || !raw.trim()) throw new Error('OpenRouter empty response');
+      return raw.trim();
+    }
+
+    const paragraphs = text.split('\n\n');
+    const chunks = [];
+    let current = '';
+    for (const p of paragraphs) {
+      const joinedLen = (current ? current.length + 2 : 0) + p.length;
+      if (joinedLen > MAX && current.length > 0) {
+        chunks.push(current);
+        current = p;
+      } else {
+        current = current ? current + '\n\n' + p : p;
+      }
+    }
+    if (current) chunks.push(current);
+
+    const translated = [];
+    for (let i = 0; i < chunks.length; i++) {
+      translated.push(await translateChunk(chunks[i]));
+      if (i < chunks.length - 1) await new Promise(r => setTimeout(r, 250));
+    }
+    return translated.join('\n\n');
   }
 
   async function translateArticleToArabic(enData) {
     const key = getOpenRouterKey();
 
-    // Try OpenRouter first if we have a key
+    // Try OpenRouter all-in-one first (best for short articles)
+    let result = {};
     if (key) {
       try {
         const systemPrompt = `You are a professional translator. Translate the provided English article into fluent, natural Arabic. Preserve Markdown formatting. Return ONLY a valid JSON object with these exact keys: title, excerpt, content, metaTitle, metaDescription, keywords (array). Do not wrap the JSON in markdown code blocks.`;
@@ -797,7 +922,7 @@
           if (raw) {
             const cleaned = raw.replace(/^```json\s*/, '').replace(/\s*```$/, '').trim();
             const translated = JSON.parse(cleaned);
-            return {
+            result = {
               title: translated.title || enData.title,
               excerpt: translated.excerpt || enData.excerpt,
               content: translated.content || enData.content,
@@ -808,19 +933,28 @@
           }
         }
       } catch (e) {
-        console.warn('OpenRouter failed, falling back to MyMemory:', e.message);
+        console.warn('OpenRouter single-shot failed:', e.message);
       }
     }
 
-    // Fallback: MyMemory field by field, then English copy
+    // Long articles: translate the body in chunks if the single-shot call skipped the content
+    if (key && (!result.content || result.content.trim() === '' || result.content === enData.content)) {
+      try {
+        result.content = await translateWithOpenRouter(enData.content, key);
+      } catch (e) {
+        console.warn('OpenRouter chunked content translation failed:', e.message);
+      }
+    }
+
+    // MyMemory fallback for any small fields still missing
     const tryMem = async (text) => { try { return await translateWithMyMemory(text); } catch (e) { return text; } };
     return {
-      title: await tryMem(enData.title),
-      excerpt: await tryMem(enData.excerpt),
-      content: await tryMem(enData.content),
-      metaTitle: await tryMem(enData.metaTitle || enData.title),
-      metaDescription: await tryMem(enData.metaDescription || enData.excerpt),
-      keywords: await Promise.all((enData.keywords || []).map(k => tryMem(k)))
+      title: result.title || await tryMem(enData.title),
+      excerpt: result.excerpt || await tryMem(enData.excerpt),
+      content: result.content || await tryMem(enData.content),
+      metaTitle: result.metaTitle || await tryMem(enData.metaTitle || enData.title),
+      metaDescription: result.metaDescription || await tryMem(enData.metaDescription || enData.excerpt),
+      keywords: result.keywords || await Promise.all((enData.keywords || []).map(k => tryMem(k)))
     };
   }
 
