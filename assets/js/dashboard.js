@@ -284,10 +284,10 @@
     const sitemapContent = buildSitemapXML();
     const rssContent = buildRSSXML();
 
-    // Warn if JSON is very large (base64 images inflate it significantly)
+    // Warn if JSON is extremely large (Git Data API supports up to 100MB per blob)
     const jsonSizeKB = Math.round(new TextEncoder().encode(jsonContent).length / 1024);
-    if (jsonSizeKB > 2048) {
-      const proceed = confirm(`⚠ articles.json is ${jsonSizeKB}KB — this is very large due to embedded base64 images.\n\nLarge files may fail to push to GitHub. Consider using external image URLs instead of uploading images directly.\n\nProceed anyway?`);
+    if (jsonSizeKB > 10240) {
+      const proceed = confirm(`⚠ articles.json is ${jsonSizeKB}KB — this is very large.\n\nThe GitHub Git Data API supports files up to 100MB, but very large files may be slow to push.\n\nProceed anyway?`);
       if (!proceed) return false;
     }
 
