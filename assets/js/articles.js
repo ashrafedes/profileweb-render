@@ -22,7 +22,7 @@
 
   // Path prefixes: ../../ from subdirs, ../ from root
   const ASSET_BASE = _inSub ? '../../' : '../';
-  const JSON_URL = ASSET_BASE + 'articles/articles.json?v=2';
+  const JSON_URL = ASSET_BASE + 'articles/articles.json?v=3';
 
   const T = IS_ARABIC ? {
     title: 'مركز المقالات',
