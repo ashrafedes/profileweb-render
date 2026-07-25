@@ -238,7 +238,7 @@ ACTIVE SOFTWARE PRODUCTS (BUILT & DEPLOYED):
    and analytics dashboards.
    Features: Financial Workflow, Real-time Analytics, Multi-site support, Role-based Access.
    Live System: https://pattycashsystem.web.app/
-   Marketing Page: https://pettycash-marketing.web.app/
+   Marketing Page: http://www.pettycash.site/
 
 2. INFRAFLOW ENTERPRISE TRACKING — IN DEVELOPMENT
    Description: A highly specialized project control engine built for telecom and FTTH

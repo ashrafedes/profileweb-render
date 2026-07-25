@@ -24,7 +24,7 @@
 |-------|-----------|
 | Master CV PDF | `assets/downloads/Ashraf_El_Desoky_Master_CV_Full.pdf` |
 | PMP Certificate | `assets/downloads/PMP_Certificate_Ashraf_ElDesoky.pdf` |
-| Petty Cash Marketing Page | https://pettycash-marketing.web.app/ |
+| Petty Cash Marketing Page | http://www.pettycash.site/ |
 | Petty Cash SaaS App | https://pattycashsystem.web.app/ |
 
 ---
@@ -71,7 +71,7 @@
 
 **Card 1: Petty Cash Management SaaS Platform**
 - Description: A complete dual-layer SaaS ecosystem solving site expense leaks, minimizing manual paperwork delays, and giving corporate leadership a live data pipeline of decentralised spending.
-- Button 1: **`[View Marketing Page]`** → https://pettycash-marketing.web.app/
+- Button 1: **`[View Marketing Page]`** → http://www.pettycash.site/
 - Button 2: **`[Launch SaaS App]`** → https://pattycashsystem.web.app/
 
 **Card 2: InfraFlow Enterprise Tracking System**

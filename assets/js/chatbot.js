@@ -84,7 +84,7 @@
 ${CV_CONTEXT}
 
 البرمجيات النشطة (أضف روابط markdown عند الاقتراب):
-- منصة إدارة النثرية المالية (Petty Cash): [نظام التشغيل](https://pattycashsystem.web.app/) | [صفحة التسويق](https://pettycash-marketing.web.app/)
+- منصة إدارة النثرية المالية (Petty Cash): [نظام التشغيل](https://pattycashsystem.web.app/) | [صفحة التسويق](http://www.pettycash.site/)
 - InfraFlow: منصة تتبع مشاريع الاتصالات/FTTH للمؤسسات.
 
 قواعد الرد:
@@ -102,7 +102,7 @@ Here is the complete professional profile of Eng. Ashraf. Use this information t
 ${CV_CONTEXT}
 
 Active Software (inject markdown links when relevant):
-- Petty Cash SaaS System: [Live System](https://pattycashsystem.web.app/) | [Marketing Page](https://pettycash-marketing.web.app/)
+- Petty Cash SaaS System: [Live System](https://pattycashsystem.web.app/) | [Marketing Page](http://www.pettycash.site/)
 - InfraFlow: Enterprise telecom/FTTH tracking platform.
 
 CRITICAL: Do NOT output any internal thinking, reasoning, analysis, or notes to yourself. Do NOT start with "Okay", "Let me", "Well", or any preamble. Start your response directly with the answer only. Do NOT use  or  tags or any thinking markers.
