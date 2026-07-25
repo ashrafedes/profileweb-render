@@ -1054,5 +1054,13 @@
       <pubDate>Sun, 26 Jul 2026 00:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/data-telephone-networks-complete-guide.html</guid>
     </item>
+      <item>
+      <title>FTTH (Fiber to the Home): Complete Guide — Architecture, Protocols, Devices, Civil Works, Splicing, OTDR &amp; Measurements</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/ftth-fiber-to-the-home-complete-guide.html</link>
+      <description>A comprehensive engineering guide to FTTH networks — covering PON/GPON/XGS-PON architecture, protocols, OLT and ONT, splitters, OSP civil works, cables, fusion splicing, OTDR testing, rack contents, maintenance, and case studies.</description>
+      <category>Network Infrastructure</category>
+      <pubDate>Sat, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/ftth-fiber-to-the-home-complete-guide.html</guid>
+    </item>
   </channel>
 </rss>
