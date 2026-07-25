@@ -58,7 +58,7 @@
     article: 'Article',
     date: 'Date',
     saveSuccess: '✓ Article saved successfully!',
-    saveError: '3 files downloaded. Replace them in your project root and push to git.',
+    saveError: '⚠ Article is saved locally in your browser but not pushed. Check the error above, then click Publish again after fixing it.',
     english: '🇺🇸 English',
     arabic: '🇸🇦 العربية',
     gallery: 'Gallery Images (comma-separated URLs)',
@@ -256,13 +256,14 @@
     }
 
     // Fetch fresh articles.json from GitHub to avoid overwriting new articles added elsewhere
-    showSaveBanner(true, '⏳ Fetching latest articles from GitHub…');
-    try {
-      const freshRes = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/${GH_BRANCH}/articles/articles.json?v=${Date.now()}`, { cache: 'no-store' });
-      if (freshRes.ok) {
-        const freshArticles = await freshRes.json();
-        const currentSlug = (currentArticle && currentArticle.slug) ? currentArticle.slug : getVal('ed-slug');
-        if (currentSlug) {
+    // (only when saving a specific article; skip for delete/import to preserve local state)
+    if (currentArticle && currentArticle.slug) {
+      showSaveBanner(true, '⏳ Fetching latest articles from GitHub…');
+      try {
+        const freshRes = await fetch(`https://raw.githubusercontent.com/${GH_REPO}/${GH_BRANCH}/articles/articles.json?v=${Date.now()}`, { cache: 'no-store' });
+        if (freshRes.ok) {
+          const freshArticles = await freshRes.json();
+          const currentSlug = currentArticle.slug;
           const currentLocal = articles.find(a => a.slug === currentSlug);
           const freshIdx = freshArticles.findIndex(a => a.slug === currentSlug);
           if (currentLocal && freshIdx >= 0) {
@@ -270,13 +271,13 @@
           } else if (currentLocal) {
             freshArticles.push(currentLocal);
           }
+          articles = freshArticles;
+          renderStats();
+          renderTable();
         }
-        articles = freshArticles;
-        renderStats();
-        renderTable();
+      } catch (e) {
+        console.warn('Could not fetch fresh articles from GitHub, using locally cached list:', e);
       }
-    } catch (e) {
-      console.warn('Could not fetch fresh articles from GitHub, using locally cached list:', e);
     }
 
     const jsonContent = JSON.stringify(articles, null, 2);
@@ -577,7 +578,7 @@
       try { localStorage.removeItem('dashboard_article_backup'); } catch (e) {}
       closeEditor();
     } else {
-      showSaveBanner(true, '⚠ Article is saved locally in your browser but not pushed. Check the error above, then click Publish again after fixing it.');
+      showSaveBanner(true, T.saveError);
     }
   }
 
@@ -608,7 +609,7 @@
     copy.en.title = (a.en.title || '') + ' (Copy)';
     copy.draft = true;
     articles.push(copy);
-    saveArticles();
+    saveArticles(copy);
   }
 
   function previewArticle(id) {

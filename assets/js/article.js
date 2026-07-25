@@ -142,7 +142,7 @@
     const temp = document.createElement('div');
     temp.innerHTML = html;
     const headings = temp.querySelectorAll('h2, h3');
-    if (headings.length === 0) return '';
+    if (headings.length === 0) return { content: html, toc: '' };
 
     let tocHtml = '<h3 style="font-size:0.82rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem;">' + T.tableOfContents + '</h3><ul class="toc">';
     headings.forEach((h, i) => {
@@ -152,7 +152,7 @@
       tocHtml += `<li><a href="#${id}" class="${cls}">${h.textContent}</a></li>`;
     });
     tocHtml += '</ul>';
-    return tocHtml;
+    return { content: temp.innerHTML, toc: tocHtml };
   }
 
   /* ── Update SEO meta tags ── */
@@ -294,13 +294,13 @@
 
       // Content
       const contentHtml = renderMarkdown(data.content);
-      const tocHtml = buildTOC(contentHtml);
+      const tocData = buildTOC(contentHtml);
 
       const bodyEl = document.getElementById('article-body');
       bodyEl.innerHTML = `
         <div class="article-layout">
           <div>
-            <div class="article-content" id="article-content">${contentHtml}</div>
+            <div class="article-content" id="article-content">${tocData.content}</div>
 
             <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
               <div class="share-buttons">
@@ -325,7 +325,7 @@
           </div>
 
           <aside class="article-sidebar">
-            ${tocHtml}
+            ${tocData.toc}
             <div style="margin-top:2rem;">
               <div class="article-lang-switch">
                 <button class="${lang === 'en' ? 'active' : ''}" data-lang="en">🇺🇸 EN</button>
