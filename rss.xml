@@ -5,271 +5,7 @@
     <link>https://www.ashraf-eldesoky.space/en/articles/</link>
     <description>Articles and insights on project management, telecommunications, and digital transformation</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jul 2026 22:49:09 GMT</lastBuildDate>
-    <item>
-      <title>5G Mobile Technology: Architecture, Devices, and Design Engineering</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/5g-mobile-technology-architecture-devices-design.html</link>
-      <description>A deep engineering study of 5G mobile technology covering New Radio air interface, FR1/FR2 spectrum, massive MIMO, beamforming, 5G Core SBA, network slicing, Open RAN, device RF front-end and antenna design, link budget, coverage-capacity trade-offs, URLLC, private 5G, security, and the path to 5G-Advanced and 6G.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Wed, 19 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/5g-mobile-technology-architecture-devices-design.html</guid>
-    </item>
-    <item>
-      <title>Procurement and Disposal Methods: A Comprehensive Engineering and Regulatory Guide</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/procurement-and-disposal-methods-guide.html</link>
-      <description>A comprehensive guide to public procurement and disposal methods: public tender, direct contracting, limited competition, direct purchase, framework agreements, two-stage competition, design competitions, industry localization, public auction, sealed bid sale, direct sale, and investment bidding — with evaluation formulas, risk analysis, and digital transformation insights.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Wed, 19 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/procurement-and-disposal-methods-guide.html</guid>
-    </item>
-    <item>
-      <title>Hospital Information Systems (HIS): A Comprehensive Engineering Study of Architecture, Interoperability, Data Governance, and Digital Transformation in Healthcare</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/hospital-information-system-engineering.html</link>
-      <description>A deep engineering study of Hospital Information Systems: architecture evolution from monolithic to microservices, HL7 FHIR interoperability, DICOM imaging standards, clinical decision support systems, security and HIPAA compliance, performance engineering, queue theory in hospital operations, revenue cycle management, and emerging AI/blockchain/IoMT technologies.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Fri, 14 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/hospital-information-system-engineering.html</guid>
-    </item>
-    <item>
-      <title>Low Voltage Network Distribution: Engineering Principles, Design Methodology, and System Optimization for Modern Power Networks</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/low-voltage-network-distribution-engineering.html</link>
-      <description>A comprehensive engineering analysis of low voltage network distribution: topological configurations, transformer sizing, conductor optimization, voltage regulation, short-circuit analysis, protection coordination, power quality, distributed generation integration, and smart grid evolution with mathematical formulations.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Tue, 11 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/low-voltage-network-distribution-engineering.html</guid>
-    </item>
-    <item>
-      <title>Employee Psychology in the Workplace: How Colleagues, Work Pressure, and Salary Satisfaction Affect Productivity and Mental Wellbeing</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/employee-psychology-workplace-productivity.html</link>
-      <description>A deep analysis of employee psychology: how workplace relationships, chronic stress, and salary dissatisfaction impact productivity, retention, and psychological wellbeing.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Mon, 10 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/employee-psychology-workplace-productivity.html</guid>
-    </item>
-    <item>
-      <title>The Art of War: Strategic Principles That Still Shape Leadership, Business, Negotiation, and Modern Decision-Making</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/art-of-war-strategic-principles.html</link>
-      <description>A comprehensive analysis of Sun Tzu&#x27;s Art of War and its enduring influence on modern leadership, business strategy, negotiation, and decision-making under uncertainty.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Sun, 09 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/art-of-war-strategic-principles.html</guid>
-    </item>
-    <item>
-      <title>Negotiation Psychology and Cognitive Biases in Construction: Thinking About Thinking</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-psychology-cognitive-biases-construction.html</link>
-      <description>Expert guide to negotiation psychology and cognitive biases in construction — anchoring bias, confirmation bias, overconfidence, loss aversion, framing effects, and debiasing strategies for better negotiation outcomes.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Sat, 08 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-psychology-cognitive-biases-construction.html</guid>
-    </item>
-    <item>
-      <title>Why a Negotiation Playbook Is the Difference Between Amateurs and Professionals</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/expert-negotiation-playbook.html</link>
-      <description>Every profession has a playbook. Surgeons follow protocols. Pilots use checklists. Lawyers prepare case strategies. Yet most negotiators walk into high-sta</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Sat, 08 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/expert-negotiation-playbook.html</guid>
-    </item>
-    <item>
-      <title>Mediation and Alternative Dispute Resolution in Construction Negotiation</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/mediation-alternative-dispute-resolution-construction.html</link>
-      <description>Expert guide to mediation and ADR in construction — mediation process, facilitation techniques, negotiation in mediation, when to mediate vs arbitrate, and achieving settlement through assisted negotiation.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Fri, 07 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/mediation-alternative-dispute-resolution-construction.html</guid>
-    </item>
-    <item>
-      <title>Why Virtual Negotiation Is Not Just In-Person Negotiation on a Screen</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/virtual-remote-negotiation.html</link>
-      <description>The shift to virtual negotiation was accelerated by the COVID-19 pandemic, but it&#x27;s now a permanent feature of business. A McKinsey study found that 70-80%</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Fri, 07 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/virtual-remote-negotiation.html</guid>
-    </item>
-    <item>
-      <title>Negotiation in Design-Build and EPC Construction Contracts</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-design-build-contracts-construction.html</link>
-      <description>Expert guide to design-build and EPC contract negotiation — employer requirements, design risk, performance guarantees, interface management, and turnkey delivery negotiation strategies.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Thu, 06 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-design-build-contracts-construction.html</guid>
-    </item>
-    <item>
-      <title>Negotiation in Public-Private Partnerships: Infrastructure Project Strategies</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-public-private-partnerships-construction.html</link>
-      <description>Expert guide to PPP negotiation — concession agreements, risk allocation, payment mechanisms, government guarantees, value for money, and lifecycle contract management for infrastructure projects.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Wed, 05 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-public-private-partnerships-construction.html</guid>
-    </item>
-    <item>
-      <title>Why Crisis Negotiation Principles Apply to Business — and Why Most Leaders Get It Wrong</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/crisis-negotiation-business.html</link>
-      <description>When a hostage negotiator faces a barricaded subject, the stakes are literally life and death. There is no room for error, no opportunity for a do-over, an</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Wed, 05 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/crisis-negotiation-business.html</guid>
-    </item>
-    <item>
-      <title>Negotiating with Subcontractors in Construction Projects: Strategies and Best Practices</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/negotiating-with-subcontractors-construction-projects.html</link>
-      <description>Expert guide to subcontractor negotiation — selection, back-to-back terms, risk transfer, payment terms, performance management, and dispute resolution in construction subcontracting.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Tue, 04 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiating-with-subcontractors-construction-projects.html</guid>
-    </item>
-    <item>
-      <title>Why Multi-Party Negotiation Is Exponentially More Complex Than Two-Party Negotiation</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/multi-party-negotiation.html</link>
-      <description>A two-party negotiation has one relationship dynamic. A three-party negotiation has three. A five-party negotiation has ten. A ten-party negotiation has fo</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Tue, 04 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/multi-party-negotiation.html</guid>
-    </item>
-    <item>
-      <title>Negotiation in Construction Joint Ventures and Consortiums</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-joint-ventures-consortiums-construction.html</link>
-      <description>Expert guide to negotiating joint venture and consortium agreements in construction — partner selection, risk allocation, profit sharing, governance, dispute resolution, and exit strategies.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Mon, 03 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-joint-ventures-consortiums-construction.html</guid>
-    </item>
-    <item>
-      <title>Why Ethics Is the Foundation of Sustainable Negotiation Success</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-ethics.html</link>
-      <description>In 2015, Volkswagen admitted to installing &quot;defeat devices&quot; in 11 million diesel vehicles to cheat emissions tests. The negotiation that led to this decisi</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Mon, 03 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-ethics.html</guid>
-    </item>
-    <item>
-      <title>Negotiating Under Time Pressure in Construction: Managing Deadlines and Urgency</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/negotiating-under-time-pressure-construction.html</link>
-      <description>Expert guide to negotiating under time pressure in construction — managing artificial deadlines, using time strategically, avoiding rushed decisions, and maintaining quality under urgency.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Sun, 02 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiating-under-time-pressure-construction.html</guid>
-    </item>
-    <item>
-      <title>Why Understanding Psychological Tactics Makes You a Better Negotiator — and a Better Defender</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/psychological-tactics-negotiation.html</link>
-      <description>Every negotiation is a psychological battlefield. Whether you realise it or not, cognitive biases, emotional triggers, and influence principles shape every</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Sun, 02 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/psychological-tactics-negotiation.html</guid>
-    </item>
-    <item>
-      <title>Negotiation Preparation and Planning for Construction Professionals</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-preparation-planning-construction-professionals.html</link>
-      <description>Expert guide to negotiation preparation — stakeholder analysis, interest mapping, objective setting, team roles, venue selection, and pre-negotiation strategy development for construction professionals.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Sat, 01 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-preparation-planning-construction-professionals.html</guid>
-    </item>
-    <item>
-      <title>Why Emotional Intelligence Predicts Negotiation Success More Than IQ</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/emotional-intelligence-negotiation.html</link>
-      <description>In a landmark study, researchers at Stanford University analysed 100 MBA students in a negotiation exercise. The students with the highest IQs did not achi</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Sat, 01 Aug 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/emotional-intelligence-negotiation.html</guid>
-    </item>
-    <item>
-      <title>Final Account Negotiation in Construction Projects: Closing Out Clean</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/final-account-negotiation-construction-projects.html</link>
-      <description>Expert guide to final account negotiation in construction — preparing the final account, resolving open claims, negotiating retention release, dealing with deductions, and achieving project closeout.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Fri, 31 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/final-account-negotiation-construction-projects.html</guid>
-    </item>
-    <item>
-      <title>AI-Assisted Quantity Surveying: How Cost Estimation Is Moving from Guesswork to Precision</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/ai-assisted-quantity-surveying.html</link>
-      <description>How artificial intelligence is transforming quantity surveying — automated drawing recognition, BIM integration, intelligent pricing, discrepancy detection, and faster bid preparation.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Fri, 31 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/ai-assisted-quantity-surveying.html</guid>
-    </item>
-    <item>
-      <title>Why Cross-Cultural Negotiation Is the Skill That Defines Global Business</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/cross-cultural-negotiation.html</link>
-      <description>In 1985, when Toyota and General Motors launched the NUMMI joint venture, cultural differences nearly killed the partnership before it started. GM engineer</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Fri, 31 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/cross-cultural-negotiation.html</guid>
-    </item>
-    <item>
-      <title>Delay and Extension of Time Negotiation in Construction Contracts</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/delay-extension-time-negotiation-construction.html</link>
-      <description>Expert guide to negotiating delay claims and extensions of time — critical path analysis, concurrent delay, float consumption, time impact analysis, and FIDIC Clause 8.4 entitlement assessment.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Thu, 30 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/delay-extension-time-negotiation-construction.html</guid>
-    </item>
-    <item>
-      <title>GIS + AI for Fiber Planning: Where Geographic Data Meets Machine Learning</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/gis-ai-fiber-planning.html</link>
-      <description>How the integration of GIS and artificial intelligence is transforming fiber network planning — spatial demand forecasting, computer vision for aerial imagery, topology optimization, and live performance data integration.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Thu, 30 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/gis-ai-fiber-planning.html</guid>
-    </item>
-    <item>
-      <title>Why Conflict Resolution Is the Most Undervalued Leadership Skill</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/conflict-resolution-negotiation.html</link>
-      <description>Conflict in organisations is inevitable. What separates great leaders from average ones is not the absence of conflict — it&#x27;s the ability to resolve it con</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Thu, 30 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/conflict-resolution-negotiation.html</guid>
-    </item>
-    <item>
-      <title>Negotiation Ethics and Professional Conduct in Construction</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-ethics-professional-conduct-construction.html</link>
-      <description>Expert guide to negotiation ethics in construction — honesty vs strategy, disclosure obligations, dealing with deception, ethical dilemmas, and maintaining professional integrity under pressure.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Wed, 29 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-ethics-professional-conduct-construction.html</guid>
-    </item>
-    <item>
-      <title>OSP Project Management Best Practices: A Complete Guide to Telecom Outside Plant Deployment</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/osp-project-management-best-practices.html</link>
-      <description>A comprehensive guide to managing OSP (Outside Plant) telecom projects — planning, permitting, contractor management, safety, quality control, documentation, change control, and network handover.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Wed, 29 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/osp-project-management-best-practices.html</guid>
-    </item>
-    <item>
-      <title>Why Sales Negotiation Is the Revenue Engine</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/sales-negotiation-revenue.html</link>
-      <description>Every dollar of revenue flows through a negotiation. A 2% improvement in negotiated price, terms, or scope — across an organisation&#x27;s entire sales pipeline</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Wed, 29 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/sales-negotiation-revenue.html</guid>
-    </item>
-    <item>
-      <title>Emotional Intelligence in Construction Negotiation: Managing Self and Others</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/emotional-intelligence-negotiation-construction.html</link>
-      <description>Expert guide to emotional intelligence in construction negotiation — self-awareness, self-regulation, empathy, social skills, and managing emotional triggers during high-stakes discussions.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Tue, 28 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/emotional-intelligence-negotiation-construction.html</guid>
-    </item>
-    <item>
-      <title>AI in FTTH Network Design: A Comprehensive Guide to Smarter Fiber Deployment</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/ai-ftth-network-design-guide.html</link>
-      <description>Explore how artificial intelligence is transforming FTTH network design — demand forecasting, topology optimization, cable route planning, trenching reduction, cost control, predictive maintenance, and digital twins.</description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Tue, 28 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/ai-ftth-network-design-guide.html</guid>
-    </item>
-    <item>
-      <title>Why Vendor Negotiation Is Different from Procurement Negotiation</title>
-      <link>https://www.ashraf-eldesoky.space/en/articles/vendor-negotiation-relationships.html</link>
-      <description>Vendor negotiation and procurement negotiation overlap, but they are not the same. Procurement negotiation is transactional — focused on price, terms, and </description>
-      <author>Ashraf Ibrahim El Desoky</author>
-      <pubDate>Tue, 28 Jul 2026 21:00:00 GMT</pubDate>
-      <guid>https://www.ashraf-eldesoky.space/en/articles/vendor-negotiation-relationships.html</guid>
-    </item>
+    <lastBuildDate>Tue, 28 Jul 2026 23:07:12 GMT</lastBuildDate>
     <item>
       <title>Power Dynamics in Construction Negotiation: Sources and Strategies</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/power-dynamics-construction-negotiation.html</link>
@@ -303,12 +39,28 @@
       <guid>https://www.ashraf-eldesoky.space/en/articles/contract-negotiation-structuring.html</guid>
     </item>
     <item>
+      <title>Procurement and Disposal Methods: A Comprehensive Engineering and Regulatory Guide</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/procurement-and-disposal-methods-guide.html</link>
+      <description>A comprehensive guide to public procurement and disposal methods: public tender, direct contracting, limited competition, direct purchase, framework agreements, two-stage competition, design competitions, industry localization, public auction, sealed bid sale, direct sale, and investment bidding — with evaluation formulas, risk analysis, and digital transformation insights.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Mon, 27 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/procurement-and-disposal-methods-guide.html</guid>
+    </item>
+    <item>
       <title>Negotiating Variations and Change Orders in Construction Contracts</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/negotiating-variations-change-orders-construction.html</link>
       <description>Expert guide to negotiating variations and change orders — valuation methods, rate derivation, scope definition, time impact assessment, and dispute avoidance under FIDIC and standard contracts.</description>
       <author>Ashraf Ibrahim El Desoky</author>
       <pubDate>Sun, 26 Jul 2026 21:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/negotiating-variations-change-orders-construction.html</guid>
+    </item>
+    <item>
+      <title>5G Mobile Technology: Architecture, Devices, and Design Engineering</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/5g-mobile-technology-architecture-devices-design.html</link>
+      <description>A deep engineering study of 5G mobile technology covering New Radio air interface, FR1/FR2 spectrum, massive MIMO, beamforming, 5G Core SBA, network slicing, Open RAN, device RF front-end and antenna design, link budget, coverage-capacity trade-offs, URLLC, private 5G, security, and the path to 5G-Advanced and 6G.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sun, 26 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/5g-mobile-technology-architecture-devices-design.html</guid>
     </item>
     <item>
       <title>Why Procurement Negotiation Is the Hidden Profit Centre</title>
@@ -383,6 +135,14 @@
       <guid>https://www.ashraf-eldesoky.space/en/articles/ceo-cto-gm-roles-scientific-analysis.html</guid>
     </item>
     <item>
+      <title>Hospital Information Systems (HIS): A Comprehensive Engineering Study of Architecture, Interoperability, Data Governance, and Digital Transformation in Healthcare</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/hospital-information-system-engineering.html</link>
+      <description>A deep engineering study of Hospital Information Systems: architecture evolution from monolithic to microservices, HL7 FHIR interoperability, DICOM imaging standards, clinical decision support systems, security and HIPAA compliance, performance engineering, queue theory in hospital operations, revenue cycle management, and emerging AI/blockchain/IoMT technologies.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sat, 25 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/hospital-information-system-engineering.html</guid>
+    </item>
+    <item>
       <title>Why Salary Negotiation Is the Most Personal Negotiation You&#x27;ll Ever Do</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/salary-negotiation-mastery.html</link>
       <description>Salary negotiation is unique. It&#x27;s not just about money — it&#x27;s about self-worth, career trajectory, and the power dynamics between employer and employee. U</description>
@@ -447,6 +207,14 @@
       <guid>https://www.ashraf-eldesoky.space/en/articles/bureaucratic-governance-smart-framework.html</guid>
     </item>
     <item>
+      <title>Low Voltage Network Distribution: Engineering Principles, Design Methodology, and System Optimization for Modern Power Networks</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/low-voltage-network-distribution-engineering.html</link>
+      <description>A comprehensive engineering analysis of low voltage network distribution: topological configurations, transformer sizing, conductor optimization, voltage regulation, short-circuit analysis, protection coordination, power quality, distributed generation integration, and smart grid evolution with mathematical formulations.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Fri, 24 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/low-voltage-network-distribution-engineering.html</guid>
+    </item>
+    <item>
       <title>When the Stakes Are Highest, the Rules Change</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/high-stakes-negotiation.html</link>
       <description>High-stakes negotiations are qualitatively different from everyday business negotiations. When the outcome affects company survival, career trajectories, o</description>
@@ -463,6 +231,14 @@
       <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-tactics-claim-resolution.html</guid>
     </item>
     <item>
+      <title>Employee Psychology in the Workplace: How Colleagues, Work Pressure, and Salary Satisfaction Affect Productivity and Mental Wellbeing</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/employee-psychology-workplace-productivity.html</link>
+      <description>A deep analysis of employee psychology: how workplace relationships, chronic stress, and salary dissatisfaction impact productivity, retention, and psychological wellbeing.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Thu, 23 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/employee-psychology-workplace-productivity.html</guid>
+    </item>
+    <item>
       <title>Why the First Number Wins (and How to Make It Yours)</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/anchoring-strategies-negotiation.html</link>
       <description>In 1974, Amos Tversky and Daniel Kahneman published a study that revolutionised our understanding of human judgment. They asked participants to estimate th</description>
@@ -477,6 +253,14 @@
       <author>Ashraf Ibrahim El Desoky</author>
       <pubDate>Wed, 22 Jul 2026 21:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/win-win-negotiation-strategies-project-managers.html</guid>
+    </item>
+    <item>
+      <title>The Art of War: Strategic Principles That Still Shape Leadership, Business, Negotiation, and Modern Decision-Making</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/art-of-war-strategic-principles.html</link>
+      <description>A comprehensive analysis of Sun Tzu&#x27;s Art of War and its enduring influence on modern leadership, business strategy, negotiation, and decision-making under uncertainty.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Wed, 22 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/art-of-war-strategic-principles.html</guid>
     </item>
     <item>
       <title>Why ZOPA Is the Map Every Negotiator Needs</title>
@@ -567,6 +351,14 @@
       <guid>https://www.ashraf-eldesoky.space/en/articles/batna-mastery-negotiation.html</guid>
     </item>
     <item>
+      <title>Why a Negotiation Playbook Is the Difference Between Amateurs and Professionals</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/expert-negotiation-playbook.html</link>
+      <description>Every profession has a playbook. Surgeons follow protocols. Pilots use checklists. Lawyers prepare case strategies. Yet most negotiators walk into high-sta</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Tue, 21 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/expert-negotiation-playbook.html</guid>
+    </item>
+    <item>
       <title>Procurement Risk Management and Compliance: Essential Practices</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/procurement-risk-management-and-compliance.html</link>
       <description>Learn how to identify, assess, and mitigate procurement risks while ensuring regulatory compliance and audit readiness.</description>
@@ -637,6 +429,14 @@
       <author>Ashraf Ibrahim El Desoky</author>
       <pubDate>Mon, 20 Jul 2026 21:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/principled-negotiation-construction-contracts.html</guid>
+    </item>
+    <item>
+      <title>Negotiation Psychology and Cognitive Biases in Construction: Thinking About Thinking</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-psychology-cognitive-biases-construction.html</link>
+      <description>Expert guide to negotiation psychology and cognitive biases in construction — anchoring bias, confirmation bias, overconfidence, loss aversion, framing effects, and debiasing strategies for better negotiation outcomes.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Mon, 20 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-psychology-cognitive-biases-construction.html</guid>
     </item>
     <item>
       <title>Why Negotiation Matters</title>
@@ -719,6 +519,14 @@
       <guid>https://www.ashraf-eldesoky.space/en/articles/agile-methodology-mega-projects.html</guid>
     </item>
     <item>
+      <title>Why Virtual Negotiation Is Not Just In-Person Negotiation on a Screen</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/virtual-remote-negotiation.html</link>
+      <description>The shift to virtual negotiation was accelerated by the COVID-19 pandemic, but it&#x27;s now a permanent feature of business. A McKinsey study found that 70-80%</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sun, 19 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/virtual-remote-negotiation.html</guid>
+    </item>
+    <item>
       <title>Selecting the Right Procurement Contract Type: A Strategic Guide</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/procurement-contract-types-selection-guide.html</link>
       <description>Understand fixed-price, cost-reimbursable, and T&amp;M contracts to choose the best procurement contract for your project.</description>
@@ -773,6 +581,14 @@
       <author>Ashraf Ibrahim El Desoky</author>
       <pubDate>Sat, 18 Jul 2026 21:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/employee-engagement-and-retention-strategies.html</guid>
+    </item>
+    <item>
+      <title>Mediation and Alternative Dispute Resolution in Construction Negotiation</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/mediation-alternative-dispute-resolution-construction.html</link>
+      <description>Expert guide to mediation and ADR in construction — mediation process, facilitation techniques, negotiation in mediation, when to mediate vs arbitrate, and achieving settlement through assisted negotiation.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sat, 18 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/mediation-alternative-dispute-resolution-construction.html</guid>
     </item>
     <item>
       <title>Project Procurement Management: A Comprehensive Guide</title>
@@ -839,12 +655,52 @@
       <guid>https://www.ashraf-eldesoky.space/en/articles/project-controls-manager-complete-guide.html</guid>
     </item>
     <item>
+      <title>Negotiation in Design-Build and EPC Construction Contracts</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-design-build-contracts-construction.html</link>
+      <description>Expert guide to design-build and EPC contract negotiation — employer requirements, design risk, performance guarantees, interface management, and turnkey delivery negotiation strategies.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Fri, 17 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-design-build-contracts-construction.html</guid>
+    </item>
+    <item>
       <title>Organizational Behavior: A Psychological and Rational Approach to Managing People at Work</title>
       <link>https://www.ashraf-eldesoky.space/en/articles/organizational-behavior-psychological-rational-approach.html</link>
       <description>A comprehensive guide to Organizational Behavior covering team dynamics, power and politics, change management, diversity, remote work, AI, and practical tools for project managers.</description>
       <author>Ashraf Ibrahim El Desoky</author>
       <pubDate>Thu, 16 Jul 2026 21:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/organizational-behavior-psychological-rational-approach.html</guid>
+    </item>
+    <item>
+      <title>Why Crisis Negotiation Principles Apply to Business — and Why Most Leaders Get It Wrong</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/crisis-negotiation-business.html</link>
+      <description>When a hostage negotiator faces a barricaded subject, the stakes are literally life and death. There is no room for error, no opportunity for a do-over, an</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Thu, 16 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/crisis-negotiation-business.html</guid>
+    </item>
+    <item>
+      <title>Negotiation in Public-Private Partnerships: Infrastructure Project Strategies</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-public-private-partnerships-construction.html</link>
+      <description>Expert guide to PPP negotiation — concession agreements, risk allocation, payment mechanisms, government guarantees, value for money, and lifecycle contract management for infrastructure projects.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Wed, 15 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-public-private-partnerships-construction.html</guid>
+    </item>
+    <item>
+      <title>Why Multi-Party Negotiation Is Exponentially More Complex Than Two-Party Negotiation</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/multi-party-negotiation.html</link>
+      <description>A two-party negotiation has one relationship dynamic. A three-party negotiation has three. A five-party negotiation has ten. A ten-party negotiation has fo</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Tue, 14 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/multi-party-negotiation.html</guid>
+    </item>
+    <item>
+      <title>Negotiating with Subcontractors in Construction Projects: Strategies and Best Practices</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/negotiating-with-subcontractors-construction-projects.html</link>
+      <description>Expert guide to subcontractor negotiation — selection, back-to-back terms, risk transfer, payment terms, performance management, and dispute resolution in construction subcontracting.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Mon, 13 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiating-with-subcontractors-construction-projects.html</guid>
     </item>
     <item>
       <title>Hybrid Agile Methodologies: Scrum, Kanban, Lean &amp; When to Use the Hybrid Approach for Large Projects</title>
@@ -861,6 +717,14 @@
       <author>Ashraf Ibrahim El Desoky</author>
       <pubDate>Sun, 12 Jul 2026 21:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/ftth-agile-project-controls.html</guid>
+    </item>
+    <item>
+      <title>Why Ethics Is the Foundation of Sustainable Negotiation Success</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-ethics.html</link>
+      <description>In 2015, Volkswagen admitted to installing &quot;defeat devices&quot; in 11 million diesel vehicles to cheat emissions tests. The negotiation that led to this decisi</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sun, 12 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-ethics.html</guid>
     </item>
     <item>
       <title>Building a High-Performance PMO: A Framework for Excellence</title>
@@ -949,6 +813,14 @@
       <author>Ashraf Ibrahim El Desoky</author>
       <pubDate>Sat, 11 Jul 2026 21:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/agile-transformation-construction-engineering.html</guid>
+    </item>
+    <item>
+      <title>Negotiation in Construction Joint Ventures and Consortiums</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-joint-ventures-consortiums-construction.html</link>
+      <description>Expert guide to negotiating joint venture and consortium agreements in construction — partner selection, risk allocation, profit sharing, governance, dispute resolution, and exit strategies.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sat, 11 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-joint-ventures-consortiums-construction.html</guid>
     </item>
     <item>
       <title>Earned Value Management: A Complete Guide</title>
@@ -1133,6 +1005,134 @@
       <author>Ashraf Ibrahim El Desoky</author>
       <pubDate>Fri, 10 Jul 2026 21:00:00 GMT</pubDate>
       <guid>https://www.ashraf-eldesoky.space/en/articles/value-delivery.html</guid>
+    </item>
+    <item>
+      <title>Why Understanding Psychological Tactics Makes You a Better Negotiator — and a Better Defender</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/psychological-tactics-negotiation.html</link>
+      <description>Every negotiation is a psychological battlefield. Whether you realise it or not, cognitive biases, emotional triggers, and influence principles shape every</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Fri, 10 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/psychological-tactics-negotiation.html</guid>
+    </item>
+    <item>
+      <title>Negotiating Under Time Pressure in Construction: Managing Deadlines and Urgency</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/negotiating-under-time-pressure-construction.html</link>
+      <description>Expert guide to negotiating under time pressure in construction — managing artificial deadlines, using time strategically, avoiding rushed decisions, and maintaining quality under urgency.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Thu, 09 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiating-under-time-pressure-construction.html</guid>
+    </item>
+    <item>
+      <title>Why Emotional Intelligence Predicts Negotiation Success More Than IQ</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/emotional-intelligence-negotiation.html</link>
+      <description>In a landmark study, researchers at Stanford University analysed 100 MBA students in a negotiation exercise. The students with the highest IQs did not achi</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Wed, 08 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/emotional-intelligence-negotiation.html</guid>
+    </item>
+    <item>
+      <title>Negotiation Preparation and Planning for Construction Professionals</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-preparation-planning-construction-professionals.html</link>
+      <description>Expert guide to negotiation preparation — stakeholder analysis, interest mapping, objective setting, team roles, venue selection, and pre-negotiation strategy development for construction professionals.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Tue, 07 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-preparation-planning-construction-professionals.html</guid>
+    </item>
+    <item>
+      <title>Why Cross-Cultural Negotiation Is the Skill That Defines Global Business</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/cross-cultural-negotiation.html</link>
+      <description>In 1985, when Toyota and General Motors launched the NUMMI joint venture, cultural differences nearly killed the partnership before it started. GM engineer</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Mon, 06 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/cross-cultural-negotiation.html</guid>
+    </item>
+    <item>
+      <title>Final Account Negotiation in Construction Projects: Closing Out Clean</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/final-account-negotiation-construction-projects.html</link>
+      <description>Expert guide to final account negotiation in construction — preparing the final account, resolving open claims, negotiating retention release, dealing with deductions, and achieving project closeout.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sun, 05 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/final-account-negotiation-construction-projects.html</guid>
+    </item>
+    <item>
+      <title>AI-Assisted Quantity Surveying: How Cost Estimation Is Moving from Guesswork to Precision</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/ai-assisted-quantity-surveying.html</link>
+      <description>How artificial intelligence is transforming quantity surveying — automated drawing recognition, BIM integration, intelligent pricing, discrepancy detection, and faster bid preparation.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sat, 04 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/ai-assisted-quantity-surveying.html</guid>
+    </item>
+    <item>
+      <title>Why Conflict Resolution Is the Most Undervalued Leadership Skill</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/conflict-resolution-negotiation.html</link>
+      <description>Conflict in organisations is inevitable. What separates great leaders from average ones is not the absence of conflict — it&#x27;s the ability to resolve it con</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Fri, 03 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/conflict-resolution-negotiation.html</guid>
+    </item>
+    <item>
+      <title>Delay and Extension of Time Negotiation in Construction Contracts</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/delay-extension-time-negotiation-construction.html</link>
+      <description>Expert guide to negotiating delay claims and extensions of time — critical path analysis, concurrent delay, float consumption, time impact analysis, and FIDIC Clause 8.4 entitlement assessment.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Thu, 02 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/delay-extension-time-negotiation-construction.html</guid>
+    </item>
+    <item>
+      <title>GIS + AI for Fiber Planning: Where Geographic Data Meets Machine Learning</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/gis-ai-fiber-planning.html</link>
+      <description>How the integration of GIS and artificial intelligence is transforming fiber network planning — spatial demand forecasting, computer vision for aerial imagery, topology optimization, and live performance data integration.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Wed, 01 Jul 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/gis-ai-fiber-planning.html</guid>
+    </item>
+    <item>
+      <title>Why Sales Negotiation Is the Revenue Engine</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/sales-negotiation-revenue.html</link>
+      <description>Every dollar of revenue flows through a negotiation. A 2% improvement in negotiated price, terms, or scope — across an organisation&#x27;s entire sales pipeline</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Tue, 30 Jun 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/sales-negotiation-revenue.html</guid>
+    </item>
+    <item>
+      <title>Negotiation Ethics and Professional Conduct in Construction</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/negotiation-ethics-professional-conduct-construction.html</link>
+      <description>Expert guide to negotiation ethics in construction — honesty vs strategy, disclosure obligations, dealing with deception, ethical dilemmas, and maintaining professional integrity under pressure.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Mon, 29 Jun 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/negotiation-ethics-professional-conduct-construction.html</guid>
+    </item>
+    <item>
+      <title>OSP Project Management Best Practices: A Complete Guide to Telecom Outside Plant Deployment</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/osp-project-management-best-practices.html</link>
+      <description>A comprehensive guide to managing OSP (Outside Plant) telecom projects — planning, permitting, contractor management, safety, quality control, documentation, change control, and network handover.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sun, 28 Jun 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/osp-project-management-best-practices.html</guid>
+    </item>
+    <item>
+      <title>Why Vendor Negotiation Is Different from Procurement Negotiation</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/vendor-negotiation-relationships.html</link>
+      <description>Vendor negotiation and procurement negotiation overlap, but they are not the same. Procurement negotiation is transactional — focused on price, terms, and </description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Sat, 27 Jun 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/vendor-negotiation-relationships.html</guid>
+    </item>
+    <item>
+      <title>Emotional Intelligence in Construction Negotiation: Managing Self and Others</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/emotional-intelligence-negotiation-construction.html</link>
+      <description>Expert guide to emotional intelligence in construction negotiation — self-awareness, self-regulation, empathy, social skills, and managing emotional triggers during high-stakes discussions.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Fri, 26 Jun 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/emotional-intelligence-negotiation-construction.html</guid>
+    </item>
+    <item>
+      <title>AI in FTTH Network Design: A Comprehensive Guide to Smarter Fiber Deployment</title>
+      <link>https://www.ashraf-eldesoky.space/en/articles/ai-ftth-network-design-guide.html</link>
+      <description>Explore how artificial intelligence is transforming FTTH network design — demand forecasting, topology optimization, cable route planning, trenching reduction, cost control, predictive maintenance, and digital twins.</description>
+      <author>Ashraf Ibrahim El Desoky</author>
+      <pubDate>Thu, 25 Jun 2026 21:00:00 GMT</pubDate>
+      <guid>https://www.ashraf-eldesoky.space/en/articles/ai-ftth-network-design-guide.html</guid>
     </item>
   </channel>
 </rss>
