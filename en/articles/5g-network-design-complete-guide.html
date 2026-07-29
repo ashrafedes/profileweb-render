@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6B9JDZ6F0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z6B9JDZ6F0');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>5G Network Design: Complete Guide | Ashraf El Desoky</title>
-  <meta name="description" content="Complete engineering guide to 5G network design — architecture, spectrum, Massive MIMO, Network Slicing, coverage planning, transport, security, Edge Computing, Open RAN, and case studies.">
+  <title>5G Network Design: The Complete Guide from Architecture to Operation | Ashraf El Desoky</title>
+  <meta name="description" content="A comprehensive engineering guide to 5G network design — covering SBA architecture, spectrum (Low/Mid/mmWave), gNB and Massive MIMO, Beamforming, service categories (eMBB/URLLC/mMTC), Network Slicing, coverage/capacity planning, transport, security, NSA/SA, Edge Computing, Open RAN, and case studies.">
   <meta name="keywords" content="5G, 5G Network Design, Massive MIMO, Network Slicing, mmWave, gNB, Beamforming, URLLC, eMBB, mMTC, Edge Computing, Open RAN">
   <meta name="author" content="Ashraf Ibrahim El Desoky">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="5G Network Design: Complete Guide | Ashraf El Desoky">
-  <meta property="og:description" content="Complete engineering guide to 5G network design — architecture, spectrum, Massive MIMO, Network Slicing, coverage planning, transport, security, Edge Computing, Open RAN, and case studies.">
+  <meta property="og:title" content="5G Network Design: The Complete Guide from Architecture to Operation">
+  <meta property="og:description" content="A comprehensive engineering guide to 5G network design — covering SBA architecture, spectrum (Low/Mid/mmWave), gNB and Massive MIMO, Beamforming, service categories (eMBB/URLLC/mMTC), Network Slicing, coverage/capacity planning, transport, security, NSA/SA, Edge Computing, Open RAN, and case studies.">
   <meta property="og:url" content="https://www.ashraf-eldesoky.space/en/articles/5g-network-design-complete-guide.html">
-  <meta property="og:image" content="https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200">
+  <meta property="og:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
   <meta property="article:published_time" content="2026-07-26">
   <meta property="article:modified_time" content="2026-07-26">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="5G Network Design: Complete Guide | Ashraf El Desoky">
-  <meta name="twitter:description" content="Complete engineering guide to 5G network design — architecture, spectrum, Massive MIMO, Network Slicing, coverage planning, transport, security, Edge Computing, Open RAN, and case studies.">
-  <meta name="twitter:image" content="https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200">
+  <meta name="twitter:title" content="5G Network Design: The Complete Guide from Architecture to Operation | Ashraf El Desoky">
+  <meta name="twitter:description" content="A comprehensive engineering guide to 5G network design — covering SBA architecture, spectrum (Low/Mid/mmWave), gNB and Massive MIMO, Beamforming, service categories (eMBB/URLLC/mMTC), Network Slicing, coverage/capacity planning, transport, security, NSA/SA, Edge Computing, Open RAN, and case studies.">
+  <meta name="twitter:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200">
   <link rel="canonical" href="https://www.ashraf-eldesoky.space/en/articles/5g-network-design-complete-guide.html">
   <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/articles/5g-network-design-complete-guide.html">
   <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/5g-network-design-complete-guide.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.ashraf-eldesoky.space/en/articles/5g-network-design-complete-guide.html">
   <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
   <link rel="manifest" href="../../manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,24 +42,26 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="../../assets/css/articles.css">
-  <style>* { font-family: 'Inter', sans-serif; }</style>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "5G Network Design: The Complete Guide from Architecture to Operation", "description": "A comprehensive engineering guide to 5G network design — covering SBA architecture, spectrum (Low/Mid/mmWave), gNB and Massive MIMO, Beamforming, service categories (eMBB/URLLC/mMTC), Network Slicing, coverage/capacity planning, transport, security, NSA/SA, Edge Computing, Open RAN, and case studies.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-26", "dateModified": "2026-07-26", "image": "https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/en/articles/5g-network-design-complete-guide.html", "inLanguage": "en"}</script>
 </head>
 <body>
   <div id="ecms-nav-inject"></div>
+
   <main id="main-content" class="page-wrapper" style="padding-top:0;">
     <div class="article-hero" id="article-hero"></div>
+
     <section class="section" style="padding:2.5rem 0;">
       <div class="container">
         <div id="article-body"></div>
       </div>
     </section>
+
     <section class="section" style="padding:0 0 2rem;">
       <div class="container" id="related-articles"></div>
     </section>
-    <section class="section" style="padding:0 0 3rem;">
-      <div class="container" id="newsletter-section"></div>
-    </section>
+
   </main>
+
   <div id="ecms-footer-inject"></div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="../../config.js"></script>
