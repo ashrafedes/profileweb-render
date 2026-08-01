@@ -14,10 +14,12 @@
   const IN_SUBDIR = /\/(en|ar)\//.test(path);
   const IN_ARTICLES_DIR = /\/articles\//.test(path);
   const IN_LANG_ARTICLES = /\/(en|ar)\/articles\//.test(path);
+  const IN_HUB_DIR = /\/(ftth|project-controls-hub)\//.test(path);
+  const IN_LANG_HUB = /\/(en|ar)\/(ftth|project-controls-hub)\//.test(path);
   const CURRENT_PAGE = path.split('/').pop() || 'index.html';
 
-  // ── Nav base: '../' when inside /articles/ subdir, '' otherwise ──
-  const NAV_BASE = IN_ARTICLES_DIR ? '../' : '';
+  // ── Nav base: '../' when inside any subdir (articles, ftth, project-controls-hub), '' otherwise ──
+  const NAV_BASE = (IN_ARTICLES_DIR || IN_HUB_DIR) ? '../' : '';
 
   // ── Articles link: 'index.html' if already in articles, else 'articles/' ──
   const ARTICLES_LINK = IN_ARTICLES_DIR ? 'index.html' : 'articles/';
@@ -27,6 +29,11 @@
   if (IN_LANG_ARTICLES) {
     const otherLang = IS_ARABIC ? 'en' : 'ar';
     langToggleUrl = `../../${otherLang}/articles/${CURRENT_PAGE}`;
+  } else if (IN_LANG_HUB) {
+    const otherLang = IS_ARABIC ? 'en' : 'ar';
+    const hubMatch = path.match(/\/(en|ar)\/(ftth|project-controls-hub)\//);
+    const hub = hubMatch ? hubMatch[2] : '';
+    langToggleUrl = `../../${otherLang}/${hub}/${CURRENT_PAGE}`;
   } else if (IN_SUBDIR) {
     langToggleUrl = (IS_ARABIC ? '../en/' : '../ar/') + CURRENT_PAGE;
   } else {
@@ -61,6 +68,8 @@
     search: '🔍 بحث',
     searchPlaceholder: 'ابحث في الخبرة، المشاريع، المهارات، الشهادات…',
     articles: 'المقالات',
+    ftthHub: 'مركز FTTH',
+    pcHub: 'ضوابط المشاريع',
     langToggle: 'English 🌐',
     langToggleAria: 'التبديل إلى الإنجليزية',
     backToTop: '↑',
@@ -100,6 +109,8 @@
     search: '🔍 Search',
     searchPlaceholder: 'Search experience, projects, skills, certifications…',
     articles: 'Articles',
+    ftthHub: 'FTTH Hub',
+    pcHub: 'Controls Hub',
     langToggle: 'العربية 🌐',
     langToggleAria: 'Switch to Arabic',
     backToTop: '↑',
@@ -152,6 +163,8 @@
         </ul>
       </li>
       <li role="none"><a href="${ARTICLES_LINK}" role="menuitem">${T.articles}</a></li>
+      <li role="none"><a href="${NAV_BASE}ftth/" role="menuitem">${T.ftthHub}</a></li>
+      <li role="none"><a href="${NAV_BASE}project-controls-hub/" role="menuitem">${T.pcHub}</a></li>
       <li role="none"><a href="${NAV_BASE}downloads.html" role="menuitem">${T.downloads}</a></li>
       <li role="none"><a href="${NAV_BASE}contact.html" role="menuitem">${T.contact}</a></li>
     </ul>
@@ -222,6 +235,9 @@
           <li><a href="${NAV_BASE}certifications.html">${T.certifications}</a></li>
           <li><a href="${NAV_BASE}awards.html">${T.awards}</a></li>
           <li><a href="${NAV_BASE}downloads.html">${T.downloads}</a></li>
+          <li><a href="${ARTICLES_LINK}">${T.articles}</a></li>
+          <li><a href="${NAV_BASE}ftth/">${T.ftthHub}</a></li>
+          <li><a href="${NAV_BASE}project-controls-hub/">${T.pcHub}</a></li>
           <li><a href="${NAV_BASE}search.html">${T.footerSearch}</a></li>
           <li><a href="${NAV_BASE}contact.html">${T.contact}</a></li>
         </ul>
