@@ -104,9 +104,52 @@ One entry per approved stage.
 | Pages with meta-keywords tag | 312 |
 | Third-party visitor counter | 5 pages |
 
-### Recommendation for Next Stage
-Proceed to Stage 2 — Fix Static Rendering of Critical Content:
-1. Inject article list HTML into `/en/articles/index.html` and `/ar/articles/index.html` as static markup (JS search/filter on top)
-2. Inject article body content into individual article HTML pages as static markup
-3. Fix AR homepage broken article links (wrong slugs)
-4. Fix EN homepage "Read Article" links to point to individual article URLs
+### Recommendation for next stage
+Proceed to Stage 3 — Site-Wide Technical Cleanup
+
+---
+
+## Stage 2 — Fix Static Rendering of Critical Content
+**Date:** 2026-08-01
+**Status:** ✅ Complete
+
+### What was fixed / built
+- Created `_build_static.py` — Python build script that pre-renders all article content from `articles.json` into static HTML
+- Generated 300 static article pages (150 EN + 150 AR) with full content in server-rendered HTML:
+  - Article hero (title, category, author, date, reading time) in static HTML
+  - Article body content (rendered from markdown to HTML) in static HTML
+  - Article schema (JSON-LD) and BreadcrumbList schema in static HTML
+  - All meta tags (title, description, OG, Twitter, canonical, hreflang) in static HTML
+- Rebuilt `/en/articles/index.html` and `/ar/articles/index.html` with static article cards, featured article, category pills, and popular topics
+- Updated `assets/js/articles.js` to preserve static content and only re-render on user interaction (search, filter, sort)
+- Updated `assets/js/article.js` to preserve static content and only enhance (TOC, related articles, prev/next, lang switch)
+- Fixed EN homepage "Read Article →" links to point to individual article URLs:
+  - Risk Management → `articles/risk-management-standards-project-management.html`
+  - Cyber Security → `articles/cyber-security-essentials-guide.html`
+  - Business Strategy → `articles/business-strategy-strategic-planning-guide.html`
+  - "Explore All Articles" → `articles/` (index page)
+- Fixed AR homepage broken article links (wrong slugs corrected to match actual filenames)
+- Fixed AR "Explore All Articles" link from `articles.html` to `articles/`
+
+### Verification (no-JS crawler check)
+- Article page (`/en/articles/earned-value-management.html`): Before → empty `#article-body` div → After → full article content with h2/h3/p/table elements in static HTML
+- Articles index (`/en/articles/`): Before → empty `#articles-grid` div → After → 150 article cards with titles, excerpts, images, dates in static HTML
+- Homepage links: Before → all 3 "Read Article" links point to generic `articles.html` → After → each links to its own unique article URL
+
+### Files changed / created
+- `_build_static.py` (new — build script)
+- `assets/js/articles.js` (modified — preserve static content)
+- `assets/js/article.js` (modified — preserve static content)
+- `en/index.html` (modified — fixed article links)
+- `ar/index.html` (modified — fixed article links)
+- 300 article HTML files regenerated (EN + AR)
+- 2 articles index pages regenerated (EN + AR)
+
+### Issues found (not yet fixed)
+- Meta-keywords tags still present on 312 files (Stage 3)
+- Asset filenames with spaces in Resources/ (Stage 3)
+- Third-party visitor counter badge on 5 pages (Stage 3)
+- Missing Organization schema on homepage (Stage 3)
+
+### Recommendation for next stage
+Proceed to Stage 3 — Site-Wide Technical Cleanup
