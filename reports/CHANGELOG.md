@@ -109,6 +109,49 @@ Proceed to Stage 3 — Site-Wide Technical Cleanup
 
 ---
 
+## Stage 3 — Site-Wide Technical Cleanup
+**Date:** 2026-08-01
+**Status:** ✅ Complete
+
+### What was fixed
+1. **Removed all meta-keywords tags** — 0 remaining across all HTML files (article pages were already clean from Stage 2 rebuild; 4 non-article pages cleaned)
+2. **Renamed asset files to kebab-case**:
+   - `PMP Badge.png` → `pmp-badge.png`
+   - `cisco_ccna_Badge.png` → `cisco-ccna-badge.png`
+   - Updated all 6 references in `en/index.html` and 6 in `ar/index.html`
+3. **Removed third-party visitor counter badge** from 5 pages:
+   - `en/index.html`, `ar/index.html`, `en.html`, `en/featured-projects.html`, `ar/featured-projects.html`
+4. **Added Organization schema** to both homepages (`en/index.html`, `ar/index.html`)
+
+### Verification
+- `grep -r 'meta name="keywords"' *.html` → 0 results ✅
+- `grep -r 'page-visitor.vercel.app' *.html` → 0 results (only in CHANGELOG.md as documentation) ✅
+- `Resources/pmp-badge.png` exists, `Resources/PMP Badge.png` does not ✅
+- `Resources/cisco-ccna-badge.png` exists, `Resources/cisco_ccna_Badge.png` does not ✅
+- Organization schema present in both EN and AR homepages ✅
+
+### Files changed
+- `_stage3_cleanup.py` (new — cleanup script)
+- `Resources/PMP Badge.png` → `Resources/pmp-badge.png` (renamed)
+- `Resources/cisco_ccna_Badge.png` → `Resources/cisco-ccna-badge.png` (renamed)
+- `en/index.html` (fixed asset references, removed visitor counter, added Organization schema)
+- `ar/index.html` (removed visitor counter, added Organization schema)
+- `en.html` (removed visitor counter)
+- `en/featured-projects.html` (removed visitor counter)
+- `ar/featured-projects.html` (removed visitor counter)
+- `en/project-controls.html`, `ar/project-controls.html` (meta-keywords removed)
+- `articles/index.html` (meta-keywords removed)
+- `en/articles/negotiating-as-project-manager.html`, `ar/articles/negotiating-as-project-manager.html` (meta-keywords removed)
+
+### Remaining (not in scope of Stage 3)
+- Other Resources files with spaces/Arabic characters (CVs, certificates) — not referenced in HTML as web assets, only download links
+- BreadcrumbList schema on service pages (Stage 4+)
+
+### Recommendation for next stage
+Proceed to Stage 4 — Article Architecture: Give Every Article a Real URL
+
+---
+
 ## Stage 2 — Fix Static Rendering of Critical Content
 **Date:** 2026-08-01
 **Status:** ✅ Complete
