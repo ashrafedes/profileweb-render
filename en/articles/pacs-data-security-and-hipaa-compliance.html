@@ -1,230 +1,161 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6B9JDZ6F0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Z6B9JDZ6F0');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PACS Data Security and HIPAA Compliance: A Practical Guide – Ashraf El Desoky, PMP®</title>
-  <meta name="description" content="Learn essential security measures for protecting patient imaging data and ensuring HIPAA compliance in PACS environments.">
-  <meta name="author" content="Ashraf Ibrahim El Desoky">
-  <meta name="robots" content="index, follow">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="PACS Data Security and HIPAA Compliance: A Practical Guide">
-  <meta property="og:description" content="Learn essential security measures for protecting patient imaging data and ensuring HIPAA compliance in PACS environments.">
-  <meta property="og:url" content="https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html">
-  <meta property="og:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/pacs-data-security-and-hipaa-compliance-hero.jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="en_US">
-  <meta property="article:published_time" content="2026-07-21">
-  <meta property="article:modified_time" content="2026-07-21">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="PACS Data Security and HIPAA Compliance: A Practical Guide">
-  <meta name="twitter:description" content="Learn essential security measures for protecting patient imaging data and ensuring HIPAA compliance in PACS environments.">
-  <meta name="twitter:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/pacs-data-security-and-hipaa-compliance-hero.jpeg">
-  <link rel="canonical" href="https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html">
-  <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html">
-  <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/pacs-data-security-and-hipaa-compliance.html">
-  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
-  <link rel="manifest" href="../../manifest.json">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/articles.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "PACS Data Security and HIPAA Compliance: A Practical Guide", "description": "Learn essential security measures for protecting patient imaging data and ensuring HIPAA compliance in PACS environments.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-21", "dateModified": "2026-07-21", "image": "https://www.ashraf-eldesoky.space/assets/images/articles/pacs-data-security-and-hipaa-compliance-hero.jpeg", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html", "inLanguage": "en"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.ashraf-eldesoky.space/en/articles/"}, {"@type": "ListItem", "position": 3, "name": "PACS Data Security and HIPAA Compliance: A Practical Guide", "item": "https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html"}]}</script>
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6B9JDZ6F0"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-Z6B9JDZ6F0');
+ </script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>PACS Data Security and HIPAA Compliance: A Practical Guide – Ashraf El Desoky, PMP®</title>
+ <meta name="description" content="Learn essential security measures for protecting patient imaging data and ensuring HIPAA compliance in PACS environments.">
+ <meta name="author" content="Ashraf Ibrahim El Desoky">
+ <meta name="robots" content="index, follow">
+ <meta property="og:type" content="article">
+ <meta property="og:title" content="PACS Data Security and HIPAA Compliance: A Practical Guide">
+ <meta property="og:description" content="Learn essential security measures for protecting patient imaging data and ensuring HIPAA compliance in PACS environments.">
+ <meta property="og:url" content="https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html">
+ <meta property="og:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/pacs-data-security-and-hipaa-compliance-hero.jpeg">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:locale" content="en_US">
+ <meta property="article:published_time" content="2026-07-21">
+ <meta property="article:modified_time" content="2026-07-21">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="PACS Data Security and HIPAA Compliance: A Practical Guide">
+ <meta name="twitter:description" content="Learn essential security measures for protecting patient imaging data and ensuring HIPAA compliance in PACS environments.">
+ <meta name="twitter:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/pacs-data-security-and-hipaa-compliance-hero.jpeg">
+ <link rel="canonical" href="https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html">
+ <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html">
+ <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/pacs-data-security-and-hipaa-compliance.html">
+ <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+ <link rel="manifest" href="../../manifest.json">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="../../assets/css/main.css">
+ <link rel="stylesheet" href="../../assets/css/articles.css">
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "PACS Data Security and HIPAA Compliance: A Practical Guide", "description": "Learn essential security measures for protecting patient imaging data and ensuring HIPAA compliance in PACS environments.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-21", "dateModified": "2026-07-21", "image": "https://www.ashraf-eldesoky.space/assets/images/articles/pacs-data-security-and-hipaa-compliance-hero.jpeg", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html", "inLanguage": "en"}</script>
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.ashraf-eldesoky.space/en/articles/"}, {"@type": "ListItem", "position": 3, "name": "PACS Data Security and HIPAA Compliance: A Practical Guide", "item": "https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html"}]}</script>
 </head>
 <body>
-  <div id="ecms-nav-inject"></div>
+ <div id="ecms-nav-inject"></div>
 
-  <main id="main-content" class="page-wrapper" style="padding-top:0;">
-    <div class="article-hero" id="article-hero">
-        <img class="article-hero-img" src="/assets/images/articles/pacs-data-security-and-hipaa-compliance-hero.jpeg" alt="PACS Data Security and HIPAA Compliance: A Practical Guide">
-        <div class="article-hero-overlay"></div>
-        <div class="container article-hero-content">
-          <span class="article-hero-cat">Healthcare IT</span>
-          <h1>PACS Data Security and HIPAA Compliance: A Practical Guide</h1>
-          <div class="article-hero-meta">
-            <span>By Ashraf Ibrahim El Desoky</span>
-            <span>· Jul 21, 2026</span>
-            <span>· 8 min read</span>
-            
-          </div>
-        </div>
-      </div>
+ <main id="main-content" class="page-wrapper" style="padding-top:0;">
+ <div class="article-hero" id="article-hero">
+ <img class="article-hero-img" src="/assets/images/articles/pacs-data-security-and-hipaa-compliance-hero.jpeg" alt="PACS Data Security and HIPAA Compliance: A Practical Guide">
+ <div class="article-hero-overlay"></div>
+ <div class="container article-hero-content">
+ <span class="article-hero-cat">Healthcare IT</span>
+ <h1>PACS Data Security and HIPAA Compliance: A Practical Guide</h1>
+ <div class="article-hero-meta">
+ <span>By Ashraf Ibrahim El Desoky</span>
+ <span>· Jul 21, 2026</span>
+ <span>· 8 min read</span>
+ 
+ </div>
+ </div>
+ </div>
 
-    <section class="section" style="padding:2.5rem 0;">
-      <div class="container">
-        <div id="article-body">
-        <div class="article-layout">
-          <div>
-            <div class="article-content" id="article-content"><h2>Introduction</h2>
+ <section class="section" style="padding:2.5rem 0;">
+ <div class="container">
+ <div id="article-body">
+ <div class="article-layout">
+ <div>
+ <div class="article-content" id="article-content"><h2>Introduction</h2>
 <p>Medical images contain highly sensitive patient information, making PACS a prime target for cyberattacks. HIPAA (Health Insurance Portability and Accountability Act) mandates strict safeguards for protecting patient health information. This guide covers essential security measures for PACS environments.</p>
 <h2>HIPAA Requirements for PACS</h2>
 <h3>Privacy Rule</h3>
-<ul><li>Protected Health Information (PHI) includes images and associated metadata</li>
-<li>Minimum necessary standard: Only access what you need</li>
-<li>Patient rights: Access, amend, and account for disclosures</li>
-<p></ul></p>
+<p>Protected Health Information (PHI) includes images and associated metadata, Minimum necessary standard: Only access what you need, and Patient rights: Access, amend, and account for disclosures.</p>
 <h3>Security Rule</h3>
-<ul><li><strong>Administrative safeguards:</strong> Policies, training, access management</li>
-<li><strong>Physical safeguards:</strong> Facility access, workstation security, device controls</li>
-<li><strong>Technical safeguards:</strong> Access control, audit controls, integrity, transmission security</li>
-<p></ul></p>
+<p>Administrative safeguards: Policies, training, access management, Physical safeguards: Facility access, workstation security, device controls, and Technical safeguards: Access control, audit controls, integrity, transmission security.</p>
 <h3>Breach Notification</h3>
-<ul><li>Notify affected patients within 60 days</li>
-<li>Notify HHS for breaches affecting 500+ individuals</li>
-<li>Maintain breach documentation</li>
-<p></ul></p>
+<p>Notify affected patients within 60 days, Notify HHS for breaches affecting 500+ individuals, and Maintain breach documentation.</p>
 <h2>Access Control Measures</h2>
 <h3>Role-Based Access Control (RBAC)</h3>
-<ul><li><strong>Radiologists:</strong> Full access to images and reports for their specialty</li>
-<li><strong>Technologists:</strong> Access to worklist and image acquisition only</li>
-<li><strong>Referring physicians:</strong> Access to images and reports for their patients</li>
-<li><strong>Administrators:</strong> System configuration without clinical data access</li>
-<li><strong>IT support:</strong> Technical access with activity logging</li>
-<p></ul></p>
+<p>Radiologists: Full access to images and reports for their specialty, Technologists: Access to worklist and image acquisition only, Referring physicians: Access to images and reports for their patients, Administrators: System configuration without clinical data access, and IT support: Technical access with activity logging.</p>
 <h3>Authentication</h3>
-<ul><li>Unique user IDs for every individual</li>
-<li>Strong password policies (minimum 12 characters, complexity requirements)</li>
-<li>Multi-factor authentication for remote access</li>
-<li>Session timeout after 15 minutes of inactivity</li>
-<li>Biometric authentication for diagnostic workstations</li>
-<p></ul></p>
+<p>Unique user IDs for every individual, Strong password policies (minimum 12 characters, complexity requirements), Multi-factor authentication for remote access, Session timeout after 15 minutes of inactivity, and Biometric authentication for diagnostic workstations.</p>
 <h3>Audit Controls</h3>
-<ul><li>Log all access to patient images and reports</li>
-<li>Track user login/logout times</li>
-<li>Record all image exports and prints</li>
-<li>Monitor for unusual access patterns</li>
-<li>Retain audit logs for minimum 6 years</li>
-<p></ul></p>
+<p>Log all access to patient images and reports, Track user login/logout times, Record all image exports and prints, Monitor for unusual access patterns, and Retain audit logs for minimum 6 years.</p>
 <h2>Network Security</h2>
 <h3>Network Segmentation</h3>
-<ul><li>Isolate PACS network from general hospital network</li>
-<li>Use firewalls between PACS and other systems</li>
-<li>Implement VLANs for different PACS components</li>
-<li>Restrict modality-to-PACS communication to specific IPs</li>
-<p></ul></p>
+<p>Isolate PACS network from general hospital network, Use firewalls between PACS and other systems, Implement VLANs for different PACS components, and Restrict modality-to-PACS communication to specific IPs.</p>
 <h3>Encryption</h3>
-<ul><li><strong>In transit:</strong> TLS 1.2+ for all network communication</li>
-<li><strong>At rest:</strong> AES-256 encryption for stored images</li>
-<li><strong>Backup encryption:</strong> All backup media encrypted</li>
-<li><strong>Key management:</strong> Secure key storage and rotation</li>
-<p></ul></p>
+<p>In transit: TLS 1.2+ for all network communication, At rest: AES-256 encryption for stored images, Backup encryption: All backup media encrypted, and Key management: Secure key storage and rotation.</p>
 <h3>VPN for Remote Access</h3>
-<ul><li>All remote access through encrypted VPN</li>
-<li>Split tunneling disabled</li>
-<li>Endpoint security verification before connection</li>
-<li>Time-limited access for temporary users</li>
-<p></ul></p>
+<p>All remote access through encrypted VPN, Split tunneling disabled, Endpoint security verification before connection, and Time-limited access for temporary users.</p>
 <h2>Data Protection</h2>
 <h3>Data Integrity</h3>
-<ul><li>Hash verification for image files</li>
-<li>Digital signatures for reports</li>
-<li>Write-once-read-many (WORM) storage for legal hold</li>
-<li>Regular integrity checks on archive</li>
-<p></ul></p>
+<p>Hash verification for image files, Digital signatures for reports, Write-once-read-many (WORM) storage for legal hold, and Regular integrity checks on archive.</p>
 <h3>Data Retention and Disposal</h3>
-<ul><li>Adult images: Minimum 7 years (state laws may vary)</li>
-<li>Pediatric images: Until age of majority + retention period</li>
-<li>Secure deletion: Cryptographic erasure or physical destruction</li>
-<li>Document disposal chain of custody</li>
-<p></ul></p>
+<p>Adult images: Minimum 7 years (state laws may vary), Pediatric images: Until age of majority + retention period, Secure deletion: Cryptographic erasure or physical destruction, and Document disposal chain of custody.</p>
 <h3>Backup and Disaster Recovery</h3>
-<ul><li>Daily incremental backups, weekly full backups</li>
-<li>Offsite backup storage (geographic separation)</li>
-<li>Annual disaster recovery testing</li>
-<li>Recovery time objective (RTO): 4 hours</li>
-<li>Recovery point objective (RPO): 1 hour</li>
-<p></ul></p>
+<p>Daily incremental backups, weekly full backups, Offsite backup storage (geographic separation), Annual disaster recovery testing, Recovery time objective (RTO): 4 hours, and Recovery point objective (RPO): 1 hour.</p>
 <h2>Risk Assessment</h2>
 <h3>Annual Risk Analysis</h3>
-<ul><li>Identify all systems containing PHI</li>
-<li>Assess threats and vulnerabilities</li>
-<li>Evaluate likelihood and impact</li>
-<li>Document risk treatment decisions</li>
-<li>Update risk analysis after significant changes</li>
-<p></ul></p>
+<p>Identify all systems containing PHI, Assess threats and vulnerabilities, Evaluate likelihood and impact, Document risk treatment decisions, and Update risk analysis after significant changes.</p>
 <h3>Vulnerability Management</h3>
-<ul><li>Monthly vulnerability scans</li>
-<li>Quarterly penetration testing</li>
-<li>Patch management within 30 days of release</li>
-<li>Security configuration baselines</li>
-<p></ul></p>
+<p>Monthly vulnerability scans, Quarterly penetration testing, Patch management within 30 days of release, and Security configuration baselines.</p>
 <h2>Staff Training</h2>
-<ul><li>HIPAA training at hire and annually</li>
-<li>Security awareness training</li>
-<li>Phishing simulation exercises</li>
-<li>Clean desk policy enforcement</li>
-<li>Incident reporting procedures</li>
-<p></ul></p>
+<p>HIPAA training at hire and annually, Security awareness training, Phishing simulation exercises, Clean desk policy enforcement, and Incident reporting procedures.</p>
 <h2>Incident Response</h2>
-<ul><li><strong>Detect:</strong> Identify potential security incidents</li>
-<li><strong>Contain:</strong> Isolate affected systems</li>
-<li><strong>Investigate:</strong> Determine scope and impact</li>
-<li><strong>Notify:</strong> Inform privacy officer and leadership</li>
-<li><strong>Remediate:</strong> Fix vulnerabilities and restore systems</li>
-<li><strong>Document:</strong> Record all actions and lessons learned</li>
-<p></ul></p>
+<p>Detect: Identify potential security incidents, Contain: Isolate affected systems, Investigate: Determine scope and impact, Notify: Inform privacy officer and leadership, Remediate: Fix vulnerabilities and restore systems, and Document: Record all actions and lessons learned.</p>
 <h2>Conclusion</h2>
 <p>PACS data security and HIPAA compliance require a multi-layered approach combining technical safeguards, administrative policies, and staff training. By implementing robust access controls, network security, encryption, and monitoring, healthcare organizations can protect patient imaging data and maintain regulatory compliance.</p></div>
 
-            <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
-              <div class="share-buttons">
-                <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">Share:</span>
-                <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html&text=PACS Data Security and HIPAA Compliance: A Practical Guide" target="_blank" rel="noopener">𝕏 Twitter</a>
-                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html" target="_blank" rel="noopener">LinkedIn</a>
-                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html" target="_blank" rel="noopener">Facebook</a>
-                <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
-              </div>
-            </div>
+ <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
+ <div class="share-buttons">
+ <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">Share:</span>
+ <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html&text=PACS Data Security and HIPAA Compliance: A Practical Guide" target="_blank" rel="noopener">𝕏 Twitter</a>
+ <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html" target="_blank" rel="noopener">LinkedIn</a>
+ <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/en/articles/pacs-data-security-and-hipaa-compliance.html" target="_blank" rel="noopener">Facebook</a>
+ <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
+ </div>
+ </div>
 
-            
-            <div class="article-tags" style="margin:1.5rem 0;">
-              <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">Tags:</span>
-              <a href="../articles/index.html?tag=PACS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#PACS</a><a href="../articles/index.html?tag=HIPAA" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#HIPAA</a><a href="../articles/index.html?tag=Data Security" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Data Security</a><a href="../articles/index.html?tag=Healthcare IT" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Healthcare IT</a><a href="../articles/index.html?tag=Privacy" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Privacy</a>
-            </div>
+ 
+ <div class="article-tags" style="margin:1.5rem 0;">
+ <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">Tags:</span>
+ <a href="../articles/index.html?tag=PACS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#PACS</a><a href="../articles/index.html?tag=HIPAA" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#HIPAA</a><a href="../articles/index.html?tag=Data Security" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Data Security</a><a href="../articles/index.html?tag=Healthcare IT" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Healthcare IT</a><a href="../articles/index.html?tag=Privacy" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Privacy</a>
+ </div>
 
-            <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
+ <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
 
-            <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← Back to Articles</a>
-          </div>
+ <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← Back to Articles</a>
+ </div>
 
-          <aside class="article-sidebar">
-            <div style="margin-top:2rem;">
-              <div class="article-lang-switch">
-                <button class="active" data-lang="en">🇺🇸 EN</button>
-                <button class="" data-lang="ar">🇸🇦 ع</button>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-      </div>
-    </section>
+ <aside class="article-sidebar">
+ <div style="margin-top:2rem;">
+ <div class="article-lang-switch">
+ <button class="active" data-lang="en">🇺🇸 EN</button>
+ <button class="" data-lang="ar">🇸🇦 ع</button>
+ </div>
+ </div>
+ </aside>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <section class="section" style="padding:0 0 2rem;">
-      <div class="container" id="related-articles"></div>
-    </section>
+ <section class="section" style="padding:0 0 2rem;">
+ <div class="container" id="related-articles"></div>
+ </section>
 
-  </main>
+ </main>
 
-  <div id="ecms-footer-inject"></div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="../../config.js"></script>
-  <script src="../../assets/js/i18n.js?v=2"></script>
-  <script src="../../assets/js/components.js?v=4"></script>
-  <script src="../../assets/js/core.js?v=6"></script>
-  <script src="../../assets/js/article.js?v=9"></script>
+ <div id="ecms-footer-inject"></div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+ <script src="../../config.js"></script>
+ <script src="../../assets/js/i18n.js?v=2"></script>
+ <script src="../../assets/js/components.js?v=4"></script>
+ <script src="../../assets/js/core.js?v=6"></script>
+ <script src="../../assets/js/article.js?v=9"></script>
 </body>
 </html>

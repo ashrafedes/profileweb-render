@@ -1,208 +1,159 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6B9JDZ6F0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Z6B9JDZ6F0');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>معايير PACS DICOM وتكامل الأنظمة موضحة – أشرف الدسوقي, PMP®</title>
-  <meta name="description" content="تعلم كيف يمكن معايير DICOM وHL7 تكامل PACS مع أنظمة المستشفى لتدفقات تصوير سلسة.">
-  <meta name="author" content="Ashraf Ibrahim El Desoky">
-  <meta name="robots" content="index, follow">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="معايير PACS DICOM وتكامل الأنظمة موضحة">
-  <meta property="og:description" content="تعلم كيف يمكن معايير DICOM وHL7 تكامل PACS مع أنظمة المستشفى لتدفقات تصوير سلسة.">
-  <meta property="og:url" content="https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html">
-  <meta property="og:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/pacs-dicom-standards-and-integration-hero.jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="ar_SA">
-  <meta property="article:published_time" content="2026-07-19">
-  <meta property="article:modified_time" content="2026-07-19">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="معايير PACS DICOM وتكامل الأنظمة موضحة">
-  <meta name="twitter:description" content="تعلم كيف يمكن معايير DICOM وHL7 تكامل PACS مع أنظمة المستشفى لتدفقات تصوير سلسة.">
-  <meta name="twitter:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/pacs-dicom-standards-and-integration-hero.jpeg">
-  <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html">
-  <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html">
-  <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/articles/pacs-dicom-standards-and-integration.html">
-  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
-  <link rel="manifest" href="../../manifest.json">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/articles.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "معايير PACS DICOM وتكامل الأنظمة موضحة", "description": "تعلم كيف يمكن معايير DICOM وHL7 تكامل PACS مع أنظمة المستشفى لتدفقات تصوير سلسة.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-19", "dateModified": "2026-07-19", "image": "https://www.ashraf-eldesoky.space/assets/images/articles/pacs-dicom-standards-and-integration-hero.jpeg", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html", "inLanguage": "ar"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://www.ashraf-eldesoky.space/ar/articles/"}, {"@type": "ListItem", "position": 3, "name": "معايير PACS DICOM وتكامل الأنظمة موضحة", "item": "https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html"}]}</script>
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6B9JDZ6F0"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-Z6B9JDZ6F0');
+ </script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>معايير PACS DICOM وتكامل الأنظمة موضحة – أشرف الدسوقي, PMP®</title>
+ <meta name="description" content="تعلم كيف يمكن معايير DICOM وHL7 تكامل PACS مع أنظمة المستشفى لتدفقات تصوير سلسة.">
+ <meta name="author" content="Ashraf Ibrahim El Desoky">
+ <meta name="robots" content="index, follow">
+ <meta property="og:type" content="article">
+ <meta property="og:title" content="معايير PACS DICOM وتكامل الأنظمة موضحة">
+ <meta property="og:description" content="تعلم كيف يمكن معايير DICOM وHL7 تكامل PACS مع أنظمة المستشفى لتدفقات تصوير سلسة.">
+ <meta property="og:url" content="https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html">
+ <meta property="og:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/pacs-dicom-standards-and-integration-hero.jpeg">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:locale" content="ar_SA">
+ <meta property="article:published_time" content="2026-07-19">
+ <meta property="article:modified_time" content="2026-07-19">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="معايير PACS DICOM وتكامل الأنظمة موضحة">
+ <meta name="twitter:description" content="تعلم كيف يمكن معايير DICOM وHL7 تكامل PACS مع أنظمة المستشفى لتدفقات تصوير سلسة.">
+ <meta name="twitter:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/pacs-dicom-standards-and-integration-hero.jpeg">
+ <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html">
+ <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html">
+ <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/articles/pacs-dicom-standards-and-integration.html">
+ <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+ <link rel="manifest" href="../../manifest.json">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="../../assets/css/main.css">
+ <link rel="stylesheet" href="../../assets/css/articles.css">
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "معايير PACS DICOM وتكامل الأنظمة موضحة", "description": "تعلم كيف يمكن معايير DICOM وHL7 تكامل PACS مع أنظمة المستشفى لتدفقات تصوير سلسة.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-19", "dateModified": "2026-07-19", "image": "https://www.ashraf-eldesoky.space/assets/images/articles/pacs-dicom-standards-and-integration-hero.jpeg", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html", "inLanguage": "ar"}</script>
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://www.ashraf-eldesoky.space/ar/articles/"}, {"@type": "ListItem", "position": 3, "name": "معايير PACS DICOM وتكامل الأنظمة موضحة", "item": "https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html"}]}</script>
 </head>
 <body><style>* { font-family: 'Cairo', sans-serif; }</style>
-  <div id="ecms-nav-inject"></div>
+ <div id="ecms-nav-inject"></div>
 
-  <main id="main-content" class="page-wrapper" style="padding-top:0;">
-    <div class="article-hero" id="article-hero">
-        <img class="article-hero-img" src="/assets/images/articles/pacs-dicom-standards-and-integration-hero.jpeg" alt="معايير PACS DICOM وتكامل الأنظمة موضحة">
-        <div class="article-hero-overlay"></div>
-        <div class="container article-hero-content">
-          <span class="article-hero-cat">Healthcare IT</span>
-          <h1>معايير PACS DICOM وتكامل الأنظمة موضحة</h1>
-          <div class="article-hero-meta">
-            <span>بقلم Ashraf Ibrahim El Desoky</span>
-            <span>· 19 يوليو 2026</span>
-            <span>· 8 دقيقة قراءة</span>
-            
-          </div>
-        </div>
-      </div>
+ <main id="main-content" class="page-wrapper" style="padding-top:0;">
+ <div class="article-hero" id="article-hero">
+ <img class="article-hero-img" src="/assets/images/articles/pacs-dicom-standards-and-integration-hero.jpeg" alt="معايير PACS DICOM وتكامل الأنظمة موضحة">
+ <div class="article-hero-overlay"></div>
+ <div class="container article-hero-content">
+ <span class="article-hero-cat">Healthcare IT</span>
+ <h1>معايير PACS DICOM وتكامل الأنظمة موضحة</h1>
+ <div class="article-hero-meta">
+ <span>بقلم Ashraf Ibrahim El Desoky</span>
+ <span>· 19 يوليو 2026</span>
+ <span>· 8 دقيقة قراءة</span>
+ 
+ </div>
+ </div>
+ </div>
 
-    <section class="section" style="padding:2.5rem 0;">
-      <div class="container">
-        <div id="article-body">
-        <div class="article-layout">
-          <div>
-            <div class="article-content" id="article-content"><h2>مقدمة</h2>
+ <section class="section" style="padding:2.5rem 0;">
+ <div class="container">
+ <div id="article-body">
+ <div class="article-layout">
+ <div>
+ <div class="article-content" id="article-content"><h2>مقدمة</h2>
 <p>يعتمد التشغيل البيني للتصوير الطبي على المعايير. DICOM (التصوير الرقمي والاتصالات في الطب) وHL7 (المستوى الصحي السابع) هما المعياران الأساسيان اللذان يمكنان PACS من التواصل مع أجهزة التصوير وأنظمة معلومات المستشفى والسجلات الصحية الإلكترونية. فهم هذه المعايير أمر أساسي لتنفيذ PACS ناجح.</p>
 <h2>تعمق في معيار DICOM</h2>
 <h3>بنية DICOM</h3>
-<ul><li><strong>تنسيق ملف DICOM:</strong> يحتوي على رأس ببيانات المريض/الدراسة الوصفية + بيانات البكسل</li>
-<li><strong>فئات خدمة DICOM:</strong> التخزين، الاستعلام/الاسترجاع، قائمة عمل الجهاز، الطباعة</li>
-<li><strong>صيغ نقل DICOM:</strong> تحدد كيفية ترميز وضغط البيانات</li>
-<li><strong>امتثال DICOM:</strong> ينشر الموردون بيانات امتثال تفصل الميزات المدعومة</li>
-<p></ul></p>
+<p>تنسيق ملف DICOM: يحتوي على رأس ببيانات المريض/الدراسة الوصفية + بيانات البكسل, فئات خدمة DICOM: التخزين، الاستعلام/الاسترجاع، قائمة عمل الجهاز، الطباعة, صيغ نقل DICOM: تحدد كيفية ترميز وضغط البيانات, and امتثال DICOM: ينشر الموردون بيانات امتثال تفصل الميزات المدعومة.</p>
 <h3>خدمات DICOM الرئيسية</h3>
-<ul><li><strong>C-STORE:</strong> تخزين الصور من الجهاز إلى PACS</li>
-<li><strong>C-FIND:</strong> استعلام PACS عن دراسات/سلاسل/صور</li>
-<li><strong>C-MOVE:</strong> استرجاع الصور من PACS إلى محطة العمل</li>
-<li><strong>C-GET:</strong> استرجاع مباشر للصور</li>
-<li><strong>قائمة عمل الجهاز (MWL):</strong> الجهاز يستعلم عن الفحوصات المجدولة</li>
-<li><strong>خطوة إجراء الجهاز المنفذة (MPPS):</strong> الجهاز يبلغ عن إكمال الفحص</li>
-<p></ul></p>
+<p>C-STORE: تخزين الصور من الجهاز إلى PACS, C-FIND: استعلام PACS عن دراسات/سلاسل/صور, C-MOVE: استرجاع الصور من PACS إلى محطة العمل, C-GET: استرجاع مباشر للصور, قائمة عمل الجهاز (MWL): الجهاز يستعلم عن الفحوصات المجدولة, and خطوة إجراء الجهاز المنفذة (MPPS): الجهاز يبلغ عن إكمال الفحص.</p>
 <h3>وسوم DICOM</h3>
 <p>تحتوي كل صورة DICOM على مئات عناصر البيانات المحددة بالوسوم:</p>
-<ul><li>(0010,0010) اسم المريض</li>
-<li>(0008,0060) الجهاز</li>
-<li>(0020,000D) معرف فريد لدراسة</li>
-<li>(0028,0010) الصفوف</li>
-<li>(0028,0011) الأعمدة</li>
-<p></ul></p>
+<p>(0010,0010) اسم المريض, (0008,0060) الجهاز, (0020,000D) معرف فريد لدراسة, (0028,0010) الصفوف, and (0028,0011) الأعمدة.</p>
 <h2>تكامل HL7</h2>
 <h3>ما هو HL7؟</h3>
 <p>HL7 هو معيار لتبادل البيانات السريرية والإدارية بين أنظمة الرعاية الصحية. بينما يتعامل DICOM مع الصور، يتعامل HL7 مع المعلومات النصية.</p>
 <h3>HL7 في تدفق عمل PACS</h3>
-<ul><li><strong>ADT (قبول، خروج، نقل):</strong> تحديثات تسجيل المريض</li>
-<li><strong>ORM (إدخال الطلبات):</strong> طلبات فحص التصوير من HIS إلى RIS</li>
-<li><strong>ORU (نتيجة الملاحظة):</strong> تقارير الأشعة من RIS إلى HIS/EHR</li>
-<p></ul></p>
+<p>ADT (قبول، خروج، نقل): تحديثات تسجيل المريض, ORM (إدخال الطلبات): طلبات فحص التصوير من HIS إلى RIS, and ORU (نتيجة الملاحظة): تقارير الأشعة من RIS إلى HIS/EHR.</p>
 <h3>اعتبارات إصدار HL7</h3>
-<ul><li><strong>HL7 v2.x:</strong> الأكثر استخداماً، رسائل محددة بأنابيب</li>
-<li><strong>HL7 v3:</strong> قائم على XML، أكثر تنظيماً ولكنه معقد</li>
-<li><strong>FHIR:</strong> نهج REST API حديث</li>
-<p></ul></p>
+<p>HL7 v2.x: الأكثر استخداماً، رسائل محددة بأنابيب, HL7 v3: قائم على XML، أكثر تنظيماً ولكنه معقد, and FHIR: نهج REST API حديث.</p>
 <h2>ملفات تكامل IHE</h2>
 <p>يحدد تكامل مؤسسة الرعاية الصحية (IHE) ملفات تكامل تحدد كيفية عمل المعايير معاً:</p>
 <h3>SWF (تدفق العمل المجدول)</h3>
-<ul><li>يدير تدفق عمل التصوير الكامل من الطلب إلى التقرير</li>
-<li>يضمن تدفق معلومات المريض والطلب بشكل صحيح بين الأنظمة</li>
-<p></ul></p>
+<p>يدير تدفق عمل التصوير الكامل من الطلب إلى التقرير, and يضمن تدفق معلومات المريض والطلب بشكل صحيح بين الأنظمة.</p>
 <h3>PIR (تسوية معلومات المريض)</h3>
-<ul><li>يعالج عدم تطابق معرفات المرضى بين الأنظمة</li>
-<li>حرج للحفاظ على سلامة البيانات</li>
-<p></ul></p>
+<p>يعالج عدم تطابق معرفات المرضى بين الأنظمة, and حرج للحفاظ على سلامة البيانات.</p>
 <h3>XDS (مشاركة الوثائق عبر المؤسسات)</h3>
-<ul><li>يمكن مشاركة الصور عبر مؤسسات الرعاية الصحية</li>
-<li>يدعم تبادل معلومات صحية إقليمي ووطني</li>
-<p></ul></p>
+<p>يمكن مشاركة الصور عبر مؤسسات الرعاية الصحية, and يدعم تبادل معلومات صحية إقليمي ووطني.</p>
 <h3>MAMMO (تكامل صور تصوير الثدي)</h3>
-<ul><li>ملف متخصص لتدفقات عمل تصوير الثدي</li>
-<li>يشمل تكامل الكشف بمساعدة الكمبيوتر</li>
-<p></ul></p>
+<p>ملف متخصص لتدفقات عمل تصوير الثدي, and يشمل تكامل الكشف بمساعدة الكمبيوتر.</p>
 <h2>معمارية التكامل</h2>
 <h3>نقاط تكامل PACS النموذجية</h3>
-<ul><li><strong>الجهاز إلى PACS:</strong> DICOM C-STORE لنقل الصور</li>
-<li><strong>RIS إلى PACS:</strong> HL7 ORM لقائمة العمل، DICOM MWL لجدولة الجهاز</li>
-<li><strong>PACS إلى RIS:</strong> HL7 ORU لتوزيع التقرير</li>
-<li><strong>HIS إلى RIS:</strong> HL7 ADT لتسجيل المريض</li>
-<li><strong>PACS إلى EHR:</strong> XDS أو API مخصص لروابط الصور</li>
-<p></ul></p>
+<p>الجهاز إلى PACS: DICOM C-STORE لنقل الصور, RIS إلى PACS: HL7 ORM لقائمة العمل، DICOM MWL لجدولة الجهاز, PACS إلى RIS: HL7 ORU لتوزيع التقرير, HIS إلى RIS: HL7 ADT لتسجيل المريض, and PACS إلى EHR: XDS أو API مخصص لروابط الصور.</p>
 <h3>محرك الواجهات</h3>
 <p>تستخدم العديد من المستشفيات محرك واجهات (Mirth Connect، Rhapsody، Cloverleaf) لـ:</p>
-<ul><li>توجيه وتحويل رسائل HL7</li>
-<li>التعامل مع تحويلات البروتوكول</li>
-<li>توفير تسجيل الرسائل ومعالجة الأخطاء</li>
-<li>دعم اتصالات متعددة متزامنة</li>
-<p></ul></p>
+<p>توجيه وتحويل رسائل HL7, التعامل مع تحويلات البروتوكول, توفير تسجيل الرسائل ومعالجة الأخطاء, and دعم اتصالات متعددة متزامنة.</p>
 <h2>تحديات التكامل الشائعة</h2>
-<ul><li><strong>عدم تطابق معرف المريض:</strong> أنظمة مختلفة تستخدم معرفات مختلفة</li>
-<li><strong>ترميز الأحرف:</strong> الأسماء العربية/الصينية قد لا تعرض بشكل صحيح</li>
-<li><strong>اختلاف المناطق الزمنية:</strong> طوابع زمنية للدراسة عبر المناطق</li>
-<li><strong>موثوقية الشبكة:</strong> نقل الصور الكبيرة يحتاج اتصالات مستقرة</li>
-<li><strong>توافق الإصدارات:</strong> إصدارات DICOM/HL7 مختلفة بين الأنظمة</li>
-<li><strong>امتدادات خاصة بالموردين:</strong> وسوم DICOM غير قياسية</li>
-<p></ul></p>
+<p>عدم تطابق معرف المريض: أنظمة مختلفة تستخدم معرفات مختلفة, ترميز الأحرف: الأسماء العربية/الصينية قد لا تعرض بشكل صحيح, اختلاف المناطق الزمنية: طوابع زمنية للدراسة عبر المناطق, موثوقية الشبكة: نقل الصور الكبيرة يحتاج اتصالات مستقرة, توافق الإصدارات: إصدارات DICOM/HL7 مختلفة بين الأنظمة, and امتدادات خاصة بالموردين: وسوم DICOM غير قياسية.</p>
 <h2>الاختبار والتحقق</h2>
-<ul><li>استخدم أدوات التحقق من DICOM (dcmtk، Orthanc)</li>
-<li>اختبر رسائل HL7 بأدوات التحقق</li>
-<li>أجرِ اختبار تدفق العمل من النهاية إلى النهاية</li>
-<li>تحقق من جودة الصورة بعد النقل والضغط</li>
-<li>اختبر استعادة الكوارث وسيناريوهات الفشل</li>
-<p></ul></p>
+<p>استخدم أدوات التحقق من DICOM (dcmtk، Orthanc), اختبر رسائل HL7 بأدوات التحقق, أجرِ اختبار تدفق العمل من النهاية إلى النهاية, تحقق من جودة الصورة بعد النقل والضغط, and اختبر استعادة الكوارث وسيناريوهات الفشل.</p>
 <h2>الخلاصة</h2>
 <p>معايير DICOM وHL7 هي العمود الفقري للتشغيل البيني للتصوير الطبي. بفهم هذه المعايير واتباع ملفات تكامل IHE، يمكن لمؤسسات الرعاية الصحية بناء تدفقات عمل تصوير سلسة تربط PACS بالنظام البيئي الأوسع للرعاية الصحية.</p></div>
 
-            <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
-              <div class="share-buttons">
-                <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">مشاركة:</span>
-                <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html&text=معايير PACS DICOM وتكامل الأنظمة موضحة" target="_blank" rel="noopener">𝕏 Twitter</a>
-                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html" target="_blank" rel="noopener">LinkedIn</a>
-                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html" target="_blank" rel="noopener">Facebook</a>
-                <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
-              </div>
-            </div>
+ <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
+ <div class="share-buttons">
+ <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">مشاركة:</span>
+ <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html&text=معايير PACS DICOM وتكامل الأنظمة موضحة" target="_blank" rel="noopener">𝕏 Twitter</a>
+ <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html" target="_blank" rel="noopener">LinkedIn</a>
+ <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/ar/articles/pacs-dicom-standards-and-integration.html" target="_blank" rel="noopener">Facebook</a>
+ <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
+ </div>
+ </div>
 
-            
-            <div class="article-tags" style="margin:1.5rem 0;">
-              <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">الوسوم:</span>
-              <a href="../articles/index.html?tag=PACS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#PACS</a><a href="../articles/index.html?tag=DICOM" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#DICOM</a><a href="../articles/index.html?tag=HL7" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#HL7</a><a href="../articles/index.html?tag=Interoperability" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Interoperability</a><a href="../articles/index.html?tag=Healthcare IT" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Healthcare IT</a>
-            </div>
+ 
+ <div class="article-tags" style="margin:1.5rem 0;">
+ <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">الوسوم:</span>
+ <a href="../articles/index.html?tag=PACS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#PACS</a><a href="../articles/index.html?tag=DICOM" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#DICOM</a><a href="../articles/index.html?tag=HL7" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#HL7</a><a href="../articles/index.html?tag=Interoperability" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Interoperability</a><a href="../articles/index.html?tag=Healthcare IT" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Healthcare IT</a>
+ </div>
 
-            <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
+ <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
 
-            <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← العودة للمقالات</a>
-          </div>
+ <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← العودة للمقالات</a>
+ </div>
 
-          <aside class="article-sidebar">
-            <div style="margin-top:2rem;">
-              <div class="article-lang-switch">
-                <button class="" data-lang="en">🇺🇸 EN</button>
-                <button class="active" data-lang="ar">🇸🇦 ع</button>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-      </div>
-    </section>
+ <aside class="article-sidebar">
+ <div style="margin-top:2rem;">
+ <div class="article-lang-switch">
+ <button class="" data-lang="en">🇺🇸 EN</button>
+ <button class="active" data-lang="ar">🇸🇦 ع</button>
+ </div>
+ </div>
+ </aside>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <section class="section" style="padding:0 0 2rem;">
-      <div class="container" id="related-articles"></div>
-    </section>
+ <section class="section" style="padding:0 0 2rem;">
+ <div class="container" id="related-articles"></div>
+ </section>
 
-  </main>
+ </main>
 
-  <div id="ecms-footer-inject"></div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="../../config.js"></script>
-  <script src="../../assets/js/i18n.js?v=2"></script>
-  <script src="../../assets/js/components.js?v=4"></script>
-  <script src="../../assets/js/core.js?v=6"></script>
-  <script src="../../assets/js/article.js?v=9"></script>
+ <div id="ecms-footer-inject"></div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+ <script src="../../config.js"></script>
+ <script src="../../assets/js/i18n.js?v=2"></script>
+ <script src="../../assets/js/components.js?v=4"></script>
+ <script src="../../assets/js/core.js?v=6"></script>
+ <script src="../../assets/js/article.js?v=9"></script>
 </body>
 </html>

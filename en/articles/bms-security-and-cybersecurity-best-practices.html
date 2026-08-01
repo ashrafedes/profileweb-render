@@ -1,200 +1,147 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6B9JDZ6F0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Z6B9JDZ6F0');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BMS Security and Cybersecurity: Best Practices for Building Systems – Ashraf El Desoky, PMP®</title>
-  <meta name="description" content="Learn essential cybersecurity practices for protecting Building Management Systems from threats and ensuring operational continuity.">
-  <meta name="author" content="Ashraf Ibrahim El Desoky">
-  <meta name="robots" content="index, follow">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="BMS Security and Cybersecurity: Best Practices for Building Systems">
-  <meta property="og:description" content="Learn essential cybersecurity practices for protecting Building Management Systems from threats and ensuring operational continuity.">
-  <meta property="og:url" content="https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html">
-  <meta property="og:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/bms-security-and-cybersecurity-best-practices-hero.jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="en_US">
-  <meta property="article:published_time" content="2026-07-21">
-  <meta property="article:modified_time" content="2026-07-21">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="BMS Security and Cybersecurity: Best Practices for Building Systems">
-  <meta name="twitter:description" content="Learn essential cybersecurity practices for protecting Building Management Systems from threats and ensuring operational continuity.">
-  <meta name="twitter:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/bms-security-and-cybersecurity-best-practices-hero.jpeg">
-  <link rel="canonical" href="https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html">
-  <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html">
-  <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/bms-security-and-cybersecurity-best-practices.html">
-  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
-  <link rel="manifest" href="../../manifest.json">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/articles.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "BMS Security and Cybersecurity: Best Practices for Building Systems", "description": "Learn essential cybersecurity practices for protecting Building Management Systems from threats and ensuring operational continuity.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-21", "dateModified": "2026-07-21", "image": "https://www.ashraf-eldesoky.space/assets/images/articles/bms-security-and-cybersecurity-best-practices-hero.jpeg", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html", "inLanguage": "en"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.ashraf-eldesoky.space/en/articles/"}, {"@type": "ListItem", "position": 3, "name": "BMS Security and Cybersecurity: Best Practices for Building Systems", "item": "https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html"}]}</script>
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6B9JDZ6F0"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-Z6B9JDZ6F0');
+ </script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>BMS Security and Cybersecurity: Best Practices for Building Systems – Ashraf El Desoky, PMP®</title>
+ <meta name="description" content="Learn essential cybersecurity practices for protecting Building Management Systems from threats and ensuring operational continuity.">
+ <meta name="author" content="Ashraf Ibrahim El Desoky">
+ <meta name="robots" content="index, follow">
+ <meta property="og:type" content="article">
+ <meta property="og:title" content="BMS Security and Cybersecurity: Best Practices for Building Systems">
+ <meta property="og:description" content="Learn essential cybersecurity practices for protecting Building Management Systems from threats and ensuring operational continuity.">
+ <meta property="og:url" content="https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html">
+ <meta property="og:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/bms-security-and-cybersecurity-best-practices-hero.jpeg">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:locale" content="en_US">
+ <meta property="article:published_time" content="2026-07-21">
+ <meta property="article:modified_time" content="2026-07-21">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="BMS Security and Cybersecurity: Best Practices for Building Systems">
+ <meta name="twitter:description" content="Learn essential cybersecurity practices for protecting Building Management Systems from threats and ensuring operational continuity.">
+ <meta name="twitter:image" content="https://www.ashraf-eldesoky.space/assets/images/articles/bms-security-and-cybersecurity-best-practices-hero.jpeg">
+ <link rel="canonical" href="https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html">
+ <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html">
+ <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/bms-security-and-cybersecurity-best-practices.html">
+ <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+ <link rel="manifest" href="../../manifest.json">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="../../assets/css/main.css">
+ <link rel="stylesheet" href="../../assets/css/articles.css">
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "BMS Security and Cybersecurity: Best Practices for Building Systems", "description": "Learn essential cybersecurity practices for protecting Building Management Systems from threats and ensuring operational continuity.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-21", "dateModified": "2026-07-21", "image": "https://www.ashraf-eldesoky.space/assets/images/articles/bms-security-and-cybersecurity-best-practices-hero.jpeg", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html", "inLanguage": "en"}</script>
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.ashraf-eldesoky.space/en/articles/"}, {"@type": "ListItem", "position": 3, "name": "BMS Security and Cybersecurity: Best Practices for Building Systems", "item": "https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html"}]}</script>
 </head>
 <body>
-  <div id="ecms-nav-inject"></div>
+ <div id="ecms-nav-inject"></div>
 
-  <main id="main-content" class="page-wrapper" style="padding-top:0;">
-    <div class="article-hero" id="article-hero">
-        <img class="article-hero-img" src="/assets/images/articles/bms-security-and-cybersecurity-best-practices-hero.jpeg" alt="BMS Security and Cybersecurity: Best Practices for Building Systems">
-        <div class="article-hero-overlay"></div>
-        <div class="container article-hero-content">
-          <span class="article-hero-cat">Building Management</span>
-          <h1>BMS Security and Cybersecurity: Best Practices for Building Systems</h1>
-          <div class="article-hero-meta">
-            <span>By Ashraf Ibrahim El Desoky</span>
-            <span>· Jul 21, 2026</span>
-            <span>· 8 min read</span>
-            
-          </div>
-        </div>
-      </div>
+ <main id="main-content" class="page-wrapper" style="padding-top:0;">
+ <div class="article-hero" id="article-hero">
+ <img class="article-hero-img" src="/assets/images/articles/bms-security-and-cybersecurity-best-practices-hero.jpeg" alt="BMS Security and Cybersecurity: Best Practices for Building Systems">
+ <div class="article-hero-overlay"></div>
+ <div class="container article-hero-content">
+ <span class="article-hero-cat">Building Management</span>
+ <h1>BMS Security and Cybersecurity: Best Practices for Building Systems</h1>
+ <div class="article-hero-meta">
+ <span>By Ashraf Ibrahim El Desoky</span>
+ <span>· Jul 21, 2026</span>
+ <span>· 8 min read</span>
+ 
+ </div>
+ </div>
+ </div>
 
-    <section class="section" style="padding:2.5rem 0;">
-      <div class="container">
-        <div id="article-body">
-        <div class="article-layout">
-          <div>
-            <div class="article-content" id="article-content"><h2>Introduction</h2>
+ <section class="section" style="padding:2.5rem 0;">
+ <div class="container">
+ <div id="article-body">
+ <div class="article-layout">
+ <div>
+ <div class="article-content" id="article-content"><h2>Introduction</h2>
 <p>As Building Management Systems (BMS) become increasingly connected to IT networks and the internet, they face growing cybersecurity threats. A compromised BMS can lead to building shutdowns, safety risks, data breaches, and significant financial losses. Implementing robust security measures is essential for protecting building operations and occupant safety.</p>
 <h2>Understanding BMS Cybersecurity Risks</h2>
 <h3>Threat Vectors</h3>
-<ul><li><strong>Network intrusion:</strong> Attackers gain access through network connections</li>
-<li><strong>Malware:</strong> Malicious software targeting BMS controllers or servers</li>
-<li><strong>Insider threats:</strong> Disgruntled employees or contractors with access</li>
-<li><strong>Supply chain attacks:</strong> Compromised equipment or software updates</li>
-<li><strong>Physical access:</strong> Direct access to BMS panels or controllers</li>
-<p></ul></p>
+<p>Network intrusion: Attackers gain access through network connections, Malware: Malicious software targeting BMS controllers or servers, Insider threats: Disgruntled employees or contractors with access, Supply chain attacks: Compromised equipment or software updates, and Physical access: Direct access to BMS panels or controllers.</p>
 <h3>Potential Impacts</h3>
-<ul><li>Building systems shutdown (HVAC, lighting, elevators)</li>
-<li>Safety system compromise (fire alarms, access control)</li>
-<li>Data theft (occupant information, building plans)</li>
-<li>Ransomware attacks demanding payment</li>
-<li>Reputational damage and legal liability</li>
-<p></ul></p>
+<p>Building systems shutdown (HVAC, lighting, elevators), Safety system compromise (fire alarms, access control), Data theft (occupant information, building plans), Ransomware attacks demanding payment, and Reputational damage and legal liability.</p>
 <h2>Security Best Practices</h2>
 <h3>1. Network Segmentation</h3>
-<ul><li>Separate BMS networks from corporate IT networks</li>
-<li>Use firewalls between BMS and other network zones</li>
-<li>Implement VLAN isolation for different building systems</li>
-<li>Deploy a DMZ for BMS web interfaces</li>
-<li>Disable unnecessary network services and ports</li>
-<p></ul></p>
+<p>Separate BMS networks from corporate IT networks, Use firewalls between BMS and other network zones, Implement VLAN isolation for different building systems, Deploy a DMZ for BMS web interfaces, and Disable unnecessary network services and ports.</p>
 <h3>2. Access Control</h3>
-<ul><li>Implement role-based access control (RBAC)</li>
-<li>Use strong password policies (minimum 12 characters)</li>
-<li>Enable multi-factor authentication (MFA) for remote access</li>
-<li>Regularly review and revoke unused accounts</li>
-<li>Maintain an audit log of all access attempts</li>
-<p></ul></p>
+<p>Implement role-based access control (RBAC), Use strong password policies (minimum 12 characters), Enable multi-factor authentication (MFA) for remote access, Regularly review and revoke unused accounts, and Maintain an audit log of all access attempts.</p>
 <h3>3. Patch Management</h3>
-<ul><li>Establish a regular patching schedule for BMS software</li>
-<li>Test patches in a non-production environment first</li>
-<li>Maintain inventory of all BMS hardware and software versions</li>
-<li>Subscribe to vendor security advisories</li>
-<li>Plan for end-of-life equipment replacement</li>
-<p></ul></p>
+<p>Establish a regular patching schedule for BMS software, Test patches in a non-production environment first, Maintain inventory of all BMS hardware and software versions, Subscribe to vendor security advisories, and Plan for end-of-life equipment replacement.</p>
 <h3>4. Encryption</h3>
-<ul><li>Encrypt all network communication (TLS 1.2 or higher)</li>
-<li>Use VPN for remote access to BMS</li>
-<li>Encrypt stored data and backups</li>
-<li>Manage encryption certificates properly</li>
-<li>Disable legacy protocols (HTTP, Telnet, FTP)</li>
-<p></ul></p>
+<p>Encrypt all network communication (TLS 1.2 or higher), Use VPN for remote access to BMS, Encrypt stored data and backups, Manage encryption certificates properly, and Disable legacy protocols (HTTP, Telnet, FTP).</p>
 <h3>5. Monitoring and Incident Response</h3>
-<ul><li>Deploy intrusion detection systems (IDS) for BMS networks</li>
-<li>Monitor for unusual traffic patterns or commands</li>
-<li>Establish an incident response plan specific to BMS</li>
-<li>Conduct regular security drills</li>
-<li>Maintain backup and recovery procedures</li>
-<p></ul></p>
+<p>Deploy intrusion detection systems (IDS) for BMS networks, Monitor for unusual traffic patterns or commands, Establish an incident response plan specific to BMS, Conduct regular security drills, and Maintain backup and recovery procedures.</p>
 <h2>Compliance and Standards</h2>
 <h3>Relevant Standards</h3>
-<ul><li><strong>ISA/IEC 62443:</strong> Security for industrial automation and control systems</li>
-<li><strong>NIST Cybersecurity Framework:</strong> Risk-based approach to cybersecurity</li>
-<li><strong>ISO 27001:</strong> Information security management systems</li>
-<li><strong>ASHRAE 135 (BACnet):</strong> Includes security provisions for BMS communication</li>
-<p></ul></p>
+<p>ISA/IEC 62443: Security for industrial automation and control systems, NIST Cybersecurity Framework: Risk-based approach to cybersecurity, ISO 27001: Information security management systems, and ASHRAE 135 (BACnet): Includes security provisions for BMS communication.</p>
 <h3>Regulatory Requirements</h3>
-<ul><li>GDPR for personal data in building access systems</li>
-<li>Industry-specific regulations (healthcare, financial, government)</li>
-<li>Local building codes and safety regulations</li>
-<li>Insurance requirements for cyber coverage</li>
-<p></ul></p>
+<p>GDPR for personal data in building access systems, Industry-specific regulations (healthcare, financial, government), Local building codes and safety regulations, and Insurance requirements for cyber coverage.</p>
 <h2>Security Assessment Checklist</h2>
-<ul><li>[ ] BMS network is segmented from IT network</li>
-<li>[ ] Default passwords have been changed on all devices</li>
-<li>[ ] Firewall rules are configured and documented</li>
-<li>[ ] All remote access uses VPN and MFA</li>
-<li>[ ] Security patches are up to date</li>
-<li>[ ] Audit logs are enabled and reviewed</li>
-<li>[ ] Incident response plan exists and is tested</li>
-<li>[ ] Backups are encrypted and tested regularly</li>
-<li>[ ] Physical access to BMS panels is secured</li>
-<li>[ ] Third-party vendor access is controlled and monitored</li>
-<p></ul></p>
+<p>[ ] BMS network is segmented from IT network, [ ] Default passwords have been changed on all devices, [ ] Firewall rules are configured and documented, [ ] All remote access uses VPN and MFA, [ ] Security patches are up to date, [ ] Audit logs are enabled and reviewed, [ ] Incident response plan exists and is tested, [ ] Backups are encrypted and tested regularly, [ ] Physical access to BMS panels is secured, and [ ] Third-party vendor access is controlled and monitored.</p>
 <h2>Conclusion</h2>
 <p>BMS cybersecurity is not optional—it is a critical requirement for modern building operations. By implementing network segmentation, strong access controls, patch management, encryption, and monitoring, organizations can protect their building systems from increasingly sophisticated cyber threats.</p></div>
 
-            <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
-              <div class="share-buttons">
-                <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">Share:</span>
-                <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html&text=BMS Security and Cybersecurity: Best Practices for Building Systems" target="_blank" rel="noopener">𝕏 Twitter</a>
-                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html" target="_blank" rel="noopener">LinkedIn</a>
-                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html" target="_blank" rel="noopener">Facebook</a>
-                <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
-              </div>
-            </div>
+ <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
+ <div class="share-buttons">
+ <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">Share:</span>
+ <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html&text=BMS Security and Cybersecurity: Best Practices for Building Systems" target="_blank" rel="noopener">𝕏 Twitter</a>
+ <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html" target="_blank" rel="noopener">LinkedIn</a>
+ <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/en/articles/bms-security-and-cybersecurity-best-practices.html" target="_blank" rel="noopener">Facebook</a>
+ <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
+ </div>
+ </div>
 
-            
-            <div class="article-tags" style="margin:1.5rem 0;">
-              <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">Tags:</span>
-              <a href="../articles/index.html?tag=BMS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#BMS</a><a href="../articles/index.html?tag=Cybersecurity" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Cybersecurity</a><a href="../articles/index.html?tag=Security" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Security</a><a href="../articles/index.html?tag=Network Security" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Network Security</a><a href="../articles/index.html?tag=OT Security" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#OT Security</a>
-            </div>
+ 
+ <div class="article-tags" style="margin:1.5rem 0;">
+ <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">Tags:</span>
+ <a href="../articles/index.html?tag=BMS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#BMS</a><a href="../articles/index.html?tag=Cybersecurity" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Cybersecurity</a><a href="../articles/index.html?tag=Security" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Security</a><a href="../articles/index.html?tag=Network Security" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Network Security</a><a href="../articles/index.html?tag=OT Security" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#OT Security</a>
+ </div>
 
-            <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
+ <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
 
-            <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← Back to Articles</a>
-          </div>
+ <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← Back to Articles</a>
+ </div>
 
-          <aside class="article-sidebar">
-            <div style="margin-top:2rem;">
-              <div class="article-lang-switch">
-                <button class="active" data-lang="en">🇺🇸 EN</button>
-                <button class="" data-lang="ar">🇸🇦 ع</button>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-      </div>
-    </section>
+ <aside class="article-sidebar">
+ <div style="margin-top:2rem;">
+ <div class="article-lang-switch">
+ <button class="active" data-lang="en">🇺🇸 EN</button>
+ <button class="" data-lang="ar">🇸🇦 ع</button>
+ </div>
+ </div>
+ </aside>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <section class="section" style="padding:0 0 2rem;">
-      <div class="container" id="related-articles"></div>
-    </section>
+ <section class="section" style="padding:0 0 2rem;">
+ <div class="container" id="related-articles"></div>
+ </section>
 
-  </main>
+ </main>
 
-  <div id="ecms-footer-inject"></div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="../../config.js"></script>
-  <script src="../../assets/js/i18n.js?v=2"></script>
-  <script src="../../assets/js/components.js?v=4"></script>
-  <script src="../../assets/js/core.js?v=6"></script>
-  <script src="../../assets/js/article.js?v=9"></script>
+ <div id="ecms-footer-inject"></div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+ <script src="../../config.js"></script>
+ <script src="../../assets/js/i18n.js?v=2"></script>
+ <script src="../../assets/js/components.js?v=4"></script>
+ <script src="../../assets/js/core.js?v=6"></script>
+ <script src="../../assets/js/article.js?v=9"></script>
 </body>
 </html>

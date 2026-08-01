@@ -1,81 +1,77 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6B9JDZ6F0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Z6B9JDZ6F0');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة – أشرف الدسوقي, PMP®</title>
-  <meta name="description" content="دليل شامل لعمارة نظام PACS وتكامل بروتوكول DICOM مع أجهزة الأشعة (الأشعة السينية، الطبقي المحوري، الرنين المغناطيسي، الموجات فوق الصوتية) وتصميم الشبكة واستراتيجيات التخزين وأفضل ممارسات التنفيذ.">
-  <meta name="author" content="Ashraf Ibrahim El Desoky">
-  <meta name="robots" content="index, follow">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة">
-  <meta property="og:description" content="دليل شامل لعمارة نظام PACS وتكامل بروتوكول DICOM مع أجهزة الأشعة (الأشعة السينية، الطبقي المحوري، الرنين المغناطيسي، الموجات فوق الصوتية) وتصميم الشبكة واستراتيجيات التخزين وأفضل ممارسات التنفيذ.">
-  <meta property="og:url" content="https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html">
-  <meta property="og:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/7088522/pexels-photo-7088522.jpeg?auto=compress&cs=tinysrgb&w=1200">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="ar_SA">
-  <meta property="article:published_time" content="2026-07-25">
-  <meta property="article:modified_time" content="2026-07-25">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة">
-  <meta name="twitter:description" content="دليل شامل لعمارة نظام PACS وتكامل بروتوكول DICOM مع أجهزة الأشعة (الأشعة السينية، الطبقي المحوري، الرنين المغناطيسي، الموجات فوق الصوتية) وتصميم الشبكة واستراتيجيات التخزين وأفضل ممارسات التنفيذ.">
-  <meta name="twitter:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/7088522/pexels-photo-7088522.jpeg?auto=compress&cs=tinysrgb&w=1200">
-  <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html">
-  <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html">
-  <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/articles/pacs-medical-imaging-connectivity-guide.html">
-  <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
-  <link rel="manifest" href="../../manifest.json">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/main.css">
-  <link rel="stylesheet" href="../../assets/css/articles.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة", "description": "دليل شامل لعمارة نظام PACS وتكامل بروتوكول DICOM مع أجهزة الأشعة (الأشعة السينية، الطبقي المحوري، الرنين المغناطيسي، الموجات فوق الصوتية) وتصميم الشبكة واستراتيجيات التخزين وأفضل ممارسات التنفيذ.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-25", "dateModified": "2026-07-25", "image": "https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/7088522/pexels-photo-7088522.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html", "inLanguage": "ar"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://www.ashraf-eldesoky.space/ar/articles/"}, {"@type": "ListItem", "position": 3, "name": "نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة", "item": "https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html"}]}</script>
+ <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6B9JDZ6F0"></script>
+ <script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-Z6B9JDZ6F0');
+ </script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة – أشرف الدسوقي, PMP®</title>
+ <meta name="description" content="دليل شامل لعمارة نظام PACS وتكامل بروتوكول DICOM مع أجهزة الأشعة (الأشعة السينية، الطبقي المحوري، الرنين المغناطيسي، الموجات فوق الصوتية) وتصميم الشبكة واستراتيجيات التخزين وأفضل ممارسات التنفيذ.">
+ <meta name="author" content="Ashraf Ibrahim El Desoky">
+ <meta name="robots" content="index, follow">
+ <meta property="og:type" content="article">
+ <meta property="og:title" content="نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة">
+ <meta property="og:description" content="دليل شامل لعمارة نظام PACS وتكامل بروتوكول DICOM مع أجهزة الأشعة (الأشعة السينية، الطبقي المحوري، الرنين المغناطيسي، الموجات فوق الصوتية) وتصميم الشبكة واستراتيجيات التخزين وأفضل ممارسات التنفيذ.">
+ <meta property="og:url" content="https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html">
+ <meta property="og:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/7088522/pexels-photo-7088522.jpeg?auto=compress&cs=tinysrgb&w=1200">
+ <meta property="og:image:width" content="1200">
+ <meta property="og:image:height" content="630">
+ <meta property="og:locale" content="ar_SA">
+ <meta property="article:published_time" content="2026-07-25">
+ <meta property="article:modified_time" content="2026-07-25">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة">
+ <meta name="twitter:description" content="دليل شامل لعمارة نظام PACS وتكامل بروتوكول DICOM مع أجهزة الأشعة (الأشعة السينية، الطبقي المحوري، الرنين المغناطيسي، الموجات فوق الصوتية) وتصميم الشبكة واستراتيجيات التخزين وأفضل ممارسات التنفيذ.">
+ <meta name="twitter:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/7088522/pexels-photo-7088522.jpeg?auto=compress&cs=tinysrgb&w=1200">
+ <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html">
+ <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html">
+ <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/articles/pacs-medical-imaging-connectivity-guide.html">
+ <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+ <link rel="manifest" href="../../manifest.json">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="../../assets/css/main.css">
+ <link rel="stylesheet" href="../../assets/css/articles.css">
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة", "description": "دليل شامل لعمارة نظام PACS وتكامل بروتوكول DICOM مع أجهزة الأشعة (الأشعة السينية، الطبقي المحوري، الرنين المغناطيسي، الموجات فوق الصوتية) وتصميم الشبكة واستراتيجيات التخزين وأفضل ممارسات التنفيذ.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-25", "dateModified": "2026-07-25", "image": "https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/7088522/pexels-photo-7088522.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html", "inLanguage": "ar"}</script>
+ <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://www.ashraf-eldesoky.space/ar/articles/"}, {"@type": "ListItem", "position": 3, "name": "نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة", "item": "https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html"}]}</script>
 </head>
 <body><style>* { font-family: 'Cairo', sans-serif; }</style>
-  <div id="ecms-nav-inject"></div>
+ <div id="ecms-nav-inject"></div>
 
-  <main id="main-content" class="page-wrapper" style="padding-top:0;">
-    <div class="article-hero" id="article-hero">
-        <img class="article-hero-img" src="https://images.pexels.com/photos/7088522/pexels-photo-7088522.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة">
-        <div class="article-hero-overlay"></div>
-        <div class="container article-hero-content">
-          <span class="article-hero-cat">Healthcare Technology</span>
-          <h1>نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة</h1>
-          <div class="article-hero-meta">
-            <span>بقلم Ashraf Ibrahim El Desoky</span>
-            <span>· 25 يوليو 2026</span>
-            <span>· 18 دقيقة قراءة</span>
-            
-          </div>
-        </div>
-      </div>
+ <main id="main-content" class="page-wrapper" style="padding-top:0;">
+ <div class="article-hero" id="article-hero">
+ <img class="article-hero-img" src="https://images.pexels.com/photos/7088522/pexels-photo-7088522.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة">
+ <div class="article-hero-overlay"></div>
+ <div class="container article-hero-content">
+ <span class="article-hero-cat">Healthcare Technology</span>
+ <h1>نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة</h1>
+ <div class="article-hero-meta">
+ <span>بقلم Ashraf Ibrahim El Desoky</span>
+ <span>· 25 يوليو 2026</span>
+ <span>· 18 دقيقة قراءة</span>
+ 
+ </div>
+ </div>
+ </div>
 
-    <section class="section" style="padding:2.5rem 0;">
-      <div class="container">
-        <div id="article-body">
-        <div class="article-layout">
-          <div>
-            <div class="article-content" id="article-content"><h2>ما هو نظام PACS؟</h2>
+ <section class="section" style="padding:2.5rem 0;">
+ <div class="container">
+ <div id="article-body">
+ <div class="article-layout">
+ <div>
+ <div class="article-content" id="article-content"><h2>ما هو نظام PACS؟</h2>
 <p>نظام أرشفة وتواصل الصور الطبية (PACS - Picture Archiving and Communication System) هو تقنية تصوير طبي تُستخدم لتخزين واسترجاع وتوزيع وعرض الصور من أجهزة تصوير مختلفة (الأشعة السينية، الطبقي المحوري، الرنين المغناطيسي، الموجات فوق الصوتية، الطب النووي، الفلوروسكوبي). استبدل PACS علم الأشعة التقليدي المعتمد على الأفلام بسير عمل رقمي، محولاً بشكل جوهري كيفية اكتساب وتخزين ومراجعة ومشاركة الصور الطبية.</p>
 <p>المكونات الأربعة الرئيسية لأي نظام PACS هي:</p>
-<ul><li><strong>أجهزة اكتساب الصور</strong> — أجهزة الأشعة التي تولد الصور (X-ray، CT، MRI، ultrasound، PET، تصوير الثدي)</li>
-<li><strong>شبكة آمنة</strong> — البنية الرقمية التي تربط الأجهزة بالتخزين ومحطات العمل</li>
-<li><strong>أرشيف التخزين</strong> — تخزين قصير المدى وطويل المدى للصور الطبية</li>
-<li><strong>محطات عرض متكاملة</strong> — محطات تشخيصية ومراجعة سريرية لأطباء الأشعة والأطباء المعالجين</li>
-<p></ul></p>
+<p>أجهزة اكتساب الصور — أجهزة الأشعة التي تولد الصور (X-ray، CT، MRI، ultrasound، PET، تصوير الثدي), شبكة آمنة — البنية الرقمية التي تربط الأجهزة بالتخزين ومحطات العمل, أرشيف التخزين — تخزين قصير المدى وطويل المدى للصور الطبية, and محطات عرض متكاملة — محطات تشخيصية ومراجعة سريرية لأطباء الأشعة والأطباء المعالجين.</p>
 <img src="https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="عمارة نظام PACS في قسم الأشعة بالمستشفى" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
 <p>---</p>
 <h2>فهم DICOM: لغة PACS</h2>
@@ -86,41 +82,22 @@
 <table><thead><tr><th>خدمة DICOM</th><th>الوظيفة</th><th>الاتجاه</th></tr></thead><tbody><tr><td>C-STORE</td><td>نقل صورة من الجهاز إلى PACS</td><td>الجهاز ← PACS</td></tr><tr><td>C-FIND</td><td>البحث عن دراسات/سلاسل/صور</td><td>محطة العمل ← PACS</td></tr><tr><td>C-MOVE</td><td>طلب نقل الصور إلى وجهة</td><td>محطة العمل ← PACS</td></tr><tr><td>C-GET</td><td>سحب الصور مباشرة</td><td>محطة العمل ← PACS</td></tr><tr><td>قائمة عمل الجهاز (MWL)</td><td>استرجاع قائمة المرضى/الطلبات</td><td>PACS ← الجهاز</td></tr><tr><td>MPPS</td><td>الإبلاغ عن حالة الفحص</td><td>الجهاز ← PACS</td></tr><tr><td>تأكيد التخزين</td><td>تأكيد تخزين PACS للصور بأمان</td><td>PACS ← الجهاز</td></tr></tbody></table>
 <h3>كيف يعمل اتصال DICOM</h3>
 <p>عندما يرسل جهاز صوراً إلى PACS، يؤسس <strong>اتصال DICOM (Association)</strong> — اتصال TCP/IP حيث يتفاوض النظامان على الخدمات وأنواع البيانات المدعومة:</p>
-<ul><li><strong>طلب الاتصال (A-ASSOCIATE-RQ):</strong> الجهاز يرسل طلب اتصال محدداً عنوانه (AE Title) وعنوان PACS والخدمات المطلوبة</li>
-<li><strong>قبول الاتصال (A-ASSOCIATE-AC):</strong> PACS يستجيب، قابلاً أو رافضاً كل خدمة مقترحة</li>
-<li><strong>نقل البيانات:</strong> الصور تُرسل كأوامر C-STORE، كل واحدة تحتوي على مجموعة بيانات DICOM</li>
-<li><strong>إنهاء الاتصال (A-RELEASE):</strong> الاتصال يُغلق بأمان</li>
-<p></ul></p>
+<p>طلب الاتصال (A-ASSOCIATE-RQ): الجهاز يرسل طلب اتصال محدداً عنوانه (AE Title) وعنوان PACS والخدمات المطلوبة, قبول الاتصال (A-ASSOCIATE-AC): PACS يستجيب، قابلاً أو رافضاً كل خدمة مقترحة, نقل البيانات: الصور تُرسل كأوامر C-STORE، كل واحدة تحتوي على مجموعة بيانات DICOM, and إنهاء الاتصال (A-RELEASE): الاتصال يُغلق بأمان.</p>
 <img src="https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="تدفق اتصال DICOM بين جهاز الأشعة و PACS" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
 <p>---</p>
 <h2>توصيل أجهزة الأشعة بنظام PACS</h2>
 <h3>الخطوة 1: تكوين الشبكة</h3>
 <p>كل جهاز أشعة ومكون PACS يجب أن يكون على شبكة يمكنها التواصل. في معظم المستشفيات، <strong>VLAN مخصص للتصوير</strong> يفصل حركة الأشعة عن حركة المستشفى العامة لضمان النطاق الترددي والأمان.</p>
 <p><strong>معايير الشبكة المطلوبة لكل جهاز:</strong></p>
-<ul><li><strong>عنوان IP:</strong> ثابت على شبكة التصوير (أبداً DHCP للأجهزة الطبية)</li>
-<li><strong>قناع الشبكة والبوابة:</strong> مطابق لتكوين VLAN</li>
-<li><strong>عنوان AE:</strong> عنوان فريد يحدد الجهاز (مثل <code>CT_SCANNER_01</code>)</li>
-<li><strong>رقم المنفذ:</strong> عادة 104 (DICOM قياسي) أو 11112 (DICOM آمن TLS)</li>
-<li><strong>عنوان PACS:</strong> عنوان AE و IP لنظام PACS</li>
-<p></ul></p>
+<p>عنوان IP: ثابت على شبكة التصوير (أبداً DHCP للأجهزة الطبية), قناع الشبكة والبوابة: مطابق لتكوين VLAN, عنوان AE: عنوان فريد يحدد الجهاز (مثل CT_SCANNER_01), رقم المنفذ: عادة 104 (DICOM قياسي) أو 11112 (DICOM آمن TLS), and عنوان PACS: عنوان AE و IP لنظام PACS.</p>
 <h3>الخطوة 2: تكوين قائمة عمل الجهاز (Modality Worklist)</h3>
 <p>قائمة عمل الجهاز (MWL) هي نقطة التكامل الأولى بين جهاز الأشعة و PACS/HIS. عندما يُسجل مريض في نظام معلومات المستشفى (HIS) ويُوضع طلب في نظام معلومات الأشعة (RIS)، تصبح هذه المعلومات متاحة كمدخل في قائمة العمل.</p>
 <p><strong>كيف تعمل في الممارسة:</strong></p>
-<ul><li>فني الأشعة يقف أمام جهاز CT ويختار "قائمة العمل"</li>
-<li>جهاز CT يستعلم عن خادم MWL باستخدام C-FIND</li>
-<li>تعرض القائمة جميع الفحوصات المجدولة اليوم</li>
-<li>الفني يختار المريض والفحص الصحيح</li>
-<li>بيانات المريض ومعايير الفحص تُحمّل تلقائياً — لا إدخال يدوي</li>
-<li>بعد الفحص، تُرسل الصور إلى PACS بسياق المريض والدراسة الصحيح</li>
-<p></ul></p>
+<p>فني الأشعة يقف أمام جهاز CT ويختار "قائمة العمل", جهاز CT يستعلم عن خادم MWL باستخدام C-FIND, تعرض القائمة جميع الفحوصات المجدولة اليوم, الفني يختار المريض والفحص الصحيح, بيانات المريض ومعايير الفحص تُحمّل تلقائياً — لا إدخال يدوي, and بعد الفحص، تُرسل الصور إلى PACS بسياق المريض والدراسة الصحيح.</p>
 <p>هذا السير عمل يلغي أخطاء النسخ — ميزة أمان حرجة عند التعامل مع هويات المرضى.</p>
 <h3>الخطوة 3: تكوين نقل الصور (C-STORE)</h3>
 <p>بعد اكتساب الصور، يرسل الجهاز الصور إلى PACS باستخدام C-STORE. التكوين على كل جهاز يشمل:</p>
-<ul><li><strong>عنوان AE الوجهة:</strong> عنوان PACS (مثل <code>PACS_MAIN</code>)</li>
-<li><strong>IP الوجهة:</strong> عنوان خادم PACS</li>
-<li><strong>منفذ الوجهة:</strong> عادة 104 أو 11112</li>
-<li><strong>صيغ النقل (Transfer Syntaxes):</strong> تنسيق الترميز</li>
-<p></ul></p>
+<p>عنوان AE الوجهة: عنوان PACS (مثل PACS_MAIN), IP الوجهة: عنوان خادم PACS, منفذ الوجهة: عادة 104 أو 11112, and صيغ النقل (Transfer Syntaxes): تنسيق الترميز.</p>
 <h3>الخطوة 4: تأكيد التخزين (Storage Commitment)</h3>
 <p>بعد إرسال الصور، يطلب الجهاز <strong>تأكيد التخزين</strong> — تأكيد رسمي أن PACS استقبل وخزن الصور. هذا متطلب قانوني وأماني: لا يجب على الفني حذف الصور من الجهاز حتى يؤكد PACS التخزين الآمن.</p>
 <img src="https://images.pexels.com/photos/4225922/pexels-photo-4225922.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="جهاز أشعة يرسل صوراً إلى PACS مع تأكيد التخزين" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
@@ -128,52 +105,31 @@
 <h2>توصيل أجهزة الأشعة المحددة</h2>
 <h3>الأشعة السينية (X-Ray)</h3>
 <p>أنظمة الأشعة الرقمية (DR) تستخدم كواشف لوحية تنتج صور DICOM مباشرة:</p>
-<ul><li><strong>CR (الأشعة المحوسبة):</strong> أنظمة قائمة على كاسيت حيث تُقرأ الألواح بواسطة ماسح</li>
-<li><strong>DR (الأشعة الرقمية):</strong> التقاط رقمي مباشر، الصور تظهر خلال ثوانٍ</li>
-<li><strong>الفلوروسكوبي:</strong> تصوير أشعة سينية لحظي؛ يشمل حلقات سينية وصور نقطية</li>
-<p></ul></p>
+<p>CR (الأشعة المحوسبة): أنظمة قائمة على كاسيت حيث تُقرأ الألواح بواسطة ماسح, DR (الأشعة الرقمية): التقاط رقمي مباشر، الصور تظهر خلال ثوانٍ, and الفلوروسكوبي: تصوير أشعة سينية لحظي؛ يشمل حلقات سينية وصور نقطية.</p>
 <p><strong>حجم الصورة:</strong> أشعة صدر واحدة يمكن أن تكون 10-30 ميجابايت.</p>
 <h3>الطبقي المحوري (CT)</h3>
 <p>أجهزة CT تنتج دراسات كبيرة — فحص واحد قد يحتوي 1,000-5,000 شريحة:</p>
-<ul><li><strong>نقل متعدد الشرائح:</strong> الصور تُرسل أثناء إعادة بنائها</li>
-<li><strong>تنظيم السلاسل:</strong> دراسة CT لها سلاسل متعددة (scout، محوري، إعادة بناء تاجي)</li>
-<li><strong>الإبلاغ عن الجرعة:</strong> أجهزة CT الحديثة تشمل تقارير جرعة الإشعاع</li>
-<p></ul></p>
+<p>نقل متعدد الشرائح: الصور تُرسل أثناء إعادة بنائها, تنظيم السلاسل: دراسة CT لها سلاسل متعددة (scout، محوري، إعادة بناء تاجي), and الإبلاغ عن الجرعة: أجهزة CT الحديثة تشمل تقارير جرعة الإشعاع.</p>
 <p><strong>حجم الدراسة:</strong> 500 ميجابايت - 2 جيجابايت. تأكد من اتصال جيجابت.</p>
 <h3>الرنين المغناطيسي (MRI)</h3>
 <p>دراسات MRI معقدة بتسلسلات وتباينات وإعادة بناء متعددة:</p>
-<ul><li><strong>سلاسل متعددة لكل دراسة:</strong> T1، T2، FLAIR، DWI</li>
-<li><strong>اكتساب ثلاثي الأبعاد:</strong> مجموعات بيانات حجمية كبيرة</li>
-<li><strong>صيغ نقل مضغوطة:</strong> غالباً JPEG Lossless أو JPEG 2000</li>
-<p></ul></p>
+<p>سلاسل متعددة لكل دراسة: T1، T2، FLAIR، DWI, اكتساب ثلاثي الأبعاد: مجموعات بيانات حجمية كبيرة, and صيغ نقل مضغوطة: غالباً JPEG Lossless أو JPEG 2000.</p>
 <h3>الموجات فوق الصوتية (Ultrasound)</h3>
 <p>تحديات فريدة:</p>
-<ul><li><strong>تضمين DICOM:</strong> القياسات والحسابات مدمجة في تقارير منظمة</li>
-<li><strong>حلقات سينية:</strong> مقاطع فيديو ككائنات DICOM متعددة الإطارات</li>
-<li><strong>أجهزة قديمة:</strong> قد تستخدم صيغ مملوكة — قد يلزم بوابة DICOM</li>
-<p></ul></p>
+<p>تضمين DICOM: القياسات والحسابات مدمجة في تقارير منظمة, حلقات سينية: مقاطع فيديو ككائنات DICOM متعددة الإطارات, and أجهزة قديمة: قد تستخدم صيغ مملوكة — قد يلزم بوابة DICOM.</p>
 <img src="https://images.pexels.com/photos/4226140/pexels-photo-4226140.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="جهاز موجات فوق صوتية متصل بشبكة PACS" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
 <h3>تصوير الثدي (Mammography)</h3>
 <p>أكبر صورة مفردة في الأشعة:</p>
-<ul><li><strong>حجم الصورة:</strong> 50-100 ميجابايت لكل صورة</li>
-<li><strong>التصوير المقطعي للثدي (3D):</strong> دراسة واحدة يمكن أن تكون 1-3 جيجابايت</li>
-<li><strong>متطلب شبكة:</strong> اتصال نطاق ترددي عالي مخصص</li>
-<p></ul></p>
+<p>حجم الصورة: 50-100 ميجابايت لكل صورة, التصوير المقطعي للثدي (3D): دراسة واحدة يمكن أن تكون 1-3 جيجابايت, and متطلب شبكة: اتصال نطاق ترددي عالي مخصص.</p>
 <p>---</p>
 <h2>عمارة شبكة PACS</h2>
 <h3>تصميم شبكة PACS للمستشفى</h3>
 <p><strong>الطبقة 1 — شبكة الاكتساب:</strong></p>
-<ul><li>VLAN مخصص لجميع الأجهزة</li>
-<li>مفاتيح جيجابت مع QoS</li>
-<p></ul></p>
+<p>VLAN مخصص لجميع الأجهزة, and مفاتيح جيجابت مع QoS.</p>
 <p><strong>الطبقة 2 — الشبكة الأساسية:</strong></p>
-<ul><li>عمود فقري 10 جيجابت</li>
-<li>مسارات متكررة للتحمل</li>
-<p></ul></p>
+<p>عمود فقري 10 جيجابت, and مسارات متكررة للتحمل.</p>
 <p><strong>الطبقة 3 — شبكة التوزيع:</strong></p>
-<ul><li>جيجابت لمحطات التشخيص</li>
-<li>100 ميجابت كحد أدنى لمراجعة سريرية</li>
-<p></ul></p>
+<p>جيجابت لمحطات التشخيص, and 100 ميجابت كحد أدنى لمراجعة سريرية.</p>
 <img src="https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="عمارة شبكة المستشفى لـ PACS" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
 <h3>تخطيط النطاق الترددي</h3>
 <table><thead><tr><th>الجهاز</th><th>متوسط حجم الدراسة</th><th>فحوصات/يوم</th><th>النطاق اليومي</th></tr></thead><tbody><tr><td>X-ray</td><td>20 ميجابايت</td><td>150</td><td>3 جيجابايت</td></tr><tr><td>CT</td><td>800 ميجابايت</td><td>80</td><td>64 جيجابايت</td></tr><tr><td>MRI</td><td>1.2 جيجابايت</td><td>40</td><td>48 جيجابايت</td></tr><tr><td>Ultrasound</td><td>80 ميجابايت</td><td>60</td><td>4.8 جيجابايت</td></tr><tr><td>Mammography</td><td>200 ميجابايت</td><td>50</td><td>10 جيجابايت</td></tr><tr><td><strong>الإجمالي</strong></td><td>—</td><td><strong>380</strong></td><td><strong>~130 جيجابايت/يوم</strong></td></tr></tbody></table>
@@ -181,20 +137,11 @@
 <h2>استراتيجية تخزين PACS</h2>
 <h3>عمارة التخزين المتدرجة</h3>
 <p><strong>الطبقة 1 — التخزين الساخن (SSD):</strong></p>
-<ul><li>الدراسات الحديثة (3-6 أشهر)</li>
-<li>وصول سريع للقراءة النشطة</li>
-<li>عادة 5-10 تيرابايت</li>
-<p></ul></p>
+<p>الدراسات الحديثة (3-6 أشهر), وصول سريع للقراءة النشطة, and عادة 5-10 تيرابايت.</p>
 <p><strong>الطبقة 2 — التخزين الدافئ (HDD):</strong></p>
-<ul><li>دراسات 6 أشهر - 3 سنوات</li>
-<li>سرعة وصول متوسطة</li>
-<li>عادة 20-50 تيرابايت</li>
-<p></ul></p>
+<p>دراسات 6 أشهر - 3 سنوات, سرعة وصول متوسطة, and عادة 20-50 تيرابايت.</p>
 <p><strong>الطبقة 3 — التخزين البارد (أرشيف):</strong></p>
-<ul><li>دراسات أقدم من 3 سنوات</li>
-<li>شريط أو أرشيف سحابي</li>
-<li>تكلفة أقل لكل تيرابايت</li>
-<p></ul></p>
+<p>دراسات أقدم من 3 سنوات, شريط أو أرشيف سحابي, and تكلفة أقل لكل تيرابايت.</p>
 <h3>متطلبات الاحتفاظ القانوني</h3>
 <table><thead><tr><th>الدولة</th><th>الحد الأدنى للاحتفاظ</th><th>ملاحظات</th></tr></thead><tbody><tr><td>السعودية</td><td>10 سنوات</td><td>لوائح وزارة الصحة</td></tr><tr><td>أمريكا</td><td>7 سنوات (بالغين)</td><td>HIPAA</td></tr><tr><td>بريطانيا</td><td>8 سنوات</td><td>NHS</td></tr><tr><td>الاتحاد الأوروبي</td><td>10-15 سنة</td><td>يختلف حسب الدولة</td></tr></tbody></table>
 <p>---</p>
@@ -202,10 +149,7 @@
 <h3>ما هو HL7؟</h3>
 <p>بينما يتعامل DICOM مع الصور، <strong>HL7</strong> يتعامل مع البيانات السريرية النصية — تسجيل المرضى والطلبات والنتائج والتقارير.</p>
 <h3>تدفق رسائل HL7</h3>
-<ul><li><strong>ADT:</strong> HIS يرسل تسجيل المريض إلى RIS و PACS</li>
-<li><strong>ORM:</strong> RIS يرسل طلب الفحص إلى PACS وقائمة عمل الجهاز</li>
-<li><strong>ORU:</strong> RIS يرسل تقرير الأشعة إلى HIS/EMR</li>
-<p></ul></p>
+<p>ADT: HIS يرسل تسجيل المريض إلى RIS و PACS, ORM: RIS يرسل طلب الفحص إلى PACS وقائمة عمل الجهاز, and ORU: RIS يرسل تقرير الأشعة إلى HIS/EMR.</p>
 <img src="https://images.pexels.com/photos/4226256/pexels-photo-4226256.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="تكامل HL7 و DICOM بين HIS و RIS و PACS" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
 <p>---</p>
 <h2>VNA مقابل PACS</h2>
@@ -214,67 +158,34 @@
 <p>---</p>
 <h2>PACS السحابي</h2>
 <h3>مزايا PACS السحابي</h3>
-<ul><li>لا تكلفة بنية تحتية مسبقة</li>
-<li>قابلية توسع غير محدودة</li>
-<li>استرداد كوارث مدمج</li>
-<li>وصول من أي مكان</li>
-<p></ul></p>
+<p>لا تكلفة بنية تحتية مسبقة, قابلية توسع غير محدودة, استرداد كوارث مدمج, and وصول من أي مكان.</p>
 <h3>تحديات PACS السحابي</h3>
-<ul><li>الاعتماد على النطاق الترددي</li>
-<li>زمن الوصول</li>
-<li>سيادة البيانات</li>
-<p></ul></p>
+<p>الاعتماد على النطاق الترددي, زمن الوصول, and سيادة البيانات.</p>
 <h3>PACS السحابي الهجين</h3>
 <p>العمارة الأكثر شيوعاً: خادم ذاكرة تخزين مؤقت محلي للدراسات الحديثة، والسحابة كأرشيف طويل المدى.</p>
 <img src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="عمارة PACS السحابي الهجين" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
 <p>---</p>
 <h2>أفضل ممارسات التنفيذ</h2>
-<ul><li><strong>حلل سير العمل قبل الاختيار</strong> — حدد الاختناقات قبل اختيار PACS</li>
-<li><strong>خطط للتوافقية</strong> — تأكد من دعم ملفات تعريف IHE</li>
-<li><strong>نفذ استراتيجية نسخ احتياطي 3-2-1</strong> — 3 نسخ، 2 وسيط، 1 خارج الموقع</li>
-<li><strong>درّب الموظفين على أساسيات DICOM</strong> — عناوين AE، صيغ النقل، سجلات الأخطاء</li>
-<li><strong>راقب صحة النظام استباقياً</strong> — سعة التخزين، فشل النقل، زمن الاستجابة</li>
-<p></ul></p>
+<p>حلل سير العمل قبل الاختيار — حدد الاختناقات قبل اختيار PACS, خطط للتوافقية — تأكد من دعم ملفات تعريف IHE, نفذ استراتيجية نسخ احتياطي 3-2-1 — 3 نسخ، 2 وسيط، 1 خارج الموقع, درّب الموظفين على أساسيات DICOM — عناوين AE، صيغ النقل، سجلات الأخطاء, and راقب صحة النظام استباقياً — سعة التخزين، فشل النقل، زمن الاستجابة.</p>
 <p>---</p>
 <h2>استكشاف أخطاء التوصيل الشائعة</h2>
 <h3>الجهاز لا يرسل صوراً إلى PACS</h3>
-<ul><li>تحقق من اتصال الشبكة (ping)</li>
-<li>تحقق من اتصال DICOM (C-ECHO)</li>
-<li>تحقق من صيغة النقل</li>
-<li>تحقق من قواعد الجدار الناري</li>
-<li>راجع سجلات PACS</li>
-<p></ul></p>
+<p>تحقق من اتصال الشبكة (ping), تحقق من اتصال DICOM (C-ECHO), تحقق من صيغة النقل, تحقق من قواعد الجدار الناري, and راجع سجلات PACS.</p>
 <h3>قائمة العمل لا تظهر على الجهاز</h3>
-<ul><li>تحقق من رسائل ADT في RIS</li>
-<li>تحقق من رسائل ORM في RIS</li>
-<li>تحقق من خادم MWL</li>
-<li>تحقق من تكوين AE Title</li>
-<p></ul></p>
+<p>تحقق من رسائل ADT في RIS, تحقق من رسائل ORM في RIS, تحقق من خادم MWL, and تحقق من تكوين AE Title.</p>
 <h3>الصور تظهر فارغة أو تالفة</h3>
-<ul><li>تحقق من صيغة النقل</li>
-<li>تحقق من ترتيب البايتات</li>
-<li>تحقق من معايرة الكاشف</li>
-<li>راجع قيم Window Center/Width</li>
-<p></ul></p>
+<p>تحقق من صيغة النقل, تحقق من ترتيب البايتات, تحقق من معايرة الكاشف, and راجع قيم Window Center/Width.</p>
 <img src="https://images.pexels.com/photos/4225922/pexels-photo-4225922.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="مهندس يستكشف أخطاء توصيل PACS" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
 <p>---</p>
 <h2>اعتبارات الأمان</h2>
 <h3>حماية بيانات المرضى</h3>
-<ul><li><strong>فصل الشبكة:</strong> VLAN التصوير معزول</li>
-<li><strong>تشفير DICOM TLS:</strong> منفذ 11112 بدلاً من 104</li>
-<li><strong>التحكم في الوصول:</strong> قائم على الدور</li>
-<li><strong>مسارات التدقيق:</strong> تسجيل كل وصول لصورة</li>
-<li><strong>تشفير البيانات أثناء التخزين</strong></li>
-<p></ul></p>
+<p>فصل الشبكة: VLAN التصوير معزول, تشفير DICOM TLS: منفذ 11112 بدلاً من 104, التحكم في الوصول: قائم على الدور, مسارات التدقيق: تسجيل كل وصول لصورة, and تشفير البيانات أثناء التخزين.</p>
 <h3>الامتثال لـ HIPAA و GDPR</h3>
 <table><thead><tr><th>المتطلب</th><th>HIPAA</th><th>GDPR</th></tr></thead><tbody><tr><td>تسجيل الوصول</td><td>مطلوب</td><td>مطلوب</td></tr><tr><td>التشفير أثناء التخزين</td><td>موصى به</td><td>مطلوب</td></tr><tr><td>التشفير أثناء النقل</td><td>مطلوب</td><td>مطلوب</td></tr><tr><td>الاحتفاظ بمسار التدقيق</td><td>6 سنوات</td><td>يختلف</td></tr><tr><td>إخطار الاختراق</td><td>60 يوماً</td><td>72 ساعة</td></tr></tbody></table>
 <p>---</p>
 <h2>اتجاهات مستقبلية في PACS</h2>
 <h3>تكامل الذكاء الاصطناعي</h3>
-<ul><li><strong>فرز بالذكاء الاصطناعي:</strong> خوارزميات تحلل الصور وتنبه للنتائج الحرجة</li>
-<li><strong>قياس بالذكاء الاصطناعي:</strong> قياسات آلية مدمجة ككائنات DICOM SR</li>
-<li><strong>توجيه سير العمل:</strong> دراسات تُوجه تلقائياً للاختصاصي المناسب</li>
-<p></ul></p>
+<p>فرز بالذكاء الاصطناعي: خوارزميات تحلل الصور وتنبه للنتائج الحرجة, قياس بالذكاء الاصطناعي: قياسات آلية مدمجة ككائنات DICOM SR, and توجيه سير العمل: دراسات تُوجه تلقائياً للاختصاصي المناسب.</p>
 <h3>FHIR للتصوير</h3>
 <p>معيار FHIR يتوسع للتصوير، مما يتيح وصولاً قائماً على الويب للدراسات دون بروتوكولات DICOM التقليدية.</p>
 <p>---</p>
@@ -293,63 +204,56 @@
 <h2>الخلاصة</h2>
 <p>PACS هو العمود الفقري الرقمي للأشعة الحديثة. فهم كيف يتصل بأجهزة التصوير عبر DICOM، ويتكامل مع أنظمة المستشفى عبر HL7، ويدير أحجام البيانات الضخمة أمر أساسي لأي محترف تكنولوجيا معلومات صحية أو مهندس طبي حيوي أو مدير أشعة.</p>
 <p>النقاط الرئيسية لتوصيل أجهزة الأشعة بـ PACS:</p>
-<ul><li><strong>DICOM هو اللغة العالمية</strong> — فهم عناوين AE وصيغ النقل وخدمات DICOM غير قابل للتفاوض</li>
-<li><strong>قائمة عمل الجهاز هي نقطة البداية</strong> — تزيل أخطاء النسخ</li>
-<li><strong>تأكيد التخزين متطلب أماني</strong> — لا تحذف من الجهاز حتى يؤكد PACS</li>
-<li><strong>تصميم الشبكة مهم</strong> — VLAN مخصص وعرض نطاق كافٍ</li>
-<li><strong>خطط للنمو</strong> — بيانات التصوير تنمو 20-30% سنوياً</li>
-<li><strong>الأمان ليس اختيارياً</strong> — التشفير والتحكم في الوصول ومسارات التدقيق متطلبات تنظيمية</li>
-<li><strong>السحابة والذكاء الاصطناعي هما المستقبل</strong> — أرشيف سحابي هجين وسير عمل بمساعدة الذكاء الاصطناعي</li>
-<p></ul></p>
+<p>DICOM هو اللغة العالمية — فهم عناوين AE وصيغ النقل وخدمات DICOM غير قابل للتفاوض, قائمة عمل الجهاز هي نقطة البداية — تزيل أخطاء النسخ, تأكيد التخزين متطلب أماني — لا تحذف من الجهاز حتى يؤكد PACS, تصميم الشبكة مهم — VLAN مخصص وعرض نطاق كافٍ, خطط للنمو — بيانات التصوير تنمو 20-30% سنوياً, الأمان ليس اختيارياً — التشفير والتحكم في الوصول ومسارات التدقيق متطلبات تنظيمية, and السحابة والذكاء الاصطناعي هما المستقبل — أرشيف سحابي هجين وسير عمل بمساعدة الذكاء الاصطناعي.</p>
 <p>للمؤسسات الصحية في الشرق الأوسط، حيث نفذت توصيل PACS لمشاريع مستشفيات كبرى، فإن الجمع بين بنية تحتية محلية قوية مع استرداد كوارث سحابي يوفر أفضل توازن بين الأداء وقابلية التوسع والامتثال للوائح سيادة البيانات المحلية.</p>
 </div>
 
-            <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
-              <div class="share-buttons">
-                <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">مشاركة:</span>
-                <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html&text=نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة" target="_blank" rel="noopener">𝕏 Twitter</a>
-                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html" target="_blank" rel="noopener">LinkedIn</a>
-                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html" target="_blank" rel="noopener">Facebook</a>
-                <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
-              </div>
-            </div>
+ <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
+ <div class="share-buttons">
+ <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">مشاركة:</span>
+ <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html&text=نظام PACS: الدليل الشامل لأرشفة وتواصل الصور الطبية مع أجهزة الأشعة" target="_blank" rel="noopener">𝕏 Twitter</a>
+ <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html" target="_blank" rel="noopener">LinkedIn</a>
+ <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/ar/articles/pacs-medical-imaging-connectivity-guide.html" target="_blank" rel="noopener">Facebook</a>
+ <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
+ </div>
+ </div>
 
-            
-            <div class="article-tags" style="margin:1.5rem 0;">
-              <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">الوسوم:</span>
-              <a href="../articles/index.html?tag=PACS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#PACS</a><a href="../articles/index.html?tag=DICOM" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#DICOM</a><a href="../articles/index.html?tag=Radiology" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Radiology</a><a href="../articles/index.html?tag=Medical Imaging" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Medical Imaging</a><a href="../articles/index.html?tag=Healthcare IT" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Healthcare IT</a><a href="../articles/index.html?tag=HL7" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#HL7</a><a href="../articles/index.html?tag=Hospital Network" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Hospital Network</a>
-            </div>
+ 
+ <div class="article-tags" style="margin:1.5rem 0;">
+ <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">الوسوم:</span>
+ <a href="../articles/index.html?tag=PACS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#PACS</a><a href="../articles/index.html?tag=DICOM" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#DICOM</a><a href="../articles/index.html?tag=Radiology" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Radiology</a><a href="../articles/index.html?tag=Medical Imaging" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Medical Imaging</a><a href="../articles/index.html?tag=Healthcare IT" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Healthcare IT</a><a href="../articles/index.html?tag=HL7" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#HL7</a><a href="../articles/index.html?tag=Hospital Network" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Hospital Network</a>
+ </div>
 
-            <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
+ <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
 
-            <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← العودة للمقالات</a>
-          </div>
+ <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← العودة للمقالات</a>
+ </div>
 
-          <aside class="article-sidebar">
-            <div style="margin-top:2rem;">
-              <div class="article-lang-switch">
-                <button class="" data-lang="en">🇺🇸 EN</button>
-                <button class="active" data-lang="ar">🇸🇦 ع</button>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </div>
-      </div>
-    </section>
+ <aside class="article-sidebar">
+ <div style="margin-top:2rem;">
+ <div class="article-lang-switch">
+ <button class="" data-lang="en">🇺🇸 EN</button>
+ <button class="active" data-lang="ar">🇸🇦 ع</button>
+ </div>
+ </div>
+ </aside>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <section class="section" style="padding:0 0 2rem;">
-      <div class="container" id="related-articles"></div>
-    </section>
+ <section class="section" style="padding:0 0 2rem;">
+ <div class="container" id="related-articles"></div>
+ </section>
 
-  </main>
+ </main>
 
-  <div id="ecms-footer-inject"></div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="../../config.js"></script>
-  <script src="../../assets/js/i18n.js?v=2"></script>
-  <script src="../../assets/js/components.js?v=4"></script>
-  <script src="../../assets/js/core.js?v=6"></script>
-  <script src="../../assets/js/article.js?v=9"></script>
+ <div id="ecms-footer-inject"></div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+ <script src="../../config.js"></script>
+ <script src="../../assets/js/i18n.js?v=2"></script>
+ <script src="../../assets/js/components.js?v=4"></script>
+ <script src="../../assets/js/core.js?v=6"></script>
+ <script src="../../assets/js/article.js?v=9"></script>
 </body>
 </html>
