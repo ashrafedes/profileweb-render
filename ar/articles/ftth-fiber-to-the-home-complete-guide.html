@@ -11,14 +11,13 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات | أشرف الدسوقي</title>
-  <meta name="description" content="دليل هندسي شامل لشبكات FTTH — يغطي معمارية PON/GPON/XGS-PON، البروتوكولات، OLT و ONT، Splitters، الأعمال المدنية OSP، الكابلات، اللحام (Fusion Splicing)، OTDR والقياسات، محتويات Racks، الصيانة، ودراسات حالة.">
-  <meta name="keywords" content="FTTH, الألياف الضوئية, GPON, PON, OLT, ONT, Splitter, Fusion Splicing, OTDR, OSP, الأعمال المدنية, كابلات ألياف">
+  <title>شبكات FTTH (الألياف الضوئية حتى المنزل): الدليل الشامل | أشرف الدسوقي</title>
+  <meta name="description" content="دليل هندسي متكامل لشبكات FTTH — معمارية PON، GPON، XGS-PON، الأجهزة الإلكترونية، الأعمال المدنية، اللحام، OTDR، القياسات، Racks، الصيانة، والاتجاهات المستقبلية.">
   <meta name="author" content="Ashraf Ibrahim El Desoky">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="article">
   <meta property="og:title" content="شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات">
-  <meta property="og:description" content="دليل هندسي شامل لشبكات FTTH — يغطي معمارية PON/GPON/XGS-PON، البروتوكولات، OLT و ONT، Splitters، الأعمال المدنية OSP، الكابلات، اللحام (Fusion Splicing)، OTDR والقياسات، محتويات Racks، الصيانة، ودراسات حالة.">
+  <meta property="og:description" content="دليل هندسي متكامل لشبكات FTTH — معمارية PON، GPON، XGS-PON، الأجهزة الإلكترونية، الأعمال المدنية، اللحام، OTDR، القياسات، Racks، الصيانة، والاتجاهات المستقبلية.">
   <meta property="og:url" content="https://www.ashraf-eldesoky.space/ar/articles/ftth-fiber-to-the-home-complete-guide.html">
   <meta property="og:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200">
   <meta property="og:image:width" content="1200">
@@ -27,8 +26,8 @@
   <meta property="article:published_time" content="2026-07-26">
   <meta property="article:modified_time" content="2026-07-26">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات | أشرف الدسوقي">
-  <meta name="twitter:description" content="دليل هندسي شامل لشبكات FTTH — يغطي معمارية PON/GPON/XGS-PON، البروتوكولات، OLT و ONT، Splitters، الأعمال المدنية OSP، الكابلات، اللحام (Fusion Splicing)، OTDR والقياسات، محتويات Racks، الصيانة، ودراسات حالة.">
+  <meta name="twitter:title" content="شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات">
+  <meta name="twitter:description" content="دليل هندسي متكامل لشبكات FTTH — معمارية PON، GPON، XGS-PON، الأجهزة الإلكترونية، الأعمال المدنية، اللحام، OTDR، القياسات، Racks، الصيانة، والاتجاهات المستقبلية.">
   <meta name="twitter:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200">
   <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/articles/ftth-fiber-to-the-home-complete-guide.html">
   <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/ftth-fiber-to-the-home-complete-guide.html">
@@ -42,18 +41,387 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="../../assets/css/articles.css">
-  <style>* { font-family: 'Cairo', sans-serif; }</style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات", "description": "دليل هندسي شامل لشبكات FTTH — يغطي معمارية PON/GPON/XGS-PON، البروتوكولات، OLT و ONT، Splitters، الأعمال المدنية OSP، الكابلات، اللحام (Fusion Splicing)، OTDR والقياسات، محتويات Racks، الصيانة، ودراسات حالة.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-26", "dateModified": "2026-07-26", "image": "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/ftth-fiber-to-the-home-complete-guide.html", "inLanguage": "ar"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات", "description": "دليل هندسي متكامل لشبكات FTTH — معمارية PON، GPON، XGS-PON، الأجهزة الإلكترونية، الأعمال المدنية، اللحام، OTDR، القياسات، Racks، الصيانة، والاتجاهات المستقبلية.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-26", "dateModified": "2026-07-26", "image": "https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/ftth-fiber-to-the-home-complete-guide.html", "inLanguage": "ar"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://www.ashraf-eldesoky.space/ar/articles/"}, {"@type": "ListItem", "position": 3, "name": "شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات", "item": "https://www.ashraf-eldesoky.space/ar/articles/ftth-fiber-to-the-home-complete-guide.html"}]}</script>
 </head>
-<body>
+<body><style>* { font-family: 'Cairo', sans-serif; }</style>
   <div id="ecms-nav-inject"></div>
 
   <main id="main-content" class="page-wrapper" style="padding-top:0;">
-    <div class="article-hero" id="article-hero"></div>
+    <div class="article-hero" id="article-hero">
+        <img class="article-hero-img" src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات">
+        <div class="article-hero-overlay"></div>
+        <div class="container article-hero-content">
+          <span class="article-hero-cat">Network Infrastructure</span>
+          <h1>شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات</h1>
+          <div class="article-hero-meta">
+            <span>بقلم Ashraf Ibrahim El Desoky</span>
+            <span>· 26 يوليو 2026</span>
+            <span>· 30 دقيقة قراءة</span>
+            
+          </div>
+        </div>
+      </div>
 
     <section class="section" style="padding:2.5rem 0;">
       <div class="container">
-        <div id="article-body"></div>
+        <div id="article-body">
+        <div class="article-layout">
+          <div>
+            <div class="article-content" id="article-content"><h2>شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات</h2>
+<img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="كابلات ألياف ضوئية ملونة في عملية التركيب" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><em>FTTH ليس مجرد كابل يصل لمنزلك — بل منظومة هندسية متكاملة من المحطة المركزية إلى مقبس الحائط، تمر عبر أعمال مدنية، لحام دقيق، ومعدات إلكترونية متطورة.</em></p>
+<h3>مقدمة: لماذا FTTH هو مستقبل الاتصالات؟</h3>
+<p><strong>FTTH (Fiber to the Home)</strong> — الألياف الضوئية حتى المنزل — هو تقنية توصيل كابلات الألياف الضوئية مباشرة من المحطة المركزية للمشغل إلى منزل المشترك أو مكان عمله، دون وسطاء نحاسية. هذا يعني أن <strong>كل مسار الاتصال من المصدر إلى الوجهة ضوئي</strong>، مما يوفر سرعات تصل إلى عدة جيجابت في الثانية، تأخيراً منخفضاً جداً، ومسافات تصل إلى 20 كم دون تكرار.</p>
+<p>قبل FTTH، كانت شبكات الوصول تعتمد على <strong>الكابلات النحاسية (Copper)</strong> في المرحلة الأخيرة — تقنيات مثل ADSL (خط المشترك الرقمي غير المتماثل) و VDSL و Coaxial (الكابل المحوري). هذه التقنيات محدودة بالمسافة (ADSL يفقد الجودة بعد 3 كم من المقسم) و السرعة (VDSL2 يصل إلى 100 Mbps نظرياً على مسافات قصيرة جداً). الألياف الضوئية تتجاوز هذين القيدين تماماً — سرعات متعددة الجيجابت ومسافات عشرات الكيلومترات دون تدهور.</p>
+<p><strong>دفع FTTH للازدهار عالمياً:</strong></p>
+<ul><li>استثمارات ضخمة من الحكومات (مثل مشروع Saudi Vision 2030 لتغطية FTTH)</li>
+<li>انخفاض تكلفة الألياف والمعدات</li>
+<li>الطلب المتزايد على النطاق العريض (فيديو 4K/8K، ألعاب سحابية، عمل عن بُعد)</li>
+<li>ظهور تقنيات PON (Passive Optical Network) التي تشارك كابل واحد بين 64–128 مشتركاً، مما يقلل التكلفة</li>
+<p></ul></p>
+<p>هذا المقال يقدّم دليلاً هندسياً شاملاً يغطي <strong>كل جوانب FTTH</strong> — من المعمارية والبروتوكولات إلى الأجهزة الإلكترونية، الأعمال المدنية، اللحام، القياسات، ومحتويات الـ Racks.</p>
+<p>---</p>
+<h3>الباب الأول: معمارية شبكات FTTH</h3>
+<p>#### 1.1 المعمارية العامة (End-to-End Architecture)</p>
+<p>شبكة FTTH تتكون من ثلاث طبقات رئيسية متصلة:</p>
+<table><thead><tr><th>الطبقة</th><th>الموقع</th><th>المكونات</th><th>الوظيفة</th></tr></thead><tbody><tr><td>الطبقة المركزية (Core/OLT)</td><td>محطة المشغل المركزية</td><td>OLT، Racks، Splitters</td><td>توليد الإشارة الضوئية وتوزيعها</td></tr><tr><td>الطبقة الخارجية (OSP)</td><td>الشوارع، الأرصفة، أعمدة</td><td>كابلات، Splitters، Splice Closures</td><td>نقل وتوزيع الإشارة في الحقل</td></tr><tr><td>طبقة المشترك (Premises)</td><td>منزل/مبنى المشترك</td><td>Drop Cable، ONT/ONU، Rosette</td><td>استقبال الإشارة وتحويلها لخدمة</td></tr></tbody></table>
+<p><strong>مسار الإشارة من المشغل إلى المشترك:</strong></p>
+<ul><li><strong>OLT (Optical Line Terminal)</strong> في المحطة المركزية يولّد إشارة ضوئية</li>
+<li>الإشارة تمر عبر <strong>Feeder Cable</strong> (كابل رئيسي) إلى <strong>Splitter</strong> في الحقل</li>
+<li>Splitter يقسم الإشارة إلى 16–64 فرعاً عبر <strong>Distribution Cable</strong></li>
+<li>كل فرع يصل إلى <strong>Splice Closure</strong> قرب منزل المشترك</li>
+<li>من الـ Closure يخرج <strong>Drop Cable</strong> إلى منزل المشترك</li>
+<li>في المنزل، <strong>ONT (Optical Network Terminal)</strong> يحوّل الإشارة الضوئية إلى إيثرنت/صوت/فيديو</li>
+<p></ul></p>
+<p>#### 1.2 أنواع معماريات FTTH</p>
+<table><thead><tr><th>المعمارية</th><th>الوصف</th><th>الميزة</th><th>العيب</th></tr></thead><tbody><tr><td><strong>PON (Passive Optical Network)</strong></td><td>Splitter سلبي (بدون طاقة) يشارك الكابل</td><td>اقتصادي، لا حاجة لطاقة في الحقل</td><td>السرعة مشتركة بين المشتركين</td></tr><tr><td><strong>AON (Active Optical Network)</strong></td><td>مبدّل نشط (Switch) في الحقل</td><td>سرعة مخصصة لكل مشترك</td><td>يحتاج طاقة وصيانة في الحقل</td></tr><tr><td><strong>P2P (Point-to-Point)</strong></td><td>كابل مستقل لكل مشترك</td><td>سرعة كاملة، أمان أعلى</td><td>تكلفة كابلات أعلى بكثير</td></tr></tbody></table>
+<p><strong>PON هو المعيار السائد</strong> عالمياً لأنه يستخدم مكونات سلبية (Passive) لا تحتاج طاقة كهربائية في الحقل، مما يقلل التكلفة والصيانة.</p>
+<p>#### 1.3 تقنيات PON الرئيسية</p>
+<table><thead><tr><th>التقنية</th><th>المعيار</th><th>السرعة (Down/Up)</th><th>تقسيم</th><th>المدى</th><th>الحالة</th></tr></thead><tbody><tr><td><strong>GPON</strong></td><td>ITU-T G.984</td><td>2.5/1.25 Gbps</td><td>1:64</td><td>20 كم</td><td>الأكثر انتشاراً</td></tr><tr><td><strong>EPON</strong></td><td>IEEE 802.3ah</td><td>1/1 Gbps</td><td>1:32</td><td>20 كم</td><td>منتشر في آسيا</td></tr><tr><td><strong>XG-PON</strong></td><td>ITU-T G.987</td><td>10/2.5 Gbps</td><td>1:128</td><td>40 كم</td><td>جيل 10G</td></tr><tr><td><strong>XGS-PON</strong></td><td>ITU-T G.9807</td><td>10/10 Gbps</td><td>1:128</td><td>40 كم</td><td>10G متماثل</td></tr><tr><td><strong>NG-PON2</strong></td><td>ITU-T G.989</td><td>40/10 Gbps</td><td>1:256</td><td>40 كم</td><td>الجيل القادم (TWDM)</td></tr><tr><td><strong>25G PON</strong></td><td>ITU-T G.9804</td><td>25/25 Gbps</td><td>1:128</td><td>20 كم</td><td>أحدث</td></tr></tbody></table>
+<p><strong>الفرق بين GPON و EPON:</strong></p>
+<table><thead><tr><th>المعيار</th><th>GPON</th><th>EPON</th></tr></thead><tbody><tr><td>الجهة المعيارية</td><td>ITU-T</td><td>IEEE</td></tr><tr><td>السرعة</td><td>2.5/1.25 Gbps</td><td>1/1 Gbps</td></tr><tr><td>البروتوكول</td><td>GEM (GPON Encapsulation Method)</td><td>Ethernet مباشر</td></tr><tr><td>تقسيم</td><td>1:64 (حتى 1:128)</td><td>1:32 (حتى 1:64)</td></tr><tr><td>كفاءة النطاق</td><td>أعلى (ATM-like)</td><td>أقل (Ethernet overhead)</td></tr><tr><td>إدارة OAM</td><td>قوية (OMCI)</td><td>محدودة</td></tr><tr><td>الانتشار</td><td>عالمي (الشرق الأوسط، أوروبا)</td><td>آسيا (اليابان، الصين)</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الثاني: البروتوكولات ومعايير FTTH</h3>
+<p>#### 2.1 بروتوكولات PON</p>
+<p><strong>TDMA (Time Division Multiple Access):</strong></p>
+<p>في PON، يتشارك عدة مشتركين نفس الليف الضوئي. لتجنب التصادم، يستخدم <strong>TDMA</strong> — كل ONT يُخصص له <strong>نافذة زمنية (Time Slot)</strong> محددة للإرسال. الـ OLT يرسل <strong>Bandwidth Map (BW Map)</strong> يخبر كل ONT متى يرسل وكم يمكنه إرسال.</p>
+<p><strong>كيف يعمل Downstream (من OLT إلى ONTs):</strong></p>
+<ul><li>OLT يبث إشارة ضوئية واحدة مستمرة</li>
+<li>جميع ONTs يستقبلون نفس الإشارة</li>
+<li>كل ONT يفلتر البيانات المخصصة له (Encryption: AES-128 في GPON)</li>
+<li>المشتركون لا يرون بيانات بعضهم (رغم اشتراكهم في الليف)</li>
+<p></ul></p>
+<p><strong>كيف يعمل Upstream (من ONTs إلى OLT):</strong></p>
+<ul><li>ONTs يرسلون في نوافذ زمنية محددة (TDMA)</li>
+<li>Ranging: OLT يقيس المسافة لكل ONT ويضبط توقيت الإرسال</li>
+<li>لا تصادم لأن كل ONT يرسل في وقته المحدد</li>
+<p></ul></p>
+<p>#### 2.2 معايير ITU-T و IEEE</p>
+<table><thead><tr><th>المعيار</th><th>الوصف</th></tr></thead><tbody><tr><td>ITU-T G.984.x</td><td>عائلة GPON (G.984.1: المعمارية، G.984.2: الطبقة الفيزيائية، G.984.3: طبقة النقل، G.984.4: OMCI)</td></tr><tr><td>ITU-T G.987.x</td><td>عائلة XG-PON (10G GPON)</td></tr><tr><td>ITU-T G.9807.x</td><td>XGS-PON (10G متماثل)</td></tr><tr><td>ITU-T G.989.x</td><td>NG-PON2 (40G TWDM-PON)</td></tr><tr><td>IEEE 802.3ah</td><td>EPON (1G)</td></tr><tr><td>IEEE 802.3av</td><td>10G-EPON</td></tr><tr><td>ITU-T G.9804.x</td><td>25G/50G PON</td></tr></tbody></table>
+<p>#### 2.3 بروتوكول OMCI (ONU Management and Control Interface)</p>
+<p><strong>OMCI</strong> هو بروتوكول إدارة يسمح لـ OLT بالتحكم الكامل في ONT:</p>
+<ul><li><strong>إ provisioning</strong>: تفعيل الخدمات على ONT (إنترنت، صوت، IPTV)</li>
+<li><strong>Configuration</strong>: ضبط إعدادات ONT (VLAN، QoS، Bandwidth)</li>
+<li><strong>Monitoring</strong>: مراقبة أداء ONT (قوة الإشارة، أخطاء، درجة الحرارة)</li>
+<li><strong>Firmware Update</strong>: تحديث برمجيات ONT عن بُعد</li>
+<li><strong>Fault Management</strong>: كشف الأعطال وإبلاغ OLT</li>
+<p></ul></p>
+<p>#### 2.4 أطوال الموجة (Wavelengths)</p>
+<table><thead><tr><th>الاتجاه</th><th>الطول الموجي</th><th>التقنية</th></tr></thead><tbody><tr><td>Downstream GPON</td><td>1490 nm</td><td>إرسال من OLT</td></tr><tr><td>Upstream GPON</td><td>1310 nm</td><td>إرسال من ONT</td></tr><tr><td>RF Video (اختياري)</td><td>1550 nm</td><td>بث تلفزيوني تناظري</td></tr><tr><td>Downstream XG-PON</td><td>1577 nm</td><td>10G Down</td></tr><tr><td>Upstream XG-PON</td><td>1270 nm</td><td>10G Up</td></tr></tbody></table>
+<p><strong>WDM (Wavelength Division Multiplexing):</strong> يستخدم أطوال موجات مختلفة لنقل عدة إشارات على نفس الليف — هذا يسمح بتعايش GPON و XG-PON على نفس الكابل.</p>
+<p>---</p>
+<h3>الباب الثالث: الأجهزة الإلكترونية في شبكة FTTH</h3>
+<p>#### 3.1 OLT (Optical Line Terminal)</p>
+<p>OLT هو العقل المدبر لشبكة FTTH — يقع في المحطة المركزية (Central Office / POP).</p>
+<img src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="معدات شبكة في خادم بمركز بيانات" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>وظائف OLT:</strong></p>
+<ul><li>توليد الإشارة الضوئية للمشتركين (Downstream)</li>
+<li>استقبال إشارات المشتركين (Upstream) وإدارة TDMA</li>
+<li>توزيع النطاق بين المشتركين (Dynamic Bandwidth Allocation)</li>
+<li>إدارة ومراقبة كل ONTs عبر OMCI</li>
+<li>الربط مع شبكة المشغل الأساسية (Core Network) عبر Uplink (10G/100G)</li>
+<li>تفعيل وإلغاء الخدمات (Service Provisioning)</li>
+<p></ul></p>
+<p><strong>مواصفات OLT النموذجية:</strong></p>
+<table><thead><tr><th>المعيار</th><th>القيمة</th></tr></thead><tbody><tr><td>عدد منافذ PON</td><td>4–128 منفذ</td></tr><tr><td>التقسيم لكل منفذ</td><td>1:64 (GPON) / 1:128 (XGS-PON)</td></tr><tr><td>إجمالي المشتركين</td><td>256–16,384 مشترك</td></tr><tr><td>Uplink</td><td>10G/100G Ethernet</td></tr><tr><td>الطاقة</td><td>200–2000 واط</td></tr><tr><td>التبريد</td><td>مراوح قابلة للإزالة (Hot-swap)</td></tr></tbody></table>
+<p><strong>موديلات OLT رائدة:</strong></p>
+<table><thead><tr><th>الموديل</th><th>الشركة</th><th>الميزة</th></tr></thead><tbody><tr><td>MA5800</td><td>Huawei</td><td>الأكثر انتشاراً، مرن</td></tr><tr><td>C300/C350</td><td>ZTE</td><td>اقتصادي، متنوع</td></tr><tr><td>OLT-7360</td><td>Nokia</td><td>قوي، تكامل ممتاز</td></tr><tr><td>E7-2</td><td>Calix</td><td>أمريكا الشمالية</td></tr><tr><td>OLT-8800</td><td>FiberHome</td><td>اقتصادي</td></tr></tbody></table>
+<p>#### 3.2 ONT / ONU (Optical Network Terminal/Unit)</p>
+<p>ONT هو جهاز المشترك — يحوّل الإشارة الضوئية إلى خدمات قابلة للاستخدام.</p>
+<img src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="جهاز راوتر إلكتروني حديث" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>أنواع ONT:</strong></p>
+<table><thead><tr><th>النوع</th><th>الوصف</th><th>الاستخدام</th></tr></thead><tbody><tr><td>SFU (Single Family Unit)</td><td>منفذ واحد، صغير</td><td>المنازل</td></tr><tr><td>HGU (Home Gateway Unit)</td><td>راوتر متكامل (Wi-Fi + VoIP + IPTV)</td><td>المنازل (الأكثر شيوعاً)</td></tr><tr><td>MDU (Multi-Dwelling Unit)</td><td>عدة منافذ (8–24)</td><td>المباني السكنية</td></tr><tr><td>SBU (Small Business Unit)</td><td>منافذ متعددة + ميزات أعمال</td><td>الشركات الصغيرة</td></tr><tr><td>BBU (Business Building Unit)</td><td>سعة عالية، ميزات متقدمة</td><td>الشركات الكبيرة</td></tr></tbody></table>
+<p><strong>مواصفات ONT منزلي (HGU) النموذجي:</strong></p>
+<table><thead><tr><th>الميزة</th><th>القيمة</th></tr></thead><tbody><tr><td>منفذ PON</td><td>1 (SC/APC)</td></tr><tr><td>منافذ Ethernet</td><td>4× Gigabit</td></tr><tr><td>منافذ POTS (صوت)</td><td>2</td></tr><tr><td>Wi-Fi</td><td>802.11ax (Wi-Fi 6)</td></tr><tr><td>IPTV</td><td>دعم IGMP Snooping</td></tr><tr><td>USB</td><td>1 (تخزين/طابعة)</td></tr><tr><td>الطاقة</td><td>12V/1A (محول)</td></tr><tr><td>دعم OMCI</td><td>نعم</td></tr></tbody></table>
+<p>#### 3.3 Splitters (المقسمات الضوئية)</p>
+<p>Splitter هو جهاز <strong>سلبي</strong> (بدون طاقة كهربائية) يقسم إشارة ضوئية واحدة إلى عدة مخرجات:</p>
+<table><thead><tr><th>نوع التقسيم</th><th>عدد المخرجات</th><th>الفقدان (Insertion Loss)</th></tr></thead><tbody><tr><td>1:2</td><td>2</td><td>3.5–4 dB</td></tr><tr><td>1:4</td><td>4</td><td>7–7.5 dB</td></tr><tr><td>1:8</td><td>8</td><td>10.5–11 dB</td></tr><tr><td>1:16</td><td>16</td><td>13.5–14 dB</td></tr><tr><td>1:32</td><td>32</td><td>16.5–17.5 dB</td></tr><tr><td>1:64</td><td>64</td><td>20–21 dB</td></tr></tbody></table>
+<p><strong>أنواع Splitters:</strong></p>
+<table><thead><tr><th>النوع</th><th>التقنية</th><th>المزايا</th><th>العيوب</th></tr></thead><tbody><tr><td>FBT (Fused Biconical Taper)</td><td>لحام ألياف معاً حرارياً</td><td>رخيص</td><td>فقدان أعلى، حساسية للحرارة</td></tr><tr><td>PLC (Planar Lightwave Circuit)</td><td>شريحة سيليكون ضوئية</td><td>فقدان منخفض، موحد</td><td>أغلى قليلاً</td></tr></tbody></table>
+<p><strong>PLC هو المعيار المفضل</strong> لأنه يوفر فقداناً موحداً بين كل المخرجات وأداءً أفضل في درجات الحرارة المتغيرة.</p>
+<p>#### 3.4 WDM و BOSA</p>
+<p><strong>WDM Triplexer:</strong> جهاز يدمج/يفصل ثلاثة أطوال موجية (1310، 1490، 1550 nm) على ليف واحد. يُستخدم في ONTs التي تدعم بث الفيديو RF.</p>
+<p><strong>BOSA (Bi-Directional Optical Sub-Assembly):</strong> الوحدة الضوئية داخل ONT/OLT التي تحتوي على ليزر (للإرسال) وكاشف (للاستقبال) في مكون واحد صغير.</p>
+<p>---</p>
+<h3>الباب الرابع: الأعمال المدنية الخارجية (OSP Civil Works)</h3>
+<p>#### 4.1 مراحل الأعمال المدنية</p>
+<p>الأعمال المدنية (Outside Plant — OSP) هي <strong>أكبر تكلفة</strong> في مشروع FTTH — تمثل 60–70% من إجمالي الميزانية.</p>
+<img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="حفر خنادق لمد كابلات في الشارع" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>مراحل تنفيذ OSP:</strong></p>
+<ul><li><strong>الدراسة والمسح (Survey)</strong>: تحديد مسار الكابلات، نقاط التوزيع، والمسافات</li>
+<li><strong>التصميم (Design)</strong>: مخططات المسار، أنواع الكابلات، مواقع الـ Closures</li>
+<li><strong>الحفر والخنادق (Trenching)</strong>: حفر خنادق في الأرصفة لمد القنوات (Ducts)</li>
+<li><strong>مد القنوات (Ducting)</strong>: تركيب مواسير PVC/HDPE في الخنادق</li>
+<li><strong>ردم الخنادق (Backfilling)</strong>: إعادة ردم الخنادق وإصلاح الأرصفة</li>
+<li><strong>مد الكابلات (Cabling)</strong>: سحب الكابلات الضوئية عبر القنوات</li>
+<li><strong>اللحام (Splicing)</strong>: لحام نهايات الكابلات في الـ Closures</li>
+<li><strong>الاختبار (Testing)</strong>: قياس الفقدان والانعكاسات بـ OTDR</li>
+<li><strong>التوثيق (As-Built)</strong>: مخططات نهائية تطابق ما نُفذ</li>
+<p></ul></p>
+<p>#### 4.2 القنوات والمواسير (Ducts)</p>
+<table><thead><tr><th>النوع</th><th>القطر</th><th>المادة</th><th>الاستخدام</th></tr></thead><tbody><tr><td>PVC</td><td>32–110 مم</td><td>PVC</td><td>القنوات الأرضية</td></tr><tr><td>HDPE</td><td>32–110 مم</td><td>HDPE مرن</td><td>القنوات الأرضية، الانحناءات</td></tr><tr><td>Microduct</td><td>5–14 مم</td><td>HDPE</td><td>الكابلات المنفوخة (Blown Fiber)</td></tr><tr><td>Corrugated</td><td>40–110 مم</td><td>HDPE مموج</td><td>حماية ميكانيكية أعلى</td></tr></tbody></table>
+<p><strong>قواعد تركيب القنوات:</strong></p>
+<ul><li>عمق الدفن: 60–80 سم تحت الأرصفة، 100+ سم تحت الطرق</li>
+<li>ميل القناة: 0.5% للصرف (منع تجمع المياه)</li>
+<li>نصف قطر الانحناء: لا يقل عن 10 أضعاف قطر القناة</li>
+<li>مسافات بين Handholes: 100–200 متر</li>
+<li>علّم القنوات بشريط تحذيري (Warning Tape) فوقها</li>
+<p></ul></p>
+<p>#### 4.3 Handholes و Closures</p>
+<p><strong>Handhole (غرفة التوصيل الصغيرة):</strong></p>
+<table><thead><tr><th>النوع</th><th>الأبعاد</th><th>المادة</th><th>الاستخدام</th></tr></thead><tbody><tr><td>صغير</td><td>60×40×40 سم</td><td>بوليمر/خرسانة</td><td>نقاط التوزيع، Splitter</td></tr><tr><td>متوسط</td><td>80×60×60 سم</td><td>بوليمر/خرسانة</td><td>تقاطعات الكابلات</td></tr><tr><td>كبير</td><td>120×80×80 سم</td><td>خرسانة</td><td>نقاط اللحام الرئيسية</td></tr></tbody></table>
+<p><strong>Splice Closure (علبة اللحام):</strong></p>
+<p>علبة محكمة الإغلاق تحمي نقاط اللحام من الماء والغبار:</p>
+<table><thead><tr><th>النوع</th><th>الحماية</th><th>السعة</th><th>الاستخدام</th></tr></thead><tbody><tr><td>Aerial Closure</td><td>IP65</td><td>12–96 ليف</td><td>على الأعمدة (هوائي)</td></tr><tr><td>Underground Closure</td><td>IP67/IP68</td><td>12–144 ليف</td><td>في Handholes (تحت الأرض)</td></tr><tr><td>Wall-Mount Closure</td><td>IP65</td><td>12–48 ليف</td><td>على جدران المباني</td></tr></tbody></table>
+<p><strong>مواصفات الـ Closure الجيد:</strong></p>
+<ul><li>تصنيف IP67 على الأقل (ضد الغمر في الماء)</li>
+<li>مقاومة للأشعة UV (للأنواع الهوائية)</li>
+<li>سعة كافية للنمو المستقبلي (20% احتياطي)</li>
+<li>سهولة الفتح وإعادة الإغلاق</li>
+<li>نظام إدارة الكابلات الداخلي (Tray System)</li>
+<p></ul></p>
+<p>#### 4.4 أنواع مد الكابلات</p>
+<table><thead><tr><th>الطريقة</th><th>الوصف</th><th>الميزة</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>Trenching</strong></td><td>حفر خنادق ومد قنوات</td><td>الأكثر شيوعاً</td><td>الأرصفة، الطرق</td></tr><tr><td><strong>Aerial</strong></td><td>على أعمدة هوائية</td><td>اقتصادي، سريع</td><td>المناطق الريفية، أعمدة الكهرباء</td></tr><tr><td><strong>Blown Fiber</strong></td><td>نفخ كابلات صغيرة في Microducts</td><td>سريع، مرن</td><td>المباني، التوسعات</td></tr><tr><td><strong>Direct Burial</strong></td><td>دفن كابل مدرع مباشرة</td><td>لا يحتاج قناة</td><td>المسافات الطويلة، التربة المستقرة</td></tr><tr><td><strong>Micro-trenching</strong></td><td>شق ضيق (2–5 سم) عميق</td><td>سريع جداً</td><td>الأرصفة المعبدة</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الخامس: الكابلات الضوئية في FTTH</h3>
+<p>#### 5.1 أنواع الكابلات حسب الموقع</p>
+<table><thead><tr><th>النوع</th><th>الوصف</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>Feeder Cable</strong></td><td>كابل رئيسي عالي الألياف (48–288 ليف)</td><td>من OLT إلى Splitter الأول</td></tr><tr><td><strong>Distribution Cable</strong></td><td>كابل توزيع متوسط (12–72 ليف)</td><td>من Splitter إلى منطقة المشتركين</td></tr><tr><td><strong>Drop Cable</strong></td><td>كابل فرعي خفيف (1–4 ألياف)</td><td>من Closure إلى منزل المشترك</td></tr><tr><td><strong>Indoor Cable</strong></td><td>كابل داخلي مقاوم للحريق (LSZH)</td><td>داخل المباني</td></tr></tbody></table>
+<p>#### 5.2 مواصفات الكابلات</p>
+<table><thead><tr><th>المعيار</th><th>Feeder</th><th>Distribution</th><th>Drop</th></tr></thead><tbody><tr><td>عدد الألياف</td><td>48–288</td><td>12–72</td><td>1–4</td></tr><tr><td>نوع الليف</td><td>G.652.D (SMF)</td><td>G.652.D</td><td>G.657.A2 (أكثر مرونة)</td></tr><tr><td>التسليح</td><td>مدرع (Steel Tape)</td><td>مدرع أو غير مدرع</td><td>فولاذي خفيف أو Kevlar</td></tr><tr><td>الغلاف الخارجي</td><td>PE (أسود)</td><td>PE (أسود)</td><td>LSZH (أبيض/أسود)</td></tr><tr><td>قطر الكابل</td><td>12–20 مم</td><td>8–14 مم</td><td>2×5 مم (Figure-8)</td></tr><tr><td>وزن المتر</td><td>150–300 جم</td><td>80–150 جم</td><td>15–30 جم</td></tr></tbody></table>
+<p><strong>لماذا G.657 للألياف المنزلية؟</strong></p>
+<p>G.657 هو معيار ITU-T لألياف <strong>مقاومة للانحناء</strong> (Bend Insensitive). يمكن ثنيها بنصف قطر 7.5 مم دون فقدان ملحوظ — ضرورية في تركيبات المنازل حيث الانحناءات الحادة شائعة. G.652 العادي يفقد إشارة كبيرة عند الانحناء.</p>
+<p>#### 5.3 كابلات Drop (الكابل الأخير)</p>
+<p>كابل Drop هو الكابل الذي يدخل منزل المشترك:</p>
+<table><thead><tr><th>النوع</th><th>الوصف</th><th>الميزة</th></tr></thead><tbody><tr><td>Figure-8 Drop</td><td>كابل مسطح بشريط فولاذي</td><td>مقاومة للشد، تركيب هوائي</td></tr><tr><td>Round Drop</td><td>كابل دائري بـ Kevlar</td><td>مرونة عالية</td></tr><tr><td>Bow-Type Drop</td><td>كابل مسطح رفيع</td><td>تسلل تحت الشبابيك</td></tr><tr><td>Armored Drop</td><td>مدرع بفولاذ</td><td>حماية من القوارض</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب السادس: اللحام والوصلات (Splicing & Joints)</h3>
+<p>#### 6.1 أنواع الوصلات الضوئية</p>
+<img src="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="لحام ألياف ضوئية بمعدات دقيقة" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<table><thead><tr><th>النوع</th><th>الوصف</th><th>الفقدان</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>Fusion Splice</strong></td><td>لحام حراري بالقوس الكهربائي</td><td>0.01–0.05 dB</td><td>دائم، الأفضل</td></tr><tr><td><strong>Mechanical Splice</strong></td><td>وصل ميكانيكي بمادة مطابقة للمعامل</td><td>0.1–0.3 dB</td><td>مؤقت، إصلاحات سريعة</td></tr><tr><td><strong>Connector</strong></td><td>موصل قابل للفصل (SC, LC)</td><td>0.1–0.5 dB</td><td>عند الأجهزة، الاختبار</td></tr></tbody></table>
+<p>#### 6.2 لحام الانصهار (Fusion Splicing) بالتفصيل</p>
+<p><strong>مراحل اللحام:</strong></p>
+<ul><li><strong>إزالة الغلاف (Stripping)</strong>: إزالة الغلاف الخارجي (250μm أو 900μm) بمقدار 30–40 مم</li>
+<li><strong>التنظيف (Cleaning)</strong>: مسح الليف بمنديل مبلل بالكحول (Isopropyl Alcohol 99%)</li>
+<li><strong>القطع (Cleaving)</strong>: قطع الليف بزاوية 90° بدقة باستخدام Cleaver</li>
+<li><strong>التغذية (Loading)</strong>: وضع الليفين في Fusion Splicer</li>
+<li><strong>المحاذاة (Alignment)</strong>: المحاذاة الآلية بالمحركات الدقيقة</li>
+<li><strong>اللحام (Splicing)</strong>: قوس كهربائي يصهر طرفي الليف معاً</li>
+<li><strong>الحماية (Protection)</strong>: وضع Sleeve حامي وتسخينه</li>
+<p></ul></p>
+<p><strong>معدات اللحام:</strong></p>
+<table><thead><tr><th>الجهاز</th><th>الوصف</th><th>الدقة</th></tr></thead><tbody><tr><td>Fusion Splicer</td><td>جهاز لحام بالقوس الكهربائي</td><td>فقدان <0.02 dB</td></tr><tr><td>Cleaver</td><td>جهاز قطع الليف بزاوية 90°</td><td>زاوية <0.5°</td></tr><tr><td>Stripper</td><td>أداة إزالة الغلاف</td><td>لا تضر الليف</td></tr><tr><td>Fiber Holder</td><td>حامل الليف في الجهاز</td><td>ثبات أثناء اللحام</td></tr><tr><td>Sleeve (Protection)</td><td>أنبوب حراري لحماية اللحام</td><td>40 أو 60 مم</td></tr></tbody></table>
+<p><strong>موديلات Fusion Splicers رائدة:</strong></p>
+<table><thead><tr><th>الموديل</th><th>الشركة</th><th>الميزة</th><th>السعر التقريبي</th></tr></thead><tbody><tr><td>FSM-90S</td><td>Fujikura</td><td>الأكثر دقة وموثوقية</td><td>$8,000–12,000</td></tr><tr><td>IFS-10H</td><td>INNO</td><td>اقتصادي، جيد</td><td>$3,000–5,000</td></tr><tr><td>KL-320</td><td>Kingfisher</td><td>متوسط</td><td>$4,000–6,000</td></tr><tr><td>T-60S+</td><td>Sumitomo</td><td>سريع، دقيق</td><td>$7,000–10,000</td></tr><tr><td>View 7+</td><td>ILSINTECH</td><td>اقتصادي</td><td>$2,500–4,000</td></tr></tbody></table>
+<p>#### 6.3 موصلات FTTH</p>
+<table><thead><tr><th>الموصل</th><th>النوع</th><th>اللون</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>SC/APC</strong></td><td>Push-pull، Polish APC (8°)</td><td>أخضر</td><td>الأكثر شيوعاً في FTTH</td></tr><tr><td><strong>SC/UPC</strong></td><td>Push-pull، Polish UPC</td><td>أزرق</td><td>شبكات البيانات</td></tr><tr><td><strong>LC/APC</strong></td><td>صغير، APC</td><td>أخضر</td><td>مساحات محدودة</td></tr><tr><td><strong>LC/UPC</strong></td><td>صغير، UPC</td><td>أزرق</td><td>مراكز البيانات</td></tr></tbody></table>
+<p><strong>APC vs UPC:</strong></p>
+<ul><li><strong>APC (Angled Physical Contact)</strong>: زاوية 8° تقلل الانعكاس (Return Loss >60 dB) — ضروري لـ PON</li>
+<li><strong>UPC (Ultra Physical Contact)</strong>: سطح مستوٍ، انعكاس أعلى (Return Loss >50 dB)</li>
+<p></ul></p>
+<p><strong>في FTTH، استخدم APC دائماً</strong> لأن PON حساس للانعكاسات (إشارة ضوئية واحدة تتقاسمها 64 مشتركاً).</p>
+<p>#### 6.4 منظمة اللحام في الـ Closure</p>
+<p>داخل Splice Closure، تُنظم الألياف الملحومة في <strong>Trays</strong> (صواني):</p>
+<ul><li>كل Tray تستوعب 12–24 لحمة</li>
+<li>الألياف تلف بحلقات بقطر لا يقل عن 30 مم (تجنب الانحناء الحاد)</li>
+<li>كل لحمة لها Sleeve حامي مثبت في أخدود</li>
+<li>كابل التغذية الرئيسي يأتي من الأعلى/الأسفل</li>
+<li>كابلات الخروج (Drops) تخرج من الجوانب</li>
+<li>يُترك Service Loop (1–2 متر) لكل كابل لإعادة اللحام المستقبلية</li>
+<p></ul></p>
+<p>---</p>
+<h3>الباب السابع: القياسات والاختبار (OTDR & Measurements)</h3>
+<p>#### 7.1 OTDR (Optical Time Domain Reflectometer)</p>
+<p>OTDR هو <strong>أهم جهاز قياس</strong> في شبكات الألياف الضوئية. يرسل نبضات ضوئية في الليف ويحلل الانعكاسات الراجعة لرسم خريطة كاملة للكابل.</p>
+<img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="جهاز قياس OTDR لاختبار الألياف الضوئية" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>كيف يعمل OTDR:</strong></p>
+<ul><li>يرسل نبضة ضوئية قصيرة في الليف</li>
+<li>الضوء ينتقل ويتشتت جزء منه راجعاً (Rayleigh Backscatter)</li>
+<li>عند كل نقطة لحام أو موصل، ينعكس جزء أكبر (Fresnel Reflection)</li>
+<li>OTDR يقيس زمن عودة كل انعكاس ويحسب المسافة</li>
+<li>يرسم منحنياً (Trace) يوضح الفقدان عبر طول الكابل</li>
+<p></ul></p>
+<p><strong>ما يكشفه OTDR:</strong></p>
+<table><thead><tr><th>الحدث</th><th>المظهر على الـ Trace</th><th>القياس</th></tr></thead><tbody><tr><td>لحام جيد</td><td>انخفاض طفيف</td><td>0.01–0.05 dB</td></tr><tr><td>لحام سيء</td><td>انخفاض كبير</td><td>>0.1 dB</td></tr><tr><td>موصل/Connector</td><td>ارتفاع مفاجئ (Reflection)</td><td>0.3–1 dB</td></tr><tr><td>انحناء حاد</td><td>انخفاض تدريجي</td><td>متغير</td></tr><tr><td>قطع في الكابل</td><td>ارتفاع حاد ثم انتهاء</td><td>نهاية الليف</td></tr><tr><td>Macro Bend</td><td>انخفاض بدون انعكاس</td><td>متغير</td></tr></tbody></table>
+<p><strong>معلمات OTDR المهمة:</strong></p>
+<table><thead><tr><th>المعامل</th><th>الوصف</th><th>القيمة الموصى بها</th></tr></thead><tbody><tr><td>Wavelength</td><td>طول الموجة</td><td>1310 و 1550 nm (اختبار مزدوج)</td></tr><tr><td>Pulse Width</td><td>عرض النبضة</td><td>10–100 ns (قصير للمسافات القصيرة)</td></tr><tr><td>Range</td><td>المدى</td><td>1.5–2× طول الكابل الفعلي</td></tr><tr><td>Resolution</td><td>الدقة</td><td>0.1–1 متر</td></tr><tr><td>Averaging</td><td>متوسط القراءات</td><td>15–30 ثانية (لتقليل الضوضاء)</td></tr></tbody></table>
+<p><strong>لماذا اختبار بطولين موجيين؟</strong></p>
+<ul><li><strong>1310 nm</strong>: يكشف الفقدان العام واللحامات</li>
+<li><strong>1550 nm</strong>: أكثر حساسية للانحناءات (Macro Bends) — يكشف مشاكل لا يراها 1310</li>
+<p></ul></p>
+<p>#### 7.2 قياسات أخرى أساسية</p>
+<p><strong>OLS (Optical Light Source) + OPM (Optical Power Meter):</strong></p>
+<p>قياس الفقدان الكلي (End-to-End Loss) بطريقة الإرسال والاستقبال:</p>
+<ul><li>OLS في طرف الكابل يرسل ضوءاً بطول موجي محدد</li>
+<li>OPM في الطرف الآخر يقيس قوة الإشارة المستلمة</li>
+<li>الفرق = الفقدان الكلي للكابل</li>
+<p></ul></p>
+<table><thead><tr><th>القياس</th><th>الوصف</th><th>القيمة المقبولة</th></tr></thead><tbody><tr><td><strong>Insertion Loss</strong></td><td>الفقدان الكلي للمسار</td><td><28 dB (GPON)</td></tr><tr><td><strong>Return Loss</strong></td><td>الانعكاس الراجع</td><td>>50 dB</td></tr><tr><td><strong>ORL (Optical Return Loss)</strong></td><td>نسبة الإشارة المنعكسة</td><td>>32 dB</td></tr><tr><td><strong>Receiver Sensitivity</strong></td><td>أدنى إشارة يستقبلها ONT</td><td>-27 dBm (GPON)</td></tr><tr><td><strong>Transmit Power</strong></td><td>قوة إرسال OLT</td><td>+3 to +7 dBm</td></tr></tbody></table>
+<p><strong>حساب ميزانية الفقدان (Power Budget) لـ GPON:</strong></p>
+<table><thead><tr><th>العنصر</th><th>الفقدان</th></tr></thead><tbody><tr><td>Splitter 1:64</td><td>20 dB</td></tr><tr><td>موصلات (4× SC/APC)</td><td>4× 0.3 = 1.2 dB</td></tr><tr><td>لحامات (10 نقاط)</td><td>10× 0.05 = 0.5 dB</td></tr><tr><td>الكابل (10 كم × 0.35 dB/km)</td><td>3.5 dB</td></tr><tr><td><strong>إجمالي الفقدان</strong></td><td><strong>25.2 dB</strong></td></tr><tr><td><strong>ميزانية OLT (Tx: +5 dBm)</strong></td><td><strong>+5 dBm</strong></td></tr><tr><td><strong>إشارة عند ONT</strong></td><td><strong>+5 - 25.2 = -20.2 dBm</strong></td></tr><tr><td><strong>حساسية ONT</strong></td><td><strong>-27 dBm</strong></td></tr><tr><td><strong>هامش الأمان</strong></td><td><strong>6.8 dB</strong> ✅</td></tr></tbody></table>
+<p>#### 7.3 VFL (Visual Fault Locator)</p>
+<p>جهاز بسيط يرسل ضوءاً أحمر مرئياً (650 nm) في الليف. يكشف:</p>
+<ul><li>القطع الكبيرة (الضوء يخرج من نقطة القطع)</li>
+<li>الانحناءات الحادة (الضوء يتسرب عند الانحناء)</li>
+<li>الموصلات غير المحكمة</li>
+<p></ul></p>
+<p><strong>محدودية VFL:</strong> يعمل حتى 3–5 كم فقط، لا يقيس الفقدان كمياً.</p>
+<p>#### 7.4 End-to-End Throughput Testing</p>
+<p>بعد تفعيل الخدمة، قياس الأداء الفعلي:</p>
+<table><thead><tr><th>القياس</th><th>الأداة</th><th>القيمة المتوقعة</th></tr></thead><tbody><tr><td>Speed Test</td><td>Speedtest.net / iPerf</td><td>>90% من السرعة المطلوبة</td></tr><tr><td>Latency</td><td>Ping</td><td><5 ms (محلي)</td></tr><tr><td>Packet Loss</td><td>iPerf</td><td><0.1%</td></tr><tr><td>Jitter</td><td>iPerf</td><td><1 ms</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الثامن: محتويات الـ Racks في محطة OLT</h3>
+<p>#### 8.1 Rack القياسي</p>
+<p>محطة OLT تحتوي على Racks (خزائن معدنية) 19 إنش بارتفاع 42U (1U = 4.445 سم):</p>
+<img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="خزائن خوادم منظمة في مركز بيانات" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>محتويات Rack نموجي لـ FTTH:</strong></p>
+<table><thead><tr><th>الترتيب (من أعلى)</th><th>الجهاز</th><th>الارتفاع</th><th>الوظيفة</th></tr></thead><tbody><tr><td>U1–U2</td><td><strong>Patch Panel (ODF)</strong></td><td>2U</td><td>منظمة الموصلات (SC/APC)</td></tr><tr><td>U3</td><td><strong>Splitter Module</strong></td><td>1U</td><td>مقسمات 1:8 أو 1:16</td></tr><tr><td>U4–U8</td><td><strong>OLT Chassis</strong></td><td>4–5U</td><td>وحدة OLT الرئيسية</td></tr><tr><td>U9</td><td><strong>Uplink Switch</strong></td><td>1U</td><td>مبدّل 10G للربط بالـ Core</td></tr><tr><td>U10</td><td><strong>Router/Gateway</strong></td><td>1U</td><td>توجيه و NAT</td></tr><tr><td>U11–U12</td><td><strong>UPS</strong></td><td>2U</td><td>طاقة احتياطية</td></tr><tr><td>U13</td><td><strong>Power Distribution Unit (PDU)</strong></td><td>1U</td><td>توزيع الطاقة</td></tr><tr><td>U14–U15</td><td><strong>Battery Bank</strong></td><td>2U</td><td>بطاريات UPS</td></tr><tr><td>U16–U42</td><td><strong>مساحة فارغة للتوسعة</strong></td><td>27U</td><td>نمو مستقبلي</td></tr></tbody></table>
+<p>#### 8.2 ODF (Optical Distribution Frame)</p>
+<p>ODF هو <strong>نقطة التجمع</strong> لكل الكابلات الواردة والخارجة:</p>
+<table><thead><tr><th>المكون</th><th>الوصف</th></tr></thead><tbody><tr><td>Patch Panel</td><td>لوحة بموصلات SC/APC (12–48 موصل لكل Panel)</td></tr><tr><td>Splice Tray</td><td>صواني لحام داخل الـ ODF</td></tr><tr><td>Cable Management</td><td>منظم مسارات الكابلات (لمنع الانحناء الحاد)</td></tr><tr><td>Dust Caps</td><td>أغطية حماية الموصلات غير المستخدمة</td></tr></tbody></table>
+<p><strong>قاعدة الـ Patch Panel:</strong> كل منفذ مرقّم ويطابق منفذ OLT. مثال: ODF Port 1 → OLT PON Port 0/1/0.</p>
+<p>#### 8.3 إدارة الكابلات داخل Rack</p>
+<p><strong>قواعد إدارة الكابلات:</strong></p>
+<ul><li><strong>فصل الطاقة عن البيانات</strong>: مسارات منفصلة لكابلات الطاقة والكابلات الضوئية</li>
+<li><strong>نصف قطر الانحناء</strong>: لا تثني كابل الألياف بنصف قطر أقل من 30 مم</li>
+<li><strong>التسمية (Labeling)</strong>: كل كابل موصل ومعلّم برقم المنفذ</li>
+<li><strong>Service Loops</strong>: اترك 1–2 متر إضافي لكل كابل لإعادة التوصيل</li>
+<li><strong>Cable Ties</strong>: استخدم Velcro (ليس Plastic) للألياف — تجنب الضغط</li>
+<p></ul></p>
+<p>#### 8.4 الطاقة والتبريد</p>
+<table><thead><tr><th>المعيار</th><th>القيمة</th></tr></thead><tbody><tr><td>الطاقة الكلية للـ Rack</td><td>2–5 kW</td></tr><tr><td>UPS</td><td>يكفي 4–8 ساعات تشغيل</td></tr><tr><td>التبريد</td><td>تكييف 2–4 طن لكل Rack</td></tr><tr><td>درجة الحرارة</td><td>18–24°C</td></tr><tr><td>الرطوبة</td><td>40–60%</td></tr><tr><td>PDU</td><td>16–32 منفذ C13/C19</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب التاسع: مراحل تنفيذ مشروع FTTH</h3>
+<p>#### 9.1 مراحل المشروع</p>
+<table><thead><tr><th>المرحلة</th><th>المدة التقريبية</th><th>المخرجات</th></tr></thead><tbody><tr><td>1. الدراسة والتصميم</td><td>2–4 أسابيع</td><td>مخططات، BoQ، مواصفات</td></tr><tr><td>2. المشتريات</td><td>4–8 أسابيع</td><td>كابلات، معدات، أجهزة</td></tr><tr><td>3. الأعمال المدنية (OSP)</td><td>8–16 أسبوع</td><td>خنادق، قنوات، Handholes</td></tr><tr><td>4. مد الكابلات</td><td>4–8 أسابيع</td><td>كابلات في القنوات</td></tr><tr><td>5. اللحام والوصلات</td><td>4–8 أسابيع</td><td>لحامات في Closures</td></tr><tr><td>6. الاختبار (OTDR)</td><td>2–4 أسابيع</td><td>تقارير قياسات</td></tr><tr><td>7. تركيب OLT و ONTs</td><td>2–4 أسابيع</td><td>معدات نشطة</td></tr><tr><td>8. التكوين والتفعيل</td><td>1–2 أسبوع</td><td>خدمات فعّالة</td></tr><tr><td>9. التوثيق والتسليم</td><td>1–2 أسبوع</td><td>As-Built، Manuals</td></tr></tbody></table>
+<p>#### 9.2 جداول الكمية (Bill of Quantities)</p>
+<p><strong>مثال BoQ لمشروع FTTH لـ 1000 مشترك:</strong></p>
+<table><thead><tr><th>البند</th><th>الكمية</th><th>الوحدة</th></tr></thead><tbody><tr><td>OLT (64 منفذ PON)</td><td>1</td><td>جهاز</td></tr><tr><td>ONT (HGU)</td><td>1000</td><td>جهاز</td></tr><tr><td>Splitter 1:8 (PLC)</td><td>128</td><td>قطعة</td></tr><tr><td>Splitter 1:16 (PLC)</td><td>64</td><td>قطعة</td></tr><tr><td>Feeder Cable (48F)</td><td>10</td><td>كم</td></tr><tr><td>Distribution Cable (12F)</td><td>30</td><td>كم</td></tr><tr><td>Drop Cable (1F)</td><td>50</td><td>كم</td></tr><tr><td>Splice Closure (48F)</td><td>40</td><td>قطعة</td></tr><tr><td>Handhole (متوسط)</td><td>60</td><td>قطعة</td></tr><tr><td>موصلات SC/APC</td><td>3000</td><td>قطعة</td></tr><tr><td>Fusion Splicer</td><td>2</td><td>جهاز</td></tr><tr><td>OTDR</td><td>1</td><td>جهاز</td></tr><tr><td>ODF (48 منفذ)</td><td>2</td><td>قطعة</td></tr><tr><td>PVC Duct (110mm)</td><td>10</td><td>كم</td></tr><tr><td>Warning Tape</td><td>10</td><td>كم</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب العاشر: الصيانة واستكشاف الأخطاء</h3>
+<p>#### 10.1 الصيانة الوقائية</p>
+<table><thead><tr><th>المهمة</th><th>التكرار</th><th>الأداة</th></tr></thead><tbody><tr><td>فحص OTDR لكل مسار</td><td>سنوياً</td><td>OTDR</td></tr><tr><td>فحص مادي لـ Closures</td><td>ربع سنوي</td><td>فحص بصري</td></tr><tr><td>تنظيف الموصلات</td><td>عند كل إعادة توصيل</td><td>Fiber Cleaner</td></tr><tr><td>فحص طاقة OLT</td><td>شهرياً</td><td>OPM</td></tr><tr><td>مراجعة أداء ONTs</td><td>شهرياً</td><td>NMS/OMCI</td></tr><tr><td>فحص Handholes (تسرب مياه)</td><td>ربع سنوي</td><td>فحص ميداني</td></tr><tr><td>تنظيف مراوح OLT</td><td>ربع سنوي</td><td>هواء مضغوط</td></tr><tr><td>اختبار UPS والبطاريات</td><td>نصف سنوي</td><td>Load Test</td></tr></tbody></table>
+<p>#### 10.2 استكشاف الأخطاء الشائعة</p>
+<table><thead><tr><th>المشكلة</th><th>السبب المحتمل</th><th>التشخيص</th><th>الحل</th></tr></thead><tbody><tr><td>ONT لا يسجل</td><td>فقدان عالي، كابل مقطوع</td><td>OTDR، OPM</td><td>إصلاح اللحام/الكابل</td></tr><tr><td>سرعة منخفضة</td><td>Splitter تالف، انحناء</td><td>OTDR (1550nm)</td><td>إصلاح الانحناء</td></tr><tr><td>انقطاع متكرر</td><td>موصل متسخ، حرارة OLT</td><td>فحص الموصل، درجة الحرارة</td><td>تنظيف، تحسين التبريد</td></tr><tr><td>فقدان عالٍ في مسار</td><td>لحام سيء، Splitter تالف</td><td>OTDR</td><td>إعادة اللحام، استبدال Splitter</td></tr><tr><td>ONT يعمل ثم يفصل</td><td>تجاوز حساسية الاستقبال</td><td>OPM عند ONT</td><td>فحص Power Budget</td></tr><tr><td>تشويش على البث</td><td>انعكاسات من موصل UPC</td><td>VFL، OTDR</td><td>استبدال بموصل APC</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الحادي عشر: الاتجاهات المستقبلية</h3>
+<p>#### 11.1 XGS-PON و NG-PON2</p>
+<table><thead><tr><th>التقنية</th><th>السرعة</th><th>الميزة</th></tr></thead><tbody><tr><td>XGS-PON</td><td>10/10 Gbps</td><td>متماثل، تعايش مع GPON</td></tr><tr><td>NG-PON2 (TWDM)</td><td>40/10 Gbps</td><td>أطوال موجات متعددة (TWDM)</td></tr><tr><td>25G PON</td><td>25/25 Gbps</td><td>للأعمال، 5G backhaul</td></tr><tr><td>50G PON</td><td>50/50 Gbps</td><td>قادم 2026+</td></tr></tbody></table>
+<p>#### 11.2 FTTH و 5G</p>
+<p>FTTH ليس فقط للمنازل — <strong>5G Small Cells</strong> تحتاج اتصال ألياف ضوئية:</p>
+<ul><li>كل Small Cell تحتاج 1–10 Gbps</li>
+<li>FTTH يوفر البنية التحتية الجاهزة</li>
+<li><strong>Fiber Deep</strong>: تقريب OLT من المشترك لتقليل التأخير</li>
+<p></ul></p>
+<p>#### 11.3 الذكاء الاصطناعي في صيانة FTTH</p>
+<ul><li><strong>كشف الأعطال الاستباقي</strong>: AI يحلل بيانات OTDR ويتنبأ بالأعطال</li>
+<li><strong>الصيانة التنبؤية</strong>: تحليل اتجاهات الفقدان عبر الوقت</li>
+<li><strong>تشخيص ذكي</strong>: تحديد سبب المشكلة تلقائياً من أعراض ONT</li>
+<li><strong>أتمتة الإ provisioning</strong>: تفعيل الخدمات تلقائياً عند توصيل ONT</li>
+<p></ul></p>
+<p>---</p>
+<h3>الأسئلة الشائعة (FAQ)</h3>
+<p><strong>س: ما الفرق بين FTTH و FTTN و FTTC؟</strong></p>
+<p>ج: FTTH (Fiber to the Home) يصل بالألياف حتى داخل المنزل. FTTN (Fiber to the Node) يصل بالألياف لصندوق في الحي ثم نحاسية للمشترك. FTTC (Fiber to the Curb) يصل بالألياف لقرب المنزل ثم نحاسية. FTTH هو الأفضل سرعة وموثوقية.</p>
+<p><strong>س: كم مشتركاً يمكن لمنفذ PON واحد في OLT أن يخدم؟</strong></p>
+<p>ج: في GPON، منفذ PON واحد يخدم حتى 64 مشتركاً (1:64 split). في XGS-PON، حتى 128 مشتركاً. السرعة تتقاسم بين المشتركين النشطين في نفس اللحظة.</p>
+<p><strong>س: ما هو الفقدان المقبول لمسار FTTH كامل؟</strong></p>
+<p>ج: في GPON، الفقدان الكلي يجب أن يكون أقل من 28 dB (من OLT إلى ONT). هذا يشمل Splitter (20 dB لـ 1:64)، الموصلات، اللحامات، والكابل نفسه.</p>
+<p><strong>س: هل يمكن استخدام موصل UPC بدل APC في FTTH؟</strong></p>
+<p>ج: لا يُنصح. APC (اللون الأخضر) يقلل الانعكاسات التي تؤثر على جودة إشارة PON. UPC (اللون الأزرق) يسبب انعكاسات أعلى قد تؤثر على المشتركين الآخرين على نفس الليف.</p>
+<p><strong>س: كم مرة يجب اختبار الكابلات بـ OTDR؟</strong></p>
+<p>ج: اختبار أولي بعد التركيب (Commissioning)، ثم سنوياً كصيانة وقائية، وعند ظهور مشاكل. اختبار بطولين موجيين (1310 و 1550 nm) ضروري لكشف جميع المشاكل.</p>
+<p><strong>س: ما هو الفرق بين Fusion Splice و Mechanical Splice؟</strong></p>
+<p>ج: Fusion Splice يلحم الليفين حرارياً (قوس كهربائي) — فقدان 0.01–0.05 dB، دائم. Mechanical Splice يستخدم مادة مطابقة للمعامل الضوئي — فقدان 0.1–0.3 dB، أسرع لكن أقل جودة. استخدم Fusion دائماً للمسارات الدائمة.</p>
+<p><strong>س: ما هو Bend Insensitive Fiber ولماذا مهم في FTTH؟</strong></p>
+<p>ج: هو ليف (G.657) مصمم لمقاومة الفقدان عند الانحناء. في تركيبات المنازل، الانحناءات الحادة شائعة (زوايا الجدران، مقابس الحائط). G.657 يتحمل انحناء بنصف قطر 7.5 مم دون فقدان ملحوظ، بينما G.652 العادي يفقد إشارة كبيرة.</p>
+<p><strong>س: كم يستغرق تركيب FTTH لمدينة؟</strong></p>
+<p>ج: يعتمد على حجم المدينة والتغطية المطلوبة. لـ 100,000 مشترك، قد يستغرق 12–24 شهراً شاملاً الأعمال المدنية، مد الكابلات، اللحام، وتركيب المعدات.</p>
+<p>---</p>
+<h3>الخلاصة والتوصيات</h3>
+<p>شبكات FTTH هي <strong>البنية التحتية الرقمية للقرن الحادي والعشرين</strong>. نجاحها يعتمد على:</p>
+<ul><li><strong>تصميم هندسي سليم</strong> — ميزانية الفقدان، التقسيم، المسارات</li>
+<li><strong>أعمال مدنية جيدة</strong> — قنوات محمية، Handholes منظمة</li>
+<li><strong>لحام دقيق</strong> — Fusion Splicing بجودة عالية</li>
+<li><strong>اختبار شامل</strong> — OTDR بطولين موجيين</li>
+<li><strong>معدات مناسبة</strong> — OLT و ONT متوافقان مع المعايير</li>
+<p></ul></p>
+<p><strong>توصيات عملية:</strong></p>
+<ul><li><strong>خطط للنمو</strong> — صمم التقسيم لـ 50% فقط في البداية، اترك مجالاً للتوسعة</li>
+<li><strong>استخدم PLC Splitters</strong> — أفضل من FBT في الأداء والموثوقية</li>
+<li><strong>APC دائماً</strong> — لا تستخدم UPC في شبكات PON</li>
+<li><strong>G.657 للـ Drop</strong> — مقاومة الانحناء ضرورية في المنازل</li>
+<li><strong>اختبر بطولين موجيين</strong> — 1310 و 1550 nm لكشف كل المشاكل</li>
+<li><strong>وثّق كل لحامة</strong> — كل لحامة لها رقم وإحداثيات GPS</li>
+<li><strong>استثمر في الأعمال المدنية</strong> — 60% من التكلفة و 80% من المشاكل</li>
+<li><strong>صيانة وقائية</strong> — OTDR سنوي، فحص Closures ربع سنوي</li>
+<li><strong>درّب الفنيين</strong> — اللحام السيء يسبب 70% من الأعطال</li>
+<li><strong>خطط للترقية</strong> — صمم لـ XGS-PON و NG-PON2 المستقبلية</li>
+<p></ul></p>
+<p>---</p>
+<h3>المراجع</h3>
+<ul><li>ITU-T G.984.x — Gigabit-capable Passive Optical Network (GPON) Standards</li>
+<li>ITU-T G.987.x — 10-Gigabit-capable PON (XG-PON) Standards</li>
+<li>ITU-T G.9807.x — 10-Gigabit-capable symmetric PON (XGS-PON)</li>
+<li>ITU-T G.989.x — Next-generation PON (NG-PON2)</li>
+<li>ITU-T G.652.D — Characteristics of a single-mode optical fibre</li>
+<li>ITU-T G.657 — Characteristics of a bending loss insensitive single-mode optical fibre</li>
+<li>IEEE 802.3ah — Ethernet in the First Mile (EPON)</li>
+<li>ITU-T L.66 — Optical fibre cable maintenance and repair</li>
+<li>TIA-568.3-D — Optical Fiber Cabling and Components Standard</li>
+<li>FTTH Council — Best Practices for FTTH Network Design, 2024</li></ul></div>
+
+            <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
+              <div class="share-buttons">
+                <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">مشاركة:</span>
+                <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/ar/articles/ftth-fiber-to-the-home-complete-guide.html&text=شبكات الألياف الضوئية حتى المنزل (FTTH): الدليل الشامل — المعمارية، البروتوكولات، الأجهزة، الأعمال المدنية، اللحام، القياسات" target="_blank" rel="noopener">𝕏 Twitter</a>
+                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/ar/articles/ftth-fiber-to-the-home-complete-guide.html" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/ar/articles/ftth-fiber-to-the-home-complete-guide.html" target="_blank" rel="noopener">Facebook</a>
+                <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
+              </div>
+            </div>
+
+            
+            <div class="article-tags" style="margin:1.5rem 0;">
+              <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">الوسوم:</span>
+              <a href="../articles/index.html?tag=FTTH" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#FTTH</a><a href="../articles/index.html?tag=Fiber Optics" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Fiber Optics</a><a href="../articles/index.html?tag=GPON" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#GPON</a><a href="../articles/index.html?tag=PON" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#PON</a><a href="../articles/index.html?tag=OLT" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#OLT</a><a href="../articles/index.html?tag=ONT" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#ONT</a><a href="../articles/index.html?tag=OTDR" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#OTDR</a><a href="../articles/index.html?tag=Fusion Splicing" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Fusion Splicing</a><a href="../articles/index.html?tag=OSP" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#OSP</a><a href="../articles/index.html?tag=Civil Works" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Civil Works</a><a href="../articles/index.html?tag=XGS-PON" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#XGS-PON</a><a href="../articles/index.html?tag=Telecommunications" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Telecommunications</a>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
+
+            <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← العودة للمقالات</a>
+          </div>
+
+          <aside class="article-sidebar">
+            <div style="margin-top:2rem;">
+              <div class="article-lang-switch">
+                <button class="" data-lang="en">🇺🇸 EN</button>
+                <button class="active" data-lang="ar">🇸🇦 ع</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -69,6 +437,6 @@
   <script src="../../assets/js/i18n.js?v=2"></script>
   <script src="../../assets/js/components.js?v=4"></script>
   <script src="../../assets/js/core.js?v=6"></script>
-  <script src="../../assets/js/article.js?v=8"></script>
+  <script src="../../assets/js/article.js?v=9"></script>
 </body>
 </html>

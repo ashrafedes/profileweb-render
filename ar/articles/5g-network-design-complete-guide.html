@@ -11,14 +11,13 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل من المعمارية إلى التشغيل | أشرف الدسوقي</title>
-  <meta name="description" content="دليل هندسي شامل لتصميم شبكات 5G — يغطي المعمارية (SBA/CUPS)، الطيف الترددي (Low/Mid/mmWave)، gNB و Massive MIMO، Beamforming، فئات الخدمات (eMBB/URLLC/mMTC)، Network Slicing، تخطيط التغطية والسعة، شبكة النقل، الأمن، NSA/SA، Edge Computing، Open RAN، ودراسات حالة.">
-  <meta name="keywords" content="5G, تصميم شبكات 5G, Massive MIMO, Network Slicing, mmWave, gNB, Beamforming, URLLC, eMBB, mMTC, Edge Computing, Open RAN">
+  <title>تصميم شبكات 5G: الدليل الشامل | أشرف الدسوقي</title>
+  <meta name="description" content="دليل هندسي متكامل لتصميم شبكات الجيل الخامس 5G — المعمارية، الطيف الترددي، Massive MIMO، Network Slicing، التغطية والسعة، النقل، الأمن، Edge Computing، Open RAN، ودراسات حالة.">
   <meta name="author" content="Ashraf Ibrahim El Desoky">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="article">
   <meta property="og:title" content="تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل من المعمارية إلى التشغيل">
-  <meta property="og:description" content="دليل هندسي شامل لتصميم شبكات 5G — يغطي المعمارية (SBA/CUPS)، الطيف الترددي (Low/Mid/mmWave)، gNB و Massive MIMO، Beamforming، فئات الخدمات (eMBB/URLLC/mMTC)، Network Slicing، تخطيط التغطية والسعة، شبكة النقل، الأمن، NSA/SA، Edge Computing، Open RAN، ودراسات حالة.">
+  <meta property="og:description" content="دليل هندسي متكامل لتصميم شبكات الجيل الخامس 5G — المعمارية، الطيف الترددي، Massive MIMO، Network Slicing، التغطية والسعة، النقل، الأمن، Edge Computing، Open RAN، ودراسات حالة.">
   <meta property="og:url" content="https://www.ashraf-eldesoky.space/ar/articles/5g-network-design-complete-guide.html">
   <meta property="og:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200">
   <meta property="og:image:width" content="1200">
@@ -27,8 +26,8 @@
   <meta property="article:published_time" content="2026-07-26">
   <meta property="article:modified_time" content="2026-07-26">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل من المعمارية إلى التشغيل | أشرف الدسوقي">
-  <meta name="twitter:description" content="دليل هندسي شامل لتصميم شبكات 5G — يغطي المعمارية (SBA/CUPS)، الطيف الترددي (Low/Mid/mmWave)، gNB و Massive MIMO، Beamforming، فئات الخدمات (eMBB/URLLC/mMTC)، Network Slicing، تخطيط التغطية والسعة، شبكة النقل، الأمن، NSA/SA، Edge Computing، Open RAN، ودراسات حالة.">
+  <meta name="twitter:title" content="تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل من المعمارية إلى التشغيل">
+  <meta name="twitter:description" content="دليل هندسي متكامل لتصميم شبكات الجيل الخامس 5G — المعمارية، الطيف الترددي، Massive MIMO، Network Slicing، التغطية والسعة، النقل، الأمن، Edge Computing، Open RAN، ودراسات حالة.">
   <meta name="twitter:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200">
   <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/articles/5g-network-design-complete-guide.html">
   <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/5g-network-design-complete-guide.html">
@@ -42,18 +41,359 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="../../assets/css/articles.css">
-  <style>* { font-family: 'Cairo', sans-serif; }</style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل من المعمارية إلى التشغيل", "description": "دليل هندسي شامل لتصميم شبكات 5G — يغطي المعمارية (SBA/CUPS)، الطيف الترددي (Low/Mid/mmWave)، gNB و Massive MIMO، Beamforming، فئات الخدمات (eMBB/URLLC/mMTC)، Network Slicing، تخطيط التغطية والسعة، شبكة النقل، الأمن، NSA/SA، Edge Computing، Open RAN، ودراسات حالة.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-26", "dateModified": "2026-07-26", "image": "https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/5g-network-design-complete-guide.html", "inLanguage": "ar"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل من المعمارية إلى التشغيل", "description": "دليل هندسي متكامل لتصميم شبكات الجيل الخامس 5G — المعمارية، الطيف الترددي، Massive MIMO، Network Slicing، التغطية والسعة، النقل، الأمن، Edge Computing، Open RAN، ودراسات حالة.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-26", "dateModified": "2026-07-26", "image": "https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/5g-network-design-complete-guide.html", "inLanguage": "ar"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://www.ashraf-eldesoky.space/ar/articles/"}, {"@type": "ListItem", "position": 3, "name": "تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل من المعمارية إلى التشغيل", "item": "https://www.ashraf-eldesoky.space/ar/articles/5g-network-design-complete-guide.html"}]}</script>
 </head>
-<body>
+<body><style>* { font-family: 'Cairo', sans-serif; }</style>
   <div id="ecms-nav-inject"></div>
 
   <main id="main-content" class="page-wrapper" style="padding-top:0;">
-    <div class="article-hero" id="article-hero"></div>
+    <div class="article-hero" id="article-hero">
+        <img class="article-hero-img" src="https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل من المعمارية إلى التشغيل">
+        <div class="article-hero-overlay"></div>
+        <div class="container article-hero-content">
+          <span class="article-hero-cat">Network Infrastructure</span>
+          <h1>تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل من المعمارية إلى التشغيل</h1>
+          <div class="article-hero-meta">
+            <span>بقلم Ashraf Ibrahim El Desoky</span>
+            <span>· 26 يوليو 2026</span>
+            <span>· 35 دقيقة قراءة</span>
+            
+          </div>
+        </div>
+      </div>
 
     <section class="section" style="padding:2.5rem 0;">
       <div class="container">
-        <div id="article-body"></div>
+        <div id="article-body">
+        <div class="article-layout">
+          <div>
+            <div class="article-content" id="article-content"><h2>تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل — من المعمارية إلى التشغيل</h2>
+<img src="https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="برج اتصالات 5G حديث مع هوائيات متعددة" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><em>5G ليس مجرد ترقية سرعة — بل إعادة تعريف كاملة لمعمارية الشبكات اللاسلكية، حيث تلتقي الحوسبة بالاتصالات لتولد شبكات ذكية قابلة للبرمجة تخدم من الإنسان إلى الإنترنت الأشياء.</em></p>
+<h3>مقدمة: لماذا 5G مختلف جذرياً؟</h3>
+<p>شهدت الاتصالات اللاسلكية أربعة أجيال قبل 5G، كل جيل كان تحسيناً تدريجياً للسابق. الجيل الأول (1G) قدّم الصوت التناظري في الثمانينيات. الجيل الثاني (2G) رقمن الصوت وأضاف الرسائل القصيرة (SMS) في التسعينيات. الجيل الثالث (3G) جلب الإنترنت المحمول بسرعات تصل إلى 2 Mbps في أوائل الألفينات. الجيل الرابع (4G LTE) قدّم النطاق العريض المحمول بسرعات تصل إلى 1 Gbps، مما أتاح streaming الفيديو والتطبيقات الغنية.</p>
+<p>لكن <strong>5G مختلف جذرياً</strong> — فهو لا يكتفي بزيادة السرعة، بل يعيد تعريف المعمارية، يقدم ثلاث فئات خدمات متباينة تماماً، يستخدم طيف ترددي جديد تماماً (mmWave)، يدعم كثافة اتصالات غير مسبوقة (مليون جهاز/كم²)، ويقلل التأخير إلى أقل من 1 مللي ثانية. هذه القدرات فتحت تطبيقات لم تكن ممكنة: الجراحة عن بُعد، المركبات ذاتية القيادة، المصانع المؤتمتة بالكامل، والواقع المعزز/الافتراضي في الزمن الحقيقي.</p>
+<p><strong>الأرقام المرجعية لـ 5G مقارنة بـ 4G:</strong></p>
+<table><thead><tr><th>المعيار</th><th>4G LTE</th><th>5G NR</th><th>التحسن</th></tr></thead><tbody><tr><td>سرعة الذروة (Downlink)</td><td>1 Gbps</td><td>20 Gbps</td><td>20×</td></tr><tr><td>سرعة الذروة (Uplink)</td><td>0.5 Gbps</td><td>10 Gbps</td><td>20×</td></tr><tr><td>التأخير (Latency)</td><td>10–50 ms</td><td>1–4 ms</td><td>10×</td></tr><tr><td>كثافة الأجهزة</td><td>10,000/كم²</td><td>1,000,000/كم²</td><td>100×</td></tr><tr><td>كفاءة الطيف</td><td>1×</td><td>3×</td><td>3×</td></tr><tr><td>كفاءة الطاقة</td><td>1×</td><td>10× (لكل بت)</td><td>10×</td></tr><tr><td>موثوقية الحركة</td><td>99.9%</td><td>99.999%</td><td>محسّن</td></tr><tr><td>سرعة الحركة المدعومة</td><td>350 كم/س</td><td>500 كم/س</td><td>محسّن</td></tr></tbody></table>
+<p>هذا المقال يقدّم دليلاً هندسياً شاملاً يغطي <strong>كل جوانب تصميم شبكات 5G</strong> — من المعمارية والطيف الترددي إلى التغطية، السعة، النقل، الأمن، التشغيل، والاتجاهات المستقبلية.</p>
+<p>---</p>
+<h3>الباب الأول: معمارية شبكة 5G</h3>
+<p>#### 1.1 المعمارية العامة — Service-Based Architecture (SBA)</p>
+<p>5G يقدم تحولاً جوهرياً في المعمارية: من بنية هرمية صارمة (4G EPC) إلى <strong>بنية قائمة على الخدمات (Service-Based Architecture)</strong>. كل عنصر في الشبكة هو خدمة (Service) قابلة للاستدعاء عبر APIs قياسية (RESTful).</p>
+<img src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="مركز بيانات حديث يضم معدات شبكة 5G" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>مكونات المعمارية الأساسية:</strong></p>
+<table><thead><tr><th>المكون</th><th>الاسم الكامل</th><th>الوظيفة</th><th>مقابل في 4G</th></tr></thead><tbody><tr><td><strong>gNB</strong></td><td>next-generation Node B</td><td>المحطة القاعدية اللاسلكية</td><td>eNodeB</td></tr><tr><td><strong>AMF</strong></td><td>Access and Mobility Management Function</td><td>إدارة الوصول والحركة</td><td>MME</td></tr><tr><td><strong>SMF</strong></td><td>Session Management Function</td><td>إدارة الجلسات وعناوين IP</td><td>MME/SGW-C</td></tr><tr><td><strong>UPF</strong></td><td>User Plane Function</td><td>نقل بيانات المستخدم</td><td>SGW-U/PGW-U</td></tr><tr><td><strong>PCF</strong></td><td>Policy Control Function</td><td>سياسات الجودة والشحن</td><td>PCRF</td></tr><tr><td><strong>UDM</strong></td><td>Unified Data Management</td><td>قاعدة بيانات المشتركين</td><td>HSS</td></tr><tr><td><strong>AUSF</strong></td><td>Authentication Server Function</td><td>مصادقة المشتركين</td><td>HSS</td></tr><tr><td><strong>NSSF</strong></td><td>Network Slice Selection Function</td><td>اختيار شريحة الشبكة</td><td>لا يوجد (جديد)</td></tr><tr><td><strong>NEF</strong></td><td>Network Exposure Function</td><td>تعريف القدرات للتطبيقات الخارجية</td><td>لا يوجد (جديد)</td></tr><tr><td><strong>NRF</strong></td><td>Network Repository Function</td><td>اكتشاف الخدمات</td><td>لا يوجد (جديد)</td></tr></tbody></table>
+<p>#### 1.2 فصل المستوى التحكم عن مستوى البيانات (CUPS)</p>
+<p>أحد أهم مبادئ 5G هو <strong>Control/User Plane Separation (CUPS)</strong> — فصل كامل بين مستوى التحكم (Control Plane) ومستوى البيانات (User Plane):</p>
+<table><thead><tr><th>المعيار</th><th>Control Plane</th><th>User Plane</th></tr></thead><tbody><tr><td>الوظيفة</td><td>إدارة الجلسات، الحركة، السياسات</td><td>نقل بيانات المستخدم</td></tr><tr><td>المكون</td><td>AMF، SMF، PCF</td><td>UPF</td></tr><tr><td>الموقع</td><td>مركزي (Cloud)</td><td>موزع (قرب المستخدم)</td></tr><tr><td>التأخير</td><td>غير حرج (إدارة)</td><td>حرج جداً (بيانات)</td></tr><tr><td>التوسعة</td><td>حسب عدد المشتركين</td><td>حسب حجم البيانات</td></tr></tbody></table>
+<p><strong>فائدة CUPS:</strong> يمكن نشر UPF في مواقع موزعة قرب المستخدمين (Edge Computing) لتقليل التأخير، بينما يبقى Control Plane مركزياً للكفاءة.</p>
+<p>#### 1.3 واجهات الشبكة (Interfaces)</p>
+<table><thead><tr><th>الواجهة</th><th>بين</th><th>الوظيفة</th></tr></thead><tbody><tr><td><strong>NG-C (N2)</strong></td><td>gNB ↔ AMF</td><td>إشارات التحكم</td></tr><tr><td><strong>NG-U (N3)</strong></td><td>gNB ↔ UPF</td><td>بيانات المستخدم</td></tr><tr><td><strong>Xn</strong></td><td>gNB ↔ gNB</td><td>تواصل بين المحطات القاعدية</td></tr><tr><td><strong>N4</strong></td><td>SMF ↔ UPF</td><td>إدارة جلسات UPF</td></tr><tr><td><strong>N6</strong></td><td>UPF ↔ DN (Data Network)</td><td>وصول للإنترنت/الشبكات</td></tr><tr><td><strong>N9</strong></td><td>UPF ↔ UPF</td><td>بين وحدات UPF</td></tr><tr><td><strong>N7</strong></td><td>PCF ↔ SMF</td><td>تطبيق السياسات</td></tr><tr><td><strong>N8</strong></td><td>UDM ↔ AMF</td><td>بيانات المشتركين</td></tr><tr><td><strong>N11</strong></td><td>AMF ↔ SMF</td><td>تنسيق الجلسات</td></tr><tr><td><strong>Nnrf</strong></td><td>أي NF ↔ NRF</td><td>اكتشاف الخدمات</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الثاني: الطيف الترددي لـ 5G</h3>
+<p>#### 2.1 نطاقات التردد الثلاث لـ 5G</p>
+<p>5G يستخدم ثلاث نطاقات ترددية مختلفة، لكل منها خصائص واستخدامات:</p>
+<img src="https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="أبراج اتصالات لاسلكية على قمة جبل" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<table><thead><tr><th>النطاق</th><th>التردد</th><th>المدى</th><th>السرعة</th><th>الاختراق</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>Low Band (Sub-1GHz)</strong></td><td>600–1000 MHz</td><td>5–10 كم</td><td>منخفض (100 Mbps)</td><td>ممتاز (يدخل المباني)</td><td>تغطية واسعة، ريفي</td></tr><tr><td><strong>Mid Band (Sub-6GHz)</strong></td><td>1–6 GHz</td><td>1–5 كم</td><td>متوسط–عالي (1 Gbps)</td><td>جيد (يدخل المباني جزئياً)</td><td>حضري، توازن تغطية/سعة</td></tr><tr><td><strong>High Band (mmWave)</strong></td><td>24–52 GHz</td><td>100–500 م</td><td>عالي جداً (10+ Gbps)</td><td>ضعيف (يوقفه الجدران)</td><td>كثافة عالية، stadiums</td></tr></tbody></table>
+<p><strong>نطاقات 5G المعتمدة عالمياً (3GPP):</strong></p>
+<table><thead><tr><th>النطاق (Band)</th><th>التردد</th><th>النوع</th><th>الاستخدام الإقليمي</th></tr></thead><tbody><tr><td>n1</td><td>2100 MHz</td><td>Mid</td><td>عالمي</td></tr><tr><td>n3</td><td>1800 MHz</td><td>Mid</td><td>أوروبا، آسيا</td></tr><tr><td>n28</td><td>700 MHz</td><td>Low</td><td>عالمي (تغطية واسعة)</td></tr><tr><td>n41</td><td>2500 MHz</td><td>Mid</td><td>آسيا، الأمريكتين (TDD)</td></tr><tr><td>n77</td><td>3300–4200 MHz</td><td>Mid</td><td>عالمي (C-Band)</td></tr><tr><td>n78</td><td>3300–3800 MHz</td><td>Mid</td><td>أوروبا، آسيا</td></tr><tr><td>n258</td><td>26 GHz</td><td>High (mmWave)</td><td>أوروبا، آسيا</td></tr><tr><td>n261</td><td>28 GHz</td><td>High (mmWave)</td><td>الأمريكتين، كوريا</td></tr></tbody></table>
+<p>#### 2.2 تحديات mmWave</p>
+<p>mmWave (24–52 GHz) هو ما يميز 5G عن 4G — يوفر نطاقاً ترددياً هائلاً (حتى 400 MHz لكل قناة) لكن له تحديات:</p>
+<table><thead><tr><th>التحدي</th><th>الوصف</th><th>الحل</th></tr></thead><tbody><tr><td><strong>المدى القصير</strong></td><td>100–500 م فقط</td><td>كثافة محطات أعلى (Small Cells)</td></tr><tr><td><strong>اختراق ضعيف</strong></td><td>يوقفه الزجاج والجدران</td><td>Small Cells داخلية + Mid Band للتغطية</td></tr><tr><td><strong>حساسية للطقس</strong></td><td>المطر يضعف الإشارة</td><td>هامش أعلى في تصميم الرابط</td></tr><tr><td><strong>حساسية لل vegetation</strong></td><td>الأشجار تمتص mmWave</td><td>ارتفاع الهوائي فوق الأشجار</td></tr><tr><td><strong>حركة المستخدم</strong></td><td>Doppler shift عالي</td><td>Beam Tracking سريع</td></tr></tbody></table>
+<p>#### 2.3 استراتيجية الطيف المتعدد (Spectrum Aggregation)</p>
+<p>5G يجمع عدة نطاقات ترددية في اتصال واحد:</p>
+<table><thead><tr><th>التقنية</th><th>الوصف</th><th>الفائدة</th></tr></thead><tbody><tr><td><strong>CA (Carrier Aggregation)</strong></td><td>دمج عدة قنوات من نطاقات مختلفة</td><td>سرعة أعلى + موثوقية</td></tr><tr><td><strong>DC (Dual Connectivity)</strong></td><td>اتصال متزامن مع 4G و 5G</td><td>انتقال سلس من 4G إلى 5G (NSA)</td></tr><tr><td><strong>SUL (Supplementary Uplink)</strong></td><td>استخدام Low Band للرفع و Mid Band للتنزيل</td><td>تحسين تغطية الرفع</td></tr><tr><td><strong>Dynamic Spectrum Sharing (DSS)</strong></td><td>مشاركة نفس التردد بين 4G و 5G</td><td>انتقال تدريجي بدون إيقاف 4G</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الثالث: المحطة القاعدية 5G (gNB)</h3>
+<p>#### 3.1 معمارية gNB</p>
+<p>المحطة القاعدية 5G (gNB) مختلفة جذرياً عن eNodeB في 4G:</p>
+<img src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="محطة قاعدية لاسلكية مع هوائيات" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>مكونات gNB:</strong></p>
+<table><thead><tr><th>المكون</th><th>الوصف</th><th>الموقع</th></tr></thead><tbody><tr><td><strong>CU (Centralized Unit)</strong></td><td>معالجة مستوى التحكم</td><td>مركزي (Cloud/Edge)</td></tr><tr><td><strong>DU (Distributed Unit)</strong></td><td>معالجة طبقة RLC/MAC</td><td>موزع (قرب الموقع)</td></tr><tr><td><strong>RU (Radio Unit)</strong></td><td>معالجة RF وطبقة PHY</td><td>في الموقع (الهوائي)</td></tr><tr><td><strong>Antennas</strong></td><td>هوائيات Massive MIMO</td><td>في الموقع</td></tr></tbody></table>
+<p><strong>خيارات نشر gNB (3GPP):</strong></p>
+<table><thead><tr><th>الخيار</th><th>البنية</th><th>التأخير (Fronthaul)</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>Option 1</strong></td><td>CU+DU+RU معاً (Integrated)</td><td>لا يوجد</td><td>المواقع الصغيرة</td></tr><tr><td><strong>Option 2</strong></td><td>CU+DU معاً، RU منفصل</td><td>منخفض (<100µs)</td><td>تقليدي</td></tr><tr><td><strong>Option 3</strong></td><td>CU منفصل، DU+RU معاً</td><td>متوسط</td><td>متوازن</td></tr><tr><td><strong>Option 4</strong></td><td>CU، DU، RU منفصلة</td><td>منخفض جداً (<100µs)</td><td>Cloud RAN</td></tr><tr><td><strong>Option 7-2x</strong></td><td>تقسيم داخل PHY (Lower/Higher)</td><td>متوسط</td><td>الأكثر شيوعاً</td></tr></tbody></table>
+<p>#### 3.2 Massive MIMO و Beamforming</p>
+<p><strong>Massive MIMO</strong> هو تقنية استخدام عدد كبير من هوائيات الإرسال والاستقبال (32T32R، 64T64R، 128T128R) في المحطة القاعدية:</p>
+<table><thead><tr><th>المعيار</th><th>4G (2T2R/4T4R)</th><th>5G (32T32R)</th><th>5G (64T64R)</th></tr></thead><tbody><tr><td>عدد الهوائيات</td><td>2–4</td><td>32</td><td>64</td></tr><tr><td>مستخدمين متزامنين (MU-MIMO)</td><td>2–4</td><td>8–16</td><td>16–24</td></tr><tr><td>كفاءة الطيف</td><td>1×</td><td>3–4×</td><td>4–6×</td></tr><tr><td>تغطية</td><td>ثابتة</td><td>موجهة (Beam)</td><td>موجهة بدقة</td></tr></tbody></table>
+<p><strong>Beamforming:</strong></p>
+<p>بدلاً من بث الإشارة في كل الاتجاهات (Omni/sector)، Beamforming يوجه الإشارة في حزمة ضيقة (Beam) نحو كل مستخدم:</p>
+<ul><li><strong>Analog Beamforming</strong>: حزمة واحدة في كل اتجاه — بسيط لكن محدود</li>
+<li><strong>Digital Beamforming</strong>: حزمة مستقلة لكل مستخدم — مرن لكن مكلف</li>
+<li><strong>Hybrid Beamforming</strong>: مزيج — عدد محدود من الحزم الرقمية مع توجيه تماثلي — <strong>المعيار العملي</strong></li>
+<p></ul></p>
+<p><strong>فوائد Beamforming:</strong></p>
+<ul><li>زيادة كسب الهوائي (Antenna Gain) بمقدار 10–15 dB</li>
+<li>تقليل التداخل مع المستخدمين الآخرين</li>
+<li>زيادة السعة بنسبة 3–8×</li>
+<li>تحسين تغطية حواف الخلية</li>
+<p></ul></p>
+<p>#### 3.3 أنواع المحطات القاعدية</p>
+<table><thead><tr><th>النوع</th><th>القدرة</th><th>المدى</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>Macro Cell</strong></td><td>10–40 واط</td><td>1–5 كم</td><td>تغطية واسعة</td></tr><tr><td><strong>Micro Cell</strong></td><td>1–10 واط</td><td>500 م–1 كم</td><td>تعبئة الفجوات</td></tr><tr><td><strong>Pico Cell</strong></td><td>0.25–1 واط</td><td>100–250 م</td><td>داخلية، مراكز تجارية</td></tr><tr><td><strong>Femto Cell</strong></td><td>0.01–0.1 واط</td><td>10–50 م</td><td>منازل، مكاتب صغيرة</td></tr><tr><td><strong>Small Cell (Integrated)</strong></td><td>0.25–6 واط</td><td>50–500 م</td><td>mmWave، كثافة عالية</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الرابع: تقنيات الراديو المتقدمة (Radio Technologies)</h3>
+<p>#### 4.1 OFDM والتعديل الرقمي</p>
+<p>5G يستخدم <strong>CP-OFDM (Cyclic Prefix — Orthogonal Frequency Division Multiplexing)</strong> في الـ Downlink و <strong>CP-OFDM أو DFT-s-OFDM</strong> في الـ Uplink:</p>
+<table><thead><tr><th>المعامل</th><th>4G LTE</th><th>5G NR</th></tr></thead><tbody><tr><td>Subcarrier Spacing</td><td>15 kHz ثابت</td><td>15، 30، 60، 120، 240 kHz (مرن)</td></tr><tr><td>عرض القناة</td><td>حتى 20 MHz</td><td>حتى 400 MHz (mmWave)</td></tr><tr><td>CP (Cyclic Prefix)</td><td>ثابت</td><td>عادي وممتد</td></tr><tr><td>التعديل</td><td>QPSK، 16QAM، 64QAM</td><td>QPSK، 16/64/256QAM، 1024QAM</td></tr><tr><td>Numerology</td><td>واحدة</td><td>متعددة (Flexible)</td></tr></tbody></table>
+<p><strong>Numerology المرن:</strong> 5G يتيح تغيير Subcarrier Spacing حسب التردد والاحتياج:</p>
+<ul><li>15 kHz: للتغطية الواسعة (Low Band)</li>
+<li>30 kHz: للمدن (Mid Band)</li>
+<li>60 kHz: للسرعات العالية</li>
+<li>120 kHz: لـ mmWave</li>
+<li>240 kHz: لـ SSB فقط</li>
+<p></ul></p>
+<p>#### 4.2 Slot Flexibility</p>
+<p>5G يدعم أطوال Slot مختلفة:</p>
+<table><thead><tr><th>نوع Slot</th><th>المدة (at 30 kHz)</th><th>الاستخدام</th></tr></thead><tbody><tr><td>Normal Slot</td><td>1 ms</td><td>بيانات عادية</td></tr><tr><td>Mini-Slot</td><td>0.125–0.5 ms</td><td>URLLC (تأخير منخفض)</td></tr><tr><td>SSB Burst</td><td>5 ms</td><td>مزامنة (كل 20 ms)</td></tr></tbody></table>
+<p>#### 4.3 Advanced Coding</p>
+<table><thead><tr><th>التقنية</th><th>الوصف</th><th>الفائدة</th></tr></thead><tbody><tr><td><strong>LDPC (Low-Density Parity Check)</strong></td><td>تشفير القناة للبيانات</td><td>كفاءة أعلى من Turbo Code (4G)</td></tr><tr><td><strong>Polar Coding</strong></td><td>تشفير قناة التحكم</td><td>أقرب من حد Shannon النظري</td></tr><tr><td><strong>Rate Matching</strong></td><td>تكييف معدل التشفير</td><td>مرونة في السرعة والموثوقية</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الخامس: فئات خدمات 5G (Service Categories)</h3>
+<p>#### 5.1 الثلاثية الذهبية لـ 5G</p>
+<p>5G يدعم ثلاث فئات خدمات متباينة تماماً، لكل منها متطلبات مختلفة:</p>
+<img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="رسم توضيحي لفئات خدمات 5G الثلاث" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<table><thead><tr><th>الفئة</th><th>الاسم</th><th>السرعة</th><th>التأخير</th><th>الموثوقية</th><th>كثافة الأجهزة</th><th>التطبيقات</th></tr></thead><tbody><tr><td><strong>eMBB</strong></td><td>Enhanced Mobile Broadband</td><td>10–20 Gbps</td><td>4 ms</td><td>99.9%</td><td>عادية</td><td>4K/8K، AR/VR، فيديو</td></tr><tr><td><strong>URLLC</strong></td><td>Ultra-Reliable Low-Latency Communications</td><td>0.1–1 Gbps</td><td>1 ms</td><td>99.999%</td><td>عادية</td><td>جراحة عن بُعد، مركبات ذاتية، أتمتة صناعي</td></tr><tr><td><strong>mMTC</strong></td><td>Massive Machine-Type Communications</td><td>منخفضة</td><td>غير حرج</td><td>99%</td><td>1M/كم²</td><td>IoT، مستشعرات، مدن ذكية</td></tr></tbody></table>
+<p>#### 5.2 eMBB — النطاق العريض المعزز</p>
+<p>eMBB هو التطوير المباشر لـ 4G — سرعات أعلى بكثير:</p>
+<p><strong>تطبيقات eMBB:</strong></p>
+<ul><li><strong>فيديو 8K</strong>: يحتاج 100 Mbps لكل جهاز</li>
+<li><strong>AR/VR</strong>: يحتاج 1 Gbps + تأخير <10 ms</li>
+<li><strong>Cloud Gaming</strong>: يحتاج 50 Mbps + تأخير <5 ms</li>
+<li><strong>Fixed Wireless Access (FWA)</strong>: بديل للألياف للمنازل — سرعة 1 Gbps لاسلكياً</li>
+<li><strong>ملفات كبيرة</strong>: تحميل فيلم 4K (50 GB) في 20 ثانية</li>
+<p></ul></p>
+<p>#### 5.3 URLLC — الموثوقية الفائقة والتأخير المنخفض</p>
+<p>URLLC هو ما يجعل 5G مختلفاً عن كل الأجيال السابقة:</p>
+<p><strong>تطبيقات URLLC:</strong></p>
+<table><thead><tr><th>التطبيق</th><th>التأخير المطلوب</th><th>الموثوقية</th><th>السرعة</th></tr></thead><tbody><tr><td>جراحة عن بُعد</td><td><1 ms</td><td>99.999%</td><td>10 Mbps</td></tr><tr><td>مركبات ذاتية القيادة (V2X)</td><td><3 ms</td><td>99.999%</td><td>10–100 Mbps</td></tr><tr><td>أتمتة صناعي</td><td><1 ms</td><td>99.999%</td><td>1–10 Mbps</td></tr><tr><td>طاقة ذكية (Smart Grid)</td><td><5 ms</td><td>99.99%</td><td>1 Mbps</td></tr><tr><td>ألعاب سحابية</td><td><5 ms</td><td>99.9%</td><td>50 Mbps</td></tr></tbody></table>
+<p><strong>كيف يحقق 5G التأخير <1 ms؟</strong></p>
+<ul><li>Mini-Slots (0.125 ms)</li>
+<li>Numerology أعلى (120 kHz SCS)</li>
+<li>URLLC Preemption: URLLC يمكن أن يقاطع eMBB للإرسال الفوري</li>
+<li>Network Slicing مخصص لـ URLLC</li>
+<li>Edge Computing (UPF قرب المستخدم)</li>
+<p></ul></p>
+<p>#### 5.4 mMTC — إنترنت الأشياء الكثيف</p>
+<p>mMTC يدعم مليون جهاز لكل كم²:</p>
+<table><thead><tr><th>التقنية</th><th>الاستخدام</th><th>المدة</th><th>استهلاك الطاقة</th></tr></thead><tbody><tr><td>NB-IoT</td><td>مستشعرات بطيئة</td><td>سنوات</td><td>بطارية 10+ سنوات</td></tr><tr><td>LTE-M</td><td>IoT متوسط</td><td>سنوات</td><td>بطارية 5–10 سنوات</td></tr><tr><td>NR-Light (RedCap)</td><td>IoT متوسط السرعة</td><td>شهور</td><td>بطارية أشهر</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب السادس: Network Slicing — شرائح الشبكة</h3>
+<p>#### 6.1 مفهوم Network Slicing</p>
+<p>Network Slicing هو <strong>أهم ابتكار في 5G</strong> — إنشاء شبكات افتراضية متعددة على نفس البنية التحتية الفعلية، كل شريحة مخصصة لفئة خدمة معينة:</p>
+<table><thead><tr><th>الشريحة</th><th>فئة الخدمة</th><th>الموارد المخصصة</th><th>التطبيق</th></tr></thead><tbody><tr><td>شريحة eMBB</td><td>نطاق عريض</td><td>عرض نطاق عالي، تأخير عادي</td><td>فيديو، إنترنت</td></tr><tr><td>شريحة URLLC</td><td>موثوقية فائقة</td><td>تأخير منخفض، موثوقية 99.999%</td><td>صناعة، صحة</td></tr><tr><td>شريحة mMTC</td><td>IoT كثيف</td><td>اتصالات كثيفة، سرعة منخفضة</td><td>مستشعرات</td></tr><tr><td>شريحة FWA</td><td>وصول ثابت</td><td>عرض نطاق مخصص</td><td>بديل الألياف</td></tr><tr><td>شريحة Enterprise</td><td>أعمال</td><td>VPN، أمان، SLA</td><td>شركات</td></tr></tbody></table>
+<p>#### 6.2 كيف تعمل Network Slicing</p>
+<p><strong>مكونات Network Slicing:</strong></p>
+<ul><li><strong>NSSAI (Network Slice Selection Assistance Information)</strong>: معرّف الشريحة في رسالة التسجيل</li>
+<li><strong>NSSF</strong>: يوجّه المستخدم للشريحة المناسبة</li>
+<li><strong>Network Slice Instance</strong>: موارد مخصصة (RAN، Transport، Core)</li>
+<li><strong>Slice Management</strong>: إنشاء، تعديل، حذف الشرائح (MANO)</li>
+<p></ul></p>
+<p><strong>مستويات العزل في Network Slicing:</strong></p>
+<table><thead><tr><th>المستوى</th><th>العزل</th><th>الاستخدام</th></tr></thead><tbody><tr><td>RAN Slicing</td><td>موارد راديو مخصصة</td><td>أولوية في الجدولة</td></tr><tr><td>Transport Slicing</td><td>VLAN/MPLS مخصص</td><td>عزل في النقل</td></tr><tr><td>Core Slicing</td><td>NFs مخصصة</td><td>AMF/SMF/UPF مستقلة</td></tr><tr><td>End-to-End Slicing</td><td>عزل كامل</td><td>أعلى مستوى (Enterprise)</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب السابع: تصميم التغطية والسعة (Coverage & Capacity Planning)</h3>
+<p>#### 7.1 تخطيط التغطية</p>
+<p>تخطيط تغطية 5G معقد بسبب النطاقات الترددية الثلاث:</p>
+<p><strong>خطوات تخطيط التغطية:</strong></p>
+<ul><li><strong>تحديد المنطقة المستهدفة</strong>: حدود جغرافية، كثافة سكانية، استخدام الأرض</li>
+<li><strong>اختيار النطاق الترددي</strong>: Low Band للتغطية الواسعة، Mid Band للمدن، mmWave للنقاط الساخنة</li>
+<li><strong>حساب ميزانية الرابط (Link Budget)</strong>: قوة الإرسال، الفقدان، كسب الهوائي، حساسية الاستقبال</li>
+<li><strong>تحديد المسافة بين المواقع (Inter-Site Distance)</strong>: حسب المدى المتوقع</li>
+<li><strong>محاكاة التغطية</strong>: أداة تخطيط RF (Atoll، Planet، Asset)</li>
+<li><strong>تحسين المواقع</strong>: تعديل الارتفاع، الميل، الطاقة</li>
+<p></ul></p>
+<p><strong>مثال Link Budget لـ Mid Band (3.5 GHz):</strong></p>
+<table><thead><tr><th>المعامل</th><th>القيمة</th></tr></thead><tbody><tr><td>قوة إرسال gNB</td><td>46 dBm (40 W)</td></tr><tr><td>كسب هوائي gNB</td><td>23 dBi (Massive MIMO)</td></tr><tr><td>الفقدان في الكابل</td><td>1 dB</td></tr><tr><td>EIRP</td><td>68 dBm</td></tr><tr><td>فقدان المسار (1 km، urban)</td><td>128 dB</td></tr><tr><td>كسب هوائي UE</td><td>0 dBi</td></tr><tr><td>حساسية استقبال UE</td><td>-94 dBm</td></tr><tr><td>إشارة مستلمة</td><td>68 - 128 + 0 = -60 dBm</td></tr><tr><td>هامش</td><td>-60 - (-94) = 34 dB ✅</td></tr></tbody></table>
+<p>#### 7.2 تخطيط السعة</p>
+<p>5G يحتاج تخطيط سعة مختلف عن 4G بسبب تنوع الخدمات:</p>
+<table><thead><tr><th>المعامل</th><th>الحساب</th><th>المثال</th></tr></thead><tbody><tr><td>عدد المستخدمين النشطين</td><td>تقدير</td><td>500/خلية</td></tr><tr><td>متوسط الاستهلاك لكل مستخدم</td><td>تقدير</td><td>20 Mbps</td></tr><tr><td>إجمالي الطلب</td><td>500 × 20</td><td>10 Gbps</td></tr><tr><td>سعة الخلية (Mid Band، 100 MHz)</td><td>تقدير</td><td>4–6 Gbps</td></tr><tr><td>عدد الخلايا المطلوبة</td><td>10 / 5</td><td>2 (طبقات)</td></tr></tbody></table>
+<p><strong>استراتيجيات زيادة السعة:</strong></p>
+<table><thead><tr><th>الاستراتيجية</th><th>الوصف</th><th>التحسن</th></tr></thead><tbody><tr><td><strong>تقسيم الخلايا (Cell Splitting)</strong></td><td>خلايا أصغر وأكثر</td><td>2–4×</td></tr><tr><td><strong>Massive MIMO</strong></td><td>هوائيات أكثر</td><td>3–6×</td></tr><tr><td><strong>Carrier Aggregation</strong></td><td>دمج نطاقات</td><td>2–5×</td></tr><tr><td><strong>Small Cells</strong></td><td>خلايا صغيرة كثيفة</td><td>5–10×</td></tr><tr><td><strong>Beamforming</strong></td><td>توجيه الحزمة</td><td>2–4×</td></tr><tr><td><strong>Offloading to Wi-Fi</strong></td><td>تفريغ على Wi-Fi</td><td>متغير</td></tr></tbody></table>
+<p>#### 7.3 تخطيط السعة لـ mmWave</p>
+<p>mmWave يحتاج كثافة مواقع أعلى بكثير:</p>
+<table><thead><tr><th>البيئة</th><th>المسافة بين المواقع</th><th>كثافة المواقع/كم²</th></tr></thead><tbody><tr><td>كثيف حضري (Dense Urban)</td><td>100–200 م</td><td>25–100</td></tr><tr><td>حضري (Urban)</td><td>200–400 م</td><td>6–25</td></tr><tr><td>ضواحي (Suburban)</td><td>400–800 م</td><td>1.5–6</td></tr><tr><td>داخلية (Indoor)</td><td>20–50 م</td><td>400–2500</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الثامن: شبكة النقل (Transport Network)</h3>
+<p>#### 8.1 متطلبات شبكة النقل لـ 5G</p>
+<p>شبكة النقل (Fronthaul/Midhaul/Backhaul) هي <strong>العنقود الذي يربط</strong> المحطات القاعدية بالـ Core:</p>
+<table><thead><tr><th>النوع</th><th>بين</th><th>التأخير المطلوب</th><th>السعة المطلوبة</th><th>التقنية</th></tr></thead><tbody><tr><td><strong>Fronthaul</strong></td><td>RU ↔ DU</td><td><100 µs (Option 7)</td><td>10–100 Gbps</td><td>الألياف الضوئية</td></tr><tr><td><strong>Midhaul</strong></td><td>DU ↔ CU</td><td><1 ms</td><td>10–50 Gbps</td><td>الألياف / Microwave</td></tr><tr><td><strong>Backhaul</strong></td><td>CU ↔ Core</td><td><10 ms</td><td>10–100 Gbps</td><td>الألياف / Microwave</td></tr></tbody></table>
+<p>#### 8.2 تقنيات النقل</p>
+<table><thead><tr><th>التقنية</th><th>السعة</th><th>التأخير</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>Fiber (Dark)</strong></td><td>غير محدود</td><td><1 ms</td><td>الأفضل — Fronthaul</td></tr><tr><td><strong>CPRI/eCPRI</strong></td><td>10–100 Gbps</td><td><100 µs</td><td>Fronthaul (RU↔DU)</td></tr><tr><td><strong>Microwave E-Band</strong></td><td>1–10 Gbps</td><td><1 ms</td><td>Backhaul (خط بصر)</td></tr><tr><td><strong>Microwave Traditional</strong></td><td>1–3 Gbps</td><td><1 ms</td><td>Backhaul (Non-LoS)</td></tr><tr><td><strong>mmWave Backhaul</strong></td><td>5–10 Gbps</td><td><1 ms</td><td>Backhaul (خط بصر قصير)</td></tr><tr><td><strong>Satellite</strong></td><td>100 Mbps–1 Gbps</td><td>20–50 ms</td><td>المناطق النائية</td></tr></tbody></table>
+<p>#### 8.3 تصميم شبكة النقل بالألياف</p>
+<p><strong>نموذج C-RAN المركزي:</strong></p>
+<p>في C-RAN (Centralized RAN)، تُجمّع عدة DUs في موقع مركزي (Hub)، وتمتد الألياف من Hub إلى كل RU:</p>
+<table><thead><tr><th>المعيار</th><th>القيمة</th></tr></thead><tbody><tr><td>عدد RUs لكل Hub</td><td>20–100</td></tr><tr><td>مسافة Hub↔RU</td><td>حتى 10–20 كم</td></tr><tr><td>السعة لكل RU (CPRI)</td><td>10–25 Gbps</td></tr><tr><td>إجمالي السعة للـ Hub</td><td>200 Gbps–2.5 Tbps</td></tr><tr><td>التقنية</td><td>DWDM (قنوات لونية متعددة)</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب التاسع: الأمن في شبكات 5G</h3>
+<p>#### 9.1 تحديات أمن 5G</p>
+<p>5G يقدم تحديات أمنية جديدة:</p>
+<table><thead><tr><th>التحدي</th><th>الوصف</th><th>الخطر</th></tr></thead><tbody><tr><td><strong>مساحة هجوم أكبر</strong></td><td>NFs أكثر، APIs، Edge</td><td>عالي</td></tr><tr><td><strong>Network Slicing</strong></td><td>عزل غير كافٍ بين الشرائح</td><td>متوسط</td></tr><tr><td><strong>IoT كثيف</strong></td><td>مليون جهاز/كم² — أجهزة ضعيفة</td><td>عالي</td></tr><tr><td><strong>Edge Computing</strong></td><td>مواقع موزعة — حماية أصعب</td><td>متوسط</td></tr><tr><td><strong>Supply Chain</strong></td><td>معدات من مصادر متعددة</td><td>متوسط</td></tr><tr><td><strong>Privacy</strong></td><td>بيانات موقع أكثر دقة</td><td>عالي</td></tr></tbody></table>
+<p>#### 9.2 آليات الأمن في 5G</p>
+<table><thead><tr><th>الآلية</th><th>الوصف</th><th>المعيار</th></tr></thead><tbody><tr><td><strong>5G AKA</strong></td><td>مصادقة محسّنة عن 4G</td><td>3GPP TS 33.501</td></tr><tr><td><strong>EAP-AKA'</strong></td><td>مصادقة بديلة</td><td>3GPP</td></tr><tr><td><strong>Null Authentication</strong></td><td>اتصال طوارئ بدون مصادقة</td><td>3GPP</td></tr><tr><td><strong>SUPI Concealment</strong></td><td>تشفير هوية المشترك (SUCI)</td><td>جديد في 5G</td></tr><tr><td><strong>Slice Isolation</strong></td><td>عزل بين الشرائح</td><td>3GPP</td></tr><tr><td><strong>Edge Security</strong></td><td>حماية UPF الموزعة</td><td>3GPP</td></tr><tr><td><strong>Zero Trust</strong></td><td>لا ثقة افتراضية — تحقق مستمر</td><td>NIST</td></tr></tbody></table>
+<p><strong>SUPI Concealment — ابتكار 5G:</strong></p>
+<p>في 4G، هوية المشترك (IMSI) تُرسل غير مشفرة في رسالة التسجيل — مما يتيح تتبع المشترك (IMSI Catcher). في 5G، تم استبدال SUPI بـ <strong>SUCI (Subscription Concealed Identifier)</strong> — مشفرة بمفتاح عام للمشغل. هذا يمنع التتبع والاعتراض.</p>
+<p>---</p>
+<h3>الباب العاشر: نشر 5G — NSA و SA</h3>
+<p>#### 10.1 النشر غير المستقل (NSA — Non-Standalone)</p>
+<p>معظم المشغلين بدأوا بـ NSA — باستخدام 4G Core (EPC) مع 5G NR:</p>
+<table><thead><tr><th>المعيار</th><th>الوصف</th></tr></thead><tbody><tr><td>Core</td><td>4G EPC</td></tr><tr><td>RAN</td><td>4G eNodeB (Anchor) + 5G gNB</td></tr><tr><td>التحكم</td><td>4G (eNodeB)</td></tr><tr><td>البيانات</td><td>4G + 5G (Dual Connectivity)</td></tr><tr><td>الميزة</td><td>نشر سريع، استثمار 4G</td></tr><tr><td>العيب</td><td>لا يدعم Network Slicing، URLLC</td></tr></tbody></table>
+<p><strong>خيارات NSA (3GPP):</strong></p>
+<table><thead><tr><th>الخيار</th><th>الوصف</th></tr></thead><tbody><tr><td><strong>Option 3</strong></td><td>eNodeB هو Master، gNB هو Secondary (EN-DC)</td></tr><tr><td><strong>Option 3a</strong></td><td>كل من eNB و gNB يتصلان بـ EPC مباشرة</td></tr><tr><td><strong>Option 3x</strong></td><td>gNB يتولى تقسيم البيانات</td></tr></tbody></table>
+<p>#### 10.2 النشر المستقل (SA — Standalone)</p>
+<p>SA هو 5G الحقيقي — 5G Core (5GC) مع 5G NR:</p>
+<table><thead><tr><th>المعيار</th><th>الوصف</th></tr></thead><tbody><tr><td>Core</td><td>5GC (AMF، SMF، UPF...)</td></tr><tr><td>RAN</td><td>5G gNB فقط</td></tr><tr><td>التحكم</td><td>5G (gNB)</td></tr><tr><td>الميزة</td><td>كل ميزات 5G (Slicing، URLLC، Network Exposure)</td></tr><tr><td>العيب</td><td>استثمار أكبر، نشر أبطأ</td></tr></tbody></table>
+<p>#### 10.3 استراتيجية الانتقال من NSA إلى SA</p>
+<table><thead><tr><th>المرحلة</th><th>النشر</th><th>المدة</th><th>المخرجات</th></tr></thead><tbody><tr><td>1. NSA Launch</td><td>EN-DC (Option 3x)</td><td>0–12 شهر</td><td>5G سرعة أعلى</td></tr><tr><td>2. SA Core</td><td>5GC + NSA</td><td>6–18 شهر</td><td>Slicing جاهز</td></tr><tr><td>3. SA Migration</td><td>SA للخدمات الجديدة</td><td>12–24 شهر</td><td>URLLC، mMTC</td></tr><tr><td>4. Full SA</td><td>إيقاف 4G Core</td><td>24–48 شهر</td><td>5G كامل</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الحادي عشر: Edge Computing و MEC</h3>
+<p>#### 11.1 Mobile Edge Computing (MEC)</p>
+<p>MEC هو <strong>نقل الحوسبة من المركز إلى حافة الشبكة</strong> — قرب المستخدم:</p>
+<img src="https://images.pexels.com/photos/7779361/pexels-photo-7779361.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="مركز بيانات صغير في حافة الشبكة" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>فوائد MEC:</strong></p>
+<ul><li><strong>تأخير منخفض</strong>: الحوسبة قرب المستخدم (<5 ms بدل 50+ ms)</li>
+<li><strong>تخفيف النطاق</strong>: معالجة محلية بدل إرسال للسحابة</li>
+<li><strong>خصوصية</strong>: البيانات الحساسة لا تغادر الموقع</li>
+<li><strong>موثوقية</strong>: يعمل حتى عند انقطاع السحابة</li>
+<p></ul></p>
+<p><strong>تطبيقات MEC:</strong></p>
+<table><thead><tr><th>التطبيق</th><th>لماذا MEC</th><th>التأخير المطلوب</th></tr></thead><tbody><tr><td>AR/VR</td><td>معالجة فورية</td><td><10 ms</td></tr><tr><td>مركبات ذاتية القيادة</td><td>قرارات حياتية</td><td><3 ms</td></tr><tr><td>مصنع ذكي</td><td>تحكم في الزمن الحقيقي</td><td><1 ms</td></tr><tr><td>Cloud Gaming</td><td>استجابة فورية</td><td><5 ms</td></tr><tr><td>تحليل فيديو ذكي</td><td>معالجة محلية</td><td><20 ms</td></tr></tbody></table>
+<p>#### 11.2 نشر MEC في 5G</p>
+<p><strong>النموذج المعماري:</strong></p>
+<ul><li>UPF في موقع MEC (قرب gNB)</li>
+<li>التطبيقات تعمل على نفس الخادم مع UPF</li>
+<li>N6 interface يربط MEC بالإنترنت المحلي</li>
+<li>MEC Platform Manages (MPM) يدير التطبيقات</li>
+<p></ul></p>
+<p>---</p>
+<h3>الباب الثاني عشر: Open RAN و vRAN</h3>
+<p>#### 12.1 Virtualized RAN (vRAN)</p>
+<p>vRAN يفصل البرمجيات عن الأجهزة:</p>
+<table><thead><tr><th>المعيار</th><th>Traditional RAN</th><th>vRAN</th></tr></thead><tbody><tr><td>CU/DU</td><td>أجهزة مخصصة</td><td>برمجيات على COTS servers</td></tr><tr><td>التكلفة</td><td>عالية</td><td>أقل (hardware عام)</td></tr><tr><td>المرونة</td><td>محدودة</td><td>عالية (قابل للبرمجة)</td></tr><tr><td>التوسعة</td><td>بطيئة</td><td>سريعة (إضافة موارد)</td></tr><tr><td>التحديث</td><td>استبدال أجهزة</td><td>تحديث برمجيات</td></tr></tbody></table>
+<p>#### 12.2 Open RAN (O-RAN)</p>
+<p>O-RAN يفتح معايير RAN للتكامل بين موردين مختلفين:</p>
+<table><thead><tr><th>المبدأ</th><th>الوصف</th><th>الفائدة</th></tr></thead><tbody><tr><td><strong>Open Interfaces</strong></td><td>واجهات قياسية (Open Fronthaul)</td><td>مزج معدات من موردين مختلفين</td></tr><tr><td><strong>RIC (RAN Intelligent Controller)</strong></td><td>تحكم ذكي قائم على AI</td><td>تحسين تلقائي للشبكة</td></tr><tr><td><strong>Disaggregation</strong></td><td>فصل RU، DU، CU</td><td>اختيار أفضل مورّد لكل مكون</td></tr><tr><td><strong>Cloud-Native</strong></td><td>بنية سحابية</td><td>مرونة وتوسعة</td></tr></tbody></table>
+<p><strong>تحديات O-RAN:</strong></p>
+<ul><li>تكامل بين موردين مختلفين (Interoperability)</li>
+<li>أداء قد يكون أقل من الحلول المتكاملة</li>
+<li>دعم الموردين الكبار (Huawei، Ericsson) محدود</li>
+<p></ul></p>
+<p>---</p>
+<h3>الباب الثالث عشر: دراسة حالة وتطبيقات عملية</h3>
+<p>#### 13.1 دراسة حالة: نشر 5G لمدينة متوسطة</p>
+<p><strong>المشروع</strong>: نشر 5G لمدينة بـ 500,000 نسمة، مساحة 200 كم².</p>
+<p><strong>التصميم:</strong></p>
+<table><thead><tr><th>الطبقة</th><th>النطاق</th><th>عدد المواقع</th><th>السعة</th></tr></thead><tbody><tr><td>تغطية واسعة</td><td>700 MHz (n28)</td><td>80 موقع (Macro)</td><td>200 Mbps/خلية</td></tr><tr><td>طبقة السعة</td><td>3.5 GHz (n78)</td><td>250 موقع (Macro + Small Cell)</td><td>5 Gbps/خلية</td></tr><tr><td>نقاط ساخنة</td><td>26 GHz (n258)</td><td>50 موقع (Small Cell)</td><td>20 Gbps/خلية</td></tr><tr><td><strong>الإجمالي</strong></td><td>ثلاث طبقات</td><td>380 موقع</td><td>—</td></tr></tbody></table>
+<p><strong>النقل:</strong></p>
+<ul><li>Fronthaul: ألياف ضوئية لكل موقع (DWDM)</li>
+<li>Backhaul: ألياف + Microwave E-Band للمواقع البعيدة</li>
+<p></ul></p>
+<p><strong>Core:</strong></p>
+<ul><li>5GC SA مع 4 شرائح (eMBB، URLLC، mMTC، Enterprise)</li>
+<li>MEC في 5 مواقع موزعة</li>
+<p></ul></p>
+<p>#### 13.2 تطبيقات صناعية</p>
+<p><strong>مصنع ذكي (Smart Factory):</strong></p>
+<ul><li>شبكة 5G خاصة (Private 5G)</li>
+<li>URLLC لتحكم الروبوتات (<1 ms)</li>
+<li>mMTC لآلاف المستشعرات</li>
+<li>MEC لمعالجة محلية</li>
+<li>Network Slicing: شريحة إنتاج + شريحة صيانة + شريحة إدارة</li>
+<p></ul></p>
+<p><strong>ميناء ذكي (Smart Port):</strong></p>
+<ul><li>5G للتحكم في الرافعات عن بُعد</li>
+<li>AR لتوجيه العمال</li>
+<li>تتبع الحاويات بـ IoT</li>
+<li>مركبات ذاتية القيادة داخل الميناء</li>
+<p></ul></p>
+<p><strong>مستشفى ذكي:</strong></p>
+<ul><li>5G للجراحة عن بُعد (URLLC)</li>
+<li>نقل صور طبية كبيرة (eMBB — صور MRI 3D)</li>
+<li>تتبع المعدات الطبية (mMTC)</li>
+<li>عزل شبكة المرضى عن الزوار (Slicing)</li>
+<p></ul></p>
+<p>---</p>
+<h3>الباب الرابع عشر: الاتجاهات المستقبلية</h3>
+<p>#### 14.1 5G-Advanced (Release 18+)</p>
+<table><thead><tr><th>الميزة</th><th>الوصف</th><th>الإصدار</th></tr></thead><tbody><tr><td><strong>AI/ML Native</strong></td><td>ذكاء اصطناعي مدمج في الشبكة</td><td>Rel-18</td></tr><tr><td><strong>Network Energy Saving</strong></td><td>تقليل استهلاك الطاقة 30%+</td><td>Rel-18</td></tr><tr><td><strong>RedCap (NR-Light)</strong></td><td>IoT متوسط السرعة اقتصادي</td><td>Rel-17/18</td></tr><tr><td><strong>UAV (Drones)</strong></td><td>دعم الطائرات بدون طيار</td><td>Rel-18</td></tr><tr><td><strong>NTN (Non-Terrestrial Networks)</strong></td><td>شبكات فضائية (أقمار LEO)</td><td>Rel-17/18</td></tr><tr><td><strong>Deterministic Networking</strong></td><td>تأخير مضمون</td><td>Rel-18</td></tr><tr><td><strong>Full Duplex</strong></td><td>إرسال واستقبال متزامن</td><td>Rel-19+</td></tr></tbody></table>
+<p>#### 14.2 6G — النظرة المستقبلية</p>
+<table><thead><tr><th>المعيار</th><th>5G</th><th>6G (متوقع 2030)</th></tr></thead><tbody><tr><td>سرعة الذروة</td><td>20 Gbps</td><td>1 Tbps</td></tr><tr><td>التأخير</td><td>1 ms</td><td>0.1 ms</td></tr><tr><td>الترددات</td><td>حتى 52 GHz</td><td>100 GHz – 1 THz</td></tr><tr><td>الذكاء الاصطناعي</td><td>مساعد</td><td>مدمج بالكامل</td></tr><tr><td>التطبيقات</td><td>IoT، URLLC</td><td>holographic، brain-computer</td></tr></tbody></table>
+<p>---</p>
+<h3>الأسئلة الشائعة (FAQ)</h3>
+<p><strong>س: ما الفرق الأساسي بين 5G و 4G؟</strong></p>
+<p>ج: 5G ليس مجرد سرعة أعلى. يقدم ثلاث فئات خدمات (eMBB، URLLC، mMTC)، يستخدم طيف جديد (mmWave)، يدعم Network Slicing، معمارية قائمة على الخدمات (SBA)، و Edge Computing. 4G لا يدعم أي من هذه.</p>
+<p><strong>س: هل أحتاج ألياف ضوئية لكل موقع 5G؟</strong></p>
+<p>ج: للمواقع mmWave و C-RAN، نعم — الألياف ضرورية لـ Fronthaul (تأخير <100µs). للمواقع Mid/Low Band، يمكن استخدام Microwave E-Band (1–10 Gbps) كـ Backhaul. لكن الألياف دائماً أفضل.</p>
+<p><strong>س: ما هو Network Slicing ولماذا مهم؟</strong></p>
+<p>ج: Network Slicing ينشئ شبكات افتراضية متعددة على نفس البنية التحتية. كل شريحة مخصصة لفئة خدمة (مثلاً: شريحة URLLC للصناعة، شريحة eMBB للفيديو). يتيح تخصيص الموارد وتقديم SLAs مختلفة على نفس الشبكة.</p>
+<p><strong>س: ما الفرق بين NSA و SA؟</strong></p>
+<p>ج: NSA (Non-Standalone) يستخدم 4G Core مع 5G RAN — نشر سريع لكن لا يدعم كل ميزات 5G. SA (Standalone) يستخدم 5G Core و 5G RAN — يدعم كل الميزات (Slicing، URLLC، Network Exposure). ابدأ بـ NSA ثم انتقل لـ SA.</p>
+<p><strong>س: هل mmWave آمن صحياً؟</strong></p>
+<p>ج: mmWave (24–52 GHz) لا يخترق الجلد (عمق اختراق <1 مم). دراسات WHO و ICNIRP تؤكد أن mmWave ضمن حدود التعرض المسموحة آمن. 5G يلتزم بمعايير ICNIRP الدولية للإشعاع غير المؤين.</p>
+<p><strong>س: كم موقع 5G أحتاج لتغطية مدينة؟</strong></p>
+<p>ج: يعتمد على النطاق الترددي. Low Band (700 MHz): موقع كل 5–10 كم. Mid Band (3.5 GHz): موقع كل 1–3 كم. mmWave (26 GHz): موقع كل 100–300 م. استخدم تخطيط RF متعدد الطبقات.</p>
+<p><strong>س: ما هو Massive MIMO وكيف يزيد السعة؟</strong></p>
+<p>ج: Massive MIMO يستخدم 32–128 هوائي في المحطة القاعدية. يوجه حزمة مخصصة لكل مستخدم (Beamforming) بدلاً من البث في كل الاتجاهات. يزيد السعة 3–8× ويقلل التداخل.</p>
+<p><strong>س: هل يمكن لمصنع تشغيل شبكة 5G خاصة؟</strong></p>
+<p>ج: نعم. Private 5G (Non-Public Network — NPN) يتيح للمصانع تشغيل شبكة 5G مستقلة داخل المنشأة. يمكن استخدام طيف مخصص (مثل 3.7–3.8 GHz في بعض الدول) أو طيف المشغل مع Network Slicing.</p>
+<p>---</p>
+<h3>الخلاصة والتوصيات</h3>
+<p>تصميم شبكة 5G هو <strong>أعقد تحدٍ هندسي في تاريخ الاتصالات</strong>. البنية متعددة الطبقات، الطيف المتنوع، فئات الخدمات الثلاث، Network Slicing، و Edge Computing — كلها تتطلب تخطيطاً دقيقاً وتكاملاً عميقاً.</p>
+<p><strong>توصيات عملية:</strong></p>
+<ul><li><strong>ابدأ بـ NSA ثم انتقل لـ SA</strong> — استفد من 4G الموجود ثم أضف 5GC</li>
+<li><strong>استثمر في الألياف</strong> — شبكة النقل بالألياف هي أساس 5G</li>
+<li><strong>خطط متعدد الطبقات</strong> — Low Band للتغطية + Mid Band للسعة + mmWave للنقاط الساخنة</li>
+<li><strong>فعّل Massive MIMO</strong> — 32T32R كحد أدنى في Mid Band</li>
+<li><strong>صمم Network Slicing من البداية</strong> — لا تضيفه لاحقاً</li>
+<li><strong>انشر MEC استراتيجياً</strong> — 3–10 مواقع لكل مدينة</li>
+<li><strong>خطط للطاقة</strong> — 5G يستهلك طاقة أعلى — استثمر في كفاءة الطاقة</li>
+<li><strong>أتمت العمليات</strong> — SON (Self-Organizing Network) و AI للتحسين التلقائي</li>
+<li><strong>أمن من البداية</strong> — Zero Trust، SUPI Concealment، Slice Isolation</li>
+<li><strong>استعد لـ 5G-Advanced</strong> — Release 18+ سيجلب AI/ML و NTN</li>
+<p></ul></p>
+<p>---</p>
+<h3>المراجع</h3>
+<ul><li>3GPP TS 38.300 — NR; NR and NG-RAN Overall Description</li>
+<li>3GPP TS 23.501 — System Architecture for the 5G System (5GS)</li>
+<li>3GPP TS 33.501 — Security Architecture and Procedures for 5G System</li>
+<li>3GPP TR 38.913 — Study on Scenarios and Requirements for Next Generation Access Technologies</li>
+<li>ITU-R M.2083 — IMT-2020 Vision: Framework and Overall Objectives</li>
+<li>3GPP Release 17/18 — 5G-Advanced Specifications</li>
+<li>NGMN Alliance — 5G Network Design Guidelines, 2024</li>
+<li>O-RAN Alliance — Open RAN Architecture and Specifications</li>
+<li>GSMA — 5G Network Slicing Implementation Guidelines, 2024</li>
+<li>ETSI MEC — Multi-access Edge Computing Framework, 2024</li></ul></div>
+
+            <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
+              <div class="share-buttons">
+                <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">مشاركة:</span>
+                <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/ar/articles/5g-network-design-complete-guide.html&text=تصميم شبكات الجيل الخامس (5G Network Design): الدليل الشامل من المعمارية إلى التشغيل" target="_blank" rel="noopener">𝕏 Twitter</a>
+                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/ar/articles/5g-network-design-complete-guide.html" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/ar/articles/5g-network-design-complete-guide.html" target="_blank" rel="noopener">Facebook</a>
+                <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
+              </div>
+            </div>
+
+            
+            <div class="article-tags" style="margin:1.5rem 0;">
+              <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">الوسوم:</span>
+              <a href="../articles/index.html?tag=5G" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#5G</a><a href="../articles/index.html?tag=Network Design" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Network Design</a><a href="../articles/index.html?tag=Massive MIMO" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Massive MIMO</a><a href="../articles/index.html?tag=Network Slicing" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Network Slicing</a><a href="../articles/index.html?tag=mmWave" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#mmWave</a><a href="../articles/index.html?tag=Beamforming" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Beamforming</a><a href="../articles/index.html?tag=URLLC" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#URLLC</a><a href="../articles/index.html?tag=eMBB" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#eMBB</a><a href="../articles/index.html?tag=mMTC" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#mMTC</a><a href="../articles/index.html?tag=Edge Computing" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Edge Computing</a><a href="../articles/index.html?tag=Open RAN" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Open RAN</a><a href="../articles/index.html?tag=Telecommunications" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Telecommunications</a>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
+
+            <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← العودة للمقالات</a>
+          </div>
+
+          <aside class="article-sidebar">
+            <div style="margin-top:2rem;">
+              <div class="article-lang-switch">
+                <button class="" data-lang="en">🇺🇸 EN</button>
+                <button class="active" data-lang="ar">🇸🇦 ع</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -69,6 +409,6 @@
   <script src="../../assets/js/i18n.js?v=2"></script>
   <script src="../../assets/js/components.js?v=4"></script>
   <script src="../../assets/js/core.js?v=6"></script>
-  <script src="../../assets/js/article.js?v=8"></script>
+  <script src="../../assets/js/article.js?v=9"></script>
 </body>
 </html>

@@ -272,70 +272,90 @@
       document.documentElement.setAttribute('lang', lang);
       document.documentElement.setAttribute('dir', DIR);
 
-      // Update SEO
-      updateSEO(article, data);
-
-      // Hero
-      const heroEl = document.getElementById('article-hero');
-      const heroImg = article.heroImage || '';
-      heroEl.innerHTML = `
-        ${heroImg ? `<img class="article-hero-img" src="${heroImg}" alt="${data.title}">` : ''}
-        <div class="article-hero-overlay"></div>
-        <div class="container article-hero-content">
-          <span class="article-hero-cat">${article.category}</span>
-          <h1>${data.title}</h1>
-          <div class="article-hero-meta">
-            <span>${T.by} ${article.author}</span>
-            <span>· ${formatDate(article.publishDate)}</span>
-            <span>· ${article.readingTime} ${T.minRead}</span>
-            ${article.updatedDate !== article.publishDate ? `<span>· ${T.updated}: ${formatDate(article.updatedDate)}</span>` : ''}
-          </div>
-        </div>`;
-
-      // Content
-      const contentHtml = renderMarkdown(data.content);
-      const tocData = buildTOC(contentHtml);
-
+      // Check if static content is already present
       const bodyEl = document.getElementById('article-body');
-      bodyEl.innerHTML = `
-        <div class="article-layout">
-          <div>
-            <div class="article-content" id="article-content">${tocData.content}</div>
+      const hasStaticContent = bodyEl && bodyEl.querySelector('.article-content') &&
+        bodyEl.querySelector('.article-content').children.length > 0;
 
-            <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
-              <div class="share-buttons">
-                <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">${T.share}:</span>
-                <a class="share-btn" href="https://twitter.com/intent/tweet?url=${encodeURIComponent(SITE_URL + '/' + lang + '/articles/' + article.slug + '.html')}&text=${encodeURIComponent(data.title)}" target="_blank" rel="noopener">𝕏 Twitter</a>
-                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SITE_URL + '/' + lang + '/articles/' + article.slug + '.html')}" target="_blank" rel="noopener">LinkedIn</a>
-                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SITE_URL + '/' + lang + '/articles/' + article.slug + '.html')}" target="_blank" rel="noopener">Facebook</a>
-                <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
+      if (!hasStaticContent) {
+        // No static content — render everything via JS (fallback)
+        updateSEO(article, data);
+
+        // Hero
+        const heroEl = document.getElementById('article-hero');
+        const heroImg = article.heroImage || '';
+        heroEl.innerHTML = `
+          ${heroImg ? `<img class="article-hero-img" src="${heroImg}" alt="${data.title}">` : ''}
+          <div class="article-hero-overlay"></div>
+          <div class="container article-hero-content">
+            <span class="article-hero-cat">${article.category}</span>
+            <h1>${data.title}</h1>
+            <div class="article-hero-meta">
+              <span>${T.by} ${article.author}</span>
+              <span>· ${formatDate(article.publishDate)}</span>
+              <span>· ${article.readingTime} ${T.minRead}</span>
+              ${article.updatedDate !== article.publishDate ? `<span>· ${T.updated}: ${formatDate(article.updatedDate)}</span>` : ''}
+            </div>
+          </div>`;
+
+        // Content
+        const contentHtml = renderMarkdown(data.content);
+        const tocData = buildTOC(contentHtml);
+
+        bodyEl.innerHTML = `
+          <div class="article-layout">
+            <div>
+              <div class="article-content" id="article-content">${tocData.content}</div>
+
+              <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
+                <div class="share-buttons">
+                  <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">${T.share}:</span>
+                  <a class="share-btn" href="https://twitter.com/intent/tweet?url=${encodeURIComponent(SITE_URL + '/' + lang + '/articles/' + article.slug + '.html')}&text=${encodeURIComponent(data.title)}" target="_blank" rel="noopener">𝕏 Twitter</a>
+                  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(SITE_URL + '/' + lang + '/articles/' + article.slug + '.html')}" target="_blank" rel="noopener">LinkedIn</a>
+                  <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(SITE_URL + '/' + lang + '/articles/' + article.slug + '.html')}" target="_blank" rel="noopener">Facebook</a>
+                  <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
+                </div>
               </div>
-            </div>
 
-            ${(article.tags || []).length ? `
-            <div class="article-tags" style="margin:1.5rem 0;">
-              <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">${IS_ARABIC ? 'الوسوم:' : 'Tags:'}</span>
-              ${(article.tags || []).map(tag => `<a href="../articles/index.html?tag=${encodeURIComponent(tag)}" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#${tag}</a>`).join('')}
-            </div>
-            ` : ''}
-
-            <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
-
-            <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">${T.backToArticles}</a>
-          </div>
-
-          <aside class="article-sidebar">
-            ${tocData.toc}
-            <div style="margin-top:2rem;">
-              <div class="article-lang-switch">
-                <button class="${lang === 'en' ? 'active' : ''}" data-lang="en">🇺🇸 EN</button>
-                <button class="${lang === 'ar' ? 'active' : ''}" data-lang="ar">🇸🇦 ع</button>
+              ${(article.tags || []).length ? `
+              <div class="article-tags" style="margin:1.5rem 0;">
+                <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">${IS_ARABIC ? 'الوسوم:' : 'Tags:'}</span>
+                ${(article.tags || []).map(tag => `<a href="../articles/index.html?tag=${encodeURIComponent(tag)}" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#${tag}</a>`).join('')}
               </div>
-            </div>
-          </aside>
-        </div>`;
+              ` : ''}
 
-      // Lang switch
+              <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
+
+              <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">${T.backToArticles}</a>
+            </div>
+
+            <aside class="article-sidebar">
+              ${tocData.toc}
+              <div style="margin-top:2rem;">
+                <div class="article-lang-switch">
+                  <button class="${lang === 'en' ? 'active' : ''}" data-lang="en">🇺🇸 EN</button>
+                  <button class="${lang === 'ar' ? 'active' : ''}" data-lang="ar">🇸🇦 ع</button>
+                </div>
+              </div>
+            </aside>
+          </div>`;
+      } else {
+        // Static content present — add TOC to sidebar and attach lang switch
+        const contentEl = document.getElementById('article-content');
+        if (contentEl) {
+          const tocData = buildTOC(contentEl.innerHTML);
+          contentEl.innerHTML = tocData.content;
+          // Insert TOC into sidebar
+          const sidebar = document.querySelector('.article-sidebar');
+          if (sidebar) {
+            const tocContainer = document.createElement('div');
+            tocContainer.innerHTML = tocData.toc;
+            sidebar.insertBefore(tocContainer, sidebar.firstChild);
+          }
+        }
+      }
+
+      // Lang switch (always attach)
       bodyEl.querySelectorAll('.article-lang-switch button').forEach(btn => {
         btn.addEventListener('click', () => {
           const newLang = btn.dataset.lang;
@@ -343,7 +363,7 @@
         });
       });
 
-      // Related articles
+      // Related articles (always render — not in static HTML)
       renderRelated(articles, article);
       renderPrevNext(articles, article);
 
@@ -351,7 +371,11 @@
       initScrollSpy();
     } catch (e) {
       console.error('Failed to load article:', e);
-      showNotFound();
+      // Only show error if no static content
+      const bodyEl = document.getElementById('article-body');
+      if (bodyEl && (!bodyEl.querySelector('.article-content') || bodyEl.querySelector('.article-content').children.length === 0)) {
+        showNotFound();
+      }
     }
   }
 

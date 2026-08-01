@@ -117,11 +117,20 @@
       // Filter out drafts
       filtered = allArticles.filter(a => !a.draft);
       sortArticles();
-      init();
+      // Only re-render if static content is missing (JS-only fallback)
+      var grid = document.getElementById('articles-grid');
+      if (grid && grid.children.length === 0) {
+        init();
+      } else {
+        // Static content already present — attach event handlers only
+        initInteractive();
+      }
     } catch (e) {
       console.error('Failed to load articles:', e);
-      document.getElementById('articles-grid').innerHTML =
-        '<p style="text-align:center;padding:3rem;color:var(--text-muted);">' + T.noResults + '</p>';
+      var grid = document.getElementById('articles-grid');
+      if (grid && grid.children.length === 0) {
+        grid.innerHTML = '<p style="text-align:center;padding:3rem;color:var(--text-muted);">' + T.noResults + '</p>';
+      }
     }
   }
 
@@ -303,7 +312,7 @@
     });
   }
 
-  /* ── Init ── */
+  /* ── Init (full render — only when static content missing) ── */
   function init() {
     document.documentElement.setAttribute('lang', LANG);
     document.documentElement.setAttribute('dir', DIR);
@@ -329,6 +338,61 @@
     applyFilters();
     renderArticles();
     renderPagination();
+    initSearch();
+  }
+
+  /* ── Init Interactive (static content already present — attach handlers only) ── */
+  function initInteractive() {
+    document.documentElement.setAttribute('lang', LANG);
+    document.documentElement.setAttribute('dir', DIR);
+
+    // Pre-fill tag from URL query string (e.g. ?tag=Agile)
+    const urlParams = new URLSearchParams(window.location.search);
+    const tagParam = urlParams.get('tag');
+    if (tagParam) {
+      searchQuery = tagParam;
+      const input = document.getElementById('articles-search');
+      if (input) input.value = tagParam;
+      // If there's a tag param, we need to filter — re-render
+      applyFilters();
+      renderArticles();
+      renderPagination();
+    }
+
+    // Attach click handlers to category pills
+    document.querySelectorAll('#category-pills .category-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeCategory = btn.dataset.cat || 'all';
+        currentPage = 1;
+        applyFilters();
+        renderArticles();
+        renderPagination();
+        renderCategories();
+      });
+    });
+
+    // Attach click handlers to popular topic pills
+    document.querySelectorAll('#popular-topics .category-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        searchQuery = btn.dataset.tag || '';
+        const input = document.getElementById('articles-search');
+        if (input) input.value = searchQuery;
+        currentPage = 1;
+        applyFilters();
+        renderArticles();
+        renderPagination();
+      });
+    });
+
+    // Attach click handlers to tag links in article cards
+    document.querySelectorAll('.article-card .tag[data-tag]').forEach(tag => {
+      tag.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        filterByTag(tag.dataset.tag);
+      });
+    });
+
     initSearch();
   }
 

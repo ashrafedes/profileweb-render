@@ -11,14 +11,13 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل | أشرف الدسوقي</title>
-  <meta name="description" content="دليل هندسي شامل لاستخدام GIS و AutoCAD في تصميم البنية التحتية — يغطي مفاهيم GIS، AutoCAD Civil 3D، التكامل بينهما، تصميم شبكات المياه والصرف والاتصالات والكهرباء، التحليل المكاني، معايير البيانات، النمذجة ثلاثية الأبعاد و BIM، إدارة الأصول، والاتجاهات المستقبلية.">
-  <meta name="keywords" content="GIS, AutoCAD, البنية التحتية, نظم المعلومات الجغرافية, Civil 3D, تصميم شبكات, BIM, تحليل مكاني, ArcGIS, QGIS, شبكات المياه, شبكات الصرف">
+  <title>GIS و AutoCAD في تصميم البنية التحتية: الدليل الشامل | أشرف الدسوقي</title>
+  <meta name="description" content="دليل هندسي متكامل لاستخدام نظم المعلومات الجغرافية والأوتوكاد في تصميم البنية التحتية والشبكات — المعمارية، التحليل المكاني، Civil 3D، تكامل BIM/GIS، إدارة الأصول، Digital Twin، ودراسات حالة.">
   <meta name="author" content="Ashraf Ibrahim El Desoky">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="article">
   <meta property="og:title" content="نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل">
-  <meta property="og:description" content="دليل هندسي شامل لاستخدام GIS و AutoCAD في تصميم البنية التحتية — يغطي مفاهيم GIS، AutoCAD Civil 3D، التكامل بينهما، تصميم شبكات المياه والصرف والاتصالات والكهرباء، التحليل المكاني، معايير البيانات، النمذجة ثلاثية الأبعاد و BIM، إدارة الأصول، والاتجاهات المستقبلية.">
+  <meta property="og:description" content="دليل هندسي متكامل لاستخدام نظم المعلومات الجغرافية والأوتوكاد في تصميم البنية التحتية والشبكات — المعمارية، التحليل المكاني، Civil 3D، تكامل BIM/GIS، إدارة الأصول، Digital Twin، ودراسات حالة.">
   <meta property="og:url" content="https://www.ashraf-eldesoky.space/ar/articles/gis-autocad-infrastructure-network-design-guide.html">
   <meta property="og:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200">
   <meta property="og:image:width" content="1200">
@@ -27,8 +26,8 @@
   <meta property="article:published_time" content="2026-07-26">
   <meta property="article:modified_time" content="2026-07-26">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل | أشرف الدسوقي">
-  <meta name="twitter:description" content="دليل هندسي شامل لاستخدام GIS و AutoCAD في تصميم البنية التحتية — يغطي مفاهيم GIS، AutoCAD Civil 3D، التكامل بينهما، تصميم شبكات المياه والصرف والاتصالات والكهرباء، التحليل المكاني، معايير البيانات، النمذجة ثلاثية الأبعاد و BIM، إدارة الأصول، والاتجاهات المستقبلية.">
+  <meta name="twitter:title" content="نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل">
+  <meta name="twitter:description" content="دليل هندسي متكامل لاستخدام نظم المعلومات الجغرافية والأوتوكاد في تصميم البنية التحتية والشبكات — المعمارية، التحليل المكاني، Civil 3D، تكامل BIM/GIS، إدارة الأصول، Digital Twin، ودراسات حالة.">
   <meta name="twitter:image" content="https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200">
   <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/articles/gis-autocad-infrastructure-network-design-guide.html">
   <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/articles/gis-autocad-infrastructure-network-design-guide.html">
@@ -42,18 +41,415 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="../../assets/css/articles.css">
-  <style>* { font-family: 'Cairo', sans-serif; }</style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل", "description": "دليل هندسي شامل لاستخدام GIS و AutoCAD في تصميم البنية التحتية — يغطي مفاهيم GIS، AutoCAD Civil 3D، التكامل بينهما، تصميم شبكات المياه والصرف والاتصالات والكهرباء، التحليل المكاني، معايير البيانات، النمذجة ثلاثية الأبعاد و BIM، إدارة الأصول، والاتجاهات المستقبلية.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-26", "dateModified": "2026-07-26", "image": "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/gis-autocad-infrastructure-network-design-guide.html", "inLanguage": "ar"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل", "description": "دليل هندسي متكامل لاستخدام نظم المعلومات الجغرافية والأوتوكاد في تصميم البنية التحتية والشبكات — المعمارية، التحليل المكاني، Civil 3D، تكامل BIM/GIS، إدارة الأصول، Digital Twin، ودراسات حالة.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-07-26", "dateModified": "2026-07-26", "image": "https://www.ashraf-eldesoky.spacehttps://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/gis-autocad-infrastructure-network-design-guide.html", "inLanguage": "ar"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://www.ashraf-eldesoky.space/ar/articles/"}, {"@type": "ListItem", "position": 3, "name": "نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل", "item": "https://www.ashraf-eldesoky.space/ar/articles/gis-autocad-infrastructure-network-design-guide.html"}]}</script>
 </head>
-<body>
+<body><style>* { font-family: 'Cairo', sans-serif; }</style>
   <div id="ecms-nav-inject"></div>
 
   <main id="main-content" class="page-wrapper" style="padding-top:0;">
-    <div class="article-hero" id="article-hero"></div>
+    <div class="article-hero" id="article-hero">
+        <img class="article-hero-img" src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل">
+        <div class="article-hero-overlay"></div>
+        <div class="container article-hero-content">
+          <span class="article-hero-cat">Engineering &amp; Design</span>
+          <h1>نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل</h1>
+          <div class="article-hero-meta">
+            <span>بقلم Ashraf Ibrahim El Desoky</span>
+            <span>· 26 يوليو 2026</span>
+            <span>· 30 دقيقة قراءة</span>
+            
+          </div>
+        </div>
+      </div>
 
     <section class="section" style="padding:2.5rem 0;">
       <div class="container">
-        <div id="article-body"></div>
+        <div id="article-body">
+        <div class="article-layout">
+          <div>
+            <div class="article-content" id="article-content"><h2>نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل</h2>
+<img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="تصميم بنية تحتية على شاشة كمبيوتر باستخدام GIS و AutoCAD" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><em>لم يعد تصميم البنية التحتية مجرد خطوط على ورقة — بل أصبح منظومة رقمية متكاملة تجمع بين القوة المكانية لنظم المعلومات الجغرافية ودقة الهندسة المدنية في الأوتوكاد، لتنتج شبكات ذكية قابلة للإدارة طوال دورة حياتها.</em></p>
+<h3>مقدمة: التحول الرقمي في هندسة البنية التحتية</h3>
+<p>شهدت هندسة البنية التحتية تحولاً جذرياً في العقدين الأخيرين. ما كان يُرسم يدوياً على ورق الكلك (Calque) بأقلام الرصاص والحبر الصيني، أصبح اليوم نموذجاً رقمياً ثلاثي الأبعاد يربط البيانات المكانية بالمواصفات الهندسية في قاعدة بيانات موحدة. هذا التحول لم يكن مجرد تغيير في الأداة — بل تغيير في المنهجية بأكملها.</p>
+<p><strong>نظم المعلومات الجغرافية (GIS — Geographic Information Systems)</strong> تتعامل مع العالم كطبقات (Layers) متراكبة من البيانات المكانية: الطرق، المباني، خطوط المياه، حدود الملكيات، التضاريس، والصور الجوية. كل عنصر في هذه الطبقات ليس مجرد شكل هندسي — بل كائن (Feature) يحمل جدول بيانات (Attribute Table) يصف خصائصه: قطر الأنبوب، مادة الصنع، تاريخ التركيب، الحالة التشغيلية، وغيرها.</p>
+<p><strong>الأوتوكاد (AutoCAD)</strong> من جانب آخر، هو أداة التصميم الهندسي الدقيق (CAD — Computer-Aided Design). يتفوق في رسم التفاصيل الهندسية بدقة المليمتر: مقاطع الأنابيب، تفاصيل المناهل، ميل الخطوط، إحداثيات النقاط. لكنه تقليدياً يتعامل مع الرسومات كخطوط وأشكال (Graphics) لا كبيانات (Data).</p>
+<p><strong>نقطة الالتقاء — التكامل بين GIS و CAD</strong> — هي حيث يحدث السحر الحقيقي. عندما تُصمم شبكة البنية التحتية في AutoCAD ثم تُربط ببيانات GIS المكانية، نحصل على نموذج رقمي يجمع الدقة الهندسية مع الذكاء المكاني. هذا التكامل يتيح:</p>
+<ul><li>تحليل المسارات الأمثل للشبكات (Least Cost Path)</li>
+<li>حساب كميات الحفر والردم تلقائياً من بيانات التضاريس</li>
+<li>فحص التعارضات بين الشبكات المختلفة (Clash Detection)</li>
+<li>إدارة الأصول طوال دورة حياة المشروع (Asset Management)</li>
+<li>إنتاج خرائط تنفيذية وتشغيلية تلقائياً</li>
+<p></ul></p>
+<p>هذا المقال يقدّم دليلاً شاملاً يغطي كل جوانب استخدام GIS و AutoCAD في تصميم بنية تحتية للشبكات — من المفاهيم الأساسية إلى سير العمل المتقدم، أدوات البرمجيات، معايير البيانات، دراسات حالة، والاتجاهات المستقبلية.</p>
+<p>---</p>
+<h3>الباب الأول: مفاهيم نظم المعلومات الجغرافية (GIS) الأساسية</h3>
+<p>#### 1.1 ما هو GIS؟</p>
+<p>GIS هو نظام متكامل لجمع وتخزين وتحليل وعرض البيانات المكانية (Geospatial Data). الفرق الجوهري بين GIS وبرامج الرسم العادية هو أن <strong>كل عنصر في GIS له مكان جغرافي (Coordinates) وبيانات وصفية (Attributes)</strong>.</p>
+<img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="خريطة رقمية على شاشة تعرض طبقات GIS" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>المكونات الخمسة لـ GIS:</strong></p>
+<table><thead><tr><th>المكون</th><th>الوصف</th><th>مثال</th></tr></thead><tbody><tr><td>البيانات (Data)</td><td>المعلومات المكانية والوصفية</td><td>صور جوية، حدود طبوغرافية، جداول</td></tr><tr><td>البرمجيات (Software)</td><td>البرنامج الذي يدير ويحلل البيانات</td><td>ArcGIS، QGIS، AutoCAD Map 3D</td></tr><tr><td>الأجهزة (Hardware)</td><td>الحاسوب والخوادم وأجهزة القياس</td><td>محطات عمل، خوادم، GPS</td></tr><tr><td>الأشخاص (People)</td><td>المتخصصون في إدارة وتحليل البيانات</td><td>مهندسو GIS، محللو بيانات</td></tr><tr><td>المنهجية (Methods)</td><td>إجراءات العمل ومعايير الجودة</td><td>معايير البيانات، سير العمل</td></tr></tbody></table>
+<p>#### 1.2 أنواع البيانات في GIS</p>
+<table><thead><tr><th>نوع البيانات</th><th>الوصف</th><th>الأمثلة</th><th>الصيغ</th></tr></thead><tbody><tr><td><strong>Vector (متجهي)</strong></td><td>تمثيل بالنقاط والخطوط والمضلعات</td><td>شبكات، مباني، حدود</td><td>Shapefile، GeoJSON، Feature Class</td></tr><tr><td><strong>Raster (نقطي)</strong></td><td>شبكة خلايا (Pixels) كل خلية لها قيمة</td><td>صور جوية، نماذج ارتفاعات</td><td>TIFF، DEM، Grid</td></tr><tr><td><strong>Tabular (جدولي)</strong></td><td>بيانات في جداول مرتبطة مكانياً</td><td>إحداثيات GPS، عناوين</td><td>CSV، Excel، DBF</td></tr><tr><td><strong>3D Data</strong></td><td>بيانات ثلاثية الأبعاد</td><td>نماذج مدن، مجسمات</td><td>CityGML، LAS/LAZ</td></tr></tbody></table>
+<p><strong>أنواع البيانات المتجهية (Vector):</strong></p>
+<table><thead><tr><th>الشكل الهندسي</th><th>البعد</th><th>الاستخدام في البنية التحتية</th></tr></thead><tbody><tr><td><strong>Point (نقطة)</strong></td><td>0D</td><td>مناهل، محابس، أعمدة كهرباء، نقاط قياس</td></tr><tr><td><strong>Line (خط)</strong></td><td>1D</td><td>أنابيب، كابلات، خطوط كهرباء، طرق</td></tr><tr><td><strong>Polygon (مضلع)</strong></td><td>2D</td><td>قطع أراضي، مسطحات مائية، مناطق خدمة</td></tr><tr><td><strong>MultiPatch</strong></td><td>3D</td><td>مباني ثلاثية الأبعاد، مجسمات منشآت</td></tr></tbody></table>
+<p>#### 1.3 أنظمة الإحداثيات (Coordinate Systems)</p>
+<table><thead><tr><th>النوع</th><th>الوصف</th><th>مثال</th></tr></thead><tbody><tr><td><strong>Geographic (جغرافي)</strong></td><td>خطوط الطول والعرض على كرة الأرض</td><td>WGS 84 (EPSG:4326)</td></tr><tr><td><strong>Projected (مسقط)</strong></td><td>إسقاط الكرة على سطح مستوٍ</td><td>UTM Zone 36N، Web Mercator</td></tr><tr><td><strong>Local (محلي)</strong></td><td>نظام إحداثيات محلي للمشروع</td><td>مصر 1907Red Belt، السعودية UTM Zone 38N</td></tr></tbody></table>
+<p><strong>أهمية اختيار نظام الإحداثيات الصحيح:</strong></p>
+<ul><li>المسافات تُحسب بدقة فقط في الأنظمة المسقطة (Projected)</li>
+<li>التحليلات المكانية (Buffer، Overlay) تتطلب نظاماً مسقوطاً</li>
+<li>تبادل البيانات بين GIS و AutoCAD يتطلب توحيد النظام</li>
+<li>كل دولة لها نظام إحداثيات رسمي (مثل EGM 2008 في مصر، KSA-NGN في السعودية)</li>
+<p></ul></p>
+<p>#### 1.4 طبقات البيانات (Layers) في تصميم البنية التحتية</p>
+<p>في مشروع بنية تحتية نموذجي، تُنظم البيانات في طبقات:</p>
+<table><thead><tr><th>الطبقة</th><th>نوع البيانات</th><th>المصدر</th><th>الاستخدام</th></tr></thead><tbody><tr><td>Base Map (خريطة أساس)</td><td>Raster (صورة جوية)</td><td>الأقمار الصناعية، الطائرات</td><td>مرجع بصري</td></tr><tr><td>Topography (تضاريس)</td><td>Raster (DEM)</td><td>LiDAR، مسح طبوغرافي</td><td>حساب الميول والأحجام</td></tr><tr><td>Parcels (قطع أراضي)</td><td>Vector (Polygon)</td><td>السجل العقاري</td><td>تحديد الملكيات</td></tr><tr><td>Roads (طرق)</td><td>Vector (Line)</td><td>بلدية، مسح ميداني</td><td>مسارات الشبكات</td></tr><tr><td>Buildings (مباني)</td><td>Vector (Polygon)</td><td>مسح، صور جوية</td><td>نقاط الخدمة</td></tr><tr><td>Water Network</td><td>Vector (Line+Point)</td><td>تصميم، مسح</td><td>شبكة المياه</td></tr><tr><td>Sewer Network</td><td>Vector (Line+Point)</td><td>تصميم، مسح</td><td>شبكة الصرف</td></tr><tr><td>Telecom Network</td><td>Vector (Line+Point)</td><td>تصميم، مسح</td><td>شبكة الاتصالات</td></tr><tr><td>Power Network</td><td>Vector (Line+Point)</td><td>تصميم، مسح</td><td>شبكة الكهرباء</td></tr><tr><td>Gas Network</td><td>Vector (Line+Point)</td><td>تصميم، مسح</td><td>شبكة الغاز</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الثاني: AutoCAD في تصميم البنية التحتية</h3>
+<p>#### 2.1 AutoCAD كأداة هندسية</p>
+<p>AutoCAD هو البرنامج الأكثر استخداماً في العالم للرسم الهندسي. في مجال البنية التحتية، يُستخدم لرسم:</p>
+<ul><li>المخططات التنفيذية للشبكات (As-Built Drawings)</li>
+<li>تفاصيل المنشآت (Manholes، Valves، Pumps)</li>
+<li>المقاطع الطولية والعرضية (Longitudinal & Cross Sections)</li>
+<li>جداول الكميات (Bill of Quantities) من الرسم</li>
+<li>مخططات التوقيع (Signing & Marking)</li>
+<p></ul></p>
+<img src="https://images.pexels.com/photos/1181271/pexels-photo-1181271.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="شاشة عمل على AutoCAD لرسم هندسي" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p>#### 2.2 منتجات AutoCAD المتخصصة في البنية التحتية</p>
+<table><thead><tr><th>المنتج</th><th>التخصص</th><th>الميزة الرئيسية</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>AutoCAD Civil 3D</strong></td><td>هندسة مدنية ونقل</td><td>نماذج سطح ديناميكية، أنابيب</td><td>طرق، شبكات، قطاعات</td></tr><tr><td><strong>AutoCAD Map 3D</strong></td><td>GIS وخرائط</td><td>إدارة بيانات مكانية، ربط GIS</td><td>تحليل مكاني، خرائط</td></tr><tr><td><strong>AutoCAD Plant 3D</strong></td><td>محطات ومعامل</td><td>تصميم أنابيب صناعية</td><td>محطات معالجة، مصانع</td></tr><tr><td><strong>InfraWorks</strong></td><td>نمذجة بنية تحتية</td><td>نموذج 3D سياقي للمشروع</td><td>تخطيط، عرض، تحليل</td></tr><tr><td><strong>AutoCAD Utility Design</strong></td><td>شبكات مرافق</td><td>تصميم وتحليل شبكات</td><td>كهرباء، اتصالات</td></tr></tbody></table>
+<p>#### 2.3 AutoCAD Civil 3D — الأداة الأساسية</p>
+<p>Civil 3D هو البرنامج الأقوى لتصميم البنية التحتية. يميّزه عن AutoCAD العادي:</p>
+<table><thead><tr><th>الميزة</th><th>AutoCAD العادي</th><th>Civil 3D</th></tr></thead><tbody><tr><td>الكائنات (Objects)</td><td>خطوط وأشكال</td><td>كائنات ذكية (Surface، Alignment، Pipe)</td></tr><tr><td>العلاقات الديناميكية</td><td>لا توجد</td><td>تغيير السطح يحدّث القطاعات تلقائياً</td></tr><tr><td>نمذجة السطح (Surface)</td><td>لا يدعم</td><td>TIN من نقاط، خطوط كنتور</td></tr><tr><td>تصميم الأنابيب</td><td>رسم خطوط</td><td>شبكة أنابيب ذكية مع تدفق وميول</td></tr><tr><td>القطاعات الطولية</td><td>يدوياً</td><td>تلقائياً من الـ Alignment</td></tr><tr><td>جداول الكميات</td><td>يدوياً</td><td>تلقائياً من النموذج (Volume Calculation)</td></tr></tbody></table>
+<p><strong>كائنات Civil 3D الأساسية لتصميم الشبكات:</strong></p>
+<table><thead><tr><th>الكائن</th><th>الوصف</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>Surface (سطح)</strong></td><td>نموذج رقمي للأرض (TIN)</td><td>التضاريس، الحفر والردم</td></tr><tr><td><strong>Alignment (محور)</strong></td><td>الخط المركزي للطريق أو الشبكة</td><td>مسار الشبكة</td></tr><tr><td><strong>Profile (مقطع طولي)</strong></td><td>قطاع رأسي على طول المحور</td><td>ميل الأنابيب، عمق الدفن</td></tr><tr><td><strong>Pipe Network (شبكة أنابيب)</strong></td><td>أنابيب ومناهل ذكية</td><td>شبكات المياه والصرف</td></tr><tr><td><strong>Corridor (ممر)</strong></td><td>نموذج 3D للطريق</td><td>طرق، مسارات</td></tr><tr><td><strong>Point Groups</strong></td><td>مجموعات نقاط مسح</td><td>نقاط الرصد، الإحداثيات</td></tr></tbody></table>
+<p>#### 2.4 سير عمل تصميم شبكة في Civil 3D</p>
+<p><strong>مراحل تصميم شبكة صرف صحي مثلاً:</strong></p>
+<ul><li><strong>استيراد بيانات المسح</strong>: نقاط GPS → Civil 3D Points</li>
+<li><strong>إنشاء Surface</strong>: من النقاط → نموذج TIN للأرض الطبيعية</li>
+<li><strong>رسم Alignment</strong>: مسار خط الشبكة الرئيسي</li>
+<li><strong>إنشاء Profile</strong>: المقطع الطولي لسطح الأرض على طول المسار</li>
+<li><strong>تصميم Pipe Network</strong>: إضافة أنابيب ومناهل مع تحديد:</li>
+<p></ul>   - قطر الأنبوب (Diameter)</p>
+<p>- مادة الأنبوب (PVC، HDPE، Concrete)</p>
+<p>- ميل الأنبوب (Slope)</p>
+<p>- عمق الدفن (Cover)</p>
+<p>- رقعة المنهل (Manhole Size)</p>
+<ul><li><strong>فحص التدفق (Hydraulic Check)</strong>: التأكد من كفاية الميول والأقطار</li>
+<li><strong>إنتاج القطاعات</strong>: مقاطع طولية وعرضية تلقائياً</li>
+<li><strong>حساب الكميات</strong>: أطوال الأنابيب، عدد المناهل، أحجام الحفر</li>
+<li><strong>إنتاج المخططات</strong>: Layouts بمقاييس مختلفة + جداول</li>
+<p></ul></p>
+<p>---</p>
+<h3>الباب الثالث: التكامل بين GIS و AutoCAD</h3>
+<p>#### 3.1 لماذا التكامل ضروري؟</p>
+<table><thead><tr><th>التحدي</th><th>GIS فقط</th><th>AutoCAD فقط</th><th>GIS + AutoCAD</th></tr></thead><tbody><tr><td>الدقة الهندسية</td><td>متوسطة</td><td>ممتازة</td><td>ممتازة</td></tr><tr><td>التحليل المكاني</td><td>ممتاز</td><td>محدود</td><td>ممتاز</td></tr><tr><td>إدارة البيانات</td><td>ممتاز</td><td>محدود</td><td>ممتازة</td></tr><tr><td>إنتاج المخططات</td><td>محدود</td><td>ممتاز</td><td>ممتاز</td></tr><tr><td>تحليل التدفق</td><td>محدود</td><td>محدود</td><td>ممتاز (مع إضافات)</td></tr><tr><td>إدارة الأصول</td><td>ممتاز</td><td>لا يدعم</td><td>ممتاز</td></tr><tr><td>تبادل البيانات</td><td>ممتاز</td><td>محدود</td><td>ممتاز</td></tr></tbody></table>
+<p>#### 3.2 طرق التكامل</p>
+<table><thead><tr><th>الطريقة</th><th>الوصف</th><th>الأداة</th><th>المستوى</th></tr></thead><tbody><tr><td><strong>Import/Export</strong></td><td>استيراد وتصدير ملفات بين البرامج</td><td>Shapefile ↔ DWG</td><td>أساسي</td></tr><tr><td><strong>FDO Connection</strong></td><td>ربط مباشر بقاعدة بيانات GIS</td><td>AutoCAD Map 3D</td><td>متوسط</td></tr><tr><td><strong>ArcGIS for AutoCAD</strong></td><td>إضافة ArcGIS داخل AutoCAD</td><td>ArcGIS plugin</td><td>متوسط</td></tr><tr><td><strong>Civil 3D + GIS</strong></td><td>استيراد بيانات GIS ككائنات Civil 3D</td><td>Civil 3D</td><td>متقدم</td></tr><tr><td><strong>BIM + GIS Integration</strong></td><td>نموذج موحد BIM/GIS</td><td>InfraWorks + ArcGIS</td><td>متقدم</td></tr><tr><td><strong>Database Sharing</strong></td><td>قاعدة بيانات مشتركة (SDE)</td><td>ArcGIS Enterprise</td><td>مؤسسي</td></tr></tbody></table>
+<p>#### 3.3 سير عمل متكامل (Integrated Workflow)</p>
+<p><strong>السير العمل النموذجي لتصميم شبكة بنية تحتية:</strong></p>
+<ul><li><strong>جمع البيانات المكانية (GIS Phase)</strong></li>
+<p></ul>   - استيراد صور جوية و DEM</p>
+<p>- مسح طبوغرافي بنظام GPS</p>
+<p>- تحديد قطع الأراضي والملكيات</p>
+<p>- ربط بيانات الشبكات القائمة</p>
+<ul><li><strong>تحليل مكاني (GIS Analysis)</strong></li>
+<p></ul>   - تحديد مسار الشبكة الأمثل (Least Cost Path)</p>
+<p>- تحليل التضاريس والميول</p>
+<p>- فحص التعارضات مع شبكات أخرى</p>
+<p>- تحديد مناطق الخدمة (Service Areas)</p>
+<ul><li><strong>تصميم هندسي (AutoCAD Phase)</strong></li>
+<p></ul>   - استيراد بيانات GIS إلى Civil 3D</p>
+<p>- إنشاء نموذج سطح (Surface)</p>
+<p>- تصميم الشبكة (Pipe Network)</p>
+<p>- حساب الميول والأقطار والتدفق</p>
+<ul><li><strong>التحقق والمراجعة (Verification)</strong></li>
+<p></ul>   - فحص التعارضات (Clash Detection)</p>
+<p>- التحقق من عمق الدفن</p>
+<p>- مراجعة الضغط والتدفق</p>
+<ul><li><strong>إنتاج المخرجات (Output)</strong></li>
+<p></ul>   - مخططات تنفيذية (Construction Drawings)</p>
+<p>- جداول الكميات (BoQ)</p>
+<p>- خرائط GIS للمشروع</p>
+<p>- نموذج 3D للعرض</p>
+<ul><li><strong>التسليم والتشغيل (Handover)</strong></li>
+<p></ul>   - تصدير الشبكة المنفذة إلى GIS</p>
+<p>- ربط بيانات الأصول (Asset Register)</p>
+<p>- تحديث قاعدة البيانات المكانية</p>
+<p>---</p>
+<h3>الباب الرابع: تصميم شبكات البنية التحتية بأنواعها</h3>
+<p>#### 4.1 شبكات المياه (Water Distribution Networks)</p>
+<img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="شبكة أنابيب مياه قيد التركيب في الحقل" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>بيانات شبكة المياه في GIS:</strong></p>
+<table><thead><tr><th>العنصر</th><th>نوع الكائن</th><th>البيانات الوصفية (Attributes)</th></tr></thead><tbody><tr><td>الأنابيب</td><td>Line</td><td>القطر، المادة، الضغط، تاريخ التركيب، الحالة</td></tr><tr><td>المحابس</td><td>Point</td><td>النوع، القطر، الحالة (مفتوح/مغلق)، التشغيل</td></tr><tr><td>مضخات</td><td>Point</td><td>القدرة، التصرف (Flow)، الضغط، الموديل</td></tr><tr><td>خزانات</td><td>Polygon</td><td>السعة، الارتفاع، مستوى المياه</td></tr><tr><td>وصلات المنازل</td><td>Point</td><td>رقم العداد، القطر، التاريخ</td></tr></tbody></table>
+<p><strong>تصميم شبكة المياه في Civil 3D:</strong></p>
+<ul><li>تحديد مسار الأنابيب على طول الطرق (Alignment)</li>
+<li>حساب الضغوط على طول الشبكة (Pressure Analysis)</li>
+<li>تحديد مواقع المحابس (Valve Spacing) كل 500 م</li>
+<li>تصميم وصلات الخدمة (Service Connections) لكل منزل</li>
+<li>حساب كميات الحفر (Trench Volume) من نموذج السطح</li>
+<p></ul></p>
+<p>#### 4.2 شبكات الصرف الصحي (Sewer Networks)</p>
+<table><thead><tr><th>المعيار</th><th>القيمة</th><th>ملاحظة</th></tr></thead><tbody><tr><td>الحد الأدنى للميل</td><td>0.5% (DN200)</td><td>لمنع الترسيب</td></tr><tr><td>الحد الأقصى للميل</td><td>10%</td><td>لمنع التآكل (Self-cleaning velocity)</td></tr><tr><td>عمق الدفن الأدنى</td><td>1.0 م</td><td>لحماية الأنبوب من الأحمال</td></tr><tr><td>مسافة المناهل</td><td>50–100 م</td><td>حسب القطر والتقاطعات</td></tr><tr><td>قطر الأنبوب الأدنى</td><td>DN200</td><td>للشبكة الفرعية</td></tr></tbody></table>
+<p><strong>تصميم شبكة الصرف في Civil 3D:</strong></p>
+<ul><li>تصميم بالجاذبية (Gravity Flow) — الأنابيب تميل باتجاه المحطة</li>
+<li>Pipe Network مع ربط تلقائي بـ Surface لتحديد أعمدة المناهل</li>
+<li>فحص تدفق الجاذبية (Gravity Flow Check) — سرعة ≥0.6 م/ث</li>
+<li>إنتاج جداول المناهل (Manhole Schedule) تلقائياً</li>
+<li>مقاطع طولية تظهر مستوى الأرض ومستوى الأنبوب</li>
+<p></ul></p>
+<p>#### 4.3 شبكات الاتصالات (Telecom Networks — FTTH)</p>
+<table><thead><tr><th>العنصر</th><th>نوع الكائن</th><th>البيانات الوصفية</th></tr></thead><tbody><tr><td>كابلات الألياف</td><td>Line</td><td>عدد الألياف، نوع الكابل، المسار</td></tr><tr><td>Splitter Cabinets</td><td>Point</td><td>نوع التقسيم (1:8، 1:16)، السعة</td></tr><tr><td>Handholes</td><td>Point</td><td>الأبعاد، الموقع، عدد الكابلات</td></tr><tr><td>ONT</td><td>Point</td><td>رقم المشترك، السرعة، الحالة</td></tr></tbody></table>
+<p><strong>استخدام GIS في تصميم FTTH:</strong></p>
+<ul><li>تحديد كثافة المشتركين المحتملين (Demand Analysis)</li>
+<li>تحليل مسار الكابلات الأمثل (Network Routing)</li>
+<li>حساب أطوال الكابلات والكميات</li>
+<li>تحديد مواقع Splitters بناءً على التوزيع الجغرافي</li>
+<li>إنتاج خرائط تنفيذية للفرق الميدانية</li>
+<p></ul></p>
+<p>#### 4.4 شبكات الكهرباء (Power Distribution)</p>
+<table><thead><tr><th>العنصر</th><th>نوع الكائن</th><th>البيانات الوصفية</th></tr></thead><tbody><tr><td>خطوط الجهد العالي</td><td>Line</td><td>الجهد، عدد الأسلاك، نوع البرج</td></tr><tr><td>محولات</td><td>Point</td><td>القدرة (kVA)، نسبة التحويل</td></tr><tr><td>أعمدة</td><td>Point</td><td>النوع، الارتفاع، الإحداثيات</td></tr><tr><td>وصلات المنازل</td><td>Line</td><td>الجهد (220/380)، العداد</td></tr></tbody></table>
+<p>#### 4.5 شبكات الغاز (Gas Distribution)</p>
+<table><thead><tr><th>اعتبار التصميم</th><th>القيمة</th></tr></thead><tbody><tr><td>عمق الدفن</td><td>0.9 م (أدنى)</td></tr><tr><td>مسافة الأمان من شبكات أخرى</td><td>0.3 م</td></tr><tr><td>مادة الأنبوب</td><td>PE (Polyethylene) أو Steel</td></tr><tr><td>فحص التسرب</td><td>إلزامي قبل التشغيل</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الخامس: التحليل المكاني (Spatial Analysis) في تصميم البنية التحتية</h3>
+<p>#### 5.1 أنواع التحليل المكاني</p>
+<img src="https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="تحليل بيانات على خريطة رقمية" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<table><thead><tr><th>التحليل</th><th>الوصف</th><th>الأداة</th><th>التطبيق</th></tr></thead><tbody><tr><td><strong>Buffer (نطاق عازل)</strong></td><td>منطقة حول عنصر بمسافة محددة</td><td>ArcGIS، QGIS</td><td>حماية شبكات، مسافات أمان</td></tr><tr><td><strong>Overlay (تراكب)</strong></td><td>دمج طبقتين لاكتشاف التقاطعات</td><td>ArcGIS</td><td>تعارض الشبكات</td></tr><tr><td><strong>Network Analysis</strong></td><td>تحليل مسارات وأقصر طرق</td><td>ArcGIS Network Analyst</td><td>توجيه الشبكات</td></tr><tr><td><strong>Interpolation</strong></td><td>تقدير قيم بين النقاط المعروفة</td><td>ArcGIS (IDW، Kriging)</td><td>تقدير مناسيب المياه</td></tr><tr><td><strong>Viewshed</strong></td><td>تحليل الخطوط البصرية</td><td>ArcGIS 3D Analyst</td><td>مواقع أبراج الاتصالات</td></tr><tr><td><strong>Cost Path</strong></td><td>مسار التكلفة الأقل</td><td>ArcGIS Spatial Analyst</td><td>مسار خط أنابيب أمثل</td></tr><tr><td><strong>Thiessen Polygons</strong></td><td>تقسيم المنطقة لمناطق خدمة</td><td>ArcGIS</td><td>مناطق خدمة المحطات</td></tr><tr><td><strong>Hot Spot Analysis</strong></td><td>تحديد مناطق الكثافة العالية</td><td>ArcGIS</td><td>أولوية التوسعة</td></tr></tbody></table>
+<p>#### 5.2 تحليل مسار الشبكة الأمثل (Least Cost Path)</p>
+<p><strong>مثال: تصميم مسار خط مياه رئيسي بطول 5 كم</strong></p>
+<ul><li><strong>إعداد بيانات التكلفة (Cost Raster)</strong>:</li>
+<p></ul>   - التضاريس: المناطق المنحدرة تكلفة أعلى</p>
+<p>- استخدام الأرض: العبور تحت الطرق أغلى من الأراضي الفارغة</p>
+<p>- الملكيات: العبور في أراضي حكومية أرخص من الخاصة</p>
+<p>- العقبات: تجنب المباني والمسطحات المائية</p>
+<ul><li><strong>تطبيق Cost Distance</strong>: حساب التكلفة المتراكمة من نقطة البداية</li>
+<li><strong>تطبيق Cost Path</strong>: تحديد المسار الأقل تكلفة من البداية للنهاية</li>
+<li><strong>مراجعة وتعديل</strong>: قد يحتاج المسار لتعديل يدوي بناءً على معايير ميدانية</li>
+<p></ul></p>
+<p>#### 5.3 فحص التعارضات (Clash Detection)</p>
+<table><thead><tr><th>نوع التعارض</th><th>الوصف</th><th>الإجراء</th></tr></thead><tbody><tr><td>شبكة مع شبكة</td><td>تقاطع مياه مع صرف</td><td>فصل رأسي ≥30 سم</td></tr><tr><td>شبكة مع مبنى</td><td>أنبوب يمر تحت أساس</td><td>تحويل المسار</td></tr><tr><td>شبكة مع طريق</td><td>أنبوب يمر تحت طريق مرصوف</td><td>تركيب غلاف (Casing)</td></tr><tr><td>شبكة مع كابل</td><td>تقاطع مع كهرباء</td><td>فصل + علامة تحذير</td></tr></tbody></table>
+<p><strong>في Civil 3D</strong>: يُستخدم <strong>Interference Check</strong> لكشف التعارضات بين Pipe Networks تلقائياً.</p>
+<p>---</p>
+<h3>الباب السادس: معايير البيانات والتبادل</h3>
+<p>#### 6.1 معايير البيانات المكانية</p>
+<table><thead><tr><th>المعيار</th><th>الوصف</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>Shapefile (.shp)</strong></td><td>صيغة ESRI الأكثر شيوعاً</td><td>تبادل بيانات GIS</td></tr><tr><td><strong>GeoJSON</strong></td><td>صيغة مفتوحة للويب</td><td>تطبيقات الويب</td></tr><tr><td><strong>GeoPackage</strong></td><td>قاعدة بيانات SQLite مكانية</td><td>بديل حديث لـ Shapefile</td></tr><tr><td><strong>File Geodatabase</strong></td><td>قاعدة بيانات ESRI</td><td>مشاريع كبيرة</td></tr><tr><td><strong>DWG/DXF</strong></td><td>صيغة AutoCAD</td><td>رسومات هندسية</td></tr><tr><td><strong>LandXML</strong></td><td>صيغة لتبادل بيانات البنية التحتية</td><td>تبادل بين Civil 3D و GIS</td></tr><tr><td><strong>CityGML</strong></td><td>معيار OGC لنمذجة المدن 3D</td><td>نماذج مدن ذكية</td></tr><tr><td><strong>IFC</strong></td><td>معيار BIM لتبادل النماذج</td><td>تكامل BIM/GIS</td></tr></tbody></table>
+<p>#### 6.2 معايير جودة البيانات (Data Quality)</p>
+<table><thead><tr><th>المعيار</th><th>الوصف</th><th>المستوى المطلوب</th></tr></thead><tbody><tr><td><strong>Positional Accuracy</strong></td><td>دقة الإحداثيات</td><td>±0.5 م (شبكات)</td></tr><tr><td><strong>Completeness</strong></td><td>اكتمال البيانات</td><td>100% للأصول الحرجة</td></tr><tr><td><strong>Logical Consistency</strong></td><td>الاتساق المنطقي</td><td>لا تعارضات بين الشبكات</td></tr><tr><td><strong>Temporal Accuracy</strong></td><td>حداثة البيانات</td><td>تحديث سنوي</td></tr><tr><td><strong>Attribute Accuracy</strong></td><td>دقة البيانات الوصفية</td><td>95%+</td></tr><tr><td><strong>Topological Rules</strong></td><td>قواعد الطوبولوجيا</td><td>لا خطوط متداخلة، اتصال صحيح</td></tr></tbody></table>
+<p>#### 6.3 قواعد الطوبولوجيا (Topology Rules) للشبكات</p>
+<table><thead><tr><th>القاعدة</th><th>الوصف</th><th>الأهمية</th></tr></thead><tbody><tr><td><strong>Must Not Overlap</strong></td><td>خطوط الشبكة لا تتداخل</td><td>منع الازدواجية</td></tr><tr><td><strong>Must Not Have Dangles</strong></td><td>لا نقاط معلقة</td><td>ضمان اتصال الشبكة</td></tr><tr><td><strong>Must Connect At Endpoints</strong></td><td>الخطوط متصلة عند النهايات</td><td>تدفق صحيح</td></tr><tr><td><strong>Point Must Be On Line</strong></td><td>المنهل على خط الأنبوب</td><td>علاقة صحيحة</td></tr><tr><td><strong>Must Not Self-Intersect</strong></td><td>لا تقاطع ذاتي</td><td>سلامة الشبكة</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب السابع: البرمجيات والأدوات</h3>
+<p>#### 7.1 مقارنة برمجيات GIS</p>
+<table><thead><tr><th>البرنامج</th><th>الشركة</th><th>الميزة</th><th>التكلفة</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>ArcGIS Pro</strong></td><td>ESRI</td><td>الأقوى والأشمل</td><td>مدفوع (مرخص)</td><td>مؤسسي، حكومي</td></tr><tr><td><strong>QGIS</strong></td><td>مفتوح المصدر</td><td>مجاني وقوي</td><td>مجاني</td><td>جميع المستويات</td></tr><tr><td><strong>AutoCAD Map 3D</strong></td><td>Autodesk</td><td>تكامل CAD + GIS</td><td>مدفوع</td><td>تصميم + GIS</td></tr><tr><td><strong>Global Mapper</strong></td><td>Blue Marble</td><td>خفيف وسريع</td><td>مدفوع اقتصادي</td><td>تحليل مكاني</td></tr><tr><td><strong>MapInfo Pro</strong></td><td>Precisely</td><td>سهل الاستخدام</td><td>مدفوع</td><td>تحليل أعمال</td></tr><tr><td><strong>GRASS GIS</strong></td><td>مفتوح المصدر</td><td>تحليل قوي</td><td>مجاني</td><td>بحث أكاديمي</td></tr></tbody></table>
+<p>#### 7.2 مقارنة برمجيات CAD للبنية التحتية</p>
+<table><thead><tr><th>البرنامج</th><th>الشركة</th><th>التخصص</th><th>الميزة</th></tr></thead><tbody><tr><td><strong>Civil 3D</strong></td><td>Autodesk</td><td>طرق وشبكات</td><td>الأكثر شيوعاً</td></tr><tr><td><strong>Bentley OpenRoads</strong></td><td>Bentley</td><td>طرق</td><td>قوي في النمذجة</td></tr><tr><td><strong>Bentley OpenUtilities</strong></td><td>Bentley</td><td>شبكات مرافق</td><td>تحليل تدفق</td></tr><tr><td><strong>12d Model</strong></td><td>12d Solutions</td><td>مسح وتصميم</td><td>دقة مساحة</td></tr><tr><td><strong>MicroStation</strong></td><td>Bentley</td><td>عام</td><td>تكامل مع Bentley</td></tr><tr><td><strong>Tekla Civil</strong></td><td>Trimble</td><td>بنية تحتية</td><td>نمذجة 3D</td></tr></tbody></table>
+<p>#### 7.3 أدوات مساعدة</p>
+<table><thead><tr><th>الأداة</th><th>الوظيفة</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>FME</strong></td><td>تحويل ودمج البيانات</td><td>ETL بين GIS و CAD</td></tr><tr><td><strong>ArcGIS Online</strong></td><td>GIS سحابي</td><td>مشاركة خرائط</td></tr><tr><td><strong>InfraWorks</strong></td><td>نمذجة سياقية</td><td>عرض 3D للمشروع</td></tr><tr><td><strong>Navisworks</strong></td><td>مراجعة وفحص تعارضات</td><td>Clash Detection</td></tr><tr><td><strong>Drone2Map</strong></td><td>معالجة صور الطائرات</td><td>مسح جوي سريع</td></tr><tr><td><strong>ArcGIS Field Maps</strong></td><td>جمع بيانات ميدانية</td><td>مسح GPS بالتابلت</td></tr></tbody></table>
+<p>---</p>
+<h3>الباب الثامن: النمذجة ثلاثية الأبعاد و BIM</h3>
+<p>#### 8.1 من 2D إلى 3D إلى BIM</p>
+<table><thead><tr><th>المرحلة</th><th>الوصف</th><th>الأدوات</th><th>المخرجات</th></tr></thead><tbody><tr><td><strong>2D التقليدي</strong></td><td>خطوط على مستوى</td><td>AutoCAD</td><td>مخططات مسطحة</td></tr><tr><td><strong>2.5D</strong></td><td>سطح بارتفاعات</td><td>Civil 3D Surface</td><td>نموذج TIN</td></tr><tr><td><strong>3D</strong></td><td>مجسمات ثلاثية الأبعاد</td><td>Civil 3D + InfraWorks</td><td>نموذج 3D</td></tr><tr><td><strong>BIM</strong></td><td>نموذج بمعلومات</td><td>Civil 3D + Revit</td><td>نموذج مع بيانات</td></tr><tr><td><strong>Digital Twin</strong></td><td>نسخة رقمية حية</td><td>BIM + GIS + IoT</td><td>محاكاة وتشغيل</td></tr></tbody></table>
+<p>#### 8.2 تكامل BIM و GIS</p>
+<img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="نموذج ثلاثي الأبعاد لمبنى وبنية تحتية" style="max-width:100%;height:auto;border-radius:8px;margin:1rem 0;" loading="lazy">
+<p><strong>الفرق بين BIM و GIS:</strong></p>
+<table><thead><tr><th>المعيار</th><th>BIM</th><th>GIS</th></tr></thead><tbody><tr><td>النطاق</td><td>مبنى/مشروع واحد</td><td>مدينة/منطقة</td></tr><tr><td>الدقة</td><td>مليمترية</td><td>سنتيمترية/مترية</td></tr><tr><td>التفاصيل</td><td>عالية جداً (كل مسمار)</td><td>متوسطة (الأنابيب، المناهل)</td></tr><tr><td>البيانات</td><td>مواصفات ومواد</td><td>مكانية ووصفية</td></tr><tr><td>التحليل</td><td>إنشائي، طاقة</td><td>مكاني، إحصائي</td></tr><tr><td>النموذج</td><td>IFC</td><td>CityGML</td></tr></tbody></table>
+<p><strong>نقطة التكامل:</strong></p>
+<ul><li>BIM يصدّر نموذج المشروع (IFC) إلى GIS</li>
+<li>GIS يضع المشروع في سياقه الجغرافي (الجوار، الشبكات المحيطة)</li>
+<li>النتيجة: نموذج موحد يربط تفاصيل المشروع بموقعه العالمي</li>
+<p></ul></p>
+<p>#### 8.3 InfraWorks — النمذجة السياقية</p>
+<p>InfraWorks يبني نموذجاً ثلاثي الأبعاد للمشروع في سياقه البيئي:</p>
+<ul><li>يستورد بيانات GIS (صور جوية، طرق، مباني)</li>
+<li>يستورد نموذج Civil 3D (الطرق، الشبكات)</li>
+<li>يُنشئ مشهداً 3D واقعياً للعرض والتحليل</li>
+<li>يحلل الخطوط البصرية، التأثير البيئي، التصريف</li>
+<p></ul></p>
+<p>---</p>
+<h3>الباب التاسع: دراسات حالة وتطبيقات عملية</h3>
+<p>#### 9.1 دراسة حالة: تصميم شبكة مياه لحي سكني</p>
+<p><strong>المشروع</strong>: شبكة مياه لحي بـ 500 منزل، مساحة 50 هكتار.</p>
+<p><strong>الخطوات:</strong></p>
+<ul><li><strong>جمع البيانات (GIS)</strong>:</li>
+<p></ul>   - صورة جوية بدقة 10 سم (Drone Survey)</p>
+<p>- نموذج ارتفاعات DEM من LiDAR</p>
+<p>- حدود قطع الأراضي من البلدية</p>
+<p>- مسار الطرق الحالية</p>
+<ul><li><strong>التحليل المكاني (GIS)</strong>:</li>
+<p></ul>   - حساب كثافة الطلب (500 منزل / 50 هكتار = 10 منزل/هكتار)</p>
+<p>- تحديد نقاط التغذية من الخط الرئيسي</p>
+<p>- تحليل الضغط المتوقع (Pressure Zone Analysis)</p>
+<p>- تحديد مواقع المحابس (Valve Isolation)</p>
+<ul><li><strong>التصميم الهندسي (Civil 3D)</strong>:</li>
+<p></ul>   - استيراد بيانات GIS كـ Surface و Alignment</p>
+<p>- تصميم Pipe Network: 4 كم أنابيب DN100–DN200</p>
+<p>- حساب الضغوط (WaterCAD متكامل مع Civil 3D)</p>
+<p>- إنتاج 12 مخطط تنفيذي + جداول كميات</p>
+<ul><li><strong>النتائج</strong>:</li>
+<p></ul>   - أطوال الأنابيب: 4,200 م</p>
+<p>- عدد المحابس: 24 محبس</p>
+<p>- عدد وصلات الخدمة: 500 وصلة</p>
+<p>- كمية الحفر: 3,800 م³</p>
+<p>- زمن التصميم: 3 أسابيع (بدلاً من 8 أسابيع يدوياً)</p>
+<p>#### 9.2 دراسة حالة: تصميم شبكة FTTH لمدينة</p>
+<p><strong>المشروع</strong>: شبكة ألياف ضوئية لـ 10,000 مشترك في مدينة متوسطة.</p>
+<p><strong>استخدام GIS</strong>:</p>
+<ul><li>تحليل كثافة المشتركين بالمناطق (Hot Spot Analysis)</li>
+<li>تحديد مواقع OLT و Splitters بناءً على التوزيع</li>
+<li>حساب أطوال الكابلات لكل منطقة (Network Analysis)</li>
+<li>إنتاج خرائط تنفيذية للفرق الميدانية</li>
+<p></ul></p>
+<p><strong>استخدام AutoCAD</strong>:</p>
+<ul><li>رسم تفاصيل الـ Racks و ODF</li>
+<li>تصميم Handholes و Closures</li>
+<li>مخططات اللحام (Splicing Diagrams)</li>
+<p></ul></p>
+<p>#### 9.3 دراسة حالة: إدارة أصول شبكة كهرباء</p>
+<p><strong>المشروع</strong>: رقمنة شبكة كهرباء لمدينة بـ 50,000 عميل.</p>
+<p><strong>الخطوات</strong>:</p>
+<ul><li>مسح ميداني بـ GPS لكل الأعمدة والمحولات</li>
+<li>استيراد البيانات إلى GIS (ArcGIS)</li>
+<li>ربط كل عنصر ببياناته (القدرة، التاريخ، الحالة)</li>
+<li>إنتاج خرائط تشغيلية وصيانة</li>
+<li>تكامل مع نظام إدارة الأعطال (OMS)</li>
+<p></ul></p>
+<p><strong>النتائج</strong>:</p>
+<ul><li>تقليل زمن استجابة الأعطال بنسبة 40%</li>
+<li>تحسين كفاءة الصيانة الوقائية</li>
+<li>دقة بيانات الأصول 98%</li>
+<p></ul></p>
+<p>---</p>
+<h3>الباب العاشر: جمع البيانات الميدانية والمسح</h3>
+<p>#### 10.1 طرق جمع البيانات المكانية</p>
+<table><thead><tr><th>الطريقة</th><th>الدقة</th><th>السرعة</th><th>التكلفة</th><th>الاستخدام</th></tr></thead><tbody><tr><td><strong>GPS/GNSS RTK</strong></td><td>±2 سم</td><td>متوسطة</td><td>متوسطة</td><td>مسح نقاط الشبكة</td></tr><tr><td><strong>Total Station</strong></td><td>±1 مم</td><td>بطيء</td><td>متوسطة</td><td>مسح تفصيلي</td></tr><tr><td><strong>Drone (UAV)</strong></td><td>±5 سم</td><td>سريع</td><td>متوسط</td><td>مسح مناطق واسعة</td></tr><tr><td><strong>LiDAR</strong></td><td>±10 سم</td><td>سريع جداً</td><td>عالي</td><td>نمذجة تضاريس</td></tr><tr><td><strong>Satellite Imagery</strong></td><td>±50 سم</td><td>سريع</td><td>منخفض</td><td>مرجع عام</td></tr><tr><td><strong>Mobile Mapping</strong></td><td>±5 سم</td><td>سريع</td><td>عالي</td><td>مسح طرق متحرك</td></tr></tbody></table>
+<p>#### 10.2 المسح الميداني بالأجهزة المحمولة</p>
+<p><strong>ArcGIS Field Maps / Survey123:</strong></p>
+<ul><li>جمع بيانات الشبكة بالتابلت أو الهاتف</li>
+<li>GPS مدمج مع إمكانية ربط بـ RTK للدقة العالية</li>
+<li>تصوير كل عنصر (Manhole، Valve) وإرفاقه بالبيانات</li>
+<li>نزامنة تلقائية مع قاعدة بيانات GIS</li>
+<li>إمكانية العمل دون اتصال (Offline Mode)</li>
+<p></ul></p>
+<p>#### 10.3 معالجة بيانات المسح</p>
+<ul><li><strong>تنظيف البيانات</strong>: إزالة النقاط الشاذة (Outliers)</li>
+<li><strong>التحقق الطوبولوجي</strong>: فحص الاتصال والاتساق</li>
+<li><strong>الربط بالسمات</strong>: إضافة البيانات الوصفية</li>
+<li><strong>التصنيف</strong>: تنظيم البيانات في طبقات</li>
+<li><strong>التوثيق</strong>: بيانات المصدر والدقة والتاريخ (Metadata)</li>
+<p></ul></p>
+<p>---</p>
+<h3>الباب الحادي عشر: إدارة الأصول ودورة الحياة</h3>
+<p>#### 11.1 دورة حياة شبكة البنية التحتية</p>
+<table><thead><tr><th>المرحلة</th><th>الأداة</th><th>المخرجات</th></tr></thead><tbody><tr><td><strong>التخطيط</strong></td><td>GIS</td><td>تحليل الطلب، جدوى</td></tr><tr><td><strong>التصميم</strong></td><td>Civil 3D + GIS</td><td>مخططات، كميات</td></tr><tr><td><strong>التنفيذ</strong></td><td>AutoCAD + Field Maps</td><td>مخططات As-Built</td></tr><tr><td><strong>التشغيل</strong></td><td>GIS + SCADA</td><td>مراقبة، تحكم</td></tr><tr><td><strong>الصيانة</strong></td><td>GIS + CMMS</td><td>أوامر عمل، طوارئ</td></tr><tr><td><strong>التجديد</strong></td><td>GIS</td><td>تحليل الحالة، أولوية</td></tr></tbody></table>
+<p>#### 11.2 نظام إدارة الأصول (Asset Management)</p>
+<table><thead><tr><th>العنصر</th><th>البيانات المخزنة في GIS</th><th>الاستخدام</th></tr></thead><tbody><tr><td>الأنبوب</td><td>القطر، المادة، العمر، الحالة</td><td>التخطيط للتجديد</td></tr><tr><td>المنهل</td><td>الأبعاد، العمق، الحالة</td><td>الصيانة الوقائية</td></tr><tr><td>المحبس</td><td>النوع، القطر، الحالة</td><td>العزل للإصلاح</td></tr><tr><td>المضخة</td><td>القدرة، العمر، سجل الأعطال</td><td>استبدال استباقي</td></tr></tbody></table>
+<p><strong>مؤشرات الأداء (KPIs) من GIS:</strong></p>
+<ul><li>متوسط عمر الأصول (Average Asset Age)</li>
+<li>نسبة الأصول الحرجة (Critical Asset Ratio)</li>
+<li>معدل الأعطال لكل كم (Fault Rate per km)</li>
+<li>نسبة الشبكة المستبدلة (Renewal Rate)</li>
+<p></ul></p>
+<p>---</p>
+<h3>الباب الثاني عشر: الاتجاهات المستقبلية</h3>
+<p>#### 12.1 النموذج الرقمي التوأم (Digital Twin)</p>
+<p>Digital Twin هو نسخة رقمية حية من الشبكة الفعلية:</p>
+<ul><li><strong>بيانات في الزمن الحقيقي</strong>: حساسات IoT ترسل بيانات التدفق والضغط</li>
+<li><strong>محاكاة</strong>: تنبؤ بسلوك الشبكة في ظروف مختلفة</li>
+<li><strong>صيانة تنبؤية</strong>: AI يحلل البيانات ويتنبأ بالأعطال</li>
+<li><strong>اختبار السيناريوهات</strong>: ماذا يحدث عند عطل في نقطة X؟</li>
+<p></ul></p>
+<p>#### 12.2 الذكاء الاصطناعي في تصميم البنية التحتية</p>
+<ul><li><strong>توليد تصاميم تلقائية</strong>: AI يقترح مسارات الشبكات بناءً على معايير متعددة</li>
+<li><strong>تحليل صور الأقمار</strong>: كشف التغيرات في البنية التحتية تلقائياً</li>
+<li><strong>التنبؤ بالطلب</strong>: تحليل النمو السكاني وتوقع احتياجات التوسعة</li>
+<li><strong>تحسين التشغيل</strong>: AI يضبط ضغوط الشبكة لتقليل الفقد</li>
+<p></ul></p>
+<p>#### 12.3 المدن الذكية و GIS</p>
+<table><thead><tr><th>التطبيق</th><th>الوصف</th><th>التقنية</th></tr></thead><tbody><tr><td>إدارة المرور</td><td>تحليل تدفق المركبات</td><td>GIS + IoT</td></tr><tr><td>إدارة الطوارئ</td><td>توجيه فرق الاستجابة</td><td>GIS + GPS</td></tr><tr><td>إدارة النفايات</td><td>تحسين مسارات جمع النفايات</td><td>GIS Network Analysis</td></tr><tr><td>إدارة الطاقة</td><td>مراقبة استهلاك الكهرباء</td><td>GIS + Smart Meters</td></tr><tr><td>تخطيط عمراني</td><td>تحليل استخدام الأراضي</td><td>GIS Spatial Analysis</td></tr></tbody></table>
+<p>#### 12.4 الحوسبة السحابية والتعاون</p>
+<ul><li><strong>ArcGIS Online/Enterprise</strong>: مشاركة خرائط وبيانات عبر فرق متعددة</li>
+<li><strong>BIM 360 / Autodesk Construction Cloud</strong>: تعاون على نماذج التصميم</li>
+<li><strong>Cloud Processing</strong>: معالجة بيانات LiDAR و صور الطائرات في السحابة</li>
+<li><strong>API Integration</strong>: ربط GIS مع أنظمة ERP و CRM و SCADA</li>
+<p></ul></p>
+<p>---</p>
+<h3>الأسئلة الشائعة (FAQ)</h3>
+<p><strong>س: ما الفرق بين GIS و AutoCAD؟</strong></p>
+<p>ج: GIS يتعامل مع البيانات المكانية (كل عنصر له إحداثيات وبيانات وصفية) ويقوم بتحليلات مكانية. AutoCAD يتعامل مع الرسومات الهندسية بدقة عالية لكن دون تحليل مكاني. في البنية التحتية، يُكملان بعضهما: GIS للتحليل والتخطيط، AutoCAD للتصميم الدقيق.</p>
+<p><strong>س: هل أحتاج Civil 3D أم AutoCAD العادي لتصميم الشبكات؟</strong></p>
+<p>ج: Civil 3D هو الأفضل بلا مقارنة. يوفر كائنات ذكية (Pipe Networks، Surfaces) تتحديث تلقائياً، حساب كميات تلقائي، وقطاعات طولية فورية. AutoCAD العادي يتطلب كل ذلك يدوياً.</p>
+<p><strong>س: كيف أبدأ في تعلم GIS للبنية التحتية؟</strong></p>
+<p>ج: ابدأ بـ QGIS (مجاني) لتعلم الأساسيات، ثم انتقل إلى ArcGIS Pro للعمل المؤسسي. تعلم أنظمة الإحداثيات، أنواع البيانات (Vector/Raster)، والتحليل المكاني. دورات ESRI و Coursera ممتازة للبدء.</p>
+<p><strong>س: ما هو أفضل صيغة لتبادل البيانات بين GIS و AutoCAD؟</strong></p>
+<p>ج: Shapefile للتبادل البسيط. File Geodatabase للمشاريع الكبيرة. LandXML لتبادل بيانات البنية التحتية (أسطح، محاور، أنابيب) بين Civil 3D و GIS. IFC لتكامل BIM مع GIS.</p>
+<p><strong>س: كيف أضمن دقة بيانات الشبكة في GIS؟</strong></p>
+<p>ج: استخدم GPS RTK بدقة ±2 سم للنقاط الحرجة. طبق قواعد الطوبولوجيا (Topology Rules) لضمان الاتصال وعدم التعارض. حدّث البيانات سنوياً بالمسح الميداني. وثّق المصدر والدقة (Metadata) لكل طبقة.</p>
+<p><strong>س: ما هو Digital Twin وكيف يرتبط بـ GIS؟</strong></p>
+<p>ج: Digital Twin هو نسخة رقمية حية من الشبكة الفعلية، تتحدث في الزمن الحقيقي ببيانات من حساسات IoT. GIS يوفر الإطار المكاني للنموذج، بينما BIM يوفر التفاصيل الهندسية، و IoT يوفر البيانات الحية.</p>
+<p><strong>س: كيف أختار نظام الإحداثيات المناسب لمشروعي؟</strong></p>
+<p>ج: استخدم النظام الرسمي لبلدك (مثل UTM Zone 36N لمصر، UTM Zone 38N للسعودية). للمشاريع الصغيرة جداً (أقل من 1 كم)، يمكن استخدام نظام محلي. تأكد من توحيد النظام بين جميع بيانات GIS و AutoCAD.</p>
+<p><strong>س: هل يمكن استخدام AI لتصميم شبكات البنية التحتية تلقائياً؟</strong></p>
+<p>ج: نعم، بدأ استخدام AI في اقتراح مسارات الشبكات، تحليل صور الأقمار لكشف الأصول، والتنبؤ بالطلب. لكن لا يزال المهندس البشري مسؤولاً عن المراجعة والاعتماد. AI أداة مساعدة وليست بديلاً عن الخبرة الهندسية.</p>
+<p>---</p>
+<h3>الخلاصة والتوصيات</h3>
+<p>تكامل GIS و AutoCAD في تصميم البنية التحتية ليس رفاهية تقنية — بل ضرورة هندسية وإدارية. المشروعات الحديثة تتطلب دقة مكانية، تحليلات ذكية، وإدارة أAssets طوال دورة الحياة. لا يمكن تحقيق ذلك بأدوات منفصلة.</p>
+<p><strong>توصيات عملية:</strong></p>
+<ul><li><strong>استثمر في التدريب</strong> — GIS و Civil 3D مهارات أساسية لمهندسي البنية التحتية</li>
+<li><strong>وحّد نظام الإحداثيات</strong> — قبل بدء أي مشروع، حدد النظام وطبّقه على كل البيانات</li>
+<li><strong>طبّق قواعد الطوبولوجيا</strong> — تمنع 90% من أخطاء البيانات</li>
+<li><strong>استخدم Civil 3D للتصميم</strong> — لا AutoCAD العادي، للكائنات الذكية والكميات التلقائية</li>
+<li><strong>اربط البيانات الوصفية</strong> — كل أنبوب وكل منهل له بياناته الكاملة في GIS</li>
+<li><strong>وثّق كل شيء (Metadata)</strong> — المصدر، الدقة، التاريخ، المسؤول</li>
+<li><strong>خطط للنمو</strong> — صمم قاعدة البيانات لتستوعب التوسعات المستقبلية</li>
+<li><strong>اعتمد على المسح الحديث</strong> — Drones و LiDAR أسرع وأدق من المسح التقليدي</li>
+<li><strong>دمج BIM و GIS</strong> — للوصول إلى Digital Twin في المستقبل</li>
+<li><strong>حدّث البيانات باستمرار</strong> — البيانات القديمة أسوأ من عدم وجود بيانات</li>
+<p></ul></p>
+<p>---</p>
+<h3>المراجع</h3>
+<ul><li>ESRI — ArcGIS Pro Documentation: Utility Network, 2024</li>
+<li>Autodesk — Civil 3D User Guide: Pipe Networks and Surfaces, 2024</li>
+<li>OGC (Open Geospatial Consortium) — Standards for CityGML, GeoPackage, 2024</li>
+<li>buildingSMART — IFC Standards for Infrastructure, 2024</li>
+<li>Federal Geographic Data Committee (FGDC) — GIS Data Quality Standards</li>
+<li>ASPRS — Accuracy Standards for Digital Geospatial Data, 2024</li>
+<li>ISO 19115 — Geographic Information Metadata Standard</li>
+<li>ISO 19107 — Geographic Information Spatial Schema</li>
+<li>LandXML.org — LandXML Data Exchange Standard, 2024</li>
+<li>AGI (Association for Geographic Information) — GIS Best Practice Guidelines, 2024</li></ul></div>
+
+            <div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
+              <div class="share-buttons">
+                <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">مشاركة:</span>
+                <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/ar/articles/gis-autocad-infrastructure-network-design-guide.html&text=نظم المعلومات الجغرافية (GIS) والأوتوكاد (AutoCAD) في تصميم البنية التحتية والشبكات: الدليل الشامل" target="_blank" rel="noopener">𝕏 Twitter</a>
+                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.ashraf-eldesoky.space/ar/articles/gis-autocad-infrastructure-network-design-guide.html" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://www.ashraf-eldesoky.space/ar/articles/gis-autocad-infrastructure-network-design-guide.html" target="_blank" rel="noopener">Facebook</a>
+                <button class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied'">🔗 Copy Link</button>
+              </div>
+            </div>
+
+            
+            <div class="article-tags" style="margin:1.5rem 0;">
+              <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">الوسوم:</span>
+              <a href="../articles/index.html?tag=GIS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#GIS</a><a href="../articles/index.html?tag=AutoCAD" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#AutoCAD</a><a href="../articles/index.html?tag=Infrastructure" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Infrastructure</a><a href="../articles/index.html?tag=Civil 3D" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Civil 3D</a><a href="../articles/index.html?tag=Spatial Analysis" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Spatial Analysis</a><a href="../articles/index.html?tag=BIM" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#BIM</a><a href="../articles/index.html?tag=ArcGIS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#ArcGIS</a><a href="../articles/index.html?tag=QGIS" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#QGIS</a><a href="../articles/index.html?tag=Network Design" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Network Design</a><a href="../articles/index.html?tag=Asset Management" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Asset Management</a><a href="../articles/index.html?tag=Digital Twin" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Digital Twin</a><a href="../articles/index.html?tag=Engineering" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#Engineering</a>
+            </div>
+
+            <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
+
+            <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">← العودة للمقالات</a>
+          </div>
+
+          <aside class="article-sidebar">
+            <div style="margin-top:2rem;">
+              <div class="article-lang-switch">
+                <button class="" data-lang="en">🇺🇸 EN</button>
+                <button class="active" data-lang="ar">🇸🇦 ع</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -69,6 +465,6 @@
   <script src="../../assets/js/i18n.js?v=2"></script>
   <script src="../../assets/js/components.js?v=4"></script>
   <script src="../../assets/js/core.js?v=6"></script>
-  <script src="../../assets/js/article.js?v=8"></script>
+  <script src="../../assets/js/article.js?v=9"></script>
 </body>
 </html>
