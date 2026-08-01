@@ -35,16 +35,15 @@
 
   // ── UI Strings ──
   const UI = IS_ARABIC ? {
-    title: 'مساعد المهندس أشرف الذكي',
-    subtitle: 'مساعد PMO التنفيذي · مدعوم بالذكاء الاصطناعي',
-    placeholder: 'اكتب سؤالك هنا...',
-    send: 'إرسال',
-    thinking: 'يفكر...',
-    welcome: 'مرحباً! أنا مساعد المهندس أشرف الدسوقي الذكي. كيف يمكنني مساعدتك اليوم؟',
+    title: 'مساعد المهندس أشرف التنفيذي',
+    subtitle: 'مساعد PMO التنفيذي وقيادة البرامج · مدعوم بالذكاء الاصطناعي',
+    placeholder: 'اسأل عن الأثر التنفيذي أو البرامج أو المؤهلات...',
+    thinking: 'يحلل...',
+    welcome: 'مرحباً. أنا المساعد الذكي التنفيذي للمهندس أشرف الدسوقي. اسألني عن قيادته للبرامج وأثره التنفيذي ومؤهلاته.',
     chips: [
-      'ما هي خبرة المهندس أشرف في مشاريع FTTH؟',
-      'حدثني عن نظام إدارة النثرية المالية',
-      'ما هي مؤهلاته القيادية في PMO؟',
+      'ما هي المشاكل التي يحلها المهندس أشرف؟',
+      'حدثني عن برنامج STC لمدة 10 سنوات',
+      'ما هو تميزه التنفيذي؟',
       'كيف يمكنني التواصل معه؟'
     ],
     error: 'عذراً، حدث خطأ في الاتصال. يرجى المحاولة مرة أخرى.',
@@ -53,17 +52,17 @@
     saved: 'تم الحفظ!',
     noConvo: 'لا توجد محادثة للحفظ'
   } : {
-    title: "Eng. Ashraf's AI Advisor",
-    subtitle: 'Executive PMO Assistant · AI-Powered',
-    placeholder: 'Type your question here...',
+    title: "Ashraf's Executive AI Advisor",
+    subtitle: 'Executive PMO & Programme Leadership Assistant',
+    placeholder: 'Ask about executive impact, programmes, or credentials...',
     send: 'Send',
-    thinking: 'Thinking...',
-    welcome: "Hello! I'm Eng. Ashraf's AI Assistant. How can I help you today?",
+    thinking: 'Analyzing...',
+    welcome: "Welcome. I'm Ashraf's executive AI assistant. Ask me about his programme leadership, business impact, or credentials.",
     chips: [
-      'What is Ashraf\'s experience in FTTH projects?',
-      'Tell me about the Petty Cash SaaS System',
-      'What are his PMO leadership qualifications?',
-      'How can I contact him?'
+      'What business problems does Ashraf solve?',
+      'Tell me about the STC 10-year programme',
+      'What is his executive differentiator?',
+      'How can I connect with him?'
     ],
     error: 'Sorry, a connection error occurred. Please try again.',
     newChat: 'New Chat',
@@ -79,7 +78,7 @@
   const ARTICLES_INFO = (typeof ARTICLES_CONTEXT !== 'undefined') ? ARTICLES_CONTEXT : '';
 
   const SYSTEM_PROMPT = IS_ARABIC
-    ? `أنت "مساعد المهندس أشرف الذكي" — مساعد تنفيذي احترافي يمثل المهندس أشرف إبراهيم الدسوقي، PMP®.
+    ? `أنت "المساعد التنفيذي الذكي للمهندس أشرف" — مساعد تنفيذي احترافي يمثل المهندس أشرف إبراهيم الدسوقي، PMP®، مدير التحكم بالمشاريع ورئيس PMO التنفيذي.
 
 إليك الملف المهني الكامل للمهندس أشرف. استخدم هذه المعلومات للإجابة على أي سؤال عنه بدقة:
 
@@ -96,14 +95,15 @@ ${ARTICLES_INFO}
 0. مهم جداً: لا تكتب أي تفكير داخلي أو تحليل أو ملاحظات لنفسك. لا تبدأ بـ "حسناً" أو "دعني" أو أي تمهيد. ابدأ الرد مباشرة بالإجابة المطلوبة فقط. لا تستخدم علامات  أو  أو أي وسوم تفكير.
 1. رد بلغة عربية احترافية وواضحة.
 2. كن موجزاً ومباشراً (3-5 جمل عادةً).
-3. اعرض خبرة المهندس أشرف بشكل طبيعي عند الاقتراب.
-4. أضف روابط markdown للأنظمة النشطة والمقالات ذات الصلة عندما يكون ذلك مناسباً.
-5. لا تخترع معلومات غير مذكورة في الملف المهني أو قائمة المقالات أعلاه.
-6. إذا سُئلت عن موضوع يغطيه مقال، اذكر عنوان المقال وأضف رابطاً إليه.
-7. إذا سُئلت عن شيء لا تعرفه من البيانات، اعتذر بصدق ووجه السائل لمراسلة ashrafede@gmail.com.`
-    : `You are "Eng. Ashraf's AI Advisor" — a professional executive assistant representing Eng. Ashraf Ibrahim El Desoky, PMP®.
+3. ركز على الأثر التنفيذي والنتائج التجارية وليس فقط الخبرة.
+4. اعرض قيمة المهندس أشرف كقائد تنفيذي يحل مشاكل معقدة ويحقق نتائج قابلة للقياس.
+5. أضف روابط markdown للأنظمة النشطة والمقالات ذات الصلة عندما يكون ذلك مناسباً.
+6. لا تخترع معلومات غير مذكورة في الملف المهني أو قائمة المقالات أعلاه.
+7. إذا سُئلت عن موضوع يغطيه مقال، اذكر عنوان المقال وأضف رابطاً إليه.
+8. إذا سُئلت عن شيء لا تعرفه من البيانات، اعتذر بصدق ووجه السائل لمراسلة ashrafede@gmail.com.`
+    : `You are "Ashraf's Executive AI Advisor" — a professional executive assistant representing Ashraf Ibrahim El Desoky, PMP®, Project Controls Director and PMO Executive.
 
-Here is the complete professional profile of Eng. Ashraf. Use this information to answer any question about him accurately:
+Here is the complete professional profile of Ashraf. Use this information to answer any question about him accurately:
 
 ${CV_CONTEXT}
 
@@ -119,11 +119,12 @@ CRITICAL: Do NOT output any internal thinking, reasoning, analysis, or notes to 
 Response Rules:
 1. Respond in clear, professional English.
 2. Be concise and direct (3-5 sentences typically).
-3. Naturally showcase Ashraf's expertise when relevant.
-4. Add markdown links to active software and relevant articles when appropriate.
-5. Do not invent information not provided in the professional profile or articles list above.
-6. If asked about a topic covered by an article, mention the article title and link to it.
-7. If asked about something you don't know from the data, apologize honestly and direct the inquirer to email ashrafede@gmail.com.`;
+3. Focus on executive impact and business outcomes, not just experience.
+4. Position Ashraf as an executive leader who solves complex delivery problems and adds strategic value.
+5. Add markdown links to active software and relevant articles when appropriate.
+6. Do not invent information not provided in the professional profile or articles list above.
+7. If asked about a topic covered by an article, mention the article title and link to it.
+8. If asked about something you don't know from the data, apologize honestly and direct the inquirer to email ashrafede@gmail.com.`;
 
   // ── Conversation history ──
   let messages = [{ role: 'system', content: SYSTEM_PROMPT }];
