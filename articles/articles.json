@@ -8286,5 +8286,49 @@
       ],
       "content": "## مشكلة الأوراق\n\nمعظم سجلات المخاطر أوراق. موجودة لأن منهجية إدارة المشاريع تتطلبها، أو لأن العميل طلب واحدة. تُنشأ في بداية المشروع وتُحفظ في مجلد وتُحدث أحياناً. ليس لها أي تأثير على نتيجة المشروع لأنها لا تُستخدم لاتخاذ القرارات.\n\n## مبدأ حماية الهامش\n\nالغرض من سجل المخاطر ليس توثيق المخاطر. الغرض هو حماية الهامش. كل مخاطرة في المشروع لها تأثير محتمل على التكلفة، ومجموع تلك التكاليف المحتملة هو التعرض للمخاطر الذي يهدد هامش ربح المشروع.\n\n## بناء السجل: العشرة الأوائل\n\nأنا أدعو لسجل مخاطر لا يزيد عن عشرة مخاطر نشطة في أي وقت. عشرة مخاطر يمكن إدارتها بفعالية — مراجعتها أسبوعياً وتحديثها. مئتان لا يمكن.\n\n## المراجعة الأسبوعية للمخاطر\n\nسجل المخاطر ليس وثيقة ثابتة. بل أداة إدارة حية تُراجع كل أسبوع. هذه الإيقاع الأسبوعي هو ما يحول السجل من أوراق إلى أداة إدارة.\n\n## ربط المخاطر بالاحتياطي\n\nيجب أن يُبلغ سجل المخاطر مباشرة ميزانية احتياطي المشروع. إجمالي التعرض للمخاطر — مجموع (الاحتمالية × التأثير) — هو الحد الأدنى للاحتياطي.\n\n## السجل كأداة تواصل\n\nسجل المخاطر أيضاً أداة تواصل. عندما يذهب مدير المشروع إلى الراعي ويقول 'نحتاج مليون دولار إضافية في الاحتياطي لأن ثلاث مخاطر جديدة تم تحديدها'، يقدم السجل الدليل."
     }
+  },
+  {
+    "id": "pc-06",
+    "slug": "pmo-project-controls-governance",
+    "category": "PMO & Project Controls",
+    "author": "Ashraf Ibrahim El Desoky",
+    "heroImage": "https://images.pexels.com/photos/5668832/pexels-photo-5668832.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "publishDate": "2026-08-09",
+    "updatedDate": "2026-08-09",
+    "readingTime": 12,
+    "featured": false,
+    "draft": false,
+    "tags": [
+      "PMO",
+      "Project Controls",
+      "Governance",
+      "Earned Value Management"
+    ],
+    "en": {
+      "title": "PMO and Project Controls: The Governance Architecture Behind Successful Programmes",
+      "excerpt": "How PMO and project controls create the governance architecture behind successful programmes — from framework design to real-world implementation in mega projects.",
+      "metaTitle": "PMO and Project Controls: The Governance Architecture | Ashraf El Desoky",
+      "metaDescription": "How PMO and project controls create the governance architecture behind successful programmes — from framework design to real-world implementation in mega projects.",
+      "keywords": [
+        "PMO",
+        "project controls",
+        "governance",
+        "earned value management",
+        "programme management"
+      ]
+    },
+    "ar": {
+      "title": "مكتب إدارة المشاريع وضوابط المشروع: بنية الحوكمة خلف البرامج الناجحة",
+      "excerpt": "كيف يخلق مكتب إدارة المشاريع وضوابط المشروع بنية الحوكمة خلف البرامج الناجحة — من تصميم الإطار إلى التطبيق الفعلي في المشاريع الكبرى.",
+      "metaTitle": "مكتب إدارة المشاريع وضوابط المشروع: بنية الحوكمة | أشرف الدسوقي",
+      "metaDescription": "كيف يخلق مكتب إدارة المشاريع وضوابط المشروع بنية الحوكمة خلف البرامج الناجحة — من تصميم الإطار إلى التطبيق الفعلي في المشاريع الكبرى.",
+      "keywords": [
+        "مكتب إدارة المشاريع",
+        "ضوابط المشروع",
+        "الحوكمة",
+        "إدارة القيمة المكتسبة",
+        "إدارة البرامج"
+      ]
+    }
   }
 ]
