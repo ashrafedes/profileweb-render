@@ -43,13 +43,10 @@
   <link rel="stylesheet" href="../../assets/css/articles.css">
   <style>
     .article-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:2rem;align-items:start}
-    .article-sidebar{grid-column:2}
+    .article-sidebar{grid-column:2;position:sticky !important;top:96px;align-self:start}
     html[dir="rtl"] .article-layout{grid-template-columns:280px minmax(0,1fr)}
-    html[dir="rtl"] .article-sidebar{grid-column:1}
-    .article-toc{position:sticky;top:96px;border:1px solid var(--border-light);border-radius:8px;padding:1rem;background:var(--bg);max-height:calc(100vh - 120px);overflow:auto}
-    .article-toc-title{font-size:.95rem;margin:0 0 .5rem 0}
-    .toc-list a{display:block;font-size:.88rem;color:var(--text-muted);text-decoration:none;padding:.25rem 0}
-    .toc-list a.active{color:var(--accent);font-weight:600}
+    html[dir="rtl"] .article-sidebar{grid-column:1;position:sticky !important;top:96px;align-self:start}
+    @media(max-width:900px){.article-layout{grid-template-columns:1fr !important}.article-sidebar{display:none !important}}
   </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Turning Complex Projects Into Controlled, Measurable Execution", "description": "25+ years in telecommunications, digital infrastructure, FTTH, PMO and project controls — lessons from the field on turning complex projects into controlled, measurable execution.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-09-28", "dateModified": "2026-09-28", "image": "https://images.pexels.com/photos/590047/pexels-photo-590047.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/en/articles/turning-complex-projects-into-controlled-execution.html", "inLanguage": "en"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "Articles", "item": "https://www.ashraf-eldesoky.space/en/articles/"}, {"@type": "ListItem", "position": 3, "name": "Turning Complex Projects Into Controlled, Measurable Execution", "item": "https://www.ashraf-eldesoky.space/en/articles/turning-complex-projects-into-controlled-execution.html"}]}</script>
@@ -119,7 +116,7 @@
 <h2>If You Lead in Saudi Arabia, Here’s the Point</h2>
 <p>If you lead FTTH, 5G, digital infrastructure or a multi‑contractor programme in the Kingdom, you do not need another report. You need fewer surprises, faster decisions, and measurable throughput. Send me the three constraints that are hurting you most this month and the latest milestone forecast. Within forty‑eight hours I will reply with a short action map: what to change now, what to protect next, and what to measure so you will know it worked. No obligation, and we can do it before your next steering meeting.</p>
 <p>Good projects need good people. Difficult projects need experienced ones. The difference is not the logo on the dashboard—it is the discipline behind it. If the outcome you care about is a live network, a connected footprint, a safe commissioning, a programme that moves as one instead of many—I am interested in that outcome as much as you are. The most valuable professional conversation often happens before a job description ever exists.</p>
-<p>When you are ready to turn complexity into visibility, visibility into decisions, and decisions into controlled, measurable execution, get in touch. The next programme milestone is closer than it looks—and so is the point where control returns. And if you want the complete operating model that ties standards, assurance, portfolio visibility and delivery accountability together, see the PMO framework here: <a href="pmo-excellence-framework.html" target="_self" rel="bookmark">PMO excellence framework</a>.</p><div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
+<p>When you are ready to turn complexity into visibility, visibility into decisions, and decisions into controlled, measurable execution, get in touch. The next programme milestone is closer than it looks—and so is the point where control returns. And if you want the complete operating model that ties standards, assurance, portfolio visibility and delivery accountability together, see the PMO framework here: <a href="pmo-excellence-framework.html" target="_self" rel="bookmark">PMO excellence framework</a>.</p></div><div style="margin:2.5rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border-light);">
               <div class="share-buttons">
                 <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">Share:</span>
                 <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.ashraf-eldesoky.space/en/articles/turning-complex-projects-into-controlled-execution.html&text=Turning Complex Projects Into Controlled, Measurable Execution" target="_blank" rel="noopener">𝕏 Twitter</a>
@@ -144,7 +141,7 @@
           </div>
 
           <aside class="article-sidebar">
-            <div style="margin-top:2rem;">
+            <div style="margin-top:1.5rem;">
               <div class="article-lang-switch">
                 <button class="active" data-lang="en">🇺🇸 EN</button>
                 <button class="" data-lang="ar">🇸🇦 ع</button>
@@ -216,18 +213,6 @@
   <script src="../../assets/js/components.js?v=4"></script>
   <script src="../../assets/js/core.js?v=6"></script>
   <script src="../../assets/js/article.js?v=9"></script>
-  <script>
-  (function(){
-    var content=document.querySelector('#article-content');
-    var toc=document.querySelector('#toc');
-    if(!content||!toc) return;
-    var hs=Array.prototype.slice.call(content.querySelectorAll('h2, h3'));
-    hs.forEach(function(h,idx){ if(!h.id) h.id='sec-'+(idx+1); var a=document.createElement('a'); a.href='#'+h.id; a.textContent=h.textContent; a.setAttribute('data-target',h.id); toc.appendChild(a); });
-    var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
-    var obs=new IntersectionObserver(function(entries){ entries.forEach(function(e){ var id=e.target.id; var link=toc.querySelector('a[data-target="'+id+'"]'); if(link){ if(e.isIntersecting){ links.forEach(function(l){l.classList.remove('active')}); link.classList.add('active'); } } }); }, {rootMargin:'0px 0px -70% 0px', threshold:0.0});
-    hs.forEach(function(h){ obs.observe(h); });
-  })();
-  </script>
 </body>
 </html>
 
