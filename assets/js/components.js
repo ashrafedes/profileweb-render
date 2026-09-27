@@ -21,8 +21,8 @@
   // ── Nav base: '../' when inside any subdir (articles, ftth, project-controls-hub), '' otherwise ──
   const NAV_BASE = (IN_ARTICLES_DIR || IN_HUB_DIR) ? '../' : '';
 
-  // ── Articles link: 'index.html' if already in articles, else 'articles/' ──
-  const ARTICLES_LINK = IN_ARTICLES_DIR ? 'index.html' : 'articles/';
+  // ── Articles link: 'index.html' if already in articles, else NAV_BASE + 'articles/' ──
+  const ARTICLES_LINK = IN_ARTICLES_DIR ? 'index.html' : NAV_BASE + 'articles/';
 
   // ── Language toggle: link to same page in other language dir ──
   let langToggleUrl;
