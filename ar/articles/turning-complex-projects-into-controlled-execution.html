@@ -41,6 +41,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/main.css">
   <link rel="stylesheet" href="../../assets/css/articles.css">
+  <style>
+    .article-layout{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:2rem;align-items:start}
+    .article-sidebar{grid-column:2}
+    html[dir="rtl"] .article-layout{grid-template-columns:280px minmax(0,1fr)}
+    html[dir="rtl"] .article-sidebar{grid-column:1}
+    .article-toc{position:sticky;top:96px;border:1px solid var(--border-light);border-radius:8px;padding:1rem;background:var(--bg);max-height:calc(100vh - 120px);overflow:auto}
+    .article-toc-title{font-size:.95rem;margin:0 0 .5rem 0}
+    .toc-list a{display:block;font-size:.88rem;color:var(--text-muted);text-decoration:none;padding:.25rem 0}
+    .toc-list a.active{color:var(--accent);font-weight:600}
+  </style>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "تحويل المشاريع المعقدة إلى تنفيذ مضبوط وقابل للقياس", "description": "أكثر من 25 عاماً في الاتصالات والبنية التحتية الرقمية وFTTH ومكتب إدارة المشاريع وضوابط المشروع — دروس من الميدان في تحويل المشاريع المعقدة إلى تنفيذ مضبوط وقابل للقياس.", "author": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "datePublished": "2026-09-28", "dateModified": "2026-09-28", "image": "https://images.pexels.com/photos/590047/pexels-photo-590047.jpeg?auto=compress&cs=tinysrgb&w=1200", "publisher": {"@type": "Person", "name": "Ashraf Ibrahim El Desoky"}, "mainEntityOfPage": "https://www.ashraf-eldesoky.space/ar/articles/turning-complex-projects-into-controlled-execution.html", "inLanguage": "ar"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space"}, {"@type": "ListItem", "position": 2, "name": "المقالات", "item": "https://www.ashraf-eldesoky.space/ar/articles/"}, {"@type": "ListItem", "position": 3, "name": "تحويل المشاريع المعقدة إلى تنفيذ مضبوط وقابل للقياس", "item": "https://www.ashraf-eldesoky.space/ar/articles/turning-complex-projects-into-controlled-execution.html"}]}</script>
 </head>
@@ -205,8 +215,21 @@
   <script src="../../assets/js/components.js?v=4"></script>
   <script src="../../assets/js/core.js?v=6"></script>
   <script src="../../assets/js/article.js?v=9"></script>
+  <script>
+  (function(){
+    var content=document.querySelector('#article-content');
+    var toc=document.querySelector('#toc');
+    if(!content||!toc) return;
+    var hs=Array.prototype.slice.call(content.querySelectorAll('h2, h3'));
+    hs.forEach(function(h,idx){ if(!h.id) h.id='sec-'+(idx+1); var a=document.createElement('a'); a.href='#'+h.id; a.textContent=h.textContent; a.setAttribute('data-target',h.id); toc.appendChild(a); });
+    var links=Array.prototype.slice.call(toc.querySelectorAll('a'));
+    var obs=new IntersectionObserver(function(entries){ entries.forEach(function(e){ var id=e.target.id; var link=toc.querySelector('a[data-target="'+id+'"]'); if(link){ if(e.isIntersecting){ links.forEach(function(l){l.classList.remove('active')}); link.classList.add('active'); } } }); }, {rootMargin:'0px 0px -70% 0px', threshold:0.0});
+    hs.forEach(function(h){ obs.observe(h); });
+  })();
+  </script>
 </body>
 </html>
+
 
 
 
