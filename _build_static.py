@@ -244,11 +244,12 @@ def build_article_hero(article, lang):
       </div>'''
 
 
-def build_article_body(article, lang):
+def build_article_body(article, articles, lang):
     data = article.get(lang, article.get('en', {}))
     slug = article['slug']
     content_html = render_markdown(data.get('content', ''))
     tags = article.get('tags', [])
+    prev_next_html = build_prev_next(article, articles, lang)
 
     share_text = 'مشاركة' if lang == 'ar' else 'Share'
     tags_text = 'الوسوم:' if lang == 'ar' else 'Tags:'
@@ -281,7 +282,7 @@ def build_article_body(article, lang):
 
             {tags_html}
 
-            <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next"></div>
+            <div style="display:flex;justify-content:space-between;gap:1rem;margin:1.5rem 0;flex-wrap:wrap;" id="prev-next">{prev_next_html}</div>
 
             <a href="index.html" style="display:inline-block;margin-top:1rem;font-weight:600;color:var(--accent);text-decoration:none;">{back_text}</a>
           </div>
@@ -298,10 +299,77 @@ def build_article_body(article, lang):
       </div>'''
 
 
-def build_article_page(article, lang):
+def build_related(article, articles, lang):
+    current_tags = set(article.get('tags') or [])
+    category = article.get('category', '')
+    scored = []
+    for a in articles:
+        if a.get('draft') or a['slug'] == article['slug']:
+            continue
+        score = 0
+        if a.get('category') == category:
+            score += 3
+        tag_matches = len(set(a.get('tags') or []) & current_tags)
+        score += tag_matches
+        if score > 0:
+            d = a.get(lang, a.get('en', {}))
+            scored.append((score, a, d))
+    scored.sort(key=lambda x: (-x[0], x[2].get('title', '')))
+    related = [x[1] for x in scored[:6]]
+
+    if not related:
+        return ''
+
+    heading = 'مقالات ذات صلة' if lang == 'ar' else 'Related Articles'
+    grid = []
+    for a in related:
+        d = a.get(lang, a.get('en', {}))
+        img = a.get('heroImage', '')
+        img_html = f'<img class="article-card-img" src="{img}" alt="{esc(d.get("title", ""))}" loading="lazy">' if img else '<div class="article-card-img" style="display:flex;align-items:center;justify-content:center;font-size:2rem;background:var(--bg-alt);">📝</div>'
+        grid.append(f'''<a href="{a['slug']}.html" class="article-card" style="text-decoration:none;color:inherit;">
+            {img_html}
+            <div class="article-card-body">
+              <div class="article-card-cat">{esc(a.get('category', ''))}</div>
+              <h3>{esc(d.get('title', ''))}</h3>
+              <p class="excerpt">{esc(d.get('excerpt', ''))}</p>
+            </div>
+          </a>''')
+    return f'''<h2 style="font-size:1.3rem;margin-bottom:1rem;">{heading}</h2>
+      <div class="related-grid">
+        {''.join(grid)}
+      </div>'''
+
+
+def build_prev_next(article, articles, lang):
+    published = [a for a in articles if not a.get('draft')]
+    idx = next((i for i, a in enumerate(published) if a['slug'] == article['slug']), -1)
+    prev_a = published[idx - 1] if idx > 0 else None
+    next_a = published[idx + 1] if idx >= 0 and idx < len(published) - 1 else None
+
+    prev_label = 'المقال السابق' if lang == 'ar' else '← Previous Article'
+    next_label = 'المقال التالي' if lang == 'ar' else 'Next Article →'
+
+    html = ''
+    if prev_a:
+        d = prev_a.get(lang, prev_a.get('en', {}))
+        html += f'''<a href="{prev_a['slug']}.html" style="flex:1;min-width:200px;text-decoration:none;">
+        <div style="font-size:0.78rem;color:var(--text-light);">{prev_label}</div>
+        <div style="font-weight:600;color:var(--text);font-size:0.9rem;margin-top:0.2rem;">{esc(d.get('title', ''))}</div>
+      </a>'''
+    if next_a:
+        d = next_a.get(lang, next_a.get('en', {}))
+        html += f'''<a href="{next_a['slug']}.html" style="flex:1;min-width:200px;text-align:right;text-decoration:none;">
+        <div style="font-size:0.78rem;color:var(--text-light);">{next_label}</div>
+        <div style="font-weight:600;color:var(--text);font-size:0.9rem;margin-top:0.2rem;">{esc(d.get('title', ''))}</div>
+      </a>'''
+    return html
+
+
+def build_article_page(article, articles, lang):
     head = build_article_head(article, lang)
     hero = build_article_hero(article, lang)
-    body = build_article_body(article, lang)
+    body = build_article_body(article, articles, lang)
+    related_html = build_related(article, articles, lang)
     font_style = '<style>* { font-family: \'Cairo\', sans-serif; }</style>' if lang == 'ar' else ''
 
     return f'''{head}
@@ -318,7 +386,9 @@ def build_article_page(article, lang):
     </section>
 
     <section class="section" style="padding:0 0 2rem;">
-      <div class="container" id="related-articles"></div>
+      <div class="container" id="related-articles">
+        {related_html}
+      </div>
     </section>
 
   </main>
@@ -591,7 +661,7 @@ def main():
         for lang, dir_path in [('en', en_dir), ('ar', ar_dir)]:
             if lang not in article and 'en' not in article:
                 continue
-            html_content = build_article_page(article, lang)
+            html_content = build_article_page(article, articles, lang)
             filepath = os.path.join(dir_path, f'{slug}.html')
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(html_content)
