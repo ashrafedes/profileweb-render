@@ -351,6 +351,11 @@
             const tocContainer = document.createElement('div');
             tocContainer.innerHTML = tocData.toc;
             sidebar.insertBefore(tocContainer, sidebar.firstChild);
+            // Ensure sidebar is a direct child of .article-layout for grid positioning
+            const layout = document.querySelector('.article-layout');
+            if (layout && sidebar.parentElement !== layout) {
+              layout.appendChild(sidebar);
+            }
           }
         }
       }
