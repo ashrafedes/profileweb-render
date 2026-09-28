@@ -16,6 +16,8 @@
   <meta name="description" content="Three core service areas for complex telecom and infrastructure programmes: Project Controls, PMO & Governance, and Programme Recovery.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.ashraf-eldesoky.space/en/services.html">
+  <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/services.html">
+  <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/services.html">
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="../manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,34 +25,192 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css?v=4">
   <style>
-    .page-header { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; padding: 5.5rem 0 3rem; }
-    .page-header h1 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.6rem); }
-    .page-header p { color: rgba(255,255,255,0.8); max-width: 700px; }
-    .svc-block { border-top: 1px solid var(--border-light); padding: 2.5rem 0; }
-    .svc-block:first-of-type { border-top: none; padding-top: 0; }
-    .svc-num { font-size: 0.8rem; font-weight: 700; color: var(--accent); letter-spacing: 0.15em; margin-bottom: 0.25rem; }
-    .svc-block h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
-    .svc-pos { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; margin-bottom: 1.75rem; }
-    .svc-grid { display: grid; gap: 1.25rem; }
-    @media (min-width: 768px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
-    .svc-item h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem; }
-    .svc-item p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
-    .svc-item ul { color: var(--text-muted); font-size: 0.95rem; padding-left: 1.2rem; margin: 0; }
-    .svc-item li { margin-bottom: 0.3rem; }
-    .domain-strip { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-    .domain-tag { background: var(--bg-alt); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.35rem 0.85rem; font-size: 0.8rem; color: var(--text); }
-    .how-steps { display: grid; gap: 1rem; margin-top: 1.5rem; }
-    @media (min-width: 768px) { .how-steps { grid-template-columns: repeat(5, 1fr); } }
-    .how-step { border-top: 3px solid var(--accent); padding-top: 1rem; }
-    .how-step h3 { font-size: 0.95rem; margin-bottom: 0.35rem; }
-    .how-step p { color: var(--text-muted); font-size: 0.85rem; margin: 0; }
-    .final-cta { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); }
-    .final-cta h2 { color: #fff; }
-    .final-cta p { color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 1.5rem; }
-    .btn { display: inline-block; padding: 0.75rem 1.75rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; }
+    :root {
+      --svc-gap: 2.5rem;
+      --svc-pad: 3rem;
+      --svc-muted: rgba(255,255,255,0.75);
+    }
+    @media (max-width: 767px) {
+      :root { --svc-pad: 2rem; --svc-gap: 1.75rem; }
+    }
+
+    /* ── Section helpers ── */
+    .svc-section { padding: var(--svc-pad) 0; }
+    .svc-section-alt { background: var(--bg-alt, #f6f8fb); }
+    .svc-eyebrow { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.65rem; }
+    .svc-title { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 700; margin-bottom: 0.75rem; line-height: 1.2; }
+    .svc-desc { color: var(--text-muted); font-size: 1.05rem; max-width: 640px; line-height: 1.55; }
+    .svc-grid-2 { display: grid; gap: var(--svc-gap); }
+    @media (min-width: 992px) { .svc-grid-2 { grid-template-columns: 1fr 1fr; } }
+    .svc-grid-3 { display: grid; gap: 1.25rem; }
+    @media (min-width: 768px) { .svc-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+
+    /* ── Hero ── */
+    .page-header { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; padding: 4.5rem 0 2.5rem; }
+    .page-header .breadcrumb { margin-bottom: 1.25rem; }
+    .page-header h1 { color: #fff; font-size: clamp(1.95rem, 4.3vw, 3rem); font-weight: 700; line-height: 1.12; max-width: 820px; margin-bottom: 1rem; }
+    .page-header .hero-lead { color: rgba(255,255,255,0.85); font-size: 1.05rem; max-width: 580px; margin-bottom: 1.5rem; line-height: 1.6; }
+    .hero-pillars { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center; color: rgba(255,255,255,0.9); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.04em; margin-bottom: 1.75rem; }
+    .hero-pillars span { display: inline-flex; align-items: center; }
+    .hero-pillars span + span::before { content: '·'; margin: 0 0.6rem; color: rgba(255,255,255,0.45); }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; }
     .btn-primary { background: var(--accent); color: #fff; border: none; }
-    .btn-primary:hover { background: var(--accent-hover); color: #fff; }
-    .btn-lg { padding: 0.9rem 2.25rem; font-size: 1rem; }
+    .btn-primary:hover { background: var(--accent-hover); color: #fff; transform: translateY(-2px); }
+    .btn-lg { padding: 0.95rem 2.4rem; font-size: 1rem; }
+
+    /* Problem panel */
+    .problem-panel { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-md); padding: 1.5rem; backdrop-filter: blur(4px); }
+    .problem-panel h3 { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 1rem; }
+    .problem-item { display: grid; grid-template-columns: 24px 1fr; gap: 0.75rem; align-items: start; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .problem-item:last-child { border-bottom: none; }
+    .problem-num { width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,0.12); color: #fff; font-size: 0.65rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .problem-text strong { display: block; font-size: 0.82rem; font-weight: 600; color: #fff; margin-bottom: 0.2rem; }
+    .problem-text span { font-size: 0.78rem; color: var(--svc-muted); line-height: 1.45; }
+
+    /* Hero visuals */
+    .mini-dashboard { display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; margin-top: 0.35rem; }
+    .mini-metric { background: rgba(255,255,255,0.08); border-radius: 6px; padding: 0.5rem; }
+    .mini-metric label { font-size: 0.6rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.05em; }
+    .mini-metric .val { font-size: 0.95rem; font-weight: 700; color: #fff; }
+    .mini-metric .val.warn { color: #ff7b72; }
+    .mini-metric .val.unknown { color: rgba(255,255,255,0.5); }
+
+    .mini-chart { height: 38px; position: relative; margin-top: 0.35rem; }
+    .mini-chart svg { width: 100%; height: 100%; overflow: visible; }
+    .mini-chart .line-plan { stroke: rgba(255,255,255,0.35); stroke-width: 2; fill: none; stroke-dasharray: 4 3; }
+    .mini-chart .line-actual { stroke: #ff7b72; stroke-width: 2; fill: none; }
+
+    /* Credibility strip */
+    .cred-strip { background: var(--bg-alt, #f6f8fb); border-bottom: 1px solid var(--border-light); }
+    .cred-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 2rem; padding: 1rem 0; color: var(--text-light); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+    .cred-inner span { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .cred-inner span::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+    /* ── Challenge cards ── */
+    .challenge-card { position: relative; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column; gap: 1.25rem; transition: var(--transition); }
+    .challenge-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .challenge-card .ch-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+    .challenge-card h3 { font-size: 1.15rem; font-weight: 700; margin: 0; }
+    .challenge-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.55; margin: 0; }
+    .challenge-card .ch-service { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; font-weight: 600; color: var(--accent); margin-top: auto; }
+
+    /* Flow visual: disconnected → connected */
+    .flow-visual { height: 70px; position: relative; margin: 0.5rem 0; }
+    .flow-dots { display: flex; align-items: center; justify-content: space-between; position: absolute; inset: 0; }
+    .flow-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--text-light); opacity: 0.25; }
+    .flow-dot.active { background: var(--accent); opacity: 1; }
+    .flow-lines { position: absolute; top: 50%; left: 10px; right: 10px; height: 2px; background: repeating-linear-gradient(90deg, rgba(0,0,0,0.08), rgba(0,0,0,0.08) 6px, transparent 6px, transparent 10px); }
+    .challenge-card:hover .flow-lines { background: linear-gradient(90deg, var(--accent), var(--accent)); }
+    .flow-central { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 34px; height: 34px; border-radius: 50%; background: var(--bg-alt); border: 2px solid var(--border-light); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; color: var(--text-light); }
+    .challenge-card:hover .flow-central { border-color: var(--accent); color: var(--accent); }
+
+    /* Divergence chart */
+    .diverge-chart { height: 70px; position: relative; margin: 0.5rem 0; }
+    .diverge-chart svg { width: 100%; height: 100%; overflow: visible; }
+    .diverge-chart .axis { stroke: var(--border-light); stroke-width: 1; }
+    .diverge-chart .plan { stroke: var(--text-light); stroke-width: 2; stroke-dasharray: 4 4; fill: none; opacity: 0.4; }
+    .diverge-chart .actual { stroke: #ff7b72; stroke-width: 2.5; fill: none; }
+
+    /* Timeline break visual */
+    .break-timeline { height: 70px; position: relative; margin: 0.5rem 0; }
+    .break-timeline .tl-bar { position: absolute; left: 0; right: 0; top: 50%; height: 3px; background: var(--border-light); transform: translateY(-50%); }
+    .break-timeline .tl-node { position: absolute; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; border-radius: 50%; background: var(--text-light); opacity: 0.35; }
+    .break-timeline .tl-node.missed { background: #ff7b72; opacity: 1; }
+    .break-timeline .tl-break { position: absolute; top: 50%; left: 60%; width: 3px; height: 26px; background: #ff7b72; transform: translate(-50%, -50%) rotate(25deg); }
+    .break-timeline .tl-label { position: absolute; top: 8px; left: 56%; font-size: 0.6rem; color: #ff7b72; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    /* ── Service detail panels ── */
+    .svc-detail { padding: var(--svc-pad) 0; border-top: 1px solid var(--border-light); }
+    .svc-detail:first-of-type { border-top: none; padding-top: 1rem; }
+    .svc-detail-head { margin-bottom: 1.75rem; }
+    .svc-detail-head .d-num { font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.18em; margin-bottom: 0.4rem; }
+    .svc-detail-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 0.5rem; }
+    .svc-detail-head .d-pos { color: var(--text-muted); font-size: 1.05rem; max-width: 680px; line-height: 1.5; }
+
+    .svc-body { display: grid; gap: var(--svc-gap); align-items: start; }
+    @media (min-width: 992px) { .svc-body { grid-template-columns: 1fr 1fr; } }
+    .svc-visual { background: var(--bg-alt, #f6f8fb); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; min-height: 260px; display: flex; flex-direction: column; justify-content: center; }
+    .svc-visual-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 1rem; }
+    .svc-content { display: flex; flex-direction: column; gap: 1.5rem; }
+    .svc-content h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem; }
+    .svc-content p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.6; margin: 0; }
+    .svc-content ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
+    .svc-content li { position: relative; padding-left: 1.4rem; color: var(--text); font-size: 0.95rem; line-height: 1.4; }
+    .svc-content li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+    .value-box { background: var(--bg-alt, #f6f8fb); border-left: 3px solid var(--accent); padding: 1rem 1.25rem; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+    .value-box h4 { margin-bottom: 0.35rem; }
+    .value-box p { font-weight: 500; color: var(--text); }
+
+    /* Project Controls visual */
+    .control-flow { display: flex; flex-direction: column; gap: 0.5rem; }
+    .control-node { display: flex; align-items: center; gap: 0.75rem; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.6rem 0.85rem; font-size: 0.82rem; font-weight: 600; color: var(--text); }
+    .control-node::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+    .control-arrow { text-align: center; color: var(--text-light); font-size: 0.8rem; line-height: 1; }
+    .control-output { margin-top: 0.75rem; padding: 0.75rem; background: rgba(30,144,255,0.06); border: 1px solid rgba(30,144,255,0.2); border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 600; color: var(--accent); text-align: center; }
+
+    /* PMO governance visual */
+    .gov-visual { display: grid; gap: 0.75rem; }
+    .gov-row { display: flex; align-items: center; gap: 0.75rem; }
+    .gov-project { flex: 1; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.55rem; font-size: 0.72rem; font-weight: 600; text-align: center; color: var(--text); }
+    .gov-hub { flex: 1.3; background: var(--accent); color: #fff; border-radius: var(--radius-sm); padding: 0.7rem; font-size: 0.78rem; font-weight: 700; text-align: center; letter-spacing: 0.03em; }
+    .gov-output { background: rgba(30,144,255,0.06); border: 1px dashed rgba(30,144,255,0.25); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.75rem; font-weight: 600; color: var(--accent); text-align: center; margin-top: 0.25rem; }
+    .gov-arrow { color: var(--text-light); font-size: 0.8rem; }
+
+    /* Recovery visual */
+    .recovery-chart { display: grid; gap: 1rem; }
+    .rec-row { display: grid; grid-template-columns: 80px 1fr; gap: 0.75rem; align-items: center; }
+    .rec-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light); }
+    .rec-bar { height: 10px; border-radius: 999px; background: var(--border-light); position: relative; overflow: hidden; }
+    .rec-bar span { position: absolute; top: 0; bottom: 0; left: 0; border-radius: 999px; }
+    .rec-bar .baseline { width: 100%; background: rgba(30,144,255,0.25); }
+    .rec-bar .actual { width: 62%; background: #ff7b72; }
+    .rec-bar .recovery { width: 88%; background: var(--accent); }
+    .rec-legend { display: flex; gap: 1rem; font-size: 0.7rem; color: var(--text-light); margin-top: 0.5rem; }
+    .rec-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-inline-end: 0.35rem; }
+
+    /* ── Domain section ── */
+    .domain-visual { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+    .domain-row { display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
+    .domain-node { background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.65rem 1rem; font-size: 0.82rem; font-weight: 600; color: var(--text); text-align: center; }
+    .domain-node.accent { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .domain-arrow { color: var(--text-light); font-size: 1rem; }
+    .domain-caption { font-size: 0.8rem; color: var(--text-muted); text-align: center; max-width: 300px; margin-top: 0.5rem; }
+
+    /* ── How I Work timeline ── */
+    .how-section { position: relative; }
+    .how-timeline { position: relative; display: grid; gap: 1rem; margin-top: 2rem; grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .how-timeline { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); } }
+    @media (min-width: 992px) { .how-timeline::before { content: ''; position: absolute; top: 18px; left: 7%; right: 7%; height: 2px; background: linear-gradient(90deg, var(--accent), rgba(30,144,255,0.15)); z-index: 0; } }
+    .how-step { position: relative; z-index: 1; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.25rem; }
+    .how-step .step-head { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 0.65rem; }
+    .how-step .step-dot { width: 28px; height: 28px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; flex-shrink: 0; }
+    .how-step h3 { font-size: 0.98rem; font-weight: 700; margin: 0; }
+    .how-step p { color: var(--text-muted); font-size: 0.82rem; line-height: 1.5; margin: 0 0 0.5rem; }
+    .how-step .step-output { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.03em; color: var(--accent); text-transform: uppercase; }
+
+    /* ── Final CTA ── */
+    .final-cta { background: linear-gradient(135deg, var(--primary-dark, #0a1128), var(--primary, #1e3a8a)); text-align: center; }
+    .final-cta h2 { color: #fff; font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 700; margin-bottom: 0.75rem; }
+    .final-cta p { color: rgba(255,255,255,0.78); max-width: 620px; margin: 0 auto 1.25rem; font-size: 1.02rem; }
+    .final-cta .next-steps { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.25rem; color: rgba(255,255,255,0.65); font-size: 0.8rem; font-weight: 500; margin-bottom: 1.75rem; }
+    .final-cta .next-steps span { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .final-cta .next-steps span::after { content: '→'; color: rgba(255,255,255,0.35); }
+    .final-cta .next-steps span:last-child::after { content: none; }
+
+    /* ── RTL overrides ── */
+    html[dir="rtl"] .svc-content li { padding-left: 0; padding-right: 1.4rem; }
+    html[dir="rtl"] .svc-content li::before { left: auto; right: 0; }
+    html[dir="rtl"] .value-box { border-left: none; border-right: 3px solid var(--accent); border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+    html[dir="rtl"] .problem-item { grid-template-columns: 1fr 24px; text-align: right; }
+    @media (min-width: 768px) {
+      html[dir="rtl"] .how-timeline::before { background: linear-gradient(90deg, rgba(30,144,255,0.15), var(--accent)); }
+    }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .btn, .challenge-card, .svc-card { transition: none !important; }
+      .btn:hover, .challenge-card:hover, .svc-card:hover { transform: none !important; }
+    }
   </style>
 </head>
 <body>
@@ -59,155 +219,422 @@
   <main id="main-content" class="page-wrapper">
     <header class="page-header">
       <div class="container">
-        <nav aria-label="Breadcrumb" class="breadcrumb">
-          <a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span class="current">Services</span>
-        </nav>
-        <h1>Services for Bringing Complex Projects & Programmes Under Control</h1>
-        <p>I help organisations improve project performance, strengthen programme governance, and recover projects that are delayed or underperforming.</p>
+        <div class="svc-grid-2" style="align-items: center;">
+          <div>
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+              <a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span class="current">Services</span>
+            </nav>
+            <h1>Services for Bringing Complex Projects & Programmes Under Control</h1>
+            <p class="hero-lead">I help organisations improve project performance, strengthen programme governance, and recover projects that are delayed or underperforming — with practical controls that fit the way complex programmes actually work.</p>
+            <div class="hero-pillars">
+              <span>Project Controls</span>
+              <span>PMO & Programme Governance</span>
+              <span>Programme Recovery</span>
+            </div>
+            <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Project</a>
+          </div>
+
+          <div class="problem-panel">
+            <h3>Is this your situation?</h3>
+            <div class="problem-item">
+              <div class="problem-num">01</div>
+              <div class="problem-text">
+                <strong>Loss of visibility</strong>
+                <div class="mini-dashboard">
+                  <div class="mini-metric"><label>Progress</label><div class="val">82%</div></div>
+                  <div class="mini-metric"><label>Schedule</label><div class="val warn">-14 days</div></div>
+                  <div class="mini-metric"><label>Forecast</label><div class="val unknown">?</div></div>
+                  <div class="mini-metric"><label>Risk</label><div class="val warn">HIGH</div></div>
+                </div>
+                <span>Reports exist, but management cannot see the real project position.</span>
+              </div>
+            </div>
+            <div class="problem-item">
+              <div class="problem-num">02</div>
+              <div class="problem-text">
+                <strong>Forecast divergence</strong>
+                <div class="mini-chart">
+                  <svg viewBox="0 0 160 40" preserveAspectRatio="none">
+                    <polyline class="line-plan" points="0,32 40,28 80,20 120,12 160,6"/>
+                    <polyline class="line-actual" points="0,32 40,30 80,30 120,22 160,14"/>
+                  </svg>
+                </div>
+                <span>The reported progress looks healthy while the programme continues to slip.</span>
+              </div>
+            </div>
+            <div class="problem-item">
+              <div class="problem-num">03</div>
+              <div class="problem-text">
+                <strong>Fragmented governance</strong>
+                <div class="flow-visual">
+                  <div class="flow-lines"></div>
+                  <div class="flow-dots">
+                    <div class="flow-dot"></div>
+                    <div class="flow-dot"></div>
+                    <div class="flow-dot"></div>
+                    <div class="flow-central">PMO</div>
+                    <div class="flow-dot"></div>
+                  </div>
+                </div>
+                <span>Multiple contractors report differently, making performance difficult to compare.</span>
+              </div>
+            </div>
+            <div class="problem-item">
+              <div class="problem-num">04</div>
+              <div class="problem-text">
+                <strong>Unclear recovery path</strong>
+                <div class="break-timeline">
+                  <div class="tl-bar"></div>
+                  <div class="tl-node" style="left: 12%"></div>
+                  <div class="tl-node missed" style="left: 48%"></div>
+                  <div class="tl-node" style="left: 86%"></div>
+                  <div class="tl-break"></div>
+                  <div class="tl-label">Milestone missed</div>
+                </div>
+                <span>The programme is behind schedule, but the recovery path is unclear.</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
-    <section class="section">
+    <div class="cred-strip">
       <div class="container">
-        <article class="svc-block">
-          <div class="svc-num">01</div>
-          <h2>Project Controls</h2>
-          <p class="svc-pos">Bring schedule, cost, progress, risk, and performance under control.</p>
-          <div class="svc-grid">
-            <div class="svc-item">
-              <h3>Problem</h3>
-              <p>Projects may have activity and reporting, but management may still lack a reliable view of actual performance.</p>
-            </div>
-            <div class="svc-item">
-              <h3>Approach</h3>
-              <p>Establish practical project-control processes for planning, progress measurement, forecasting, performance monitoring, and management reporting.</p>
-            </div>
-            <div class="svc-item">
-              <h3>Key Deliverables</h3>
-              <ul>
-                <li>Planning & Scheduling</li>
-                <li>Progress Measurement</li>
-                <li>Cost Control</li>
-                <li>Earned Value Management (EVM)</li>
-                <li>Risk & Change Control</li>
-                <li>Forecasting</li>
-                <li>KPI Reporting</li>
-                <li>Executive Dashboards</li>
-              </ul>
-            </div>
-            <div class="svc-item">
-              <h3>Outcome</h3>
-              <p>Better visibility of project performance, earlier identification of deviations, and stronger management decision support.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="svc-block">
-          <div class="svc-num">02</div>
-          <h2>PMO &amp; Programme Governance</h2>
-          <p class="svc-pos">Build a practical governance system that provides visibility, accountability, and control across complex programmes.</p>
-          <div class="svc-grid">
-            <div class="svc-item">
-              <h3>Problem</h3>
-              <p>Multiple projects can operate with inconsistent reporting, unclear accountability, and fragmented management information.</p>
-            </div>
-            <div class="svc-item">
-              <h3>Approach</h3>
-              <p>Establish a practical governance and reporting framework appropriate to the programme.</p>
-            </div>
-            <div class="svc-item">
-              <h3>Key Deliverables</h3>
-              <ul>
-                <li>PMO Framework</li>
-                <li>Governance Structure</li>
-                <li>Roles & Responsibilities</li>
-                <li>KPI Framework</li>
-                <li>Reporting Standards</li>
-                <li>Executive Dashboards</li>
-                <li>Review Cycles</li>
-                <li>Escalation Mechanisms</li>
-                <li>Programme Controls</li>
-              </ul>
-            </div>
-            <div class="svc-item">
-              <h3>Outcome</h3>
-              <p>More consistent management information, clearer accountability, and stronger decision support.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="svc-block">
-          <div class="svc-num">03</div>
-          <h2>Programme Recovery</h2>
-          <p class="svc-pos">Recover delayed or underperforming programmes through structured diagnosis, corrective action, and performance control.</p>
-          <div class="svc-grid">
-            <div class="svc-item">
-              <h3>Problem</h3>
-              <p>A programme is delayed, underperforming, or losing control.</p>
-            </div>
-            <div class="svc-item">
-              <h3>Approach</h3>
-              <p>Assess the current position, identify the causes of deviation, and establish a practical recovery plan.</p>
-            </div>
-            <div class="svc-item">
-              <h3>Key Deliverables</h3>
-              <ul>
-                <li>Current-State Assessment</li>
-                <li>Performance Diagnosis</li>
-                <li>Root-Cause Analysis</li>
-                <li>Schedule Assessment</li>
-                <li>Recovery Planning</li>
-                <li>Corrective Action Planning</li>
-                <li>Re-baselining where appropriate</li>
-                <li>Recovery Monitoring</li>
-                <li>Management Reporting</li>
-              </ul>
-            </div>
-            <div class="svc-item">
-              <h3>Outcome</h3>
-              <p>A structured and measurable path toward restoring programme control.</p>
-            </div>
-          </div>
-        </article>
+        <div class="cred-inner">
+          <span>25+ Years Experience</span>
+          <span>Telecom & Digital Infrastructure</span>
+          <span>FTTH / FTTx / OSP / ISP</span>
+          <span>Complex Regional Programmes</span>
+        </div>
       </div>
-    </section>
+    </div>
 
-    <section class="section section-alt">
+    <!-- Challenges I Solve -->
+    <section class="svc-section">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">Specialist Domain Experience</span>
-          <h2 class="section-title">Telecom &amp; Digital Infrastructure</h2>
-          <p class="section-desc">I provide Project Controls, PMO Governance, and Programme Recovery with deep experience in telecom and infrastructure environments.</p>
-          <div class="domain-strip">
-            <span class="domain-tag">FTTH / FTTx</span>
-            <span class="domain-tag">OSP / ISP Networks</span>
-            <span class="domain-tag">Large-Scale Network Deployment</span>
-            <span class="domain-tag">Complex Infrastructure Programmes</span>
+        <div class="section-header reveal" style="margin-bottom: 2rem;">
+          <span class="svc-eyebrow">Challenges I Solve</span>
+          <h2 class="svc-title">From Problem to Control</h2>
+          <p class="svc-desc">Three recurring patterns in complex programmes — and the service that addresses each one.</p>
+        </div>
+        <div class="svc-grid-3">
+          <div class="challenge-card">
+            <div>
+              <div class="ch-label">Problem</div>
+              <h3>Loss of Visibility</h3>
+              <div class="diverge-chart">
+                <svg viewBox="0 0 200 70" preserveAspectRatio="none">
+                  <line class="axis" x1="10" y1="60" x2="190" y2="60"/>
+                  <line class="axis" x1="10" y1="10" x2="10" y2="60"/>
+                  <polyline class="plan" points="15,50 55,42 95,32 135,20 175,12"/>
+                  <polyline class="actual" points="15,50 55,48 95,48 135,38 175,28"/>
+                </svg>
+              </div>
+              <p>Schedule, cost, and progress data exist in separate places. Management cannot see a single reliable view of where the project actually stands.</p>
+            </div>
+            <div class="ch-service">→ Project Controls</div>
+          </div>
+
+          <div class="challenge-card">
+            <div>
+              <div class="ch-label">Problem</div>
+              <h3>Fragmented Governance</h3>
+              <div class="flow-visual" style="height: 75px;">
+                <div class="flow-lines"></div>
+                <div class="flow-dots">
+                  <div class="flow-dot active"></div>
+                  <div class="flow-dot"></div>
+                  <div class="flow-dot"></div>
+                  <div class="flow-central">PMO</div>
+                  <div class="flow-dot active"></div>
+                </div>
+              </div>
+              <p>Multiple projects report in different formats, using different KPIs. Accountability is unclear and decision-makers receive fragmented information.</p>
+            </div>
+            <div class="ch-service">→ PMO & Programme Governance</div>
+          </div>
+
+          <div class="challenge-card">
+            <div>
+              <div class="ch-label">Problem</div>
+              <h3>Programme Delay</h3>
+              <div class="break-timeline" style="height: 75px;">
+                <div class="tl-bar"></div>
+                <div class="tl-node" style="left: 8%"></div>
+                <div class="tl-node missed" style="left: 45%"></div>
+                <div class="tl-node" style="left: 88%"></div>
+                <div class="tl-break" style="left: 45%; height: 30px;"></div>
+                <div class="tl-label" style="left: 42%;">Variance</div>
+              </div>
+              <p>The programme has fallen behind, the root cause is unclear, and there is no credible plan to recover schedule and performance.</p>
+            </div>
+            <div class="ch-service">→ Programme Recovery</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- Service details -->
+    <section class="svc-section svc-section-alt">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">How I Work</span>
-          <h2 class="section-title">A Clear Engagement Path</h2>
-        </div>
-        <div class="how-steps">
-          <div class="how-step"><h3>Assess</h3><p>Understand the current project or programme position.</p></div>
-          <div class="how-step"><h3>Diagnose</h3><p>Identify performance issues and control gaps.</p></div>
-          <div class="how-step"><h3>Design</h3><p>Develop the appropriate control, governance, or recovery framework.</p></div>
-          <div class="how-step"><h3>Implement</h3><p>Put the agreed processes and controls into operation.</p></div>
-          <div class="how-step"><h3>Monitor</h3><p>Track performance and support management decisions.</p></div>
+
+        <article class="svc-detail" id="svc-01">
+          <div class="svc-detail-head">
+            <div class="d-num">01 / Project Controls</div>
+            <h2>Bring Schedule, Cost, Progress & Risk Under Control</h2>
+            <p class="d-pos">Turn scattered project data into one reliable control picture that supports management decisions.</p>
+          </div>
+          <div class="svc-body">
+            <div class="svc-visual">
+              <div class="svc-visual-title">Control System Flow</div>
+              <div class="control-flow">
+                <div class="control-node">Plan</div>
+                <div class="control-arrow">↓</div>
+                <div class="control-node">Progress</div>
+                <div class="control-arrow">↓</div>
+                <div class="control-node">Cost</div>
+                <div class="control-arrow">↓</div>
+                <div class="control-node">Risk</div>
+                <div class="control-arrow">↓</div>
+                <div class="control-node">Forecast</div>
+                <div class="control-output">Executive Decision</div>
+              </div>
+            </div>
+            <div class="svc-content">
+              <div>
+                <h4>The Challenge</h4>
+                <p>Projects may have activity and reporting, but management still lacks a reliable view of actual performance. Schedules, costs, risks, and forecasts are tracked separately — so deviations appear late and decisions are made on incomplete information.</p>
+              </div>
+              <div>
+                <h4>What I Deliver</h4>
+                <ul>
+                  <li>Project Control Framework</li>
+                  <li>Integrated Schedule</li>
+                  <li>Progress Measurement System</li>
+                  <li>KPI Framework</li>
+                  <li>Earned Value Management (EVM)</li>
+                  <li>Risk & Change Control</li>
+                  <li>Executive Dashboard</li>
+                  <li>Management Reporting</li>
+                </ul>
+              </div>
+              <div class="value-box">
+                <h4>Expected Value</h4>
+                <p>Better visibility of project performance, earlier identification of deviations, and stronger management decision support.</p>
+              </div>
+              <div>
+                <h4>How I Help</h4>
+                <p>Establish practical project-control processes for planning, progress measurement, forecasting, performance monitoring, and management reporting — designed around the programme's existing workflow rather than adding bureaucracy.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="svc-detail" id="svc-02">
+          <div class="svc-detail-head">
+            <div class="d-num">02 / PMO & Programme Governance</div>
+            <h2>Build a Practical Governance System That Keeps Programmes Aligned</h2>
+            <p class="d-pos">Create the visibility, accountability, and decision rhythm complex programmes need to stay under control.</p>
+          </div>
+          <div class="svc-body">
+            <div class="svc-content">
+              <div>
+                <h4>The Challenge</h4>
+                <p>Multiple projects can operate with inconsistent reporting, unclear accountability, and fragmented management information. Without a common governance framework, executives spend more time reconciling reports than making decisions.</p>
+              </div>
+              <div>
+                <h4>What I Deliver</h4>
+                <ul>
+                  <li>PMO Governance Framework</li>
+                  <li>Reporting Standards</li>
+                  <li>KPI Framework</li>
+                  <li>Executive Dashboards</li>
+                  <li>Review Cycles</li>
+                  <li>Escalation Mechanisms</li>
+                </ul>
+              </div>
+              <div class="value-box">
+                <h4>Expected Value</h4>
+                <p>More consistent management information, clearer accountability, and stronger decision support across the programme.</p>
+              </div>
+              <div>
+                <h4>How I Help</h4>
+                <p>Establish a practical governance and reporting framework appropriate to the programme — defining who decides what, when, and on the basis of which information.</p>
+              </div>
+            </div>
+            <div class="svc-visual">
+              <div class="svc-visual-title">Governance Flow</div>
+              <div class="gov-visual">
+                <div class="gov-row">
+                  <div class="gov-project">Project 01</div>
+                  <div class="gov-arrow">→</div>
+                  <div class="gov-hub">PMO Governance</div>
+                </div>
+                <div class="gov-row">
+                  <div class="gov-project">Project 02</div>
+                  <div class="gov-arrow">→</div>
+                  <div class="gov-hub">Standard Reporting</div>
+                </div>
+                <div class="gov-row">
+                  <div class="gov-project">Project 03</div>
+                  <div class="gov-arrow">→</div>
+                  <div class="gov-hub">KPIs & Reviews</div>
+                </div>
+                <div class="gov-row" style="justify-content: center; margin-top: 0.5rem;">
+                  <div class="gov-arrow">↓</div>
+                </div>
+                <div class="gov-output">Executive Decision</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="svc-detail" id="svc-03">
+          <div class="svc-detail-head">
+            <div class="d-num">03 / Programme Recovery</div>
+            <h2>Diagnose Delayed Programmes and Establish a Structured Recovery Path</h2>
+            <p class="d-pos">Recover delayed or underperforming programmes through structured diagnosis, corrective action, and performance control.</p>
+          </div>
+          <div class="svc-body">
+            <div class="svc-visual">
+              <div class="svc-visual-title">Recovery Timeline</div>
+              <div class="recovery-chart">
+                <div class="rec-row">
+                  <div class="rec-label">Baseline</div>
+                  <div class="rec-bar"><span class="baseline"></span></div>
+                </div>
+                <div class="rec-row">
+                  <div class="rec-label">Actual</div>
+                  <div class="rec-bar"><span class="actual"></span></div>
+                </div>
+                <div class="rec-row">
+                  <div class="rec-label">Recovery</div>
+                  <div class="rec-bar"><span class="recovery"></span></div>
+                </div>
+                <div class="rec-legend">
+                  <span><i style="background: rgba(30,144,255,0.25)"></i>Planned</span>
+                  <span><i style="background: #ff7b72"></i>Current variance</span>
+                  <span><i style="background: var(--accent)"></i>Recovery path</span>
+                </div>
+              </div>
+            </div>
+            <div class="svc-content">
+              <div>
+                <h4>The Challenge</h4>
+                <p>A programme is delayed, underperforming, or losing control. The pressure is on to recover, but without a structured diagnosis the recovery plan becomes optimistic rather than credible.</p>
+              </div>
+              <div>
+                <h4>What I Deliver</h4>
+                <ul>
+                  <li>Diagnostic Assessment</li>
+                  <li>Recovery Plan</li>
+                  <li>Recovery Schedule</li>
+                  <li>Corrective Actions</li>
+                  <li>Control Mechanisms</li>
+                  <li>Recovery Monitoring</li>
+                  <li>Management Reporting</li>
+                </ul>
+              </div>
+              <div class="value-box">
+                <h4>Expected Value</h4>
+                <p>A structured and measurable path toward restoring programme control — without overstating what can be recovered or when.</p>
+              </div>
+              <div>
+                <h4>How I Help</h4>
+                <p>Assess the current position, identify the causes of deviation, and establish a practical recovery plan with realistic targets, clear corrective actions, and regular monitoring.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Specialist Domain Experience -->
+    <section class="svc-section">
+      <div class="container">
+        <div class="svc-grid-2" style="align-items: center;">
+          <div>
+            <span class="svc-eyebrow">Specialist Domain Experience</span>
+            <h2 class="svc-title">Telecom & Digital Infrastructure</h2>
+            <p class="svc-desc">Complex infrastructure programmes operate at the intersection of civil works, network rollout, permits, supply chains, and multiple contractors. Control is harder because the work is distributed, the units are high-volume, and the interfaces are many. I bring Project Controls, PMO Governance, and Programme Recovery expertise to these environments.</p>
+          </div>
+          <div class="svc-visual" style="min-height: 220px;">
+            <div class="svc-visual-title">Domain Knowledge Layer</div>
+            <div class="domain-visual">
+              <div class="domain-row">
+                <div class="domain-node">Telecom</div>
+                <div class="domain-arrow">→</div>
+                <div class="domain-node">FTTH / FTTx</div>
+              </div>
+              <div class="domain-arrow">↓</div>
+              <div class="domain-row">
+                <div class="domain-node">OSP / ISP</div>
+                <div class="domain-arrow">→</div>
+                <div class="domain-node">Network Deployment</div>
+              </div>
+              <div class="domain-arrow">↓</div>
+              <div class="domain-row">
+                <div class="domain-node accent">Programme Controls</div>
+                <div class="domain-arrow">+</div>
+                <div class="domain-node accent">PMO Governance</div>
+              </div>
+              <div class="domain-caption">Domain expertise applied through the three core services — not a separate offering.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section final-cta">
-      <div class="container reveal" style="text-align:center;">
-        <h2 class="section-title">Have a project or programme that needs better control?</h2>
+    <!-- How I Work -->
+    <section class="svc-section svc-section-alt how-section">
+      <div class="container">
+        <div class="section-header reveal" style="margin-bottom: 2rem;">
+          <span class="svc-eyebrow">How I Work</span>
+          <h2 class="svc-title">A Clear Engagement Path</h2>
+          <p class="svc-desc">A practical sequence that moves from understanding the situation to putting controls in place.</p>
+        </div>
+        <div class="how-timeline">
+          <div class="how-step">
+            <div class="step-head"><div class="step-dot">01</div><h3>Assess</h3></div>
+            <p>Understand the current project or programme position.</p>
+            <div class="step-output">Output: Current-state baseline</div>
+          </div>
+          <div class="how-step">
+            <div class="step-head"><div class="step-dot">02</div><h3>Diagnose</h3></div>
+            <p>Identify performance issues and control gaps.</p>
+            <div class="step-output">Output: Gap & root-cause findings</div>
+          </div>
+          <div class="how-step">
+            <div class="step-head"><div class="step-dot">03</div><h3>Design</h3></div>
+            <p>Develop the appropriate control, governance, or recovery framework.</p>
+            <div class="step-output">Output: Target operating model</div>
+          </div>
+          <div class="how-step">
+            <div class="step-head"><div class="step-dot">04</div><h3>Implement</h3></div>
+            <p>Put the agreed processes and controls into operation.</p>
+            <div class="step-output">Output: Operating processes & reports</div>
+          </div>
+          <div class="how-step">
+            <div class="step-head"><div class="step-dot">05</div><h3>Monitor</h3></div>
+            <p>Track performance and support management decisions.</p>
+            <div class="step-output">Output: KPI cycle & decisions</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="svc-section final-cta">
+      <div class="container reveal">
+        <h2>Have a project or programme that needs better control?</h2>
         <p>Let's discuss the current situation and determine whether Project Controls, PMO Governance, or Programme Recovery is the right approach.</p>
+        <div class="next-steps">
+          <span>Initial conversation</span>
+          <span>Situation review</span>
+          <span>Recommended approach</span>
+        </div>
         <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Project</a>
       </div>
     </section>
