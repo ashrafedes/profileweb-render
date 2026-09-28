@@ -184,6 +184,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+.btn-nav-cta {
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+}
+
+.btn-nav-cta:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
 .btn-theme-toggle {
   background: rgba(255,255,255,0.1);
   color: rgba(255,255,255,0.8);

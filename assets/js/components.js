@@ -46,8 +46,11 @@
     brandName: 'أشرف الدسوقي',
     brandTitle: 'نظام إدارة المسيرة التنفيذية',
     dashboard: 'الرئيسية',
+    services: 'الخدمات',
+    experience: 'المسيرة المهنية',
+    insights: 'المقالات والرؤى',
+    contact: 'تواصل',
     about: 'نبذة',
-    experience: 'المسيرة',
     projects: 'المشاريع',
     featuredProjects: 'المشاريع المميزة',
     skills: 'المهارات',
@@ -64,12 +67,12 @@
     education: 'التعليم',
     awards: 'الجوائز',
     downloads: 'التحميلات',
-    contact: 'تواصل',
     search: '🔍 بحث',
     searchPlaceholder: 'ابحث في الخبرة، المشاريع، المهارات، الشهادات…',
     articles: 'المقالات',
     ftthHub: 'مركز FTTH',
     pcHub: 'ضوابط المشاريع',
+    discussProject: 'ناقش مشروعاً',
     langToggle: 'English 🌐',
     langToggleAria: 'التبديل إلى الإنجليزية',
     backToTop: '↑',
@@ -86,9 +89,12 @@
     skipLink: 'Skip to main content',
     brandName: 'Ashraf El Desoky',
     brandTitle: 'Executive Career Management System',
-    dashboard: 'Dashboard',
-    about: 'About',
+    dashboard: 'Home',
+    services: 'Services',
     experience: 'Experience',
+    insights: 'Insights',
+    contact: 'Contact',
+    about: 'About',
     projects: 'Projects',
     featuredProjects: 'Featured Projects',
     skills: 'Skills',
@@ -105,12 +111,12 @@
     education: 'Education',
     awards: 'Awards',
     downloads: 'Downloads',
-    contact: 'Contact',
     search: '🔍 Search',
     searchPlaceholder: 'Search experience, projects, skills, certifications…',
     articles: 'Articles',
     ftthHub: 'FTTH Hub',
     pcHub: 'Controls Hub',
+    discussProject: 'Discuss a Project',
     langToggle: 'العربية 🌐',
     langToggleAria: 'Switch to Arabic',
     backToTop: '↑',
@@ -140,36 +146,15 @@
     </a>
 
     <ul class="nav-links" id="navLinks" role="menubar">
-      <li role="none"><a href="${NAV_BASE}index.html" role="menuitem">${T.dashboard}</a></li>
-      <li role="none"><a href="${NAV_BASE}about.html" role="menuitem">${T.about}</a></li>
-      <li role="none"><a href="${NAV_BASE}career.html" role="menuitem">${T.experience}</a></li>
-      <li role="none"><a href="${NAV_BASE}projects.html" role="menuitem">${T.projects}</a></li>
-      <li role="none"><a href="${NAV_BASE}featured-projects.html" role="menuitem">${T.featuredProjects}</a></li>
-      <li role="none"><a href="${NAV_BASE}skills.html" role="menuitem">${T.skills}</a></li>
-      <li role="none" class="nav-dropdown-wrap">
-        <button class="nav-dropdown-btn" aria-expanded="false" aria-haspopup="true">${T.more}</button>
-        <ul class="nav-dropdown" role="menu">
-          <li><a href="${NAV_BASE}companies.html" role="menuitem">${T.companies}</a></li>
-          <li><a href="${NAV_BASE}achievements.html" role="menuitem">${T.achievements}</a></li>
-          <li><a href="${NAV_BASE}pmo.html" role="menuitem">${T.pmoLeadership}</a></li>
-          <li><a href="${NAV_BASE}telecommunications.html" role="menuitem">${T.telecommunications}</a></li>
-          <li><a href="${NAV_BASE}project-controls.html" role="menuitem">${T.projectControls}</a></li>
-          <li><a href="${NAV_BASE}digital-transformation.html" role="menuitem">${T.digitalTransformation}</a></li>
-          <li><a href="${NAV_BASE}leadership.html" role="menuitem">${T.leadership}</a></li>
-          <li><a href="${NAV_BASE}software.html" role="menuitem">${T.software}</a></li>
-          <li><a href="${NAV_BASE}certifications.html" role="menuitem">${T.certifications}</a></li>
-          <li><a href="${NAV_BASE}education.html" role="menuitem">${T.education}</a></li>
-          <li><a href="${NAV_BASE}awards.html" role="menuitem">${T.awards}</a></li>
-        </ul>
-      </li>
-      <li role="none"><a href="${ARTICLES_LINK}" role="menuitem">${T.articles}</a></li>
-      <li role="none"><a href="${NAV_BASE}ftth/" role="menuitem">${T.ftthHub}</a></li>
-      <li role="none"><a href="${NAV_BASE}project-controls-hub/" role="menuitem">${T.pcHub}</a></li>
-      <li role="none"><a href="${NAV_BASE}downloads.html" role="menuitem">${T.downloads}</a></li>
-      <li role="none"><a href="${NAV_BASE}contact.html" role="menuitem">${T.contact}</a></li>
+      <li role="none"><a href="${NAV_BASE}index.html" role="menuitem" data-active="index.html">${T.dashboard}</a></li>
+      <li role="none"><a href="${NAV_BASE}services.html" role="menuitem" data-active="services.html,project-controls.html,pmo.html,telecommunications.html,digital-transformation.html,leadership.html,software.html">${T.services}</a></li>
+      <li role="none"><a href="${NAV_BASE}career.html" role="menuitem" data-active="career.html,about.html,projects.html,featured-projects.html,companies.html,achievements.html,skills.html,education.html,certifications.html,awards.html">${T.experience}</a></li>
+      <li role="none"><a href="${NAV_BASE}insights.html" role="menuitem" data-active="insights.html,downloads.html">${T.insights}</a></li>
+      <li role="none"><a href="${NAV_BASE}contact.html" role="menuitem" data-active="contact.html">${T.contact}</a></li>
     </ul>
 
     <div class="nav-actions">
+      <a href="${NAV_BASE}contact.html" class="btn-nav btn-nav-cta" aria-label="${T.discussProject}">${T.discussProject}</a>
       <button class="btn-nav btn-nav-search" data-search-open aria-label="Search (Ctrl+K)">
         ${T.search}
       </button>
@@ -209,35 +194,27 @@
         <div class="footer-col-title">${T.footerNav}</div>
         <ul class="footer-links">
           <li><a href="${NAV_BASE}index.html">${T.dashboard}</a></li>
-          <li><a href="${NAV_BASE}about.html">${T.about}</a></li>
+          <li><a href="${NAV_BASE}services.html">${T.services}</a></li>
           <li><a href="${NAV_BASE}career.html">${T.experience}</a></li>
-          <li><a href="${NAV_BASE}companies.html">${T.companies}</a></li>
-          <li><a href="${NAV_BASE}projects.html">${T.projects}</a></li>
-          <li><a href="${NAV_BASE}featured-projects.html">${T.featuredProjects}</a></li>
-          <li><a href="${NAV_BASE}achievements.html">${T.achievements}</a></li>
+          <li><a href="${NAV_BASE}insights.html">${T.insights}</a></li>
+          <li><a href="${NAV_BASE}contact.html">${T.contact}</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">${T.footerExpertise}</div>
         <ul class="footer-links">
-          <li><a href="${NAV_BASE}pmo.html">${T.pmoLeadership}</a></li>
-          <li><a href="${NAV_BASE}project-controls.html">${T.projectControls}</a></li>
-          <li><a href="${NAV_BASE}telecommunications.html">${T.telecommunications}</a></li>
-          <li><a href="${NAV_BASE}digital-transformation.html">${T.digitalTransformation}</a></li>
-          <li><a href="${NAV_BASE}leadership.html">${T.leadership}</a></li>
-          <li><a href="${NAV_BASE}skills.html">${T.footerAllSkills}</a></li>
+          <li><a href="${NAV_BASE}services.html">${T.projectControls}</a></li>
+          <li><a href="${NAV_BASE}services.html">${T.pmoLeadership}</a></li>
+          <li><a href="${NAV_BASE}pmo.html">${T.telecommunications}</a></li>
+          <li><a href="${NAV_BASE}project-controls-hub/">${T.pcHub}</a></li>
+          <li><a href="${NAV_BASE}ftth/">${T.ftthHub}</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">${T.footerResources}</div>
         <ul class="footer-links">
-          <li><a href="${NAV_BASE}education.html">${T.education}</a></li>
-          <li><a href="${NAV_BASE}certifications.html">${T.certifications}</a></li>
-          <li><a href="${NAV_BASE}awards.html">${T.awards}</a></li>
+          <li><a href="${NAV_BASE}insights.html">${T.articles}</a></li>
           <li><a href="${NAV_BASE}downloads.html">${T.downloads}</a></li>
-          <li><a href="${ARTICLES_LINK}">${T.articles}</a></li>
-          <li><a href="${NAV_BASE}ftth/">${T.ftthHub}</a></li>
-          <li><a href="${NAV_BASE}project-controls-hub/">${T.pcHub}</a></li>
           <li><a href="${NAV_BASE}search.html">${T.footerSearch}</a></li>
           <li><a href="${NAV_BASE}contact.html">${T.contact}</a></li>
         </ul>

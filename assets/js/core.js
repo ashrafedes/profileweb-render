@@ -721,7 +721,9 @@ const ActiveNav = (() => {
     const current = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-links a, .nav-dropdown a').forEach(a => {
       const href = a.getAttribute('href');
-      if (href === current || (current === '' && href === 'index.html')) {
+      const activeList = (a.getAttribute('data-active') || '').split(',').filter(Boolean);
+      if (href === current || (current === '' && href === 'index.html') || activeList.includes(current)) {
+        a.classList.add('active');
         a.style.color = 'var(--accent)';
         a.setAttribute('aria-current', 'page');
       }
