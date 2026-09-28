@@ -685,30 +685,36 @@ const DataLoader = (() => {
 
 /* ── Nav Dropdown ── */
 const NavDropdown = (() => {
+  function closeAll() {
+    document.querySelectorAll('.nav-dropdown-wrap').forEach(wrap => {
+      const menu = wrap.querySelector('.nav-dropdown');
+      const btn = wrap.querySelector('.nav-dropdown-btn');
+      if (menu) menu.classList.remove('open');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+    });
+  }
+
   function init() {
-    const wrap = document.querySelector('.nav-dropdown-wrap');
-    if (!wrap) return;
-    const btn = wrap.querySelector('.nav-dropdown-btn');
-    const menu = wrap.querySelector('.nav-dropdown');
-    if (!btn || !menu) return;
+    document.querySelectorAll('.nav-dropdown-wrap').forEach(wrap => {
+      const btn = wrap.querySelector('.nav-dropdown-btn');
+      const menu = wrap.querySelector('.nav-dropdown');
+      if (!btn || !menu) return;
 
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = menu.classList.contains('open');
-      menu.classList.toggle('open', !isOpen);
-      btn.setAttribute('aria-expanded', String(!isOpen));
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.contains('open');
+        closeAll();
+        menu.classList.toggle('open', !isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      menu.addEventListener('click', (e) => e.stopPropagation());
     });
 
-    document.addEventListener('click', () => {
-      menu.classList.remove('open');
-      btn.setAttribute('aria-expanded', 'false');
-    });
+    document.addEventListener('click', closeAll);
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        menu.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
+      if (e.key === 'Escape') closeAll();
     });
   }
 
@@ -719,13 +725,13 @@ const NavDropdown = (() => {
 const ActiveNav = (() => {
   function init() {
     const current = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-links a, .nav-dropdown a').forEach(a => {
-      const href = a.getAttribute('href');
-      const activeList = (a.getAttribute('data-active') || '').split(',').filter(Boolean);
+    document.querySelectorAll('.nav-links a, .nav-dropdown a, .nav-dropdown-btn').forEach(el => {
+      const href = el.getAttribute('href');
+      const activeList = (el.getAttribute('data-active') || '').split(',').filter(Boolean);
       if (href === current || (current === '' && href === 'index.html') || activeList.includes(current)) {
-        a.classList.add('active');
-        a.style.color = 'var(--accent)';
-        a.setAttribute('aria-current', 'page');
+        el.classList.add('active');
+        el.style.color = 'var(--accent)';
+        if (el.tagName.toLowerCase() === 'a') el.setAttribute('aria-current', 'page');
       }
     });
   }
