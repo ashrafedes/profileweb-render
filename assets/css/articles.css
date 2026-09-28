@@ -243,8 +243,8 @@
   margin: 0 auto;
 }
 .article-content { font-size: 1.05rem; line-height: 1.8; }
-.article-content h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; }
-.article-content h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; }
+.article-content h2 { font-size: 1.5rem; margin: 2rem 0 0.75rem; scroll-margin-top: calc(var(--nav-height, 72px) + 1.5rem); }
+.article-content h3 { font-size: 1.2rem; margin: 1.5rem 0 0.5rem; scroll-margin-top: calc(var(--nav-height, 72px) + 1.5rem); }
 .article-content p { margin-bottom: 1rem; }
 .article-content ul, .article-content ol { margin: 0 0 1rem 1.5rem; }
 .article-content li { margin-bottom: 0.4rem; }

@@ -464,7 +464,8 @@
     window.addEventListener('scroll', () => {
       let current = '';
       headings.forEach(h => {
-        if (window.scrollY >= h.offsetTop - 120) current = h.id;
+        const top = h.getBoundingClientRect().top + window.scrollY;
+        if (window.scrollY >= top - 140) current = h.id;
       });
       tocLinks.forEach(link => {
         link.classList.toggle('active', link.getAttribute('href') === '#' + current);
