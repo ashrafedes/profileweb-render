@@ -198,6 +198,21 @@ h1, h2, h3, h4, h5, h6 {
 /* ── Dropdown Navigation ── */
 .nav-dropdown-wrap { position: relative; }
 
+/* Transparent bridge between the parent button and the submenu so the
+   hover state is not lost while the mouse crosses the visual gap. Only
+   active on desktop/tablet where the submenu is absolutely positioned;
+   the mobile menu uses a static, click-toggled submenu. */
+@media (min-width: 769px) {
+  .nav-dropdown-wrap::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 0.5rem;
+  }
+}
+
 .nav-dropdown-btn {
   background: transparent;
   border: none;
