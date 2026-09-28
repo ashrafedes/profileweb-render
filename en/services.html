@@ -26,11 +26,31 @@
     .page-header { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; padding: 5.5rem 0 3rem; }
     .page-header h1 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.6rem); }
     .page-header p { color: rgba(255,255,255,0.8); max-width: 700px; }
-    .service-detail { display: grid; gap: 1.25rem; }
-    .service-detail h3 { color: var(--text); font-size: 1.25rem; margin-bottom: 0.75rem; }
-    .service-detail ul { padding-left: 1.25rem; color: var(--text-muted); }
-    .service-detail li { margin-bottom: 0.4rem; }
-    .domain-box { border-left: 4px solid var(--accent); padding: 1.5rem; background: var(--bg-card); border-radius: var(--radius-md); }
+    .svc-block { border-top: 1px solid var(--border-light); padding: 2.5rem 0; }
+    .svc-block:first-of-type { border-top: none; padding-top: 0; }
+    .svc-num { font-size: 0.8rem; font-weight: 700; color: var(--accent); letter-spacing: 0.15em; margin-bottom: 0.25rem; }
+    .svc-block h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .svc-pos { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; margin-bottom: 1.75rem; }
+    .svc-grid { display: grid; gap: 1.25rem; }
+    @media (min-width: 768px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+    .svc-item h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem; }
+    .svc-item p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+    .svc-item ul { color: var(--text-muted); font-size: 0.95rem; padding-left: 1.2rem; margin: 0; }
+    .svc-item li { margin-bottom: 0.3rem; }
+    .domain-strip { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .domain-tag { background: var(--bg-alt); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.35rem 0.85rem; font-size: 0.8rem; color: var(--text); }
+    .how-steps { display: grid; gap: 1rem; margin-top: 1.5rem; }
+    @media (min-width: 768px) { .how-steps { grid-template-columns: repeat(5, 1fr); } }
+    .how-step { border-top: 3px solid var(--accent); padding-top: 1rem; }
+    .how-step h3 { font-size: 0.95rem; margin-bottom: 0.35rem; }
+    .how-step p { color: var(--text-muted); font-size: 0.85rem; margin: 0; }
+    .final-cta { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); }
+    .final-cta h2 { color: #fff; }
+    .final-cta p { color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 1.5rem; }
+    .btn { display: inline-block; padding: 0.75rem 1.75rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; }
+    .btn-primary { background: var(--accent); color: #fff; border: none; }
+    .btn-primary:hover { background: var(--accent-hover); color: #fff; }
+    .btn-lg { padding: 0.9rem 2.25rem; font-size: 1rem; }
   </style>
 </head>
 <body>
@@ -42,78 +62,144 @@
         <nav aria-label="Breadcrumb" class="breadcrumb">
           <a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span class="current">Services</span>
         </nav>
-        <h1>Services</h1>
-        <p>Three core service areas for complex telecom and infrastructure programmes, delivered at programme-management level across the MENA region.</p>
+        <h1>What I Can Help You Control</h1>
+        <p>Three focused services for complex telecom and infrastructure programmes — practical controls, governance, and recovery.</p>
       </div>
     </header>
 
     <section class="section">
       <div class="container">
-        <div class="grid-3 reveal">
-          <div class="card service-detail">
-            <div class="card-icon">📊</div>
-            <h2 class="card-title">Project Controls</h2>
-            <p class="card-subtitle">Schedule, cost, progress and risk disciplines that give leadership an honest, real-time picture of programme status.</p>
-            <ul>
-              <li>Integrated master schedule and baseline management</li>
-              <li>Progress measurement, earned value management (EVM), S‑curves</li>
-              <li>Cost control, budgeting, forecasting and variance analysis</li>
-              <li>Risk and issue tracking with action-driven registers</li>
-              <li>Subcontractor and vendor performance dashboards</li>
-            </ul>
+        <article class="svc-block">
+          <div class="svc-num">01</div>
+          <h2>Project Controls</h2>
+          <p class="svc-pos">Bring schedule, cost, progress, risk, and performance under control.</p>
+          <div class="svc-grid">
+            <div class="svc-item">
+              <h3>Problem</h3>
+              <p>Projects may have activity and reporting, but management may still lack a reliable picture of actual performance.</p>
+            </div>
+            <div class="svc-item">
+              <h3>Approach</h3>
+              <p>Establish practical project-control processes, reliable performance measurement, forecasting, and reporting.</p>
+            </div>
+            <div class="svc-item">
+              <h3>Key Deliverables</h3>
+              <ul>
+                <li>Project Control Framework</li>
+                <li>Integrated Schedule</li>
+                <li>Progress Measurement System</li>
+                <li>KPI Framework</li>
+                <li>Executive Dashboard</li>
+                <li>Management Reporting</li>
+              </ul>
+            </div>
+            <div class="svc-item">
+              <h3>Outcome</h3>
+              <p>Better visibility, earlier identification of deviations, and better management decision support.</p>
+            </div>
           </div>
-          <div class="card service-detail">
-            <div class="card-icon">🏛</div>
-            <h2 class="card-title">PMO &amp; Governance</h2>
-            <p class="card-subtitle">Frameworks, rhythms and reporting structures that align portfolios, standardise decisions and protect margins.</p>
-            <ul>
-              <li>PMO setup, charters, stage-gates and governance models</li>
-              <li>KPI frameworks and executive reporting cadence</li>
-              <li>Project lifecycle methodology and templates</li>
-              <li>Resource planning, interface management and benefits tracking</li>
-              <li>Steering-committee and board-level reporting packs</li>
-            </ul>
+        </article>
+
+        <article class="svc-block">
+          <div class="svc-num">02</div>
+          <h2>PMO &amp; Programme Governance</h2>
+          <p class="svc-pos">Build a practical management system that keeps complex programmes aligned and controlled.</p>
+          <div class="svc-grid">
+            <div class="svc-item">
+              <h3>Problem</h3>
+              <p>Multiple projects can operate with inconsistent reporting, unclear accountability, and fragmented management information.</p>
+            </div>
+            <div class="svc-item">
+              <h3>Approach</h3>
+              <p>Establish a practical governance and reporting framework appropriate to the programme.</p>
+            </div>
+            <div class="svc-item">
+              <h3>Key Deliverables</h3>
+              <ul>
+                <li>PMO Governance Framework</li>
+                <li>Reporting Standards</li>
+                <li>KPI Framework</li>
+                <li>Executive Dashboards</li>
+                <li>Review Cycles</li>
+                <li>Escalation Mechanisms</li>
+              </ul>
+            </div>
+            <div class="svc-item">
+              <h3>Outcome</h3>
+              <p>Consistent management information and clearer decision-making across the programme.</p>
+            </div>
           </div>
-          <div class="card service-detail">
-            <div class="card-icon">🔄</div>
-            <h2 class="card-title">Programme Recovery</h2>
-            <p class="card-subtitle">Rapid diagnosis and stabilisation of programmes that are off track, before slippage becomes unrecoverable.</p>
-            <ul>
-              <li>Independent health check and root-cause diagnosis</li>
-              <li>Recovery planning: schedule, cost, scope and stakeholder alignment</li>
-              <li>Work-stream prioritisation and fast-track re-baselining</li>
-              <li>Controls catch-up: reporting, risk and change discipline</li>
-              <li>Transition to steady-state governance</li>
-            </ul>
+        </article>
+
+        <article class="svc-block">
+          <div class="svc-num">03</div>
+          <h2>Programme Recovery</h2>
+          <p class="svc-pos">Diagnose delayed or underperforming programmes and establish a structured recovery path.</p>
+          <div class="svc-grid">
+            <div class="svc-item">
+              <h3>Problem</h3>
+              <p>A programme is delayed, underperforming, or losing control.</p>
+            </div>
+            <div class="svc-item">
+              <h3>Approach</h3>
+              <p>Assess the current position, identify the causes of deviation, and establish a practical recovery plan.</p>
+            </div>
+            <div class="svc-item">
+              <h3>Key Deliverables</h3>
+              <ul>
+                <li>Diagnostic Assessment</li>
+                <li>Recovery Plan</li>
+                <li>Revised Control Mechanisms</li>
+                <li>Recovery Schedule</li>
+                <li>Monitoring Framework</li>
+                <li>Management Reporting</li>
+              </ul>
+            </div>
+            <div class="svc-item">
+              <h3>Outcome</h3>
+              <p>A structured and measurable path for bringing the programme back under control.</p>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
     <section class="section section-alt">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">Domain Specialisation</span>
-          <h2 class="section-title">Telecom &amp; <span class="accent">Digital Infrastructure</span></h2>
-          <p class="section-desc">Deep, repeated experience on national fixed and mobile network programmes, data centres, smart cities and railway telecom systems.</p>
+          <span class="section-eyebrow">Specialist Domain Experience</span>
+          <h2 class="section-title">Telecom &amp; Digital Infrastructure</h2>
+          <p class="section-desc">I provide Project Controls, PMO Governance, and Programme Recovery with deep experience in telecom and infrastructure environments.</p>
+          <div class="domain-strip">
+            <span class="domain-tag">FTTH / FTTx</span>
+            <span class="domain-tag">OSP / ISP Networks</span>
+            <span class="domain-tag">Large-Scale Network Deployment</span>
+            <span class="domain-tag">Complex Infrastructure Programmes</span>
+          </div>
         </div>
-        <div class="grid-2 reveal">
-          <div class="domain-box">
-            <h3>Fixed &amp; Mobile Networks</h3>
-            <p class="text-muted">FTTH/FTTx, OSP/ISP fibre, 5G backhaul, transmission and access networks, national rollout governance.</p>
-          </div>
-          <div class="domain-box">
-            <h3>Smart Infrastructure &amp; ELV</h3>
-            <p class="text-muted">CCTV, BMS, fire alarm, structured cabling and FTTH integration for cities, stadia and large mixed-use sites.</p>
-          </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">How I Work</span>
+          <h2 class="section-title">A Clear Engagement Path</h2>
+        </div>
+        <div class="how-steps">
+          <div class="how-step"><h3>Assess</h3><p>Understand the current project or programme situation.</p></div>
+          <div class="how-step"><h3>Diagnose</h3><p>Identify control gaps, performance issues, and root causes.</p></div>
+          <div class="how-step"><h3>Design</h3><p>Develop the appropriate control, governance, or recovery framework.</p></div>
+          <div class="how-step"><h3>Implement</h3><p>Put the agreed processes, reporting, and controls into operation.</p></div>
+          <div class="how-step"><h3>Monitor</h3><p>Track performance and support management decision-making.</p></div>
         </div>
       </div>
     </section>
 
     <section class="section final-cta">
       <div class="container reveal" style="text-align:center;">
-        <h2 class="section-title" style="color:#fff;">Need control, governance or recovery support?</h2>
-        <p style="color:rgba(255,255,255,0.75);max-width:620px;margin:0 auto 1.5rem;">Describe the programme and I'll respond with how I can help stabilise or improve it.</p>
+        <h2 class="section-title">Have a project or programme that needs better control?</h2>
+        <p>Let's discuss the current situation and determine whether Project Controls, PMO Governance, or Programme Recovery is the right approach.</p>
         <a href="contact.html" class="btn btn-primary btn-lg">Discuss a Project</a>
       </div>
     </section>

@@ -26,11 +26,31 @@
     .page-header { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; padding: 5.5rem 0 3rem; }
     .page-header h1 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.6rem); }
     .page-header p { color: rgba(255,255,255,0.8); max-width: 700px; }
-    .service-detail { display: grid; gap: 1.25rem; }
-    .service-detail h3 { color: var(--text); font-size: 1.25rem; margin-bottom: 0.75rem; }
-    .service-detail ul { padding-right: 1.25rem; color: var(--text-muted); }
-    .service-detail li { margin-bottom: 0.4rem; }
-    .domain-box { border-right: 4px solid var(--accent); padding: 1.5rem; background: var(--bg-card); border-radius: var(--radius-md); }
+    .svc-block { border-top: 1px solid var(--border-light); padding: 2.5rem 0; }
+    .svc-block:first-of-type { border-top: none; padding-top: 0; }
+    .svc-num { font-size: 0.8rem; font-weight: 700; color: var(--accent); letter-spacing: 0.15em; margin-bottom: 0.25rem; }
+    .svc-block h2 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .svc-pos { font-size: 1.05rem; color: var(--text-muted); max-width: 640px; margin-bottom: 1.75rem; }
+    .svc-grid { display: grid; gap: 1.25rem; }
+    @media (min-width: 768px) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+    .svc-item h3 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.5rem; }
+    .svc-item p { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+    .svc-item ul { color: var(--text-muted); font-size: 0.95rem; padding-right: 1.2rem; margin: 0; }
+    .svc-item li { margin-bottom: 0.3rem; }
+    .domain-strip { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+    .domain-tag { background: var(--bg-alt); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.35rem 0.85rem; font-size: 0.8rem; color: var(--text); }
+    .how-steps { display: grid; gap: 1rem; margin-top: 1.5rem; }
+    @media (min-width: 768px) { .how-steps { grid-template-columns: repeat(5, 1fr); } }
+    .how-step { border-top: 3px solid var(--accent); padding-top: 1rem; }
+    .how-step h3 { font-size: 0.95rem; margin-bottom: 0.35rem; }
+    .how-step p { color: var(--text-muted); font-size: 0.85rem; margin: 0; }
+    .final-cta { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); }
+    .final-cta h2 { color: #fff; }
+    .final-cta p { color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 1.5rem; }
+    .btn { display: inline-block; padding: 0.75rem 1.75rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; }
+    .btn-primary { background: var(--accent); color: #fff; border: none; }
+    .btn-primary:hover { background: var(--accent-hover); color: #fff; }
+    .btn-lg { padding: 0.9rem 2.25rem; font-size: 1rem; }
   </style>
 </head>
 <body>
@@ -42,78 +62,144 @@
         <nav aria-label="Breadcrumb" class="breadcrumb">
           <a href="index.html">الرئيسية</a><span class="breadcrumb-sep">›</span><span class="current">الخدمات</span>
         </nav>
-        <h1>الخدمات</h1>
-        <p>ثلاث مجالات خدمة أساسية لبرامج الاتصالات والبنية التحتية المعقدة، يتم تسليمها على مستوى إدارة البرامج في منطقة الشرق الأوسط وشمال أفريقيا.</p>
+        <h1>ما الذي يمكنني مساعدتك على التحكم به</h1>
+        <p>ثلاث خدمات مركزة لبرامج الاتصالات والبنية التحتية المعقدة — ضوابط عملية وحوكمة واسترداد.</p>
       </div>
     </header>
 
     <section class="section">
       <div class="container">
-        <div class="grid-3 reveal">
-          <div class="card service-detail">
-            <div class="card-icon">📊</div>
-            <h2 class="card-title">التحكم بالمشاريع</h2>
-            <p class="card-subtitle">تخصصات الجدولة، والكلفة، والتقدم، والمخاطر التي تمنح القيادة صورة صادقة وفي الوقت الفعلي عن حالة البرنامج.</p>
-            <ul>
-              <li>الجدولة الرئيسية المتكاملة وإدارة الخطوط الأساسية</li>
-              <li>قياس التقدم، وإدارة القيمة المكتسبة (EVM)، ومنحنيات S</li>
-              <li>التحكم بالتكلفة، والميزنة، والتنبؤ وتحليل الانحرافات</li>
-              <li>متابعة المخاطر والقضايا مع سجلات مرتبطة بالإجراءات</li>
-              <li>لوحات أداء المقاولين والموردين</li>
-            </ul>
+        <article class="svc-block">
+          <div class="svc-num">01</div>
+          <h2>التحكم بالمشاريع</h2>
+          <p class="svc-pos">ضبط الجدولة والتكلفة والتقدم والمخاطر والأداء.</p>
+          <div class="svc-grid">
+            <div class="svc-item">
+              <h3>المشكلة</h3>
+              <p>قد تحتوي المشاريع على نشاط وتقارير، لكن الإدارة قد تظل بلا صورة موثوقة عن الأداء الفعلي.</p>
+            </div>
+            <div class="svc-item">
+              <h3>النهج</h3>
+              <p>إنشاء عمليات ضبط مشاريع عملية، وقياس أداء موثوق، وتنبؤ، وتقارير.</p>
+            </div>
+            <div class="svc-item">
+              <h3>التسليمات الرئيسية</h3>
+              <ul>
+                <li>إطار ضبط المشروع</li>
+                <li>الجدولة المتكاملة</li>
+                <li>نظام قياس التقدم</li>
+                <li>إطار مؤشرات الأداء</li>
+                <li>لوحة تنفيذية</li>
+                <li>التقارير الإدارية</li>
+              </ul>
+            </div>
+            <div class="svc-item">
+              <h3>النتيجة</h3>
+              <p>وضوح أفضل، والكشف المبكر عن الانحرافات، ودعم قرار إداري أفضل.</p>
+            </div>
           </div>
-          <div class="card service-detail">
-            <div class="card-icon">🏛</div>
-            <h2 class="card-title">مكتب إدارة المشاريع والحوكمة</h2>
-            <p class="card-subtitle">إطارات عمل، وإيقاعات، وهياك تقارير تُحاذي المحافظ، وتُوحّد القرارات، وتحمي هوامش الربح.</p>
-            <ul>
-              <li>إعداد مكتب إدارة المشاريع وميثاقه وبوابات المراحل ونماذج الحوكمة</li>
-              <li>مؤشرات الأداء الرئيسية وإيقاع التقارير التنفيذية</li>
-              <li>منهجية دورة حياة المشروع والقوالب</li>
-              <li>تخطيط الموارد وإدارة الواجهات وتتبع المنافع</li>
-              <li>حزم تقارير لجنة التوجيه والمجلس</li>
-            </ul>
+        </article>
+
+        <article class="svc-block">
+          <div class="svc-num">02</div>
+          <h2>مكتب إدارة المشاريع وحوكمة البرامج</h2>
+          <p class="svc-pos">بناء نظام إدارة عملي يحافظ على التوافق والسيطرة في البرامج المعقدة.</p>
+          <div class="svc-grid">
+            <div class="svc-item">
+              <h3>المشكلة</h3>
+              <p>قد تعمل المشاريع المتعددة بتقارير غير متسقة، ومسؤولية غير واضحة، ومعلومات إدارية متجزئة.</p>
+            </div>
+            <div class="svc-item">
+              <h3>النهج</h3>
+              <p>إنشاء إطار حوكمة وتقارير عملي مناسب للبرنامج.</p>
+            </div>
+            <div class="svc-item">
+              <h3>التسليمات الرئيسية</h3>
+              <ul>
+                <li>إطار حوكمة مكتب إدارة المشاريع</li>
+                <li>معايير التقارير</li>
+                <li>إطار مؤشرات الأداء</li>
+                <li>لوحات تنفيذية</li>
+                <li>دورات المراجعة</li>
+                <li>آليات التصعيد</li>
+              </ul>
+            </div>
+            <div class="svc-item">
+              <h3>النتيجة</h3>
+              <p>معلومات إدارية متسقة ووضوح أكبر في اتخاذ القرار عبر البرنامج.</p>
+            </div>
           </div>
-          <div class="card service-detail">
-            <div class="card-icon">🔄</div>
-            <h2 class="card-title">استرداد البرامج المتعثرة</h2>
-            <p class="card-subtitle">التشخيص السريع واستقرار البرامج المتأخرة قبل أن يصبح التأخير غير قابل للاسترداد.</p>
-            <ul>
-              <li>الفحص الصحي المستقل وتشخيص الجذور</li>
-              <li>التخطيط للاسترداد: الجدولة والكلفة والنطاق والمحاذاة المعنية</li>
-              <li>تحديد أولويات مجالات العمل وإعادة تحديد الأساس بسرعة</li>
-              <li>استدراك عناصر التحكم: التقارير والمخاطر ونظام التغيير</li>
-              <li>الانتقال إلى حوكمة حالة مستقرة</li>
-            </ul>
+        </article>
+
+        <article class="svc-block">
+          <div class="svc-num">03</div>
+          <h2>استرداد البرامج</h2>
+          <p class="svc-pos">تشخيص البرامج المتأخرة أو ضعيفة الأداء وإنشاء مسار استرداد منظم.</p>
+          <div class="svc-grid">
+            <div class="svc-item">
+              <h3>المشكلة</h3>
+              <p>البرنامج متأخر، أو ضعيف الأداء، أو يفقد السيطرة.</p>
+            </div>
+            <div class="svc-item">
+              <h3>النهج</h3>
+              <p>تقييم الوضع الحالي، وتحديد أسباب الانحراف، وإنشاء خطة استرداد عملية.</p>
+            </div>
+            <div class="svc-item">
+              <h3>التسليمات الرئيسية</h3>
+              <ul>
+                <li>تقييم تشخيصي</li>
+                <li>خطة استرداد</li>
+                <li>آليات ضبط مراجعة</li>
+                <li>جدول استرداد</li>
+                <li>إطار مراقبة</li>
+                <li>تقارير إدارية</li>
+              </ul>
+            </div>
+            <div class="svc-item">
+              <h3>النتيجة</h3>
+              <p>مسار منظم وقابل للقياس لإعادة البرنامج إلى السيطرة.</p>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
     <section class="section section-alt">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">التخصص القطاعي</span>
-          <h2 class="section-title">الاتصالات و<span class="accent">البنية التحتية الرقمية</span></h2>
-          <p class="section-desc">خبرة عميقة ومكررة في برامج الشبكات الثابتة والمتنقلة الوطنية، ومراكز البيانات، والمدن الذكية، وأنظمة الاتصالات على خطوط السكك الحديدية.</p>
+          <span class="section-eyebrow">خبرة قطاعية متخصصة</span>
+          <h2 class="section-title">الاتصالات والبنية التحتية الرقمية</h2>
+          <p class="section-desc">أقدّم ضوابط المشاريع وحوكمة مكتب إدارة المشاريع واسترداد البرامج بخبرة عميقة في بيئات الاتصالات والبنية التحتية.</p>
+          <div class="domain-strip">
+            <span class="domain-tag">FTTH / FTTx</span>
+            <span class="domain-tag">شبكات OSP / ISP</span>
+            <span class="domain-tag">نشر شبكات واسع النطاق</span>
+            <span class="domain-tag">برامج بنية تحتية معقدة</span>
+          </div>
         </div>
-        <div class="grid-2 reveal">
-          <div class="domain-box">
-            <h3>الشبكات الثابتة والمتنقلة</h3>
-            <p class="text-muted">FTTH/FTTx وشبكات OSP/ISP والجيل الخامس والنقل والوصول، وحوكمة الطرح الوطني.</p>
-          </div>
-          <div class="domain-box">
-            <h3>البنية التحتية الذكية وأنظمة ELV</h3>
-            <p class="text-muted">CCTV وBMS وإنذار الحريق والكابلات المنظمة ودمج FTTH للمدن والملاعب والمجمعات الكبيرة.</p>
-          </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">كيف أعمل</span>
+          <h2 class="section-title">مسار تعاون واضح</h2>
+        </div>
+        <div class="how-steps">
+          <div class="how-step"><h3>تقييم</h3><p>فهم الوضع الحالي للمشروع أو البرنامج.</p></div>
+          <div class="how-step"><h3>تشخيص</h3><p>تحديد فجوات الضبط ومشكلات الأداء والأسباب الجذرية.</p></div>
+          <div class="how-step"><h3>تصميم</h3><p>تطوير إطار الضبط أو الحوكمة أو الاسترداد المناسب.</p></div>
+          <div class="how-step"><h3>تنفيذ</h3><p>تشغيل العمليات والتقارير والضوابط المتفق عليها.</p></div>
+          <div class="how-step"><h3>مراقبة</h3><p>تتبع الأداء ودعم اتخاذ القرار الإداري.</p></div>
         </div>
       </div>
     </section>
 
     <section class="section final-cta">
       <div class="container reveal" style="text-align:center;">
-        <h2 class="section-title" style="color:#fff;">هل تحتاج إلى دعم التحكم، أو الحوكمة، أو استرداد البرامج؟</h2>
-        <p style="color:rgba(255,255,255,0.75);max-width:620px;margin:0 auto 1.5rem;">صِف البرنامج وسأرد لك بكيفية المساعدة في استقراره أو تحسينه.</p>
+        <h2 class="section-title">هل لديك مشروع أو برنامج يحتاج إلى ضبط أفضل؟</h2>
+        <p>لنناقش الوضع الحالي ونحدد ما إذا كانت ضوابط المشاريع أو حوكمة مكتب إدارة المشاريع أو استرداد البرامج هي النهج المناسب.</p>
         <a href="contact.html" class="btn btn-primary btn-lg">ناقش مشروعاً</a>
       </div>
     </section>
