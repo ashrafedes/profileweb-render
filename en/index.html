@@ -12,18 +12,18 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashraf El Desoky, PMP® | Project Controls & PMO Leader · Telecom & Infrastructure</title>
-  <meta name="description" content="Project Controls & PMO Executive with 25+ years delivering telecom and infrastructure programmes across Saudi Arabia, Egypt and Sudan. Schedule, cost, risk, governance and programme recovery.">
+  <title>Ashraf El Desoky, PMP® | Telecom Infrastructure & Project Programme Management</title>
+  <meta name="description" content="Telecom & FTTH network engineering and Project & Programme Management for complex infrastructure. 25+ years across Saudi Arabia, Egypt and Sudan.">
   <meta name="author" content="Ashraf Ibrahim El Desoky">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Ashraf El Desoky, PMP® | Project Controls & PMO Leader">
-  <meta property="og:description" content="Project Controls & PMO Executive with 25+ years delivering telecom and infrastructure programmes across Saudi Arabia, Egypt and Sudan.">
+  <meta property="og:title" content="Ashraf El Desoky, PMP® | Telecom Infrastructure & Project Programme Management">
+  <meta property="og:description" content="Telecom & FTTH network engineering and Project & Programme Management for complex infrastructure programmes.">
   <meta property="og:url" content="https://www.ashraf-eldesoky.space/en/">
   <meta property="og:image" content="https://raw.githubusercontent.com/ashrafedes/profileweb-render/main/assets/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ashraf El Desoky, PMP® | Project Controls & PMO Leader">
-  <meta name="twitter:description" content="Project Controls & PMO Executive with 25+ years delivering telecom and infrastructure programmes.">
+  <meta name="twitter:title" content="Ashraf El Desoky, PMP® | Telecom Infrastructure & Project Programme Management">
+  <meta name="twitter:description" content="Telecom & FTTH network engineering and Project & Programme Management for complex infrastructure programmes.">
   <meta name="twitter:image" content="https://raw.githubusercontent.com/ashrafedes/profileweb-render/main/assets/images/og-image.jpg">
   <link rel="canonical" href="https://www.ashraf-eldesoky.space/en/">
   <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/">
@@ -34,22 +34,29 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css?v=4">
   <style>
-    .home-hero { background: linear-gradient(135deg, #0a1128 0%, #15234d 50%, #1e3a8a 100%); color: #fff; position: relative; overflow: hidden; padding: 7rem 0 5rem; }
+    .home-hero { background: linear-gradient(135deg, #0a1128 0%, #15234d 50%, #1e3a8a 100%); color: #fff; position: relative; overflow: hidden; padding: 6rem 0 4.5rem; }
     .home-hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .home-hero .container { position: relative; z-index: 1; }
     .home-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 1rem; }
     .home-hero .lead { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 680px; margin-bottom: 2rem; line-height: 1.7; }
-    .home-hero .badge-outline { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; padding: 0.35rem 0.9rem; font-size: 0.8rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; }
     .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2.5rem; }
-    .service-card-icon { width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; background: linear-gradient(135deg, rgba(30,144,255,0.1), rgba(10,36,99,0.08)); border: 1px solid rgba(30,144,255,0.2); margin-bottom: 1rem; }
-    .project-card { display: flex; flex-direction: column; gap: 0.75rem; }
-    .project-card .meta { font-size: 0.78rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+    .btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; border: 1px solid rgba(255,255,255,0.3); color: #fff; background: transparent; }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    .service-line-card { display: flex; flex-direction: column; height: 100%; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.75rem; transition: var(--transition); text-decoration: none; color: inherit; }
+    .service-line-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .service-line-card .sl-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 0.75rem; }
+    .service-line-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .service-line-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .service-line-card ul { list-style: none; padding: 0; margin: 0 0 1.25rem; display: grid; gap: 0.45rem; }
+    .service-line-card li { position: relative; padding-left: 1.2rem; color: var(--text); font-size: 0.9rem; }
+    .service-line-card li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .service-line-card .sl-cta { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin-top: auto; }
     .final-cta { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; text-align: center; }
     .final-cta h2 { color: #fff; }
     .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; }
   </style>
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@type": "Person", "name": "Ashraf Ibrahim El Desoky", "honorificSuffix": "PMP®", "jobTitle": "Project Controls & PMO Leader | Telecom & Infrastructure", "description": "Project Controls & PMO Executive with 25+ years delivering telecom and infrastructure programmes across Saudi Arabia, Egypt and Sudan.", "url": "https://www.ashraf-eldesoky.space/", "email": "ashrafede@gmail.com", "telephone": "+966532738987", "sameAs": ["https://www.linkedin.com/in/ashraf-eldesoky/"]}
+  {"@context": "https://schema.org", "@type": "Person", "name": "Ashraf Ibrahim El Desoky", "honorificSuffix": "PMP®", "jobTitle": "Telecom Infrastructure & Project Programme Management Specialist", "description": "Telecom & FTTH network engineering and Project & Programme Management for complex infrastructure programmes across Saudi Arabia, Egypt and Sudan.", "url": "https://www.ashraf-eldesoky.space/", "email": "ashrafede@gmail.com", "telephone": "+966532738987", "sameAs": ["https://www.linkedin.com/in/ashraf-eldesoky/"]}
   </script>
 </head>
 <body>
@@ -61,44 +68,57 @@
     <section class="home-hero">
       <div class="container">
         <div class="badge-outline"><span>●</span> Available for executive roles · Riyadh · MENA · Remote</div>
-        <h1>Ashraf El Desoky<br><span style="color: var(--gold-light);">Project Controls &amp; PMO Leader</span></h1>
-        <p class="lead">I help organisations bring complex telecom and infrastructure projects under control through Project Controls, PMO Governance, and Programme Recovery.</p>
+        <h1>Telecom Infrastructure &amp;<br><span style="color: var(--gold-light);">Project Programme Management</span></h1>
+        <p class="lead">I help organisations design and deliver telecom infrastructure and bring complex projects and programmes under control.</p>
         <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary btn-lg">Discuss a Project</a>
-          <a href="career.html" class="btn btn-outline btn-lg">View Experience</a>
+          <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Project</a>
+          <a href="services.html" class="btn-outline">View Services</a>
         </div>
         <div style="display:flex;gap:2rem;flex-wrap:wrap;opacity:0.8;">
           <div><strong>25+</strong> <span style="font-size:0.85rem;display:block;color:rgba(255,255,255,0.6);">Years Experience</span></div>
           <div><strong>10</strong> <span style="font-size:0.85rem;display:block;color:rgba(255,255,255,0.6);">Years on STC Programme</span></div>
-          <div><strong>20+</strong> <span style="font-size:0.85rem;display:block;color:rgba(255,255,255,0.6);">Concurrent Projects</span></div>
+          <div><strong>3</strong> <span style="font-size:0.85rem;display:block;color:rgba(255,255,255,0.6);">Countries</span></div>
         </div>
       </div>
     </section>
 
-    <!-- WHAT I DO -->
+    <!-- SERVICE OVERVIEW -->
     <section class="section" id="services">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">What I Do</span>
-          <h2 class="section-title">Three core capabilities for <span class="accent">complex programmes</span></h2>
-          <p class="section-desc">Specialised delivery across the full project-control lifecycle, with deep domain expertise in telecom, FTTH/FTTx, OSP/ISP and digital infrastructure.</p>
+          <span class="section-eyebrow">What I Can Deliver</span>
+          <h2 class="section-title">Two service lines for <span class="accent">infrastructure programmes</span></h2>
+          <p class="section-desc">Engage me for hands-on technical delivery, or for project and programme management, controls and governance.</p>
         </div>
-        <div class="grid-3 reveal">
-          <div class="card">
-            <div class="service-card-icon">📊</div>
-            <h3 class="card-title">Project Controls</h3>
-            <p class="card-subtitle">Schedule, progress, cost, EVM, risk, forecasting and performance reporting that gives leadership an accurate picture of where a programme really stands.</p>
-          </div>
-          <div class="card">
-            <div class="service-card-icon">🏛</div>
-            <h3 class="card-title">PMO &amp; Governance</h3>
-            <p class="card-subtitle">Governance frameworks, KPIs, review cycles, executive reporting, controls and decision support that keep large portfolios aligned and visible.</p>
-          </div>
-          <div class="card">
-            <div class="service-card-icon">🔄</div>
-            <h3 class="card-title">Programme Recovery</h3>
-            <p class="card-subtitle">Diagnosing delayed programmes, identifying control gaps, building recovery plans and stabilising performance before issues become unrecoverable.</p>
-          </div>
+        <div class="grid-2 reveal" style="align-items: stretch;">
+          <a href="telecommunications.html" class="service-line-card">
+            <div class="sl-num">01</div>
+            <h3>Telecom &amp; FTTH Network Engineering</h3>
+            <p>Design, planning and technical delivery for FTTH / FTTx and OSP / ISP networks.</p>
+            <ul>
+              <li>FTTH / FTTx Network Design</li>
+              <li>OSP / ISP Planning</li>
+              <li>Fiber Route Planning</li>
+              <li>Technical Documentation</li>
+              <li>Network Review</li>
+              <li>Deployment Support</li>
+            </ul>
+            <span class="sl-cta">Explore Network Engineering →</span>
+          </a>
+          <a href="services.html" class="service-line-card">
+            <div class="sl-num">02</div>
+            <h3>Project &amp; Programme Management</h3>
+            <p>Bring complex projects and programmes under control through Project Controls, PMO Governance and Programme Recovery.</p>
+            <ul>
+              <li>Project Controls</li>
+              <li>Planning &amp; Scheduling</li>
+              <li>PMO &amp; Governance</li>
+              <li>Performance Management</li>
+              <li>Programme Recovery</li>
+              <li>Executive Reporting</li>
+            </ul>
+            <span class="sl-cta">Explore Project Management →</span>
+          </a>
         </div>
       </div>
     </section>
@@ -107,29 +127,25 @@
     <section class="section section-alt" id="proof">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-eyebrow">Proof</span>
-          <h2 class="section-title">Experience at <span class="accent">programme scale</span></h2>
+          <span class="section-eyebrow">Professional Proof</span>
+          <h2 class="section-title">Experience across both <span class="accent">service lines</span></h2>
         </div>
         <div class="stats-grid reveal">
           <div class="stat-card">
-            <span class="stat-icon">⏳</span>
             <span class="stat-value">25+</span>
             <span class="stat-label">Years Experience</span>
           </div>
           <div class="stat-card">
-            <span class="stat-icon">📡</span>
             <span class="stat-value">10</span>
             <span class="stat-label">Years on STC National Programme</span>
           </div>
           <div class="stat-card">
-            <span class="stat-icon">📋</span>
-            <span class="stat-value">20+</span>
-            <span class="stat-label">Concurrent Projects</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-icon">🌐</span>
             <span class="stat-value">3</span>
             <span class="stat-label">Countries · Saudi Arabia, Egypt, Sudan</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">FTTH</span>
+            <span class="stat-label">OSP / ISP · Digital Infrastructure</span>
           </div>
         </div>
       </div>
@@ -140,30 +156,27 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-eyebrow">Selected Experience</span>
-          <h2 class="section-title">Programmes that demonstrate <span class="accent">control at scale</span></h2>
+          <h2 class="section-title">Evidence across <span class="accent">technical delivery and controls</span></h2>
         </div>
         <div class="grid-3 reveal">
           <div class="card project-card">
-            <div class="meta">STC National FTTH · KSA · 10 Years</div>
-            <h3 class="card-title">National FTTH / FTTx Rollout</h3>
-            <p class="card-subtitle">Senior Project Controls Engineer on one of the region's largest fixed-network programmes, coordinating 20+ concurrent projects, subcontractor reporting, KPI dashboards and ERP-driven automation.</p>
-            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>Contribution:</strong> Unified reporting framework, controls rhythm and executive visibility across a multi-region portfolio.</p>
+            <div class="meta">Telecom Delivery · KSA · 10 Years</div>
+            <h3 class="card-title">STC National FTTH / FTTx Rollout</h3>
+            <p class="card-subtitle">Senior technical and controls lead on one of the region's largest fixed-network programmes, coordinating design, deployment, subcontractor reporting and KPI dashboards.</p>
+            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>Service line:</strong> Telecom &amp; FTTH Network Engineering + Project Controls.</p>
           </div>
           <div class="card project-card">
-            <div class="meta">Olympic Games City · Egypt · 3 Years</div>
-            <h3 class="card-title">Smart Infrastructure &amp; ELV Systems</h3>
-            <p class="card-subtitle">Lead Consultant Project Manager delivering ELV, BMS, CCTV, Fire Alarm and FTTH for Egypt's International Olympic Games City in the New Administrative Capital.</p>
-            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>Contribution:</strong> Full-lifecycle delivery, multi-system integration and on-schedule handover against a national deadline.</p>
+            <div class="meta">Smart Infrastructure · Egypt</div>
+            <h3 class="card-title">Olympic Games City — ELV &amp; FTTH</h3>
+            <p class="card-subtitle">Lead Consultant Project Manager delivering ELV, BMS, CCTV, Fire Alarm and FTTH infrastructure for Egypt's International Olympic Games City.</p>
+            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>Service line:</strong> Telecom &amp; FTTH Network Engineering + Programme Management.</p>
           </div>
           <div class="card project-card">
-            <div class="meta">Egyptian National Railways · 2018</div>
+            <div class="meta">Railway Telecom · Egypt</div>
             <h3 class="card-title">Railway Fibre &amp; Telecom Modernisation</h3>
-            <p class="card-subtitle">Senior Site Manager implementing and testing fibre-optic networks within a live railway operating environment, with strict safety, access and quality requirements.</p>
-            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>Contribution:</strong> Safe execution discipline, testing and documentation in a high-constraint operational corridor.</p>
+            <p class="card-subtitle">Senior Site Manager implementing and testing fibre-optic networks within a live railway operating environment, with strict safety and quality controls.</p>
+            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>Service line:</strong> Telecom Engineering + Field Control.</p>
           </div>
-        </div>
-        <div style="text-align:center;margin-top:2rem;" class="reveal">
-          <a href="career.html" class="btn btn-primary">View Full Experience</a>
         </div>
       </div>
     </section>
@@ -171,12 +184,11 @@
     <!-- FINAL CTA -->
     <section class="section final-cta">
       <div class="container reveal">
-        <h2 class="section-title" style="color:#fff;">Have a complex project that needs better control?</h2>
-        <p>Let's discuss the situation and determine where Project Controls, PMO Governance, or Programme Recovery can make the greatest impact.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Discuss a Project</a>
+        <h2 class="section-title" style="color:#fff;">Have a telecom or infrastructure project that needs technical expertise or stronger project control?</h2>
+        <p>Let's discuss how Telecom &amp; FTTH Network Engineering or Project &amp; Programme Management can support your programme.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Project</a>
       </div>
     </section>
-
   </main>
 
   <div id="ecms-footer-inject"></div>

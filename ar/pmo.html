@@ -12,134 +12,229 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>قيادة مكتب إدارة المشاريع – أشرف الدسوقي، PMP® | خبير مكتب إدارة المشاريع</title>
-  <meta name="description" content="خبرة قيادة مكتب إدارة المشاريع لأشرف الدسوقي، PMP® – حوكمة البرامج، لوحات مؤشرات الأداء، ضوابط المشاريع وتأسيس مكتب إدارة المشاريع لبرامج الاتصالات.">
+  <title>PMO والحوكمة – أشرف الدسوقي، PMP® | مكتب إدارة المشاريع والبرامج</title>
+  <meta name="description" content="خدمات PMO والحوكمة: إطارات PMO، مؤشرات الأداء، اللوحات التنفيذية، التقارير، مجالس الحوكمة، ضوابط البرامج ودعم اتخاذ القرار.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/pmo.html">
+  <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/pmo.html">
+  <link rel="alternate" hreflang="ar" href="https://www.ashraf-eldesoky.space/ar/pmo.html">
   <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
   <link rel="manifest" href="../manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css?v=4">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space/ar/"}, {"@type": "ListItem", "position": 2, "name": "قيادة مكتب إدارة المشاريع", "item": "https://www.ashraf-eldesoky.space/ar/pmo.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space/ar/"}, {"@type": "ListItem", "position": 2, "name": "PMO والحوكمة", "item": "https://www.ashraf-eldesoky.space/ar/pmo.html"}]}</script>
+  <style>
+    .page-header { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; padding: 4.5rem 0 2.5rem; }
+    .page-header .breadcrumb { margin-bottom: 1rem; }
+    .page-header h1 { color: #fff; font-size: clamp(1.9rem, 4.3vw, 3rem); font-weight: 700; line-height: 1.25; margin-bottom: 0.75rem; }
+    .page-header .lead { color: rgba(255,255,255,0.8); font-size: 1.05rem; max-width: 650px; line-height: 1.75; margin-bottom: 1.5rem; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; }
+    .btn-primary { background: var(--accent); color: #fff; border: none; }
+    .btn-primary:hover { background: var(--accent-hover); color: #fff; transform: translateY(-2px); }
+    .btn-lg { padding: 0.95rem 2.4rem; font-size: 1rem; }
+    .page-pad { padding: 3.5rem 0; }
+    @media (max-width: 767px) { .page-pad { padding: 2rem 0; } }
+    .section-head { margin-bottom: 1.75rem; }
+    .section-head .eyebrow { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--accent); margin-bottom: 0.6rem; }
+    .section-head h2 { font-size: clamp(1.45rem, 2.8vw, 1.9rem); font-weight: 700; margin-bottom: 0.5rem; }
+    .section-head p { color: var(--text-muted); font-size: 1.02rem; max-width: 660px; line-height: 1.75; }
+    .svc-grid-2 { display: grid; gap: 2.5rem; } @media (min-width: 992px) { .svc-grid-2 { grid-template-columns: 1fr 1fr; } }
+    .svc-grid-3 { display: grid; gap: 1.25rem; } @media (min-width: 768px) { .svc-grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    .problem-box { background: #fff6f2; border-right: 3px solid #ff7043; padding: 1.25rem; border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+    .problem-box h3 { font-size: 0.8rem; color: #d84315; margin-bottom: 0.5rem; font-weight: 700; letter-spacing: 0.02em; }
+    .problem-box p { color: var(--text); margin: 0; font-size: 0.95rem; line-height: 1.75; }
+    .provide-card { background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; transition: var(--transition); }
+    .provide-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .provide-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .provide-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin: 0; }
+    .visual-box { background: var(--bg-alt, #f6f8fb); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; min-height: 240px; display: flex; flex-direction: column; justify-content: center; }
+    .visual-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 1rem; }
+    .gov-flow { display: flex; flex-direction: column; gap: 0.75rem; }
+    .gov-row { display: flex; align-items: stretch; gap: 0.75rem; }
+    .gov-stage { flex: 1; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.82rem; font-weight: 600; text-align: center; color: var(--text); display: flex; align-items: center; justify-content: center; }
+    .gov-hub { flex: 1.4; background: var(--accent); color: #fff; border-radius: var(--radius-sm); padding: 1rem; font-size: 0.9rem; font-weight: 700; text-align: center; display: flex; align-items: center; justify-content: center; }
+    .gov-arrow { color: var(--text-light); font-size: 0.9rem; display: flex; align-items: center; justify-content: center; }
+    .gov-output { background: rgba(30,144,255,0.06); border: 1px dashed rgba(30,144,255,0.25); border-radius: var(--radius-sm); padding: 0.75rem; font-size: 0.8rem; font-weight: 600; color: var(--accent); text-align: center; margin-top: 0.5rem; }
+    .dash-row { display: flex; gap: 1rem; margin-bottom: 1rem; }
+    .dash-metric { flex: 1; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .dash-metric .label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-light); margin-bottom: 0.3rem; }
+    .dash-metric .value { font-size: 1.35rem; font-weight: 800; color: var(--text); }
+    .dash-metric .delta { font-size: 0.7rem; color: var(--accent); font-weight: 600; }
+    .kpi-list { display: grid; gap: 0.6rem; }
+    .kpi-item { display: flex; align-items: center; gap: 0.65rem; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; font-size: 0.85rem; }
+    .kpi-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+    .exp-card { display: flex; flex-direction: column; gap: 0.75rem; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.25rem; height: 100%; }
+    .exp-card .meta { font-size: 0.75rem; color: var(--accent); font-weight: 700; letter-spacing: 0.02em; }
+    .exp-card h4 { font-size: 1rem; font-weight: 700; margin: 0; }
+    .exp-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin: 0; }
+    .final-cta { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; text-align: center; }
+    .final-cta h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.2rem); }
+    .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; line-height: 1.75; }
+    @media (prefers-reduced-motion: reduce) { .btn, .provide-card { transition: none !important; transform: none !important; } }
+  </style>
 </head>
 <body>
   <div id="ecms-nav-inject"></div>
-  <main id="main-content" class="page-wrapper">
 
-    <div class="page-header">
+  <main id="main-content" class="page-wrapper">
+    <header class="page-header">
       <div class="container">
         <nav aria-label="Breadcrumb" class="breadcrumb">
-          <a href="index.html">الرئيسية</a><span class="breadcrumb-sep">›</span>
-          <span class="current">قيادة مكتب إدارة المشاريع</span>
+          <a href="index.html">الرئيسية</a><span class="breadcrumb-sep">›</span><span class="current">PMO والحوكمة</span>
         </nav>
-        <div class="page-header-inner">
-          <div class="page-header-icon">🏗</div>
+        <h1>PMO والحوكمة</h1>
+        <p class="lead">إنشاء نظام الحوكمة وضوابط الأداء والتقارير اللازم لإدارة برامج البنية التحتية المعقدة.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">ناقش مشروعك</a>
+      </div>
+    </header>
+
+    <section class="page-pad">
+      <div class="container">
+        <div class="svc-grid-2" style="align-items: start;">
+          <div class="problem-box">
+            <h3>مشكلة الحوكمة</h3>
+            <p>تولّد البرامج الكبيرة كميات ضخمة من البيانات، لكن الإدارة التنفيذية لا تزال تواجه صعوبة في معرفة ما إذا كان البرنامج يسير فعلاً على المسار الصحيح. تصبح اجتماعات الحوكمة طقوس تقارير. وتتأخر القرارات لأن المساءلة ومسارات التصعيد ومؤشرات الأداء غير واضحة.</p>
+          </div>
           <div>
-            <h1>قيادة مكتب إدارة المشاريع</h1>
-            <p>حوكمة البرامج، ضوابط المشاريع وخبرة مكتب إدارة المشاريع</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="section" aria-label="خبرة مكتب إدارة المشاريع">
-      <div class="container">
-        <div class="grid-2" style="align-items:start;gap:3rem;">
-          <div class="reveal">
-            <span class="section-eyebrow">الملف التنفيذي لمكتب إدارة المشاريع</span>
-            <h2 class="section-title" style="text-align:right;">خبرة <span class="accent">مكتب الإدارة والحوكمة</span></h2>
-            <div class="section-divider" style="margin:1rem 0 1.5rem;"></div>
-            <p style="color:var(--text-muted);line-height:1.85;margin-bottom:1.25rem;">يتمتع أشرف الدسوقي بأكثر من <strong>10 سنوات من خبرة قيادة مكتب إدارة المشاريع</strong>، وكانت مهامه الرائدة هي دعمه المستمر لعشر سنوات لشركة الاتصالات السعودية (STC) من خلال نوركونسلت – أحد أكبر برامج البنية التحتية للاتصالات في المملكة العربية السعودية.</p>
-            <p style="color:var(--text-muted);line-height:1.85;margin-bottom:1.25rem;">تشمل خبرته في مكتب إدارة المشاريع تصميم أطر حوكمة البرامج، وتطوير لوحات مؤشرات الأداء، والتقارير التنفيذية، وضبط التغييرات، وإدارة المخاطر، وتطوير أنظمة تخطيط موارد المؤسسة (ERP) لرؤية البرامج في الوقت الفعلي.</p>
-            <p style="color:var(--text-muted);line-height:1.85;margin-bottom:1.5rem;">في نوركونسلت/STC، طوّر أشرف نظام تتبع ERP مخصص باستخدام MS Access VBA و SQL الذي غيّر إدارة بيانات البرامج والتقارير لفريق الشبكة الثابتة بالكامل في STC.</p>
-            <a href="career.html#norconsult-stc-2007" class="btn btn-primary">عرض مهام STC ←</a>
-          </div>
-          <div class="reveal">
-            <div class="card" style="margin-bottom:1rem;">
-              <h3 style="font-size:0.9rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1rem;">كفاءات مكتب إدارة المشاريع</h3>
-              <div style="display:flex;flex-direction:column;gap:0.5rem;">
-                <div class="competency-item">تأسيس مكتب إدارة المشاريع وأطر الحوكمة</div>
-                <div class="competency-item">إدارة المحافظ</div>
-                <div class="competency-item">تقارير البرامج</div>
-                <div class="competency-item">تطوير ومراقبة مؤشرات الأداء</div>
-                <div class="competency-item">تصميم لوحات القيادة التنفيذية</div>
-                <div class="competency-item">إدارة القيمة المكتسبة (EVM)</div>
-                <div class="competency-item">إدارة ضبط التغييرات</div>
-                <div class="competency-item">إدارة المخاطر</div>
-                <div class="competency-item">تقارير أصحاب المصلحة</div>
-                <div class="competency-item">إدارة الخطوط المرجعية</div>
-              </div>
+            <div class="section-head" style="margin-bottom: 1rem;">
+              <span class="eyebrow">ما أقدّمه</span>
+              <h2>PMO وحوكمة عملية تجعل القرارات أوضح والمساءلة أقوى.</h2>
             </div>
-            <div class="card">
-              <h3 style="font-size:0.9rem;color:var(--accent);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:1rem;">أدوات مكتب إدارة المشاريع</h3>
-              <div style="display:flex;gap:0.4rem;flex-wrap:wrap;">
-                <span class="tag tag-primary">MS Project</span>
-                <span class="tag tag-primary">Primavera P6</span>
-                <span class="tag tag-primary">Power BI</span>
-                <span class="tag tag-primary">MS Access VBA</span>
-                <span class="tag tag-primary">SQL</span>
-                <span class="tag tag-primary">Advanced Excel</span>
-                <span class="tag tag-primary">MS Visio</span>
-              </div>
-            </div>
+            <p style="color: var(--text-muted); line-height: 1.75;">أُنشئ إطارات PMO ومؤشرات الأداء ودورات المراجعة والتقارير ومسارات التصعيد التي تناسب البرنامج بدلاً من إضافة بيروقراطية. النتيجة هي نظام حوكمة يدعم القرارات، ويكشف المشكلات مبكراً، ويبقي البرنامج متوافقاً مع أهدافه.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PMO Activities -->
-    <section class="section section-alt" aria-label="أنشطة مكتب إدارة المشاريع">
+    <section class="page-pad" style="background: var(--bg-alt, #f6f8fb);">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">وظائف مكتب إدارة المشاريع</span>
-          <h2 class="section-title">الوظائف <span class="accent">المنفذة في البرامج</span></h2>
-          <div class="section-divider"></div>
+        <div class="section-head">
+          <span class="eyebrow">إطار PMO</span>
+          <h2>بنية الحوكمة التي أساعد في وضعها</h2>
         </div>
-        <div class="grid-3 reveal">
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2rem;margin-bottom:0.75rem;">📅</div>
-            <h3 style="font-size:0.95rem;margin-bottom:0.5rem;">التخطيط والجدولة</h3>
-            <p style="font-size:0.82rem;color:var(--text-muted);">جداول برامج رئيسية باستخدام MS Project و Primavera P6. إدارة الخطوط المرجعية وتتبع التقدم للبرامج متعددة السنوات.</p>
+        <div class="svc-grid-2" style="align-items: center;">
+          <div class="visual-box">
+            <div class="visual-title">المشاريع → PMO → الحوكمة → القرار التنفيذي</div>
+            <div class="gov-flow">
+              <div class="gov-row"><div class="gov-stage">فرق المشاريع</div><div class="gov-arrow">←</div><div class="gov-stage">مديرو المشاريع</div></div>
+              <div class="gov-row"><div class="gov-stage">PMO</div><div class="gov-arrow">←</div><div class="gov-hub">مجالس الحوكمة</div></div>
+              <div class="gov-row"><div class="gov-stage">لوحة KPI</div><div class="gov-arrow">←</div><div class="gov-stage">التقرير التنفيذي</div></div>
+              <div class="gov-output">قرار تنفيذي مبني على بيانات</div>
+            </div>
           </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2rem;margin-bottom:0.75rem;">📊</div>
-            <h3 style="font-size:0.95rem;margin-bottom:0.5rem;">لوحات مؤشرات الأداء</h3>
-            <p style="font-size:0.82rem;color:var(--text-muted);">تطوير لوحات مؤشرات الأداء وتقارير الأداء التنفيذية لرؤية البرامج الأسبوعية والشهرية على مستوى الإدارة العليا في STC.</p>
-          </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2rem;margin-bottom:0.75rem;">💻</div>
-            <h3 style="font-size:0.95rem;margin-bottom:0.5rem;">تطوير أنظمة ERP</h3>
-            <p style="font-size:0.82rem;color:var(--text-muted);">بناء أنظمة ERP مخصصة باستخدام MS Access VBA و SQL لتتبع المشاريع وإدارة المواد والتحكم في المستودعات في كل من Siemens و Norconsult/STC.</p>
-          </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2rem;margin-bottom:0.75rem;">⚠</div>
-            <h3 style="font-size:0.95rem;margin-bottom:0.5rem;">إدارة المخاطر</h3>
-            <p style="font-size:0.82rem;color:var(--text-muted);">إدارة سجلات المخاطر وسجلات القضايا وخطط الاستجابة للمخاطر. تحديد استباقي للمخاطر والتخفيف من حدتها في بيئات البرامج المعقدة.</p>
-          </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2rem;margin-bottom:0.75rem;">🔄</div>
-            <h3 style="font-size:0.95rem;margin-bottom:0.5rem;">ضبط التغييرات</h3>
-            <p style="font-size:0.82rem;color:var(--text-muted);">تشغيل عمليات ضبط التغييرات الرسمية لإدارة تغييرات النطاق وتأثيرات البرامج والموافقات من خلال مجالس الحوكمة.</p>
-          </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2rem;margin-bottom:0.75rem;">📄</div>
-            <h3 style="font-size:0.95rem;margin-bottom:0.5rem;">التقارير التنفيذية</h3>
-            <p style="font-size:0.82rem;color:var(--text-muted);">إنتاج تقارير تقدم تنفيذية أسبوعية وشهرية وخصوصية للإدارة العليا في STC والمديرين الإقليميين وفرق القيادة التنفيذية.</p>
+          <div style="display: grid; gap: 1rem;">
+            <div class="provide-card"><h3>إعداد PMO</h3><p>تحديد تفويض PMO والأدوار والعمليات والنماذج ونقاط التواصل مع فرق المشاريع والقيادة.</p></div>
+            <div class="provide-card"><h3>إطار الحوكمة</h3><p>إنشاء مجالس الحوكمة وحقوق اتخاذ القرار وعتبات التصعيد وبوابات الموافقة المناسبة لحجم البرنامج.</p></div>
+            <div class="provide-card"><h3>إيقاع التقارير</h3><p>دورات تقارير أسبوعية وشهرية وتنفيذية تركز على الاستثناءات والقرارات والإجراءات بدلاً من تفريغ البيانات.</p></div>
           </div>
         </div>
       </div>
     </section>
 
+    <section class="page-pad">
+      <div class="container">
+        <div class="svc-grid-2" style="align-items: start;">
+          <div>
+            <div class="section-head" style="margin-bottom: 1rem;">
+              <span class="eyebrow">KPI وإدارة الأداء</span>
+              <h2>قس ما يهم، ودير ما يحرّك البرنامج</h2>
+            </div>
+            <p style="color: var(--text-muted); line-height: 1.75; margin-bottom: 1.5rem;">أطوّر مؤشرات أداء تربط بين تنفيذ المشروع وأهداف البرنامج. لكل مؤشر مالك واضح وهدف ومصدر بيانات وتردد مراجعة — بحيث تصبح نقاشات الأداء واقعية وقابلة للتنفيذ.</p>
+            <div class="kpi-list">
+              <div class="kpi-item"><div class="kpi-dot"></div><span>الالتزام بالجدول ومعدل تحقيق المعالم</span></div>
+              <div class="kpi-item"><div class="kpi-dot"></div><span>أداء التكلفة وانحراف التنبؤ</span></div>
+              <div class="kpi-item"><div class="kpi-dot"></div><span>الجودة وجاهزية التسليم</span></div>
+              <div class="kpi-item"><div class="kpi-dot"></div><span>التعرض للمخاطر وسرعة حل المسائل</span></div>
+              <div class="kpi-item"><div class="kpi-dot"></div><span>استخدام الموارد وأداء المقاولين</span></div>
+            </div>
+          </div>
+          <div class="visual-box">
+            <div class="visual-title">لوحة الأداء المفاهيمية</div>
+            <div class="dash-row">
+              <div class="dash-metric"><div class="label">المعالم</div><div class="value">82%</div><div class="delta">ضمن المسار</div></div>
+              <div class="dash-metric"><div class="label">مؤشرات خضراء</div><div class="value">7/10</div><div class="delta">3 استثناءات</div></div>
+            </div>
+            <div class="dash-row">
+              <div class="dash-metric"><div class="label">مخاطر مفتوحة</div><div class="value">12</div><div class="delta">2 حرجة</div></div>
+              <div class="dash-metric"><div class="label">متوسط الحل</div><div class="value">8ي</div><div class="delta">المسائل</div></div>
+            </div>
+            <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center;">مقاييس توضيحية. يتم تخصيص KPIs لكل برنامج.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-pad" style="background: var(--bg-alt, #f6f8fb);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">التقارير التنفيذية</span>
+          <h2>تقارير تدفع القرارات لا مجرد اجتماعات</h2>
+        </div>
+        <div class="svc-grid-3">
+          <div class="provide-card"><h3>الملخص التنفيذي</h3><p>حالة البرنامج في صفحة واحدة مع مؤشرات حمراء/صفراء/خضراء والمخاطر الرئيسية والقرارات المطلوبة.</p></div>
+          <div class="provide-card"><h3>حزمة الأداء</h3><p>بيانات الجدولة والتكلفة والمخاطر والجودة بصيغة تدعم النقاش على مستوى المجلس.</p></div>
+          <div class="provide-card"><h3>تقرير الاستثناءات</h3><p>تقارير مركزة على الانحرافات والأسباب الجذرية والتأثيرات والإجراءات المقترحة لمجالس الحوكمة.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-pad">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">ضوابط البرامج</span>
+          <h2>اربط الحوكمة بضوابط التسليم</h2>
+        </div>
+        <div class="svc-grid-2" style="align-items: start;">
+          <p style="color: var(--text-muted); line-height: 1.75;">لا تعمل الحوكمة إلا عندما تكون مرتبطة بضوابط برنامج فعّالة. أربط حوكمة PMO بالتحكم بالمشاريع وإدارة المخاطر وتخطيط الاسترداد، بحيث تستعرض اجتماعات الحوكمة بيانات حقيقية وتخصص مالكين واضحين وتنتج قرارات تحمي البرنامج.</p>
+          <div class="provide-card">
+            <h3>التحكم والحوكمة المتكاملة</h3>
+            <p>ضبط الجدولة · ضبط التكلفة · إدارة المخاطر والمسائل · ضبط التغيير · تخطيط الاسترداد · سجل القرارات</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-pad" style="background: var(--bg-alt, #f6f8fb);">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">خبرة ذات صلة</span>
+          <h2>PMO والحوكمة على نطاق البرنامج</h2>
+        </div>
+        <div class="svc-grid-3">
+          <div class="exp-card">
+            <div class="meta">نوركونسلت / STC · المملكة · 10 سنوات</div>
+            <h4>PMO للبرنامج الوطني FTTH/FTTx لـ STC</h4>
+            <p>تطوير لوحات KPI والتقارير التنفيذية وإيقاع الحوكمة لأحد أكبر برامج البنية التحتية للاتصالات في المنطقة.</p>
+          </div>
+          <div class="exp-card">
+            <div class="meta">Siemens AG مصر ونوركونسلت</div>
+            <h4>أنظمة ERP للتتبع المخصص</h4>
+            <p>بناء أنظمة MS Access VBA وSQL للتتبع وإدارة المواد وبيانات البرنامج عبر فرق مشاريع كبيرة.</p>
+          </div>
+          <div class="exp-card">
+            <div class="meta">مدينة الألعاب الأولمبية · مصر</div>
+            <h4>حوكمة برنامج متعدد الأنظمة</h4>
+            <p>قيادة حوكمة التسليم عبر مسارات ELV وBMS وCCTV وإنذار الحريق وFTTH لمشروع وطني بارز.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-pad final-cta">
+      <div class="container">
+        <h2>هل تحتاج إلى PMO أو إطار حوكمة يدعم القرارات فعلاً؟</h2>
+        <p>لنناقش كيف يمكن لـ PMO والحوكمة أن يمنحا برنامجك الرؤية والسيطرة اللازمتين.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">ناقش مشروعك</a>
+      </div>
+    </section>
   </main>
-  <div id="ecms-footer-inject"></div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/i18n.js?v=2"></script><script src="../assets/js/components.js?v=6"></script>
-  <script src="../assets/js/core.js?v=7"></script>
 
-<!-- AI Chatbot -->
-<script src="../assets/js/cv-data.js?v=2"></script>
-<script src="../assets/js/chatbot.js?v=3"></script>
+  <div id="ecms-footer-inject"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="../assets/js/i18n.js?v=2"></script>
+  <script src="../assets/js/components.js?v=6"></script>
+  <script src="../assets/js/core.js?v=7"></script>
 </body>
 </html>
