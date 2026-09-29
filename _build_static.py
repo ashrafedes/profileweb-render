@@ -397,9 +397,10 @@ def build_article_page(article, articles, lang):
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
   <script src="../../config.js"></script>
   <script src="../../assets/js/i18n.js?v=2"></script>
-  <script src="../../assets/js/components.js?v=4"></script>
-  <script src="../../assets/js/core.js?v=6"></script>
-  <script src="../../assets/js/article.js?v=9"></script>
+  <script src="../../assets/js/components.js?v=6"></script>
+  <script src="../../assets/js/core.js?v=7"></script>
+  <script src="../../assets/js/article.js?v=12"></script>
+  <script src="../../assets/js/engagement.js?v=1"></script>
 </body>
 </html>'''
 

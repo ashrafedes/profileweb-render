@@ -372,6 +372,9 @@
       renderRelated(articles, article);
       renderPrevNext(articles, article);
 
+      // Engagement block (likes + comments)
+      if (window.ArticleEngagement) window.ArticleEngagement.init();
+
       // TOC scroll spy
       initScrollSpy();
     } catch (e) {
