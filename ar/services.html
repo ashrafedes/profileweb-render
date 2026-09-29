@@ -12,8 +12,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الخدمات – التحكم بالمشاريع، مكتب إدارة المشاريع، واسترداد البرامج المتعثرة | أشرف الدسوقي</title>
-  <meta name="description" content="ثلاث مجالات خدمة أساسية لبرامج الاتصالات والبنية التحتية المعقدة: التحكم بالمشاريع، وحوكمة مكتب إدارة المشاريع، واسترداد البرامج المتعثرة.">
+  <title>الخدمات – التسليم التقني وإدارة المشاريع والبرامج | أشرف الدسوقي</title>
+  <meta name="description" content="خطا خدمة لقطاع الاتصالات والبنية التحتية: التسليم التقني (FTTH/FTTx/OSP) وإدارة المشاريع والبرامج (التحكم، الحوكمة، الاسترداد).">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/services.html">
   <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/services.html">
@@ -39,7 +39,7 @@
     .svc-section-alt { background: var(--bg-alt, #f6f8fb); }
     .svc-eyebrow { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--accent); margin-bottom: 0.65rem; }
     .svc-title { font-size: clamp(1.6rem, 3vw, 2.1rem); font-weight: 700; margin-bottom: 0.75rem; line-height: 1.25; }
-    .svc-desc { color: var(--text-muted); font-size: 1.02rem; max-width: 640px; line-height: 1.7; }
+    .svc-desc { color: var(--text-muted); font-size: 1.02rem; max-width: 680px; line-height: 1.7; }
     .svc-grid-2 { display: grid; gap: var(--svc-gap); }
     @media (min-width: 992px) { .svc-grid-2 { grid-template-columns: 1fr 1fr; } }
     .svc-grid-3 { display: grid; gap: 1.25rem; }
@@ -48,9 +48,9 @@
     /* ── Hero ── */
     .page-header { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; padding: 4.5rem 0 2.5rem; }
     .page-header .breadcrumb { margin-bottom: 1.25rem; }
-    .page-header h1 { color: #fff; font-size: clamp(1.9rem, 4.3vw, 3rem); font-weight: 700; line-height: 1.22; max-width: 820px; margin-bottom: 1rem; }
-    .page-header .hero-lead { color: rgba(255,255,255,0.85); font-size: 1.05rem; max-width: 580px; margin-bottom: 1.5rem; line-height: 1.75; }
-    .hero-pillars { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center; color: rgba(255,255,255,0.9); font-size: 0.84rem; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 1.75rem; }
+    .page-header h1 { color: #fff; font-size: clamp(1.9rem, 4.3vw, 3rem); font-weight: 700; line-height: 1.25; max-width: 860px; margin-bottom: 1rem; }
+    .page-header .hero-lead { color: rgba(255,255,255,0.85); font-size: 1.05rem; max-width: 620px; margin-bottom: 1.5rem; line-height: 1.75; }
+    .hero-pillars { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: center; color: rgba(255,255,255,0.9); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 1.75rem; }
     .hero-pillars span { display: inline-flex; align-items: center; }
     .hero-pillars span + span::before { content: '·'; margin: 0 0.6rem; color: rgba(255,255,255,0.45); }
     .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; }
@@ -58,81 +58,41 @@
     .btn-primary:hover { background: var(--accent-hover); color: #fff; transform: translateY(-2px); }
     .btn-lg { padding: 0.95rem 2.4rem; font-size: 1rem; }
 
-    /* Problem panel */
-    .problem-panel { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-md); padding: 1.5rem; backdrop-filter: blur(4px); }
-    .problem-panel h3 { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; color: rgba(255,255,255,0.7); margin-bottom: 1rem; }
-    .problem-item { display: grid; grid-template-columns: 24px 1fr; gap: 0.75rem; align-items: start; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .problem-item:last-child { border-bottom: none; }
-    .problem-num { width: 24px; height: 24px; border-radius: 50%; background: rgba(255,255,255,0.12); color: #fff; font-size: 0.65rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
-    .problem-text strong { display: block; font-size: 0.82rem; font-weight: 600; color: #fff; margin-bottom: 0.2rem; }
-    .problem-text span { font-size: 0.78rem; color: var(--svc-muted); line-height: 1.55; }
+    /* Hero line visual */
+    .hero-line-visual { display: flex; align-items: center; gap: 0.75rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.12); flex-wrap: wrap; }
+    .hero-line-node { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; color: rgba(255,255,255,0.85); padding: 0.35rem 0.7rem; border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); white-space: nowrap; }
+    .hero-line-arrow { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+    @media (max-width: 991px) {
+      .hero-line-visual { gap: 0.4rem; }
+      .hero-line-node { font-size: 0.62rem; padding: 0.25rem 0.45rem; }
+      .hero-line-arrow { font-size: 0.75rem; }
+    }
 
-    /* Hero visuals */
-    .mini-dashboard { display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; margin-top: 0.35rem; }
-    .mini-metric { background: rgba(255,255,255,0.08); border-radius: 6px; padding: 0.5rem; }
-    .mini-metric label { font-size: 0.6rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 0.05em; }
-    .mini-metric .val { font-size: 0.95rem; font-weight: 700; color: #fff; }
-    .mini-metric .val.warn { color: #ff7b72; }
-    .mini-metric .val.unknown { color: rgba(255,255,255,0.5); }
+    /* ── Service line overview ── */
+    .line-card { position: relative; display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.75rem; transition: var(--transition); text-decoration: none; color: inherit; min-height: 250px; }
+    .line-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .line-card .card-num { font-size: 2.6rem; font-weight: 800; color: var(--accent); line-height: 1; opacity: 0.85; margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+    .line-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .line-card .card-prop { color: var(--text-muted); font-size: 0.92rem; line-height: 1.65; margin-bottom: 1.25rem; }
+    .line-card .card-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .line-card .card-tag { background: var(--bg-alt, #f6f8fb); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.25rem 0.65rem; font-size: 0.72rem; color: var(--text-light); font-weight: 500; }
+    .line-card .card-explore { font-size: 0.85rem; font-weight: 600; color: var(--accent); letter-spacing: 0.02em; display: inline-flex; align-items: center; gap: 0.35rem; }
+    .line-card:hover .card-explore { gap: 0.6rem; }
 
-    .mini-chart { height: 38px; position: relative; margin-top: 0.35rem; }
-    .mini-chart svg { width: 100%; height: 100%; overflow: visible; }
-    .mini-chart .line-plan { stroke: rgba(255,255,255,0.35); stroke-width: 2; fill: none; stroke-dasharray: 4 3; }
-    .mini-chart .line-actual { stroke: #ff7b72; stroke-width: 2; fill: none; }
-
-    /* Credibility strip */
-    .cred-strip { background: var(--bg-alt, #f6f8fb); border-bottom: 1px solid var(--border-light); }
-    .cred-inner { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 2rem; padding: 1rem 0; color: var(--text-light); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.02em; }
-    .cred-inner span { display: inline-flex; align-items: center; gap: 0.5rem; }
-    .cred-inner span::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-
-    /* ── Challenge cards ── */
-    .challenge-card { position: relative; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.75rem; display: flex; flex-direction: column; gap: 1.25rem; transition: var(--transition); }
-    .challenge-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-    .challenge-card .ch-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; color: var(--accent); }
-    .challenge-card h3 { font-size: 1.15rem; font-weight: 700; margin: 0; }
-    .challenge-card p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0; }
-    .challenge-card .ch-service { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--accent); margin-top: auto; }
-
-    /* Flow visual */
-    .flow-visual { height: 70px; position: relative; margin: 0.5rem 0; }
-    .flow-dots { display: flex; align-items: center; justify-content: space-between; position: absolute; inset: 0; }
-    .flow-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--text-light); opacity: 0.25; }
-    .flow-dot.active { background: var(--accent); opacity: 1; }
-    .flow-lines { position: absolute; top: 50%; left: 10px; right: 10px; height: 2px; background: repeating-linear-gradient(90deg, rgba(0,0,0,0.08), rgba(0,0,0,0.08) 6px, transparent 6px, transparent 10px); }
-    .challenge-card:hover .flow-lines { background: linear-gradient(90deg, var(--accent), var(--accent)); }
-    .flow-central { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 34px; height: 34px; border-radius: 50%; background: var(--bg-alt); border: 2px solid var(--border-light); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; color: var(--text-light); }
-    .challenge-card:hover .flow-central { border-color: var(--accent); color: var(--accent); }
-
-    /* Divergence chart */
-    .diverge-chart { height: 70px; position: relative; margin: 0.5rem 0; }
-    .diverge-chart svg { width: 100%; height: 100%; overflow: visible; }
-    .diverge-chart .axis { stroke: var(--border-light); stroke-width: 1; }
-    .diverge-chart .plan { stroke: var(--text-light); stroke-width: 2; stroke-dasharray: 4 4; fill: none; opacity: 0.4; }
-    .diverge-chart .actual { stroke: #ff7b72; stroke-width: 2.5; fill: none; }
-
-    /* Timeline break visual */
-    .break-timeline { height: 70px; position: relative; margin: 0.5rem 0; }
-    .break-timeline .tl-bar { position: absolute; left: 0; right: 0; top: 50%; height: 3px; background: var(--border-light); transform: translateY(-50%); }
-    .break-timeline .tl-node { position: absolute; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; border-radius: 50%; background: var(--text-light); opacity: 0.35; }
-    .break-timeline .tl-node.missed { background: #ff7b72; opacity: 1; }
-    .break-timeline .tl-break { position: absolute; top: 50%; left: 60%; width: 3px; height: 26px; background: #ff7b72; transform: translate(-50%, -50%) rotate(25deg); }
-    .break-timeline .tl-label { position: absolute; top: 8px; left: 56%; font-size: 0.6rem; color: #ff7b72; font-weight: 700; letter-spacing: 0.05em; }
-
-    /* ── Service detail panels ── */
+    /* ── Service detail panel ── */
     .svc-detail { padding: var(--svc-pad) 0; border-top: 1px solid var(--border-light); }
     .svc-detail:first-of-type { border-top: none; padding-top: 1rem; }
     .svc-detail-head { margin-bottom: 1.75rem; }
-    .svc-detail-head .d-num { font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+    .svc-detail-head .d-num { font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 0.4rem; }
     .svc-detail-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 0.5rem; }
     .svc-detail-head .d-pos { color: var(--text-muted); font-size: 1.05rem; max-width: 680px; line-height: 1.65; }
 
     .svc-body { display: grid; gap: var(--svc-gap); align-items: start; }
     @media (min-width: 992px) { .svc-body { grid-template-columns: 1fr 1fr; } }
     .svc-visual { background: var(--bg-alt, #f6f8fb); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; min-height: 260px; display: flex; flex-direction: column; justify-content: center; }
-    .svc-visual-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 1rem; }
+    .svc-visual-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 1rem; }
     .svc-content { display: flex; flex-direction: column; gap: 1.5rem; }
-    .svc-content h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em; color: var(--text-light); margin-bottom: 0.5rem; }
+    .svc-content h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-light); margin-bottom: 0.5rem; }
     .svc-content p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.75; margin: 0; }
     .svc-content ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; }
     .svc-content li { position: relative; padding-right: 1.4rem; color: var(--text); font-size: 0.95rem; line-height: 1.45; }
@@ -141,32 +101,39 @@
     .value-box h4 { margin-bottom: 0.35rem; }
     .value-box p { font-weight: 500; color: var(--text); }
 
-    /* Project Controls visual */
+    /* Visual: network stack */
+    .net-stack { display: flex; flex-direction: column; gap: 0.5rem; }
+    .net-layer { display: flex; align-items: center; gap: 0.75rem; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; font-size: 0.85rem; font-weight: 600; color: var(--text); }
+    .net-layer::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+    .net-arrow { text-align: center; color: var(--text-light); font-size: 0.8rem; line-height: 1; }
+    .net-output { margin-top: 0.75rem; padding: 0.75rem; background: rgba(30,144,255,0.06); border: 1px solid rgba(30,144,255,0.2); border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 600; color: var(--accent); text-align: center; }
+
+    /* Visual: control flow */
     .control-flow { display: flex; flex-direction: column; gap: 0.5rem; }
     .control-node { display: flex; align-items: center; gap: 0.75rem; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.6rem 0.85rem; font-size: 0.82rem; font-weight: 600; color: var(--text); }
     .control-node::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
     .control-arrow { text-align: center; color: var(--text-light); font-size: 0.8rem; line-height: 1; }
     .control-output { margin-top: 0.75rem; padding: 0.75rem; background: rgba(30,144,255,0.06); border: 1px solid rgba(30,144,255,0.2); border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 600; color: var(--accent); text-align: center; }
 
-    /* PMO governance visual */
-    .gov-visual { display: grid; gap: 0.75rem; }
-    .gov-row { display: flex; align-items: center; gap: 0.75rem; }
-    .gov-project { flex: 1; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.55rem; font-size: 0.72rem; font-weight: 600; text-align: center; color: var(--text); }
-    .gov-hub { flex: 1.3; background: var(--accent); color: #fff; border-radius: var(--radius-sm); padding: 0.7rem; font-size: 0.78rem; font-weight: 700; text-align: center; letter-spacing: 0.03em; }
-    .gov-output { background: rgba(30,144,255,0.06); border: 1px dashed rgba(30,144,255,0.25); border-radius: var(--radius-sm); padding: 0.6rem; font-size: 0.75rem; font-weight: 600; color: var(--accent); text-align: center; margin-top: 0.25rem; }
-    .gov-arrow { color: var(--text-light); font-size: 0.8rem; }
+    /* Visual: programme management triad */
+    .pm-triad { display: grid; gap: 0.75rem; }
+    .pm-row { display: flex; align-items: stretch; gap: 0.75rem; }
+    .pm-item { flex: 1; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.75rem; font-size: 0.78rem; font-weight: 600; text-align: center; color: var(--text); display: flex; align-items: center; justify-content: center; }
+    .pm-hub { flex: 1.2; background: var(--accent); color: #fff; border-radius: var(--radius-sm); padding: 0.85rem; font-size: 0.85rem; font-weight: 700; text-align: center; letter-spacing: 0.03em; display: flex; align-items: center; justify-content: center; }
+    .pm-output { background: rgba(30,144,255,0.06); border: 1px dashed rgba(30,144,255,0.25); border-radius: var(--radius-sm); padding: 0.7rem; font-size: 0.78rem; font-weight: 600; color: var(--accent); text-align: center; }
+    .pm-arrow { color: var(--text-light); font-size: 0.8rem; display: flex; align-items: center; justify-content: center; }
 
-    /* Recovery visual */
-    .recovery-chart { display: grid; gap: 1rem; }
-    .rec-row { display: grid; grid-template-columns: 90px 1fr; gap: 0.75rem; align-items: center; }
-    .rec-label { font-size: 0.7rem; font-weight: 700; color: var(--text-light); }
-    .rec-bar { height: 10px; border-radius: 999px; background: var(--border-light); position: relative; overflow: hidden; }
-    .rec-bar span { position: absolute; top: 0; bottom: 0; right: 0; border-radius: 999px; }
-    .rec-bar .baseline { width: 100%; background: rgba(30,144,255,0.25); }
-    .rec-bar .actual { width: 62%; background: #ff7b72; }
-    .rec-bar .recovery { width: 88%; background: var(--accent); }
-    .rec-legend { display: flex; gap: 1rem; font-size: 0.7rem; color: var(--text-light); margin-top: 0.5rem; }
-    .rec-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-inline-end: 0.35rem; }
+    /* Sub-service cards inside PM */
+    .sub-service-grid { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+    @media (min-width: 768px) { .sub-service-grid { grid-template-columns: repeat(3, 1fr); } }
+    .sub-service { background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.25rem; transition: var(--transition); }
+    .sub-service:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); }
+    .sub-service .sub-num { font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+    .sub-service h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .sub-service p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.65; margin: 0; }
+    .sub-service ul { list-style: none; padding: 0; margin: 0.75rem 0 0; display: grid; gap: 0.35rem; }
+    .sub-service li { position: relative; padding-right: 1.1rem; color: var(--text); font-size: 0.8rem; }
+    .sub-service li::before { content: ''; position: absolute; right: 0; top: 0.5em; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 
     /* ── Domain section ── */
     .domain-visual { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
@@ -174,7 +141,7 @@
     .domain-node { background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.65rem 1rem; font-size: 0.82rem; font-weight: 600; color: var(--text); text-align: center; }
     .domain-node.accent { background: var(--accent); color: #fff; border-color: var(--accent); }
     .domain-arrow { color: var(--text-light); font-size: 1rem; }
-    .domain-caption { font-size: 0.8rem; color: var(--text-muted); text-align: center; max-width: 300px; margin-top: 0.5rem; line-height: 1.55; }
+    .domain-caption { font-size: 0.8rem; color: var(--text-muted); text-align: center; max-width: 320px; margin-top: 0.5rem; line-height: 1.55; }
 
     /* ── How I Work timeline ── */
     .how-section { position: relative; }
@@ -197,10 +164,10 @@
     .final-cta .next-steps span::after { content: '←'; color: rgba(255,255,255,0.35); }
     .final-cta .next-steps span:last-child::after { content: none; }
 
-    /* ── Reduced motion ── */
+    /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      .btn, .challenge-card { transition: none !important; }
-      .btn:hover, .challenge-card:hover { transform: none !important; }
+      .btn, .line-card, .sub-service { transition: none !important; }
+      .btn:hover, .line-card:hover, .sub-service:hover { transform: none !important; }
     }
   </style>
 </head>
@@ -210,369 +177,255 @@
   <main id="main-content" class="page-wrapper">
     <header class="page-header">
       <div class="container">
-        <div class="svc-grid-2" style="align-items: center;">
-          <div>
-            <nav aria-label="Breadcrumb" class="breadcrumb">
-              <a href="index.html">الرئيسية</a><span class="breadcrumb-sep">›</span><span class="current">الخدمات</span>
-            </nav>
-            <h1>خدمات لاستعادة السيطرة على المشاريع والبرامج المعقدة</h1>
-            <p class="hero-lead">أساعد المؤسسات على تحسين أداء المشاريع، وتعزيز حوكمة البرامج، واستعادة السيطرة على المشاريع والبرامج المتعثرة — من خلال ضوابط عملية تتناسب مع طبيعة البرامج المعقدة.</p>
-            <div class="hero-pillars">
-              <span>التحكم بالمشاريع</span>
-              <span>مكتب إدارة المشاريع وحوكمة البرامج</span>
-              <span>استرداد البرامج المتعثرة</span>
-            </div>
-            <a href="contact.html" class="btn btn-primary btn-lg">ناقش تحدي مشروعك</a>
-          </div>
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="index.html">الرئيسية</a><span class="breadcrumb-sep">›</span><span class="current">الخدمات</span>
+        </nav>
+        <h1>التسليم التقني وإدارة المشاريع والبرامج لقطاع الاتصالات والبنية التحتية</h1>
+        <p class="hero-lead">خطا خدمة متكاملان: هندسة الشبكات وتنفيذ FTTH/FTTx/OSP، وإدارة المشاريع والبرامج من خلال التحكم بالمشاريع وحوكمة مكتب إدارة المشاريع واسترداد البرامج المتعثرة.</p>
+        <div class="hero-pillars">
+          <span>التسليم التقني</span>
+          <span>إدارة المشاريع والبرامج</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-lg">ناقش تحدي مشروعك</a>
 
-          <div class="problem-panel">
-            <h3>هل هذا وضع مشروعك؟</h3>
-            <div class="problem-item">
-              <div class="problem-num">01</div>
-              <div class="problem-text">
-                <strong>فقدان الرؤية</strong>
-                <div class="mini-dashboard">
-                  <div class="mini-metric"><label>التقدم</label><div class="val">82%</div></div>
-                  <div class="mini-metric"><label>الجدول</label><div class="val warn">-14 يوم</div></div>
-                  <div class="mini-metric"><label>التنبؤ</label><div class="val unknown">؟</div></div>
-                  <div class="mini-metric"><label>المخاطرة</label><div class="val warn">مرتفعة</div></div>
-                </div>
-                <span>التقارير موجودة، لكن الإدارة لا ترى الوضع الحقيقي للمشروع.</span>
-              </div>
-            </div>
-            <div class="problem-item">
-              <div class="problem-num">02</div>
-              <div class="problem-text">
-                <strong>تباين التنبؤ</strong>
-                <div class="mini-chart">
-                  <svg viewBox="0 0 160 40" preserveAspectRatio="none">
-                    <polyline class="line-plan" points="0,32 40,28 80,20 120,12 160,6"/>
-                    <polyline class="line-actual" points="0,32 40,30 80,30 120,22 160,14"/>
-                  </svg>
-                </div>
-                <span>التقدم المُبلَّغ عنه يبدو سليمًا بينما البرنامج يستمر في التأخير.</span>
-              </div>
-            </div>
-            <div class="problem-item">
-              <div class="problem-num">03</div>
-              <div class="problem-text">
-                <strong>حوكمة مجزأة</strong>
-                <div class="flow-visual">
-                  <div class="flow-lines"></div>
-                  <div class="flow-dots">
-                    <div class="flow-dot"></div>
-                    <div class="flow-dot"></div>
-                    <div class="flow-dot"></div>
-                    <div class="flow-central">PMO</div>
-                    <div class="flow-dot"></div>
-                  </div>
-                </div>
-                <span>المقاولون يقدّمون تقارير مختلفة، ويصبح مقارنة الأداء صعبًا.</span>
-              </div>
-            </div>
-            <div class="problem-item">
-              <div class="problem-num">04</div>
-              <div class="problem-text">
-                <strong>مسار استرداد غير واضح</strong>
-                <div class="break-timeline">
-                  <div class="tl-bar"></div>
-                  <div class="tl-node" style="left: 12%"></div>
-                  <div class="tl-node missed" style="left: 48%"></div>
-                  <div class="tl-node" style="left: 86%"></div>
-                  <div class="tl-break"></div>
-                  <div class="tl-label">تأخير</div>
-                </div>
-                <span>البرنامج متأخر، لكن مسار العودة إلى السيطرة غير محدد.</span>
-              </div>
-            </div>
-          </div>
+        <div class="hero-line-visual">
+          <span class="hero-line-node">هندسة الشبكات</span>
+          <span class="hero-line-arrow">←</span>
+          <span class="hero-line-node">FTTH / FTTx</span>
+          <span class="hero-line-arrow">←</span>
+          <span class="hero-line-node">OSP</span>
+          <span class="hero-line-arrow">←</span>
+          <span class="hero-line-node">التحكم بالمشاريع</span>
+          <span class="hero-line-arrow">←</span>
+          <span class="hero-line-node">الحوكمة</span>
+          <span class="hero-line-arrow">←</span>
+          <span class="hero-line-node">الاسترداد</span>
         </div>
       </div>
     </header>
 
-    <div class="cred-strip">
-      <div class="container">
-        <div class="cred-inner">
-          <span>خبرة تزيد عن 25 عامًا</span>
-          <span>الاتصالات والبنية التحتية الرقمية</span>
-          <span>FTTH / FTTx / OSP / ISP</span>
-          <span>برامج إقليمية معقدة</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Challenges I Solve -->
+    <!-- Two Service Lines -->
     <section class="svc-section">
       <div class="container">
         <div class="section-header reveal" style="margin-bottom: 2rem;">
-          <span class="svc-eyebrow">التحديات التي أحلّها</span>
-          <h2 class="svc-title">من المشكلة إلى السيطرة</h2>
-          <p class="svc-desc">ثلاثة أنماط متكررة في البرامج المعقدة — والخدمة التي تعالج كل واحد منها.</p>
+          <span class="svc-eyebrow">خطوط الخدمة</span>
+          <h2 class="svc-title">طريقتان للتعاون</h2>
+          <p class="svc-desc">اختر القدرة التي تناسب حاجتك الحالية — التنفيذ التقني، أو السيطرة والحوكمة على البرنامج.</p>
         </div>
-        <div class="svc-grid-3">
-          <div class="challenge-card">
+        <div class="svc-grid-2">
+          <a href="#technical-delivery" class="line-card">
             <div>
-              <div class="ch-label">المشكلة</div>
-              <h3>فقدان الرؤية</h3>
-              <div class="diverge-chart">
-                <svg viewBox="0 0 200 70" preserveAspectRatio="none">
-                  <line class="axis" x1="10" y1="60" x2="190" y2="60"/>
-                  <line class="axis" x1="10" y1="10" x2="10" y2="60"/>
-                  <polyline class="plan" points="15,50 55,42 95,32 135,20 175,12"/>
-                  <polyline class="actual" points="15,50 55,48 95,48 135,38 175,28"/>
-                </svg>
+              <div class="card-num">01</div>
+              <h3>التسليم التقني</h3>
+              <p class="card-prop">الهندسة والتنفيذ لشبكات الألياف والشبكات خارج المباني.</p>
+              <div class="card-tags">
+                <span class="card-tag">FTTH</span>
+                <span class="card-tag">FTTx</span>
+                <span class="card-tag">OSP</span>
+                <span class="card-tag">ISP</span>
               </div>
-              <p>بيانات الجدول والتكلفة والتقدم موجودة في أماكن منفصلة. الإدارة لا ترى صورة واحدة موثوقة عن الموقف الحقيقي للمشروع.</p>
             </div>
-            <div class="ch-service">← التحكم بالمشاريع</div>
-          </div>
-
-          <div class="challenge-card">
+            <span class="card-explore">استكشف ←</span>
+          </a>
+          <a href="#project-management" class="line-card">
             <div>
-              <div class="ch-label">المشكلة</div>
-              <h3>حوكمة مجزأة</h3>
-              <div class="flow-visual" style="height: 75px;">
-                <div class="flow-lines"></div>
-                <div class="flow-dots">
-                  <div class="flow-dot active"></div>
-                  <div class="flow-dot"></div>
-                  <div class="flow-dot"></div>
-                  <div class="flow-central">PMO</div>
-                  <div class="flow-dot active"></div>
-                </div>
+              <div class="card-num">02</div>
+              <h3>إدارة المشاريع والبرامج</h3>
+              <p class="card-prop">الضوابط والحوكمة والاسترداد للبرامج والمشاريع المعقدة.</p>
+              <div class="card-tags">
+                <span class="card-tag">التحكم بالمشاريع</span>
+                <span class="card-tag">PMO</span>
+                <span class="card-tag">استرداد البرامج</span>
               </div>
-              <p>المشاريع المتعددة تقدّم تقارير بأنساق مختلفة ومؤشرات مختلفة. المسؤولية غير واضحة وصانعو القرار يتلقون معلومات متجزئة.</p>
             </div>
-            <div class="ch-service">← مكتب إدارة المشاريع وحوكمة البرامج</div>
-          </div>
-
-          <div class="challenge-card">
-            <div>
-              <div class="ch-label">المشكلة</div>
-              <h3>تأخير البرنامج</h3>
-              <div class="break-timeline" style="height: 75px;">
-                <div class="tl-bar"></div>
-                <div class="tl-node" style="left: 8%"></div>
-                <div class="tl-node missed" style="left: 45%"></div>
-                <div class="tl-node" style="left: 88%"></div>
-                <div class="tl-break" style="left: 45%; height: 30px;"></div>
-                <div class="tl-label" style="left: 42%;">انحراف</div>
-              </div>
-              <p>البرنامج تأخر، وأسباب التأخير غير واضحة، ولا يوجد خطة استرداد موثوقة لاستعادة الجدول والأداء.</p>
-            </div>
-            <div class="ch-service">← استرداد البرامج المتعثرة</div>
-          </div>
+            <span class="card-explore">استكشف ←</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Service details -->
-    <section class="svc-section svc-section-alt">
+    <!-- Technical Delivery -->
+    <section class="svc-section svc-section-alt" id="technical-delivery">
       <div class="container">
-
-        <article class="svc-detail" id="svc-01">
-          <div class="svc-detail-head">
-            <div class="d-num">01 / التحكم بالمشاريع</div>
-            <h2>ضبط الجدول الزمني والتكلفة والتقدم والمخاطر والأداء</h2>
-            <p class="d-pos">تحويل البيانات المتفرقة للمشروع إلى صورة ضبط واحدة موثوقة تدعم قرارات الإدارة.</p>
-          </div>
-          <div class="svc-body">
-            <div class="svc-visual">
-              <div class="svc-visual-title">تدفق نظام الضبط</div>
-              <div class="control-flow">
-                <div class="control-node">التخطيط</div>
-                <div class="control-arrow">↓</div>
-                <div class="control-node">التقدم</div>
-                <div class="control-arrow">↓</div>
-                <div class="control-node">التكلفة</div>
-                <div class="control-arrow">↓</div>
-                <div class="control-node">المخاطر</div>
-                <div class="control-arrow">↓</div>
-                <div class="control-node">التنبؤ</div>
-                <div class="control-output">القرار التنفيذي</div>
-              </div>
-            </div>
-            <div class="svc-content">
-              <div>
-                <h4>التحدّي</h4>
-                <p>قد تحتوي المشاريع على نشاط وتقارير، لكن الإدارة قد تظل بلا رؤية موثوقة للأداء الفعلي. الجدول الزمني والتكلفة والمخاطر والتنبؤات تُتابع بشكل منفصل، فتظهر الانحرافات متأخرة وتُتخذ القرارات بناءً على معلومات ناقصة.</p>
-              </div>
-              <div>
-                <h4>ما أقدّمه</h4>
-                <ul>
-                  <li>إطار ضبط المشروع</li>
-                  <li>الجدولة المتكاملة</li>
-                  <li>نظام قياس التقدم</li>
-                  <li>إطار مؤشرات الأداء</li>
-                  <li>إدارة القيمة المكتسبة (EVM)</li>
-                  <li>ضبط المخاطر والتغييرات</li>
-                  <li>لوحة تنفيذية</li>
-                  <li>التقارير الإدارية</li>
-                </ul>
-              </div>
-              <div class="value-box">
-                <h4>القيمة المتوقعة</h4>
-                <p>رؤية أوضح لأداء المشروع، والكشف المبكر عن الانحرافات، ودعم أقوى للقرارات الإدارية.</p>
-              </div>
-              <div>
-                <h4>كيف أساعد</h4>
-                <p>إقامة عمليات ضبط مشاريع عملية للتخطيط وقياس التقدم والتنبؤ ومراقبة الأداء والتقارير الإدارية — بحيث تتكامل مع سير عمل البرنامج الحالي بدلاً من إضافة بيروقراطية.</p>
-              </div>
+        <div class="svc-detail-head">
+          <div class="d-num">01 / التسليم التقني</div>
+          <h2>هندسة وتنفيذ شبكات FTTH / FTTx / OSP</h2>
+          <p class="d-pos">دعم تقني عملي يساعد مشغلي الشبكات والبنية التحتية على نشر شبكات الألياف والشبكات خارج المباني بمفاجآت أقل وتحكم أفضل في الموقع.</p>
+        </div>
+        <div class="svc-body">
+          <div class="svc-visual">
+            <div class="svc-visual-title">التسلسل التقني للشبكة</div>
+            <div class="net-stack">
+              <div class="net-layer">تخطيط الشبكة والاستراتيجية</div>
+              <div class="net-arrow">↓</div>
+              <div class="net-layer">تصميم FTTH / FTTx</div>
+              <div class="net-arrow">↓</div>
+              <div class="net-layer">مسارات OSP والأعمال المدنية</div>
+              <div class="net-arrow">↓</div>
+              <div class="net-layer">تكامل ISP / شبكات الوصول</div>
+              <div class="net-arrow">↓</div>
+              <div class="net-layer">دعم الاختبار والتشغيل</div>
+              <div class="net-output">شبكة تشغيلية</div>
             </div>
           </div>
-        </article>
-
-        <article class="svc-detail" id="svc-02">
-          <div class="svc-detail-head">
-            <div class="d-num">02 / مكتب إدارة المشاريع وحوكمة البرامج</div>
-            <h2>بناء نظام حوكمة عملي يحافظ على توافق البرامج</h2>
-            <p class="d-pos">خلق الرؤية والمساءلة وإيقاع القرار الذي تحتاجه البرامج المعقدة للبقاء تحت السيطرة.</p>
-          </div>
-          <div class="svc-body">
-            <div class="svc-content">
-              <div>
-                <h4>التحدّي</h4>
-                <p>قد تعمل المشاريع المتعددة بتقارير غير متسقة، ومسؤولية غير واضحة، ومعلومات إدارية متجزئة. بدون إطار حوكمة مشترك، يقضي القادة وقتهم في توحيد التقارير بدلاً من اتخاذ القرارات.</p>
-              </div>
-              <div>
-                <h4>ما أقدّمه</h4>
-                <ul>
-                  <li>إطار حوكمة مكتب إدارة المشاريع</li>
-                  <li>معايير التقارير</li>
-                  <li>إطار مؤشرات الأداء</li>
-                  <li>اللوحات التنفيذية</li>
-                  <li>دورات المراجعة</li>
-                  <li>آليات التصعيد</li>
-                </ul>
-              </div>
-              <div class="value-box">
-                <h4>القيمة المتوقعة</h4>
-                <p>معلومات إدارية متسقة، ومساءلة أوضح، ودعم أقوى للقرار عبر البرنامج.</p>
-              </div>
-              <div>
-                <h4>كيف أساعد</h4>
-                <p>إقامة إطار حوكمة وتقارير عملي مناسب للبرنامج — محددًا من يقرر ماذا، ومتى، وعلى أساس أي معلومات.</p>
-              </div>
+          <div class="svc-content">
+            <div>
+              <h4>التحدّي</h4>
+              <p>تتضمن عمليات نشر الألياف والبنية التحتية آلاف المسارات والتراخيص والواجهات المدنية وتسليم المقاولين وتقدم قائم على الوحدات عالية الحجم. بدون إشراف تقني قوي، تتراكم المشكلات الميدانية الصغيرة لتصبح مشاكل في الجدول والتكلفة تُكتشف متأخرًا.</p>
             </div>
-            <div class="svc-visual">
-              <div class="svc-visual-title">تدفق الحوكمة</div>
-              <div class="gov-visual">
-                <div class="gov-row">
-                  <div class="gov-project">مشروع 01</div>
-                  <div class="gov-arrow">←</div>
-                  <div class="gov-hub">حوكمة PMO</div>
-                </div>
-                <div class="gov-row">
-                  <div class="gov-project">مشروع 02</div>
-                  <div class="gov-arrow">←</div>
-                  <div class="gov-hub">التقارير الموحدة</div>
-                </div>
-                <div class="gov-row">
-                  <div class="gov-project">مشروع 03</div>
-                  <div class="gov-arrow">←</div>
-                  <div class="gov-hub">المؤشرات والمراجعات</div>
-                </div>
-                <div class="gov-row" style="justify-content: center; margin-top: 0.5rem;">
-                  <div class="gov-arrow">↓</div>
-                </div>
-                <div class="gov-output">القرار التنفيذي</div>
-              </div>
+            <div>
+              <h4>ما أقدّمه</h4>
+              <ul>
+                <li>تخطيط الشبكات واستراتيجية النشر</li>
+                <li>مراجعة وتحسين تصميم FTTH / FTTx</li>
+                <li>هندسة مسارات OSP ودعم المسوح</li>
+                <li>تنسيق الأعمال المدنية والقنوات</li>
+                <li>تكامل شبكات ISP / الوصول</li>
+                <li>توثيق As-Built والتحقق من المسارات</li>
+                <li>دعم الاختبار والتشغيل</li>
+                <li>إدارة الواجهة التقنية مع المقاولين</li>
+              </ul>
+            </div>
+            <div class="value-box">
+              <h4>القيمة المتوقعة</h4>
+              <p>تنفيذ ميداني أوضح، ومفاجآت تصميم وواجهات أقل، وشبكة موثقة وجاهزة للتشغيل.</p>
+            </div>
+            <div>
+              <h4>كيف أساعد</h4>
+              <p>أعمل إلى جانب فرق التنفيذ لترجمة أهداف البرنامج إلى قرارات هندسية عملية — من تخطيط المسارات ومراجعة التصاميم إلى التنسيق الميداني وتوثيق التسليم.</p>
             </div>
           </div>
-        </article>
-
-        <article class="svc-detail" id="svc-03">
-          <div class="svc-detail-head">
-            <div class="d-num">03 / استرداد البرامج المتعثرة</div>
-            <h2>تشخيص البرامج المتأخرة ووضع مسار استرداد منظّم</h2>
-            <p class="d-pos">استرداد البرامج المتأخرة أو ضعيفة الأداء عبر تشخيص منظّم وإجراءات تصحيحية وضبط الأداء.</p>
-          </div>
-          <div class="svc-body">
-            <div class="svc-visual">
-              <div class="svc-visual-title">مسار الاسترداد</div>
-              <div class="recovery-chart">
-                <div class="rec-row">
-                  <div class="rec-label">الأساس</div>
-                  <div class="rec-bar"><span class="baseline"></span></div>
-                </div>
-                <div class="rec-row">
-                  <div class="rec-label">الواقع</div>
-                  <div class="rec-bar"><span class="actual"></span></div>
-                </div>
-                <div class="rec-row">
-                  <div class="rec-label">الاسترداد</div>
-                  <div class="rec-bar"><span class="recovery"></span></div>
-                </div>
-                <div class="rec-legend">
-                  <span><i style="background: rgba(30,144,255,0.25)"></i>المخطط</span>
-                  <span><i style="background: #ff7b72"></i>الانحراف الحالي</span>
-                  <span><i style="background: var(--accent)"></i>مسار الاسترداد</span>
-                </div>
-              </div>
-            </div>
-            <div class="svc-content">
-              <div>
-                <h4>التحدّي</h4>
-                <p>البرنامج متأخر، أو ضعيف الأداء، أو يفقد السيطرة. الضغط متزايد لاسترداد الموقف، لكن بدون تشخيص منظّم تصبح خطة الاسترداد متفائلة أكثر من كونها موثوقة.</p>
-              </div>
-              <div>
-                <h4>ما أقدّمه</h4>
-                <ul>
-                  <li>تقييم الوضع الحالي</li>
-                  <li>تشخيص الأداء</li>
-                  <li>تحليل الأسباب الجذرية</li>
-                  <li>تقييم الجدول الزمني</li>
-                  <li>خطة الاسترداد</li>
-                  <li>الإجراءات التصحيحية</li>
-                  <li>مراقبة الاسترداد</li>
-                  <li>التقارير الإدارية</li>
-                </ul>
-              </div>
-              <div class="value-box">
-                <h4>القيمة المتوقعة</h4>
-                <p>مسار منظّم وقابل للقياس نحو استعادة السيطرة على البرنامج — دون المبالغة فيما يمكن استرداده أو متى.</p>
-              </div>
-              <div>
-                <h4>كيف أساعد</h4>
-                <p>تقييم الوضع الحالي، وتحديد أسباب الانحراف، ووضع خطة استرداد عملية تحتوي على أهداف واقعية وإجراءات تصحيحية واضحة ومراقبة منتظمة.</p>
-              </div>
-            </div>
-          </div>
-        </article>
-
+        </div>
       </div>
     </section>
 
-    <!-- Specialist Domain Experience -->
-    <section class="svc-section">
+    <!-- Project & Programme Management -->
+    <section class="svc-section" id="project-management">
+      <div class="container">
+        <div class="svc-detail-head">
+          <div class="d-num">02 / إدارة المشاريع والبرامج</div>
+          <h2>التحكم بالمشاريع · الحوكمة · استرداد البرامج</h2>
+          <p class="d-pos">استعادة السيطرة على البرامج المعقدة — من الرؤية والحوكمة إلى الاسترداد عندما يخرج التسليم عن المسار.</p>
+        </div>
+        <div class="svc-body">
+          <div class="svc-content">
+            <div>
+              <h4>التحدّي</h4>
+              <p>غالبًا ما تحتوي برامج البنية التحتية الكبيرة على نشاط وتقارير، لكن الإدارة تفتقر إلى صورة موثوقة للأداء الفعلي. المقاولون المتعددون يقدّمون تقارير بأنساق مختلفة، تصبح المساءلة غير واضحة، ولا توجد خطة استرداد موثوقة للبرامج المتأخرة.</p>
+            </div>
+            <div>
+              <h4>ما أقدّمه</h4>
+              <ul>
+                <li>أطر ضبط المشاريع والجداول المتكاملة</li>
+                <li>قياس التقدم وضبط التكلفة وEVM</li>
+                <li>عمليات ضبط المخاطر والتغييرات</li>
+                <li>هياكل حوكمة مكتب إدارة المشاريع ومعايير التقارير</li>
+                <li>لوحات مؤشرات الأداء والتقارير الإدارية</li>
+                <li>دورات المراجعة وآليات التصعيد</li>
+                <li>تخطيط الاسترداد والإجراءات التصحيحية</li>
+                <li>مراقبة الاسترداد ودعم إعادة وضع الأساس</li>
+              </ul>
+            </div>
+            <div class="value-box">
+              <h4>القيمة المتوقعة</h4>
+              <p>رؤية واحدة موثوقة لأداء البرنامج، ومساءلة أوضح، وإنذار مبكر بالانحرافات، ومسار منظّم للعودة إلى السيطرة.</p>
+            </div>
+            <div>
+              <h4>كيف أساعد</h4>
+              <p>أقيم أنظمة ضبط وحوكمة عملية تتناسب مع البرنامج بدلاً من إضافة بيروقراطية، وعند الحاجة أبني خطة استرداد قائمة على التشخيص وأهداف واقعية.</p>
+            </div>
+          </div>
+          <div class="svc-visual">
+            <div class="svc-visual-title">الثلاثية الإدارية</div>
+            <div class="pm-triad">
+              <div class="pm-row">
+                <div class="pm-hub">الرؤية</div>
+                <div class="pm-arrow">←</div>
+                <div class="pm-item">التحكم بالمشاريع</div>
+              </div>
+              <div class="pm-row">
+                <div class="pm-hub">المساءلة</div>
+                <div class="pm-arrow">←</div>
+                <div class="pm-item">حوكمة PMO</div>
+              </div>
+              <div class="pm-row">
+                <div class="pm-hub">السيطرة</div>
+                <div class="pm-arrow">←</div>
+                <div class="pm-item">استرداد البرامج</div>
+              </div>
+              <div class="pm-output">دعم القرار التنفيذي</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-service-grid">
+          <div class="sub-service">
+            <div class="sub-num">02.1</div>
+            <h4>التحكم بالمشاريع</h4>
+            <p>ضبط الجدول الزمني والتكلفة والتقدم والمخاطر والأداء.</p>
+            <ul>
+              <li>التخطيط والجدولة</li>
+              <li>قياس التقدم</li>
+              <li>ضبط التكلفة وEVM</li>
+              <li>تقارير مؤشرات الأداء</li>
+            </ul>
+          </div>
+          <div class="sub-service">
+            <div class="sub-num">02.2</div>
+            <h4>الحوكمة وPMO</h4>
+            <p>إنشاء نظام الحوكمة اللازم لإدارة البرامج المعقدة.</p>
+            <ul>
+              <li>إطار الحوكمة</li>
+              <li>معايير التقارير</li>
+              <li>دورات المراجعة</li>
+              <li>آليات التصعيد</li>
+            </ul>
+          </div>
+          <div class="sub-service">
+            <div class="sub-num">02.3</div>
+            <h4>استرداد البرامج</h4>
+            <p>تشخيص البرامج المتأخرة ووضع مسار استرداد منظّم.</p>
+            <ul>
+              <li>تقييم الوضع الحالي</li>
+              <li>تحليل الأسباب الجذرية</li>
+              <li>خطة الاسترداد</li>
+              <li>مراقبة الاسترداد</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Domain Expertise -->
+    <section class="svc-section svc-section-alt">
       <div class="container">
         <div class="svc-grid-2" style="align-items: center;">
           <div>
-            <span class="svc-eyebrow">الخبرة المتخصصة في القطاعات</span>
+            <span class="svc-eyebrow">الخبرة القطاعية</span>
             <h2 class="svc-title">الاتصالات والبنية التحتية الرقمية</h2>
-            <p class="svc-desc">برامج البنية التحتية المعقدة تعمل على تقاطع الأعمال المدنية ونشر الشبكات والتراخيص والسلاسل التوريدية والمقاولين المتعددين. يصبح الضبط أكثر صعوبة لأن العمل موزع، والوحدات عالية الحجم، والواجهات كثيرة. أقدّم خبرة التحكم بالمشاريع وحوكمة مكتب إدارة المشاريع واسترداد البرامج المتعثرة في هذه البيئات.</p>
+            <p class="svc-desc">أعمل في البيئات التي يلتقي فيها التسليم التقني مع ضبط البرنامج: عمليات نشر الألياف، والشبكات خارج المباني، والنشر واسع النطاق للشبكات، والبرامج المعقدة التي تتطلب تنسيق مقاولين وتراخيص وأعمال مدنية متعددة.</p>
           </div>
           <div class="svc-visual" style="min-height: 220px;">
-            <div class="svc-visual-title">طبقة الخبرة القطاعية</div>
+            <div class="svc-visual-title">نقطة التقاء الخطين</div>
             <div class="domain-visual">
               <div class="domain-row">
-                <div class="domain-node">الاتصالات</div>
-                <div class="domain-arrow">←</div>
                 <div class="domain-node">FTTH / FTTx</div>
-              </div>
-              <div class="domain-arrow">↓</div>
-              <div class="domain-row">
-                <div class="domain-node">OSP / ISP</div>
-                <div class="domain-arrow">←</div>
-                <div class="domain-node">نشر الشبكات</div>
-              </div>
-              <div class="domain-arrow">↓</div>
-              <div class="domain-row">
-                <div class="domain-node accent">التحكم بالمشاريع</div>
                 <div class="domain-arrow">+</div>
-                <div class="domain-node accent">الحوكمة</div>
+                <div class="domain-node">OSP</div>
               </div>
-              <div class="domain-caption">خبرة قطاعية مطبقة من خلال الخدمات الثلاث — وليس عرضًا منفصلًا.</div>
+              <div class="domain-arrow">↓</div>
+              <div class="domain-row">
+                <div class="domain-node accent">التسليم التقني</div>
+                <div class="domain-arrow">+</div>
+                <div class="domain-node accent">الضوابط والحوكمة</div>
+              </div>
+              <div class="domain-arrow">↓</div>
+              <div class="domain-row">
+                <div class="domain-node">البنية التحتية المعقدة</div>
+                <div class="domain-arrow">→</div>
+                <div class="domain-node">البرامج الإقليمية</div>
+              </div>
+              <div class="domain-caption">العمق التقني المقترن بالضبط البرنامجي، مطبقًا على بيئات الاتصالات والبنية التحتية.</div>
             </div>
           </div>
         </div>
@@ -580,38 +433,38 @@
     </section>
 
     <!-- How I Work -->
-    <section class="svc-section svc-section-alt how-section">
+    <section class="svc-section how-section">
       <div class="container">
         <div class="section-header reveal" style="margin-bottom: 2rem;">
           <span class="svc-eyebrow">كيف أعمل</span>
           <h2 class="svc-title">مسار تعاون واضح</h2>
-          <p class="svc-desc">تسلسل عملي ينتقل من فهم الوضع إلى وضع الضوابط موضع التنفيذ.</p>
+          <p class="svc-desc">سواء بدأ التعاون بالتسليم التقني أو إدارة البرنامج، النهج عملي وموجّه بالنتائج.</p>
         </div>
         <div class="how-timeline">
           <div class="how-step">
             <div class="step-head"><div class="step-dot">01</div><h3>تقييم</h3></div>
-            <p>فهم الوضع الحالي للمشروع أو البرنامج.</p>
+            <p>فهم الوضع التقني أو البرنامجي الحالي.</p>
             <div class="step-output">المخرج: خط أساس للوضع الحالي</div>
           </div>
           <div class="how-step">
             <div class="step-head"><div class="step-dot">02</div><h3>تشخيص</h3></div>
-            <p>تحديد مشكلات الأداء وفجوات الضبط.</p>
-            <div class="step-output">المخرج: نتائج الفجوات والأسباب الجذرية</div>
+            <p>تحديد الفجوات الهندسية أو التقنية أو الحوكمة.</p>
+            <div class="step-output">المخرج: نتائج الأسباب الجذرية</div>
           </div>
           <div class="how-step">
             <div class="step-head"><div class="step-dot">03</div><h3>تصميم</h3></div>
-            <p>تطوير إطار الضبط أو الحوكمة أو الاسترداد المناسب.</p>
-            <div class="step-output">المخرج: نموذج التشغيل المستهدف</div>
+            <p>تطوير الإطار التقني أو الإداري المطلوب.</p>
+            <div class="step-output">المخرج: خطة التسليم أو الضبط</div>
           </div>
           <div class="how-step">
             <div class="step-head"><div class="step-dot">04</div><h3>تنفيذ</h3></div>
-            <p>تشغيل العمليات والضوابط المتفق عليها.</p>
-            <div class="step-output">المخرج: عمليات وتقارير عاملة</div>
+            <p>تشغيل النهج المتفق عليه مع الفريق.</p>
+            <div class="step-output">المخرج: عمليات عاملة</div>
           </div>
           <div class="how-step">
             <div class="step-head"><div class="step-dot">05</div><h3>متابعة</h3></div>
-            <p>تتبع الأداء ودعم القرارات الإدارية.</p>
-            <div class="step-output">المخرج: دورة مؤشرات وقرارات</div>
+            <p>تتبع التقدم ودعم القرارات حتى الاستقرار.</p>
+            <div class="step-output">المخرج: تقارير جاهزة للقرار</div>
           </div>
         </div>
       </div>
@@ -620,11 +473,11 @@
     <!-- Final CTA -->
     <section class="svc-section final-cta">
       <div class="container reveal">
-        <h2>هل لديك مشروع أو برنامج يحتاج إلى سيطرة أفضل؟</h2>
-        <p>لنناقش الوضع الحالي ونحدد ما إذا كانت ضوابط المشاريع أو حوكمة البرامج أو استرداد البرامج المتعثرة هي النهج المناسب.</p>
+        <h2>أي خط خدمة يناسب حاجتك الحالية؟</h2>
+        <p>لنناقش ما إذا كنت تحتاج إلى دعم تقني ميداني، أو إدارة مشاريع وبرامج، أو كليهما معًا.</p>
         <div class="next-steps">
           <span>محادثة أولية</span>
-          <span>مراجعة الوضع</span>
+          <span>توضيح النطاق</span>
           <span>النهج المقترح</span>
         </div>
         <a href="contact.html" class="btn btn-primary btn-lg">ناقش تحدي مشروعك</a>
