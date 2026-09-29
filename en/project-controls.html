@@ -110,6 +110,11 @@
     @media (max-width: 767px) { .field-banner { aspect-ratio: 16 / 9; } }
     .field-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .field-banner figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.3rem 0.9rem 0.6rem; background: linear-gradient(transparent, rgba(10,17,40,0.78)); color: #fff; font-size: 0.75rem; font-weight: 600; }
+    .ev-shots { display: grid; gap: 1rem; grid-template-columns: 1fr; margin: 0 0 1.5rem; }
+    @media (min-width: 768px) { .ev-shots { grid-template-columns: 1fr 1fr; } }
+    .ev-shot { position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-light); margin: 0; }
+    .ev-shot img { width: 100%; display: block; }
+    .ev-shot figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.3rem 0.85rem 0.6rem; background: linear-gradient(transparent, rgba(10,17,40,0.78)); color: #fff; font-size: 0.75rem; font-weight: 600; }
 
     .final-cta { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; text-align: center; }
     .final-cta h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.75rem; }
@@ -215,6 +220,10 @@
           <h2>Controls at <span class="accent">programme scale</span></h2>
         </div>
         <figure class="field-banner"><img src="../assets/images/field/field-osp-reinstatement.jpg" width="1200" height="1090" loading="lazy" decoding="async" alt="Road reinstatement works along a fibre route — live programme environment"><figcaption>Field delivery environment — telecom infrastructure programme works</figcaption></figure>
+        <div class="ev-shots">
+          <figure class="ev-shot"><img src="../assets/images/erp/erp-pm-daily-progress.jpg" width="1400" height="787" loading="lazy" decoding="async" alt="ERP daily progress report — trenching, cable pulling, fiber ODB and closure quantities per link code"><figcaption>ERP progress measurement — quantities per link code with progress tracking</figcaption></figure>
+          <figure class="ev-shot"><img src="../assets/images/erp/erp-work-orders.jpg" width="1400" height="787" loading="lazy" decoding="async" alt="ERP work order manager — thousands of work orders tracked by status, stage and class"><figcaption>Work-order control — status, stage and financial tracking at scale</figcaption></figure>
+        </div>
         <div class="grid-3c">
           <div class="exp-card">
             <div class="meta">Norconsult / STC · KSA · 10 Years</div>

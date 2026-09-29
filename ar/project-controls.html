@@ -110,6 +110,11 @@
     @media (max-width: 767px) { .field-banner { aspect-ratio: 16 / 9; } }
     .field-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .field-banner figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.3rem 0.9rem 0.6rem; background: linear-gradient(transparent, rgba(10,17,40,0.78)); color: #fff; font-size: 0.75rem; font-weight: 600; }
+    .ev-shots { display: grid; gap: 1rem; grid-template-columns: 1fr; margin: 0 0 1.5rem; }
+    @media (min-width: 768px) { .ev-shots { grid-template-columns: 1fr 1fr; } }
+    .ev-shot { position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-light); margin: 0; }
+    .ev-shot img { width: 100%; display: block; }
+    .ev-shot figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.3rem 0.85rem 0.6rem; background: linear-gradient(transparent, rgba(10,17,40,0.78)); color: #fff; font-size: 0.75rem; font-weight: 600; }
 
     .final-cta { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; text-align: center; }
     .final-cta h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.75rem; }
@@ -215,6 +220,10 @@
           <h2>ضوابط على <span class="accent">نطاق البرنامج</span></h2>
         </div>
         <figure class="field-banner"><img src="../assets/images/field/field-osp-reinstatement.jpg" width="1200" height="1090" loading="lazy" decoding="async" alt="أعمال إعادة تأهيل الطريق على مسار ألياف — بيئة برنامج فعلية"><figcaption>بيئة تسليم ميدانية — أعمال برنامج بنية تحتية للاتصالات</figcaption></figure>
+        <div class="ev-shots">
+          <figure class="ev-shot"><img src="../assets/images/erp/erp-pm-daily-progress.jpg" width="1400" height="787" loading="lazy" decoding="async" alt="تقرير ERP للتقدم اليومي — كميات الحفر وسحب الكابلات وأعمال الألياف لكل رمز موقع"><figcaption>قياس التقدم عبر ERP — كميات لكل رمز موقع مع تتبع التقدم</figcaption></figure>
+          <figure class="ev-shot"><img src="../assets/images/erp/erp-work-orders.jpg" width="1400" height="787" loading="lazy" decoding="async" alt="مدير أوامر العمل في ERP — آلاف الأوامر متتبعة حسب الحالة والمرحلة والفئة"><figcaption>التحكم في أوامر العمل — تتبع الحالة والمرحلة والقيم المالية على نطاق واسع</figcaption></figure>
+        </div>
         <div class="grid-3c">
           <div class="exp-card">
             <div class="meta">نوركونسلت / STC · المملكة · 10 سنوات</div>
