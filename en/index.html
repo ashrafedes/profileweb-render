@@ -34,26 +34,143 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css?v=4">
   <style>
-    .home-hero { background: linear-gradient(135deg, #0a1128 0%, #15234d 50%, #1e3a8a 100%); color: #fff; position: relative; overflow: hidden; padding: 6rem 0 4.5rem; }
+    /* ---------- Hero ---------- */
+    .home-hero { background: linear-gradient(135deg, #0a1128 0%, #15234d 55%, #1e3a8a 100%); color: #fff; position: relative; overflow: hidden; padding: 5rem 0 4rem; }
     .home-hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .home-hero .container { position: relative; z-index: 1; }
-    .home-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; margin-bottom: 1rem; }
-    .home-hero .lead { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 680px; margin-bottom: 2rem; line-height: 1.7; }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2.5rem; }
-    .btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; border: 1px solid rgba(255,255,255,0.3); color: #fff; background: transparent; }
-    .btn-outline:hover { background: rgba(255,255,255,0.1); color: #fff; }
-    .service-line-card { display: flex; flex-direction: column; height: 100%; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.75rem; transition: var(--transition); text-decoration: none; color: inherit; }
-    .service-line-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-    .service-line-card .sl-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 0.75rem; }
-    .service-line-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .service-line-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem; }
-    .service-line-card ul { list-style: none; padding: 0; margin: 0 0 1.25rem; display: grid; gap: 0.45rem; }
-    .service-line-card li { position: relative; padding-left: 1.2rem; color: var(--text); font-size: 0.9rem; }
-    .service-line-card li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-    .service-line-card .sl-cta { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin-top: auto; }
+    .hero-grid { display: grid; gap: 2.5rem; align-items: center; }
+    @media (min-width: 992px) { .hero-grid { grid-template-columns: 1.05fr 1fr; } }
+    .home-hero h1 { color: #fff; font-size: clamp(1.9rem, 4.4vw, 3.2rem); line-height: 1.15; margin-bottom: 1rem; }
+    .home-hero .lead { color: rgba(255,255,255,0.78); font-size: 1.08rem; max-width: 560px; margin-bottom: 1.75rem; line-height: 1.65; }
+    .badge-outline { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; padding: 0.35rem 0.9rem; font-size: 0.78rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; }
+    .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.9rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; border: 1px solid rgba(255,255,255,0.35); color: #fff; }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    .hero-stats { display: flex; gap: 2rem; flex-wrap: wrap; opacity: 0.85; }
+    .hero-stats strong { font-size: 1.35rem; }
+    .hero-stats span { font-size: 0.78rem; display: block; color: rgba(255,255,255,0.6); }
+
+    /* Hero visual — capability stack */
+    .hero-visual { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.13); border-radius: var(--radius-md); padding: 1.5rem; backdrop-filter: blur(4px); }
+    .hv-title { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.65); text-align: center; margin-bottom: 1.1rem; }
+    .hv-stack { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1rem; }
+    .hv-layer { display: flex; align-items: center; gap: 0.7rem; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius-sm); padding: 0.6rem 0.85rem; font-size: 0.83rem; font-weight: 600; color: #fff; }
+    .hv-layer .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+    .hv-layer.tech .dot { background: #38bdf8; }
+    .hv-layer.ctrl .dot { background: #f59e0b; }
+    .hv-layer.gov  .dot { background: #34d399; }
+    .hv-layer.rec  .dot { background: #f87171; }
+    .hv-arrow { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.9rem; line-height: 1; margin-bottom: 1rem; }
+    .hv-out { background: var(--accent); color: #fff; text-align: center; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.06em; padding: 0.85rem; border-radius: var(--radius-sm); }
+    .hv-note { font-size: 0.68rem; color: rgba(255,255,255,0.5); text-align: center; margin-top: 0.7rem; }
+
+    /* ---------- Section base ---------- */
+    .sec { padding: 3.75rem 0; }
+    .sec-alt { background: var(--bg-alt, #f6f8fb); }
+    @media (max-width: 767px) { .sec { padding: 2.5rem 0; } }
+    .s-head { margin-bottom: 2.25rem; max-width: 720px; }
+    .s-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .s-eyebrow { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .s-head h2 { font-size: clamp(1.55rem, 3vw, 2.1rem); font-weight: 700; line-height: 1.2; margin-bottom: 0.6rem; }
+    .s-head h2 .accent { color: var(--accent); }
+    .s-head p { color: var(--text-muted); font-size: 1.02rem; line-height: 1.6; margin: 0; }
+
+    /* ---------- Problem cards ---------- */
+    .prob-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .prob-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1200px) { .prob-grid { grid-template-columns: repeat(4, 1fr); } }
+    .prob-card { background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.4rem; display: flex; flex-direction: column; gap: 0.9rem; transition: var(--transition); }
+    .prob-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .prob-viz { background: var(--bg-alt, #f6f8fb); border-radius: var(--radius-sm); padding: 0.9rem; min-height: 88px; display: flex; flex-direction: column; justify-content: center; gap: 0.45rem; }
+    .prob-card h3 { font-size: 1rem; font-weight: 700; margin: 0; }
+    .prob-card p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.55; margin: 0; }
+
+    /* mini visual primitives */
+    .mv-row { display: flex; align-items: center; gap: 0.45rem; }
+    .mv-label { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-light); width: 52px; flex-shrink: 0; }
+    .mv-track { flex: 1; height: 7px; background: var(--border-light); border-radius: 999px; position: relative; overflow: hidden; }
+    .mv-fill { position: absolute; inset: 0 auto 0 0; border-radius: 999px; }
+    .mv-fill.plan { background: var(--accent); width: 100%; }
+    .mv-fill.act { background: #e05a3a; width: 58%; }
+    .mv-fill.act-2 { background: #e0a13a; width: 74%; }
+    .mv-chip { font-size: 0.62rem; font-weight: 700; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.18rem 0.5rem; color: var(--text); white-space: nowrap; }
+    .mv-chip.bad { border-color: #e05a3a; color: #c24228; }
+    .mv-chip.ok { border-color: #2e9e66; color: #237a4d; }
+    .mv-kpis { display: flex; gap: 0.4rem; }
+    .mv-kpi { flex: 1; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: 6px; padding: 0.4rem 0.2rem; text-align: center; }
+    .mv-kpi .v { font-size: 0.85rem; font-weight: 800; }
+    .mv-kpi .l { font-size: 0.55rem; color: var(--text-light); }
+    .mv-kpi.bad .v { color: #c24228; }
+    .mv-kpi.ok .v { color: #237a4d; }
+    .mv-flow { display: flex; align-items: center; gap: 0.4rem; justify-content: center; flex-wrap: wrap; }
+    .mv-node { font-size: 0.62rem; font-weight: 700; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: 6px; padding: 0.3rem 0.55rem; color: var(--text); white-space: nowrap; }
+    .mv-node.warn { border-color: #e05a3a; color: #c24228; }
+    .mv-node.hub { border-color: var(--accent); color: var(--accent); }
+    .mv-arr { color: var(--text-light); font-size: 0.8rem; }
+    .mv-dots { display: flex; align-items: center; gap: 0.35rem; justify-content: center; }
+    .mv-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--border-light); }
+    .mv-dot.bad { background: #e05a3a; }
+    .mv-dot.ok { background: #2e9e66; }
+    .mv-dash { flex: 1; border-top: 2px dashed var(--border-light); }
+    .mv-dash.ok { border-color: #2e9e66; }
+
+    /* ---------- Service line cards ---------- */
+    .line-grid { display: grid; gap: 1.75rem; }
+    @media (min-width: 992px) { .line-grid { grid-template-columns: 1fr 1fr; } }
+    .line-card { display: flex; flex-direction: column; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; transition: var(--transition); text-decoration: none; color: inherit; }
+    .line-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .line-head { padding: 1.5rem 1.5rem 0; display: flex; align-items: baseline; gap: 0.9rem; }
+    .line-head .num { font-size: 2.2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .line-head h3 { font-size: 1.3rem; font-weight: 700; margin: 0; line-height: 1.25; }
+    .line-sub { padding: 0.5rem 1.5rem 0; color: var(--text-muted); font-size: 0.92rem; line-height: 1.55; }
+    .line-viz { margin: 1.25rem 1.5rem; background: var(--bg-alt, #f6f8fb); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.1rem; }
+    .line-list { list-style: none; padding: 0 1.5rem; margin: 0 0 1.25rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1rem; }
+    .line-list li { position: relative; padding-left: 1.15rem; font-size: 0.85rem; color: var(--text); line-height: 1.4; }
+    .line-list li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .line-cta { margin-top: auto; padding: 0.95rem 1.5rem; border-top: 1px solid var(--border-light); font-size: 0.85rem; font-weight: 700; color: var(--accent); letter-spacing: 0.03em; }
+    .line-card:hover .line-cta { background: var(--accent); color: #fff; }
+
+    /* mini FTTH topology inside service card */
+    .ftth-mini { display: flex; align-items: center; gap: 0; flex-wrap: nowrap; overflow: hidden; }
+    .ftth-mini .n { font-size: 0.6rem; font-weight: 700; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: 6px; padding: 0.35rem 0.5rem; color: var(--text); white-space: nowrap; }
+    .ftth-mini .n.core { border-color: var(--accent); color: var(--accent); }
+    .ftth-mini .l { flex: 1; min-width: 8px; height: 2px; background: var(--accent); position: relative; }
+    .ftth-mini .l::after { content: ''; position: absolute; right: -1px; top: -3px; border: 4px solid transparent; border-left-color: var(--accent); }
+    @media (max-width: 480px) {
+      .ftth-mini .n { font-size: 0.52rem; padding: 0.28rem 0.35rem; }
+      .ftth-mini .l { min-width: 4px; }
+    }
+
+    /* mini PM flow inside service card */
+    .pm-mini { display: flex; flex-direction: column; gap: 0.35rem; }
+    .pm-mini .row { display: flex; align-items: center; gap: 0.5rem; }
+    .pm-mini .n { flex: 1; font-size: 0.62rem; font-weight: 700; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: 6px; padding: 0.32rem 0.5rem; color: var(--text); text-align: center; white-space: nowrap; }
+    .pm-mini .arr { color: var(--text-light); font-size: 0.7rem; text-align: center; line-height: 1; }
+    .pm-mini .n.out { border-color: var(--accent); color: var(--accent); }
+
+    /* ---------- Proof ---------- */
+    .proof-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 992px) { .proof-grid { grid-template-columns: repeat(4, 1fr); } }
+    .proof-card { background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-left: 3px solid var(--accent); border-radius: var(--radius-sm); padding: 1.4rem 1.25rem; }
+    .proof-card .big { font-size: 2.4rem; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 0.4rem; }
+    .proof-card .lbl { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; }
+
+    /* ---------- Experience ---------- */
+    .exp-grid { display: grid; gap: 1.25rem; }
+    @media (min-width: 992px) { .exp-grid { grid-template-columns: repeat(3, 1fr); } }
+    .exp-card { display: flex; flex-direction: column; gap: 0.7rem; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; transition: var(--transition); }
+    .exp-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); }
+    .exp-card .meta { font-size: 0.72rem; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+    .exp-card h3 { font-size: 1.02rem; font-weight: 700; margin: 0; line-height: 1.35; }
+    .exp-card .qa { font-size: 0.84rem; color: var(--text-muted); line-height: 1.55; }
+    .exp-card .qa b { color: var(--text); font-weight: 600; }
+
+    /* ---------- Final CTA ---------- */
     .final-cta { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; text-align: center; }
-    .final-cta h2 { color: #fff; }
-    .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; }
+    .final-cta h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.75rem; }
+    .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; line-height: 1.65; }
+
+    @media (prefers-reduced-motion: reduce) { .prob-card, .line-card, .exp-card, .btn, .btn-ghost { transition: none !important; transform: none !important; } }
   </style>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Person", "name": "Ashraf Ibrahim El Desoky", "honorificSuffix": "PMP®", "jobTitle": "Telecom Infrastructure & Project Programme Management Specialist", "description": "Telecom & FTTH network engineering and Project & Programme Management for complex infrastructure programmes across Saudi Arabia, Egypt and Sudan.", "url": "https://www.ashraf-eldesoky.space/", "email": "ashrafede@gmail.com", "telephone": "+966532738987", "sameAs": ["https://www.linkedin.com/in/ashraf-eldesoky/"]}
@@ -67,49 +184,130 @@
     <!-- HERO -->
     <section class="home-hero">
       <div class="container">
-        <div class="badge-outline"><span>●</span> Available for executive roles · Riyadh · MENA · Remote</div>
-        <h1>Telecom Infrastructure &amp;<br><span style="color: var(--gold-light);">Project Programme Management</span></h1>
-        <p class="lead">I help organisations design and deliver telecom infrastructure and bring complex projects and programmes under control.</p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Project</a>
-          <a href="services.html" class="btn-outline">View Services</a>
-        </div>
-        <div style="display:flex;gap:2rem;flex-wrap:wrap;opacity:0.8;">
-          <div><strong>25+</strong> <span style="font-size:0.85rem;display:block;color:rgba(255,255,255,0.6);">Years Experience</span></div>
-          <div><strong>10</strong> <span style="font-size:0.85rem;display:block;color:rgba(255,255,255,0.6);">Years on STC Programme</span></div>
-          <div><strong>3</strong> <span style="font-size:0.85rem;display:block;color:rgba(255,255,255,0.6);">Countries</span></div>
+        <div class="hero-grid">
+          <div>
+            <div class="badge-outline"><span>●</span> Available for executive roles · Riyadh · MENA · Remote</div>
+            <h1>Telecom Infrastructure &amp; Project Programme Management</h1>
+            <p class="lead">I help organisations design and deliver telecom infrastructure and bring complex projects and programmes under control.</p>
+            <div class="hero-actions">
+              <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Project</a>
+              <a href="services.html" class="btn-ghost">Explore Services</a>
+            </div>
+            <div class="hero-stats">
+              <div><strong>25+</strong> <span>Years Experience</span></div>
+              <div><strong>10</strong> <span>Years on STC Programme</span></div>
+              <div><strong>3</strong> <span>Countries</span></div>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Service capability map">
+            <div class="hv-title">Delivery Ecosystem</div>
+            <div class="hv-stack">
+              <div class="hv-layer tech"><span class="dot"></span> Telecom Infrastructure</div>
+              <div class="hv-layer ctrl"><span class="dot"></span> Project Controls</div>
+              <div class="hv-layer gov"><span class="dot"></span> PMO Governance</div>
+              <div class="hv-layer rec"><span class="dot"></span> Programme Recovery</div>
+            </div>
+            <div class="hv-arrow">▼</div>
+            <div class="hv-out">Controlled Delivery</div>
+            <div class="hv-note">Conceptual — the four capabilities combined on a programme</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICE OVERVIEW -->
-    <section class="section" id="services">
+    <!-- CLIENT PROBLEMS -->
+    <section class="sec" id="problems">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">What I Can Deliver</span>
-          <h2 class="section-title">Two service lines for <span class="accent">infrastructure programmes</span></h2>
-          <p class="section-desc">Engage me for hands-on technical delivery, or for project and programme management, controls and governance.</p>
+        <div class="s-head center reveal">
+          <span class="s-eyebrow">The Problems</span>
+          <h2>Is your project facing <span class="accent">one of these?</span></h2>
         </div>
-        <div class="grid-2 reveal" style="align-items: stretch;">
-          <a href="telecommunications.html" class="service-line-card">
-            <div class="sl-num">01</div>
-            <h3>Telecom &amp; FTTH Network Engineering</h3>
-            <p>Design, planning and technical delivery for FTTH / FTTx and OSP / ISP networks.</p>
-            <ul>
-              <li>FTTH / FTTx Network Design</li>
+        <div class="prob-grid reveal">
+          <div class="prob-card">
+            <div class="prob-viz" aria-hidden="true">
+              <div class="mv-row"><span class="mv-label">Planned</span><div class="mv-track"><div class="mv-fill plan"></div></div></div>
+              <div class="mv-row"><span class="mv-label">Actual</span><div class="mv-track"><div class="mv-fill act"></div></div><span class="mv-chip bad">-42%</span></div>
+            </div>
+            <h3>Schedule keeps slipping</h3>
+            <p>Milestones move every reporting cycle and nobody trusts the completion date.</p>
+          </div>
+          <div class="prob-card">
+            <div class="prob-viz" aria-hidden="true">
+              <div class="mv-kpis">
+                <div class="mv-kpi bad"><div class="v">62%</div><div class="l">Team A</div></div>
+                <div class="mv-kpi"><div class="v">81%</div><div class="l">Team B</div></div>
+                <div class="mv-kpi ok"><div class="v">94%</div><div class="l">Team C</div></div>
+              </div>
+              <div class="mv-flow"><span class="mv-node warn">3 different answers</span></div>
+            </div>
+            <h3>Progress reports can't be trusted</h3>
+            <p>Every team reports a different progress number for the same scope.</p>
+          </div>
+          <div class="prob-card">
+            <div class="prob-viz" aria-hidden="true">
+              <div class="mv-flow"><span class="mv-node">Contr. A</span><span class="mv-node">Contr. B</span><span class="mv-node">Contr. C</span></div>
+              <div class="mv-arr">↓</div>
+              <div class="mv-flow"><span class="mv-node warn">Fragmented reports</span><span class="mv-arr">→</span><span class="mv-node hub">PMO</span></div>
+            </div>
+            <h3>Contractors report differently</h3>
+            <p>Multiple subcontractors, multiple formats — no single version of the truth.</p>
+          </div>
+          <div class="prob-card">
+            <div class="prob-viz" aria-hidden="true">
+              <div class="mv-dots"><span class="mv-dot bad"></span><span class="mv-label" style="width:auto;">Delayed</span></div>
+              <div class="mv-dots"><span class="mv-dash"></span><span class="mv-dot"></span><span class="mv-dash ok"></span><span class="mv-dot ok"></span></div>
+              <div class="mv-flow"><span class="mv-node">Recovery path unclear</span></div>
+            </div>
+            <h3>Behind, and recovery is unclear</h3>
+            <p>The programme is late but there is no credible plan to get back on track.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TWO SERVICE LINES -->
+    <section class="sec sec-alt" id="services">
+      <div class="container">
+        <div class="s-head center reveal">
+          <span class="s-eyebrow">What I Can Deliver</span>
+          <h2>Two service lines for <span class="accent">infrastructure programmes</span></h2>
+          <p>Engage me for hands-on technical network delivery — or for project and programme management, controls and governance.</p>
+        </div>
+        <div class="line-grid reveal">
+          <a href="telecommunications.html" class="line-card">
+            <div class="line-head"><span class="num">01</span><h3>Telecom &amp; FTTH<br>Network Engineering</h3></div>
+            <p class="line-sub">Design, planning and technical delivery for FTTH / FTTx and OSP / ISP networks.</p>
+            <div class="line-viz" aria-hidden="true">
+              <div class="ftth-mini">
+                <span class="n core">Core / POP</span><span class="l"></span>
+                <span class="n">FDH</span><span class="l"></span>
+                <span class="n">Splitter</span><span class="l"></span>
+                <span class="n">Drop</span><span class="l"></span>
+                <span class="n">Home</span>
+              </div>
+              <div style="font-size:0.62rem;color:var(--text-light);text-align:center;margin-top:0.55rem;">Conceptual FTTH access architecture</div>
+            </div>
+            <ul class="line-list">
+              <li>FTTH / FTTx Design</li>
               <li>OSP / ISP Planning</li>
               <li>Fiber Route Planning</li>
               <li>Technical Documentation</li>
               <li>Network Review</li>
               <li>Deployment Support</li>
             </ul>
-            <span class="sl-cta">Explore Network Engineering →</span>
+            <div class="line-cta">Explore Telecom Services →</div>
           </a>
-          <a href="services.html" class="service-line-card">
-            <div class="sl-num">02</div>
-            <h3>Project &amp; Programme Management</h3>
-            <p>Bring complex projects and programmes under control through Project Controls, PMO Governance and Programme Recovery.</p>
-            <ul>
+          <a href="services.html#line-02" class="line-card">
+            <div class="line-head"><span class="num">02</span><h3>Project &amp; Programme<br>Management</h3></div>
+            <p class="line-sub">Bring complex projects and programmes under control — controls, governance and recovery.</p>
+            <div class="line-viz" aria-hidden="true">
+              <div class="pm-mini">
+                <div class="row"><span class="n">Project Controls</span><span class="n">PMO Governance</span><span class="n">Recovery</span></div>
+                <div class="arr">▼</div>
+                <div class="row"><span class="n out">Visibility · Accountability · Decisions</span></div>
+              </div>
+            </div>
+            <ul class="line-list">
               <li>Project Controls</li>
               <li>Planning &amp; Scheduling</li>
               <li>PMO &amp; Governance</li>
@@ -117,78 +315,70 @@
               <li>Programme Recovery</li>
               <li>Executive Reporting</li>
             </ul>
-            <span class="sl-cta">Explore Project Management →</span>
+            <div class="line-cta">Explore Management Services →</div>
           </a>
         </div>
       </div>
     </section>
 
     <!-- PROOF -->
-    <section class="section section-alt" id="proof">
+    <section class="sec" id="proof">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">Professional Proof</span>
-          <h2 class="section-title">Experience across both <span class="accent">service lines</span></h2>
+        <div class="s-head reveal">
+          <span class="s-eyebrow">Professional Proof</span>
+          <h2>Experience across <span class="accent">both service lines</span></h2>
         </div>
-        <div class="stats-grid reveal">
-          <div class="stat-card">
-            <span class="stat-value">25+</span>
-            <span class="stat-label">Years Experience</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-value">10</span>
-            <span class="stat-label">Years on STC National Programme</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-value">3</span>
-            <span class="stat-label">Countries · Saudi Arabia, Egypt, Sudan</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-value">FTTH</span>
-            <span class="stat-label">OSP / ISP · Digital Infrastructure</span>
-          </div>
+        <div class="proof-grid reveal">
+          <div class="proof-card"><div class="big">25+</div><div class="lbl">Years in telecom, infrastructure &amp; programme delivery</div></div>
+          <div class="proof-card"><div class="big">10</div><div class="lbl">Years on the STC national FTTH programme</div></div>
+          <div class="proof-card"><div class="big">20+</div><div class="lbl">Concurrent projects coordinated at programme scale</div></div>
+          <div class="proof-card"><div class="big">3</div><div class="lbl">Countries — Saudi Arabia, Egypt, Sudan</div></div>
         </div>
       </div>
     </section>
 
     <!-- SELECTED EXPERIENCE -->
-    <section class="section" id="experience">
+    <section class="sec sec-alt" id="experience">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">Selected Experience</span>
-          <h2 class="section-title">Evidence across <span class="accent">technical delivery and controls</span></h2>
+        <div class="s-head reveal">
+          <span class="s-eyebrow">Selected Experience</span>
+          <h2>Programmes that demonstrate <span class="accent">delivery and control</span></h2>
         </div>
-        <div class="grid-3 reveal">
-          <div class="card project-card">
-            <div class="meta">Telecom Delivery · KSA · 10 Years</div>
-            <h3 class="card-title">STC National FTTH / FTTx Rollout</h3>
-            <p class="card-subtitle">Senior technical and controls lead on one of the region's largest fixed-network programmes, coordinating design, deployment, subcontractor reporting and KPI dashboards.</p>
-            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>Service line:</strong> Telecom &amp; FTTH Network Engineering + Project Controls.</p>
+        <div class="exp-grid reveal">
+          <div class="exp-card">
+            <div class="meta">STC National FTTH · KSA · 10 Years</div>
+            <h3>National FTTH / FTTx Rollout</h3>
+            <div class="qa"><b>Environment:</b> One of the region's largest fixed-network programmes, 20+ concurrent projects.</div>
+            <div class="qa"><b>Challenge:</b> Coordinating design, subcontractors and reporting across multiple regions.</div>
+            <div class="qa"><b>Role:</b> Senior technical &amp; controls lead — schedules, KPIs, dashboards, subcontractor reporting.</div>
           </div>
-          <div class="card project-card">
-            <div class="meta">Smart Infrastructure · Egypt</div>
-            <h3 class="card-title">Olympic Games City — ELV &amp; FTTH</h3>
-            <p class="card-subtitle">Lead Consultant Project Manager delivering ELV, BMS, CCTV, Fire Alarm and FTTH infrastructure for Egypt's International Olympic Games City.</p>
-            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>Service line:</strong> Telecom &amp; FTTH Network Engineering + Programme Management.</p>
+          <div class="exp-card">
+            <div class="meta">Olympic Games City · Egypt</div>
+            <h3>Smart Infrastructure &amp; ELV / FTTH</h3>
+            <div class="qa"><b>Environment:</b> National prestige smart-city project in the New Administrative Capital.</div>
+            <div class="qa"><b>Challenge:</b> Delivering ELV, BMS, CCTV, Fire Alarm and FTTH against a national deadline.</div>
+            <div class="qa"><b>Role:</b> Lead Consultant Project Manager — multi-system integration and handover.</div>
           </div>
-          <div class="card project-card">
-            <div class="meta">Railway Telecom · Egypt</div>
-            <h3 class="card-title">Railway Fibre &amp; Telecom Modernisation</h3>
-            <p class="card-subtitle">Senior Site Manager implementing and testing fibre-optic networks within a live railway operating environment, with strict safety and quality controls.</p>
-            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>Service line:</strong> Telecom Engineering + Field Control.</p>
+          <div class="exp-card">
+            <div class="meta">Egyptian National Railways · Egypt</div>
+            <h3>Railway Fibre &amp; Telecom Modernisation</h3>
+            <div class="qa"><b>Environment:</b> Live railway operating corridor with strict safety and access rules.</div>
+            <div class="qa"><b>Challenge:</b> Implementing and testing fibre-optic networks without disrupting operations.</div>
+            <div class="qa"><b>Role:</b> Senior Site Manager — execution discipline, testing and documentation.</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FINAL CTA -->
-    <section class="section final-cta">
+    <section class="sec final-cta">
       <div class="container reveal">
-        <h2 class="section-title" style="color:#fff;">Have a telecom or infrastructure project that needs technical expertise or stronger project control?</h2>
-        <p>Let's discuss how Telecom &amp; FTTH Network Engineering or Project &amp; Programme Management can support your programme.</p>
+        <h2>Have a telecom or infrastructure project that needs better control?</h2>
+        <p>Let's discuss whether you need hands-on network engineering, project and programme control — or both working together.</p>
         <a href="contact.html" class="btn btn-primary btn-lg">Discuss Your Project</a>
       </div>
     </section>
+
   </main>
 
   <div id="ecms-footer-inject"></div>

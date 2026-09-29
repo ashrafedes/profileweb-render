@@ -18,42 +18,154 @@
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:title" content="أشرف الدسوقي، PMP® | البنية التحتية للاتصالات وإدارة المشاريع والبرامج">
-  <meta property="og:description" content="هندسة شبكات الاتصالات وFTTH، وإدارة المشاريع والبرامج للبنية التحتية المعقدة.">
+  <meta property="og:description" content="هندسة شبكات الاتصالات وFTTH، وإدارة المشاريع والبرامج لبرامج البنية التحتية المعقدة.">
   <meta property="og:url" content="https://www.ashraf-eldesoky.space/ar/">
   <meta property="og:image" content="https://raw.githubusercontent.com/ashrafedes/profileweb-render/main/assets/images/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="أشرف الدسوقي، PMP® | البنية التحتية للاتصالات وإدارة المشاريع والبرامج">
-  <meta name="twitter:description" content="هندسة شبكات الاتصالات وFTTH، وإدارة المشاريع والبرامج للبنية التحتية المعقدة.">
+  <meta name="twitter:description" content="هندسة شبكات الاتصالات وFTTH، وإدارة المشاريع والبرامج لبرامج البنية التحتية المعقدة.">
   <meta name="twitter:image" content="https://raw.githubusercontent.com/ashrafedes/profileweb-render/main/assets/images/og-image.jpg">
   <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/">
   <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/">
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="../manifest.json">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css?v=4">
   <style>
-    .home-hero { background: linear-gradient(135deg, #0a1128 0%, #15234d 50%, #1e3a8a 100%); color: #fff; position: relative; overflow: hidden; padding: 6rem 0 4.5rem; }
+    /* ---------- Hero ---------- */
+    .home-hero { background: linear-gradient(135deg, #0a1128 0%, #15234d 55%, #1e3a8a 100%); color: #fff; position: relative; overflow: hidden; padding: 5rem 0 4rem; }
     .home-hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
     .home-hero .container { position: relative; z-index: 1; }
-    .home-hero h1 { color: #fff; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.2; margin-bottom: 1rem; }
-    .home-hero .lead { color: rgba(255,255,255,0.75); font-size: 1.1rem; max-width: 680px; margin-bottom: 2rem; line-height: 1.8; }
-    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2.5rem; }
-    .btn-outline { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; border: 1px solid rgba(255,255,255,0.3); color: #fff; background: transparent; }
-    .btn-outline:hover { background: rgba(255,255,255,0.1); color: #fff; }
-    .service-line-card { display: flex; flex-direction: column; height: 100%; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.75rem; transition: var(--transition); text-decoration: none; color: inherit; }
-    .service-line-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-    .service-line-card .sl-num { font-size: 2.4rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 0.75rem; }
-    .service-line-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .service-line-card p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem; }
-    .service-line-card ul { list-style: none; padding: 0; margin: 0 0 1.25rem; display: grid; gap: 0.45rem; }
-    .service-line-card li { position: relative; padding-right: 1.2rem; color: var(--text); font-size: 0.9rem; }
-    .service-line-card li::before { content: ''; position: absolute; right: 0; top: 0.5em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-    .service-line-card .sl-cta { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin-top: auto; }
+    .hero-grid { display: grid; gap: 2.5rem; align-items: center; }
+    @media (min-width: 992px) { .hero-grid { grid-template-columns: 1.05fr 1fr; } }
+    .home-hero h1 { color: #fff; font-size: clamp(1.9rem, 4.4vw, 3.2rem); line-height: 1.25; margin-bottom: 1rem; }
+    .home-hero .lead { color: rgba(255,255,255,0.78); font-size: 1.08rem; max-width: 560px; margin-bottom: 1.75rem; line-height: 1.8; }
+    .badge-outline { display: inline-flex; align-items: center; gap: 0.5rem; border: 1px solid rgba(255,255,255,0.2); border-radius: 999px; padding: 0.35rem 0.9rem; font-size: 0.78rem; color: rgba(255,255,255,0.85); margin-bottom: 1.25rem; }
+    .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; align-items: center; margin-bottom: 2rem; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.9rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; border: 1px solid rgba(255,255,255,0.35); color: #fff; }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); color: #fff; }
+    .hero-stats { display: flex; gap: 2rem; flex-wrap: wrap; opacity: 0.85; }
+    .hero-stats strong { font-size: 1.35rem; }
+    .hero-stats span { font-size: 0.78rem; display: block; color: rgba(255,255,255,0.6); }
+
+    /* Hero visual */
+    .hero-visual { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.13); border-radius: var(--radius-md); padding: 1.5rem; backdrop-filter: blur(4px); }
+    .hv-title { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; color: rgba(255,255,255,0.65); text-align: center; margin-bottom: 1.1rem; }
+    .hv-stack { display: flex; flex-direction: column; gap: 0.45rem; margin-bottom: 1rem; }
+    .hv-layer { display: flex; align-items: center; gap: 0.7rem; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius-sm); padding: 0.6rem 0.85rem; font-size: 0.83rem; font-weight: 600; color: #fff; }
+    .hv-layer .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+    .hv-layer.tech .dot { background: #38bdf8; }
+    .hv-layer.ctrl .dot { background: #f59e0b; }
+    .hv-layer.gov  .dot { background: #34d399; }
+    .hv-layer.rec  .dot { background: #f87171; }
+    .hv-arrow { text-align: center; color: rgba(255,255,255,0.55); font-size: 0.9rem; line-height: 1; margin-bottom: 1rem; }
+    .hv-out { background: var(--accent); color: #fff; text-align: center; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.03em; padding: 0.85rem; border-radius: var(--radius-sm); }
+    .hv-note { font-size: 0.68rem; color: rgba(255,255,255,0.5); text-align: center; margin-top: 0.7rem; }
+
+    /* ---------- Section base ---------- */
+    .sec { padding: 3.75rem 0; }
+    .sec-alt { background: var(--bg-alt, #f6f8fb); }
+    @media (max-width: 767px) { .sec { padding: 2.5rem 0; } }
+    .s-head { margin-bottom: 2.25rem; max-width: 720px; }
+    .s-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .s-eyebrow { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--accent); margin-bottom: 0.6rem; }
+    .s-head h2 { font-size: clamp(1.55rem, 3vw, 2.1rem); font-weight: 700; line-height: 1.3; margin-bottom: 0.6rem; }
+    .s-head h2 .accent { color: var(--accent); }
+    .s-head p { color: var(--text-muted); font-size: 1.02rem; line-height: 1.75; margin: 0; }
+
+    /* ---------- Problem cards ---------- */
+    .prob-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+    @media (min-width: 768px) { .prob-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1200px) { .prob-grid { grid-template-columns: repeat(4, 1fr); } }
+    .prob-card { background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.4rem; display: flex; flex-direction: column; gap: 0.9rem; transition: var(--transition); }
+    .prob-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .prob-viz { background: var(--bg-alt, #f6f8fb); border-radius: var(--radius-sm); padding: 0.9rem; min-height: 88px; display: flex; flex-direction: column; justify-content: center; gap: 0.45rem; }
+    .prob-card h3 { font-size: 1rem; font-weight: 700; margin: 0; }
+    .prob-card p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.65; margin: 0; }
+
+    .mv-row { display: flex; align-items: center; gap: 0.45rem; }
+    .mv-label { font-size: 0.62rem; font-weight: 700; color: var(--text-light); width: 52px; flex-shrink: 0; }
+    .mv-track { flex: 1; height: 7px; background: var(--border-light); border-radius: 999px; position: relative; overflow: hidden; }
+    .mv-fill { position: absolute; inset: 0 0 0 auto; border-radius: 999px; }
+    .mv-fill.plan { background: var(--accent); width: 100%; }
+    .mv-fill.act { background: #e05a3a; width: 58%; }
+    .mv-chip { font-size: 0.62rem; font-weight: 700; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.18rem 0.5rem; color: var(--text); white-space: nowrap; }
+    .mv-chip.bad { border-color: #e05a3a; color: #c24228; }
+    .mv-kpis { display: flex; gap: 0.4rem; }
+    .mv-kpi { flex: 1; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: 6px; padding: 0.4rem 0.2rem; text-align: center; }
+    .mv-kpi .v { font-size: 0.85rem; font-weight: 800; }
+    .mv-kpi .l { font-size: 0.55rem; color: var(--text-light); }
+    .mv-kpi.bad .v { color: #c24228; }
+    .mv-kpi.ok .v { color: #237a4d; }
+    .mv-flow { display: flex; align-items: center; gap: 0.4rem; justify-content: center; flex-wrap: wrap; }
+    .mv-node { font-size: 0.62rem; font-weight: 700; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: 6px; padding: 0.3rem 0.55rem; color: var(--text); white-space: nowrap; }
+    .mv-node.warn { border-color: #e05a3a; color: #c24228; }
+    .mv-node.hub { border-color: var(--accent); color: var(--accent); }
+    .mv-arr { color: var(--text-light); font-size: 0.8rem; }
+    .mv-dots { display: flex; align-items: center; gap: 0.35rem; justify-content: center; }
+    .mv-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--border-light); }
+    .mv-dot.bad { background: #e05a3a; }
+    .mv-dot.ok { background: #2e9e66; }
+    .mv-dash { flex: 1; border-top: 2px dashed var(--border-light); }
+    .mv-dash.ok { border-color: #2e9e66; }
+
+    /* ---------- Service line cards ---------- */
+    .line-grid { display: grid; gap: 1.75rem; }
+    @media (min-width: 992px) { .line-grid { grid-template-columns: 1fr 1fr; } }
+    .line-card { display: flex; flex-direction: column; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; transition: var(--transition); text-decoration: none; color: inherit; }
+    .line-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .line-head { padding: 1.5rem 1.5rem 0; display: flex; align-items: baseline; gap: 0.9rem; }
+    .line-head .num { font-size: 2.2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .line-head h3 { font-size: 1.3rem; font-weight: 700; margin: 0; line-height: 1.35; }
+    .line-sub { padding: 0.5rem 1.5rem 0; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; }
+    .line-viz { margin: 1.25rem 1.5rem; background: var(--bg-alt, #f6f8fb); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.1rem; }
+    .line-list { list-style: none; padding: 0 1.5rem; margin: 0 0 1.25rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem 1rem; }
+    .line-list li { position: relative; padding-right: 1.15rem; font-size: 0.85rem; color: var(--text); line-height: 1.45; }
+    .line-list li::before { content: ''; position: absolute; right: 0; top: 0.5em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .line-cta { margin-top: auto; padding: 0.95rem 1.5rem; border-top: 1px solid var(--border-light); font-size: 0.85rem; font-weight: 700; color: var(--accent); }
+    .line-card:hover .line-cta { background: var(--accent); color: #fff; }
+
+    .ftth-mini { display: flex; align-items: center; gap: 0; flex-wrap: nowrap; overflow: hidden; }
+    .ftth-mini .n { font-size: 0.6rem; font-weight: 700; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: 6px; padding: 0.35rem 0.5rem; color: var(--text); white-space: nowrap; }
+    .ftth-mini .n.core { border-color: var(--accent); color: var(--accent); }
+    .ftth-mini .l { flex: 1; min-width: 8px; height: 2px; background: var(--accent); position: relative; }
+    .ftth-mini .l::after { content: ''; position: absolute; left: -1px; top: -3px; border: 4px solid transparent; border-right-color: var(--accent); }
+    @media (max-width: 480px) {
+      .ftth-mini .n { font-size: 0.52rem; padding: 0.28rem 0.35rem; }
+      .ftth-mini .l { min-width: 4px; }
+    }
+
+    .pm-mini { display: flex; flex-direction: column; gap: 0.35rem; }
+    .pm-mini .row { display: flex; align-items: center; gap: 0.5rem; }
+    .pm-mini .n { flex: 1; font-size: 0.62rem; font-weight: 700; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: 6px; padding: 0.32rem 0.5rem; color: var(--text); text-align: center; white-space: nowrap; }
+    .pm-mini .arr { color: var(--text-light); font-size: 0.7rem; text-align: center; line-height: 1; }
+    .pm-mini .n.out { border-color: var(--accent); color: var(--accent); }
+
+    /* ---------- Proof ---------- */
+    .proof-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 992px) { .proof-grid { grid-template-columns: repeat(4, 1fr); } }
+    .proof-card { background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-right: 3px solid var(--accent); border-radius: var(--radius-sm); padding: 1.4rem 1.25rem; }
+    .proof-card .big { font-size: 2.4rem; font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 0.4rem; }
+    .proof-card .lbl { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* ---------- Experience ---------- */
+    .exp-grid { display: grid; gap: 1.25rem; }
+    @media (min-width: 992px) { .exp-grid { grid-template-columns: repeat(3, 1fr); } }
+    .exp-card { display: flex; flex-direction: column; gap: 0.7rem; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; transition: var(--transition); }
+    .exp-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); }
+    .exp-card .meta { font-size: 0.72rem; color: var(--accent); font-weight: 700; letter-spacing: 0.02em; }
+    .exp-card h3 { font-size: 1.02rem; font-weight: 700; margin: 0; line-height: 1.4; }
+    .exp-card .qa { font-size: 0.84rem; color: var(--text-muted); line-height: 1.65; }
+    .exp-card .qa b { color: var(--text); font-weight: 600; }
+
+    /* ---------- Final CTA ---------- */
     .final-cta { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; text-align: center; }
-    .final-cta h2 { color: #fff; }
-    .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; }
+    .final-cta h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.75rem; }
+    .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; line-height: 1.75; }
+
+    @media (prefers-reduced-motion: reduce) { .prob-card, .line-card, .exp-card, .btn, .btn-ghost { transition: none !important; transform: none !important; } }
   </style>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Person", "name": "أشرف إبراهيم الدسوقي", "honorificSuffix": "PMP®", "jobTitle": "متخصص في البنية التحتية للاتصالات وإدارة المشاريع والبرامج", "description": "هندسة شبكات الاتصالات وFTTH، وإدارة المشاريع والبرامج للبنية التحتية المعقدة في السعودية ومصر والسودان.", "url": "https://www.ashraf-eldesoky.space/ar/", "email": "ashrafede@gmail.com", "telephone": "+966532738987", "sameAs": ["https://www.linkedin.com/in/ashraf-eldesoky/"]}
@@ -67,49 +179,130 @@
     <!-- HERO -->
     <section class="home-hero">
       <div class="container">
-        <div class="badge-outline"><span>●</span> متاح للفرص التنفيذية · الرياض · منطقة الشرق الأوسط · عن بُعد</div>
-        <h1>البنية التحتية للاتصالات<br><span style="color: var(--gold-light);">وإدارة المشاريع والبرامج</span></h1>
-        <p class="lead">أساعد المؤسسات على تصميم وتنفيذ البنية التحتية للاتصالات، وإحكام السيطرة على المشاريع والبرامج المعقدة.</p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary btn-lg">ناقش مشروعك</a>
-          <a href="services.html" class="btn-outline">استكشف الخدمات</a>
-        </div>
-        <div style="display:flex;gap:2rem;flex-wrap:wrap;opacity:0.8;">
-          <div><strong>25+</strong> <span style="font-size:0.85rem;display:block;color:rgba(255,255,255,0.6);">عاماً من الخبرة</span></div>
-          <div><strong>10</strong> <span style="font-size:0.85rem;display:block;color:rgba(255,255,255,0.6);">سنوات في برنامج STC</span></div>
-          <div><strong>3</strong> <span style="font-size:0.85rem;display:block;color:rgba(255,255,255,0.6);">دول</span></div>
+        <div class="hero-grid">
+          <div>
+            <div class="badge-outline"><span>●</span> متاح للفرص التنفيذية · الرياض · منطقة الشرق الأوسط · عن بُعد</div>
+            <h1>البنية التحتية للاتصالات وإدارة المشاريع والبرامج</h1>
+            <p class="lead">أساعد المؤسسات على تصميم وتنفيذ البنية التحتية للاتصالات، وإحكام السيطرة على المشاريع والبرامج المعقدة.</p>
+            <div class="hero-actions">
+              <a href="contact.html" class="btn btn-primary btn-lg">ناقش مشروعك</a>
+              <a href="services.html" class="btn-ghost">استكشف الخدمات</a>
+            </div>
+            <div class="hero-stats">
+              <div><strong>25+</strong> <span>عاماً من الخبرة</span></div>
+              <div><strong>10</strong> <span>سنوات في برنامج STC</span></div>
+              <div><strong>3</strong> <span>دول</span></div>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="خريطة القدرات">
+            <div class="hv-title">منظومة التسليم</div>
+            <div class="hv-stack">
+              <div class="hv-layer tech"><span class="dot"></span> البنية التحتية للاتصالات</div>
+              <div class="hv-layer ctrl"><span class="dot"></span> التحكم بالمشاريع</div>
+              <div class="hv-layer gov"><span class="dot"></span> حوكمة مكتب إدارة المشاريع</div>
+              <div class="hv-layer rec"><span class="dot"></span> استرداد البرامج</div>
+            </div>
+            <div class="hv-arrow">▼</div>
+            <div class="hv-out">تسليم محكوم</div>
+            <div class="hv-note">مفاهيمي — القدرات الأربع مجتمعة في برنامج واحد</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICE OVERVIEW -->
-    <section class="section" id="services">
+    <!-- CLIENT PROBLEMS -->
+    <section class="sec" id="problems">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">ما الذي يمكنني تقديمه</span>
-          <h2 class="section-title">خطا خدمة لبرامج <span class="accent">البنية التحتية</span></h2>
-          <p class="section-desc">يمكنك الاستعانة بي للتسليم التقني العملي، أو لإدارة المشاريع والبرامج والضوابط والحوكمة.</p>
+        <div class="s-head center reveal">
+          <span class="s-eyebrow">المشكلات</span>
+          <h2>هل يواجه مشروعك <span class="accent">إحدى هذه المشكلات؟</span></h2>
         </div>
-        <div class="grid-2 reveal" style="align-items: stretch;">
-          <a href="telecommunications.html" class="service-line-card">
-            <div class="sl-num">01</div>
-            <h3>هندسة شبكات الاتصالات وFTTH</h3>
-            <p>التصميم والتخطيط والتسليم التقني لشبكات FTTH / FTTx وOSP / ISP.</p>
-            <ul>
-              <li>تصميم شبكات FTTH / FTTx</li>
+        <div class="prob-grid reveal">
+          <div class="prob-card">
+            <div class="prob-viz" aria-hidden="true">
+              <div class="mv-row"><span class="mv-label">المخطّط</span><div class="mv-track"><div class="mv-fill plan"></div></div></div>
+              <div class="mv-row"><span class="mv-label">الفعلي</span><div class="mv-track"><div class="mv-fill act"></div></div><span class="mv-chip bad">-42%</span></div>
+            </div>
+            <h3>الجدول يستمر في التأخر</h3>
+            <p>تتحرك المعالم في كل دورة تقارير ولا أحد يثق بتاريخ الإنجاز.</p>
+          </div>
+          <div class="prob-card">
+            <div class="prob-viz" aria-hidden="true">
+              <div class="mv-kpis">
+                <div class="mv-kpi bad"><div class="v">62%</div><div class="l">فريق أ</div></div>
+                <div class="mv-kpi"><div class="v">81%</div><div class="l">فريق ب</div></div>
+                <div class="mv-kpi ok"><div class="v">94%</div><div class="l">فريق ج</div></div>
+              </div>
+              <div class="mv-flow"><span class="mv-node warn">ثلاث إجابات مختلفة</span></div>
+            </div>
+            <h3>تقارير التقدم غير موثوقة</h3>
+            <p>كل فريق يُبلّغ عن رقم تقدم مختلف لنفس نطاق العمل.</p>
+          </div>
+          <div class="prob-card">
+            <div class="prob-viz" aria-hidden="true">
+              <div class="mv-flow"><span class="mv-node">مقاول أ</span><span class="mv-node">مقاول ب</span><span class="mv-node">مقاول ج</span></div>
+              <div class="mv-arr">↓</div>
+              <div class="mv-flow"><span class="mv-node warn">تقارير مجزأة</span><span class="mv-arr">←</span><span class="mv-node hub">PMO</span></div>
+            </div>
+            <h3>المقاولون يُبلّغون بطرق مختلفة</h3>
+            <p>مقاولون متعددون وصيغ متعددة — لا نسخة واحدة للحقيقة.</p>
+          </div>
+          <div class="prob-card">
+            <div class="prob-viz" aria-hidden="true">
+              <div class="mv-dots"><span class="mv-dot bad"></span><span class="mv-label" style="width:auto;">متأخر</span></div>
+              <div class="mv-dots"><span class="mv-dash"></span><span class="mv-dot"></span><span class="mv-dash ok"></span><span class="mv-dot ok"></span></div>
+              <div class="mv-flow"><span class="mv-node">مسار الاسترداد غير واضح</span></div>
+            </div>
+            <h3>متأخر، والاسترداد غير واضح</h3>
+            <p>البرنامج متأخر لكن لا توجد خطة موثوقة للعودة إلى المسار.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TWO SERVICE LINES -->
+    <section class="sec sec-alt" id="services">
+      <div class="container">
+        <div class="s-head center reveal">
+          <span class="s-eyebrow">ما الذي يمكنني تقديمه</span>
+          <h2>خطا خدمة لبرامج <span class="accent">البنية التحتية</span></h2>
+          <p>يمكنك الاستعانة بي للتسليم التقني للشبكات — أو لإدارة المشاريع والبرامج والضوابط والحوكمة.</p>
+        </div>
+        <div class="line-grid reveal">
+          <a href="telecommunications.html" class="line-card">
+            <div class="line-head"><span class="num">01</span><h3>هندسة شبكات الاتصالات<br>وFTTH</h3></div>
+            <p class="line-sub">التصميم والتخطيط والتسليم التقني لشبكات FTTH / FTTx وOSP / ISP.</p>
+            <div class="line-viz" aria-hidden="true">
+              <div class="ftth-mini">
+                <span class="n core">Core / POP</span><span class="l"></span>
+                <span class="n">FDH</span><span class="l"></span>
+                <span class="n">Splitter</span><span class="l"></span>
+                <span class="n">Drop</span><span class="l"></span>
+                <span class="n">Home</span>
+              </div>
+              <div style="font-size:0.62rem;color:var(--text-light);text-align:center;margin-top:0.55rem;">مفهوم معماري لشبكة وصول FTTH</div>
+            </div>
+            <ul class="line-list">
+              <li>تصميم FTTH / FTTx</li>
               <li>تخطيط OSP / ISP</li>
               <li>تخطيط مسارات الألياف</li>
               <li>التوثيق التقني</li>
               <li>مراجعة الشبكات</li>
               <li>دعم النشر</li>
             </ul>
-            <span class="sl-cta">استكشف هندسة الشبكات ←</span>
+            <div class="line-cta">استكشف خدمات الاتصالات ←</div>
           </a>
-          <a href="services.html" class="service-line-card">
-            <div class="sl-num">02</div>
-            <h3>إدارة المشاريع والبرامج</h3>
-            <p>إحكام السيطرة على المشاريع والبرامج المعقدة من خلال التحكم بالمشاريع، وحوكمة مكتب إدارة المشاريع، واسترداد البرامج المتعثرة.</p>
-            <ul>
+          <a href="services.html#line-02" class="line-card">
+            <div class="line-head"><span class="num">02</span><h3>إدارة المشاريع<br>والبرامج</h3></div>
+            <p class="line-sub">إحكام السيطرة على المشاريع والبرامج المعقدة — ضوابط وحوكمة واسترداد.</p>
+            <div class="line-viz" aria-hidden="true">
+              <div class="pm-mini">
+                <div class="row"><span class="n">التحكم بالمشاريع</span><span class="n">حوكمة PMO</span><span class="n">الاسترداد</span></div>
+                <div class="arr">▼</div>
+                <div class="row"><span class="n out">رؤية · مساءلة · قرارات</span></div>
+              </div>
+            </div>
+            <ul class="line-list">
               <li>التحكم بالمشاريع</li>
               <li>التخطيط والجدولة</li>
               <li>PMO والحوكمة</li>
@@ -117,78 +310,70 @@
               <li>استرداد البرامج</li>
               <li>التقارير التنفيذية</li>
             </ul>
-            <span class="sl-cta">استكشف إدارة المشاريع ←</span>
+            <div class="line-cta">استكشف خدمات الإدارة ←</div>
           </a>
         </div>
       </div>
     </section>
 
     <!-- PROOF -->
-    <section class="section section-alt" id="proof">
+    <section class="sec" id="proof">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">دليل مهني</span>
-          <h2 class="section-title">خبرة عبر <span class="accent">خطي الخدمة</span></h2>
+        <div class="s-head reveal">
+          <span class="s-eyebrow">دليل مهني</span>
+          <h2>خبرة عبر <span class="accent">خطي الخدمة</span></h2>
         </div>
-        <div class="stats-grid reveal">
-          <div class="stat-card">
-            <span class="stat-value">25+</span>
-            <span class="stat-label">عاماً من الخبرة</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-value">10</span>
-            <span class="stat-label">سنوات في برنامج STC الوطني</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-value">3</span>
-            <span class="stat-label">دول · السعودية، مصر، السودان</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-value">FTTH</span>
-            <span class="stat-label">OSP / ISP · البنية التحتية الرقمية</span>
-          </div>
+        <div class="proof-grid reveal">
+          <div class="proof-card"><div class="big">25+</div><div class="lbl">عاماً في الاتصالات والبنية التحتية وتسليم البرامج</div></div>
+          <div class="proof-card"><div class="big">10</div><div class="lbl">سنوات في برنامج FTTH الوطني لـ STC</div></div>
+          <div class="proof-card"><div class="big">20+</div><div class="lbl">مشروعاً متزامناً منسقاً على نطاق البرنامج</div></div>
+          <div class="proof-card"><div class="big">3</div><div class="lbl">دول — السعودية، مصر، السودان</div></div>
         </div>
       </div>
     </section>
 
     <!-- SELECTED EXPERIENCE -->
-    <section class="section" id="experience">
+    <section class="sec sec-alt" id="experience">
       <div class="container">
-        <div class="section-header reveal">
-          <span class="section-eyebrow">خبرات مختارة</span>
-          <h2 class="section-title">أدلة على <span class="accent">التسليم التقني والتحكم</span></h2>
+        <div class="s-head reveal">
+          <span class="s-eyebrow">خبرات مختارة</span>
+          <h2>برامج تُظهر <span class="accent">التسليم والتحكم</span></h2>
         </div>
-        <div class="grid-3 reveal">
-          <div class="card project-card">
-            <div class="meta">التسليم التقني · المملكة · 10 سنوات</div>
-            <h3 class="card-title">الطرح الوطني لـ FTTH / FTTx لـ STC</h3>
-            <p class="card-subtitle">قيادة تقنية وتحكم رئيسية في أحد أكبر برامج الشبكات الثابتة في المنطقة، بتنسيق التصميم والنشر وتقارير المقاولين ولوحات المؤشرات.</p>
-            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>خط الخدمة:</strong> هندسة شبكات الاتصالات وFTTH + التحكم بالمشاريع.</p>
+        <div class="exp-grid reveal">
+          <div class="exp-card">
+            <div class="meta">برنامج FTTH الوطني لـ STC · المملكة · 10 سنوات</div>
+            <h3>الطرح الوطني لـ FTTH / FTTx</h3>
+            <div class="qa"><b>البيئة:</b> أحد أكبر برامج الشبكات الثابتة في المنطقة، أكثر من 20 مشروعاً متزامناً.</div>
+            <div class="qa"><b>التحدي:</b> تنسيق التصميم والمقاولين والتقارير عبر مناطق متعددة.</div>
+            <div class="qa"><b>الدور:</b> قيادة تقنية وضوابط رئيسية — الجداول وKPIs واللوحات وتقارير المقاولين.</div>
           </div>
-          <div class="card project-card">
-            <div class="meta">البنية التحتية الذكية · مصر</div>
-            <h3 class="card-title">مدينة الألعاب الأولمبية — ELV وFTTH</h3>
-            <p class="card-subtitle">مدير مشروع استشاري يقود تسليم أنظمة ELV وBMS وCCTV وإنذار الحريق وFTTH لمدينة الألعاب الأولمبية الدولية.</p>
-            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>خط الخدمة:</strong> هندسة شبكات الاتصالات وFTTH + إدارة البرامج.</p>
+          <div class="exp-card">
+            <div class="meta">مدينة الألعاب الأولمبية · مصر</div>
+            <h3>البنية التحتية الذكية وELV / FTTH</h3>
+            <div class="qa"><b>البيئة:</b> مشروع مدينة ذكية وطني في العاصمة الإدارية الجديدة.</div>
+            <div class="qa"><b>التحدي:</b> تسليم ELV وBMS وCCTV وإنذار الحريق وFTTH أمام موعد وطني.</div>
+            <div class="qa"><b>الدور:</b> مدير مشروع استشاري رئيسي — التكامل بين الأنظمة والتسليم.</div>
           </div>
-          <div class="card project-card">
-            <div class="meta">اتصالات السكك الحديدية · مصر</div>
-            <h3 class="card-title">تحديث الألياف والاتصالات على خطوط السكك الحديدية</h3>
-            <p class="card-subtitle">مدير موقع أول يُشرف على تنفيذ واختبار شبكات الألياف ضمن بيئة سكك حديد حية، مع ضوابط صارمة للسلامة والجودة.</p>
-            <p style="font-size:0.85rem;color:var(--text);margin-top:auto;"><strong>خط الخدمة:</strong> الهندسة الاتصالات + التحكم الميداني.</p>
+          <div class="exp-card">
+            <div class="meta">السكك الحديدية المصرية · مصر</div>
+            <h3>تحديث الألياف والاتصالات على السكك الحديدية</h3>
+            <div class="qa"><b>البيئة:</b> ممر تشغيل سكك حديد حي بقواعد سلامة ودخول صارمة.</div>
+            <div class="qa"><b>التحدي:</b> تنفيذ واختبار شبكات الألياف دون تعطيل التشغيل.</div>
+            <div class="qa"><b>الدور:</b> مدير موقع أول — انضباط التنفيذ والاختبار والتوثيق.</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FINAL CTA -->
-    <section class="section final-cta">
+    <section class="sec final-cta">
       <div class="container reveal">
-        <h2 class="section-title" style="color:#fff;">هل لديك مشروع اتصالات أو بنية تحتية يحتاج إلى خبرة فنية أو تحكم أقوى في التنفيذ؟</h2>
-        <p>لنناقش كيف يمكن لهندسة شبكات الاتصالات وFTTH أو إدارة المشاريع والبرامج دعم برنامجك.</p>
+        <h2>هل لديك مشروع اتصالات أو بنية تحتية يحتاج إلى خبرة فنية أو تحكم أقوى؟</h2>
+        <p>لنناقش ما إذا كنت تحتاج إلى هندسة شبكات ميدانية، أو ضبط مشاريع وبرامج — أو كليهما معاً.</p>
         <a href="contact.html" class="btn btn-primary btn-lg">ناقش مشروعك</a>
       </div>
     </section>
+
   </main>
 
   <div id="ecms-footer-inject"></div>

@@ -12,8 +12,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>هندسة شبكات الاتصالات وFTTH – أشرف الدسوقي | التسليم التقني</title>
-  <meta name="description" content="خدمات هندسة شبكات الاتصالات وFTTH: تصميم FTTH/FTTx، تخطيط OSP/ISP، تخطيط مسارات الألياف، التوثيق التقني، مراجعة الشبكات ودعم النشر.">
+  <title>هندسة شبكات FTTH والاتصالات – أشرف الدسوقي | التصميم ودعم النشر</title>
+  <meta name="description" content="خدمات هندسة شبكات FTTH والاتصالات: تصميم FTTH/FTTx، تخطيط OSP/ISP، تخطيط مسارات الألياف، التوثيق التقني، مراجعة الشبكات ودعم النشر.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.ashraf-eldesoky.space/ar/telecommunications.html">
   <link rel="alternate" hreflang="en" href="https://www.ashraf-eldesoky.space/en/telecommunications.html">
@@ -24,178 +24,202 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/main.css?v=4">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space/ar/"}, {"@type": "ListItem", "position": 2, "name": "هندسة شبكات الاتصالات وFTTH", "item": "https://www.ashraf-eldesoky.space/ar/telecommunications.html"}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://www.ashraf-eldesoky.space/ar/"}, {"@type": "ListItem", "position": 2, "name": "هندسة شبكات FTTH والاتصالات", "item": "https://www.ashraf-eldesoky.space/ar/telecommunications.html"}]}</script>
   <style>
-    .page-header { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; padding: 4.5rem 0 2.5rem; }
-    .page-header .breadcrumb { margin-bottom: 1rem; }
-    .page-header h1 { color: #fff; font-size: clamp(1.9rem, 4.3vw, 3rem); font-weight: 700; line-height: 1.25; margin-bottom: 0.75rem; }
-    .page-header .lead { color: rgba(255,255,255,0.8); font-size: 1.05rem; max-width: 650px; line-height: 1.75; margin-bottom: 1.5rem; }
-    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 2rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.95rem; transition: var(--transition); text-decoration: none; }
-    .btn-primary { background: var(--accent); color: #fff; border: none; }
-    .btn-primary:hover { background: var(--accent-hover); color: #fff; transform: translateY(-2px); }
-    .btn-lg { padding: 0.95rem 2.4rem; font-size: 1rem; }
-    .page-pad { padding: 3.5rem 0; }
-    @media (max-width: 767px) { .page-pad { padding: 2rem 0; } }
-    .section-head { margin-bottom: 1.75rem; }
-    .section-head .eyebrow { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--accent); margin-bottom: 0.6rem; }
-    .section-head h2 { font-size: clamp(1.45rem, 2.8vw, 1.9rem); font-weight: 700; margin-bottom: 0.5rem; }
-    .section-head p { color: var(--text-muted); font-size: 1.02rem; max-width: 660px; line-height: 1.75; }
-    .svc-grid-2 { display: grid; gap: 2.5rem; } @media (min-width: 992px) { .svc-grid-2 { grid-template-columns: 1fr 1fr; } }
-    .svc-grid-3 { display: grid; gap: 1.25rem; } @media (min-width: 768px) { .svc-grid-3 { grid-template-columns: repeat(3, 1fr); } }
-    .capability-card { background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; transition: var(--transition); }
-    .capability-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-    .capability-card .cap-num { font-size: 1.35rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 0.65rem; }
-    .capability-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .capability-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.65; margin: 0; }
-    .visual-box { background: var(--bg-alt, #f6f8fb); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.5rem; min-height: 240px; display: flex; flex-direction: column; justify-content: center; }
-    .visual-title { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; color: var(--text-light); margin-bottom: 1rem; }
-    .net-stack { display: flex; flex-direction: column; gap: 0.55rem; }
-    .net-layer { display: flex; align-items: center; gap: 0.75rem; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.65rem 0.85rem; font-size: 0.85rem; font-weight: 600; color: var(--text); }
-    .net-layer::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-    .net-arrow { text-align: center; color: var(--text-light); font-size: 0.8rem; }
-    .net-output { margin-top: 0.75rem; padding: 0.75rem; background: rgba(30,144,255,0.06); border: 1px solid rgba(30,144,255,0.2); border-radius: var(--radius-sm); font-size: 0.8rem; font-weight: 600; color: var(--accent); text-align: center; }
-    .value-box { background: var(--bg-alt, #f6f8fb); border-right: 3px solid var(--accent); padding: 1rem 1.25rem; border-radius: var(--radius-sm) 0 0 var(--radius-sm); margin: 1rem 0; }
-    .value-box h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-light); margin-bottom: 0.35rem; }
-    .value-box p { font-weight: 500; color: var(--text); margin: 0; }
-    .exp-card { display: flex; flex-direction: column; gap: 0.75rem; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.25rem; height: 100%; }
-    .exp-card .meta { font-size: 0.75rem; color: var(--accent); font-weight: 700; letter-spacing: 0.02em; }
-    .exp-card h4 { font-size: 1rem; font-weight: 700; margin: 0; }
-    .exp-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.65; margin: 0; }
+    .page-hero { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; padding: 4.5rem 0 3rem; }
+    .hero-grid { display: grid; gap: 2.5rem; align-items: center; }
+    @media (min-width: 992px) { .hero-grid { grid-template-columns: 1.05fr 1fr; } }
+    .page-hero h1 { color: #fff; font-size: clamp(1.9rem, 4.2vw, 2.9rem); font-weight: 700; line-height: 1.3; margin-bottom: 0.85rem; }
+    .page-hero .lead { color: rgba(255,255,255,0.8); font-size: 1.05rem; max-width: 560px; line-height: 1.75; margin-bottom: 1.6rem; }
+    .hero-viz { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.13); border-radius: var(--radius-md); padding: 1.4rem; }
+    .hv-title { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; color: rgba(255,255,255,0.6); margin-bottom: 1rem; text-align: center; }
+
+    /* FTTH topology — dark hero variant */
+    .topo { display: flex; flex-direction: column; gap: 0.5rem; }
+    .topo-row { display: flex; align-items: center; gap: 0.6rem; }
+    .topo-tag { width: 78px; flex-shrink: 0; font-size: 0.62rem; font-weight: 700; color: rgba(255,255,255,0.55); text-align: left; }
+    .topo-node { flex: 1; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.16); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; font-size: 0.8rem; font-weight: 600; color: #fff; display: flex; align-items: center; gap: 0.5rem; }
+    .topo-node .ic { width: 9px; height: 9px; border-radius: 50%; background: #38bdf8; flex-shrink: 0; }
+    .topo-node.end { border-color: #38bdf8; color: #7dd3fc; }
+    .topo-conn { display: flex; align-items: center; gap: 0.6rem; margin-right: 78px; padding-right: 0.55rem; }
+    .topo-conn .wl { width: 2px; height: 14px; background: #38bdf8; }
+    .topo-conn .wl-txt { font-size: 0.6rem; color: rgba(255,255,255,0.55); }
+    .topo-branch { display: flex; gap: 0.45rem; flex: 1; }
+    .topo-branch .topo-node { font-size: 0.72rem; padding: 0.4rem 0.55rem; justify-content: center; }
+    .viz-note { font-size: 0.66rem; color: rgba(255,255,255,0.45); text-align: center; margin-top: 0.9rem; }
+
+    /* ---------- Sections ---------- */
+    .sec { padding: 3.5rem 0; }
+    .sec-alt { background: var(--bg-alt, #f6f8fb); }
+    @media (max-width: 767px) { .sec { padding: 2.4rem 0; } }
+    .s-head { margin-bottom: 2rem; max-width: 720px; }
+    .s-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+    .s-eyebrow { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; color: var(--accent); margin-bottom: 0.6rem; }
+    .s-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1.35; margin-bottom: 0.55rem; }
+    .s-head h2 .accent { color: var(--accent); }
+    .s-head p { color: var(--text-muted); font-size: 1rem; line-height: 1.75; margin: 0; }
+    .grid-3c { display: grid; gap: 1.2rem; } @media (min-width: 768px) { .grid-3c { grid-template-columns: repeat(3, 1fr); } }
+    .grid-2c { display: grid; gap: 1.2rem; } @media (min-width: 768px) { .grid-2c { grid-template-columns: repeat(2, 1fr); } } @media (min-width: 1200px) { .grid-2c { grid-template-columns: repeat(3, 1fr); } }
+
+    .scard { background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.3rem; display: flex; gap: 0.9rem; transition: var(--transition); }
+    .scard:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+    .scard .n { font-size: 1.4rem; font-weight: 800; color: var(--accent); line-height: 1; flex-shrink: 0; }
+    .scard h3 { font-size: 0.98rem; font-weight: 700; margin: 0 0 0.35rem; }
+    .scard p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.65; margin: 0; }
+
+    /* Deliverable doc cards */
+    .doc { background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 1.15rem; transition: var(--transition); }
+    .doc:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); }
+    .doc::before { content: ''; display: block; width: 34px; height: 4px; background: var(--accent); border-radius: 2px; margin-bottom: 0.85rem; }
+    .doc h4 { font-size: 0.92rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .doc p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+    /* Workflow */
+    .flow { display: flex; flex-direction: column; gap: 0.4rem; }
+    @media (min-width: 768px) { .flow { flex-direction: row; align-items: stretch; } }
+    .flow-step { flex: 1; background: var(--bg-card,#fff); border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.85rem 0.75rem; text-align: center; }
+    .flow-step .sn { display: inline-flex; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 0.65rem; font-weight: 700; align-items: center; justify-content: center; margin-bottom: 0.4rem; }
+    .flow-step h4 { font-size: 0.78rem; font-weight: 700; margin: 0; }
+    .flow-arr { display: flex; align-items: center; justify-content: center; color: var(--text-light); font-size: 0.9rem; }
+    @media (min-width: 768px) { .flow-arr::before { content: '←'; } }
+    @media (max-width: 767px) { .flow-arr::before { content: '↓'; } }
+
+    /* Experience */
+    .exp-card { display: flex; flex-direction: column; gap: 0.65rem; background: var(--bg-card, #fff); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 1.4rem; }
+    .exp-card .meta { font-size: 0.72rem; color: var(--accent); font-weight: 700; letter-spacing: 0.02em; }
+    .exp-card h4 { font-size: 1rem; font-weight: 700; margin: 0; line-height: 1.4; }
+    .exp-card p { color: var(--text-muted); font-size: 0.86rem; line-height: 1.65; margin: 0; }
+
     .final-cta { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; text-align: center; }
-    .final-cta h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.2rem); }
-    .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; }
-    @media (prefers-reduced-motion: reduce) { .btn, .capability-card { transition: none !important; transform: none !important; } }
+    .final-cta h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.75rem; }
+    .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; line-height: 1.75; }
+
+    @media (prefers-reduced-motion: reduce) { .scard, .doc, .btn { transition: none !important; transform: none !important; } }
   </style>
 </head>
 <body>
   <div id="ecms-nav-inject"></div>
 
   <main id="main-content" class="page-wrapper">
-    <header class="page-header">
+
+    <header class="page-hero">
       <div class="container">
-        <nav aria-label="Breadcrumb" class="breadcrumb">
-          <a href="index.html">الرئيسية</a><span class="breadcrumb-sep">›</span><span class="current">هندسة شبكات الاتصالات وFTTH</span>
-        </nav>
-        <h1>هندسة شبكات الاتصالات وFTTH</h1>
-        <p class="lead">التصميم والتخطيط والتسليم التقني لبيئات شبكات FTTH / FTTx وOSP / ISP والبنية التحتية الرقمية. 25+ عاماً في السعودية ومصر والسودان.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">ناقش مشروعك</a>
+        <div class="hero-grid">
+          <div>
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+              <a href="index.html">الرئيسية</a><span class="breadcrumb-sep">›</span><span class="current">هندسة شبكات FTTH والاتصالات</span>
+            </nav>
+            <h1>هندسة شبكات FTTH والاتصالات</h1>
+            <p class="lead">تخطيط وتصميم ودعم تقني عملي لبرامج البنية التحتية للألياف والاتصالات.</p>
+            <a href="contact.html" class="btn btn-primary btn-lg">ناقش مشروعك</a>
+          </div>
+          <div class="hero-viz" aria-label="معمارية FTTH المفاهيمية">
+            <div class="hv-title">معمارية شبكة وصول FTTH — مفاهيمي</div>
+            <div class="topo">
+              <div class="topo-row"><span class="topo-tag">النواة</span><div class="topo-node end"><span class="ic"></span>CO / POP — ODF</div></div>
+              <div class="topo-conn"><span class="wl"></span><span class="wl-txt">كابل المغذي</span></div>
+              <div class="topo-row"><span class="topo-tag">المغذي</span><div class="topo-node"><span class="ic"></span>خزانة FDH / FDT</div></div>
+              <div class="topo-conn"><span class="wl"></span><span class="wl-txt">مقسم 1:N</span></div>
+              <div class="topo-row"><span class="topo-tag">التوزيع</span><div class="topo-node"><span class="ic"></span>كابل التوزيع</div></div>
+              <div class="topo-conn"><span class="wl"></span><span class="wl-txt">كابل الإسقاط</span></div>
+              <div class="topo-row"><span class="topo-tag">الوصول</span><div class="topo-branch"><div class="topo-node end">منزل</div><div class="topo-node end">مبنى</div><div class="topo-node end">موقع</div></div></div>
+            </div>
+            <div class="viz-note">مفاهيمي — يوضح طبقات FTTH النموذجية، وليس مشروعاً حقيقياً.</div>
+          </div>
+        </div>
       </div>
     </header>
 
-    <section class="page-pad">
+    <!-- WHERE I CAN HELP -->
+    <section class="sec">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">ما أقدّمه</span>
-          <h2>نتائج تقنية ملموسة لمشاريع الشبكات</h2>
-          <p>أعمل إلى جانب فرق التنفيذ لترجمة أهداف البرنامج إلى قرارات هندسية عملية، من استراتيجية الشبكة إلى دعم النشر.</p>
+        <div class="s-head">
+          <span class="s-eyebrow">أين يمكنني المساعدة</span>
+          <h2>دعم هندسي عبر <span class="accent">سلسلة التسليم</span></h2>
         </div>
-        <div class="svc-grid-2" style="align-items: stretch; margin-bottom: 2.5rem;">
-          <div class="visual-box">
-            <div class="visual-title">التسلسل التقني للشبكة</div>
-            <div class="net-stack">
-              <div class="net-layer">استراتيجية وتخطيط الشبكة</div>
-              <div class="net-arrow">↓</div>
-              <div class="net-layer">تصميم FTTH / FTTx</div>
-              <div class="net-arrow">↓</div>
-              <div class="net-layer">مسارات OSP والأعمال المدنية</div>
-              <div class="net-arrow">↓</div>
-              <div class="net-layer">تكامل ISP / الوصول</div>
-              <div class="net-arrow">↓</div>
-              <div class="net-layer">دعم الاختبار والتشغيل</div>
-              <div class="net-output">شبكة تشغيلية</div>
-            </div>
-          </div>
-          <div class="visual-box">
-            <div class="visual-title">المخرجات النموذجية</div>
-            <div style="display:grid;gap:0.75rem;">
-              <div class="capability-card" style="padding:1rem;">
-                <h3>التصميم عالي المستوى (HLD)</h3>
-                <p>البنية والطوبولوجيا وافتراضات السعة المتوافقة مع أهداف التغطية التجارية.</p>
-              </div>
-              <div class="capability-card" style="padding:1rem;">
-                <h3>التصميم منخفض المستوى (LLD)</h3>
-                <p>خطط المسارات وجداول الربط وتوزيع الخزائن وقوائم المواد.</p>
-              </div>
-              <div class="capability-card" style="padding:1rem;">
-                <h3>مجموعة تسليم الموقع</h3>
-                <p>رسومات As-built، نتائج الاختبارات، سجلات القبول والتعديلات الحمراء.</p>
-              </div>
-            </div>
-          </div>
+        <div class="grid-2c">
+          <div class="scard"><span class="n">01</span><div><h3>تخطيط الشبكات</h3><p>استراتيجية التغطية وافتراضات السعة ومراحل الطرح المتوافقة مع أهداف البرنامج.</p></div></div>
+          <div class="scard"><span class="n">02</span><div><h3>تصميم FTTH / FTTx</h3><p>البنية والطوبولوجيا وهرمية المقسمات وتصميم نقاط التوزيع.</p></div></div>
+          <div class="scard"><span class="n">03</span><div><h3>هندسة OSP / ISP</h3><p>مسارات الشبكة الخارجية والأنابيب وتنسيق الأعمال المدنية، بالإضافة إلى كابلات المباني والمعدات.</p></div></div>
+          <div class="scard"><span class="n">04</span><div><h3>تخطيط مسارات الألياف</h3><p>تحسين المسارات وخطط الربط والتنسيق مع التراخيص والمرافق القائمة.</p></div></div>
+          <div class="scard"><span class="n">05</span><div><h3>التوثيق التقني</h3><p>HLD وLLD ورسومات As-built وmethod statements وحزم التسليم.</p></div></div>
+          <div class="scard"><span class="n">06</span><div><h3>مراجعة وتحسين الشبكات</h3><p>مراجعة التصاميم وفحوص الجودة وتوصيات التحسين للشبكات القائمة أو المخططة.</p></div></div>
         </div>
       </div>
     </section>
 
-    <section class="page-pad" style="background: var(--bg-alt, #f6f8fb);">
+    <!-- TYPICAL DELIVERABLES -->
+    <section class="sec sec-alt">
       <div class="container">
-        <div class="svc-grid-3">
-          <div class="capability-card">
-            <div class="cap-num">01</div>
-            <h3>تصميم الشبكات</h3>
-            <p>بنية FTTH / FTTx، تخطيط الطوبولوجيا، هرمية الفواصل ونمذجة السعة للتغطية السكنية والتجارية.</p>
-          </div>
-          <div class="capability-card">
-            <div class="cap-num">02</div>
-            <h3>تخطيط OSP / ISP</h3>
-            <p>تخطيط مسارات الشبكة الخارجية والأنابيب والأعمال المدنية، بالإضافة إلى كابلات المباني والمعدات.</p>
-          </div>
-          <div class="capability-card">
-            <div class="cap-num">03</div>
-            <h3>تخطيط مسارات الألياف</h3>
-            <p>تحسين مسارات الألياف، خطط الربط، تصميم نقاط التوزيع والتنسيق مع التراخيص والمرافق الحالية.</p>
-          </div>
-          <div class="capability-card">
-            <div class="cap-num">04</div>
-            <h3>التوثيق التقني</h3>
-            <p>HLD وLLD ورسومات As-built ومدخلات BOQ وmethod statements وتوثيق التسليم للتشغيل.</p>
-          </div>
-          <div class="capability-card">
-            <div class="cap-num">05</div>
-            <h3>مراجعة وتحسين الشبكات</h3>
-            <p>مراجعة التصاميم، فحوص الجودة، مراجعات الأداء وتوصيات التحسين للشبكات الحالية أو المخططة.</p>
-          </div>
-          <div class="capability-card">
-            <div class="cap-num">06</div>
-            <h3>دعم النشر</h3>
-            <p>التنسيق الميداني، مواءمة المقاولين، الإشراف على التركيب، دعم الاختبارات وجاهزية التشغيل.</p>
-          </div>
+        <div class="s-head">
+          <span class="s-eyebrow">المخرجات النموذجية</span>
+          <h2>ما الذي <span class="accent">يستلمه فريقك فعلياً</span></h2>
+        </div>
+        <div class="grid-3c">
+          <div class="doc"><h4>معمارية الشبكة</h4><p>تصميم عالي المستوى يغطي الطوبولوجيا والتغطية وافتراضات السعة.</p></div>
+          <div class="doc"><h4>خطط المسارات</h4><p>مسارات الألياف والمواءمة المدنية وتوثيق المسارات الجاهز للتراخيص.</p></div>
+          <div class="doc"><h4>مفهوم توزيع الألياف</h4><p>هرمية المقسمات ومواقع FDH/FDT وتصميم نقاط التوزيع.</p></div>
+          <div class="doc"><h4>دعم جداول الكميات</h4><p>الكميات وقوائم المواد الداعمة للمشتريات والتقدير.</p></div>
+          <div class="doc"><h4>التوثيق التقني</h4><p>LLD وجداول الربط وmethod statements وسجلات As-built.</p></div>
+          <div class="doc"><h4>مراجعة التصميم ودعم النشر</h4><p>تقارير المراجعة والتنسيق الميداني وجاهزية التشغيل.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="page-pad">
+    <!-- WORKFLOW -->
+    <section class="sec">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">خبرة ذات صلة</span>
-          <h2>تسليم تقني على نطاق البرنامج</h2>
+        <div class="s-head center" style="margin-bottom: 1.75rem;">
+          <span class="s-eyebrow">سير العمل التقني</span>
+          <h2>من المتطلبات إلى <span class="accent">دعم النشر</span></h2>
         </div>
-        <div class="svc-grid-3">
+        <div class="flow">
+          <div class="flow-step"><div class="sn">1</div><h4>المتطلبات</h4></div><div class="flow-arr"></div>
+          <div class="flow-step"><div class="sn">2</div><h4>تقييم الشبكة</h4></div><div class="flow-arr"></div>
+          <div class="flow-step"><div class="sn">3</div><h4>التصميم</h4></div><div class="flow-arr"></div>
+          <div class="flow-step"><div class="sn">4</div><h4>التوثيق</h4></div><div class="flow-arr"></div>
+          <div class="flow-step"><div class="sn">5</div><h4>المراجعة</h4></div><div class="flow-arr"></div>
+          <div class="flow-step"><div class="sn">6</div><h4>دعم النشر</h4></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF -->
+    <section class="sec sec-alt">
+      <div class="container">
+        <div class="s-head">
+          <span class="s-eyebrow">خبرة ذات صلة</span>
+          <h2>تسليم اتصالات على <span class="accent">نطاق البرنامج</span></h2>
+        </div>
+        <div class="grid-3c">
           <div class="exp-card">
-            <div class="meta">برنامج FTTH الوطني لـ STC · المملكة · 10 سنوات</div>
-            <h4>الطرح الوطني لـ FTTH / FTTx</h4>
-            <p>قيادة تقنية وتحكم رئيسية بتنسيق التصميم والنشر وتقارير المقاولين ولوحات المؤشرات عبر برنامج متعدد المناطق.</p>
+            <div class="meta">نوركونسلت / STC · المملكة · 10 سنوات</div>
+            <h4>الطرح الوطني لـ FTTH / FTTx لـ STC</h4>
+            <p>قيادة تقنية وضوابط رئيسية في برنامج شبكة ثابتة وطني — تنسيق التصميم وتقارير المقاولين ولوحات KPI عبر المناطق.</p>
           </div>
           <div class="exp-card">
-            <div class="meta">مدينة الألعاب الأولمبية · مصر</div>
-            <h4>البنية التحتية الذكية وELV / FTTH</h4>
-            <p>مدير مشروع استشاري يقود تسليم ELV وBMS وCCTV وإنذار الحريق وFTTH لمدينة الألعاب الأولمبية الدولية.</p>
+            <div class="meta">صبّور للاستشارات · مصر</div>
+            <h4>مدينة الألعاب الأولمبية — ELV وFTTH</h4>
+            <p>مدير مشروع استشاري رئيسي لتسليم ELV وBMS وCCTV وإنذار الحريق وبنية FTTH لمشروع مدينة ذكية وطني.</p>
           </div>
           <div class="exp-card">
-            <div class="meta">السكك الحديدية المصرية · 2018</div>
+            <div class="meta">السكك الحديدية المصرية · مصر</div>
             <h4>تحديث الألياف والاتصالات على السكك الحديدية</h4>
-            <p>مدير موقع أول يُشرف على تنفيذ واختبار شبكات الألياف ضمن بيئة سكك حديد حية.</p>
+            <p>مدير موقع أول لتنفيذ واختبار شبكات الألياف ضمن بيئة تشغيل سكك حديد حية.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="page-pad final-cta">
+    <!-- FINAL CTA -->
+    <section class="sec final-cta">
       <div class="container">
-        <h2>هل لديك مشروع اتصالات أو FTTH يحتاج إلى دعم هندسي؟</h2>
-        <p>لنناقث التصميم أو التخطيط أو دعم النشر الذي يحتاجه برنامجك.</p>
+        <h2>هل لديك مشروع شبكة ألياف أو اتصالات يحتاج إلى دعم هندسي؟</h2>
+        <p>لنناقش التخطيط أو التصميم أو دعم النشر الذي يحتاجه برنامجك.</p>
         <a href="contact.html" class="btn btn-primary btn-lg">ناقش مشروعك</a>
       </div>
     </section>
+
   </main>
 
   <div id="ecms-footer-inject"></div>
