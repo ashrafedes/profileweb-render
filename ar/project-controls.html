@@ -105,6 +105,12 @@
     .exp-card h4 { font-size: 1rem; font-weight: 700; margin: 0; line-height: 1.4; }
     .exp-card p { color: var(--text-muted); font-size: 0.86rem; line-height: 1.65; margin: 0; }
 
+    /* Field evidence banner */
+    .field-banner { position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-light); aspect-ratio: 21 / 9; margin: 0 0 1.5rem; }
+    @media (max-width: 767px) { .field-banner { aspect-ratio: 16 / 9; } }
+    .field-banner img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .field-banner figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.3rem 0.9rem 0.6rem; background: linear-gradient(transparent, rgba(10,17,40,0.78)); color: #fff; font-size: 0.75rem; font-weight: 600; }
+
     .final-cta { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; text-align: center; }
     .final-cta h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.75rem; }
     .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; line-height: 1.75; }
@@ -208,6 +214,7 @@
           <span class="s-eyebrow">خبرة ذات صلة</span>
           <h2>ضوابط على <span class="accent">نطاق البرنامج</span></h2>
         </div>
+        <figure class="field-banner"><img src="../assets/images/field/field-osp-reinstatement.jpg" width="1200" height="1090" loading="lazy" decoding="async" alt="أعمال إعادة تأهيل الطريق على مسار ألياف — بيئة برنامج فعلية"><figcaption>بيئة تسليم ميدانية — أعمال برنامج بنية تحتية للاتصالات</figcaption></figure>
         <div class="grid-3c">
           <div class="exp-card">
             <div class="meta">نوركونسلت / STC · المملكة · 10 سنوات</div>

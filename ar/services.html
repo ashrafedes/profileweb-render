@@ -94,6 +94,13 @@
     .domain-strip { display: flex; flex-wrap: wrap; gap: 0.55rem; }
     .domain-strip span { border: 1px solid var(--border-light); border-radius: 999px; padding: 0.4rem 1rem; font-size: 0.82rem; font-weight: 600; color: var(--text); background: var(--bg-card,#fff); }
 
+    /* ---------- Field evidence strip ---------- */
+    .ev-strip { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1.75rem; }
+    @media (min-width: 768px) { .ev-strip { grid-template-columns: repeat(3, 1fr); } }
+    .ev-item { position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-light); aspect-ratio: 4 / 3; margin: 0; }
+    .ev-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ev-item figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.3rem 0.85rem 0.6rem; background: linear-gradient(transparent, rgba(10,17,40,0.78)); color: #fff; font-size: 0.75rem; font-weight: 600; line-height: 1.4; }
+
     /* ---------- Steps ---------- */
     .steps { display: grid; gap: 0.9rem; grid-template-columns: 1fr; }
     @media (min-width: 768px) { .steps { grid-template-columns: repeat(5, 1fr); gap: 0.7rem; } }
@@ -163,6 +170,11 @@
           <div class="scard"><span class="n">04</span><div><h3>التوثيق التقني</h3><p>HLD / LLD ورسومات As-built وmethod statements وتوثيق التسليم.</p></div></div>
           <div class="scard"><span class="n">05</span><div><h3>مراجعة وتحسين الشبكات</h3><p>مراجعة التصاميم وفحوص الجودة وتحسين الشبكات المخططة أو القائمة.</p></div></div>
           <div class="scard"><span class="n">06</span><div><h3>دعم النشر</h3><p>التنسيق الميداني ومواءمة المقاولين والإشراف على التركيب ودعم التشغيل.</p></div></div>
+        </div>
+        <div class="ev-strip">
+          <figure class="ev-item"><img src="../assets/images/field/field-fibre-cable-pulling.jpg" width="896" height="1600" loading="lazy" decoding="async" alt="تركيب ألياف FTTH — سحب الكابل في موقع تنفيذ"><figcaption>تركيب الألياف — سحب الكابل</figcaption></figure>
+          <figure class="ev-item"><img src="../assets/images/field/field-fat-splice-testing.jpg" width="480" height="480" loading="lazy" decoding="async" alt="لحام نقطة توزيع ألياف مع جهاز قياس القدرة الضوئية"><figcaption>نقطة اللحام — قياس القدرة الضوئية</figcaption></figure>
+          <figure class="ev-item"><img src="../assets/images/field/field-asphalt-reinstatement.jpg" width="720" height="940" loading="lazy" decoding="async" alt="إعادة رصف الأسفلت فوق خندق ألياف"><figcaption>أعمال مدنية OSP — إعادة الرصف</figcaption></figure>
         </div>
       </div>
     </section>

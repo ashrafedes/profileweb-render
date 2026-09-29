@@ -160,6 +160,13 @@
     .exp-card .qa { font-size: 0.84rem; color: var(--text-muted); line-height: 1.65; }
     .exp-card .qa b { color: var(--text); font-weight: 600; }
 
+    /* ---------- Field evidence ---------- */
+    .ev-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; margin-top: 1.75rem; }
+    @media (min-width: 768px) { .ev-grid { grid-template-columns: repeat(3, 1fr); } }
+    .ev-item { position: relative; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-light); aspect-ratio: 4 / 3; }
+    .ev-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ev-item figcaption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.3rem 0.85rem 0.6rem; background: linear-gradient(transparent, rgba(10,17,40,0.78)); color: #fff; font-size: 0.75rem; font-weight: 600; line-height: 1.4; }
+
     /* ---------- Final CTA ---------- */
     .final-cta { background: linear-gradient(135deg, #0a1128, #1e3a8a); color: #fff; text-align: center; }
     .final-cta h2 { color: #fff; font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: 0.75rem; }
@@ -361,6 +368,15 @@
             <div class="qa"><b>التحدي:</b> تنفيذ واختبار شبكات الألياف دون تعطيل التشغيل.</div>
             <div class="qa"><b>الدور:</b> مدير موقع أول — انضباط التنفيذ والاختبار والتوثيق.</div>
           </div>
+        </div>
+        <div class="s-head reveal" style="margin-top: 2.25rem; margin-bottom: 1rem;">
+          <span class="s-eyebrow">أدلة ميدانية</span>
+          <h2 style="font-size: clamp(1.2rem, 2.2vw, 1.5rem);">بيئات تسليم <span class="accent">حقيقية</span></h2>
+        </div>
+        <div class="ev-grid reveal">
+          <figure class="ev-item"><img src="../assets/images/field/field-fibre-cable-pulling.jpg" width="896" height="1600" loading="lazy" decoding="async" alt="تركيب كابل ألياف FTTH — طاقم يسحب الكابل من بكرة داخل خندق"><figcaption>تركيب ألياف FTTH — سحب الكابل في موقع تنفيذ فعلي</figcaption></figure>
+          <figure class="ev-item"><img src="../assets/images/field/field-fat-splice-testing.jpg" width="480" height="480" loading="lazy" decoding="async" alt="علبة توزيع ألياف مفتوحة مع ألياف ملحومة وجهاز قياس قدرة ضوئية"><figcaption>فحص نقطة اللحام وقياس القدرة الضوئية</figcaption></figure>
+          <figure class="ev-item"><img src="../assets/images/field/field-asphalt-reinstatement.jpg" width="720" height="940" loading="lazy" decoding="async" alt="طاقم يعيد رصف الأسفلت فوق خندق مسار ألياف"><figcaption>أعمال مدنية — إعادة رصف الأسفلت على مسار الألياف</figcaption></figure>
         </div>
       </div>
     </section>
