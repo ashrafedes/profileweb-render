@@ -1,16 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.ashraf-eldesoky.space/en/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url><loc>https://www.ashraf-eldesoky.space/en/</loc><changefreq>weekly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-fibre-cable-pulling.jpg</image:loc><image:title>FTTH fibre cable installation</image:title><image:caption>FTTH fibre installation — cable pulling at a field deployment site</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-fat-splice-testing.jpg</image:loc><image:title>FAT splicing and optical power test</image:title><image:caption>Splice point inspection and optical power measurement</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-asphalt-reinstatement.jpg</image:loc><image:title>OSP civil works reinstatement</image:title><image:caption>Civil works — asphalt reinstatement along the fibre route</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/erp/erp-kpi-summary.jpg</image:loc><image:title>ERP project KPIs</image:title><image:caption>ERP-based operational control — live work-order, progress, material and permit KPIs</image:caption></image:image>
+  </url>
   <url><loc>https://www.ashraf-eldesoky.space/ar/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/en/articles/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/ar/articles/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.ashraf-eldesoky.space/en/services.html</loc><lastmod>2026-09-29</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/en/services.html</loc><lastmod>2026-09-29</lastmod><changefreq>weekly</changefreq><priority>0.9</priority>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-fibre-cable-pulling.jpg</image:loc><image:title>Fibre installation field work</image:title><image:caption>Fibre installation — cable pulling</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-fat-splice-testing.jpg</image:loc><image:title>Fibre splice point testing</image:title><image:caption>Splice point — optical power test</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-asphalt-reinstatement.jpg</image:loc><image:title>OSP civil works</image:title><image:caption>OSP civil works — reinstatement</image:caption></image:image>
+  </url>
   <url><loc>https://www.ashraf-eldesoky.space/ar/services.html</loc><lastmod>2026-09-29</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.ashraf-eldesoky.space/en/pmo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/en/pmo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/erp/erp-analytics-dashboard.jpg</image:loc><image:title>Executive analytics dashboard</image:title><image:caption>Executive analytics — portfolio progress, work-order status and performance KPIs</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-osp-trench.jpg</image:loc><image:title>Programme field environment</image:title><image:caption>Programme delivery environment — coordinated field works across sites</image:caption></image:image>
+  </url>
   <url><loc>https://www.ashraf-eldesoky.space/ar/pmo.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.ashraf-eldesoky.space/en/project-controls.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/en/project-controls.html</loc><changefreq>monthly</changefreq><priority>0.8</priority>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/erp/erp-pm-daily-progress.jpg</image:loc><image:title>ERP daily progress report</image:title><image:caption>ERP progress measurement — quantities per link code with progress tracking</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/erp/erp-work-orders.jpg</image:loc><image:title>Work order management</image:title><image:caption>Work-order control — status, stage and financial tracking at scale</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-osp-reinstatement.jpg</image:loc><image:title>OSP reinstatement works</image:title><image:caption>Field delivery environment — telecom infrastructure programme works</image:caption></image:image>
+  </url>
   <url><loc>https://www.ashraf-eldesoky.space/ar/project-controls.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.ashraf-eldesoky.space/en/telecommunications.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.ashraf-eldesoky.space/en/telecommunications.html</loc><changefreq>monthly</changefreq><priority>0.8</priority>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-fibre-cable-pulling.jpg</image:loc><image:title>FTTH fibre installation</image:title><image:caption>FTTH fibre installation — cable pulling at a deployment site</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-fat-splice-testing.jpg</image:loc><image:title>FAT splicing and power test</image:title><image:caption>FAT splicing and optical power verification</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-ont-power-test.jpg</image:loc><image:title>ONT optical power test</image:title><image:caption>Drop activation test — optical power measurement</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-asphalt-reinstatement.jpg</image:loc><image:title>Trench reinstatement</image:title><image:caption>OSP civil works — trench reinstatement</image:caption></image:image>
+    <image:image><image:loc>https://www.ashraf-eldesoky.space/assets/images/field/field-osp-reinstatement.jpg</image:loc><image:title>Fibre route reinstatement</image:title><image:caption>Fibre route — surface reinstatement in progress</image:caption></image:image>
+  </url>
   <url><loc>https://www.ashraf-eldesoky.space/ar/telecommunications.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/en/digital-transformation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.ashraf-eldesoky.space/ar/digital-transformation.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
