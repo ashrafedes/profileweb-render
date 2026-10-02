@@ -66,6 +66,19 @@
       .replace(/"/g, '&quot;');
   }
 
+  function linkify(s) {
+    var urlRe = /(https?:\/\/[^\s<>"']+|www\.[^\s<>"']+)/gi;
+    var out = '', last = 0, m;
+    while ((m = urlRe.exec(s)) !== null) {
+      out += esc(s.slice(last, m.index));
+      var u = m[0];
+      var href = /^https?:\/\//i.test(u) ? u : 'https://' + u;
+      out += '<a href="' + esc(href) + '" target="_blank" rel="noopener noreferrer" class="ae-link">' + esc(u) + '</a>';
+      last = urlRe.lastIndex;
+    }
+    return out + esc(s.slice(last));
+  }
+
   function loadJSON(key) {
     try { return JSON.parse(localStorage.getItem(key)) || {}; }
     catch (e) { return {}; }
@@ -127,6 +140,7 @@
       '.ae-c-name{font-weight:700;font-size:.88rem;}',
       '.ae-c-date{font-size:.75rem;color:var(--text-light);}',
       '.ae-c-text{font-size:.9rem;color:var(--text);white-space:pre-wrap;word-break:break-word;margin:0;}',
+      '.ae-link{color:#2563eb;text-decoration:underline;word-break:break-all;}',
       '.ae-empty{color:var(--text-muted);font-size:.9rem;}'
     ].join('\n');
     document.head.appendChild(s);
@@ -240,7 +254,7 @@
           '<div class="ae-c-body">' +
             '<div class="ae-c-head"><span class="ae-c-name">' + name + '</span>' +
             '<span class="ae-c-date">' + formatCommentDate(c.d, lang) + '</span></div>' +
-            '<p class="ae-c-text">' + esc(c.t) + '</p>' +
+            '<p class="ae-c-text">' + linkify(c.t) + '</p>' +
           '</div>' +
         '</div>';
       }).join('');
