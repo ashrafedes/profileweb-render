@@ -8492,5 +8492,33 @@
         "التنفيذ المضبوط"
       ]
     }
+  },
+  {
+    "id": 151,
+    "slug": "negotiating-as-project-manager",
+    "category": "Negotiation",
+    "author": "Ashraf Ibrahim El Desoky",
+    "heroImage": "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "publishDate": "2026-08-07",
+    "updatedDate": "2026-08-07",
+    "readingTime": 4,
+    "featured": false,
+    "draft": false,
+    "tags": [
+      "Negotiation",
+      "Project Management",
+      "Stakeholders",
+      "Leadership"
+    ],
+    "en": {
+      "title": "Why Project Managers Are Negotiators Whether They Know It or Not",
+      "excerpt": "A project manager spends 70-90% of the day communicating — and much of that is negotiation. Scope changes, resource requests and deadline talks are all negotiations.",
+      "content": "A project manager spends between 70 and 90 percent of the working day communicating, and a large share of that communication is negotiation in disguise."
+    },
+    "ar": {
+      "title": "لماذا مديرو المشاريع مفاوضون سواء أدركوا ذلك أم لا",
+      "excerpt": "يقضي مدير المشروع ما بين 70 و90 بالمئة من وقته في التواصل، وجزء كبير منه تفاوض مقنّع — على النطاق والموارد والمواعيد.",
+      "content": "يقضي مدير المشروع ما بين 70 و90 بالمئة من يوم عمله في التواصل، وجزء كبير من هذا التواصل هو تفاوض مقنّع."
+    }
   }
 ]
