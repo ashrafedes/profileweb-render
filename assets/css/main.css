@@ -942,6 +942,20 @@ html[dir="rtl"] .nav-dropdown {
 
 .footer-links a:hover { color: #fff; }
 
+.footer-articles {
+  margin-bottom: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-article-links {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+}
+
+.footer-article-links a { font-size: 0.82rem; }
+
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: 1.5rem;

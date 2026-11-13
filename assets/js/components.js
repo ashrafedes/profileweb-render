@@ -90,7 +90,8 @@
     footerProfile: 'الملف والمسيرة',
     footerSearch: 'بحث',
     footerRights: '© ' + new Date().getFullYear() + ' أشرف إبراهيم الدسوقي، PMP® – جميع الحقوق محفوظة',
-    footerVersion: 'نظام إدارة المسيرة التنفيذية v1.0'
+    footerVersion: 'نظام إدارة المسيرة التنفيذية v1.0',
+    footerFeatured: 'مقالات مميزة'
   } : {
     skipLink: 'Skip to main content',
     brandName: 'Ashraf El Desoky',
@@ -140,7 +141,8 @@
     footerProfile: 'Profile & Career',
     footerSearch: 'Search',
     footerRights: '© ' + new Date().getFullYear() + ' Ashraf Ibrahim El Desoky, PMP® – All Rights Reserved',
-    footerVersion: 'Executive Career Management System v1.0'
+    footerVersion: 'Executive Career Management System v1.0',
+    footerFeatured: 'Featured Articles'
   };
 
   const NAV_HTML = `
@@ -241,6 +243,15 @@
 <button id="backToTop" aria-label="Back to top" title="Back to top">${T.backToTop}</button>
 `;
 
+  const FEATURED_ARTICLES = [
+    { slug: 'ftth-network-rollout', en: 'FTTH Rollout: 10-Year Lessons', ar: 'تنفيذ FTTH: دروس ١٠ سنوات' },
+    { slug: 'national-ftth-rollout-planning-and-control', en: 'National FTTH Rollout Control', ar: 'التحكم في انتشار FTTH الوطني' },
+    { slug: 'pmo-excellence-framework', en: 'PMO Excellence Framework', ar: 'إطار تميز مكتب المشاريع' },
+    { slug: 'earned-value-management', en: 'Earned Value Management Guide', ar: 'دليل إدارة القيمة المكتسبة' },
+    { slug: 'programme-recovery-diagnosing-behind-schedule', en: 'Recovering a Slipping Programme', ar: 'إنقاذ البرامج المتأخرة' },
+    { slug: 'ftth-project-controls-saudi-arabia-whats-different', en: 'FTTH Controls in Saudi Arabia', ar: 'ضوابط مشاريع FTTH في السعودية' },
+  ];
+
   const FOOTER_HTML = `
 <footer class="ecms-footer" role="contentinfo">
   <div class="container">
@@ -297,6 +308,12 @@
           <li><a href="${NAV_BASE}education.html">${T.education}</a></li>
         </ul>
       </div>
+    </div>
+    <div class="footer-articles">
+      <div class="footer-col-title">${T.footerFeatured}</div>
+      <ul class="footer-links footer-article-links">
+        ${FEATURED_ARTICLES.map(a => `<li><a href="${NAV_BASE}articles/${a.slug}.html">${IS_ARABIC ? a.ar : a.en}</a></li>`).join('\n        ')}
+      </ul>
     </div>
     <div class="footer-bottom">
       <span>${T.footerRights}</span>

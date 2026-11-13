@@ -114,6 +114,17 @@
     .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; line-height: 1.75; }
 
     @media (prefers-reduced-motion: reduce) { .scard, .psd, .btn { transition: none !important; transform: none !important; } }
+  
+    /* insights cards */
+    .ins-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .ins-card { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s, border-color .2s; }
+    .ins-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+    .ins-body { padding: .9rem 1rem 1rem; display: flex; flex-direction: column; gap: .4rem; flex: 1; }
+    .ins-card h3 { font-size: .95rem; line-height: 1.4; margin: 0; }
+    .ins-card p { font-size: .8rem; color: var(--text-muted); margin: 0; line-height: 1.5; flex: 1; }
+    .ins-more { font-size: .8rem; font-weight: 600; color: var(--accent); }
+    @media (max-width: 960px) { .ins-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .ins-grid-3 { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -261,6 +272,60 @@
           <div class="step"><div class="sn">3</div><h4>تصميم</h4><p>تطوير الإطار التقني أو الإداري المطلوب.</p></div>
           <div class="step"><div class="sn">4</div><h4>تنفيذ</h4><p>تشغيل النهج المتفق عليه مع الفريق.</p></div>
           <div class="step"><div class="sn">5</div><h4>متابعة</h4><p>تتبع التقدم ودعم القرارات حتى الاستقرار.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED INSIGHTS -->
+    <section class="sec sec-alt" id="related-insights">
+      <div class="container">
+        <div class="s-head reveal">
+          <span class="s-eyebrow">قراءات ذات صلة</span>
+          <h2>مقالات في <span class="accent">تنفيذ الاتصالات وإدارة البرامج</span></h2>
+        </div>
+        <div class="ins-grid-3 reveal">
+          <a class="ins-card" href="articles/ftth-network-rollout.html">
+            <div class="ins-body">
+              <h3>نشر شبكة FTTH: دروس من 10 سنوات مع STC</h3>
+              <p>دروس رئيسية من إدارة أحد أكبر برامج نشر FTTH في الشرق الأوسط — التخطيط والتنفيذ وسلسلة التوريد ومراقبة الجودة.</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/national-ftth-rollout-planning-and-control.html">
+            <div class="ins-body">
+              <h3>كيف يتم تخطيط والتحكم في مشاريع نشر شبكات FTTH الوطنية فعلياً</h3>
+              <p>دليل عملي لتخطيط والتحكم في مشاريع نشر شبكات الألياف البصرية الوطنية — من التصميم الرئيسي للشبكة إلى التنفيذ…</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/5g-ftth-project-manager-guide.html">
+            <div class="ins-body">
+              <h3>نشر 5G وFTTH: دليل مدير المشروع التقني</h3>
+              <p>افهم ال backhaul وال fronthaul وخلايا صغيرة وPON والمقسمات. تحدث بلغة المهندس.</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/pmo-excellence-framework.html">
+            <div class="ins-body">
+              <h3>بناء مكتب إدارة مشاريع عالي الأداء: إطار للتميز</h3>
+              <p>إطار عملي لإنشاء ونضج مكتب إدارة المشاريع — الحوكمة وإدارة المحافظ ومؤشرات الأداء الرئيسية ونموذج النضج…</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/earned-value-management.html">
+            <div class="ins-body">
+              <h3>إدارة القيمة المكتسبة: دليل شامل</h3>
+              <p>أتقن أساسيات إدارة القيمة المكتسبة — PV و EV و AC و CPI و SPI — بأمثلة عملية. تعلم كيفية التنبؤ بصحة المشروع…</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/programme-recovery-diagnosing-behind-schedule.html">
+            <div class="ins-body">
+              <h3>استعادة البرنامج: تشخيص مشروع متأخر عن الجدولة</h3>
+              <p>إطار تشخيصي عندما ينزلق البرنامج — إيجاد الأسباب الجذرية وبناء خطة استعادة والتواصل مع أصحاب المصلحة.</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
