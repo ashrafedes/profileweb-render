@@ -17,3 +17,14 @@ Thumbs.db
 # API keys (do not commit)
 assets/js/chatbot-config.js
 config.js
+
+# Facebook poster (contains page access token) + runtime state
+_fb_post_articles.py
+_fb_state.json
+_fb_log.txt
+_FB_STOP
+__pycache__/
+*.pyc
+
+# Raw ERP screenshots (confidential)
+ERP_EVIDENCE/

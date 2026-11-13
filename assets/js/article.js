@@ -320,7 +320,7 @@
               ${(article.tags || []).length ? `
               <div class="article-tags" style="margin:1.5rem 0;">
                 <span style="font-size:0.85rem;font-weight:600;color:var(--text-muted);margin-right:0.5rem;">${IS_ARABIC ? 'الوسوم:' : 'Tags:'}</span>
-                ${(article.tags || []).map(tag => `<a href="../articles/index.html?tag=${encodeURIComponent(tag)}" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#${tag}</a>`).join('')}
+                ${(article.tags || []).map(tag => `<a href="#" data-tag="${tag}" class="article-tag" style="display:inline-block;background:var(--bg-alt);border:1px solid var(--border-light);border-radius:999px;padding:0.25rem 0.75rem;font-size:0.8rem;color:var(--text);text-decoration:none;margin:0.25rem;">#${tag}</a>`).join('')}
               </div>
               ` : ''}
 
@@ -488,6 +488,15 @@
       </div>`;
     document.getElementById('related-articles').style.display = 'none';
   }
+
+  /* ── Tag chips: navigate to filtered index via JS (keeps ?tag= URLs uncrawlable) ── */
+  document.addEventListener('click', function (e) {
+    var chip = e.target.closest && e.target.closest('.article-tag[data-tag]');
+    if (!chip) return;
+    e.preventDefault();
+    var m = location.pathname.match(/\/(en|ar)\//);
+    location.href = (m ? m[0] : '/en/') + 'articles/index.html?tag=' + encodeURIComponent(chip.getAttribute('data-tag'));
+  });
 
   // Start
   if (document.readyState === 'loading') {

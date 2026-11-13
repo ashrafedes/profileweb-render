@@ -17,6 +17,7 @@
   <meta name="robots" content="index, follow">
   <script>
     var p=new URLSearchParams(window.location.search);var s=p.get('slug');
+    var n=document.createElement('meta');n.name='robots';n.content='noindex,follow';document.head.appendChild(n);
     if(s){var c=document.createElement('link');c.rel='canonical';c.href='https://www.ashraf-eldesoky.space/en/articles/'+s+'.html';document.head.appendChild(c);
       var ae=document.createElement('link');ae.rel='alternate';ae.hreflang='ar';ae.href='https://www.ashraf-eldesoky.space/ar/articles/'+s+'.html';document.head.appendChild(ae);
       var ae2=document.createElement('link');ae2.rel='alternate';ae2.hreflang='en';ae2.href='https://www.ashraf-eldesoky.space/en/articles/'+s+'.html';document.head.appendChild(ae2);
