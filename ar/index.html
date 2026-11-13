@@ -176,6 +176,20 @@
     .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; line-height: 1.75; }
 
     @media (prefers-reduced-motion: reduce) { .prob-card, .line-card, .exp-card, .btn, .btn-ghost { transition: none !important; transform: none !important; } }
+  
+    /* insights cards */
+    .ins-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+    .ins-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .ins-card { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s, border-color .2s; }
+    .ins-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+    .ins-card img { width: 100%; height: 140px; object-fit: cover; display: block; }
+    .ins-body { padding: .9rem 1rem 1rem; display: flex; flex-direction: column; gap: .4rem; flex: 1; }
+    .ins-tag { font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+    .ins-card h3 { font-size: .95rem; line-height: 1.4; margin: 0; }
+    .ins-card p { font-size: .8rem; color: var(--text-muted); margin: 0; line-height: 1.5; flex: 1; }
+    .ins-more { font-size: .8rem; font-weight: 600; color: var(--accent); }
+    @media (max-width: 960px) { .ins-grid, .ins-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .ins-grid, .ins-grid-3 { grid-template-columns: 1fr; } }
   </style>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Person", "name": "أشرف إبراهيم الدسوقي", "honorificSuffix": "PMP®", "jobTitle": "متخصص في البنية التحتية للاتصالات وإدارة المشاريع والبرامج", "description": "هندسة شبكات الاتصالات وFTTH، وإدارة المشاريع والبرامج للبنية التحتية المعقدة في السعودية ومصر والسودان.", "url": "https://www.ashraf-eldesoky.space/ar/", "email": "ashrafede@gmail.com", "telephone": "+966532738987", "sameAs": ["https://www.linkedin.com/in/ashraf-eldesoky/"]}
@@ -382,6 +396,90 @@
           <figure class="ev-item"><img src="../assets/images/field/field-asphalt-reinstatement.jpg" width="720" height="940" loading="lazy" decoding="async" alt="طاقم يعيد رصف الأسفلت فوق خندق مسار ألياف"><figcaption>أعمال مدنية — إعادة رصف الأسفلت على مسار الألياف</figcaption></figure>
         </div>
         <figure class="ev-full reveal"><img src="../assets/images/erp/erp-kpi-summary.jpg" width="1400" height="787" loading="lazy" decoding="async" alt="بوابة إدارة مشاريع ERP تعرض مؤشرات حية لأوامر العمل والتقدم والمواد والتصاريح"><figcaption>تحكم تشغيلي عبر نظام ERP — مؤشرات حية لأوامر العمل والتقدم والمواد والتصاريح في شاشة واحدة</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- FEATURED INSIGHTS -->
+    <section class="sec" id="insights">
+      <div class="container">
+        <div class="s-head reveal">
+          <span class="s-eyebrow">مقالات مختارة</span>
+          <h2>أفكار ميدانية في <span class="accent">تنفيذ الاتصالات وضبط البرامج</span></h2>
+        </div>
+        <div class="ins-grid reveal">
+          <a class="ins-card" href="articles/ftth-network-rollout.html">
+            <img src="../assets/images/articles/ftth-network-rollout-hero.webp" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">FTTH والشبكات</span>
+              <h3>نشر شبكة FTTH: دروس من 10 سنوات مع STC</h3>
+              <p>دروس رئيسية من إدارة أحد أكبر برامج نشر FTTH في الشرق الأوسط — التخطيط والتنفيذ وسلسلة التوريد ومراقبة الجودة.</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/national-ftth-rollout-planning-and-control.html">
+            <img src="https://images.pexels.com/photos/7869066/pexels-photo-7869066.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">FTTH والشبكات</span>
+              <h3>كيف يتم تخطيط والتحكم في مشاريع نشر شبكات FTTH الوطنية فعلياً</h3>
+              <p>دليل عملي لتخطيط والتحكم في مشاريع نشر شبكات الألياف البصرية الوطنية — من التصميم الرئيسي للشبكة إلى التنفيذ…</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/ftth-network-planning-design.html">
+            <img src="../assets/images/articles/ftth-network-planning-design-2026-07-12.webp" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">FTTH والشبكات</span>
+              <h3>أفضل ممارسات تخطيط وتصميم شبكات FTTH</h3>
+              <p>ابدأ برسم كثافة المناطق السكنية والتجارية والبنية التحتية الحالية. يحدد الطلب المخطط الطوبولوجيا والسعة.</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/5g-ftth-project-manager-guide.html">
+            <img src="../assets/images/articles/5g-ftth-project-manager-guide-2026-07-12.webp" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">FTTH والشبكات</span>
+              <h3>نشر 5G وFTTH: دليل مدير المشروع التقني</h3>
+              <p>افهم ال backhaul وال fronthaul وخلايا صغيرة وPON والمقسمات. تحدث بلغة المهندس.</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/pmo-excellence-framework.html">
+            <img src="../assets/images/articles/pmo-excellence-framework-1783813655761.webp" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">مكتب المشاريع والحوكمة</span>
+              <h3>بناء مكتب إدارة مشاريع عالي الأداء: إطار للتميز</h3>
+              <p>إطار عملي لإنشاء ونضج مكتب إدارة المشاريع — الحوكمة وإدارة المحافظ ومؤشرات الأداء الرئيسية ونموذج النضج…</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/earned-value-management.html">
+            <img src="../assets/images/articles/earned-value-management-hero.webp" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">ضوابط المشاريع</span>
+              <h3>إدارة القيمة المكتسبة: دليل شامل</h3>
+              <p>أتقن أساسيات إدارة القيمة المكتسبة — PV و EV و AC و CPI و SPI — بأمثلة عملية. تعلم كيفية التنبؤ بصحة المشروع…</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/programme-recovery-diagnosing-behind-schedule.html">
+            <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">إنقاذ البرامج</span>
+              <h3>استعادة البرنامج: تشخيص مشروع متأخر عن الجدولة</h3>
+              <p>إطار تشخيصي عندما ينزلق البرنامج — إيجاد الأسباب الجذرية وبناء خطة استعادة والتواصل مع أصحاب المصلحة.</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/ftth-project-controls-saudi-arabia-whats-different.html">
+            <img src="https://images.pexels.com/photos/2004759/pexels-photo-2004759.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">ضوابط المشاريع</span>
+              <h3>ضوابط مشاريع FTTH في المملكة العربية السعودية: ما هو المختلف</h3>
+              <p>التحديات المحددة لتسليم برامج FTTH في المملكة — الترخيص البلدي ورؤية 2030 والمناخ القاسي ومشهد المقاولين.</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 

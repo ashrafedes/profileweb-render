@@ -181,6 +181,20 @@
     .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; line-height: 1.65; }
 
     @media (prefers-reduced-motion: reduce) { .prob-card, .line-card, .exp-card, .btn, .btn-ghost { transition: none !important; transform: none !important; } }
+  
+    /* insights cards */
+    .ins-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+    .ins-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .ins-card { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s, border-color .2s; }
+    .ins-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+    .ins-card img { width: 100%; height: 140px; object-fit: cover; display: block; }
+    .ins-body { padding: .9rem 1rem 1rem; display: flex; flex-direction: column; gap: .4rem; flex: 1; }
+    .ins-tag { font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+    .ins-card h3 { font-size: .95rem; line-height: 1.4; margin: 0; }
+    .ins-card p { font-size: .8rem; color: var(--text-muted); margin: 0; line-height: 1.5; flex: 1; }
+    .ins-more { font-size: .8rem; font-weight: 600; color: var(--accent); }
+    @media (max-width: 960px) { .ins-grid, .ins-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .ins-grid, .ins-grid-3 { grid-template-columns: 1fr; } }
   </style>
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Person", "name": "Ashraf Ibrahim El Desoky", "honorificSuffix": "PMP®", "jobTitle": "Telecom Infrastructure & Project Programme Management Specialist", "description": "Telecom & FTTH network engineering and Project & Programme Management for complex infrastructure programmes across Saudi Arabia, Egypt and Sudan.", "url": "https://www.ashraf-eldesoky.space/", "email": "ashrafede@gmail.com", "telephone": "+966532738987", "sameAs": ["https://www.linkedin.com/in/ashraf-eldesoky/"]}
@@ -387,6 +401,90 @@
           <figure class="ev-item"><img src="../assets/images/field/field-asphalt-reinstatement.jpg" width="720" height="940" loading="lazy" decoding="async" alt="Crew reinstating asphalt over a fibre route trench"><figcaption>Civil works — asphalt reinstatement along the fibre route</figcaption></figure>
         </div>
         <figure class="ev-full reveal"><img src="../assets/images/erp/erp-kpi-summary.jpg" width="1400" height="787" loading="lazy" decoding="async" alt="ERP project management portal showing live KPI cards for work orders, progress, materials and permits"><figcaption>ERP-based operational control — live work-order, progress, material and permit KPIs in one view</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- FEATURED INSIGHTS -->
+    <section class="sec" id="insights">
+      <div class="container">
+        <div class="s-head reveal">
+          <span class="s-eyebrow">Featured Insights</span>
+          <h2>Field-tested thinking on <span class="accent">telecom delivery &amp; programme control</span></h2>
+        </div>
+        <div class="ins-grid reveal">
+          <a class="ins-card" href="articles/ftth-network-rollout.html">
+            <img src="../assets/images/articles/ftth-network-rollout-hero.webp" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">FTTH & Networks</span>
+              <h3>FTTH Network Rollout: Lessons from 10 Years with STC</h3>
+              <p>Key lessons from managing one of the largest FTTH rollout programmes in the Middle East — planning,…</p>
+              <span class="ins-more">Read article →</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/national-ftth-rollout-planning-and-control.html">
+            <img src="https://images.pexels.com/photos/7869066/pexels-photo-7869066.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">FTTH & Networks</span>
+              <h3>How National FTTH Rollouts Are Actually Planned and Controlled</h3>
+              <p>A practitioner's guide to planning and controlling national-scale FTTH rollouts — from master network design…</p>
+              <span class="ins-more">Read article →</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/ftth-network-planning-design.html">
+            <img src="../assets/images/articles/ftth-network-planning-design-2026-07-12.webp" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">FTTH & Networks</span>
+              <h3>FTTH Network Planning and Design Best Practices</h3>
+              <p>Start by mapping residential density, business zones, and existing infrastructure. Demand drives topology and…</p>
+              <span class="ins-more">Read article →</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/5g-ftth-project-manager-guide.html">
+            <img src="../assets/images/articles/5g-ftth-project-manager-guide-2026-07-12.webp" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">FTTH & Networks</span>
+              <h3>5G and FTTH Deployment: A Project Manager&#x27;s Technical Guide</h3>
+              <p>Understand fiber backhaul, fronthaul, small cells, PON, and splitters. Speak the engineer's language.</p>
+              <span class="ins-more">Read article →</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/pmo-excellence-framework.html">
+            <img src="../assets/images/articles/pmo-excellence-framework-1783813655761.webp" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">PMO & Governance</span>
+              <h3>Building a High-Performance PMO: A Framework for Excellence</h3>
+              <p>A practical framework for establishing and maturing a PMO — governance, portfolio management, KPIs, maturity…</p>
+              <span class="ins-more">Read article →</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/earned-value-management.html">
+            <img src="../assets/images/articles/earned-value-management-hero.webp" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">Project Controls</span>
+              <h3>Earned Value Management: A Complete Guide</h3>
+              <p>Master EVM fundamentals — PV, EV, AC, CPI, SPI — with real-world examples. Learn how to forecast project…</p>
+              <span class="ins-more">Read article →</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/programme-recovery-diagnosing-behind-schedule.html">
+            <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">Programme Recovery</span>
+              <h3>Programme Recovery: Diagnosing a Project That&#x27;s Fallen Behind</h3>
+              <p>A diagnostic framework for when a programme is slipping — finding root causes, building a recovery plan, and…</p>
+              <span class="ins-more">Read article →</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/ftth-project-controls-saudi-arabia-whats-different.html">
+            <img src="https://images.pexels.com/photos/2004759/pexels-photo-2004759.jpeg?auto=compress&cs=tinysrgb&w=800" alt="" loading="lazy" decoding="async">
+            <div class="ins-body">
+              <span class="ins-tag">Project Controls</span>
+              <h3>FTTH Project Controls in Saudi Arabia: What&#x27;s Different</h3>
+              <p>The specific challenges of delivering FTTH programmes in the Kingdom — municipal permitting, Vision 2030…</p>
+              <span class="ins-more">Read article →</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 

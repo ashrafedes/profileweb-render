@@ -100,6 +100,20 @@
     .final-cta p { color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 1.5rem; line-height: 1.75; }
 
     @media (prefers-reduced-motion: reduce) { .scard, .btn { transition: none !important; transform: none !important; } }
+  
+    /* insights cards */
+    .ins-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+    .ins-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .ins-card { background: var(--bg-card); border: 1px solid var(--border-light); border-radius: var(--radius-md); overflow: hidden; text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s, border-color .2s; }
+    .ins-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+    .ins-card img { width: 100%; height: 140px; object-fit: cover; display: block; }
+    .ins-body { padding: .9rem 1rem 1rem; display: flex; flex-direction: column; gap: .4rem; flex: 1; }
+    .ins-tag { font-size: .68rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+    .ins-card h3 { font-size: .95rem; line-height: 1.4; margin: 0; }
+    .ins-card p { font-size: .8rem; color: var(--text-muted); margin: 0; line-height: 1.5; flex: 1; }
+    .ins-more { font-size: .8rem; font-weight: 600; color: var(--accent); }
+    @media (max-width: 960px) { .ins-grid, .ins-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .ins-grid, .ins-grid-3 { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -213,6 +227,39 @@
             <h4>حوكمة برنامج متعدد الأنظمة</h4>
             <p>قيادة حوكمة التسليم عبر مسارات ELV وBMS وCCTV وإنذار الحريق وFTTH لمشروع وطني بارز.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED INSIGHTS -->
+    <section class="sec sec-alt" id="related-insights">
+      <div class="container">
+        <div class="s-head reveal">
+          <span class="s-eyebrow">قراءات ذات صلة</span>
+          <h2>مقالات في <span class="accent">إدارة مكتب المشاريع والحوكمة</span></h2>
+        </div>
+        <div class="ins-grid-3 reveal">
+          <a class="ins-card" href="articles/pmo-excellence-framework.html">
+            <div class="ins-body">
+              <h3>بناء مكتب إدارة مشاريع عالي الأداء: إطار للتميز</h3>
+              <p>إطار عملي لإنشاء ونضج مكتب إدارة المشاريع — الحوكمة وإدارة المحافظ ومؤشرات الأداء الرئيسية ونموذج النضج…</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/pmo-executive-dashboard-that-gets-used.html">
+            <div class="ins-body">
+              <h3>بناء لوحة تنفيذية لمكتب إدارة المشاريع تُستخدم فعلاً</h3>
+              <p>لماذا تفشل معظم اللوحات التنفيذية وكيف تبني واحدة يفتحها التنفيذيون فعلاً — من 25 سنة في تقارير PMO.</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
+          <a class="ins-card" href="articles/pmo-manager-vs-project-manager-roles.html">
+            <div class="ins-body">
+              <h3>مدير مكتب إدارة المشاريع مقابل مدير المشروع: الأدوار والمسؤوليات والفروق الرئيسية</h3>
+              <p>مقارنة شاملة بين دور مدير مكتب إدارة المشاريع ودور مدير المشروع — المسؤوليات والمهارات ومستويات الصلاحية…</p>
+              <span class="ins-more">اقرأ المقال ←</span>
+            </div>
+          </a>
         </div>
       </div>
     </section>
