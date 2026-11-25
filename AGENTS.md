@@ -15,3 +15,13 @@ Posts website articles to the Facebook page "ICT Consulting" (page id `616593318
 
 Each post = article hero image + caption (emoji, title, excerpt, question, URL, hashtags).
 Article list source: `sitemap.xml` (`/en/articles/*.html`).
+
+### "new article"
+Publishes a complete bilingual article from a JSON spec.
+
+- Script: `_new_article.py` — run `python _new_article.py draft.json` (add `--force` to overwrite an existing slug)
+- Spec fields: `slug` (optional, derived from EN title), `category_en`, `category_ar`, `date`, `reading_time` (auto), `featured`, `image`, `tags`, `related` (auto-picks 3 same-category), `en`/`ar` each with `title`, `description`, `body`
+- Body accepts HTML or plain text (`## ` = h2, blank lines = paragraphs)
+- Generates: EN + AR static pages, root `/articles/` stub, `articles.json` entry, index-grid card (top, both languages), sitemap URLs
+- IMPORTANT: index pages are pre-rendered static HTML — articles.json alone never displays an article; a card must exist in `en|ar/articles/index.html`. The script handles this.
+- After running: review the pages, then commit + push.
