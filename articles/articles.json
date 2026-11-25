@@ -8520,5 +8520,34 @@
       "excerpt": "يقضي مدير المشروع ما بين 70 و90 بالمئة من وقته في التواصل، وجزء كبير منه تفاوض مقنّع — على النطاق والموارد والمواعيد.",
       "content": "يقضي مدير المشروع ما بين 70 و90 بالمئة من يوم عمله في التواصل، وجزء كبير من هذا التواصل هو تفاوض مقنّع."
     }
+  },
+  {
+    "id": 152,
+    "slug": "claude-ai-mastery-bible-book",
+    "category": "Digital Transformation",
+    "author": "Ashraf Ibrahim El Desoky",
+    "heroImage": "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "publishDate": "2026-11-26",
+    "updatedDate": "2026-11-26",
+    "readingTime": 4,
+    "featured": true,
+    "draft": false,
+    "tags": [
+      "AI",
+      "Claude",
+      "Books",
+      "Digital Transformation",
+      "Automation"
+    ],
+    "en": {
+      "title": "Claude AI Mastery Bible: My New Book Is Now on Amazon",
+      "excerpt": "Claude AI Mastery Bible — a complete 5-in-1 guide covering Claude AI, Cowork, Skills, MCP, sub-agents, Claude Code and building AI-powered businesses. Now on Amazon.",
+      "content": "My new book Claude AI Mastery Bible is now on Amazon — a complete 5-in-1 guide to Claude AI, Cowork, Skills, MCP, sub-agents, Claude Code and AI-powered business."
+    },
+    "ar": {
+      "title": "كتاب Claude AI Mastery Bible: كتابي الجديد متاح الآن على أمازون",
+      "excerpt": "كتاب Claude AI Mastery Bible — الدليل الشامل 5 في 1 الذي يغطي Claude AI وCowork وSkills وMCP والوكلاء الفرعيين وClaude Code وبناء أعمال مدعومة بالذكاء الاصطناعي. متاح الآن على أمازون.",
+      "content": "كتابي الجديد Claude AI Mastery Bible متاح الآن على أمازون — الدليل الشامل 5 في 1 لـ Claude AI وCowork وSkills وMCP والوكلاء الفرعيين وClaude Code والأعمال المدعومة بالذكاء الاصطناعي."
+    }
   }
 ]
